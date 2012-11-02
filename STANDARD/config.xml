@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - invoice</en>
+			<no>Elektronisk handelsformat - faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T10.xml" />
+		<step id="FILTER" rule="BIICORE-T10-R115" file="/STANDARD/1.4/xsl/FILTER-Invoice-BIICORE-T10-R115.xsl" />
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - credit note</en>
+			<no>Elektronisk handelsformat - kreditnota</no>
+		</name>	
+		<xi:include href="/STANDARD/1.4/includes/UBL-CreditNote-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T14.xml" />		
+	</validate>		
+	
+</config>
