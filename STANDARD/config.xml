@@ -23,5 +23,27 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-CreditNote-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T14.xml" />		
 	</validate>		
+
+	<validate 
+		id="korrektiv faktura" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - corrective invoice</en>
+			<no>Elektronisk handelsformat - korrektiv faktura</no>
+		</name>	
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/NONAT-UBL-T17.xml" />		
+	</validate>
 	
+	<validate 
+		id="purring" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - reminder</en>
+			<no>Elektronisk handelsformat - purring</no>
+		</name>	
+		<xi:include href="/STANDARD/1.4/includes/UBL-Reminder-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/NONAT-UBL-T17.xml" />		
+	</validate>		
+
 </config>
