@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <xsl:stylesheet 
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
 	xmlns:axsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
