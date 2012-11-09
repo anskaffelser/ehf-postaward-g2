@@ -5,56 +5,102 @@
 		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice</en>
+			<en>Electronic trade format - invoice 1</en>
 			<no>Elektronisk handelsformat - faktura</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T10.xml" />
-		<step id="FILTER" rule="BIICORE-T10-R115" file="/STANDARD/1.4/xsl/FILTER-Invoice-BIICORE-T10-R115.xsl" />
-	</validate>
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
+	</validate>	
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - credit note</en>
-			<no>Elektronisk handelsformat - kreditnota</no>
-		</name>	
-		<xi:include href="/STANDARD/1.4/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T14.xml" />		
-	</validate>		
-
-	<validate 
-		id="korrektivfaktura" 
-		version="1.4">
-		<name>
-			<en>Electronic trade format - corrective invoice</en>
-			<no>Elektronisk handelsformat - korrektiv faktura</no>
-		</name>	
-		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/NONAT-UBL-T17.xml" />		
-	</validate>
-	
-	<validate 
-		id="purring" 
-		version="1.4">
-		<name>
-			<en>Electronic trade format - reminder</en>
-			<no>Elektronisk handelsformat - purring</no>
-		</name>	
-		<xi:include href="/STANDARD/1.4/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/NONAT-UBL-T17.xml" />		
-	</validate>		
-
-	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
-		version="1.5">
-		<name>
-			<en>Electronic trade format - invoice</en>
+			<en>Electronic trade format - invoice 2</en>
 			<no>Elektronisk handelsformat - faktura</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/NORWAY-UBL-T10.xml" />
-		<step id="FILTER" rule="BIICORE-T10-R115" file="/STANDARD/1.4/xsl/FILTER-Invoice-BIICORE-T10-R115.xsl" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
 	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - invoice 3</en>
+			<no>Elektronisk handelsformat - faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - invoice 4</en>
+			<no>Elektronisk handelsformat - faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - invoice 5</en>
+			<no>Elektronisk handelsformat - faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
+	</validate>	
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0" 
+		version="1.4">
+		<name>
+			<en>Electronic trade format - invoice 6</en>
+			<no>Elektronisk handelsformat - faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-Eugen.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.4/includes/UBL-T10-EugenRulesCodes.xml" />		
+	</validate>			
+
 </config>
