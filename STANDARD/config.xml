@@ -5,8 +5,8 @@
 		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 1</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice in Norway, profile invoice only</en>
+			<no>EHF faktura i Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
@@ -23,8 +23,8 @@
 		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 2</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice outside Norway, profile invoice only</en>
+			<no>EHF faktura utenfor Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
@@ -39,8 +39,8 @@
 		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 3</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice in Norway, profile invoice and creditnote</en>
+			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
@@ -57,8 +57,8 @@
 		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 4</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice outside Norway, profile invoice and creditnote</en>
+			<no>EHF faktura utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
@@ -73,8 +73,8 @@
 		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 5</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
+			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
@@ -91,8 +91,8 @@
 		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0" 
 		version="1.4">
 		<name>
-			<en>Electronic trade format - invoice 6</en>
-			<no>Elektronisk handelsformat - faktura</no>
+			<en>EHF invoice outside Norway, profile invoice, creditnote and reminder</en>
+			<no>HF faktura utenfor Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/1.4/includes/UBL-Invoice-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T10-BiiCore.xml" />
