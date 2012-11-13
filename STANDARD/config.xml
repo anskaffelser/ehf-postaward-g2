@@ -106,7 +106,7 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nonat.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nogov.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulescodes.xml" />		
+		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -124,7 +124,7 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nonat.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nogov.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulescodes.xml" />		
+		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -140,7 +140,7 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRules.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgen.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulescodes.xml" />		
+		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -158,7 +158,7 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nonat.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-Nogov.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulescodes.xml" />		
+		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
