@@ -9,7 +9,7 @@
 	The unit test expects that potential errors are listed in the same order that they occur during validation.
 	
 	Example:
-	<test nr="1">
+	<test id="1" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
 		<file>/STANDARD/1.4/test/invoice/test.xml</file>
@@ -17,8 +17,92 @@
 			<schematronrule>EUGEN-T10-R024</schematronrule>
 			<schematronrule>NOGOV-T10-R007</schematronrule>			
 		</errors>
+		<warnings>
+			<schematronrule>EUGEN-T10-R024</schematronrule>
+			<schematronrule>NOGOV-T10-R007</schematronrule>		
+		</warnings>
 	</test>	
 -->
 <config>
 
+	<test id="1" ignore="false">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<file>/STANDARD/1.4/test/invoice/T10-norsk-profil04.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>	
+	
+	<test id="2" ignore="false">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<file>/STANDARD/1.4/test/invoice/T10-norsk-profil05.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>	
+	
+	<test id="3" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<file>/STANDARD/1.4/test/invoice/T10-norsk-profilxy.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>	
+	
+	<test id="4" ignore="false">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</schema>
+		<file>/STANDARD/1.4/test/invoice/T10-utland-profil04.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>	
+	
+	<test id="5" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<file>/STANDARD/1.4/test/invoice/T10-utland-profil05.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+		
+	<test id="6" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profil05.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+
+	<test id="7" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxx.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+
+	<test id="8" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxy.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+
+	<test id="9" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<file>/STANDARD/1.4/test/creditnote/T14-utland-profil05.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+
+	<test id="10" ignore="true">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<file>/STANDARD/1.4/test/reminder/T17-norsk-profilxy.xml</file>
+		<errors></errors>
+		<warnings></warnings>
+	</test>		
+	
 </config>
