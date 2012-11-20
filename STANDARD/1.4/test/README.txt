@@ -16,10 +16,13 @@ Add the following to your XML file (must be placed after the xml declaration - <
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 	Content:
-	This file contains a norwegian invoice with one error.
+	This file contains a norwegian invoice
 
 	Errors:
 	BIICORE-T10-R115
+
+	Warnings:
+	BIICORE-T10-R114
 -->
 <Invoice xmlns="urn:oasis:names:specification.........
 
