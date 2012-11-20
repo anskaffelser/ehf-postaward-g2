@@ -40,15 +40,17 @@
 		<errors></errors>
 		<warnings></warnings>
 	</test>	
-	
-	<test id="3" ignore="true">
+
+	<test id="3" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
 		<file>/STANDARD/1.4/test/invoice/T10-norsk-profilxy.xml</file>
-		<errors></errors>
+		<errors>			
+			<schematronrule>BIIPROFILE-T10-R001</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>	
-	
+
 	<test id="4" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</schema>
@@ -56,52 +58,65 @@
 		<errors></errors>
 		<warnings></warnings>
 	</test>	
-	
-	<test id="5" ignore="true">
+
+	<test id="5" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
 		<file>/STANDARD/1.4/test/invoice/T10-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
 	</test>		
-		
-	<test id="6" ignore="true">
+
+	<test id="6" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profil05.xml</file>
 		<errors></errors>
-		<warnings></warnings>
+		<warnings>
+			<schematronrule>BIIRULE-T14-R024</schematronrule>
+		</warnings>
 	</test>		
 
-	<test id="7" ignore="true">
+	<test id="7" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxx.xml</file>
 		<errors></errors>
-		<warnings></warnings>
+		<warnings>
+			<schematronrule>BIIRULE-T14-R024</schematronrule>
+		</warnings>
 	</test>		
 
-	<test id="8" ignore="true">
+	<test id="8" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxy.xml</file>
-		<errors></errors>
-		<warnings></warnings>
-	</test>		
-
-	<test id="9" ignore="true">
+		<errors>
+			<schematronrule>BIIPROFILE-T14-R001</schematronrule>			
+		</errors>
+		<warnings>
+			<schematronrule>BIIRULE-T14-R024</schematronrule>
+		</warnings>
+	</test>
+	
+	<test id="9" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
 		<file>/STANDARD/1.4/test/creditnote/T14-utland-profil05.xml</file>
 		<errors></errors>
-		<warnings></warnings>
-	</test>		
-
-	<test id="10" ignore="true">
+		<warnings>
+			<schematronrule>BIIRULE-T14-R024</schematronrule>
+		</warnings>
+	</test>			
+	
+	<test id="10" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
 		<file>/STANDARD/1.4/test/reminder/T17-norsk-profilxy.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule></schematronrule>
+			<schematronrule>NONAT-T17-R016</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>		
 	
