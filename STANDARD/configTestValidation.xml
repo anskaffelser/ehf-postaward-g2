@@ -616,10 +616,7 @@
 		<version>1.5</version>
 		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
 		<file>/STANDARD/1.5/test/invoice/T10-avrunding-1.xml</file>
-		<errors>
-			<schematronrule>BIIRULE-T10-R018</schematronrule>		
-			<schematronrule>BIIRULE-T10-R018</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 	
@@ -627,9 +624,7 @@
 		<version>1.5</version>
 		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
 		<file>/STANDARD/1.5/test/invoice/T10-avrunding-2.xml</file>
-		<errors>
-			<schematronrule>BIIRULE-T10-R018</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings>
 			<schematronrule>BIIRULE-T10-R008</schematronrule>
 			<schematronrule>EUGEN-T10-R004</schematronrule>
@@ -718,10 +713,7 @@
 		<version>1.5</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.5/test/creditnote/T14-avrunding-1.xml</file>
-		<errors>
-			<schematronrule>BIIRULE-T14-R018</schematronrule>				
-			<schematronrule>BIIRULE-T14-R018</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 
@@ -729,10 +721,7 @@
 		<version>1.5</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.5/test/creditnote/T14-avrunding-2.xml</file>
-		<errors>
-			<schematronrule>BIIRULE-T14-R018</schematronrule>
-			<schematronrule>BIIRULE-T14-R018</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings>
 			<schematronrule>EUGEN-T14-R013</schematronrule>
 		</warnings>
