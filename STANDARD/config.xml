@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xi="http://www.w3.org/2001/XInclude">
 
+	<!-- START VERSION 1.4 -->
 	<!-- START INVOICE -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
@@ -172,8 +173,10 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP CREDITNOTE -->
+	<!-- START VERSION 1.4 -->
+	
 
-
+	<!-- START VERSION 0.9 -->
 	<!-- START CATALOGUE -->
 	<validate 
 		id="Catalogue-CatExtR-1.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId" 
@@ -186,4 +189,6 @@
 		<xi:include href="/STANDARD/0.9/includes/EHF_Catalogue_Schematron-095.xml" />
 	</validate>	
 	<!-- STOP CATALOGUE -->
+	<!-- STOP VERSION 0.9 -->
+	
 </config>
