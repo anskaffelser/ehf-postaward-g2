@@ -172,5 +172,18 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP CREDITNOTE -->
-	
+
+
+	<!-- START CATALOGUE -->
+	<validate 
+		id="Catalogue-CatExtR-1.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId" 
+		version="0.9">
+		<name>
+			<en>EHF catalogue</en>
+			<no>EHF katalog</no>
+		</name>
+		<xi:include href="/STANDARD/0.9/includes/UBL-Catalogue-2.1.xml" />
+		<xi:include href="/STANDARD/0.9/includes/EHF_Catalogue_Schematron-095.xml" />
+	</validate>	
+	<!-- STOP CATALOGUE -->
 </config>
