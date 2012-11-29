@@ -25,6 +25,7 @@
 -->
 <config>
 
+	<!-- START VERSION 1.4 -->
 	<test id="1" ignore="false">
 		<version>1.4</version>
 		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
@@ -510,5 +511,11 @@
 		</errors>
 		<warnings></warnings>
 	</test>
-	
+	<!-- STOP VERSION 1.4 -->
+
+
+
+
+	<!-- START VERSION 1.5 -->
+	<!-- STOP VERSION 1.5 -->
 </config>
