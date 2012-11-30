@@ -358,14 +358,14 @@
 	<!-- START VERSION 0.9 -->
 	<!-- START CATALOGUE -->
 	<validate 
-		id="Catalogue-CatExtR-1.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId" 
+		id="urn:www.cenbii.eu:profile:bii01:ver1.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId" 
 		version="0.9">
 		<name>
 			<en>EHF catalogue</en>
 			<no>EHF katalog</no>
 		</name>
 		<xi:include href="/STANDARD/0.9/includes/UBL-Catalogue-2.1.xml" />
-		<xi:include href="/STANDARD/0.9/includes/EHF_Catalogue_Schematron-095.xml" />
+		<xi:include href="/STANDARD/0.9/includes/UBL-T19-BiiRules.xml" />
 	</validate>	
 	<!-- STOP CATALOGUE -->
 	<!-- STOP VERSION 0.9 -->
