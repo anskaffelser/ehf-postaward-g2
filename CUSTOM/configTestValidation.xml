@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Content:
+	This file contains testcases to run at compilation. All tests will be run as a unit test. The unit test will perform an actual validation based on:	
+	-version
+	-schema
+	-input xml file
+	
+	The unit test expects that potential errors are listed in the same order that they occur during validation.
+	
+	Example:
+	<test id="1" ignore="false">
+		<version>1.4</version>
+		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<file>/STANDARD/1.4/test/invoice/test.xml</file>
+		<errors>
+			<schematronrule>EUGEN-T10-R024</schematronrule>
+			<schematronrule>NOGOV-T10-R007</schematronrule>			
+		</errors>
+		<warnings>
+			<schematronrule>EUGEN-T10-R024</schematronrule>
+			<schematronrule>NOGOV-T10-R007</schematronrule>		
+		</warnings>
+	</test>	
+-->
+<config>	
+</config>

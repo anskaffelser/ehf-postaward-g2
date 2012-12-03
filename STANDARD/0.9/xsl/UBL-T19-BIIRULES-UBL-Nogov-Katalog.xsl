@@ -190,7 +190,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:CustomizationID)"/>
+			<axsl:when test="string-length(cbc:CustomizationID) >0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:CustomizationID)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -205,7 +205,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:ProfileID)"/>
+			<axsl:when test="string-length(cbc:ProfileID) >0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ProfileID)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -250,12 +250,12 @@
 		<!-- ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="cbc:Actioncode ='' and cac:CatalogueLine[cbc:Actioncode !='']">
-			</axsl:when>
-			<axsl:when test="cbc:Actioncode !=''">
+			<axsl:when test="string-length(cbc:ActionCode) >0">
+			</axsl:when>			
+			<axsl:when test="not(cac:CatalogueLine[cbc:ActionCode =''])">
 			</axsl:when>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:Actioncode ='' and cac:CatalogueLine[cbc:Actioncode !='']">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ActionCode ='' and cac:CatalogueLine[cbc:Actioncode !='']">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
