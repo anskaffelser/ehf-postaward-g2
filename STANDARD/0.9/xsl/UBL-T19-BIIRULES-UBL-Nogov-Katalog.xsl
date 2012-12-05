@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <axsl:stylesheet xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" version="2.0">
@@ -275,7 +275,8 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R005]-A catalogue version MUST be always specified</svrl:text>
+					<svrl:text>[BII2-T19-R005]-A catalogue version MUST always be specified</svrl:text>
+					<svrl:text>[BII2-T19-R005]-En katalog versjon MÅ alltid være spesifisert</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -388,7 +389,8 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(//cac:UsabilityPeriod/cbc:StartDate and //cac:UsabilityPeriod/cbc:EndDate) and (number(translate(//cac:UsabilityPeriod/cbc:StartDate,'-','')) &gt;= number(translate(//cac:LineValidityPeriod/cbc:StartDate,'-',''))) and (number(translate(//cac:UsabilityPeriod/cbc:EndDate,'-','')) &lt;= number(translate(//cac:LineValidityPeriod/cbc:EndDate,'-','')))"/>
+		<axsl:when test="not(cac:Price/cac:ValidityPeriod/cbc:StartDate and cac:Price/cac:ValidityPeriod/cbc:EndDate)"/>
+		<axsl:when test="(number(translate(string(cac:Price/cac:ValidityPeriod/cbc:StartDate),'-','')) &gt;= number(translate(string(//cac:ValidityPeriod/cbc:StartDate),'-',''))) and (number(translate(string(cac:Price/cac:ValidityPeriod/cbc:EndDate),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-','')))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
 				                    test="(//cac:UsabilityPeriod/cbc:StartDate and //cac:UsabilityPeriod/cbc:EndDate) and (number(translate(//cac:UsabilityPeriod/cbc:StartDate,'-','')) &gt;= number(translate(//cac:LineValidityPeriod/cbc:StartDate,'-',''))) and (number(translate(//cac:UsabilityPeriod/cbc:EndDate,'-','')) &lt;= number(translate(//cac:LineValidityPeriod/cbc:EndDate,'-','')))">
@@ -416,12 +418,29 @@
 			</axsl:otherwise>
 		</axsl:choose>
 
+				<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="string-length(cbc:OrderableUnit) &gt;= 0"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:OrderableUnit) &gt;= 0">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[BII2-T19-R026]-Orderable unit MUST have a value</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="number(cbc:OrderableUnit) &gt;= 0"/>
+			<axsl:when test="string(cbc:OrderableIndicator) !='true'"/>		
+			<axsl:when test="number(cbc:ContentUnitQuantity) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:OrderableUnit) &gt;= 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:ContentUnitQuantity) &gt;= 0 and cbc:OrderableIndicator ='true'">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -434,7 +453,8 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="number(cbc:MaximumOrderQuantity) &gt;= 0"/>
+		    <axsl:when test="not(cbc:MaximumOrderQuantity)"/>
+			<axsl:when test="number(cbc:MaximumOrderQuantity) &gt; 0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MaximumOrderQuantity) &gt;= 0">
 					<axsl:attribute name="flag">warning</axsl:attribute>
@@ -449,9 +469,10 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="number(cbc:MinimumOrderQuantity) &gt;= 0"/>
+			<axsl:when test="not(cbc:MinimumOrderQuantity)"/>
+			<axsl:when test="number(cbc:MinimumOrderQuantity) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MinimumOrderQuantity) &gt;= 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MinimumOrderQuantity) &gt; 0">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -464,14 +485,16 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="number(cbc:MaximumOrderQuantity) &gt;= number(cbc:MinimumOrderQuantity)"/>
+		     <axsl:when test="not(cbc:MinimumOrderQuantity) and not(cbc:MaximumOrderQuantity)"/>
+			<axsl:when test="number(cbc:MinimumOrderQuantity) &lt;= number(cbc:MaximumOrderQuantity)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MaximumOrderQuantity) &gt;= number(cbc:MinimumOrderQuantity)">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
-					</axsl:attribute>
+					</axsl:attribute>						
 					<svrl:text>[BII2-T19-R031]-Maximum quantity MUST be greater or equal to the Minimum quantity</svrl:text>
+					<svrl:text>[BII2-T19-R031]-Maksimum kvantitet MÅ være større eller lik Minimum kvantitet</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
