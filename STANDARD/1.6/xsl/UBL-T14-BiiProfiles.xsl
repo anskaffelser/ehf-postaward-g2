@@ -181,14 +181,14 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test=". = 'urn:www.cenbii.eu:profile:bii05:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii06:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii07:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii08:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii13:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii19:ver1.0'"/>
+         <axsl:when test=". = 'urn:www.cenbii.eu:profile:bii05:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii06:ver1.0' or . = 'urn:www.cenbii.eu:profile:biixx:ver1.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver1.0'"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test=". = 'urn:www.cenbii.eu:profile:bii05:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii06:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii07:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii08:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii13:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii19:ver1.0'">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test=". = 'urn:www.cenbii.eu:profile:bii05:ver1.0' or . = 'urn:www.cenbii.eu:profile:bii06:ver1.0' or . = 'urn:www.cenbii.eu:profile:biixx:ver1.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver1.0'">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[BIIPROFILE-T14-R001]-An invoice transaction T14 must only be used in CEN BII Profiles 5, 6, 7, 8, 13 or 19.</svrl:text>
+               <svrl:text>[BIIPROFILE-T14-R001]-An invoice transaction T14 must only be used in CEN BII Profiles 5, 6, xx or xy.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -198,4 +198,34 @@
    <axsl:template match="@*|node()" priority="-2" mode="M13">
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
    </axsl:template>
+   
+<!--RULE -->
+
+   <axsl:template match="/ubl:CreditNote" priority="1001" mode="M13">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="local-name(/*) = 'CreditNote' and
+          (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or 
+           (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver1.0'))"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="local-name(/*) = 'CreditNote' and
+          (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or 
+            (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver1.0'))">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[BIIPROFILE-T14-R002]-A creditnote transaction T14 in Profile 5, 6 or xy MUST have an invoice or creditnote reference identifier.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
+   </axsl:template>
+   <axsl:template match="text()" priority="-1" mode="M13"/>
+   <axsl:template match="@*|node()" priority="-2" mode="M13">
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
+   </axsl:template>   
 </axsl:stylesheet>

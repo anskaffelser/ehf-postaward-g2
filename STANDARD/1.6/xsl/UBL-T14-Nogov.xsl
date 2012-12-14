@@ -251,8 +251,8 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
-
-		<!--ASSERT -->
+      
+      <!--ASSERT -->
 
       <axsl:choose>
          <axsl:when test="(cac:PartyIdentification/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>

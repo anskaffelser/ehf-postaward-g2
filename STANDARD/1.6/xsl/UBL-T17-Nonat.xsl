@@ -182,14 +182,14 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:PostalAddress/cbc:StreetName and cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)"/>
+         <axsl:when test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PostalAddress/cbc:StreetName and cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T17-R010]-A customer postal address in a reminder document SHOULD contain at least, Street name and number, city name, zip code and country code.</svrl:text>
+               <svrl:text>[NONAT-T17-R010]-A customer postal address in a reminder document SHOULD contain at least city name, zip code and country code.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -208,7 +208,7 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
-
+      
 		<!--ASSERT -->
 
       <axsl:choose>
@@ -235,6 +235,21 @@
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
                <svrl:text>[NONAT-T17-R027]-The Norwegian legal registration ID for the customer MUST be provided.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cac:PartyLegalEntity/cbc:RegistrationName != '')"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:RegistrationName != '')">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T17-R030]-Legal registration name for the customer SHOULD be provided.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -301,14 +316,14 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test=". = 'urn:www.cenbii.eu:profile:bii08:ver1.0'"/>
+         <axsl:when test=". = 'urn:www.cenbii.eu:profile:biixy:ver1.0'"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test=". = 'urn:www.cenbii.eu:profile:bii08:ver1.0'">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test=". = 'urn:www.cenbii.eu:profile:biixy:ver1.0'">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T17-R016]-An reminder transaction T17 must only be used in Profiles 8.</svrl:text>
+               <svrl:text>[NONAT-T17-R016]-An reminder transaction T17 must only be used in Profile xy.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -525,14 +540,14 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:PostalAddress/cbc:StreetName and cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)"/>
+         <axsl:when test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PostalAddress/cbc:StreetName and cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T17-R009]-A supplier postal address in a reminder document SHOULD contain at least, Street name and number, city name, zip code and country code.</svrl:text>
+               <svrl:text>[NONAT-T17-R009]-A supplier postal address in a reminder document SHOULD contain at least city name, zip code and country code.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -581,6 +596,22 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cac:PartyLegalEntity/cbc:RegistrationName != '')"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:RegistrationName != '')">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T17-R031]-The legal registration name for the supplier SHOULD be provided.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
       <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </axsl:template>
 

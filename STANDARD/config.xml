@@ -1,6 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xi="http://www.w3.org/2001/XInclude">
 
+	<!-- START VERSION 1.6 -->
+	<!-- START INVOICE -->
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF invoice in Norway, profile invoice only</en>
+			<no>EHF faktura i Norge, profil kun faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+	</validate>	
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
+		version="1.6">
+		<name>
+			<en>EHF invoice outside Norway, profile invoice only</en>
+			<no>EHF faktura utenfor Norge, profil kun faktura</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF invoice in Norway, profile invoice and creditnote</en>
+			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		version="1.6">
+		<name>
+			<en>EHF invoice outside Norway, profile invoice and creditnote</en>
+			<no>EHF faktura utenfor Norge, profil faktura og kreditnota</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
+			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Invoice-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+	</validate>	
+	<!-- STOP INVOICE -->
+
+
+	<!-- START CREDITNOTE -->
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF creditnote in Norway, profile creditnote only</en>
+			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-CreditNote-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+	</validate>	
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF creditnote in Norway, profile invoice and creditnote</en>
+			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-CreditNote-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+	</validate>	
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		version="1.6">
+		<name>
+			<en>EHF creditnote outside Norway, profile invoice and creditnote</en>
+			<no>EHF kreditnota utenfor Norge, profil faktura og kreditnota</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-CreditNote-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+	</validate>	
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF creditnote in Norway, profile invoice, creditnote and reminder</en>
+			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-CreditNote-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+	</validate>	
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
+		version="1.6">
+		<name>
+			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
+			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
+		</name>
+		<xi:include href="/STANDARD/1.6/includes/UBL-Reminder-2.0.xml" />
+		<xi:include href="/STANDARD/1.6/includes/UBL-T17-Nonat.xml" />
+	</validate>		
+	<!-- STOP CREDITNOTE -->
+	<!-- START VERSION 1.6 -->
+	
+
+
+
 	<!-- START VERSION 1.5 -->
 	<!-- START INVOICE -->
 	<validate 

@@ -15,8 +15,8 @@
     attributeFormDefault="unqualified"
     version="2.0">
 <!-- ===== Imports ===== -->
-  <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="/STANDARD/1.5/xsd/UBL-2.0/xsd/common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="/STANDARD/1.5/xsd/UBL-2.0/xsd/common/UBL-QualifiedDatatypes-2.0.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="/STANDARD/1.6/xsd/UBL-2.0/xsd/common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="/STANDARD/1.6/xsd/UBL-2.0/xsd/common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Element Declarations ===== -->
   <xsd:element name="AcceptedIndicator" type="AcceptedIndicatorType"/>
   <xsd:element name="AccountID" type="AccountIDType"/>

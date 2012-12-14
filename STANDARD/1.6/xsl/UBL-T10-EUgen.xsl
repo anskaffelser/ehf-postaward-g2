@@ -185,11 +185,11 @@
          <axsl:when test="number(cbc:PayableAmount) &gt;= 0"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:PayableAmount) &gt;= 0">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[EUGEN-T10-R019]-Total payable amount in an invoice MUST NOT be negative</svrl:text>
+               <svrl:text>[EUGEN-T10-R019]-Total payable amount in an invoice SHOULD NOT be negative</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
