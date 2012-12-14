@@ -9,7 +9,9 @@
                 Warnings:
                 BIIRULE-T10-R008
 				EUGEN-T10-R004
+				NONAT-T10-R008
 				NOGOV-T10-R005
+				NOGOV-T10-R015
 				NOGOV-T10-R012
 
 				On all invoice lines:

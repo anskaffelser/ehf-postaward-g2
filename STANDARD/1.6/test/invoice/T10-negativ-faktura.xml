@@ -4,70 +4,39 @@
                 This file contains a norwegian invoice, profile only
 
                 Errors:
-                XSD error
-                BIIRULE-T10-R023
-                BIIRULE-T10-R024
-                BIIRULE-T10-R026
-                BIIRULE-T10-R027
-                BIIRULE-T10-R028
-                BIIRULE-T10-R035
-                BIIRULE-T10-R036
-                BIIRULE-T10-R038
-                BIIRULE-T10-R039
-                BIIRULE-T10-R042
-                BIIRULE-T10-R043
-                BIIRULE-T10-R041 twice
-                BIIRULE-T10-R010
-                BIIRULE-T10-R011
-                BIIRULE-T10-R012
-                BIIRULE-T10-R013
-                BIIRULE-T10-R017
-                EUGEN-T10-R007
-                EUGEN-T10-R011
-                NONAT-T10-R002
-                NONAT-T10-R003
-                NONAT-T10-R001
-                NOGOV-T10-R007
-                NOGOV-T10-R009
-                NOGOV-T10-R011
-                
+                None
                 
                 Warnings:
-                BIICORE-T10-R404
-                BIICORE-T10-R400
-                BIICORE-T10-R401
-                BIIRULE-T10-R007
                 BIIRULE-T10-R014
-                EUGEN-T10-R001
-                EUGEN-T10-R002
-                EUGEN-T10-R019
-                NONAT-T10-R008
-                NOGOV-T10-R005
-                NOGOV-T10-R013
-                NOGOV-T10-R001
-                NOGOV-T10-R006
-                NOGOV-T10-R015
-			
+				EUGEN-T10-R019
+				
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
 	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</cbc:CustomizationID>
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver1.0</cbc:ProfileID>
+	<cbc:ID>12345</cbc:ID>
+	<cbc:IssueDate>2012-11-21</cbc:IssueDate>
 	<cbc:InvoiceTypeCode listID="UN/ECE 1001 Subset" listAgencyID="6">380</cbc:InvoiceTypeCode>
 	<cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listAgencyID="6">NOK</cbc:DocumentCurrencyCode>
 	<cac:OrderReference>
+		<cbc:ID>5423</cbc:ID>
 	</cac:OrderReference>
 	<cac:ContractDocumentReference>
+		<cbc:ID>RA-564</cbc:ID>
 	</cac:ContractDocumentReference>
 	<cac:AccountingSupplierParty>
 		<cac:Party>
-			<cbc:EndpointID>9908:977187761</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">977187761</cbc:EndpointID>
 			<cac:PartyIdentification>
+				<cbc:ID schemeID="GLN">7080003093035</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
+				<cbc:Name>Bedriften A/S</cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
 				<cbc:ID schemeID="GLN" schemeAgencyID="9">7080003093035</cbc:ID>
+				<cbc:StreetName>Brugt. 10</cbc:StreetName>
 				<cbc:CityName>Sarpsborg</cbc:CityName>
 				<cbc:PostalZone>1710</cbc:PostalZone>
 				<cac:Country>
@@ -75,11 +44,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT" schemeAgencyID="82">977187761MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID schemeID="UN/ECE 5153" schemeAgencyID="6">VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>IntegrasjonsPartner testkunde</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeAgencyID="82">977187761</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>Sarpsborg</cbc:CityName>
 					<cac:Country>
@@ -88,17 +60,21 @@
 				</cac:RegistrationAddress>
 			</cac:PartyLegalEntity>
 			<cac:Contact>
+				<cbc:ID>David</cbc:ID>
 			</cac:Contact>
 		</cac:Party>
 	</cac:AccountingSupplierParty>
 	<cac:AccountingCustomerParty>
 		<cac:Party>
-		    <cbc:EndpointID>9908:810305282</cbc:EndpointID>
+		    <cbc:EndpointID schemeID="NO:ORGNR">810305282</cbc:EndpointID>
 			<cac:PartyIdentification>
+				<cbc:ID schemeID="GLN">7080003093035</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
+				<cbc:Name>TestKunde</cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
+				<cbc:StreetName>Storgata 3</cbc:StreetName>
 				<cbc:CityName>SARPSBORG</cbc:CityName>
 				<cbc:PostalZone>1701</cbc:PostalZone>
 				<cac:Country>
@@ -106,11 +82,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT" schemeAgencyID="82">810305282MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID schemeID="UN/ECE 5153" schemeAgencyID="6">VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>TestKunde</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeAgencyID="82">810305282</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>SARPSBORG</cbc:CityName>
 					<cac:Country>
@@ -119,13 +98,16 @@
 				</cac:RegistrationAddress>
 			</cac:PartyLegalEntity>
 			<cac:Contact>
+				<cbc:ID>DTJ1234</cbc:ID>
 			</cac:Contact>
 		</cac:Party>
 	</cac:AccountingCustomerParty>
 	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2012-11-21</cbc:ActualDeliveryDate>
 		<cac:DeliveryLocation>
 			<cbc:ID schemeID="GLN" schemeAgencyID="9">7080000081769</cbc:ID>
 			<cac:Address>
+				<cbc:StreetName>Storgata 3</cbc:StreetName>
 				<cbc:CityName>SARPSBORG</cbc:CityName>
 				<cbc:PostalZone>1701</cbc:PostalZone>
 				<cac:Country>
@@ -136,9 +118,11 @@
 	</cac:Delivery>
 	<cac:PaymentMeans>
 		<cbc:PaymentMeansCode listID="UN/ECE 4461 Subset" listAgencyID="NES">31</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>2012-12-31</cbc:PaymentDueDate>
 		<cbc:PaymentChannelCode>SW</cbc:PaymentChannelCode>
 		<cbc:PaymentID>000200000032000100011</cbc:PaymentID>
 		<cac:PayeeFinancialAccount>
+			<cbc:ID schemeID="IBAN">NO98745566558</cbc:ID>
 			<cac:FinancialInstitutionBranch>
 				<cac:FinancialInstitution>
 					<cbc:ID schemeID="BIC">DNB</cbc:ID>
@@ -147,9 +131,10 @@
 		</cac:PayeeFinancialAccount>
 	</cac:PaymentMeans>
   <cac:TaxTotal>
+  	<cbc:TaxAmount currencyID="NOK">-25.00</cbc:TaxAmount>
   	<cac:TaxSubtotal>
- 		 <cbc:TaxableAmount currencyID="NOK">100.00</cbc:TaxableAmount>
- 		 <cbc:TaxAmount currencyID="NOK">25.00</cbc:TaxAmount>
+ 		 <cbc:TaxableAmount currencyID="NOK">-100.00</cbc:TaxableAmount>
+ 		 <cbc:TaxAmount currencyID="NOK">-25.00</cbc:TaxAmount>
   		<cac:TaxCategory>
 <cbc:ID schemeAgencyID="6" schemeID="UN/ECE 5305">S</cbc:ID>
   			<cbc:Percent>25.00</cbc:Percent>
@@ -160,11 +145,19 @@
     	</cac:TaxSubtotal>
   </cac:TaxTotal>
   <cac:LegalMonetaryTotal>
-  	</cac:LegalMonetaryTotal>
+  	<cbc:LineExtensionAmount currencyID="NOK">-100.00</cbc:LineExtensionAmount>
+  	<cbc:TaxExclusiveAmount currencyID="NOK">-100.00</cbc:TaxExclusiveAmount>
+  	<cbc:TaxInclusiveAmount currencyID="NOK">-125.00</cbc:TaxInclusiveAmount>
+  	<cbc:AllowanceTotalAmount currencyID="NOK">0.00</cbc:AllowanceTotalAmount>
+  	<cbc:ChargeTotalAmount currencyID="NOK">0.00</cbc:ChargeTotalAmount>
+	<cbc:PrepaidAmount currencyID="NOK">0.00</cbc:PrepaidAmount>
+  	<cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
+  	<cbc:PayableAmount currencyID="NOK">-125.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
 <cac:InvoiceLine> 
 <cbc:ID>1</cbc:ID>
-<cbc:InvoicedQuantity unitCode="NAR">1.00</cbc:InvoicedQuantity>
-<cbc:LineExtensionAmount currencyID="NOK">100.00</cbc:LineExtensionAmount>
+<cbc:InvoicedQuantity unitCode="NAR">-1.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">-100.00</cbc:LineExtensionAmount>
 <cbc:AccountingCost>123</cbc:AccountingCost>
 <cac:OrderLineReference>
 <cbc:LineID>1</cbc:LineID>
