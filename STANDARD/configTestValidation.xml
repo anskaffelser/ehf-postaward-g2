@@ -1259,8 +1259,6 @@
 			<schematronrule>BIICORE-T10-R401</schematronrule>
 			<schematronrule>BIIRULE-T10-R007</schematronrule>
 			<schematronrule>BIIRULE-T10-R014</schematronrule>
-			<schematronrule>EUGEN-T10-R001</schematronrule>
-			<schematronrule>EUGEN-T10-R002</schematronrule>
 			<schematronrule>EUGEN-T10-R019</schematronrule>
 			<schematronrule>NONAT-T10-R008</schematronrule>
 			<schematronrule>NOGOV-T10-R005</schematronrule>
@@ -1345,8 +1343,6 @@
 			<schematronrule>NOGOV-T14-R007</schematronrule>
 		</errors>
 		<warnings>
-			<schematronrule>EUGEN-T14-R001</schematronrule>
-			<schematronrule>EUGEN-T14-R002</schematronrule>
 			<schematronrule>NOGOV-T14-R001</schematronrule>
 			<schematronrule>NOGOV-T14-R006</schematronrule>
 		</warnings>
@@ -1487,8 +1483,6 @@
 		<file>/STANDARD/1.6/test/invoice/T10-hode-test16.xml</file>
 		<errors></errors>
 		<warnings>
-			<schematronrule>EUGEN-T10-R001</schematronrule>
-			<schematronrule>EUGEN-T10-R002</schematronrule>
 			<schematronrule>NONAT-T10-R008</schematronrule>
 			<schematronrule>NOGOV-T10-R015</schematronrule>			
 		</warnings>
@@ -1510,10 +1504,7 @@
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.6/test/creditnote/T14-hode-test16.xml</file>
 		<errors></errors>
-		<warnings>
-			<schematronrule>EUGEN-T14-R001</schematronrule>
-			<schematronrule>EUGEN-T14-R002</schematronrule>			
-		</warnings>
+		<warnings></warnings>
 	</test>	
 	<!-- STOP TEST VERSION 1.6 -->
 </config>
