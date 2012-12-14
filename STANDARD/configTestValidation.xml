@@ -1053,9 +1053,7 @@
 		<version>1.6</version>
 		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
 		<file>/STANDARD/1.6/test/creditnote/T14-norsk-profilxx.xml</file>
-		<errors>
-			<schematronrule>BIIPROFILE-T14-R002</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings>
 			<schematronrule>BIIRULE-T14-R024</schematronrule>
 		</warnings>

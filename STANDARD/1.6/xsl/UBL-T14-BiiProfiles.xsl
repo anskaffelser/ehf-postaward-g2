@@ -194,10 +194,6 @@
       </axsl:choose>
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
    </axsl:template>
-   <axsl:template match="text()" priority="-1" mode="M13"/>
-   <axsl:template match="@*|node()" priority="-2" mode="M13">
-      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
-   </axsl:template>
    
 <!--RULE -->
 
@@ -218,12 +214,13 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[BIIPROFILE-T14-R002]-A creditnote transaction T14 in Profile 5, 6 or xy MUST have an invoice or creditnote reference identifier.</svrl:text>
+               <svrl:text>[BIIPROFILE-T14-R002]-A creditnote transaction T14 in Profile other than xx MUST have an invoice or creditnote reference identifier.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
    </axsl:template>
+   
    <axsl:template match="text()" priority="-1" mode="M13"/>
    <axsl:template match="@*|node()" priority="-2" mode="M13">
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M13"/>
