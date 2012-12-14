@@ -161,7 +161,9 @@
 		<xi:include href="/STANDARD/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
 		<xi:include href="/STANDARD/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
+	<!-- STOP CREDITNOTE -->
 	
+	<!-- START REMINDER -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.6">
@@ -171,9 +173,9 @@
 		</name>
 		<xi:include href="/STANDARD/1.6/includes/UBL-Reminder-2.0.xml" />
 		<xi:include href="/STANDARD/1.6/includes/UBL-T17-Nonat.xml" />
-	</validate>		
-	<!-- STOP CREDITNOTE -->
-	<!-- START VERSION 1.6 -->
+	</validate>			
+	<!-- STOP REMINDER -->
+	<!-- STOP VERSION 1.6 -->
 	
 
 
@@ -338,7 +340,9 @@
 		<xi:include href="/STANDARD/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
 		<xi:include href="/STANDARD/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
+	<!-- STOP CREDITNOTE -->
 	
+	<!-- START REMINDER -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.5">
@@ -349,8 +353,8 @@
 		<xi:include href="/STANDARD/1.5/includes/UBL-Reminder-2.0.xml" />
 		<xi:include href="/STANDARD/1.5/includes/UBL-T17-Nonat.xml" />
 	</validate>		
-	<!-- STOP CREDITNOTE -->
-	<!-- START VERSION 1.5 -->
+	<!-- STOP REMINDER -->	
+	<!-- STOP VERSION 1.5 -->
 	
 
 
@@ -515,7 +519,9 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
+	<!-- STOP CREDITNOTE -->
 	
+	<!-- START REMINDER -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.4">
@@ -526,8 +532,8 @@
 		<xi:include href="/STANDARD/1.4/includes/UBL-Reminder-2.0.xml" />
 		<xi:include href="/STANDARD/1.4/includes/UBL-T17-Nonat.xml" />
 	</validate>		
-	<!-- STOP CREDITNOTE -->
-	<!-- START VERSION 1.4 -->
+	<!-- STOP REMINDER -->
+	<!-- STOP VERSION 1.4 -->
 	
 
 
