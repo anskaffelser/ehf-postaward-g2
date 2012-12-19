@@ -3,7 +3,7 @@
 	Content:
 	This file contains testcases to run at compilation. All tests will be run as a unit test. The unit test will perform an actual validation based on:	
 	-version
-	-schema
+	-id
 	-input xml file
 	
 	The unit test expects that potential errors are listed in the same order that they occur during validation.
@@ -11,7 +11,7 @@
 	Example:
 	<test id="1" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/test.xml</file>
 		<errors>
 			<schematronrule>EUGEN-T10-R024</schematronrule>
@@ -28,7 +28,7 @@
 	<!-- START TEST VERSION 1.4 -->
 	<test id="1.4.1" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-norsk-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -36,7 +36,7 @@
 	
 	<test id="1.4.2" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-norsk-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -44,7 +44,7 @@
 
 	<test id="1.4.3" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-norsk-profilxy.xml</file>
 		<errors>			
 			<schematronrule>BIIPROFILE-T10-R001</schematronrule>
@@ -54,7 +54,7 @@
 
 	<test id="1.4.4" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</id>
 		<file>/STANDARD/1.4/test/invoice/T10-utland-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -62,7 +62,7 @@
 
 	<test id="1.4.5" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.4/test/invoice/T10-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -70,7 +70,7 @@
 
 	<test id="1.4.6" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profil05.xml</file>
 		<errors></errors>
 		<warnings>
@@ -80,7 +80,7 @@
 
 	<test id="1.4.7" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxx.xml</file>
 		<errors></errors>
 		<warnings>
@@ -90,7 +90,7 @@
 
 	<test id="1.4.8" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule>BIIPROFILE-T14-R001</schematronrule>			
@@ -102,7 +102,7 @@
 	
 	<test id="1.4.9" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings>
@@ -112,7 +112,7 @@
 	
 	<test id="1.4.10" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.4/test/reminder/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -123,7 +123,7 @@
 
 	<test id="1.4.11" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-avrunding-1.xml</file>
 		<errors>
 			<schematronrule>BIIRULE-T10-R018</schematronrule>		
@@ -134,7 +134,7 @@
 	
 	<test id="1.4.12" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-avrunding-2.xml</file>
 		<errors>
 			<schematronrule>BIIRULE-T10-R018</schematronrule>
@@ -217,7 +217,7 @@
 	
 	<test id="1.4.13" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -225,7 +225,7 @@
 
 	<test id="1.4.14" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-avrunding-1.xml</file>
 		<errors>
 			<schematronrule>BIIRULE-T14-R018</schematronrule>				
@@ -236,7 +236,7 @@
 
 	<test id="1.4.15" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-avrunding-2.xml</file>
 		<errors>
 			<schematronrule>BIIRULE-T14-R018</schematronrule>
@@ -249,7 +249,7 @@
 
 	<test id="1.4.16" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings>
@@ -259,7 +259,7 @@
 
 	<test id="1.4.17" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-hode-blank.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -310,7 +310,7 @@
 
 	<test id="1.4.18" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -343,7 +343,7 @@
 
 	<test id="1.4.19" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -351,7 +351,7 @@
 
 	<test id="1.4.20" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-hode-blank.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -392,7 +392,7 @@
 	
 	<test id="1.4.21" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -422,7 +422,7 @@
 
 	<test id="1.4.22" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -430,7 +430,7 @@
 
 	<test id="1.4.23" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/T10-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -455,7 +455,7 @@
 
 	<test id="1.4.24" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.4/test/creditnote/T14-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -477,7 +477,7 @@
 	
 	<test id="1.4.25" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.4/test/reminder/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -500,7 +500,7 @@
 
 	<test id="1.4.26" ignore="false">
 		<version>1.4</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.4/test/reminder/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -519,7 +519,7 @@
 	<!-- START TEST VERSION 1.5 -->
 	<test id="1.5.1" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-norsk-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -527,7 +527,7 @@
 	
 	<test id="1.5.2" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-norsk-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -535,7 +535,7 @@
 
 	<test id="1.5.3" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-norsk-profilxy.xml</file>
 		<errors>			
 			<schematronrule>BIIPROFILE-T10-R001</schematronrule>
@@ -545,7 +545,7 @@
 
 	<test id="1.5.4" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</id>
 		<file>/STANDARD/1.5/test/invoice/T10-utland-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -553,7 +553,7 @@
 
 	<test id="1.5.5" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.5/test/invoice/T10-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -561,7 +561,7 @@
 
 	<test id="1.5.6" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-norsk-profil05.xml</file>
 		<errors></errors>
 		<warnings>
@@ -571,7 +571,7 @@
 
 	<test id="1.5.7" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-norsk-profilxx.xml</file>
 		<errors></errors>
 		<warnings>
@@ -581,7 +581,7 @@
 
 	<test id="1.5.8" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule>BIIPROFILE-T14-R001</schematronrule>			
@@ -593,7 +593,7 @@
 	
 	<test id="1.5.9" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings>
@@ -603,7 +603,7 @@
 	
 	<test id="1.5.10" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.5/test/reminder/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -614,7 +614,7 @@
 
 	<test id="1.5.11" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-avrunding-1.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -622,7 +622,7 @@
 	
 	<test id="1.5.12" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-avrunding-2.xml</file>
 		<errors></errors>
 		<warnings>
@@ -703,7 +703,7 @@
 	
 	<test id="1.5.13" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -711,7 +711,7 @@
 
 	<test id="1.5.14" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-avrunding-1.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -719,7 +719,7 @@
 
 	<test id="1.5.15" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-avrunding-2.xml</file>
 		<errors></errors>
 		<warnings>
@@ -729,7 +729,7 @@
 
 	<test id="1.5.16" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings>
@@ -739,7 +739,7 @@
 
 	<test id="1.5.17" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-hode-blank.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -790,7 +790,7 @@
 
 	<test id="1.5.18" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -823,7 +823,7 @@
 
 	<test id="1.5.19" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -831,7 +831,7 @@
 
 	<test id="1.5.20" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-hode-blank.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -872,7 +872,7 @@
 	
 	<test id="1.5.21" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -902,7 +902,7 @@
 
 	<test id="1.5.22" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -910,7 +910,7 @@
 
 	<test id="1.5.23" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.5/test/invoice/T10-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -935,7 +935,7 @@
 
 	<test id="1.5.24" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.5/test/creditnote/T14-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -957,7 +957,7 @@
 	
 	<test id="1.5.25" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.5/test/reminder/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -980,7 +980,7 @@
 
 	<test id="1.5.26" ignore="false">
 		<version>1.5</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.5/test/reminder/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -999,7 +999,7 @@
 	<!-- START TEST VERSION 1.6 -->
 	<test id="1.6.1" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-norsk-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1007,7 +1007,7 @@
 	
 	<test id="1.6.2" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-norsk-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1015,7 +1015,7 @@
 	
 	<test id="1.6.3" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-norsk-profilxy.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1023,7 +1023,7 @@
 	
 	<test id="1.6.4" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0</id>
 		<file>/STANDARD/1.6/test/invoice/T10-utland-profil04.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1031,7 +1031,7 @@
 
 	<test id="1.6.5" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.6/test/invoice/T10-utland-profil05.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1039,7 +1039,7 @@
 	
 	<test id="1.6.6" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-norsk-profil05.xml</file>
 		<errors>			
 			<schematronrule>BIIPROFILE-T14-R002</schematronrule>
@@ -1051,7 +1051,7 @@
 	
 	<test id="1.6.7" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-norsk-profilxx.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1061,7 +1061,7 @@
 	
 	<test id="1.6.8" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule>BIIPROFILE-T14-R002</schematronrule>			
@@ -1073,7 +1073,7 @@
 	
 	<test id="1.6.9" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-utland-profil05.xml</file>
 		<errors>
 			<schematronrule>BIIPROFILE-T14-R002</schematronrule>
@@ -1085,7 +1085,7 @@
 	
 	<test id="1.6.10" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.6/test/reminder/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1095,7 +1095,7 @@
 	
 	<test id="1.6.11" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-avrunding-1.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1103,7 +1103,7 @@
 
 	<test id="1.6.12" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-avrunding-2.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1186,7 +1186,7 @@
 	
 	<test id="1.6.13" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1194,7 +1194,7 @@
 	
 	<test id="1.6.14" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-avrunding-1.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1202,7 +1202,7 @@
 	
 	<test id="1.6.15" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-avrunding-2.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1212,7 +1212,7 @@
 	
 	<test id="1.6.16" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-avrunding-3.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1222,7 +1222,7 @@
 	
 	<test id="1.6.17" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-hode-blank.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1271,7 +1271,7 @@
 	
 	<test id="1.6.18" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1304,7 +1304,7 @@
 	
 	<test id="1.6.19" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1312,7 +1312,7 @@
 	
 	<test id="1.6.20" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-hode-blank.xml</file>
 		<errors>		
 			<schematronrule></schematronrule>
@@ -1350,7 +1350,7 @@
 	
 	<test id="1.6.21" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-hode-feilkoder.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1380,7 +1380,7 @@
 	
 	<test id="1.6.22" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-hode-ok.xml</file>
 		<errors></errors>
 		<warnings></warnings>
@@ -1388,7 +1388,7 @@
 	
 	<test id="1.6.23" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1413,7 +1413,7 @@
 	
 	<test id="1.6.24" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1435,7 +1435,7 @@
 	
 	<test id="1.6.25" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.6/test/reminder/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1456,7 +1456,7 @@
 	
 	<test id="1.6.26" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
 		<file>/STANDARD/1.6/test/reminder/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
@@ -1469,7 +1469,7 @@
 
 	<test id="1.6.27" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-delivery-prlinje.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1479,7 +1479,7 @@
 	
 	<test id="1.6.28" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-hode-test16.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1490,7 +1490,7 @@
 	
 	<test id="1.6.29" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.6/test/invoice/T10-negativ-faktura.xml</file>
 		<errors></errors>
 		<warnings>
@@ -1501,7 +1501,7 @@
 	
 	<test id="1.6.30" ignore="false">
 		<version>1.6</version>
-		<schema>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</schema>
+		<id>urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1</id>
 		<file>/STANDARD/1.6/test/creditnote/T14-hode-test16.xml</file>
 		<errors></errors>
 		<warnings></warnings>
