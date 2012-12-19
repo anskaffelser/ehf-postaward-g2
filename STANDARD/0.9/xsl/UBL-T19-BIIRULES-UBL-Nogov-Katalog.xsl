@@ -15,7 +15,7 @@
 
 	<!--PROLOG-->
 
-	<axsl:output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" method="xml" omit-xml-declaration="no" standalone="yes" indent="yes"/>
+	<axsl:output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" method="xml" omit-xml-declaration="no" standalone="yes" indent="yes" encoding="UTF-8"/>
 
 	<!--XSD TYPES-->
 
@@ -190,14 +190,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cbc:CustomizationID) >0"/>
+			<axsl:when test="string-length(cbc:CustomizationID) > 0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:CustomizationID)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R001]-A catalogue MUST have a customization identifier</svrl:text>
+					<svrl:text>[BII2-T19-R001]- Katlogen må ha en "customization ID" -- A catalogue MUST have a customization identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -212,7 +212,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R002]-A catalogue MUST have a profile identifier</svrl:text>
+					<svrl:text>[BII2-T19-R002]-Katalogen må ha en profilidentifikator *** A catalogue MUST have a profile identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -220,14 +220,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:IssueDate)"/>
+			<axsl:when test="string-length(string(cbc:IssueDate)) >0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:IssueDate)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:IssueDate) >0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R003]-A catalogue MUST contain the date of issue</svrl:text>
+					<svrl:text>[BII2-T19-R003]-En Katalog må ha en utstedelses dato -- A catalogue MUST contain the date of issue</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -268,15 +268,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:VersionID)"/>
+			<axsl:when test="string-length(cbc:VersionID) >0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:VersionID)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:VersionID) >0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
-					</axsl:attribute>
-					<svrl:text>[BII2-T19-R005]-A catalogue version MUST always be specified</svrl:text>
-					<svrl:text>[BII2-T19-R005]-En katalog versjon MÅ alltid være spesifisert</svrl:text>
+					</axsl:attribute>		
+					<svrl:text>[BII2-T19-R005]-En katalog versjon MÅ alltid være spesifisert ** A catalogue version MUST always be specified</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -291,7 +290,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R007]-The party providing the catalogue MUST be specified</svrl:text>
+					<svrl:text>[BII2-T19-R007]-Katalogutsteder må spesifiseres  -- The party providing the catalogue MUST be specified</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -306,7 +305,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R008]-The party receiving the catalogue MUST be specified</svrl:text>
+					<svrl:text>[BII2-T19-R008]-Katalogmottaker må spesifiseres -- The party receiving the catalogue MUST be specified</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -321,7 +320,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R009]-A catalogue MUST have maximum one catalogue supplier</svrl:text>
+					<svrl:text>[BII2-T19-R009]- Katalogen MÅ ha maksimum en leverandør -- A catalogue MUST have maximum one catalogue supplier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -336,7 +335,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R023]-A catalogue MUST have at least one catalogue line</svrl:text>
+					<svrl:text>[BII2-T19-R023]- Katalogen MÅ ha minst EN kataloglinje -- A catalogue MUST have at least one catalogue line</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -351,14 +350,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cac:Party/cac:PartyName/cbc:Name) or (cac:Party/cac:PartyIdentification/cbc:ID)"/>
+			<axsl:when test="string-length(cac:Party/cac:PartyName/cbc:Name)>0 or string-length(cac:Party/cac:PartyIdentification/cbc:ID)>0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Party/cac:PartyName/cbc:Name) or (cac:Party/cac:PartyIdentification/cbc:ID)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cac:Party/cac:PartyName/cbc:Name)>0 or string-length(cac:Party/cac:PartyIdentification/cbc:ID)>0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R013]-A catalogue customer MUST contain the full name or an identifier</svrl:text>
+					<svrl:text>[BII2-T19-R013]- Kjøper må spesifiseres med fullt navn eller med en idenifikator -- A catalogue customer MUST contain the full name or an identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -381,7 +380,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R017]-Catalogue line validity period MUST be within the range of the whole catalogue validity period</svrl:text>
+					<svrl:text>[BII2-T19-R017]- Gyldighetsperioden på linjenivå bør være innenfor gyldighetsperioden på hodenivå -- Catalogue line validity period SHOULD be within the range of the whole catalogue validity period</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -398,7 +397,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R018]-Price validity period MUST be within the range of the whole catalogue line validity period</svrl:text>
+					<svrl:text>[BII2-T19-R018]-Prisperioden bør være innenfor katalogens gyldighetsperiode -- Price validity period SHOULD be within the range of the whole catalogue line validity period</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -406,14 +405,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:ID)"/>
+			<axsl:when test="string-length(cbc:ID) >0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ID)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:ID) >0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R024]-A catalogue line MUST contain a unique line identifier</svrl:text>
+					<svrl:text>[BII2-T19-R024]- Kataloglinjen MÅ ha en unik linjeidentidikator -- A catalogue line MUST contain a unique line identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -421,14 +420,14 @@
 				<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cbc:OrderableUnit) &gt;= 0"/>
+			<axsl:when test="string-length(cbc:OrderableUnit) > 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:OrderableUnit) &gt;= 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:OrderableUnit) > 0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R026]-Orderable unit MUST have a value</svrl:text>
+					<svrl:text>[BII2-T19-R026]- Bestillingsenhet MÅ ha en verdi -- Orderable unit MUST have a value</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -440,12 +439,12 @@
 			<axsl:when test="string(cbc:OrderableIndicator) !='true'"/>		
 			<axsl:when test="number(cbc:ContentUnitQuantity) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:ContentUnitQuantity) &gt;= 0 and cbc:OrderableIndicator ='true'">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:ContentUnitQuantity) > 0 and cbc:OrderableIndicator ='true'">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R026]-Orderable quantitites MUST be greater than zero</svrl:text>
+					<svrl:text>[BII2-T19-R026]-Bestillingsantall MÅ være større enn null -- Orderable quantitites MUST be greater than zero</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -456,12 +455,12 @@
 		    <axsl:when test="not(cbc:MaximumOrderQuantity)"/>
 			<axsl:when test="number(cbc:MaximumOrderQuantity) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MaximumOrderQuantity) &gt;= 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:MaximumOrderQuantity) &gt; 0">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R029]-Maximum quantity MUST be greater than zero</svrl:text>
+					<svrl:text>[BII2-T19-R029]- Maks bestillingskvantum bør være større enn null -- Maximum quantity SHOULD be greater than zero</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -477,7 +476,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R030]-Minimum quantity MUST be greater than zero</svrl:text>
+					<svrl:text>[BII2-T19-R030]-Minimum bestillingsantall bør være større enn null -- Minimum quantity SHOULD be greater than zero</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -493,8 +492,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>						
-					<svrl:text>[BII2-T19-R031]-Maximum quantity MUST be greater or equal to the Minimum quantity</svrl:text>
-					<svrl:text>[BII2-T19-R031]-Maksimum kvantitet MÅ være større eller lik Minimum kvantitet</svrl:text>
+				<svrl:text>[BII2-T19-R031]-Maksimum kvantitet BØR være større eller lik Minimum kvantitet -- Maximum quantity SHOULD be greater or equal to the Minimum quantity</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -601,14 +599,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:Name)"/>
+			<axsl:when test="string-length(cbc:Name) > 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:Name)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:Name) > 0">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R019]-An item in a catalogue line SHOULD have a name</svrl:text>
+					<svrl:text>[BII2-T19-R019]-En artikkel (item) bør ha et navn -- An item in a catalogue line SHOULD have a name</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -623,7 +621,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R020]-An item in a catalogue line MUST be uniquely identifiable by at least one of the following:
+					<svrl:text>[BII2-T19-R020]-En artikkel(item) i en kataloglinje MÅ kunne identifiseres med enten "Catalogue Provider identifier" eller "Standard identifier" -- An item in a catalogue line MUST be uniquely identifiable by at least one of the following:
 - Catalogue Provider identifier
 - Standard identifier</svrl:text>
 				</svrl:failed-assert>
@@ -640,7 +638,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R021]-Standard Identifiers SHOULD contain the Schema Identifier (e.g. GTIN)</svrl:text>
+					<svrl:text>[BII2-T19-R021]- "Standard Identifiers" BØR referere til en skjemaidentifikator som f eks GTIN -- Standard Identifiers SHOULD contain the Schema Identifier (e.g. GTIN)</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -655,7 +653,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R022]-Classification codes SHOULD contain the Classification scheme Identifier (e.g. CPV or UNSPSC)</svrl:text>
+					<svrl:text>[BII2-T19-R022]- Kategorikoder BØR referere til en skjemaidentifikator (f.eks. CPV or UNSPSC) -- Classification codes SHOULD contain the Classification scheme Identifier (e.g. CPV or UNSPSC)</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -677,7 +675,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R015]-Prices of items MUST not be negative</svrl:text>
+					<svrl:text>[BII2-T19-R015]-Prisen på en artikkel MÅ ikke være negativ -- Prices of items MUST not be negative</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -692,14 +690,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:Value)"/>
+			<axsl:when test="string-length(cbc:Value) >0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:Value)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:Value) >0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R027]-An item property data name  MUST specify a data value</svrl:text>
+					<svrl:text>[BII2-T19-R027]-Tilleggsegenskaper MÅ spesifisere en verdi -- An item property data name MUST specify a data value</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -721,7 +719,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R006]-A validity period end date MUST be later or equal to a validity period start date if both validity period end date and validaty period start date are present</svrl:text>
+					<svrl:text>[BII2-T19-R006]- Sluttdatoen for en gyldighetsperiode MÅ være større eller lik startdatoen når den er benyttet -- A validity period end date MUST be later or equal to a validity period start date if both validity period end date and validaty period start date are present</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -750,7 +748,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[CL-019-001]-The line action code for a catalogue line MUST be add, update or delete if present</svrl:text>
+					<svrl:text>[CL-019-001]- Aksjonskode på linjenivå må være Add, Delete eller Update hvis den er tilstede -- The line action code for a catalogue line MUST be Add, Update or Delete if present</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
