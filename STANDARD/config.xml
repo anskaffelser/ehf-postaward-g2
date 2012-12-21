@@ -541,7 +541,7 @@
 	<!-- START VERSION 0.9 -->
 	<!-- START CATALOGUE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii01:ver1.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId" 
+		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:BiiCoreTrdm019:ver1.0:extentionId"			
 		version="0.9">
 		<name>
 			<en>EHF catalogue</en>
