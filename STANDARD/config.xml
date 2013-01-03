@@ -547,8 +547,8 @@
 			<en>EHF catalogue</en>
 			<no>EHF katalog</no>
 		</name>
-		<xi:include href="/STANDARD/0.9/includes/UBL-Catalogue-2.1.xml" />
-		<xi:include href="/STANDARD/0.9/includes/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml" />
+		<xi:include href="/STANDARD/EHFCatalogue/0.9/includes/UBL-Catalogue-2.1.xml" />
+		<xi:include href="/STANDARD/EHFCatalogue/0.9/includes/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml" />
 	</validate>	
 	<!-- STOP CATALOGUE -->
 	<!-- STOP VERSION 0.9 -->
