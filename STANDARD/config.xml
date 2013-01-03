@@ -11,14 +11,14 @@
 			<no>EHF faktura i Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 
 	<validate 
@@ -29,12 +29,12 @@
 			<no>EHF faktura utenfor Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -45,14 +45,14 @@
 			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -63,12 +63,12 @@
 			<no>EHF faktura utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -79,14 +79,14 @@
 			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP INVOICE -->
 
@@ -100,14 +100,14 @@
 			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -118,14 +118,14 @@
 			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -136,12 +136,12 @@
 			<no>EHF kreditnota utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -152,14 +152,14 @@
 			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP CREDITNOTE -->
 	
@@ -172,7 +172,7 @@
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/EHFReminder/1.6/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.6/includes/UBL-T17-Nonat.xml" />
 	</validate>			
 	<!-- STOP REMINDER -->
 	<!-- STOP VERSION 1.6 -->
@@ -190,14 +190,14 @@
 			<no>EHF faktura i Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 
 	<validate 
@@ -208,12 +208,12 @@
 			<no>EHF faktura utenfor Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -224,14 +224,14 @@
 			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -242,12 +242,12 @@
 			<no>EHF faktura utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -258,14 +258,14 @@
 			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP INVOICE -->
 
@@ -279,14 +279,14 @@
 			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -297,14 +297,14 @@
 			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -315,12 +315,12 @@
 			<no>EHF kreditnota utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -331,14 +331,14 @@
 			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP CREDITNOTE -->
 	
@@ -351,7 +351,7 @@
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/EHFReminder/1.5/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.5/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP REMINDER -->	
 	<!-- STOP VERSION 1.5 -->
@@ -369,14 +369,14 @@
 			<no>EHF faktura i Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 
 	<validate 
@@ -387,12 +387,12 @@
 			<no>EHF faktura utenfor Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -403,14 +403,14 @@
 			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -421,12 +421,12 @@
 			<no>EHF faktura utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>
 
 	<validate 
@@ -437,14 +437,14 @@
 			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T10-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP INVOICE -->
 
@@ -458,14 +458,14 @@
 			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -476,14 +476,14 @@
 			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -494,12 +494,12 @@
 			<no>EHF kreditnota utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	
 	<validate 
@@ -510,14 +510,14 @@
 			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.0.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiCore.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiProfiles.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRules.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgen.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nonat.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-Nogov.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
-		<xi:include href="/STANDARD/EHFInvoice/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiCore.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiProfiles.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRules.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgen.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-Nogov.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-BiiRulesCodes.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T14-EUgenRulesCodes.xml" />		
 	</validate>	
 	<!-- STOP CREDITNOTE -->
 	
@@ -530,7 +530,7 @@
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/EHFReminder/1.4/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/common/1.4/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP REMINDER -->
 	<!-- STOP VERSION 1.4 -->
@@ -548,7 +548,7 @@
 			<no>EHF katalog</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml" />
-		<xi:include href="/STANDARD/EHFCatalogue/0.9/includes/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml" />
+		<xi:include href="/STANDARD/common/0.9/includes/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml" />
 	</validate>	
 	<!-- STOP CATALOGUE -->
 	<!-- STOP VERSION 0.9 -->
