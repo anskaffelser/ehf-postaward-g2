@@ -14,7 +14,7 @@
     attributeFormDefault="unqualified"
     version="2.1">
 <!-- ===== Imports ===== -->
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
 <!-- ===== Type Definitions ===== -->
   <!--no qualified data types defined at this time-->
 </xsd:schema>

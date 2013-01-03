@@ -14,7 +14,7 @@
             attributeFormDefault="unqualified"
             version="2.1">
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:element name="AcceptanceTransportEvent" type="TransportEventType"/>
    <xsd:element name="AccessoryRelatedItem" type="RelatedItemType"/>
    <xsd:element name="AccountingContact" type="ContactType"/>

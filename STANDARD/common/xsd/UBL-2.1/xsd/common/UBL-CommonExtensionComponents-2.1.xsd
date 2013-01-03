@@ -13,10 +13,10 @@ targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionCom
             elementFormDefault="qualified" attributeFormDefault="unqualified" 
             version="2.1">
 <!-- ===== Imports ===== -->
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
 <!-- ===== Includes ===== -->
-<xsd:include schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-ExtensionContentDataType-2.1.xsd"/>
+<xsd:include schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-ExtensionContentDataType-2.1.xsd"/>
 <!-- ===== Aggregate Element and Type Declarations ===== -->
   <xsd:element name="UBLExtensions" type="UBLExtensionsType">
     <xsd:annotation>

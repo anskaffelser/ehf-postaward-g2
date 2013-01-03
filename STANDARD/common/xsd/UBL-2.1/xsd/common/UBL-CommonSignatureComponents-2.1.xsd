@@ -13,7 +13,7 @@
             attributeFormDefault="unqualified"
             version="2.1">
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-SignatureAggregateComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-SignatureAggregateComponents-2.1.xsd"/>
    <xsd:element name="UBLDocumentSignatures" type="UBLDocumentSignaturesType"/>
    <xsd:complexType name="UBLDocumentSignaturesType">
       <xsd:sequence>

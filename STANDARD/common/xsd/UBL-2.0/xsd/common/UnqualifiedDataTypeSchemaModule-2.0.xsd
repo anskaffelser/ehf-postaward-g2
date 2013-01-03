@@ -46,10 +46,10 @@ attributeFormDefault="unqualified">
    <!-- =================================================================== -->
    <!-- ===== Imports of Code Lists ===== -->
    <!-- =================================================================== -->
-   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:66411:2001" schemaLocation="/STANDARD/xsd/UBL-2.0/xsd/common/CodeList_UnitCode_UNECE_7_04.xsd"/>
-   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003" schemaLocation="/STANDARD/xsd/UBL-2.0/xsd/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd"/>
-   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:54217:2001" schemaLocation="/STANDARD/xsd/UBL-2.0/xsd/common/CodeList_CurrencyCode_ISO_7_04.xsd"/>
-   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:5639:1988" schemaLocation="/STANDARD/xsd/UBL-2.0/xsd/common/CodeList_LanguageCode_ISO_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:66411:2001" schemaLocation="/STANDARD/common/xsd/UBL-2.0/xsd/common/CodeList_UnitCode_UNECE_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003" schemaLocation="/STANDARD/common/xsd/UBL-2.0/xsd/common/CodeList_MIMEMediaTypeCode_IANA_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:54217:2001" schemaLocation="/STANDARD/common/xsd/UBL-2.0/xsd/common/CodeList_CurrencyCode_ISO_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:5639:1988" schemaLocation="/STANDARD/common/xsd/UBL-2.0/xsd/common/CodeList_LanguageCode_ISO_7_04.xsd"/>
    <!-- ===== Type Definitions ===== -->
    <!-- =================================================================== -->
    <!-- ===== Primary RT: Amount. Type ===== -->

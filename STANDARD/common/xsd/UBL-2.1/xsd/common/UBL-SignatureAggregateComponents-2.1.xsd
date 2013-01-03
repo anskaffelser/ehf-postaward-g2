@@ -16,19 +16,19 @@
             attributeFormDefault="unqualified"
             version="2.1">
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-SignatureBasicComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-SignatureBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-xmldsig-core-schema-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-xmldsig-core-schema-2.1.xsd"/>
 
    <!-- ===== Incorporate ETSI signature specifications-->
    <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-XAdESv132-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-XAdESv132-2.1.xsd"/>
    <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"
-               schemaLocation="/STANDARD/xsd/UBL-2.1/xsd/common/UBL-XAdESv141-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-XAdESv141-2.1.xsd"/>
           <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
    <xsd:complexType name="SignatureInformationType">
       <xsd:sequence>
