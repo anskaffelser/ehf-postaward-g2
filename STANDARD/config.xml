@@ -171,8 +171,8 @@
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
-		<xi:include href="/STANDARD/1.6/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/1.6/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.6/includes/UBL-Reminder-2.0.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.6/includes/UBL-T17-Nonat.xml" />
 	</validate>			
 	<!-- STOP REMINDER -->
 	<!-- STOP VERSION 1.6 -->
@@ -350,8 +350,8 @@
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
-		<xi:include href="/STANDARD/1.5/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/1.5/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.5/includes/UBL-Reminder-2.0.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.5/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP REMINDER -->	
 	<!-- STOP VERSION 1.5 -->
@@ -529,8 +529,8 @@
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
 			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
 		</name>
-		<xi:include href="/STANDARD/1.4/includes/UBL-Reminder-2.0.xml" />
-		<xi:include href="/STANDARD/1.4/includes/UBL-T17-Nonat.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.4/includes/UBL-Reminder-2.0.xml" />
+		<xi:include href="/STANDARD/EHFReminder/1.4/includes/UBL-T17-Nonat.xml" />
 	</validate>		
 	<!-- STOP REMINDER -->
 	<!-- STOP VERSION 1.4 -->
