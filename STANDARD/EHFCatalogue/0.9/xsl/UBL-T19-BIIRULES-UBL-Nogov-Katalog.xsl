@@ -242,7 +242,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R004]-A catalogue MUST contain the catalogue document identifier</svrl:text>
+					<svrl:text>[BII2-T19-R004]-En Katalog må ha katalog dokument identifikator -- A catalogue MUST contain the catalogue document identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -260,7 +260,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T19-R001]-A Catalogue must contain ActionCode on either Header or Line level</svrl:text>
+					<svrl:text>[NOGOV-T19-R001]-En katalog må ha aksjonskode enten på hode- eller linjenivå -- A Catalogue must contain ActionCode on either Header or Line level</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -275,7 +275,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>		
-					<svrl:text>[BII2-T19-R005]-En katalog versjon MÅ alltid være spesifisert ** A catalogue version MUST always be specified</svrl:text>
+					<svrl:text>[BII2-T19-R005]-En katalog versjon MÅ alltid være spesifisert -- A catalogue version MUST always be specified</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -372,10 +372,10 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cac:LineValidityPeriod/cbc:StartDate and cac:LineValidityPeriod/cbc:EndDate) and (number(translate(string(cac:LineValidityPeriod/cbc:StartDate),'-','')) &gt;= number(translate(string(//cac:ValidityPeriod/cbc:StartDate),'-',''))) and (number(translate(string(cac:LineValidityPeriod/cbc:EndDate),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-','')))"/>
+			<axsl:when test="not ((cac:LineValidityPeriod/cbc:StartDate) and (cac:LineValidityPeriod/cbc:EndDate)) or ((cac:LineValidityPeriod/cbc:StartDate and cac:LineValidityPeriod/cbc:EndDate) and (number(translate(string(cac:LineValidityPeriod/cbc:StartDate),'-','')) &gt;= number(translate(string(//cac:ValidityPeriod/cbc:StartDate),'-',''))) and (number(translate(string(cac:LineValidityPeriod/cbc:EndDate),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-',''))))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="(cac:LineValidityPeriod/cbc:StartDate and cac:LineValidityPeriod/cbc:EndDate) and (number(translate(string(cac:LineValidityPeriod/cbc:StartDate),'-','')) &gt;= number(translate(string(//cac:ValidityPeriod/cbc:StartDate),'-',''))) and (number(translate(string(cac:LineValidityPeriod/cbc:EndDate),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-','')))">
+				                    test="not ((cac:LineValidityPeriod/cbc:StartDate) and (cac:LineValidityPeriod/cbc:EndDate)) or ((cac:LineValidityPeriod/cbc:StartDate and cac:LineValidityPeriod/cbc:EndDate) and (number(translate(string(cac:LineValidityPeriod/cbc:StartDate),'-','')) &gt;= number(translate(string(//cac:ValidityPeriod/cbc:StartDate),'-',''))) and (number(translate(string(cac:LineValidityPeriod/cbc:EndDate),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-',''))))">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -514,7 +514,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R010]-A catalogue provider MUST contain the full name or an identifier</svrl:text>
+					<svrl:text>[BII2-T19-R010]-En katalogutsteder MÅ ha fullt navn eller en ID -- A catalogue provider MUST contain the full name or an identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -536,7 +536,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R011]-A catalogue receiver MUST contain the full name or an identifier</svrl:text>
+					<svrl:text>[BII2-T19-R011]-Katalog mottaker MÅ ha fullt navn eller en ID -- A catalogue receiver MUST contain the full name or an identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -558,7 +558,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R012]-A catalogue supplier MUST contain the full name or an identifier</svrl:text>
+					<svrl:text>[BII2-T19-R012]-Leverandør MÅ ha fullt navn eller en ID -- A catalogue supplier MUST contain the full name or an identifier</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -580,7 +580,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T19-R014]-A catalogue supplier postal address SHOULD  have at least all of the following:
+					<svrl:text>[BII2-T19-R014]-Leverandør postadresse -- A catalogue supplier postal address SHOULD  have at least all of the following:
 - Address line
 - City
 - Post code
@@ -631,9 +631,9 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cac:StandardItemIdentification/cbc:ID/@schemeID)"/>
+			<axsl:when test="(string-length(cac:StandardItemIdentification/cbc:ID) = 0) or ((string-length(cac:StandardItemIdentification/cbc:ID) > 0) and (string-length(cac:StandardItemIdentification/cbc:ID/@schemeID) > 0))"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:StandardItemIdentification/cbc:ID/@schemeID)">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(cac:StandardItemIdentification/cbc:ID) = 0) or ((string-length(cac:StandardItemIdentification/cbc:ID) > 0) and (string-length(cac:StandardItemIdentification/cbc:ID/@schemeID) > 0))">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -690,9 +690,9 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cbc:Value) >0"/>
+			<axsl:when test="(string-length(cbc:Name ) =0) or (string-length(cbc:Value) >0)"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:Value) >0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(cbc:Name ) =0) or (string-length(cbc:Value) >0)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
