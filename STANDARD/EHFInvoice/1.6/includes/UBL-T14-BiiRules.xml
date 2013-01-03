@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<step id="XSL" file="/STANDARD/1.6/xsl/UBL-T14-BiiRules.xsl" />
+<step id="XSL" file="/STANDARD/EHFInvoice/1.6/xsl/UBL-T14-BiiRules.xsl" />
