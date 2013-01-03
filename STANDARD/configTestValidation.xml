@@ -113,7 +113,7 @@
 	<test id="1.4.10" ignore="false">
 		<version>1.4</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.4/test/reminder/T17-norsk-profilxy.xml</file>
+		<file>/STANDARD/EHFReminder/1.4/test/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R016</schematronrule>
@@ -478,7 +478,7 @@
 	<test id="1.4.25" ignore="false">
 		<version>1.4</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.4/test/reminder/T17-hode-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.4/test/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R001</schematronrule>
@@ -501,7 +501,7 @@
 	<test id="1.4.26" ignore="false">
 		<version>1.4</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.4/test/reminder/T17-linje-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.4/test/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R016</schematronrule>
@@ -604,7 +604,7 @@
 	<test id="1.5.10" ignore="false">
 		<version>1.5</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.5/test/reminder/T17-norsk-profilxy.xml</file>
+		<file>/STANDARD/EHFReminder/1.5/test/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R016</schematronrule>
@@ -958,7 +958,7 @@
 	<test id="1.5.25" ignore="false">
 		<version>1.5</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.5/test/reminder/T17-hode-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.5/test/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R001</schematronrule>
@@ -981,7 +981,7 @@
 	<test id="1.5.26" ignore="false">
 		<version>1.5</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.5/test/reminder/T17-linje-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.5/test/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R016</schematronrule>
@@ -1086,7 +1086,7 @@
 	<test id="1.6.10" ignore="false">
 		<version>1.6</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.6/test/reminder/T17-norsk-profilxy.xml</file>
+		<file>/STANDARD/EHFReminder/1.6/test/T17-norsk-profilxy.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 		</errors>
@@ -1436,7 +1436,7 @@
 	<test id="1.6.25" ignore="false">
 		<version>1.6</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.6/test/reminder/T17-hode-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.6/test/T17-hode-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R001</schematronrule>
@@ -1457,7 +1457,7 @@
 	<test id="1.6.26" ignore="false">
 		<version>1.6</version>
 		<id>urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1</id>
-		<file>/STANDARD/1.6/test/reminder/T17-linje-feil.xml</file>
+		<file>/STANDARD/EHFReminder/1.6/test/T17-linje-feil.xml</file>
 		<errors>
 			<schematronrule></schematronrule>
 			<schematronrule>NONAT-T17-R008</schematronrule>
