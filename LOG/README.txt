@@ -1,0 +1,1 @@
+The log folder is used to place potential log files that the validator creates.
