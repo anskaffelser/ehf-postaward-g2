@@ -4,7 +4,7 @@
 	<!-- START VERSION 1.6 -->
 	<!-- START INVOICE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF invoice in Norway, profile invoice only</en>
@@ -22,7 +22,7 @@
 	</validate>	
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
 		version="1.6">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice only</en>
@@ -38,7 +38,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF invoice in Norway, profile invoice and creditnote</en>
@@ -56,7 +56,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.6">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice and creditnote</en>
@@ -72,7 +72,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
@@ -93,7 +93,7 @@
 
 	<!-- START CREDITNOTE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF creditnote in Norway, profile creditnote only</en>
@@ -111,7 +111,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice and creditnote</en>
@@ -129,7 +129,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.6">
 		<name>
 			<en>EHF creditnote outside Norway, profile invoice and creditnote</en>
@@ -145,7 +145,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice, creditnote and reminder</en>
@@ -165,7 +165,7 @@
 	
 	<!-- START REMINDER -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.6">
 		<name>
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
@@ -183,7 +183,7 @@
 	<!-- START VERSION 1.5 -->
 	<!-- START INVOICE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF invoice in Norway, profile invoice only</en>
@@ -201,7 +201,7 @@
 	</validate>	
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
 		version="1.5">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice only</en>
@@ -217,7 +217,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF invoice in Norway, profile invoice and creditnote</en>
@@ -235,7 +235,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.5">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice and creditnote</en>
@@ -251,7 +251,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
@@ -272,7 +272,7 @@
 
 	<!-- START CREDITNOTE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF creditnote in Norway, profile creditnote only</en>
@@ -290,7 +290,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice and creditnote</en>
@@ -308,7 +308,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.5">
 		<name>
 			<en>EHF creditnote outside Norway, profile invoice and creditnote</en>
@@ -324,7 +324,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice, creditnote and reminder</en>
@@ -344,7 +344,7 @@
 	
 	<!-- START REMINDER -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.5">
 		<name>
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
@@ -362,7 +362,7 @@
 	<!-- START VERSION 1.4 -->
 	<!-- START INVOICE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF invoice in Norway, profile invoice only</en>
@@ -380,7 +380,7 @@
 	</validate>	
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0" 
 		version="1.4">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice only</en>
@@ -396,7 +396,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF invoice in Norway, profile invoice and creditnote</en>
@@ -414,7 +414,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.4">
 		<name>
 			<en>EHF invoice outside Norway, profile invoice and creditnote</en>
@@ -430,7 +430,7 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.cenbii.eu:profile.eu:biixy:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
@@ -451,7 +451,7 @@
 
 	<!-- START CREDITNOTE -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixx:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF creditnote in Norway, profile creditnote only</en>
@@ -469,7 +469,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice and creditnote</en>
@@ -487,7 +487,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii05:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.peppol.eu:bis:peppol5a:ver1.0" 
 		version="1.4">
 		<name>
 			<en>EHF creditnote outside Norway, profile invoice and creditnote</en>
@@ -503,7 +503,7 @@
 	</validate>	
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm014:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:kreditnota:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF creditnote in Norway, profile invoice, creditnote and reminder</en>
@@ -523,7 +523,7 @@
 	
 	<!-- START REMINDER -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
 		version="1.4">
 		<name>
 			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
