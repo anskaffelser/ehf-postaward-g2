@@ -11,7 +11,7 @@
 	Example:
 	<test id="1" ignore="false">
 		<version>1.4</version>
-		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
+		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
 		<file>/STANDARD/1.4/test/invoice/test.xml</file>
 		<errors>
 			<schematronrule>EUGEN-T10-R024</schematronrule>
