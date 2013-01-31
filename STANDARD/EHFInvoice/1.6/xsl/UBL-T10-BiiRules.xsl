@@ -640,11 +640,11 @@
                                    not(cac:Price/cbc:PriceAmount) or 
                                    number(cbc:LineExtensionAmount) &gt;= 0  or 
                                    (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * number(cac:Price/cbc:PriceAmount) * abs(number(cbc:InvoicedQuantity))) div 100) + 
+         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or
           ((cac:Price/cbc:BaseQuantity) and 
-          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (number(cac:Price/cbc:PriceAmount) div number(cac:Price/cbc:BaseQuantity)) * abs(number(cbc:InvoicedQuantity))) div 100) +
+          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) +
            ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
            (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)"/>
          <axsl:otherwise>
@@ -653,11 +653,11 @@
                                    not(cac:Price/cbc:PriceAmount) or 
                                    number(cbc:LineExtensionAmount) &gt;= 0  or 
                                    (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * number(cac:Price/cbc:PriceAmount) * abs(number(cbc:InvoicedQuantity))) div 100) + 
+         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or
           ((cac:Price/cbc:BaseQuantity) and 
-          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (number(cac:Price/cbc:PriceAmount) div number(cac:Price/cbc:BaseQuantity)) * abs(number(cbc:InvoicedQuantity))) div 100) +
+          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) +
            ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
             (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
@@ -676,11 +676,11 @@
                                    not(cac:Price/cbc:PriceAmount) or 
                                    number(cbc:LineExtensionAmount) &lt;= 0 or
                                    (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * number(cac:Price/cbc:PriceAmount) *number(cbc:InvoicedQuantity)) div 100) + 
+         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
          ((cac:Price/cbc:BaseQuantity) and 
-         number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (number(cac:Price/cbc:PriceAmount) div number(cac:Price/cbc:BaseQuantity) * number(cbc:InvoicedQuantity))) div 100) +
+         number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"/>
          <axsl:otherwise>
@@ -689,11 +689,11 @@
                                    not(cac:Price/cbc:PriceAmount) or 
                                    number(cbc:LineExtensionAmount) &lt;= 0 or
                                    (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * number(cac:Price/cbc:PriceAmount) *number(cbc:InvoicedQuantity)) div 100) + 
+         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
          ((cac:Price/cbc:BaseQuantity) and 
-         number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (number(cac:Price/cbc:PriceAmount) div number(cac:Price/cbc:BaseQuantity) * number(cbc:InvoicedQuantity))) div 100) +
+         number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)">
                <axsl:attribute name="flag">fatal</axsl:attribute>

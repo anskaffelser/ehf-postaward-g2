@@ -666,16 +666,16 @@
       <axsl:choose>
          <axsl:when test="not(cbc:CreditedQuantity) or 
                                    not(cac:Price/cbc:PriceAmount) or (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * number(cac:Price/cbc:PriceAmount) * abs(number(cbc:CreditedQuantity))) div 100) + 
+         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:CreditedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) ) * 10 * 10) div 100) or
           ((cac:Price/cbc:BaseQuantity) and 
-          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (number(cac:Price/cbc:PriceAmount) div number(cac:Price/cbc:BaseQuantity)) * abs(number(cbc:CreditedQuantity))) div 100) +
+          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:CreditedQuantity))) div 100) +
            ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
            (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100))) *10 *10) div 100)"/>
             <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount) or  abs(number(cbc:LineExtensionAmount)) =
-                                   round((10 * 10) * abs(number(cac:Price/cbc:PriceAmount) *number(cbc:CreditedQuantity))) div 100">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount) or  abs(xs:decimal(cbc:LineExtensionAmount)) =
+                                   round((10 * 10) * abs(xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:CreditedQuantity))) div 100">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
