@@ -296,9 +296,11 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) or count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0"/>
+       <!-- 2013-02-21 EG Included test on the existence of TaxSubtotal -->
+         <axsl:when test="((cac:TaxSubtotal) and (count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']))) or ((cac:TaxSubtotal) and count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) or count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" 
+            test="((cac:TaxSubtotal) and count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT'])) or ((cac:TaxSubtotal) and count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT'])) = 0">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -451,9 +453,10 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cbc:PaymentDueDate and /ubl:Invoice/cbc:IssueDate) and (number(translate(cbc:PaymentDueDate,'-','')) &gt;= number(translate(/ubl:Invoice/cbc:IssueDate,'-',''))) or (not(cbc:PaymentDueDate))"/>
+      <!-- 2013-02-21 EG Included string function to convert PaymentDueDate and IssueDate to Strings when using the translate function --> 
+         <axsl:when test="(cbc:PaymentDueDate and /ubl:Invoice/cbc:IssueDate) and (number(translate(string(cbc:PaymentDueDate),'-','')) &gt;= number(translate(string(/ubl:Invoice/cbc:IssueDate),'-',''))) or (not(cbc:PaymentDueDate))"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:PaymentDueDate and /ubl:Invoice/cbc:IssueDate) and (number(translate(cbc:PaymentDueDate,'-','')) &gt;= number(translate(/ubl:Invoice/cbc:IssueDate,'-',''))) or (not(cbc:PaymentDueDate))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:PaymentDueDate and /ubl:Invoice/cbc:IssueDate) and (number(translate(string(cbc:PaymentDueDate),'-','')) &gt;= number(translate(string(/ubl:Invoice/cbc:IssueDate),'-',''))) or (not(cbc:PaymentDueDate))">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>

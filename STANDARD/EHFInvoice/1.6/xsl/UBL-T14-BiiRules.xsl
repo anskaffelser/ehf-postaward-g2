@@ -294,9 +294,10 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) or count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0"/>
+         <!-- 2013-02-21 EG Included test on the existence of TaxSubtotal -->
+         <axsl:when test="((cac:TaxSubtotal) and (count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']))) or ((cac:TaxSubtotal) and count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) or count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="((cac:TaxSubtotal) and (count(cac:TaxSubtotal/*/*/cbc:ID) = count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']))) or ((cac:TaxSubtotal) and count(cac:TaxSubtotal/*/*/cbc:ID[. = 'VAT']) = 0)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
