@@ -564,13 +564,13 @@
 			<en>EHF order</en>
 			<no>EHF ordre</no>
 		</name>
-		<!--xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml"/-->
+		<xi:include href="/STANDARD/common/includes/UBL-Order-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/0.9/UBL-T01-BIIRULES-Nogov-Ordre.xml"/>
 	</validate>
 	<!-- STOP ORDER -->
 	
 	
-	<!-- START ORDER CONFIRMATION -->
+	<!-- START ORDER RESPONSE -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns076:ver2.0:#urn:www.difi.no:ehf:ordrebekreftelse:ver0.9" 		
 		version="0.9">
@@ -578,10 +578,10 @@
 			<en>EHF order response</en>
 			<no>EHF ordrebekreftelse</no>
 		</name>
-		<!--xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml"/-->
+		<xi:include href="/STANDARD/common/includes/UBL-OrderResponse-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/0.9/UBL-T02-BIIRULES-Nogov-Ordrebekreftelse.xml"/>
 	</validate>
-	<!-- STOP ORDER CONFIRMATION -->	
+	<!-- STOP ORDER RESPONSE -->	
 	<!-- STOP VERSION 0.9 -->
 	
 </config>

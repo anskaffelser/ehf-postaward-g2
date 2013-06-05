@@ -3,7 +3,7 @@
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
   Module:            UBL-CommonExtensionComponents-2.1.xsd
-  Generated on:      2010-03-03 21:30(UTC)
+  Generated on:      2013-04-20 18:40(UTC)
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
@@ -194,7 +194,7 @@ targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionCom
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
