@@ -263,22 +263,23 @@
 
 
 
-	<!--RULE -->
+	<!--RULE 
+	 Endret fra //cac:Delivery til /ubl:Order/cac:Delivery for at den tok med seg delivery på linje-->
 
-	<axsl:template match="//cac:Delivery" priority="1006" mode="M6">
-		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Delivery"/>
+	<axsl:template match="/ubl:Order/cac:Delivery" priority="1006" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Order/cac:Delivery"/>
 
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(string-length(cac:DeliveryLocation/cac:Address/cbc:CityName) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cbc:PostalZone) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode) &gt;0)"/>
+			<axsl:when test="(string-length(cac:DeliveryLocation/cac:Address/cbc:CityName) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cbc:PostalZone) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode) &gt;0) "/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(cac:DeliveryLocation/cac:Address/cbc:CityName) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cbc:PostalZone) &gt;0) and (string-length(cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode) &gt;0)">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R025]-En leveringsadressse bør minst ha en adresse identifikator eller minst postkode, sted og landkode --  A delivery address  SHOULD have at least and address identifier or all of the following: 
+					<svrl:text>[BII2-T01-R025]-En leveringsadressse bør minst ha en adresse identifikator eller minst postkode, sted og landkode --  A delivery address  SHOULD have at least an address identifier or all of the following: 
 - City
 - Post code 
 - Country code</svrl:text>
@@ -355,13 +356,14 @@
 			</axsl:otherwise>
 		</axsl:choose>
 
-		<!--ASSERT -->
+		<!--ASSERT 
+		 Her var ikke Taxamount med-->
 
 		<axsl:choose>
-			<axsl:when test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))"/>
+			<axsl:when test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))">
+				                    test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -750,8 +752,8 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="ordrevalidator" userelativepaths="yes" externalpreview="no" url="..\..\Validator\CLI\eksordre.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
-		          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+		<scenario default="yes" name="ordrevalidator" userelativepaths="yes" externalpreview="no" url="..\..\Validator\CLI\Eksempelfil EHF Ordre2.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
+		          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
 		          customvalidator="">
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>
@@ -768,8 +770,38 @@
 		</scenario>
 	</scenarios>
 	<MapperMetaTag>
-		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
-		<MapperBlockPosition></MapperBlockPosition>
+		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
+			<SourceSchema srcSchemaPath="..\..\Validator\CLI\eksordre.xml" srcSchemaRoot="Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
+		</MapperInfo>
+		<MapperBlockPosition>
+			<template match="*"></template>
+			<template match="//cac:AnticipatedMonetaryTotal">
+				<block path="axsl:choose" x="521" y="112"/>
+				<block path="axsl:choose/&gt;=[0]" x="475" y="106"/>
+				<block path="axsl:choose/&gt;=[0]/number[0]" x="429" y="100"/>
+				<block path="axsl:choose/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="441" y="168"/>
+				<block path="axsl:choose[1]" x="521" y="280"/>
+				<block path="axsl:choose[1]/&gt;=[0]" x="475" y="274"/>
+				<block path="axsl:choose[1]/&gt;=[0]/number[0]" x="429" y="268"/>
+				<block path="axsl:choose[1]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="401" y="175"/>
+				<block path="axsl:choose[2]" x="521" y="175"/>
+				<block path="axsl:choose[2]/or[0]" x="475" y="169"/>
+				<block path="axsl:choose[2]/or[0]/and[0]" x="429" y="163"/>
+				<block path="axsl:choose[2]/or[0]/and[0]/=[1]" x="383" y="185"/>
+				<block path="axsl:choose[2]/or[0]/and[0]/=[1]/number[0]" x="337" y="179"/>
+				<block path="axsl:choose[2]/or[0]/not[1]" x="429" y="191"/>
+				<block path="axsl:choose[2]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="361" y="175"/>
+				<block path="axsl:choose[3]" x="561" y="175"/>
+				<block path="axsl:choose[3]/or[0]" x="515" y="169"/>
+				<block path="axsl:choose[3]/or[0]/and[0]" x="469" y="163"/>
+				<block path="axsl:choose[3]/or[0]/and[0]/=[0]" x="423" y="157"/>
+				<block path="axsl:choose[3]/or[0]/not[1]" x="469" y="191"/>
+				<block path="axsl:choose[3]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="321" y="175"/>
+				<block path="axsl:choose[4]" x="481" y="175"/>
+				<block path="axsl:choose[4]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="281" y="175"/>
+				<block path="axsl:apply-templates" x="521" y="0"/>
+			</template>
+		</MapperBlockPosition>
 		<TemplateContext></TemplateContext>
 		<MapperFilter side="source"></MapperFilter>
 	</MapperMetaTag>
