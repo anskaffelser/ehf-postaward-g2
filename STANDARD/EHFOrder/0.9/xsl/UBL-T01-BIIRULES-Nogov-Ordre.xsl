@@ -197,7 +197,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R007]-Rabatter eller avgifter MÅ ha en årsak -- Allowances and charges MUST have a reason</svrl:text>
+					<svrl:text>[BII2-T01-R007]-Rabatter eller gebyrer/tillegg MÅ ha en årsak -- Allowances and charges MUST have a reason</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -304,7 +304,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R012]-Forventet totalbeløp ved betaling, MÅ IKKE være negativt - Expected total amount for payment MUST NOT be negative, if expected total amount for payment is provided</svrl:text>
+					<svrl:text>[BII2-T01-R012]-Forventet totalbeløp for betaling, MÅ IKKE være negativt - Expected total amount for payment MUST NOT be negative, if expected total amount for payment is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -335,7 +335,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R015]-Totalsum av rabatter og tilleggsavgifter på linjenivå MÅ være lik rabatter og tilleggsavgifter på dokumentnivå hvis dette er benyttet --  Expected total sum of allowance at line level MUST be equal to the sum of allowance amounts at document level, if expected total sum of allowance at document level is provided</svrl:text>
+					<svrl:text>[BII2-T01-R015]-Totalsum av rabatter/fratrekk  på linjenivå MÅ være lik sum av rabatter/fratrekk på hodenivå hvis dette er benyttet --  Expected total sum of allowance at line level MUST be equal to the sum of allowance amounts at document level, if expected total sum of allowance at document level is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -351,7 +351,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R016]- Forventet fakturabeløp på dokumentnivå MÅ være lik totalsum på linjenivå -- Expected total sum of charges at document level MUST be equal to the sum of charges at document level, if expected total sum of charges at document level is provided</svrl:text>
+					<svrl:text>[BII2-T01-R016]- Forventet totalsum av avgifter på hodenivå MÅ være lik sum av avgifter på hodenivå -- Expected total sum of charges at document level MUST be equal to the sum of charges at document level, if expected total sum of charges at document level is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -360,15 +360,15 @@
 		 Her var ikke Taxamount med-->
 
 		<axsl:choose>
-			<axsl:when test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))"/>
+			<axsl:when test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount)+ number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)))">
+				                    test="(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = (number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) - number(cbc:AllowanceTotalAmount)+ number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = number(cbc:LineExtensionAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R017]-Dersom ordretotal er angitt MÅ denne være lik sum linjebeløp minus sum rabatter pluss sum tillegg og sum MVA-beløp -- Expected total amount for payment MUST be equal to the sum of line amounts minus sum of allowances at document level plus sum of charges at document level  and VAT total amount, if expected total amount for payment is provided</svrl:text>
+					<svrl:text>[BII2-T01-R017]-Dersom ordretotal er angitt MÅ denne være lik sum linjebeløp minus sum rabatter/fratrekk pluss sum gebyrer/tillegg og sum MVA-beløp -- Expected total amount for payment MUST be equal to the sum of line amounts minus sum of allowances at document level plus sum of charges at document level  and VAT total amount, if expected total amount for payment is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -752,8 +752,8 @@
 
 <metaInformation>
 	<scenarios>
-		<scenario default="yes" name="ordrevalidator" userelativepaths="yes" externalpreview="no" url="..\..\Validator\CLI\Eksempelfil EHF Ordre2.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
-		          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+		<scenario default="yes" name="ordrevalidator" userelativepaths="yes" externalpreview="no" url="Eksempelfil EHF Ordrerettet.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength=""
+		          urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
 		          customvalidator="">
 			<advancedProp name="sInitialMode" value=""/>
 			<advancedProp name="bXsltOneIsOkay" value="true"/>
@@ -771,7 +771,7 @@
 	</scenarios>
 	<MapperMetaTag>
 		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
-			<SourceSchema srcSchemaPath="..\..\Validator\CLI\eksordre.xml" srcSchemaRoot="Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
+			<SourceSchema srcSchemaPath="..\..\Validator\CLI\Eksempelfil EHF Ordre.xml" srcSchemaRoot="Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
 		</MapperInfo>
 		<MapperBlockPosition>
 			<template match="*"></template>
@@ -800,6 +800,17 @@
 				<block path="axsl:choose[4]" x="481" y="175"/>
 				<block path="axsl:choose[4]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="281" y="175"/>
 				<block path="axsl:apply-templates" x="521" y="0"/>
+			</template>
+			<template match="//cac:SellerSupplierParty">
+				<block path="axsl:choose" x="533" y="0"/>
+				<block path="axsl:choose/or[0]" x="487" y="0"/>
+				<block path="axsl:choose/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="533" y="0"/>
+				<block path="axsl:choose[1]" x="533" y="0"/>
+				<block path="axsl:choose[1]/and[0]" x="487" y="0"/>
+				<block path="axsl:choose[1]/and[0]/and[0]" x="441" y="0"/>
+				<block path="axsl:choose[1]/and[0]/and[0]/and[0]" x="395" y="0"/>
+				<block path="axsl:choose[1]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="533" y="0"/>
+				<block path="axsl:apply-templates" x="533" y="0"/>
 			</template>
 		</MapperBlockPosition>
 		<TemplateContext></TemplateContext>
