@@ -4,16 +4,19 @@
                 This file contains a norwegian invoice, profile only
 
                 Errors:
-                EUGEN-T10-R024
-                CL-010-001
+                BIIRULE-T10-R013
+		CL-010-001
                 CL-010-002
                 CL-010-004 5 times
-                CL-010-003 8 times 
+                CL-010-007
+                CL-010-003 8 times 		
 
                 Warnings:
-                CL-010-005 3 times
+                EUGEN-T10-R024
+                CL-010-005
+                CL-010-005
                 CL-010-006
-                CL-010-007
+                CL-010-005
                 PCL-010-002
 				
 -->

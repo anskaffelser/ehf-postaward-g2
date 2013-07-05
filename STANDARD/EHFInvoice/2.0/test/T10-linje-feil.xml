@@ -3,13 +3,12 @@
                 Content:
                 This file contains a norwegian invoice, profile invoice only
 				
-				XSD error:
-				Error: cvc-complex-type.2.4.a: Invalid content was found starting with element 'cbc:LineExtensionAmount'. 
-				One of '	{"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2":ID}' is expected.
+		XSD error:
+		Error: cvc-complex-type.2.4.a: Invalid content was found starting with element 'cbc:LineExtensionAmount'. 
+		One of '	{"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2":ID}' is expected.
 
                 Errors:
                 BIIRULE-T10-R032
-                EUGEN-T10-R024
                 NONAT-T10-R005
                 NOGOV-T10-R008
                 CL-010-003
@@ -18,6 +17,7 @@
                 BIIRULE-T10-R019
                 BIIRULE-T10-R020
                 BIIRULE-T10-R021
+		EUGEN-T10-R024
                 EUGEN-T10-R003
                 NOGOV-T10-R003
                 NOGOV-T10-R004

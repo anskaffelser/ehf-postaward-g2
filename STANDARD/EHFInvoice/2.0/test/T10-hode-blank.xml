@@ -3,66 +3,52 @@
                 Content:
                 This file contains a norwegian invoice, profile only
 
-                Errors:
-                BIIRULE-T10-R023
-                BIIRULE-T10-R024
-                BIIRULE-T10-R026
-                BIIRULE-T10-R027
+                Errors:				
                 BIIRULE-T10-R028
-                BIIRULE-T10-R035
-                BIIRULE-T10-R036
-                BIIRULE-T10-R038
-                BIIRULE-T10-R039
-                BIIRULE-T10-R042
-                BIIRULE-T10-R043
                 BIIRULE-T10-R041 twice
                 BIIRULE-T10-R010
                 BIIRULE-T10-R011
-                BIIRULE-T10-R012
-                BIIRULE-T10-R013
-                BIIRULE-T10-R014
-                BIIRULE-T10-R017
-                EUGEN-T10-R007
-                EUGEN-T10-R019
-                EUGEN-T10-R011
                 NONAT-T10-R002
                 NONAT-T10-R003
                 NONAT-T10-R001
-                NONAT-T10-R006
-                NONAT-T10-R007
-				NOGOV-T10-R007
-				NOGOV-T10-R009
-				NOGOV-T10-R011
+                NONAT-T10-R008
+                NOGOV-T10-R007
+		NOGOV-T10-R009
+		NOGOV-T10-R015
+		NOGOV-T10-R011
                 
                 Warnings:
-                BIICORE-T10-R404
-				BIICORE-T10-R400
-				BIICORE-T10-R401
-                BIIRULE-T10-R007
-                EUGEN-T10-R001
-                EUGEN-T10-R002
-				NOGOV-T10-R005
-				NOGOV-T10-R013
-				NOGOV-T10-R001
-				NOGOV-T10-R006
+                BIICORE-T10-R001
+		BIICORE-T10-R404
+		BIIRULE-T10-R007
+                NOGOV-T10-R005
+		NOGOV-T10-R013
+		NOGOV-T10-R001
+		NOGOV-T10-R006
 			
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
 	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+	<cbc:ID></cbc:ID>
+	<cbc:IssueDate>2012-07-24</cbc:IssueDate>
 	<cbc:InvoiceTypeCode listID="UN/ECE 1001 Subset" listAgencyID="6">380</cbc:InvoiceTypeCode>
 	<cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listAgencyID="6">NOK</cbc:DocumentCurrencyCode>
 	<cac:OrderReference>
+  	<cbc:ID></cbc:ID>
 	</cac:OrderReference>
 	<cac:ContractDocumentReference>
+	<cbc:ID></cbc:ID>
 	</cac:ContractDocumentReference>
 	<cac:AccountingSupplierParty>
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">977187761</cbc:EndpointID>
 			<cac:PartyIdentification>
+			<cbc:ID></cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
+			<cbc:Name></cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
 				<cbc:ID schemeID="GLN" schemeAgencyID="9">7080003093035</cbc:ID>
@@ -93,8 +79,10 @@
 		<cac:Party>
 		    <cbc:EndpointID schemeID="NO:ORGNR">810305282</cbc:EndpointID>
 			<cac:PartyIdentification>
+			<cbc:ID></cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
+			<cbc:Name></cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
 				<cbc:CityName>SARPSBORG</cbc:CityName>
@@ -145,6 +133,7 @@
 		</cac:PayeeFinancialAccount>
 	</cac:PaymentMeans>
   <cac:TaxTotal>
+  <cbc:TaxAmount currencyID="NOK">0</cbc:TaxAmount>
   	<cac:TaxSubtotal>
  		 <cbc:TaxableAmount currencyID="NOK">100.00</cbc:TaxableAmount>
  		 <cbc:TaxAmount currencyID="NOK">25.00</cbc:TaxAmount>
@@ -158,6 +147,10 @@
     	</cac:TaxSubtotal>
   </cac:TaxTotal>
   <cac:LegalMonetaryTotal>
+  <cbc:LineExtensionAmount currencyID="NOK">0</cbc:LineExtensionAmount>
+  	<cbc:TaxExclusiveAmount currencyID="NOK">0</cbc:TaxExclusiveAmount>
+  	<cbc:TaxInclusiveAmount currencyID="NOK">0</cbc:TaxInclusiveAmount>
+  	<cbc:PayableAmount currencyID="NOK">0</cbc:PayableAmount>
   	</cac:LegalMonetaryTotal>
 <cac:InvoiceLine> 
 <cbc:ID>1</cbc:ID>
