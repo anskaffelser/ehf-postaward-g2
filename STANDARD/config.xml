@@ -185,6 +185,8 @@
 		<xi:include href="/STANDARD/common/includes/1.6/UBL-T10-Nogov.xml"/>
 		<xi:include href="/STANDARD/common/includes/1.6/UBL-T10-BiiRulesCodes.xml"/>
 		<xi:include href="/STANDARD/common/includes/1.6/UBL-T10-EUgenRulesCodes.xml"/>
+		<!-- Render xml -->
+		<xi:include href="/STANDARD/common/includes/1.6/UBL-T10-Render.xml"/>		
 	</validate>
 	
 	<validate 
