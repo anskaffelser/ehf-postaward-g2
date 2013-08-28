@@ -171,7 +171,8 @@
 	<!-- START INVOICE -->
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1" 
-		version="1.6">
+		version="1.6"
+		render="true">
 		<name>
 			<en>EHF invoice in Norway, profile invoice only</en>
 			<no>EHF faktura i Norge, profil kun faktura</no>
