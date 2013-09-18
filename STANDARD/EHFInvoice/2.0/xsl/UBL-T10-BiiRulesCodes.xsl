@@ -175,6 +175,34 @@
 
 <!--RULE -->
 
+   <axsl:template match="cbc:UBLVersionID" priority="1008" mode="M18">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:UBLVersionID"/>
+
+		<!--ASSERT -->
+		<!-- 2013-09-09 EG Added test regarding UBL version --> 
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1  ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[CL-010-009]-UBL version  must be 2.1</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M18"/>
+   </axsl:template>
+   <axsl:template match="text()" priority="-1" mode="M18"/>
+   <axsl:template match="@*|node()" priority="-2" mode="M18">
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M18"/>
+   </axsl:template>
+
+
+
+<!--RULE -->
+
    <axsl:template match="cac:InvoiceLine/cbc:InvoicedQuantity//@unitCode" priority="1007" mode="M18">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:InvoiceLine/cbc:InvoicedQuantity//@unitCode"/>
 
