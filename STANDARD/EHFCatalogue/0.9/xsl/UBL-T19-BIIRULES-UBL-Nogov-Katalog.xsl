@@ -3,7 +3,9 @@
                  xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" version="2.0">
 	<!--Implementers: please note that overriding process-prolog or process-root is 
-    the preferred method for meta-stylesheets to use where possible. -->
+    the preferred method for meta-stylesheets to use where possible.  
+	
+	Oppdatert 20.9.2013 GuS-->
 
 	<axsl:param name="archiveDirParameter" tunnel="no"/>
 	<axsl:param name="archiveNameParameter" tunnel="no"/>
@@ -261,6 +263,21 @@
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
 					<svrl:text>[NOGOV-T19-R001]-En katalog må ha aksjonskode enten på hode- eller linjenivå -- A Catalogue must contain ActionCode on either Header or Line level</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!-- ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="number(translate(substring-before(string(current-date()),'+'),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-',''))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(translate(substring-before(string(current-date()),'+'),'-','')) &lt;= number(translate(string(//cac:ValidityPeriod/cbc:EndDate),'-',''))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T19-R002]- Katalogens gyldighetsperiode må ha en sluttdato som er etter eller lik dagens dato -- A Catalogue must have a validity period enddate grater or equal to the current date </svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -758,4 +775,31 @@
 	<axsl:template match="@*|node()" priority="-2" mode="M7">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
-</axsl:stylesheet>
+</axsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
+
+<metaInformation>
+	<scenarios>
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="katalog9.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+		          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+			<advancedProp name="sInitialMode" value=""/>
+			<advancedProp name="bXsltOneIsOkay" value="true"/>
+			<advancedProp name="bSchemaAware" value="true"/>
+			<advancedProp name="bXml11" value="false"/>
+			<advancedProp name="iValidation" value="0"/>
+			<advancedProp name="bExtensions" value="true"/>
+			<advancedProp name="iWhitespace" value="0"/>
+			<advancedProp name="sInitialTemplate" value=""/>
+			<advancedProp name="bTinyTree" value="true"/>
+			<advancedProp name="bWarnings" value="true"/>
+			<advancedProp name="bUseDTD" value="false"/>
+			<advancedProp name="iErrorHandling" value="fatal"/>
+		</scenario>
+	</scenarios>
+	<MapperMetaTag>
+		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+		<MapperBlockPosition></MapperBlockPosition>
+		<TemplateContext></TemplateContext>
+		<MapperFilter side="source"></MapperFilter>
+	</MapperMetaTag>
+</metaInformation>
+-->
