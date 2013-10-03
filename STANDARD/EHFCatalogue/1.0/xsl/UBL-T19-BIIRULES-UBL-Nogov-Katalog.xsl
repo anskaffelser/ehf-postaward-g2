@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <axsl:stylesheet xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" version="2.0">
 	<!--Implementers: please note that overriding process-prolog or process-root is 
     the preferred method for meta-stylesheets to use where possible. 	
-	Oppdatert 20.9.2013 GuS-->
+	Oppdatert 02.10.2013 GuS-->
 
 	<axsl:param name="archiveDirParameter" tunnel="no"/>
 	<axsl:param name="archiveNameParameter" tunnel="no"/>
@@ -480,6 +480,8 @@
 			</axsl:otherwise>
 		</axsl:choose>
 
+
+
 		<!--ASSERT -->
 
 		<axsl:choose>
@@ -527,6 +529,53 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:ContentUnitQuantity) &gt;= 0) or ((cbc:ContentUnitQuantity/@unitCode) and (cbc:ContentUnitQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:ContentUnitQuantity) &gt;= 0) or ((cbc:ContentUnitQuantity/@unitCode) and (cbc:ContentUnitQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:MinimumOrderQuantity) &gt;= 0) or ((cbc:MinimumOrderQuantity/@unitCode) and (cbc:MinimumOrderQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:MinimumOrderQuantity) &gt;= 0) or ((cbc:MinimumOrderQuantity/@unitCode) and (cbc:MinimumOrderQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:MaximumOrderQuantity) &gt;= 0) or ((cbc:MaximumOrderQuantity/@unitCode) and (cbc:MaximumOrderQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:MaximumOrderQuantity) &gt;= 0) or ((cbc:MaximumOrderQuantity/@unitCode) and (cbc:MaximumOrderQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 
@@ -819,8 +868,25 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:PackQuantity) &gt;= 0) or ((cbc:PackQuantity/@unitCode) and (cbc:PackQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:PackQuantity) &gt;= 0) or ((cbc:PackQuantity/@unitCode) and (cbc:PackQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
+
+
 
 	<!--RULE -->
 
@@ -838,6 +904,59 @@
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
 					<svrl:text>[BII2-T19-R015]-Prisen på en artikkel MÅ ikke være negativ -- Prices of items MUST not be negative</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:BaseQuantity) &gt;= 0) or ((cbc:BaseQuantity/@unitCode) and (cbc:BaseQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:BaseQuantity) &gt;= 0) or ((cbc:BaseQuantity/@unitCode) and (cbc:BaseQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+
+	<!--RULE -->
+
+	<axsl:template match="//cac:RequiredItemLocationQuantity" priority="1014" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:RequiredItemLocationQuantity"/>
+
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:MinimumQuantity) &gt;= 0) or ((cbc:MinimumQuantity/@unitCode) and (cbc:MinimumQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:MinimumQuantity) &gt;= 0) or ((cbc:MinimumQuantity/@unitCode) and (cbc:MinimumQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:MaximumQuantity) &gt;= 0) or ((cbc:MaximumQuantity/@unitCode) and (cbc:MaximumQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:MaximumOrderQuantity) &gt;= 0) or ((cbc:MaximumOrderQuantity/@unitCode) and (cbc:MaximumOrderQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -860,6 +979,21 @@
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
 					<svrl:text>[BII2-T19-R027]-Tilleggsegenskaper MÅ spesifisere en verdi -- An item property data name MUST specify a data value</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(cbc:ValueQuantity) &gt;= 0) or ((cbc:ValueQuantity/@unitCode) and (cbc:ValueQuantity/@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cbc:ValueQuantity) &gt;= 0) or ((cbc:ValueQuantity/@unitCode) and (cbc:ValueQuantity/@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -917,7 +1051,29 @@
 
 	<!--RULE -->
 
-	<axsl:template match="cac:CatalogueLine//cbc:ActionCode" priority="1011" mode="M7">
+	<axsl:template match="//cbc:Quantity" priority="1012" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:Quantity"/>
+
+		<!--ASSERT -->
+
+		<axsl:choose>
+			<axsl:when test="not(number(.) &gt;= 0) or ((./@unitCode) and (./@unitCodeListID ='UNECERec20'))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(.) &gt;= 0) or ((./@unitCode) and (./@unitCodeListID ='UNECERec20'))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[EUGEN-T19-R048 OP-T19-002]-Et enhetskode attributt (unitCode) MÅ ha et tilhørende unitCodeListID med verdi “UNECERec20” og enhetskoden MÅ være i henhold til kodelisten  -- A unit code attribute MUST have a unit code list identifier attribute “UNECERec20” and the unit code MUST be according to the code list</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+
+	<!--RULE -->
+
+	<axsl:template match="cac:CatalogueLine//cbc:ActionCode" priority="1012" mode="M7">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine//cbc:ActionCode"/>
 
 		<!--ASSERT -->
@@ -940,31 +1096,4 @@
 	<axsl:template match="@*|node()" priority="-2" mode="M7">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
-</axsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
-
-<metaInformation>
-	<scenarios>
-		<scenario default="yes" name="ehfkatalog" userelativepaths="yes" externalpreview="no" url="katalog9.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
-		          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
-			<advancedProp name="sInitialMode" value=""/>
-			<advancedProp name="bXsltOneIsOkay" value="true"/>
-			<advancedProp name="bSchemaAware" value="true"/>
-			<advancedProp name="bXml11" value="false"/>
-			<advancedProp name="iValidation" value="0"/>
-			<advancedProp name="bExtensions" value="true"/>
-			<advancedProp name="iWhitespace" value="0"/>
-			<advancedProp name="sInitialTemplate" value=""/>
-			<advancedProp name="bTinyTree" value="true"/>
-			<advancedProp name="bWarnings" value="true"/>
-			<advancedProp name="bUseDTD" value="false"/>
-			<advancedProp name="iErrorHandling" value="fatal"/>
-		</scenario>
-	</scenarios>
-	<MapperMetaTag>
-		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
-		<MapperBlockPosition></MapperBlockPosition>
-		<TemplateContext></TemplateContext>
-		<MapperFilter side="source"></MapperFilter>
-	</MapperMetaTag>
-</metaInformation>
--->
+</axsl:stylesheet>
