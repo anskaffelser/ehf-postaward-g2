@@ -451,7 +451,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cbc:ID) &gt;0"/>
+			<axsl:when test="string-length(normalize-space(cbc:ID)) &gt;0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:ID) &gt;0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -468,7 +468,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string(cbc:OrderableIndicator) ='false' or number(cbc:ContentUnitQuantity) &gt; 0"/>
+			<axsl:when test="string(cbc:OrderableIndicator) ='false' or not(cbc:ContentUnitQuantity) or (number(cbc:ContentUnitQuantity) &gt; 0)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:ContentUnitQuantity) &gt; 0 or cbc:OrderableIndicator ='false'">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -1026,28 +1026,7 @@
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 
-	<!--PATTERN CodesT19-->
 
-	<axsl:template match="cac:PartyIdentification/cbc:ID//@schemeID" priority="1001" mode="M6">
-		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:PartyIdentification/cbc:ID//@schemeID"/>
-
-		<!--ASSERT -->
-
-		<axsl:choose>
-			<axsl:when test="( ( not(contains(normalize-space(cac:PartyIdentification/cbc:ID//@schemeID),' ')) and contains( ' GLN DUNS IBAN DK:CPR DK:CVR DK:P DK:SE DK:VANS IT:VAT IT:CF IT:FTI IT:SIA IT:SECETI NO:ORGNR NO:VAT HU:VAT SE:ORGNR FI:OVT EU:VAT EU:REID FR:SIRET AT:VAT AT:GOV AT:CID IS:KT IBAN AT:KUR ES:VAT ',concat(' ',normalize-space(.),' ') ) ) )"/>
-			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="( ( not(contains(normalize-space(cac:PartyIdentification/cbc:ID//@schemeID),' ')) and contains( ' GLN DUNS IBAN DK:CPR DK:CVR DK:P DK:SE DK:VANS IT:VAT IT:CF IT:FTI IT:SIA IT:SECETI NO:ORGNR NO:VAT HU:VAT SE:ORGNR FI:OVT EU:VAT EU:REID FR:SIRET AT:VAT AT:GOV AT:CID IS:KT IBAN AT:KUR ES:VAT ',concat(' ',normalize-space(.),' ') ) ) )">
-					<axsl:attribute name="flag">fatal</axsl:attribute>
-					<axsl:attribute name="location">
-						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
-					</axsl:attribute>
-					<svrl:text>[PCL-010-008]-Party Identifiers MUST use the PEPPOL PartyID list</svrl:text>
-				</svrl:failed-assert>
-			</axsl:otherwise>
-		</axsl:choose>
-		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
-	</axsl:template>
 
 	<!--RULE -->
 
@@ -1096,4 +1075,31 @@
 	<axsl:template match="@*|node()" priority="-2" mode="M7">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
-</axsl:stylesheet>
+</axsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
+
+<metaInformation>
+	<scenarios>
+		<scenario default="yes" name="ehfkatalog" userelativepaths="yes" externalpreview="no" url="katalog9.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml=""
+		          commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+			<advancedProp name="sInitialMode" value=""/>
+			<advancedProp name="bXsltOneIsOkay" value="true"/>
+			<advancedProp name="bSchemaAware" value="true"/>
+			<advancedProp name="bXml11" value="false"/>
+			<advancedProp name="iValidation" value="0"/>
+			<advancedProp name="bExtensions" value="true"/>
+			<advancedProp name="iWhitespace" value="0"/>
+			<advancedProp name="sInitialTemplate" value=""/>
+			<advancedProp name="bTinyTree" value="true"/>
+			<advancedProp name="bWarnings" value="true"/>
+			<advancedProp name="bUseDTD" value="false"/>
+			<advancedProp name="iErrorHandling" value="fatal"/>
+		</scenario>
+	</scenarios>
+	<MapperMetaTag>
+		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+		<MapperBlockPosition></MapperBlockPosition>
+		<TemplateContext></TemplateContext>
+		<MapperFilter side="source"></MapperFilter>
+	</MapperMetaTag>
+</metaInformation>
+-->
