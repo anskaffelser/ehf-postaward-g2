@@ -786,6 +786,31 @@
 		<xi:include href="/STANDARD/common/includes/1.0/UBL-T02-BIIRULES-Nogov-Ordrebekreftelse.xml"/>
 	</validate-->	
 	<!-- STOP ORDER RESPONSE -->	
+	
+	
+	<!-- START DESPATCHADVICE -->
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii30:ver2.0#urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0:extended:urn:www.difi.no:ehf:pakkseddel:ver1.0" 
+		version="1.0">
+		<name>
+			<en>EHF Despatch Advice in Norway, profile Despatch Advice only</en>
+			<no>EHF pakkseddel i Norge,  profil pakkseddel</no>
+		</name>
+		<xi:include href="/STANDARD/common/includes/UBL-DespatchAdvice-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/1.0/UBL-T16-BIIRULES.xml"/>
+	</validate>
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii30:ver2.0#urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0" 
+		version="1.0">
+		<name>
+			<en>EHF Despatch Advice outside Norway, profile Despatch Advice only</en>
+			<no>EHF pakkseddel utenfor Norge, profil pakkseddel</no>
+		</name>
+		<xi:include href="/STANDARD/common/includes/UBL-DespatchAdvice-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/1.0/UBL-T16-BIIRULES.xml"/>
+	</validate>	
+	<!-- STOP DESPATCHADVICE -->	
 	<!-- STOP VERSION 1.0 -->
 		
 </config>
