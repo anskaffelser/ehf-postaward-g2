@@ -173,6 +173,33 @@
 
 <!--PATTERN BIIRULESCodesT14-->
 
+<!--RULE -->
+
+   <axsl:template match="cbc:UBLVersionID" priority="1005" mode="M18">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:UBLVersionID"/>
+
+		<!--ASSERT -->
+		<!-- 2013-10-16 EG Added test regarding UBL version --> 
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.0  ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.0 ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[CL-014-006]-UBL version  MUST be 2.0</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M18"/>
+   </axsl:template>
+   <axsl:template match="text()" priority="-1" mode="M18"/>
+   <axsl:template match="@*|node()" priority="-2" mode="M18">
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M18"/>
+   </axsl:template>
+
+
 
 	<!--RULE -->
 
