@@ -320,8 +320,9 @@
 
 		<!--ASSERT -->
 		<!-- Added two codes for Norway: R (Råfisk) K (Klimakvoter) --> 
+		<!-- 2013-10-28 EG: Bug fix reg. VAT code Z:  Added blank after Z in test -->
       <axsl:choose>
-         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )">
                <axsl:attribute name="flag">fatal</axsl:attribute>
