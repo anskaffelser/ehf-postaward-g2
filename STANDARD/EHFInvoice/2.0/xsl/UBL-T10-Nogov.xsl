@@ -291,7 +291,7 @@
       </axsl:choose>
 
 		<!--ASSERT -->
-
+		<!-- 2013-11-11 EG Commented out test on VAT percentage on line levet.  Is optional in EHF 2.0 
       <axsl:choose>
          <axsl:when test="(number(cac:ClassifiedTaxCategory/cbc:Percent) &gt;=0) and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
          <axsl:otherwise>
@@ -304,9 +304,10 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
+-->
+
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
-
 	<!--RULE -->
 
    <axsl:template match="//cac:InvoiceLine" priority="1002" mode="M17">

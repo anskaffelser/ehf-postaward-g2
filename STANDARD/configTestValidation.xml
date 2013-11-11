@@ -1710,7 +1710,6 @@
                 	<schematronrule></schematronrule>
 			<schematronrule>BIIRULE-T10-R032</schematronrule>
 			<schematronrule>NONAT-T10-R005</schematronrule>
-			<schematronrule>NOGOV-T10-R008</schematronrule>
 			<schematronrule>CL-010-003</schematronrule>
 		</errors>
 		<warnings>
