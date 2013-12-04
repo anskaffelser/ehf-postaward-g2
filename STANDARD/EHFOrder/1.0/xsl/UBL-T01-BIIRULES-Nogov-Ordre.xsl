@@ -2,8 +2,7 @@
 <axsl:stylesheet xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Order-2" version="2.0">
-	<!--Implementers: please note that overriding process-prolog or process-root is 
-    the preferred method for meta-stylesheets to use where possible. -->
+	<!--ver 3.12.2013 GS -->
 
 	<axsl:param name="archiveDirParameter" tunnel="no"/>
 	<axsl:param name="archiveNameParameter" tunnel="no"/>
@@ -534,14 +533,14 @@
 		<!--ASSERT -->
 		<!--her var det feil ref: cbc:LineExtensionAmount -->
 		<axsl:choose>
-			<axsl:when test="number(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount) = number(round(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100)"/>
+			<axsl:when test="not(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount) or (number(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount) = number(round(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:LineExtensionAmount) = number(round(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R014]-Hvis totalsum på linenivå er benyttet, så MÅ totalsummen av linjebeløpene være lik summen av alle ordrelinje beløpene -- Expected total sum of line amounts MUST equal the sum of the order line amounts at order line level, if expected total sum of line amounts is provided</svrl:text>
+					<svrl:text>[BII2-T01-R014]-Hvis totalsum på linjenivå er benyttet, så MÅ totalsummen av linjebeløpene være lik summen av alle ordrelinje beløpene -- Expected total sum of line amounts MUST equal the sum of the order line amounts at order line level, if expected total sum of line amounts is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -650,14 +649,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0"/>
+			<axsl:when test="not(cac:LineItem/cac:Price/cbc:PriceAmount) or number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R011]- En ordrelinje nettopris MÅ IKKE være negativ --* MÅ Each order line item net price MUST not be negative</svrl:text>
+					<svrl:text>[BII2-T01-R011]- En ordrelinje nettopris MÅ IKKE være negativ -- Each order line item net price MUST not be negative</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -829,4 +828,85 @@
 	<axsl:template match="@*|node()" priority="-2" mode="M7">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
-</axsl:stylesheet>
+</axsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
+
+<metaInformation>
+	<scenarios>
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="Vedlegg 6 Eksempelfiler\Eksempelfil EHF Ordre.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
+		          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
+		          customvalidator="">
+			<advancedProp name="sInitialMode" value=""/>
+			<advancedProp name="bXsltOneIsOkay" value="true"/>
+			<advancedProp name="bSchemaAware" value="true"/>
+			<advancedProp name="bXml11" value="false"/>
+			<advancedProp name="iValidation" value="0"/>
+			<advancedProp name="bExtensions" value="true"/>
+			<advancedProp name="iWhitespace" value="0"/>
+			<advancedProp name="sInitialTemplate" value=""/>
+			<advancedProp name="bTinyTree" value="true"/>
+			<advancedProp name="bWarnings" value="true"/>
+			<advancedProp name="bUseDTD" value="false"/>
+			<advancedProp name="iErrorHandling" value="fatal"/>
+		</scenario>
+	</scenarios>
+	<MapperMetaTag>
+		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
+			<SourceSchema srcSchemaPath="test2.xml" srcSchemaRoot="Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
+		</MapperInfo>
+		<MapperBlockPosition>
+			<template match="*"></template>
+			<template match="/ubl:Order">
+				<block path="axsl:choose" x="430" y="57"/>
+				<block path="axsl:choose/&gt;[0]" x="384" y="51"/>
+				<block path="axsl:choose/&gt;[0]/string-length[0]" x="338" y="45"/>
+				<block path="axsl:choose/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="70" y="57"/>
+				<block path="axsl:choose[1]" x="470" y="57"/>
+				<block path="axsl:choose[1]/&gt;[0]" x="424" y="51"/>
+				<block path="axsl:choose[1]/&gt;[0]/string-length[0]" x="378" y="45"/>
+				<block path="axsl:choose[1]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="30" y="57"/>
+				<block path="axsl:choose[2]" x="390" y="57"/>
+				<block path="axsl:choose[2]/&gt;[0]" x="344" y="51"/>
+				<block path="axsl:choose[2]/&gt;[0]/string-length[0]" x="298" y="45"/>
+				<block path="axsl:choose[2]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="470" y="17"/>
+				<block path="axsl:choose[3]" x="350" y="57"/>
+				<block path="axsl:choose[3]/&gt;[0]" x="304" y="51"/>
+				<block path="axsl:choose[3]/&gt;[0]/string-length[0]" x="258" y="45"/>
+				<block path="axsl:choose[3]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="390" y="17"/>
+				<block path="axsl:choose[4]" x="310" y="57"/>
+				<block path="axsl:choose[4]/&gt;[0]" x="264" y="51"/>
+				<block path="axsl:choose[4]/&gt;[0]/string-length[0]" x="218" y="45"/>
+				<block path="axsl:choose[4]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="350" y="17"/>
+				<block path="axsl:choose[5]" x="270" y="57"/>
+				<block path="axsl:choose[5]/&gt;[0]" x="224" y="51"/>
+				<block path="axsl:choose[5]/&gt;[0]/string-length[0]" x="178" y="45"/>
+				<block path="axsl:choose[5]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="310" y="17"/>
+				<block path="axsl:choose[6]" x="230" y="57"/>
+				<block path="axsl:choose[6]/or[0]" x="184" y="51"/>
+				<block path="axsl:choose[6]/or[0]/not[0]" x="138" y="45"/>
+				<block path="axsl:choose[6]/or[0]/not[0]/&gt;[0]" x="92" y="43"/>
+				<block path="axsl:choose[6]/or[0]/not[0]/&gt;[0]/string-length[0]" x="46" y="37"/>
+				<block path="axsl:choose[6]/or[0]/contains[1]" x="138" y="73"/>
+				<block path="axsl:choose[6]/or[0]/contains[1]/concat[1]" x="92" y="95"/>
+				<block path="axsl:choose[6]/or[0]/contains[1]/concat[1]/normalize-space[1]" x="46" y="117"/>
+				<block path="axsl:choose[6]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="270" y="17"/>
+				<block path="axsl:choose[7]" x="190" y="57"/>
+				<block path="axsl:choose[7]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="230" y="17"/>
+				<block path="axsl:choose[8]" x="150" y="57"/>
+				<block path="axsl:choose[8]/or[0]" x="104" y="51"/>
+				<block path="axsl:choose[8]/or[0]/and[0]" x="58" y="45"/>
+				<block path="axsl:choose[8]/or[0]/and[0]/=[1]" x="12" y="67"/>
+				<block path="axsl:choose[8]/or[0]/not[1]" x="58" y="73"/>
+				<block path="axsl:choose[8]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="190" y="17"/>
+				<block path="axsl:choose[9]" x="110" y="57"/>
+				<block path="axsl:choose[9]/or[0]" x="64" y="51"/>
+				<block path="axsl:choose[9]/or[0]/not[0]" x="18" y="45"/>
+				<block path="axsl:choose[9]/or[0]/=[1]" x="18" y="73"/>
+				<block path="axsl:choose[9]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="150" y="17"/>
+				<block path="axsl:apply-templates" x="430" y="0"/>
+			</template>
+		</MapperBlockPosition>
+		<TemplateContext></TemplateContext>
+		<MapperFilter side="source"></MapperFilter>
+	</MapperMetaTag>
+</metaInformation>
+-->
