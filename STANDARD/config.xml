@@ -732,7 +732,18 @@
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/1.0/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml"/>
-	</validate-->	
+	</validate-->
+	
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0" 
+		version="1.0">
+		<name>
+			<en>EHF Cataloguerespone in Norway, Norwegian actors only</en>
+			<no>EHF katalogbekreftelse i Norge, norske aktører</no>
+		</name>
+		<xi:include href="/STANDARD/common/includes/UBL-ApplicationResponse-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/1.0/BIIRULES-UBL-T58-Nogov-Katalogbekreftelse.xml"/>
+	</validate>		
 	<!-- STOP CATALOGUE -->
 	
 	
