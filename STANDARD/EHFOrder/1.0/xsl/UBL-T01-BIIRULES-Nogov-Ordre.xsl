@@ -2,7 +2,8 @@
 <axsl:stylesheet xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                  xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                  xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Order-2" version="2.0">
-	<!--ver 3.12.2013 GS -->
+	<!--Implementers: please note that overriding process-prolog or process-root is 
+    the preferred method for meta-stylesheets to use where possible. v1.2 14.4.2014 -->
 
 	<axsl:param name="archiveDirParameter" tunnel="no"/>
 	<axsl:param name="archiveNameParameter" tunnel="no"/>
@@ -223,7 +224,7 @@
 			</axsl:otherwise>
 		</axsl:choose>
 
-
+	
 		<!--ASSERT -->
 		<axsl:choose>
 			<axsl:when test="string-length(cac:Party/cac:Contact/cbc:ID) &gt;0"/>
@@ -237,10 +238,10 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
+		
 		<!--ASSERT -->
-
-		<axsl:choose>
+		
+				<axsl:choose>
 			<axsl:when test="not(cbc:EndpointID) or contains(' GLN DUNS IBAN DK:CPR DK:CVR DK:P DK:SE DK:VANS IT:VAT IT:CF IT:FTI IT:SIA IT:SECETI NO:ORGNR NO:VAT HU:VAT SE:ORGNR FI:OVT EU:VAT EU:REID FR:SIRET AT:VAT AT:GOV AT:CID IS:KT IBAN AT:KUR ES:VAT ', concat(',',cbc:EndpointID/@schemeID,','))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
@@ -270,13 +271,12 @@
 			</axsl:otherwise>
 		</axsl:choose>
 
-		<!--ASSERT -->
+						<!--ASSERT -->
 
 		<axsl:choose>
 			<axsl:when test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or (normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID)='ISO3166-1:Alpha2') and  (contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,', concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or ((cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID='ISO3166-1:Alpha2') and contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,' , concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or ((cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID='ISO3166-1:Alpha2') and contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,' , concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -294,7 +294,7 @@
 	<!--RULE 
 	 1.10 fjernet regel om leveringsadresse. Tidligere endret fra //cac:Delivery til /ubl:Order/cac:Delivery for de den tok med seg delivery på linje-->
 
-
+	
 
 	<!--RULE -->
 
@@ -334,14 +334,15 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="(cbc:AllowanceTotalAmount) and number(cbc:AllowanceTotalAmount) = (round(sum(/ubl:Order/cac:AllowanceCharge[cbc:ChargeIndicator='false']/cbc:Amount) * 10 * 10) div 100) or not(cbc:AllowanceTotalAmount)"/>
+			<axsl:when test="(cbc:AllowanceTotalAmount and format-number(cbc:AllowanceTotalAmount,'##.00') = format-number(sum(../cac:AllowanceCharge[string(cbc:ChargeIndicator)='false']/cbc:Amount),'##.00')) or not(cbc:AllowanceTotalAmount)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test='(cbc:AllowanceTotalAmount and cbc:AllowanceTotalAmount = (round(sum(/ubl:Order/cac:AllowanceCharge[cbc:ChargeIndicator="false"]/cbc:Amount) * 10 * 10) div 100)) or not(cbc:AllowanceTotalAmount)'>
+				                    test="(cbc:AllowanceTotalAmount and format-number(cbc:AllowanceTotalAmount,'##.00') = format-number(sum(../cac:AllowanceCharge[string(cbc:ChargeIndicator)='false']/cbc:Amount),'##.00')) or not(cbc:AllowanceTotalAmount)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
-					<axsl:attribute name="location">
+							<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
+					<axsl:value-of select =  "sum(/ubl:Order/cac:AllowanceCharge[cbc:ChargeIndicator=false]/cbc:Amount)"/>
 					<svrl:text>[BII2-T01-R015]-Totalsum av rabatter/fratrekk  på linjenivå MÅ være lik sum av rabatter/fratrekk på hodenivå hvis dette er benyttet --  Expected total sum of allowance at line level MUST be equal to the sum of allowance amounts at document level, if expected total sum of allowance at document level is provided</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
@@ -350,10 +351,10 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test='(cbc:ChargeTotalAmount) = (cbc:ChargeTotalAmount) and (round(sum(/ubl:Order/cac:AllowanceCharge[cbc:ChargeIndicator="true"]/cbc:Amount)* 10 * 10) div 100) or not(cbc:ChargeTotalAmount)'/>
+			<axsl:when test="(cbc:ChargeTotalAmount and format-number(cbc:ChargeTotalAmount,'##.00') = format-number(sum(../cac:AllowanceCharge[string(cbc:ChargeIndicator)='true']/cbc:Amount),'##.00')) or not(cbc:ChargeTotalAmount)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test='cbc:ChargeTotalAmount = (cbc:ChargeTotalAmount and (round(sum(/ubl:Order/cac:AllowanceCharge[cbc:ChargeIndicator="true"]/cbc:Amount) * 10 * 10) div 100)) or not(cbc:ChargeTotalAmount)'>
+				                    test="(cbc:ChargeTotalAmount and format-number(cbc:ChargeTotalAmount,'##.00') = format-number(sum(../cac:AllowanceCharge[string(cbc:ChargeIndicator)='true']/cbc:Amount),'##.00')) or not(cbc:ChargeTotalAmount)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -367,10 +368,10 @@
 		 Her var ikke Taxamount med-->
 
 		<axsl:choose>
-			<axsl:when test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount)- number(cbc:AllowanceTotalAmount)+ number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100))"/>
+			<axsl:when test="(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ( format-number(cbc:PayableAmount,'##.00') =format-number(number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00')))  or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  - number(cbc:AllowanceTotalAmount),'##.00'))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  + number(cbc:ChargeTotalAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00'))) or not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and  (format-number(cbc:PayableAmount,'##.00') = (format-number(number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount),'##.00')))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  - number(cbc:AllowanceTotalAmount),'##.00'))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  + number(cbc:ChargeTotalAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(cbc:LineExtensionAmount,'##.00')))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount)- number(cbc:AllowanceTotalAmount)+ number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100 )) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (number(cbc:PayableAmount) = round((number(cbc:LineExtensionAmount)+number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount))* 10 * 10) div 100))">
+				                   test="(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ( format-number(cbc:PayableAmount,'##.00') =format-number(number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00')))  or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  - number(cbc:AllowanceTotalAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  - number(cbc:AllowanceTotalAmount),'##.00'))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  + number(cbc:ChargeTotalAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount) + number(/ubl:Order/cac:TaxTotal/cbc:TaxAmount),'##.00'))) or not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and  (format-number(cbc:PayableAmount,'##.00') = (format-number(number(cbc:LineExtensionAmount) + number(cbc:ChargeTotalAmount) - number(cbc:AllowanceTotalAmount),'##.00')))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  - number(cbc:AllowanceTotalAmount),'##.00'))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(number(cbc:LineExtensionAmount)  + number(cbc:ChargeTotalAmount),'##.00'))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (format-number(cbc:PayableAmount,'##.00') = format-number(cbc:LineExtensionAmount,'##.00')))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -393,7 +394,7 @@
 		<axsl:choose>
 			<axsl:when test="string-length(cbc:Name) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:Name) &gt; 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cbc:Name)) &gt; 0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -458,7 +459,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cbc:IssueDate) &gt; 5"/>
+			<axsl:when test="string-length(string(cbc:IssueDate)) &gt; 5"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:IssueDate)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -473,7 +474,7 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cac:ValidityPeriod/cbc:EndDate) &gt;0"/>
+			<axsl:when test="string-length(string(cac:ValidityPeriod/cbc:EndDate)) &gt;0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:ValidityPeriod/cbc:EndDate)">
 					<axsl:attribute name="flag">warning</axsl:attribute>
@@ -514,13 +515,12 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-		<!--ASSERT -->
+		
+				<!--ASSERT -->
 		<axsl:choose>
 			<axsl:when test="not(string-length(cbc:DocumentCurrencyCode) &gt;0) or contains( ' AED AFN ALL AMD ANG AOA ARS AUD AWG AZN BAM BBD BDT BGN BHD BIF BMD BND BOB BOV BRL BSD BTN BWP BYR BZD CAD CDF CHE CHF CHW CLF CLP CNY COP COU CRC CUP CVE CZK DJF DKK DOP DZD EEK EGP ERN ETB EUR FJD FKP GBP GEL GHS GIP GMD GNF GTQ GWP GYD HKD HNL HRK HTG HUF IDR ILS INR IQD IRR ISK JMD JOD JPY KES KGS KHR KMF KPW KRW KWD KYD KZT LAK LBP LKR LRD LSL LTL LVL LYD MAD MDL MGA MKD MMK MNT MOP MRO MUR MVR MWK MXN MXV MYR MZN NAD NGN NIO NOK NPR NZD OMR PAB PEN PGK PHP PKR PLN PYG QAR RON RSD RUB RWF SAR SBD SCR SDG SEK SGD SHP SKK SLL SOS SRD STD SVC SYP SZL THB TJS TMM TND TOP TRY TTD TWD TZS UAH UGX USD USN USS UYI UYU UZS VEF VND VUV WST XAF XAG XAU XBA XBB XBC XBD XCD XDR XFU XOF XPD XPF XTS XXX YER ZAR ZMK ZWR ZWD ', concat(' ',normalize-space(cbc:DocumentCurrencyCode),' '))"/>
-			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="not(string-length(cbc:DocumentCurrencyCode) &gt;0) or contains( ' AED AFN ALL AMD ANG AOA ARS AUD AWG AZN BAM BBD BDT BGN BHD BIF BMD BND BOB BOV BRL BSD BTN BWP BYR BZD CAD CDF CHE CHF CHW CLF CLP CNY COP COU CRC CUP CVE CZK DJF DKK DOP DZD EEK EGP ERN ETB EUR FJD FKP GBP GEL GHS GIP GMD GNF GTQ GWP GYD HKD HNL HRK HTG HUF IDR ILS INR IQD IRR ISK JMD JOD JPY KES KGS KHR KMF KPW KRW KWD KYD KZT LAK LBP LKR LRD LSL LTL LVL LYD MAD MDL MGA MKD MMK MNT MOP MRO MUR MVR MWK MXN MXV MYR MZN NAD NGN NIO NOK NPR NZD OMR PAB PEN PGK PHP PKR PLN PYG QAR RON RSD RUB RWF SAR SBD SCR SDG SEK SGD SHP SKK SLL SOS SRD STD SVC SYP SZL THB TJS TMM TND TOP TRY TTD TWD TZS UAH UGX USD USN USS UYI UYU UZS VEF VND VUV WST XAF XAG XAU XBA XBB XBC XBD XCD XDR XFU XOF XPD XPF XTS XXX YER ZAR ZMK ZWR ZWD ', concat(' ',normalize-space(cbc:DocumentCurrencyCode),' '))">
+<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(string-length(cbc:DocumentCurrencyCode) &gt;0) or contains( ' AED AFN ALL AMD ANG AOA ARS AUD AWG AZN BAM BBD BDT BGN BHD BIF BMD BND BOB BOV BRL BSD BTN BWP BYR BZD CAD CDF CHE CHF CHW CLF CLP CNY COP COU CRC CUP CVE CZK DJF DKK DOP DZD EEK EGP ERN ETB EUR FJD FKP GBP GEL GHS GIP GMD GNF GTQ GWP GYD HKD HNL HRK HTG HUF IDR ILS INR IQD IRR ISK JMD JOD JPY KES KGS KHR KMF KPW KRW KWD KYD KZT LAK LBP LKR LRD LSL LTL LVL LYD MAD MDL MGA MKD MMK MNT MOP MRO MUR MVR MWK MXN MXV MYR MZN NAD NGN NIO NOK NPR NZD OMR PAB PEN PGK PHP PKR PLN PYG QAR RON RSD RUB RWF SAR SBD SCR SDG SEK SGD SHP SKK SLL SOS SRD STD SVC SYP SZL THB TJS TMM TND TOP TRY TTD TWD TZS UAH UGX USD USN USS UYI UYU UZS VEF VND VUV WST XAF XAG XAU XBA XBB XBC XBD XCD XDR XFU XOF XPD XPF XTS XXX YER ZAR ZMK ZWR ZWD ', concat(' ',normalize-space(cbc:DocumentCurrencyCode),' '))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -533,7 +533,7 @@
 		<!--ASSERT -->
 		<!--her var det feil ref: cbc:LineExtensionAmount -->
 		<axsl:choose>
-			<axsl:when test="not(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount) or (number(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount) = number(round(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100))"/>
+			<axsl:when test="round(number(cac:AnticipatedMonetaryTotal/cbc:LineExtensionAmount)) = round(number(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:LineExtensionAmount) = number(round(sum(/ubl:Order/cac:OrderLine/cac:LineItem/cbc:LineExtensionAmount) * 10 * 10) div 100)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
@@ -559,8 +559,8 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-		<!--ASSERT -->
+		
+			<!--ASSERT -->
 
 		<axsl:choose>
 			<axsl:when test="not (cbc:OrderTypeCode) or (cbc:OrderTypeCode/@listID)  = 'UNCL1001'"/>
@@ -574,8 +574,8 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+		
+	<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 
 	<!--RULE -->
@@ -615,7 +615,7 @@
 
 		<!--ASSERT -->
 
-		<axsl:choose>
+			<axsl:choose>
 			<axsl:when test="not(number(cac:LineItem/cbc:Quantity) &gt;= 0) or ((cac:LineItem/cbc:Quantity/@unitCode) and (cac:LineItem/cbc:Quantity/@unitCodeListID ='UNECERec20'))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cac:LineItem/cbc:Quantity) &gt;= 0) or ((cac:LineItem/cbc:Quantity/@unitCode) and (cac:LineItem/cbc:Quantity/@unitCodeListID ='UNECERec20'))">
@@ -630,7 +630,7 @@
 
 		<!--ASSERT -->
 
-		<axsl:choose>
+			<axsl:choose>
 			<axsl:when test="not(number(cac:LineItem/cac:Price/cbc:BaseQuantity) &gt;= 0) or ((cac:LineItem/cac:Price/cbc:BaseQuantity/@unitCode) and (cac:LineItem/cac:Price/cbc:BaseQuantity/@unitCodeListID ='UNECERec20'))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(number(cac:LineItem/cbc:Quantity) &gt;= 0) or ((cac:LineItem/cbc:Quantity/@unitCode) and (cac:LineItem/cbc:Quantity/@unitCodeListID ='UNECERec20'))">
@@ -649,14 +649,14 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="not(cac:LineItem/cac:Price/cbc:PriceAmount) or number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0"/>
+			<axsl:when test="number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[BII2-T01-R011]- En ordrelinje nettopris MÅ IKKE være negativ -- Each order line item net price MUST not be negative</svrl:text>
+					<svrl:text>[BII2-T01-R011]- En ordrelinje nettopris MÅ IKKE være negativ --* MÅ Each order line item net price MUST not be negative</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -664,9 +664,9 @@
 		<!--ASSERT -->
 
 		<axsl:choose>
-			<axsl:when test="string-length(cac:LineItem/cbc:Quantity) &gt; 0"/>
+			<axsl:when test="number(cac:LineItem/cbc:Quantity) &gt; 0"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(cac:LineItem/cbc:Quantity) &gt; 0">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cac:LineItem/cbc:Quantity) &gt; 0">
 					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -727,14 +727,13 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-		<!--ASSERT -->
+		
+				<!--ASSERT -->
 
 		<axsl:choose>
 			<axsl:when test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or (normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID)='ISO3166-1:Alpha2') and  (contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,', concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-				                    test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or ((cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID='ISO3166-1:Alpha2') and contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,' , concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode) or ((cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode/@listID='ISO3166-1:Alpha2') and contains(',AF,AD,AE,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,ST,SV,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW,' , concat(',',normalize-space(cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode),',')))">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -743,11 +742,11 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-
-		<!--ASSERT -->
-
-		<axsl:choose>
+		
+		
+			<!--ASSERT -->
+			
+				<axsl:choose>
 			<axsl:when test="not(cbc:EndpointID) or contains(' GLN DUNS IBAN DK:CPR DK:CVR DK:P DK:SE DK:VANS IT:VAT IT:CF IT:FTI IT:SIA IT:SECETI NO:ORGNR NO:VAT HU:VAT SE:ORGNR FI:OVT EU:VAT EU:REID FR:SIRET AT:VAT AT:GOV AT:CID IS:KT IBAN AT:KUR ES:VAT ', concat(',',cbc:EndpointID/@schemeID,','))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
@@ -806,8 +805,8 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
-		<!--ASSERT -->
+		
+				<!--ASSERT -->
 
 		<axsl:choose>
 			<axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( 'UNCL305',concat(' ',normalize-space(./@listID),' ') ) ) )"/>
@@ -821,92 +820,11 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
-
+		
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
 	<axsl:template match="text()" priority="-1" mode="M7"/>
 	<axsl:template match="@*|node()" priority="-2" mode="M7">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
 	</axsl:template>
-</axsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
-
-<metaInformation>
-	<scenarios>
-		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="Vedlegg 6 Eksempelfiler\Eksempelfil EHF Ordre.xml" htmlbaseurl="" outputurl="" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth=""
-		          profilelength="" urlprofilexml="" commandline="" additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal"
-		          customvalidator="">
-			<advancedProp name="sInitialMode" value=""/>
-			<advancedProp name="bXsltOneIsOkay" value="true"/>
-			<advancedProp name="bSchemaAware" value="true"/>
-			<advancedProp name="bXml11" value="false"/>
-			<advancedProp name="iValidation" value="0"/>
-			<advancedProp name="bExtensions" value="true"/>
-			<advancedProp name="iWhitespace" value="0"/>
-			<advancedProp name="sInitialTemplate" value=""/>
-			<advancedProp name="bTinyTree" value="true"/>
-			<advancedProp name="bWarnings" value="true"/>
-			<advancedProp name="bUseDTD" value="false"/>
-			<advancedProp name="iErrorHandling" value="fatal"/>
-		</scenario>
-	</scenarios>
-	<MapperMetaTag>
-		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no">
-			<SourceSchema srcSchemaPath="test2.xml" srcSchemaRoot="Order" AssociatedInstance="" loaderFunction="document" loaderFunctionUsesURI="no"/>
-		</MapperInfo>
-		<MapperBlockPosition>
-			<template match="*"></template>
-			<template match="/ubl:Order">
-				<block path="axsl:choose" x="430" y="57"/>
-				<block path="axsl:choose/&gt;[0]" x="384" y="51"/>
-				<block path="axsl:choose/&gt;[0]/string-length[0]" x="338" y="45"/>
-				<block path="axsl:choose/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="70" y="57"/>
-				<block path="axsl:choose[1]" x="470" y="57"/>
-				<block path="axsl:choose[1]/&gt;[0]" x="424" y="51"/>
-				<block path="axsl:choose[1]/&gt;[0]/string-length[0]" x="378" y="45"/>
-				<block path="axsl:choose[1]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="30" y="57"/>
-				<block path="axsl:choose[2]" x="390" y="57"/>
-				<block path="axsl:choose[2]/&gt;[0]" x="344" y="51"/>
-				<block path="axsl:choose[2]/&gt;[0]/string-length[0]" x="298" y="45"/>
-				<block path="axsl:choose[2]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="470" y="17"/>
-				<block path="axsl:choose[3]" x="350" y="57"/>
-				<block path="axsl:choose[3]/&gt;[0]" x="304" y="51"/>
-				<block path="axsl:choose[3]/&gt;[0]/string-length[0]" x="258" y="45"/>
-				<block path="axsl:choose[3]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="390" y="17"/>
-				<block path="axsl:choose[4]" x="310" y="57"/>
-				<block path="axsl:choose[4]/&gt;[0]" x="264" y="51"/>
-				<block path="axsl:choose[4]/&gt;[0]/string-length[0]" x="218" y="45"/>
-				<block path="axsl:choose[4]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="350" y="17"/>
-				<block path="axsl:choose[5]" x="270" y="57"/>
-				<block path="axsl:choose[5]/&gt;[0]" x="224" y="51"/>
-				<block path="axsl:choose[5]/&gt;[0]/string-length[0]" x="178" y="45"/>
-				<block path="axsl:choose[5]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="310" y="17"/>
-				<block path="axsl:choose[6]" x="230" y="57"/>
-				<block path="axsl:choose[6]/or[0]" x="184" y="51"/>
-				<block path="axsl:choose[6]/or[0]/not[0]" x="138" y="45"/>
-				<block path="axsl:choose[6]/or[0]/not[0]/&gt;[0]" x="92" y="43"/>
-				<block path="axsl:choose[6]/or[0]/not[0]/&gt;[0]/string-length[0]" x="46" y="37"/>
-				<block path="axsl:choose[6]/or[0]/contains[1]" x="138" y="73"/>
-				<block path="axsl:choose[6]/or[0]/contains[1]/concat[1]" x="92" y="95"/>
-				<block path="axsl:choose[6]/or[0]/contains[1]/concat[1]/normalize-space[1]" x="46" y="117"/>
-				<block path="axsl:choose[6]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="270" y="17"/>
-				<block path="axsl:choose[7]" x="190" y="57"/>
-				<block path="axsl:choose[7]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="230" y="17"/>
-				<block path="axsl:choose[8]" x="150" y="57"/>
-				<block path="axsl:choose[8]/or[0]" x="104" y="51"/>
-				<block path="axsl:choose[8]/or[0]/and[0]" x="58" y="45"/>
-				<block path="axsl:choose[8]/or[0]/and[0]/=[1]" x="12" y="67"/>
-				<block path="axsl:choose[8]/or[0]/not[1]" x="58" y="73"/>
-				<block path="axsl:choose[8]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="190" y="17"/>
-				<block path="axsl:choose[9]" x="110" y="57"/>
-				<block path="axsl:choose[9]/or[0]" x="64" y="51"/>
-				<block path="axsl:choose[9]/or[0]/not[0]" x="18" y="45"/>
-				<block path="axsl:choose[9]/or[0]/=[1]" x="18" y="73"/>
-				<block path="axsl:choose[9]/axsl:otherwise/svrl:failed-assert/axsl:attribute[1]/axsl:apply-templates" x="150" y="17"/>
-				<block path="axsl:apply-templates" x="430" y="0"/>
-			</template>
-		</MapperBlockPosition>
-		<TemplateContext></TemplateContext>
-		<MapperFilter side="source"></MapperFilter>
-	</MapperMetaTag>
-</metaInformation>
--->
+	</axsl:stylesheet>
