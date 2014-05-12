@@ -19,11 +19,11 @@
             version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-               schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-               schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-               schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonExtensionComponents-2.1.xsd"/>
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="Order" type="OrderType">
       <xsd:annotation>
