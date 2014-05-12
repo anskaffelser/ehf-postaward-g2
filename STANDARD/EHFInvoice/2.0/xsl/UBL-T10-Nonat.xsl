@@ -227,33 +227,29 @@
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
    </axsl:template>
 
-	<!--RULE -->
-
-   <axsl:template match="//cac:InvoiceLine" priority="1002" mode="M16">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:InvoiceLine"/>
-
-		<!--ASSERT -->
-
-      <axsl:choose>
-         <axsl:when test="cbc:InvoicedQuantity and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
-         <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:InvoicedQuantity and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
-               <axsl:attribute name="location">
-                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
-               </axsl:attribute>
-               <svrl:text>[NONAT-T10-R005]-Each invoice line MUST contain a quantity according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 3" </svrl:text>
-            </svrl:failed-assert>
-         </axsl:otherwise>
-      </axsl:choose>
-      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
-   </axsl:template>
+	
 
 	<!--RULE -->
 
    <axsl:template match="/ubl:Invoice" priority="1001" mode="M16">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice"/>
 
+
+    		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="cac:TaxTotal"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:TaxTotal">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R012]-An invoice MUST contain tax information</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
 		<!--ASSERT -->
 
       <axsl:choose>
@@ -265,6 +261,36 @@
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
                <svrl:text>[NONAT-T10-R002]-Payment due date MUST be provided in the invoice according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 5" </svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+      	<!--ASSERT -->
+      
+        <axsl:choose>
+         <axsl:when test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R013]-If payee information is provided then the payee name MUST be specified.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+      	<!--ASSERT -->
+      
+           <axsl:choose>
+         <axsl:when test="(cbc:UBLVersionID)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R019]-An invoice MUST have a syntax identifier.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -283,34 +309,26 @@
 				   <svrl:text>[NONAT-T10-R009]-Issue date of an invoice must be today or earlier.</svrl:text>
 				</svrl:failed-assert>
 			 </axsl:otherwise>
-		  </axsl:choose>		
+		  </axsl:choose>	
+		        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>	
+   </axsl:template>
+   
+   <!--RULE -->
 
-<!--ASSERT -->
-
-      <axsl:choose>
-         <axsl:when test="//cac:Delivery/cbc:ActualDeliveryDate and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
-         <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="//cac:Delivery/cbc:ActualDeliveryDate and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
-               <axsl:attribute name="location">
-                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
-               </axsl:attribute>
-               <svrl:text>[NONAT-T10-R003]-The actual delivery date  MUST be provided in the invoice according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 4" </svrl:text>
-            </svrl:failed-assert>
-         </axsl:otherwise>
-      </axsl:choose>
+   <axsl:template match="cbc:UBLVersionID" priority="1008" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:UBLVersionID"/>
 
 		<!--ASSERT -->
-
+		<!-- 2013-09-09 EG Added test regarding UBL version --> 
       <axsl:choose>
-         <axsl:when test="//cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName and //cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone and //cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1  ',concat(' ',normalize-space(.),' ') ) ) )"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="//cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName and //cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone and //cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T10-R004]-A Delivery address in an invoice MUST contain at least, city, zip code and country code according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 4"</svrl:text>
+               <svrl:text>[NONAT-T10-R020]-UBL version  must be 2.1</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -338,6 +356,211 @@
       </axsl:choose>
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
    </axsl:template>
+   
+   	<!--RULE -->
+	<!--2013-05-14 EG Added GSRN as possible location identifier -->
+   <axsl:template match="cac:Delivery/cac:DeliveryLocation/cbc:ID//@schemeID" priority="1004" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:Delivery/cac:DeliveryLocation/cbc:ID//@schemeID"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R010]-Location identifiers SHOULD be GLN or GSRN</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>   
+   
+   	<!--RULE -->
+
+   <axsl:template match="//cac:PartyLegalEntity" priority="1009" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyLegalEntity"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cbc:CompanyID)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:CompanyID)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R018]-Company identifier MUST be specified when describing a company legal entity.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
+   
+      	<!--RULE -->
+
+   <axsl:template match="cac:TaxCategory//cbc:ID" priority="1000" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:TaxCategory//cbc:ID"/>
+
+		<!--ASSERT -->
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R021]- Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
+    	<!--RULE -->
+
+   <axsl:template match="//cac:TaxScheme" priority="1012" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxScheme"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="cbc:ID"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ID">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[ NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
+     	<!--RULE -->
+
+   <axsl:template match="cac:TaxScheme//cbc:ID" priority="1001" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:TaxScheme//cbc:ID"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R014]- Invoice tax schemes MUST be 'VAT'</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
+   <!--RULE -->
+
+   <axsl:template match="//cac:LegalMonetaryTotal" priority="1000" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:LegalMonetaryTotal"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="number(cbc:TaxInclusiveAmount) &gt;= 0"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:TaxInclusiveAmount) &gt;= 0">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[ NONAT-T10-R023]-Tax inclusive amount in an invoice MUST NOT be negative</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>		
+
+<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="number(cbc:PayableAmount) &gt;= 0"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:PayableAmount) &gt;= 0">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[ NONAT-T10-R022]-Total payable amount in an invoice MUST NOT be negative</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+      	<!--RULE -->
+
+   <axsl:template match="//cac:AllowanceCharge" priority="1009" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:AllowanceCharge"/>
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cbc:AllowanceChargeReason)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:AllowanceChargeReason)">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[ NONAT-T10-R011]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
+      <!--RULE -->
+
+   <axsl:template match="//cac:InvoiceLine" priority="1004" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:InvoiceLine"/>
+      
+      		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cac:Item/cbc:Name)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Item/cbc:Name)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[ NONAT-T10-R016]-Each invoice line MUST contain the product/service name</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+      	<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="cac:Price/cbc:PriceAmount"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:Price/cbc:PriceAmount">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T10-R015]-Invoice lines MUST contain the item price</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
+   </axsl:template>
+   
    <axsl:template match="text()" priority="-1" mode="M16"/>
    <axsl:template match="@*|node()" priority="-2" mode="M16">
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>

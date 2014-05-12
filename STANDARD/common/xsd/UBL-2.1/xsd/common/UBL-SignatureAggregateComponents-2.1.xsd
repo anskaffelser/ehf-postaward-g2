@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
-                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Release Date:      04 November 2013
   Module:            xsd/common/UBL-SignatureAggregateComponents-2.1.xsd
-  Generated on:      2013-05-14 04:28z
+  Generated on:      2013-10-31 17:18z
+  Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
@@ -18,19 +20,19 @@
             version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
-               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-SignatureBasicComponents-2.1.xsd"/>
+               schemaLocation="UBL-SignatureBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
+               schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-xmldsig-core-schema-2.1.xsd"/>
+               schemaLocation="UBL-xmldsig-core-schema-2.1.xsd"/>
 
    <!-- ===== Incorporate ETSI signature specifications-->
    <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"
-               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-XAdESv132-2.1.xsd"/>
+               schemaLocation="UBL-XAdESv132-2.1.xsd"/>
    <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"
-               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-XAdESv141-2.1.xsd"/>
+               schemaLocation="UBL-XAdESv141-2.1.xsd"/>
           
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="SignatureInformation" type="SignatureInformationType"/>
@@ -109,8 +111,6 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
-
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
   it or assist in its implementation may be prepared, copied, 

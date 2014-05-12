@@ -11,14 +11,19 @@
 			<no>EHF faktura i Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
@@ -45,14 +50,19 @@
 			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
@@ -79,14 +89,19 @@
 			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>	
 	<!-- STOP INVOICE -->
 	
@@ -100,14 +115,19 @@
 			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
@@ -118,14 +138,19 @@
 			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
@@ -152,14 +177,19 @@
 			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiProfiles.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgenRulesCodes.xml"/>
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	<!-- STOP CREDITNOTE -->
 	<!-- STOP VERSION 2.0 -->

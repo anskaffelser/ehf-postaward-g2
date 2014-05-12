@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
+  Library:           OASIS Universal Business Language (UBL) 2.1 OS
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Release Date:      04 November 2013
   Module:            UBL-CommonExtensionComponents-2.1.xsd
   Generated on:      2013-04-20 18:40(UTC)
+  Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
@@ -13,10 +15,10 @@ targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionCom
             elementFormDefault="qualified" attributeFormDefault="unqualified" 
             version="2.1">
 <!-- ===== Imports ===== -->
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" schemaLocation="UBL-UnqualifiedDataTypes-2.1.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
 <!-- ===== Includes ===== -->
-<xsd:include schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-ExtensionContentDataType-2.1.xsd"/>
+<xsd:include schemaLocation="UBL-ExtensionContentDataType-2.1.xsd"/>
 <!-- ===== Aggregate Element and Type Declarations ===== -->
   <xsd:element name="UBLExtensions" type="UBLExtensionsType">
     <xsd:annotation>
@@ -194,8 +196,6 @@ targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionCom
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
-
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
   it or assist in its implementation may be prepared, copied, 

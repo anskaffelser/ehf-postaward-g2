@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
+  Library:           OASIS Universal Business Language (UBL) 2.1 OS
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Release Date:      04 November 2013
   Module:            UBL-UnqualifiedDataTypes-2.1.xsd
   Generated on:      2013-04-20 18:40(UTC)
+  Copyright (c) OASIS Open 2013. All Rights Reserved.
 
   This schema fragment implements UBL unqualified datatypes using core
   component types with all supplementary components as described in
@@ -51,7 +53,7 @@ xmlns:ccts-cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchema
             attributeFormDefault="unqualified"
             version="2.1">
 <!-- ===== Imports ===== -->
-  <xsd:import schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/CCTS_CCT_SchemaModule-2.1.xsd"
+  <xsd:import schemaLocation="CCTS_CCT_SchemaModule-2.1.xsd"
 namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"/>
 <!-- ===== Type Definitions ===== -->
   <xsd:complexType name="AmountType">
@@ -524,8 +526,6 @@ namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModul
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
-
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
   it or assist in its implementation may be prepared, copied, 
