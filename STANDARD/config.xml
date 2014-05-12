@@ -35,11 +35,7 @@
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiProfiles.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgenRulesCodes.xml"/>
 	</validate>
 	
 	<validate 
@@ -74,11 +70,7 @@
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiProfiles.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgenRulesCodes.xml"/>
 	</validate>
 	
 	<validate 
@@ -162,11 +154,7 @@
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiProfiles.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRulesCodes.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgenRulesCodes.xml"/>
 	</validate>
 	
 	<validate 
