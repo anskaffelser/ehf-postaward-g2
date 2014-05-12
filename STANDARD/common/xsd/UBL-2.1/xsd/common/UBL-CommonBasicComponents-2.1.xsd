@@ -17,9 +17,9 @@
             version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
-               schemaLocation="UBL-QualifiedDataTypes-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-QualifiedDataTypes-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
-               schemaLocation="UBL-UnqualifiedDataTypes-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-UnqualifiedDataTypes-2.1.xsd"/>
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="AcceptedIndicator" type="AcceptedIndicatorType"/>
    <xsd:element name="AcceptedVariantsDescription"

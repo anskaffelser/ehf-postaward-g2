@@ -53,7 +53,7 @@ xmlns:ccts-cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchema
             attributeFormDefault="unqualified"
             version="2.1">
 <!-- ===== Imports ===== -->
-  <xsd:import schemaLocation="CCTS_CCT_SchemaModule-2.1.xsd"
+  <xsd:import schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/CCTS_CCT_SchemaModule-2.1.xsd"
 namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"/>
 <!-- ===== Type Definitions ===== -->
   <xsd:complexType name="AmountType">

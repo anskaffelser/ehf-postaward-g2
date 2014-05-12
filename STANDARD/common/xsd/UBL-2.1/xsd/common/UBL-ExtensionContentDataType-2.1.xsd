@@ -18,7 +18,7 @@
   <!--import here all extension schemas-->
   <xsd:import namespace=
      "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
-              schemaLocation="UBL-CommonSignatureComponents-2.1.xsd"/>
+              schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonSignatureComponents-2.1.xsd"/>
 
   <!-- ===== Type Declaration ===== -->
   <xsd:complexType name="ExtensionContentType">

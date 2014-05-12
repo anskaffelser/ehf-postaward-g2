@@ -10,7 +10,7 @@
   only to change the importing URI for the XAdES v1.3.2 schema.
 -->
 <xsd:schema targetNamespace="http://uri.etsi.org/01903/v1.4.1#" xmlns="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" elementFormDefault="qualified">
-	<xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#" schemaLocation="UBL-XAdESv132-2.1.xsd"/>
+	<xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#" schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-XAdESv132-2.1.xsd"/>
 	<!-- Start CertificateValues -->
 	<xsd:element name="TimeStampValidationData" type="ValidationDataType"/>
 	<xsd:complexType name="ValidationDataType">
