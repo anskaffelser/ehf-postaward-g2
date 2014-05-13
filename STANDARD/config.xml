@@ -112,6 +112,7 @@
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -135,6 +136,7 @@
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -170,6 +172,7 @@
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />

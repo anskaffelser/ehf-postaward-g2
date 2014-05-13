@@ -189,6 +189,25 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
+      
+
+      <axsl:choose>
+         <axsl:when test="local-name(/*) = 'CreditNote' and
+          (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or 
+           (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="local-name(/*) = 'CreditNote' and
+          (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or 
+            (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T14-R021]-A creditnote transaction T14 in Profile other than xx MUST have an invoice or creditnote reference identifier.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
   
       <axsl:choose>
          <axsl:when test="(cbc:UBLVersionID)"/>
