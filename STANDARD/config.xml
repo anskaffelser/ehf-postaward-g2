@@ -34,7 +34,7 @@
 			<no>PEPPOL BIS faktura utenfor Norge, profil kun faktura</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
+		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
 	</validate>
 	
@@ -69,7 +69,7 @@
 			<no>PEPPOL BIS faktura utenfor Norge, profil faktura og kreditnota</no>
 		</name>
 		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiCore.xml"/>
+		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
 		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
 	</validate>
 	
