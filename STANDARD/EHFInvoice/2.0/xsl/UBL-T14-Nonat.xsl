@@ -398,6 +398,28 @@
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
    </axsl:template>   
    
+      	<!--RULE -->
+
+   <axsl:template match="cac:PayeeFinancialAccount/cbc:ID//@schemeID" priority="1005" mode="M16">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:PayeeFinancialAccount/cbc:ID//@schemeID"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NONAT-T14-R022]-A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*" mode="M16"/>
+   </axsl:template>
+   
    
    	<!--RULE -->
 

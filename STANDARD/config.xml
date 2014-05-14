@@ -21,6 +21,7 @@
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -56,6 +57,7 @@
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -91,6 +93,7 @@
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -114,6 +117,7 @@
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -138,6 +142,7 @@
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -174,6 +179,7 @@
 		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
