@@ -176,6 +176,20 @@
 	<!--RULE -->
 <axsl:template match="/ubl:CreditNote" priority="1004" mode="M16">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote"/>
+      
+      		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="not(count(//*[not(text())]) &gt; 0)"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(count(//*[not(text())]) &gt; 0)">
+					<axsl:attribute name="flag">warning</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NONAT-T10-R023]-A credit note SHOULD not contain empty elements.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
 
   <axsl:choose>
          <axsl:when test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name)"/>
