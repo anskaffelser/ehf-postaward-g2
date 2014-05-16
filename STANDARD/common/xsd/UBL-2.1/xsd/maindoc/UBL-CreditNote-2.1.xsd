@@ -19,7 +19,7 @@
             version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-               schemaLocation="//STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd"/>
+               schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="/STANDARD/common/xsd/UBL-2.1/xsd/common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
