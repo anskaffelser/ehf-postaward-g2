@@ -252,7 +252,7 @@
 	<cac:LegalMonetaryTotal>
 		<cbc:LineExtensionAmount currencyID="NOK">1436.5</cbc:LineExtensionAmount>
 		<cbc:TaxExclusiveAmount currencyID="NOK">1436.5</cbc:TaxExclusiveAmount>
-		<cbc:TaxInclusiveAmount currencyID="NOK">1800.00</cbc:TaxInclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="NOK">1802.00</cbc:TaxInclusiveAmount>
 		<cbc:AllowanceTotalAmount currencyID="NOK">100</cbc:AllowanceTotalAmount>
 		<cbc:ChargeTotalAmount currencyID="NOK">100</cbc:ChargeTotalAmount>
 		<cbc:PrepaidAmount currencyID="NOK">1000</cbc:PrepaidAmount>
