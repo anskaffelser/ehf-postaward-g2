@@ -150,9 +150,9 @@
    <axsl:template match="/">
       <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" title="Sjekk mot norske nasjonale regler" schemaVersion="">
          <axsl:comment>
-            <axsl:value-of select="$archiveDirParameter"/>   
-		 <axsl:value-of select="$archiveNameParameter"/>  
-		 <axsl:value-of select="$fileNameParameter"/>  
+            <axsl:value-of select="$archiveDirParameter"/>   
+		 <axsl:value-of select="$archiveNameParameter"/>  
+		 <axsl:value-of select="$fileNameParameter"/>  
 		 <axsl:value-of select="$fileDirParameter"/>
          </axsl:comment>
          <svrl:ns-prefix-in-attribute-values uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
@@ -371,13 +371,13 @@
       </axsl:choose>
 
 		<!--ASSERT -->
-	<!-- 2013-05-10 EG Test on AdditionalDocumentReference/DocumentType = 'efakturareferanse', indicates B2C  -->
+	<!-- 2013-05-10 EG Test on AdditionalDocumentReference/DocumentType = 'elektroniskB2Cfaktura', indicates B2C  -->
       <axsl:choose>
          <axsl:when test="(cac:PartyLegalEntity/cbc:CompanyID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or 
-        (//cac:AdditionalDocumentReference/cbc:DocumentType = 'efakturareferanse')"/>
+        (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:CompanyID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or 
-           (//cac:AddititionalDocumentReference/cbc:DocumentType = 'efakturareferanse')">
+           (//cac:AddititionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -389,13 +389,13 @@
       
 		<!--ASSERT -->
 	  <!-- 2013-05-10 EG Changed from warning to Fatal 
-								Test on AdditionalDocumentReference/DocumentType = 'efakturareferanse', indicates B2C-->
+								Test on AdditionalDocumentReference/DocumentType = 'elektroniskB2Cfaktura', indicates B2C-->
       <axsl:choose>
          <axsl:when test="(cac:PartyLegalEntity/cbc:RegistrationName != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or
-          (//cac:AdditionalDocumentReference/cbc:DocumentType = 'efakturareferanse')"/>
+          (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:RegistrationName != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or 
-             (//cac:AdditionalDocumentReference/cbc:DocumentType = 'efakturareferanse')">
+             (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
