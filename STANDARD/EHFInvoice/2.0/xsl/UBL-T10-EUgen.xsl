@@ -682,9 +682,9 @@
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:PayeeFinancialAccount/cbc:ID//@schemeID"/>
 		<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )"/>
+			<axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN ',concat(' ',normalize-space(.),' ') ) ) )"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN ',concat(' ',normalize-space(.),' ') ) ) )">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
