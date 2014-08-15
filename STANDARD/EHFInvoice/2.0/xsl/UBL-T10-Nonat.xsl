@@ -535,7 +535,7 @@
       <axsl:choose>
          <axsl:when test="not(cbc:InvoicedQuantity) or 
                                    not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:InvoicedQuantity) &gt;= 0  or 
+                                   number(cbc:InvoicedQuantity) &gt; 0  or 
                                    (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
          round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
@@ -548,7 +548,7 @@
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" 
              test="not(cbc:InvoicedQuantity) or 
                                    not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:LineExtensionAmount) &gt;= 0  or 
+                                   number(cbc:LineExtensionAmount) &gt; 0  or 
                                    (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
          round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
