@@ -269,11 +269,11 @@
 			<axsl:when test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))">
-					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="flag">warning</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NONAT-T10-R009]-Issue date of an invoice must be today or earlier.</svrl:text>
+					<svrl:text>[NONAT-T10-R009]-Issue date of an invoice should be today or earlier.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
