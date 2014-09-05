@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
+<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T01.xsl" />

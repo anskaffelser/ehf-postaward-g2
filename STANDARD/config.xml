@@ -746,20 +746,20 @@
 			<en>EHF Catalogue in Norway, Norwegian actors only</en>
 			<no>EHF katalog i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml"/>
+		<xi:include href="/STANDARD/common/includes/Catalogue/UBL-Catalogue-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/Catalogue/RULES-EHF-1.0.xml"/>
 	</validate>
 	
-	<!--validate 
+	<validate 
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0" 
 		version="1.0">
 		<name>
 			<en>EHF Catalogue in Norway, international actor</en>
 			<no>EHF katalog i Norge, utenlandsk aktør</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Catalogue-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T19-BIIRULES-UBL-Nogov-Katalog.xml"/>
-	</validate-->
+		<xi:include href="/STANDARD/common/includes/Catalogue/UBL-Catalogue-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/Catalogue/RULES-BIS-2.0.xml"/>
+	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0" 
@@ -768,9 +768,20 @@
 			<en>EHF Cataloguerespone in Norway, Norwegian actors only</en>
 			<no>EHF katalogbekreftelse i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-ApplicationResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/BIIRULES-UBL-T58-Nogov-Katalogbekreftelse.xml"/>
-	</validate>		
+		<xi:include href="/STANDARD/common/includes/CatalogueResponse/UBL-ApplicationResponse-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/CatalogueResponse/RULES-EHF-1.0.xml"/>
+	</validate>
+
+	<validate 
+		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0" 
+		version="1.0">
+		<name>
+			<en>EHF Cataloguerespone in Norway, international actor</en>
+			<no>EHF katalogbekreftelse i Norge, utenlandsk aktør</no>
+		</name>
+		<xi:include href="/STANDARD/common/includes/CatalogueResponse/UBL-ApplicationResponse-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/CatalogueResponse/RULES-BIS-2.0.xml"/>
+	</validate>
 	<!-- STOP CATALOGUE -->
 	
 	
@@ -783,11 +794,11 @@
 			<en>EHF Order in Norway, Norwegian actors only</en>
 			<no>EHF Ordre i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Order-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T01-BIIRULES-Nogov-Ordre.xml"/>
+		<xi:include href="/STANDARD/common/includes/Order/UBL-Order-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/Order/RULES-EHF-1.0.xml"/>
 	</validate>
 	
-	<!--validate 
+	<validate 
 		id="
 		urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
@@ -795,9 +806,9 @@
 			<en>EHF Order in Norway, International actors</en>
 			<no>EHF Ordre i Norge, utenlandske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Order-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T01-BIIRULES-Nogov-Ordre.xml"/>
-	</validate-->	
+		<xi:include href="/STANDARD/common/includes/Order/UBL-Order-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/Order/RULES-BIS-1.0.xml"/>
+	</validate>
 	<!-- STOP ORDER -->
 	
 	
@@ -809,20 +820,20 @@
 			<en>EHF Orderresponse in Norway, Norwegian actors only</en>
 			<no>EHF Ordrebekreftelse i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-OrderResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T02-BIIRULES-Nogov-Ordrebekreftelse.xml"/>
+		<xi:include href="/STANDARD/common/includes/OrderResponse/UBL-OrderResponse-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/OrderResponse/RULES-EHF-1.0.xml"/>
 	</validate>
 	
-	<!--validate 
+	<validate 
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0 urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
 			<en>EHF Orderresponse in Norway, International actors</en>
 			<no>EHF Ordrebekreftelse i Norge, utenlandske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-OrderResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T02-BIIRULES-Nogov-Ordrebekreftelse.xml"/>
-	</validate-->	
+		<xi:include href="/STANDARD/common/includes/OrderResponse/UBL-OrderResponse-2.1.xml"/>
+		<xi:include href="/STANDARD/common/includes/OrderResponse/RULES-BIS-1.0.xml"/>
+	</validate>	
 	<!-- STOP ORDER RESPONSE -->	
 	
 	
