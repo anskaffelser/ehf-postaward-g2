@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/NOGOV-UBL-T76.xsl" />
-<xi:include href="/STANDARD/common/includes/OrderResponse/RULES-BIS-1.0.xml" />

@@ -746,8 +746,10 @@
 			<en>EHF Catalogue in Norway, Norwegian actors only</en>
 			<no>EHF katalog i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/Catalogue/UBL-Catalogue-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/Catalogue/RULES-EHF-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/NOGOV_UBL_T19.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T19.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/OPENPEPPOL-UBL-T19.xsl" />
 	</validate>
 	
 	<validate 
@@ -757,8 +759,9 @@
 			<en>EHF Catalogue in Norway, international actor</en>
 			<no>EHF katalog i Norge, utenlandsk aktør</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/Catalogue/UBL-Catalogue-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/Catalogue/RULES-BIS-2.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T19.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/OPENPEPPOL-UBL-T19.xsl" />
 	</validate>
 	
 	<validate 
@@ -768,8 +771,10 @@
 			<en>EHF Cataloguerespone in Norway, Norwegian actors only</en>
 			<no>EHF katalogbekreftelse i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/CatalogueResponse/UBL-ApplicationResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/CatalogueResponse/RULES-EHF-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-ApplicationResponse-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/NOGOV_UBL_T58.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T58.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/OPENPEPPOL-UBL-T58.xsl" />
 	</validate>
 
 	<validate 
@@ -779,8 +784,9 @@
 			<en>EHF Cataloguerespone in Norway, international actor</en>
 			<no>EHF katalogbekreftelse i Norge, utenlandsk aktør</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/CatalogueResponse/UBL-ApplicationResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/CatalogueResponse/RULES-BIS-2.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-ApplicationResponse-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T58.xsl" />
+		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/OPENPEPPOL-UBL-T58.xsl" />
 	</validate>
 	<!-- STOP CATALOGUE -->
 	
@@ -794,8 +800,10 @@
 			<en>EHF Order in Norway, Norwegian actors only</en>
 			<no>EHF Ordre i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/Order/UBL-Order-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/Order/RULES-EHF-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/NOGOV-UBL-T01.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T01.xsl" />
 	</validate>
 	
 	<validate 
@@ -806,8 +814,9 @@
 			<en>EHF Order in Norway, International actors</en>
 			<no>EHF Ordre i Norge, utenlandske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/Order/UBL-Order-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/Order/RULES-BIS-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T01.xsl" />
 	</validate>
 	<!-- STOP ORDER -->
 	
@@ -820,8 +829,10 @@
 			<en>EHF Orderresponse in Norway, Norwegian actors only</en>
 			<no>EHF Ordrebekreftelse i Norge, norske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/OrderResponse/UBL-OrderResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/OrderResponse/RULES-EHF-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-OrderResponse-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/NOGOV-UBL-T76.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T76.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T76.xsl" />
 	</validate>
 	
 	<validate 
@@ -831,8 +842,9 @@
 			<en>EHF Orderresponse in Norway, International actors</en>
 			<no>EHF Ordrebekreftelse i Norge, utenlandske aktører</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/OrderResponse/UBL-OrderResponse-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/OrderResponse/RULES-BIS-1.0.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-OrderResponse-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T76.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T76.xsl" />
 	</validate>	
 	<!-- STOP ORDER RESPONSE -->	
 	
