@@ -26,6 +26,7 @@
 <config>
 
 	<!-- START TEST VERSION 1.4 -->
+	<!--
 	<test id="1.4.1" ignore="false">
 		<version>1.4</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
@@ -510,13 +511,14 @@
 			<schematronrule>NONAT-T17-R007</schematronrule>		
 		</errors>
 		<warnings></warnings>
-	</test>
+	</test> -->
 	<!-- STOP TEST VERSION 1.4 -->
 
 
 
 
 	<!-- START TEST VERSION 1.5 -->
+	<!-- 
 	<test id="1.5.1" ignore="false">
 		<version>1.5</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
@@ -990,13 +992,14 @@
 			<schematronrule>NONAT-T17-R007</schematronrule>		
 		</errors>
 		<warnings></warnings>
-	</test>	
+	</test>	 -->
 	<!-- STOP TEST VERSION 1.5 -->
 
 
 
 
 	<!-- START TEST VERSION 1.6 -->
+	<!--
 	<test id="1.6.1" ignore="false">
 		<version>1.6</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm010:ver1.0:#urn:www.peppol.eu:bis:peppol4a:ver1.0#urn:www.difi.no:ehf:faktura:ver1</id>
@@ -1505,7 +1508,7 @@
 		<file>/STANDARD/EHFInvoice/1.6/test/T14-hode-test16.xml</file>
 		<errors></errors>
 		<warnings></warnings>
-	</test>	
+	</test>	 -->
 	<!-- STOP TEST VERSION 1.6 -->
 	
 	
