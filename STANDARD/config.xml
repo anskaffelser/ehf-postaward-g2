@@ -231,8 +231,8 @@
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0" 
 		version="1.0">
 		<name>
-			<en>EHF Catalogue, international actor</en>
-			<no>EHF katalog, utenlandsk aktør</no>
+			<en>PEPPOL BIS Catalogue, international actor</en>
+			<no>PEPPOL BIS katalog, utenlandsk aktør</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T19.xsl" />
@@ -256,8 +256,8 @@
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0" 
 		version="1.0">
 		<name>
-			<en>EHF Cataloguerespone, international actor</en>
-			<no>EHF katalogbekreftelse, utenlandsk aktør</no>
+			<en>PEPPOL BIS Cataloguerespone, international actor</en>
+			<no>PEPPOL BIS katalogbekreftelse, utenlandsk aktør</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-ApplicationResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T58.xsl" />
@@ -284,8 +284,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Order, International actors</en>
-			<no>EHF Ordre, utenlandske aktører</no>
+			<en>PEPPOL BIS Order, International actors</en>
+			<no>PEPPOL BIS Ordre, utenlandske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
@@ -312,8 +312,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0 urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Orderresponse, International actors</en>
-			<no>EHF Ordrebekreftelse, utenlandske aktører</no>
+			<en>PEPPOL BIS Orderresponse, International actors</en>
+			<no>PEPPOL BIS Ordrebekreftelse, utenlandske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-OrderResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T76.xsl" />
@@ -338,8 +338,8 @@
 		id="urn:www.cenbii.eu:profile:bii30:ver2.0#urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0" 
 		version="1.0">
 		<name>
-			<en>EHF Despatch Advice, profile Despatch Advice only</en>
-			<no>EHF pakkseddel, profil pakkseddel</no>
+			<en>PEPPOL BIS Despatch Advice, profile Despatch Advice only</en>
+			<no>PEPPOL BIS pakkseddel, profil pakkseddel</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-DespatchAdvice-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/UBL-T16-BIIRULES.xsl" />
