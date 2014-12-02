@@ -13,6 +13,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -50,6 +51,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -87,6 +89,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -115,6 +118,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -141,6 +145,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -179,6 +184,7 @@
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
 		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />

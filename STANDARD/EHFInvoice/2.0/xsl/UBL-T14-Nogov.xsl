@@ -244,9 +244,9 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:Contact/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:Contact/cbc:ID != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Contact/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Contact/cbc:ID != '')">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -266,9 +266,9 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:SellersItemIdentification/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:SellersItemIdentification/cbc:ID != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:SellersItemIdentification/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:SellersItemIdentification/cbc:ID != '')">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -288,9 +288,9 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:PartyLegalEntity/cbc:CompanyID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:PartyLegalEntity/cbc:CompanyID != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:CompanyID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:CompanyID != '')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -303,9 +303,9 @@
 <!--ASSERT -->
 	  <!-- 2013-05-10 EG Rule added -->
       <axsl:choose>
-         <axsl:when test="(cac:PartyLegalEntity/cbc:RegistrationName != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:PartyLegalEntity/cbc:RegistrationName != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:RegistrationName != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyLegalEntity/cbc:RegistrationName != '')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -318,9 +318,9 @@
       <!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:PartyIdentification/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:PartyIdentification/cbc:ID != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyIdentification/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyIdentification/cbc:ID != '')">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -333,9 +333,9 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="(cac:Contact/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"/>
+         <axsl:when test="(cac:Contact/cbc:ID != '')"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Contact/cbc:ID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Contact/cbc:ID != '')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -345,6 +345,199 @@
          </axsl:otherwise>
       </axsl:choose>
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+   			<!--RULE -->
+
+   <axsl:template match="/ubl:CreditNote/cac:TaxTotal" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:TaxTotal"/>
+      
+      	<!--ASSERT -->
+           <axsl:choose>
+         <axsl:when test="(cac:TaxSubtotal)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:TaxSubtotal)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R018]- A credit note MUST have Tax Subtotal specifications.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+   	<!--RULE -->
+
+   <axsl:template match="/ubl:CreditNote/cac:TaxRepresentativeParty" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:TaxRepresentativeParty"/>
+   
+            	<!--ASSERT -->
+           <axsl:choose>
+         <axsl:when test="(cac:PartyTaxScheme/cbc:CompanyID !='')"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:PartyTaxScheme/cbc:CompanyID !='')">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R017]- Company identifier MUST be specified when describing a Tax Representative</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+   	<axsl:template match="//cac:Party/cbc:EndpointID" priority="1000" mode="M17">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:EndpointID"/>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="(@schemeID = 'NO:ORGNR') or (@schemeID = 'GLN')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(@schemeID = 'NO:ORGNR') or (@schemeID = 'GLN') ">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR' or 'GLN'.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+	<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="(string(.) castable as xs:integer) and ((string-length(.) = 9) or (string-length(.) = 13))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and ((string-length(.) = 9) or (string-length(.) = 13))">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T14-R009]- MUST be a norwegian organizational number or a GLN. Only numerical value allowed</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+         <!--RULE-->
+       <axsl:template match="//cac:PartyLegalEntity/cbc:CompanyID" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyLegalEntity/cbc:CompanyID"/>
+      
+      	<!--ASSERT -->
+           <axsl:choose>
+                 	<axsl:when test="(string-length(.) = 9) and (string(.) castable as xs:integer)"/>
+                 	
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(.) = 9) and (string(.) castable as xs:integer)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R014]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+      <!--RULE-->
+       <axsl:template match="//cac:PartyTaxScheme/cbc:CompanyID" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyTaxScheme/cbc:CompanyID"/>
+      
+      	<!--ASSERT -->
+           <axsl:choose>
+                 	<axsl:when test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')"/>
+                 	
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R013]- A VAT number MUST be nine numbers followed by the letters MVA.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+   
+         			<!--RULE -->
+
+   <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
+      
+      	<!--ASSERT -->
+           <axsl:choose>
+                 	<axsl:when test="(string(.) castable as xs:date) and (string-length(.) = 10)"/>
+                 	
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:TaxSubtotal)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R011]- A date must be formatted YYYY-MM-DD.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+<!--RULE -->
+
+   <axsl:template match="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN' or attribute::schemeID = 'BBAN']" priority="1005" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PaymentMeans"/>
+      		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(string(.) castable as xs:integer)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(cac:PayeeFinancialAccount/cbc:ID) castable as xs:integer)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R015]-Only numbers are allowed as bank account number if scheme is IBAN or BBAN.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>   
+          <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
+      
+   
+   
+   <!--RULE -->
+
+   <axsl:template match="//cac:CreditNoteLine/cac:Item/cac:CommodityClassification" priority="1002" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:CreditNoteLine/cac:Item/cac:CommodityClassification"/>
+
+		<!--ASSERT -->
+
+      <axsl:choose>
+         <axsl:when test="(cbc:ItemClassificationCode !='')"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ItemClassificationCode !='')">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R019]-Item classification code MUST be specified when describing commodity classification.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+            <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
 
 
