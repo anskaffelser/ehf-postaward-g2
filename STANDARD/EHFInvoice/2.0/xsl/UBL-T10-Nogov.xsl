@@ -516,7 +516,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T14-R030]- A VAT number MUST be nine numbers followed by the letters MVA.</svrl:text>
+               <svrl:text>[NOGOV-T10-R030]- A VAT number MUST be nine numbers followed by the letters MVA.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -539,7 +539,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T14-R031]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
+               <svrl:text>[NOGOV-T10-R031]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>

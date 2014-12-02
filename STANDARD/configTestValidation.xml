@@ -30,7 +30,9 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-avrunding-1.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule>NOGOV-T10-R032</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>
 
@@ -42,7 +44,10 @@
 			<schematronrule>BII2-T10-R040</schematronrule>
 			<schematronrule>BII2-T10-R042</schematronrule>			
 			<schematronrule>NONAT-T10-R008</schematronrule>
+			<schematronrule>NOGOV-T10-R030</schematronrule>			
 			<schematronrule>NOGOV-T10-R015</schematronrule>			
+			<schematronrule>NOGOV-T10-R030</schematronrule>			
+			<schematronrule>NOGOV-T10-R032</schematronrule>			
 		</errors>
 		<warnings>
 			<schematronrule>EUGEN-T10-R004</schematronrule>
@@ -123,7 +128,9 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-avrunding-3.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule>NOGOV-T10-R032</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>
 	
@@ -159,6 +166,7 @@
 			<schematronrule>NOGOV-T10-R011</schematronrule>	
 		</errors>
 		<warnings>
+			<schematronrule>EHFCORE-T10-R002</schematronrule>
 			<schematronrule>NONAT-T10-R025</schematronrule>
 			<schematronrule>NONAT-T10-R003</schematronrule>
 			<schematronrule>NOGOV-T10-R005</schematronrule>
@@ -193,6 +201,11 @@
 			<schematronrule>NONAT-T10-R024</schematronrule>
 			<schematronrule>NONAT-T10-R021</schematronrule>
 			<schematronrule>NONAT-T10-R014</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
 		</errors>
 		<warnings>
 			<schematronrule>CL-T10-R006</schematronrule>
@@ -203,7 +216,9 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-hode-ok.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule>NOGOV-T10-R032</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>
 	
@@ -214,6 +229,7 @@
 		<errors>
 			<schematronrule>NONAT-T10-R008</schematronrule>
 			<schematronrule>NOGOV-T10-R015</schematronrule>	
+			<schematronrule>NOGOV-T10-R032</schematronrule>	
 		</errors>
 		<warnings></warnings>
 	</test>
@@ -253,7 +269,10 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-Valuta-EUR.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule>NOGOV-T10-R032</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>
 
@@ -271,7 +290,9 @@
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-avrunding-2.xml</file>
 		<errors>
 			<schematronrule>NONAT-T14-R006</schematronrule>
-			<schematronrule>NOGOV-T10-R008</schematronrule>
+			<schematronrule>NOGOV-T14-R013</schematronrule>
+			<schematronrule>NOGOV-T14-R008</schematronrule>
+			<schematronrule>NOGOV-T14-R013</schematronrule>
 		</errors>
 		<warnings></warnings>
 	</test>
@@ -280,7 +301,10 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-avrunding-3.xml</file>
-		<errors></errors>
+		<errors>
+			<schematronrule>NOGOV-T14-R013</schematronrule>
+			<schematronrule>NOGOV-T14-R013</schematronrule>
+		</errors>
 		<warnings></warnings>
 	</test>
 	
@@ -371,7 +395,7 @@
 			<schematronrule>EUGEN-T14-R032</schematronrule>
 			<schematronrule>EUGEN-T14-R030</schematronrule>
 			<schematronrule>NONAT-T14-R006</schematronrule>
-			<schematronrule>NOGOV-T10-R008</schematronrule>
+			<schematronrule>NOGOV-T14-R008</schematronrule>
 		</errors>
 		<warnings></warnings>
 	</test>

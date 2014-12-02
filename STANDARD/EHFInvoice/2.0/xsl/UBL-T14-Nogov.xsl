@@ -310,7 +310,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R008]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</svrl:text>
+               <svrl:text>[NOGOV-T14-R008]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>      
