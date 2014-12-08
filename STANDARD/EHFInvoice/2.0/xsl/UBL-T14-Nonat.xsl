@@ -339,7 +339,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T14-R003]-A supplier postal address in an invoice MUST contain at least city name, zip code and country code.</svrl:text>
+               <svrl:text>[NONAT-T14-R003]-A supplier postal address in a credit note MUST contain at least city name, zip code and country code.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -361,7 +361,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T14-R004]-A customer postal address in an invoice MUST contain at least, city name, zip code and country code.</svrl:text>
+               <svrl:text>[NONAT-T14-R004]-A customer postal address in a credit note MUST contain at least, city name, zip code and country code.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -446,11 +446,11 @@
          <axsl:when test="number(cbc:TaxInclusiveAmount) &gt;= 0"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="number(cbc:TaxInclusiveAmount) &gt;= 0">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T14-R020]-Tax inclusive amount in a credit note MUST NOT be negative</svrl:text>
+               <svrl:text>[NONAT-T14-R020]-Tax inclusive amount in a credit note SHOULD NOT be negative</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>		
@@ -614,7 +614,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity</svrl:text>
+               <svrl:text>[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>

@@ -256,26 +256,45 @@
    
    	<!--RULE -->
 
-   <axsl:template match="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN' or attribute::schemeID = 'BBAN']" priority="1005" mode="M17">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PaymentMeans"/>
+   <axsl:template match="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']" priority="1005" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']"/>
       		<!--ASSERT -->
 
       <axsl:choose>
          <axsl:when test="(string(.) castable as xs:integer)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(cac:PayeeFinancialAccount/cbc:ID) castable as xs:integer)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R032]-Only numbers are allowed as bank account number if scheme is IBAN or BBAN.</svrl:text>
+               <svrl:text>[NOGOV-T10-R032]-Only numbers are allowed as bank account number if scheme is BBAN.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>   
           <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
+
+   <!--RULE -->
    
-   
+   <axsl:template match="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN']" priority="1005" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN']"/>
+      <!--ASSERT -->
+      
+      <axsl:choose>
+         <axsl:when test="(matches(.,'[A-Z][A-Z]')= true()) and (substring(.,3) castable as xs:integer)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(matches(.,'[A-Z][A-Z]')= true()) and (substring(.,3) castable as xs:integer)">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T10-R033]-IBAN numbers MUST be Alpha-2 country code, followed by two check digits and then the BBAN. Only numbers and upper case literals A-Z is allowed.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>   
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
 	<!--RULE -->
 
    <axsl:template match="//cac:OrderReference" priority="1004" mode="M17">
@@ -551,7 +570,7 @@
    			<!--RULE -->
 
    <axsl:template match="/ubl:Invoice/cac:PaymentTerms" priority="1000" mode="M17">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:TaxTotal"/>
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:PaymentTerms"/>
       
       	<!--ASSERT -->
            <axsl:choose>
@@ -592,7 +611,7 @@
    		<!--RULE -->
 
    <axsl:template match="/ubl:Invoice/cac:TaxRepresentativeParty" priority="1000" mode="M17">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:TaxTotal"/>
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:TaxRepresentativeParty"/>
       
       	<!--ASSERT -->
            <axsl:choose>
@@ -658,7 +677,7 @@
            <axsl:choose>
                  	<axsl:when test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:Invoice/cbc:DocumentCurrencyCode)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:TaxSubtotal)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:Invoice/cbc:DocumentCurrencyCode)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -702,28 +721,28 @@
 		
 		<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="(@schemeID = 'NO:ORGNR') or (@schemeID = 'GLN')"/>
+			<axsl:when test="@schemeID = 'NO:ORGNR'"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(@schemeID = 'NO:ORGNR') or (@schemeID = 'GLN') ">
+			   <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR' or 'GLN'.</svrl:text>
+					<svrl:text>[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
 
 	<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="(string(.) castable as xs:integer) and ((string-length(.) = 9) or (string-length(.) = 13))"/>
+			<axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and ((string-length(.) = 9) or (string-length(.) = 13))">
+			   <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T10-R026]- MUST be a norwegian organizational number or a GLN. Only numerical value allowed</svrl:text>
+					<svrl:text>[NOGOV-T10-R026]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
