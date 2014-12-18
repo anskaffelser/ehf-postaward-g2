@@ -668,14 +668,14 @@
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
    
-   			<!--RULE -->
-
-   <axsl:template match="//*[contains(name(),'Amount')]" priority="1000" mode="M17">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Amount')]"/>
+   <!--RULE -->
+   
+   <axsl:template match="//*[contains(name(),'Amount') and not(contains(name(),'Transaction'))]" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Amount') and not(contains(name(),'Transaction'))]"/>
       
-      	<!--ASSERT -->
-           <axsl:choose>
-                 	<axsl:when test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:Invoice/cbc:DocumentCurrencyCode)"/>
+      <!--ASSERT -->
+      <axsl:choose>
+         <axsl:when test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:Invoice/cbc:DocumentCurrencyCode)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:Invoice/cbc:DocumentCurrencyCode)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
