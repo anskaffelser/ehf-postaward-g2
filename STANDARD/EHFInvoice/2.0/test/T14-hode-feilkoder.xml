@@ -4,13 +4,20 @@
                 This file contains a norwegian creditnote, profile invoice and creditnote
 
                 Errors:                
-                CL-014-001
-                CL-014-003 4 times
-                CL-014-002 11 times
+                
+                CL-014-003 11 times
+                CL-T14-R004 4 times
+                CL-014-002
+                NONAT-T14-R010 twice
+                EUGEN-T14-R030
+                EUGEN-T14-R032
+                EUGEN-T14-R027 4 times
+                EUGEN-T14-R026
+                NOGOV-T14-R005 twice
                 
                 Warnings:
-		EUGEN-T14-R024  
-		CL-014-004 2 times
+				EUGEN-T14-R024  
+	
 
 -->
 <CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"  xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
