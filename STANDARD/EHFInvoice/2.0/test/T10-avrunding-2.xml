@@ -41,7 +41,7 @@
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
-        <cbc:CompanyID>NO913536770MVA</cbc:CompanyID>
+        <cbc:CompanyID>913536770MVA</cbc:CompanyID>
         <cac:TaxScheme>
           <cbc:ID>VAT</cbc:ID>
         </cac:TaxScheme>
@@ -72,7 +72,7 @@
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
-        <cbc:CompanyID schemeID="NO:VAT">NO971032081MVA</cbc:CompanyID>
+        <cbc:CompanyID schemeID="NO:VAT">971032081MVA</cbc:CompanyID>
         <cac:TaxScheme>
           <cbc:ID>VAT</cbc:ID>
         </cac:TaxScheme>
@@ -103,7 +103,7 @@
     <cbc:PaymentDueDate>2012-02-03</cbc:PaymentDueDate>
     <cbc:PaymentChannelCode>IBAN</cbc:PaymentChannelCode>
     <cac:PayeeFinancialAccount>
-      <cbc:ID schemeID="IBAN">7050 06 42198</cbc:ID>
+      <cbc:ID schemeID="IBAN">NO70500642198</cbc:ID>
     </cac:PayeeFinancialAccount>
   </cac:PaymentMeans>
   <cac:TaxTotal>

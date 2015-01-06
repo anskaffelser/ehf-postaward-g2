@@ -5,7 +5,8 @@
 
                 Errors:
                 NONAT-T14-R006
-				NOGOV-T10-R008
+				        NOGOV-T10-R008
+				        NOGOV-T14-R013 twice
 
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
@@ -14,7 +15,7 @@
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii05:ver2.0</cbc:ProfileID>
 	<cbc:ID>32</cbc:ID>
 	<cbc:IssueDate>2012-07-24</cbc:IssueDate>
-	<cbc:DocumentCurrencyCode listID="ISO4217">EUR</cbc:DocumentCurrencyCode>
+	<cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
 	<cac:BillingReference>
 	    <cac:InvoiceDocumentReference>
 		<cbc:ID>INV1234</cbc:ID>

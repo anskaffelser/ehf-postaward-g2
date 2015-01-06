@@ -7,99 +7,102 @@
 		id="urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF invoice in Norway, profile invoice only</en>
-			<no>EHF faktura i Norge, profil kun faktura</no>
+			<en>EHF invoice, profile invoice only</en>
+			<no>EHF faktura, profil kun faktura</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0" 
 		version="2.0">
 		<name>
-			<en>PEPPOL BIS invoice outside Norway, profile invoice only</en>
-			<no>PEPPOL BIS faktura utenfor Norge, profil kun faktura</no>
+			<en>PEPPOL BIS invoice, profile invoice only</en>
+			<no>PEPPOL BIS faktura, profil kun faktura</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF invoice in Norway, profile invoice and creditnote</en>
-			<no>EHF faktura i Norge, profil faktura og kreditnota</no>
+			<en>EHF invoice, profile invoice and creditnote</en>
+			<no>EHF faktura, profil faktura og kreditnota</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0" 
 		version="2.0">
 		<name>
-			<en>PEPPOL BIS invoice outside Norway, profile invoice and creditnote</en>
-			<no>PEPPOL BIS faktura utenfor Norge, profil faktura og kreditnota</no>
+			<en>PEPPOL BIS invoice, profile invoice and creditnote</en>
+			<no>PEPPOL BIS faktura, profil faktura og kreditnota</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:biixy:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.cenbii.eu:profile.eu:biixy:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF invoice in Norway, profile invoice, creditnote and reminder</en>
-			<no>EHF faktura i Norge, profil faktura, kreditnota og purring</no>
+			<en>EHF invoice, profile invoice, creditnote and reminder</en>
+			<no>EHF faktura, profil faktura, kreditnota og purring</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Invoice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T10-Nogov.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T10-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T10-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R048" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R049" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T10-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="CL-T10-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="OP-T10-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="BII2-T10-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T10-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>	
 	<!-- STOP INVOICE -->
 	
@@ -109,18 +112,15 @@
 		id="urn:www.cenbii.eu:profile:biixx:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF creditnote in Norway, profile creditnote only</en>
-			<no>EHF kreditnota i Norge, profil kun kreditnota</no>
+			<en>EHF creditnote, profile creditnote only</en>
+			<no>EHF kreditnota, profil kun kreditnota</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -129,24 +129,25 @@
 		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF creditnote in Norway, profile invoice and creditnote</en>
-			<no>EHF kreditnota i Norge, profil faktura og kreditnota</no>
+			<en>EHF creditnote, profile invoice and creditnote</en>
+			<no>EHF kreditnota, profil faktura og kreditnota</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -155,36 +156,37 @@
 		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0" 
 		version="2.0">
 		<name>
-			<en>PEPPOL BIS creditnote outside Norway, profile invoice and creditnote</en>
-			<no>PEPPOL BIS kreditnota utenfor Norge, profil faktura og kreditnota</no>
+			<en>PEPPOL BIS creditnote, profile invoice and creditnote</en>
+			<no>PEPPOL BIS kreditnota, profil faktura og kreditnota</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiCore.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:biixy:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixy:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0" 
 		version="2.0">
 		<name>
-			<en>EHF creditnote in Norway, profile invoice, creditnote and reminder</en>
-			<no>EHF kreditnota i Norge, profil faktura, kreditnota og purring</no>
+			<en>EHF creditnote, profile invoice, creditnote and reminder</en>
+			<no>EHF kreditnota, profil faktura, kreditnota og purring</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-CreditNote-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-BiiRules.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-EUgen.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nonat.xml"/>
-		<xi:include href="/STANDARD/common/includes/2.0/UBL-T14-Nogov.xml"/>
-		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
-		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-BiiRules.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EUgen.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-EHFCore.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nonat.xsl" />
+		<step id="XSL" file="/STANDARD/EHFInvoice/2.0/xsl/UBL-T14-Nogov.xsl" />
 		<step id="FILTER" rule="BII2-T14-R025" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T104-R044" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
@@ -193,6 +195,10 @@
 		<step id="FILTER" rule="BII2-T14-R050" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R037" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 		<step id="FILTER" rule="BII2-T14-R035" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R041" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="EUGEN-T14-R047" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="CL-T14-R007" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
+		<step id="FILTER" rule="OP-T14-R004" file="/STANDARD/common/filter/FILTER-RULE.xsl" />
 	</validate>
 	<!-- STOP CREDITNOTE -->
 	<!-- STOP VERSION 2.0 -->
@@ -200,55 +206,16 @@
 	
 	<!-- START REMINDER -->
 	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
-		version="1.6">
+		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:purring:ver1" 
+		version="1.0">
 		<name>
-			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
-			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
+			<en>EHF reminder</en>
+			<no>EHF purring</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.6/UBL-T17-Nonat.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.0/xsd/maindoc/UBL-Reminder-2.0.xsd" />
+		<step id="XSL" file="/STANDARD/EHFReminder/1.6/xsl/UBL-T17-Nonat.xsl" />
 	</validate>
 	<!-- STOP REMINDER -->
-	<!-- STOP VERSION 1.6 -->
-	
-	
-	
-	
-	<!-- START VERSION 1.5 -->
-	<!-- START REMINDER -->
-	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
-		version="1.5">
-		<name>
-			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
-			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
-		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.5/UBL-T17-Nonat.xml"/>
-	</validate>
-	<!-- STOP REMINDER -->
-	<!-- STOP VERSION 1.5 -->
-	
-	
-	
-	
-	<!-- START VERSION 1.4 -->
-	<!-- START REMINDER -->
-	<validate 
-		id="urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:puring:ver1" 
-		version="1.4">
-		<name>
-			<en>EHF reminder in Norway, profile invoice, creditnote and reminder</en>
-			<no>EHF purring i Norge, profil faktura, kreditnota og purring</no>
-		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-Reminder-2.0.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.4/UBL-T17-Nonat.xml"/>
-	</validate>
-	<!-- STOP REMINDER -->
-	<!-- STOP VERSION 1.4 -->
-	
-	
 	
 	
 	<!-- START VERSION 1.0 -->
@@ -257,8 +224,8 @@
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0" 
 		version="1.0">
 		<name>
-			<en>EHF Catalogue in Norway, Norwegian actors only</en>
-			<no>EHF katalog i Norge, norske aktører</no>
+			<en>EHF Catalogue, Norwegian actors only</en>
+			<no>EHF katalog, norske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/NOGOV-UBL-T19.xsl" />
@@ -270,8 +237,8 @@
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0" 
 		version="1.0">
 		<name>
-			<en>EHF Catalogue in Norway, international actor</en>
-			<no>EHF katalog i Norge, utenlandsk aktør</no>
+			<en>PEPPOL BIS Catalogue, international actor</en>
+			<no>PEPPOL BIS katalog, utenlandsk aktør</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Catalogue-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T19.xsl" />
@@ -282,8 +249,8 @@
 		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0" 
 		version="1.0">
 		<name>
-			<en>EHF Cataloguerespone in Norway, Norwegian actors only</en>
-			<no>EHF katalogbekreftelse i Norge, norske aktører</no>
+			<en>EHF Cataloguerespone, Norwegian actors only</en>
+			<no>EHF katalogbekreftelse, norske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-ApplicationResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/NOGOV-UBL-T58.xsl" />
@@ -292,11 +259,11 @@
 	</validate>
 
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0" 
+		id="urn:www.cenbii.eu:profile:bii01:ver2.0#urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0" 
 		version="1.0">
 		<name>
-			<en>EHF Cataloguerespone in Norway, international actor</en>
-			<no>EHF katalogbekreftelse i Norge, utenlandsk aktør</no>
+			<en>PEPPOL BIS Cataloguerespone, international actor</en>
+			<no>PEPPOL BIS katalogbekreftelse, utenlandsk aktør</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-ApplicationResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFCatalogue/1.0/xsl/BIIRULES-UBL-T58.xsl" />
@@ -310,8 +277,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordre:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Order in Norway, Norwegian actors only</en>
-			<no>EHF Ordre i Norge, norske aktører</no>
+			<en>EHF Order, Norwegian actors only</en>
+			<no>EHF Ordre, norske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/NOGOV-UBL-T01.xsl" />
@@ -323,8 +290,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Order in Norway, International actors</en>
-			<no>EHF Ordre i Norge, utenlandske aktører</no>
+			<en>PEPPOL BIS Order, International actors</en>
+			<no>PEPPOL BIS Ordre, utenlandske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
@@ -338,8 +305,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Orderresponse in Norway, Norwegian actors only</en>
-			<no>EHF Ordrebekreftelse i Norge, norske aktører</no>
+			<en>EHF Orderresponse, Norwegian actors only</en>
+			<no>EHF Ordrebekreftelse, norske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-OrderResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/NOGOV-UBL-T76.xsl" />
@@ -351,8 +318,8 @@
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0 urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
-			<en>EHF Orderresponse in Norway, International actors</en>
-			<no>EHF Ordrebekreftelse i Norge, utenlandske aktører</no>
+			<en>PEPPOL BIS Orderresponse, International actors</en>
+			<no>PEPPOL BIS Ordrebekreftelse, utenlandske aktører</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-OrderResponse-2.1.xsd" />
 		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T76.xsl" />
@@ -366,22 +333,22 @@
 		id="urn:www.cenbii.eu:profile:bii30:ver2.0#urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0:extended:urn:www.difi.no:ehf:pakkseddel:ver1.0" 
 		version="1.0">
 		<name>
-			<en>EHF Despatch Advice in Norway, profile Despatch Advice only</en>
-			<no>EHF pakkseddel i Norge,  profil pakkseddel</no>
+			<en>EHF Despatch Advice, profile Despatch Advice only</en>
+			<no>EHF pakkseddel, profil pakkseddel</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-DespatchAdvice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T16-BIIRULES.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-DespatchAdvice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/UBL-T16-BIIRULES.xsl" />
 	</validate>
 	
 	<validate 
 		id="urn:www.cenbii.eu:profile:bii30:ver2.0#urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0" 
 		version="1.0">
 		<name>
-			<en>EHF Despatch Advice outside Norway, profile Despatch Advice only</en>
-			<no>EHF pakkseddel utenfor Norge, profil pakkseddel</no>
+			<en>PEPPOL BIS Despatch Advice, profile Despatch Advice only</en>
+			<no>PEPPOL BIS pakkseddel, profil pakkseddel</no>
 		</name>
-		<xi:include href="/STANDARD/common/includes/UBL-DespatchAdvice-2.1.xml"/>
-		<xi:include href="/STANDARD/common/includes/1.0/UBL-T16-BIIRULES.xml"/>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-DespatchAdvice-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/UBL-T16-BIIRULES.xsl" />
 	</validate>	
 	<!-- STOP DESPATCHADVICE -->	
 	<!-- STOP VERSION 1.0 -->

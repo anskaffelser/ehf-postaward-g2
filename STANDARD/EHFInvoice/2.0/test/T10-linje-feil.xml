@@ -8,13 +8,14 @@
 				One of '	{"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2":ID}' is expected.
 
                 Errors:
-               BII2-T10-R017
+               	BII2-T10-R017
 				BII2-T10-R018
 				BII2-T10-R019
 				BII2-T10-R032
 				BII2-T10-R033
 				CL-T10-R003
 				NONAT-T10-R014
+				NOGOV-T10-R025
 
                 
                 Warnings:
