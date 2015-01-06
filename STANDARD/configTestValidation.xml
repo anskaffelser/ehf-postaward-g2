@@ -30,9 +30,7 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-avrunding-1.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T10-R032</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 
@@ -44,10 +42,7 @@
 			<schematronrule>BII2-T10-R040</schematronrule>
 			<schematronrule>BII2-T10-R042</schematronrule>			
 			<schematronrule>NONAT-T10-R008</schematronrule>
-			<schematronrule>NOGOV-T10-R030</schematronrule>			
 			<schematronrule>NOGOV-T10-R015</schematronrule>			
-			<schematronrule>NOGOV-T10-R030</schematronrule>			
-			<schematronrule>NOGOV-T10-R032</schematronrule>			
 		</errors>
 		<warnings>
 			<schematronrule>EUGEN-T10-R004</schematronrule>
@@ -128,9 +123,7 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-avrunding-3.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T10-R032</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 	
@@ -138,10 +131,7 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-B2C.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T10-R009</schematronrule>
-			<schematronrule>NOGOV-T10-R015</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 
@@ -216,9 +206,7 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii04:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-hode-ok.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T10-R032</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 	
@@ -229,7 +217,6 @@
 		<errors>
 			<schematronrule>NONAT-T10-R008</schematronrule>
 			<schematronrule>NOGOV-T10-R015</schematronrule>	
-			<schematronrule>NOGOV-T10-R032</schematronrule>	
 		</errors>
 		<warnings></warnings>
 	</test>
@@ -245,7 +232,8 @@
 			<schematronrule>BII2-T10-R032</schematronrule>
 			<schematronrule>BII2-T10-R033</schematronrule>
 			<schematronrule>CL-010-003</schematronrule>
-			<schematronrule>NONAT-T10-R004</schematronrule>
+			<schematronrule>NONAT-T10-R014</schematronrule>
+			<schematronrule>NOGOV-T10-R025</schematronrule>
 		</errors>
 		<warnings>
 			<schematronrule>NOGOV-T10-R003</schematronrule>
@@ -269,10 +257,7 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T10-Valuta-EUR.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T10-R032</schematronrule>
-			<schematronrule>NOGOV-T10-R025</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 
@@ -301,76 +286,55 @@
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-avrunding-3.xml</file>
-		<errors>
-			<schematronrule>NOGOV-T14-R013</schematronrule>
-			<schematronrule>NOGOV-T14-R013</schematronrule>
-		</errors>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 	
-	<!--
 	<test id="2.1.5" ignore="false">
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-hode-blank.xml</file>
 		<errors>
-			<schematronrule>BIIPROFILE-T14-R002</schematronrule>
-			<schematronrule>BIIRULE-T14-R030</schematronrule>
-			<schematronrule>BIIRULE-T14-R039</schematronrule>
-			<schematronrule>BIIRULE-T14-R039</schematronrule>
-			<schematronrule>BIIRULE-T14-R011</schematronrule>
-			<schematronrule>BIIRULE-T14-R013</schematronrule>
-			<schematronrule>EUGEN-T14-R007</schematronrule>
+			<schematronrule>EUGEN-T14-R024</schematronrule>
+			<schematronrule>NONAT-T14-R021</schematronrule>
 			<schematronrule>NONAT-T14-R001</schematronrule>
 			<schematronrule>NONAT-T14-R006</schematronrule>
+			<schematronrule>NONAT-T14-R014</schematronrule>
+			<schematronrule>NONAT-T14-R014</schematronrule>
+			<schematronrule>NOGOV-T14-R003</schematronrule>
+			<schematronrule>EHFPROFILE-T14-R002</schematronrule>
 			<schematronrule>NOGOV-T14-R004</schematronrule>
-			<schematronrule>NOGOV-T10-R008</schematronrule>
+			<schematronrule>NOGOV-T14-R008</schematronrule>
 			<schematronrule>NOGOV-T14-R007</schematronrule>
 		</errors>
 		<warnings>
-			<schematronrule>BIICORE-T14-R001</schematronrule>
+			<schematronrule>NONAT-T14-R023</schematronrule>
 			<schematronrule>NOGOV-T14-R001</schematronrule>
 			<schematronrule>NOGOV-T14-R006</schematronrule>		
 		</warnings>
 	</test>
-	-->
-	
+
 	<!--
 	<test id="2.1.6" ignore="false">
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-hode-feilkoder.xml</file>
 		<errors>
-			<schematronrule>CL-014-001</schematronrule>
-			<schematronrule>CL-014-003</schematronrule>
-			<schematronrule>CL-014-003</schematronrule>
-			<schematronrule>CL-014-003</schematronrule>
-			<schematronrule>CL-014-003</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-			<schematronrule>CL-014-002</schematronrule>
-		</errors>
-		<warnings>
-			<schematronrule>EUGEN-T14-R024</schematronrule>  
-			<schematronrule>CL-014-004</schematronrule>
-			<schematronrule>CL-014-004</schematronrule>
-		</warnings>
-	</test>
-	-->
-	
-	<test id="2.1.7" ignore="false">
-		<version>2.0</version>
-		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
-		<file>/STANDARD/EHFInvoice/2.0/test/T14-hode-ok.xml</file>
-		<errors>
+			<schematronrule>CL-T14-R002</schematronrule>
+			<schematronrule>CL-T14-R004</schematronrule>
+			<schematronrule>CL-T14-R004</schematronrule>
+			<schematronrule>CL-T14-R004</schematronrule>
+			<schematronrule>CL-T14-R004</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
+			<schematronrule>CL-T14-R003</schematronrule>
 			<schematronrule>EUGEN-T14-R026</schematronrule>
 			<schematronrule>EUGEN-T14-R027</schematronrule>
 			<schematronrule>EUGEN-T14-R027</schematronrule>
@@ -378,7 +342,20 @@
 			<schematronrule>EUGEN-T14-R027</schematronrule>
 			<schematronrule>EUGEN-T14-R032</schematronrule>
 			<schematronrule>EUGEN-T14-R030</schematronrule>
+			<schematronrule>NONAT-T14-R010</schematronrule>
+			<schematronrule>NONAT-T14-R010</schematronrule>
+			<schematronrule>NOGOV-T14-R005</schematronrule>
+			<schematronrule>NOGOV-T14-R005</schematronrule>
 		</errors>
+		<warnings></warnings>
+	</test>
+	-->
+	
+	<test id="2.1.7" ignore="false">
+		<version>2.0</version>
+		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
+		<file>/STANDARD/EHFInvoice/2.0/test/T14-hode-ok.xml</file>
+		<errors></errors>
 		<warnings></warnings>
 	</test>
 	
@@ -387,26 +364,18 @@
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-hode-test16.xml</file>
 		<errors>
-			<schematronrule>EUGEN-T14-R026</schematronrule>
-			<schematronrule>EUGEN-T14-R027</schematronrule>
-			<schematronrule>EUGEN-T14-R027</schematronrule>
-			<schematronrule>EUGEN-T14-R027</schematronrule>
-			<schematronrule>EUGEN-T14-R027</schematronrule>
-			<schematronrule>EUGEN-T14-R032</schematronrule>
-			<schematronrule>EUGEN-T14-R030</schematronrule>
 			<schematronrule>NONAT-T14-R006</schematronrule>
 			<schematronrule>NOGOV-T14-R008</schematronrule>
 		</errors>
 		<warnings></warnings>
 	</test>
-	
+
 	<!--
 	<test id="2.1.9" ignore="false">
 		<version>2.0</version>
 		<id>urn:www.cenbii.eu:profile:bii05:ver2.0#urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</id>
 		<file>/STANDARD/EHFInvoice/2.0/test/T14-linje-feil.xml</file>
 		<errors>
-			<schematronrule></schematronrule>
 			<schematronrule>BIIRULE-T14-R034</schematronrule>
 			<schematronrule>NONAT-T14-R002</schematronrule>
 			<schematronrule>CL-014-002</schematronrule>
