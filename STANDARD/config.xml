@@ -315,7 +315,7 @@
 	</validate>
 	
 	<validate 
-		id="urn:www.cenbii.eu:profile:bii28:ver2.0 urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
+		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
 			<en>PEPPOL BIS Orderresponse, International actors</en>
