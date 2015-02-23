@@ -447,6 +447,28 @@
             <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
    
+   <!--RULE -->
+  
+   <axsl:template match=" //cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID" priority="1004" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxCategory/cbc:ID"/>
+      
+      <!--ASSERT -->
+      
+      <axsl:choose>
+         <axsl:when test="@schemeID = 'UNCL5305'"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'UNCL5305'">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T10-R008]-A tax category identifier MUST have a scheme identifier attribute 'UNCL5305'.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*" mode="M17"/>
+   </axsl:template>
+   
 	<!--RULE -->
 
    <axsl:template match="/ubl:Invoice" priority="1001" mode="M17">
