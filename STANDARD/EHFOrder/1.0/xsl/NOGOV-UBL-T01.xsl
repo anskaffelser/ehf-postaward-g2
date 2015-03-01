@@ -314,7 +314,85 @@
 		
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
+	
+	<!--RULE-->
+	<axsl:template match="//cac:PartyLegalEntity/cbc:CompanyID" priority="1000" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyLegalEntity/cbc:CompanyID"/>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="(string-length(.) = 9) and (string(.) castable as xs:integer)"/>
+			
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(.) = 9) and (string(.) castable as xs:integer)">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R010]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE-->
+	<axsl:template match="//cac:PartyTaxScheme/cbc:CompanyID" priority="1000" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyTaxScheme/cbc:CompanyID"/>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')"/>
+			
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R011]- A VAT number MUST be nine numbers followed by the letters MVA.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
 
+	<!--RULE -->
+	<axsl:template match="//cac:Party/cbc:EndpointID" priority="1000" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:EndpointID"/>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="@schemeID = 'NO:ORGNR'"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R008]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R009]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
 
 	<axsl:template match="text()" priority="-1" mode="M6"/>
 	<axsl:template match="@*|node()" priority="-2" mode="M6">
