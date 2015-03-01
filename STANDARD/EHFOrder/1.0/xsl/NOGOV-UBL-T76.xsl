@@ -177,6 +177,28 @@
       
     <!--PATTERN EHFProfiles_T01 -->
     
+    <!--RULE-->
+    <axsl:template match="/ubl:OrderResponse" priority="1007" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Order"/>
+        
+        
+                <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:BuyerCustomerParty"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R004]- An order response MUST contain buyer information</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
     <!--RULE -->
     
     <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M7">
