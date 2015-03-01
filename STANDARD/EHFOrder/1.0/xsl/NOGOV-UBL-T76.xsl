@@ -240,6 +240,8 @@
             </axsl:otherwise>
         </axsl:choose>
         
+     
+        
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
@@ -255,6 +257,49 @@
         </axsl:choose>
         
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    <!--RULE-->
+    <axsl:template match="//cac:BuyerCustomerParty" priority="1007" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:BuyerCustomerParty"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:Party/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:Party/cbc:EndpointI">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R005]- A buyer should have an EndpointID.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    
+    <!--RULE-->
+    <axsl:template match="//cac:SellerSupplierParty" priority="1007" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:BuyerCustomerParty"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:Party/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:Party/cbc:EndpointI">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R006]- A seller should have an EndpointID.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>
     <!--RULE -->
     
