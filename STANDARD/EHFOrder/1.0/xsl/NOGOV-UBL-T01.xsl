@@ -180,12 +180,100 @@
 	<svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Norwegian rules for EHF Order</svrl:text>
 
 	<!--PATTERN EHF-T01-->
+	<!--RULE-->
+	<axsl:template match="/ubl:Order" priority="1007" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Order"/>
+		
+		
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cac:BuyerCustomerParty"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R002]- An order MUST contain buyer information</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cac:OrderLine"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R003]- An order MUST contain an order line</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
 
+	<axsl:template match="//cac:OrderLine" priority="1007" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:OrderLine"/>
 
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cac:LineItem"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:LineItem">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R004]- An order MUST contain a line item</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<axsl:template match="//cac:OrderLine/cac:LineItem" priority="1007" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:OrderLine/cac:LineItem"/>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cbc:Quantity"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:Quantity">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R005]- An order line item MUST have a quantity</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cac:Item"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:Ite">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R006]- An order line item MUST have article/item information</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE-->
 	<axsl:template match="//cac:BuyerCustomerParty" priority="1007" mode="M6">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:BuyerCustomerParty"/>
-
-
 	
 		<!--ASSERT -->
 		<axsl:choose>
