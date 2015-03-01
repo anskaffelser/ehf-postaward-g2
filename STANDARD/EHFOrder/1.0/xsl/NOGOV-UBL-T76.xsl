@@ -179,6 +179,29 @@
     
     <!--RULE -->
     
+    <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:date) and (string-length(.) = 10)"/>
+            
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:date) and (string-length(.) = 10)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R001]- A date must be formatted YYYY-MM-DD.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    
     <axsl:template match="//cbc:ProfileID" priority="1001" mode="M7">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:ProfileID"/>
         
