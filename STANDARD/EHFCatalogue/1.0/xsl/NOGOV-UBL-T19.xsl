@@ -242,6 +242,72 @@
         </axsl:choose>
     <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
+    
+    <!--RULE -->
+    
+    <axsl:template match="cac:CatalogueLine" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine"/>
+        
+        
+        <!-- ASSERT -->
+        
+        <axsl:choose>
+            <axsl:when test="cbc:OrderableIndicator"/> 
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                    test="cbc:OrderableIndicator">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R003]- A Catalogue line MUST have an orderable indicator</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+      
+    <!-- ASSERT -->
+    
+    <axsl:choose>
+        <axsl:when test="cac:Item"/> 
+        <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                test="cac:Item">
+                <axsl:attribute name="flag">fatal</axsl:attribute>
+                <axsl:attribute name="location">
+                    <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                </axsl:attribute>
+                <svrl:text>[NOGOV-T19-R004]- A Catalogue line MUST have item/article information</svrl:text>
+            </svrl:failed-assert>
+        </axsl:otherwise>
+    </axsl:choose>
+    <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    
+    <!--RULE-->
+    <axsl:template match="cac:CatalogueLine/cac:Item" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine/cac:Item"/>
+        
+        
+        <!-- ASSERT -->
+        
+        <axsl:choose>
+            <axsl:when test="cbc:Name"/> 
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                    test="cbc:Name">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R005]- A Catalogue item MUST have a name</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    
     <axsl:template match="text()" priority="-1" mode="M6"/>
     <axsl:template match="@*|node()" priority="-2" mode="M6">
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
