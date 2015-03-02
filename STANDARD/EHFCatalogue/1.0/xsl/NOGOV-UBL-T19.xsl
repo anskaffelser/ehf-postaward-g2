@@ -322,7 +322,7 @@
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T10-R006]- A date must be formatted YYYY-MM-DD.</svrl:text>
+                    <svrl:text>[NOGOV-T19-R006]- A date must be formatted YYYY-MM-DD.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
