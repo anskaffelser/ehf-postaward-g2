@@ -536,6 +536,28 @@
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 	
+	<!--RULE -->
+	
+	<axsl:template match="@mimeCode" priority="1001" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="@mimeCode"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(( . = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain' ))"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(( . = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain' ))">
+					<axsl:attribute name="flag">warning</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R021]-Attachment is not a recommended MIMEType.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
 
 	<!--RULE -->
 	
