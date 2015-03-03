@@ -181,17 +181,17 @@
     <axsl:template match="/ubl:OrderResponse" priority="1007" mode="M7">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Order"/>
         
-        
-                <!--ASSERT -->
+         
+        <!--ASSERT -->
         <axsl:choose>
-            <axsl:when test="cac:BuyerCustomerParty"/>
+            <axsl:when test="(cbc:UBLVersionID != '')"/>
             <axsl:otherwise>
-                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
                     <axsl:attribute name="flag">fatal</axsl:attribute>
                     <axsl:attribute name="location">
-                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T76-R004]- An order response MUST contain buyer information</svrl:text>
+                    <svrl:text>[NOGOV-T76-R007]-An order MUST have a syntax identifier.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
@@ -301,6 +301,71 @@
         
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>
+    
+    <!--RULE -->
+    <axsl:template match="//cac:TaxScheme" priority="1012" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxScheme"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:ID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ID">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R008]-Every tax scheme MUST be defined through an identifier.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+   
+    <!--RULE -->
+    <axsl:template match="//cac:Delivery" priority="1012" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Delivery"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:PromisedDeliveryPeriod"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:PromisedDeliveryPeriod">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R004]-Information on promised delivery period must be filled if element Delivery exists.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    
+    <!--RULE -->
+    <axsl:template match="//cac:Item/cac:AdditionalItemProperty" priority="1012" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Item/cac:AdditionalItemProperty"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(cbc:Value != '')"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:Value != '')">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T76-R009]-Value must be filled if additional item property is present.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    
+    
     <!--RULE -->
     
     <axsl:template match="//cbc:ProfileID" priority="1001" mode="M7">

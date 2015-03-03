@@ -188,9 +188,9 @@
 		
 		<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="cac:BuyerCustomerParty"/>
+			<axsl:when test="cac:BuyerCustomerParty/cac:Party"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty/cac:Party">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
@@ -202,40 +202,35 @@
 		
 		<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="cac:OrderLine"/>
+			<axsl:when test="cac:SellerSupplierParty/cac:Party"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:BuyerCustomerParty/cac:Party">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T01-R003]- An order MUST contain an order line</svrl:text>
+					<svrl:text>[NOGOV-T01-R018]- An order MUST contain seller information</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
 		
-		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
-	</axsl:template>
-
-	<axsl:template match="//cac:OrderLine" priority="1007" mode="M6">
-		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:OrderLine"/>
-
-		<!--ASSERT -->
+	<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="cac:LineItem"/>
+			<axsl:when test="(cbc:UBLVersionID != '')"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:LineItem">
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
 					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
-						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T01-R004]- An order MUST contain a line item</svrl:text>
+					<svrl:text>[NOGOV-T01-R012]-An order MUST have a syntax identifier.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
 		
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
+
 	
 	<axsl:template match="//cac:OrderLine/cac:LineItem" priority="1007" mode="M6">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:OrderLine/cac:LineItem"/>
@@ -254,20 +249,7 @@
 			</axsl:otherwise>
 		</axsl:choose>
 		
-		<!--ASSERT -->
-		<axsl:choose>
-			<axsl:when test="cac:Item"/>
-			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:Ite">
-					<axsl:attribute name="flag">fatal</axsl:attribute>
-					<axsl:attribute name="location">
-						<axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
-					</axsl:attribute>
-					<svrl:text>[NOGOV-T01-R006]- An order line item MUST have article/item information</svrl:text>
-				</svrl:failed-assert>
-			</axsl:otherwise>
-		</axsl:choose>
-		
+
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 	
@@ -329,7 +311,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NOGOV-T01-R010]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
+					<svrl:text>[NOGOV-T01-R010]- An organisational number MUST be nine numbers.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -361,7 +343,7 @@
 
 	<!--RULE -->
 	<axsl:template match="//cac:Party/cbc:EndpointID" priority="1000" mode="M6">
-		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:EndpointID"/>
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Party/cbc:EndpointID"/>
 		
 		<!--ASSERT -->
 		<axsl:choose>
@@ -393,7 +375,216 @@
 		
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
+	
+	<!--RULE -->
+	
+	<axsl:template match="//cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:URI !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:URI !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R013]- URI MUST be specified when describing external reference documents.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	
+	
+	<!--RULE -->
+	
+	<axsl:template match="//cac:Contract" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Contract"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:ID !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ID !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R014]- Contract ID MUST be specified when referencing contracts.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	
+	<!--RULE -->
+	
+	<axsl:template match="//cac:PartyTaxScheme" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:PartyTaxScheme"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:CompanyID !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:CompanyID !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R016]- VAT identifier MUST be specified when VAT information is present</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE -->
+	<axsl:template match="//cac:TaxScheme" priority="1012" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxScheme"/>
+		<!--ASSERT -->
+		<axsl:choose>
+			<axsl:when test="cbc:ID"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ID">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R017]-Every tax scheme MUST be defined through an identifier.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE -->
+	
+	<axsl:template match="//cac:Country" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Country"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:IdentificationCode !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:IdentificationCode !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R015]-Identification code MUST be specified when describing a country.</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE -->
 
+	<axsl:template match="//cac:OriginatorCustomerParty" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:OriginatorCustomerParty"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cac:Party !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Party !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R019]-If originator element is present, party must be specified</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	<!--RULE -->
+
+	<axsl:template match="//cac:AccountingCustomerParty" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:AccountingCustomerParty"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cac:Party !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cac:Party !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R020]-If invoicee element is present, party must be specified</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+
+	<!--RULE -->
+	
+	<axsl:template match="//cac:ClassifiedTaxCategory" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:ClassifiedTaxCategory"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:ID !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ID !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R004]-If classified tax category is present, VAT category code must be specified</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	
+	<!--RULE -->
+	
+	<axsl:template match="//cac:CommodityClassification" priority="1002" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:CommodityClassification"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="(cbc:ItemClassificationCode !='')"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:ItemClassificationCode !='')">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R003]-If product classification element is present, classification code must be specified</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		
+		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+	</axsl:template>
+	
+	
 	<axsl:template match="text()" priority="-1" mode="M6"/>
 	<axsl:template match="@*|node()" priority="-2" mode="M6">
 		<axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
