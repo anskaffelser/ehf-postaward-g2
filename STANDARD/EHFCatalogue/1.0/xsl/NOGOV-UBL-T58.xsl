@@ -171,6 +171,27 @@
     <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Norwegian rules for EHF Catalogue response</svrl:text>
     <!--PATTERN UBL-T58-->
    
+    <!--RULE -->
+    
+    <axsl:template match="/ubl:ApplicationResponse" priority="1002" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:ApplicationResponse"/>
+   
+    <!--ASSERT -->
+    <axsl:choose>
+        <axsl:when test="(cbc:UBLVersionID != '')"/>
+        <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
+                <axsl:attribute name="flag">fatal</axsl:attribute>
+                <axsl:attribute name="location">
+                    <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                </axsl:attribute>
+                <svrl:text>[NOGOV-T58-R002]-A catalogue response MUST have a syntax identifier.</svrl:text>
+            </svrl:failed-assert>
+        </axsl:otherwise>
+    </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
    
     <!--RULE -->
     
