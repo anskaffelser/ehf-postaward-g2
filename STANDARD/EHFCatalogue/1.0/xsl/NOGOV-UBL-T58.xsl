@@ -190,6 +190,35 @@
         </axsl:otherwise>
     </axsl:choose>
         
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:SenderParty/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:SenderParty/cbc:EndpointID">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R003]-A catalogue response should have sellers endpoint id.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:ReceiverParty/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:ReceiverParty/cbc:EndpointID">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R004]-A catalogue response should have the receivers endpoint id.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>
    
