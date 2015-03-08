@@ -265,7 +265,7 @@
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T01-R008]-An order MUST have a validity period.</svrl:text>
+                    <svrl:text>[NOGOV-T19-R008]-A cataloge MUST have a validity period.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
@@ -304,7 +304,7 @@
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T01-R009]-An order MUST have a validity start date.</svrl:text>
+                    <svrl:text>[NOGOV-T19-R009]-A catalogue MUST have a validity start date.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
@@ -327,7 +327,7 @@
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T01-R010]-An order MUST have an endpoint ID for receiver.</svrl:text>
+                    <svrl:text>[NOGOV-T19-R010]-A catalogue MUST have an endpoint ID for receiver.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
@@ -350,7 +350,7 @@
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                     </axsl:attribute>
-                    <svrl:text>[NOGOV-T01-R013]-An order should have an endpoint ID for seller.</svrl:text>
+                    <svrl:text>[NOGOV-T19-R013]-A catalogue should have an endpoint ID for seller.</svrl:text>
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
