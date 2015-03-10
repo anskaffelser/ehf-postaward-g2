@@ -359,7 +359,7 @@
     
     <!--RULE -->
     
-    <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M6">
+    <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M7">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
         
         <!--ASSERT -->
@@ -377,7 +377,42 @@
             </axsl:otherwise>
         </axsl:choose>
         
-        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    <axsl:template match="//cac:Party/cbc:EndpointID" priority="1000" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Party/cbc:EndpointID"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="@schemeID = 'NO:ORGNR'"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T16-R010]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>
     
     
