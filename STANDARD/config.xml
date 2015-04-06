@@ -337,7 +337,9 @@
 			<no>EHF pakkseddel, profil pakkseddel</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-DespatchAdvice-2.1.xsd" />
-		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/UBL-T16-BIIRULES.xsl" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/BIIRULES-UBL-T16.xsl" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/OPENPEPPOL-UBL-T16.xsl" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/NOGOV-UBL-T16.xsl" />
 	</validate>
 	
 	<validate 
@@ -348,7 +350,8 @@
 			<no>PEPPOL BIS pakkseddel, profil pakkseddel</no>
 		</name>
 		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-DespatchAdvice-2.1.xsd" />
-		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/UBL-T16-BIIRULES.xsl" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/BIIRULES-UBL-T16.xsl" />
+		<step id="XSL" file="/STANDARD/EHFDespatchAdvice/1.0/xsl/OPENPEPPOL-UBL-T16.xsl" />
 	</validate>	
 	<!-- STOP DESPATCHADVICE -->	
 	<!-- STOP VERSION 1.0 -->
