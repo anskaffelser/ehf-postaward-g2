@@ -16,7 +16,7 @@
                 NOGOV-T14-R005 twice
                 
                 Warnings:
-				EUGEN-T14-R024  
+				None
 	
 
 -->
@@ -42,7 +42,6 @@
 				<cbc:Name>IntegrasjonsPartner testkunde</cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
-				<cbc:ID schemeID="GLN" schemeAgencyID="9">7080003093035</cbc:ID>
 				<cbc:StreetName>Sarpsborg</cbc:StreetName>
 				<cbc:CityName>Sarpsborg</cbc:CityName>
 				<cbc:PostalZone>1710</cbc:PostalZone>

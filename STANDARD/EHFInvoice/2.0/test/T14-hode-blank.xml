@@ -5,7 +5,6 @@
 
                 Errors:
                 EUGEN-T14-R024
-                EUGEN-T14-R030
                 NONAT-T14-R021
 				NONAT-T14-R001
                 NONAT-T14-R006
@@ -39,7 +38,6 @@
 				<cbc:Name/>
 			</cac:PartyName>
 			<cac:PostalAddress>
-				<cbc:ID schemeID="GLN">7080003093035</cbc:ID>
 				<cbc:CityName>Sarpsborg</cbc:CityName>
 				<cbc:PostalZone>1710</cbc:PostalZone>
 				<cac:Country>

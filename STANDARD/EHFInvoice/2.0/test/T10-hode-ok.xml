@@ -10,7 +10,11 @@
                 None
 				
 -->
-<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
 	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
@@ -54,7 +58,8 @@
 				<cac:RegistrationAddress>
 					<cbc:CityName>Sarpsborg</cbc:CityName>
 					<cac:Country>
-						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2"
+							>NO</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:RegistrationAddress>
 			</cac:PartyLegalEntity>
@@ -88,11 +93,13 @@
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>TestKunde</cbc:RegistrationName>
-				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456789</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret"
+					>123456789</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>SARPSBORG</cbc:CityName>
 					<cac:Country>
-						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2"
+							>NO</cbc:IdentificationCode>
 					</cac:Country>
 				</cac:RegistrationAddress>
 			</cac:PartyLegalEntity>
