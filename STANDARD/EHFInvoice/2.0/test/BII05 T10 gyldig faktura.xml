@@ -372,7 +372,7 @@
 				<cbc:ItemClassificationCode listID="CPV">65434567</cbc:ItemClassificationCode>
 			</cac:CommodityClassification>
 			<cac:ClassifiedTaxCategory>
-				<cbc:ID>H</cbc:ID>
+				<cbc:ID schemeID="UNCL5305">H</cbc:ID>
 				<cbc:Percent>15</cbc:Percent>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>

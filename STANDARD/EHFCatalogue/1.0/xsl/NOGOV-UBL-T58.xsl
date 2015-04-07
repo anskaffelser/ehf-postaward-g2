@@ -170,9 +170,151 @@
     <!--SCHEMATRON PATTERNS-->
     <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Norwegian rules for EHF Catalogue response</svrl:text>
     <!--PATTERN UBL-T58-->
-    <!--RULE -->
    
+    <!--RULE -->
     
+    <axsl:template match="/ubl:ApplicationResponse" priority="1002" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:ApplicationResponse"/>
+   
+    <!--ASSERT -->
+    <axsl:choose>
+        <axsl:when test="(cbc:UBLVersionID != '')"/>
+        <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
+                <axsl:attribute name="flag">fatal</axsl:attribute>
+                <axsl:attribute name="location">
+                    <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                </axsl:attribute>
+                <svrl:text>[NOGOV-T58-R002]-A catalogue response MUST have a syntax identifier.</svrl:text>
+            </svrl:failed-assert>
+        </axsl:otherwise>
+    </axsl:choose>
+        
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:SenderParty/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:SenderParty/cbc:EndpointID">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R003]-A catalogue response should have sellers endpoint id.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:ReceiverParty/cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:ReceiverParty/cbc:EndpointID">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R004]-A catalogue response should have the receivers endpoint id.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
+    
+    
+    <!--RULE -->
+    <axsl:template match="cac:ReceiverParty/cbc:EndpointID" priority="1000" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ReceiverParty/cbc:EndpointID"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="@schemeID = 'NO:ORGNR'"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R007]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R008]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    <axsl:template match="cac:SenderParty/cbc:EndpointID" priority="1000" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:SenderParty/cbc:EndpointID"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="@schemeID = 'NO:ORGNR'"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R005]-An endpoint identifier scheme for sender MUST have the value 'NO:ORGNR'.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R006]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+   
+    <!--RULE -->
+    
+    <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M7">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:date) and (string-length(.) = 10)"/>
+            
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:date) and (string-length(.) = 10)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T58-R001]- A date must be formatted YYYY-MM-DD.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+    </axsl:template>
     
     <axsl:template match="//cbc:ProfileID" priority="1001" mode="M7">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:ProfileID"/>

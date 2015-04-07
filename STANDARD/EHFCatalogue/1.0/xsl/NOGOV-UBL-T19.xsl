@@ -240,8 +240,304 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(cbc:UBLVersionID != '')"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R007]-A catalogue MUST have a syntax identifier.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cac:ValidityPeriod"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cac:ValidityPeriod">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R008]-A cataloge MUST have a validity period.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:VersionID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:UBLVersionID)">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R012]-A catalogue should have a catalogue version.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+        
+
+    
+    <!--RULE -->
+    
+    <axsl:template match="cac:ValidityPeriod" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ValidityPeriod"/>
+        
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:StartDate"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:StartDate">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R009]-A catalogue MUST have a validity start date.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    
+    <axsl:template match="cac:ReceiverParty" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ReceiverParty"/>
+        
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:EndpointID">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R010]-A catalogue MUST have an endpoint ID for receiver.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    
+    <axsl:template match="cac:SellerSupplierParty" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:SellerSupplierParty"/>
+        
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:EndpointID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:EndpointID">
+                    <axsl:attribute name="flag">warning</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R013]-A catalogue should have an endpoint ID for seller.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    <axsl:template match="cac:ProviderParty/cbc:EndpointID" priority="1000" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ProviderParty/cbc:EndpointID"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="@schemeID = 'NO:ORGNR'"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R014]-An endpoint identifier scheme for provider MUST have the value 'NO:ORGNR'.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R015]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+
+    
+    <!--RULE -->
+    <axsl:template match="cac:ReceiverParty/cbc:EndpointID" priority="1000" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ReceiverParty/cbc:EndpointID"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="@schemeID = 'NO:ORGNR'"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'NO:ORGNR' ">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R016]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R017]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    
+    <!--RULE -->
+    <axsl:template match="//cac:TaxScheme" priority="1012" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxScheme"/>
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="cbc:ID"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ID">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R011]-Every tax scheme MUST be defined through an identifier.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    
+    <axsl:template match="cac:CatalogueLine" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine"/>
+        
+        
+        <!-- ASSERT -->
+        
+        <axsl:choose>
+            <axsl:when test="cbc:OrderableIndicator"/> 
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                    test="cbc:OrderableIndicator">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R003]- A Catalogue line MUST have an orderable indicator</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+      
+    <!-- ASSERT -->
+    
+    <axsl:choose>
+        <axsl:when test="cac:Item"/> 
+        <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                test="cac:Item">
+                <axsl:attribute name="flag">fatal</axsl:attribute>
+                <axsl:attribute name="location">
+                    <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                </axsl:attribute>
+                <svrl:text>[NOGOV-T19-R004]- A Catalogue line MUST have item/article information</svrl:text>
+            </svrl:failed-assert>
+        </axsl:otherwise>
+    </axsl:choose>
     <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
+    
+    
+    <!--RULE-->
+    <axsl:template match="cac:CatalogueLine/cac:Item" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine/cac:Item"/>
+        
+        
+        <!-- ASSERT -->
+        
+        <axsl:choose>
+            <axsl:when test="cbc:Name"/> 
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                    test="cbc:Name">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R005]- A Catalogue item MUST have a name</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    <!--RULE -->
+    
+    <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <axsl:when test="(string(.) castable as xs:date) and (string-length(.) = 10)"/>
+            
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:date) and (string-length(.) = 10)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T19-R006]- A date must be formatted YYYY-MM-DD.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
+        
+        <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
+    </axsl:template>
+    
+    
     <axsl:template match="text()" priority="-1" mode="M6"/>
     <axsl:template match="@*|node()" priority="-2" mode="M6">
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>

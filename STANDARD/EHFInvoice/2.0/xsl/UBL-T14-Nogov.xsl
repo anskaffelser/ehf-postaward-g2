@@ -515,6 +515,27 @@
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
     
+    
+   <axsl:template match="@mimeCode" priority="1001" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="@mimeCode"/>
+      
+      <!--ASSERT -->
+      
+      <axsl:choose>
+         <axsl:when test="(( . = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain' ))"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(( . = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain' ))">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R020]-Attachment is not a recommended MIMEType.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
    <!--RULE -->
    
    <axsl:template match="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']" priority="1005" mode="M17">
@@ -557,7 +578,27 @@
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
    
+   <!--RULE -->
+   
+   <axsl:template match=" //cac:CreditNoteLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID" priority="1004" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxCategory/cbc:ID"/>
       
+      <!--ASSERT -->
+      
+      <axsl:choose>
+         <axsl:when test="@schemeID = 'UNCL5305'"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'UNCL5305'">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R012]-A tax category identifier MUST have a scheme identifier attribute 'UNCL5305'.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <axsl:apply-templates select="@*|*" mode="M17"/>
+   </axsl:template> 
    
    
    <!--RULE -->

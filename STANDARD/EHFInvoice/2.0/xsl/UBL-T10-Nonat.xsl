@@ -535,7 +535,9 @@
       <axsl:choose>
          <axsl:when test="not(cbc:InvoicedQuantity) or 
                                    not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:InvoicedQuantity) &gt; 0  or 
+                                   number(cbc:LineExtensionAmount) &gt; 0 
+                                   or (cbc:InvoicedQuantity) &gt; 0 
+                                   or 
                                    (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
          round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
          ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
@@ -546,17 +548,19 @@
            (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" 
-             test="not(cbc:InvoicedQuantity) or 
-                                   not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:LineExtensionAmount) &gt; 0  or 
-                                   (not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
-         ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
-         (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or
-          ((cac:Price/cbc:BaseQuantity) and 
-          abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) +
-           ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
-            (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)">
+            	test="not(cbc:InvoicedQuantity) or 
+            	not(cac:Price/cbc:PriceAmount) or 
+            	number(cbc:LineExtensionAmount) &gt; 0 
+            	or (cbc:InvoicedQuantity) &gt; 0 
+            	or 
+            	(not(cac:Price/cbc:BaseQuantity)  and abs(number(cbc:LineExtensionAmount)) = 
+            	round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + 
+            	((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or
+            	((cac:Price/cbc:BaseQuantity) and 
+            	abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) +
+            	((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -571,7 +575,8 @@
       <axsl:choose>
          <axsl:when test="not(cbc:InvoicedQuantity) or 
                                    not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:InvoicedQuantity) &lt;= 0 or
+                                   number(cbc:LineExtensionAmount) &lt; 0 
+                                   or
                                    (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
          round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
@@ -582,17 +587,18 @@
          (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" 
-            test="not(cbc:InvoicedQuantity) or 
-                                   not(cac:Price/cbc:PriceAmount) or 
-                                   number(cbc:LineExtensionAmount) &lt;= 0 or
-                                   (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
-         round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
-         (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
-         (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
-         ((cac:Price/cbc:BaseQuantity) and 
-         number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
-         (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
-         (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)">
+            	test="not(cbc:InvoicedQuantity) or 
+            	not(cac:Price/cbc:PriceAmount) or 
+            	number(cbc:LineExtensionAmount) &lt; 0 
+            	or
+            	(not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
+            	round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
+            	((cac:Price/cbc:BaseQuantity) and 
+            	number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
+            	(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -601,6 +607,44 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
+		
+	<axsl:choose>
+			<axsl:when test="not(cbc:InvoicedQuantity) or 
+				not(cac:Price/cbc:PriceAmount) or 
+				number(cbc:LineExtensionAmount) &gt; 0 
+				or (cbc:InvoicedQuantity) &lt; 0 
+				or 				
+				(not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
+				round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
+				(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
+				(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
+				((cac:Price/cbc:BaseQuantity) and 
+				number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
+				(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
+				(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" 
+					test="not(cbc:InvoicedQuantity) or 
+					not(cac:Price/cbc:PriceAmount) or 
+					number(cbc:LineExtensionAmount) &gt; 0 
+					or (cbc:InvoicedQuantity) &lt; 0 
+					or 				
+					(not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = 
+					round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + 
+					(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - 
+					(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or 
+					((cac:Price/cbc:BaseQuantity) and 
+					number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) +
+					(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) -
+					(round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
 		
 		
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M16"/>
