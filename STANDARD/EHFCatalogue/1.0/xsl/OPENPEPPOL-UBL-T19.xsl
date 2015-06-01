@@ -3,6 +3,7 @@
     the preferred method for meta-stylesheets to use where possible. -->
 
 
+
 <!--PHASES-->
 
 
@@ -184,6 +185,7 @@
          <axsl:when test="@schemeID  = 'UNCL6313'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'UNCL6313'">
+               <axsl:attribute name="id">EUGEN-T19-R053</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -206,6 +208,7 @@
          <axsl:when test="@schemeID  = 'UNCL5305'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID = 'UNCL5305'">
+               <axsl:attribute name="id">EUGEN-T19-R049</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -228,6 +231,7 @@
          <axsl:when test="@listID = 'ISO3166-1:Alpha2'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID = 'ISO3166-1:Alpha2'">
+               <axsl:attribute name="id">EUGEN-T19-R047</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -250,6 +254,7 @@
          <axsl:when test="@schemeID"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID">
+               <axsl:attribute name="id">EUGEN-T19-R043</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -272,6 +277,7 @@
          <axsl:when test="@listID = 'ACTIONCODE:PEPPOL'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID = 'ACTIONCODE:PEPPOL'">
+               <axsl:attribute name="id">EUGEN-T19-R046</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -294,6 +300,7 @@
          <axsl:when test="@listID = 'ACTIONCODE:BII2'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID = 'ACTIONCODE:BII2'">
+               <axsl:attribute name="id">EUGEN-T19-R045</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -316,6 +323,7 @@
          <axsl:when test="@listID = 'GS17009:PEPPOL'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID = 'GS17009:PEPPOL'">
+               <axsl:attribute name="id">EUGEN-T19-R050</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -338,6 +346,7 @@
          <axsl:when test="@schemeID"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID">
+               <axsl:attribute name="id">EUGEN-T19-R044</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -360,6 +369,7 @@
          <axsl:when test="@listID = 'UNCL8273'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID = 'UNCL8273'">
+               <axsl:attribute name="id">EUGEN-T19-R051</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -382,6 +392,7 @@
          <axsl:when test="not(attribute::unitCode) or (attribute::unitCode and attribute::unitCodeListID = 'UNECERec20')"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(attribute::unitCode) or (attribute::unitCode and attribute::unitCodeListID = 'UNECERec20')">
+               <axsl:attribute name="id">EUGEN-T19-R048</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -402,7 +413,7 @@
 
 	<!--RULE -->
 
-   <axsl:template match="cac:Country//cbc:IdentificationCode" priority="1012" mode="M7">
+   <axsl:template match="cac:Country//cbc:IdentificationCode" priority="1011" mode="M7">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:Country//cbc:IdentificationCode"/>
 
 		<!--ASSERT -->
@@ -424,7 +435,7 @@
 
 	<!--RULE -->
 
-   <axsl:template match="@unitCode" priority="1011" mode="M7">
+   <axsl:template match="@unitCode" priority="1010" mode="M7">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="@unitCode"/>
 
 		<!--ASSERT -->
@@ -446,7 +457,7 @@
 
 	<!--RULE -->
 
-   <axsl:template match="cbc:UNDGCode" priority="1010" mode="M7">
+   <axsl:template match="cbc:UNDGCode" priority="1009" mode="M7">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:UNDGCode"/>
 
 		<!--ASSERT -->
@@ -460,28 +471,6 @@
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
                <svrl:text>[OP-T19-R003]-UNDG MUST be coded according to the UNCL 8273 code list</svrl:text>
-            </svrl:failed-assert>
-         </axsl:otherwise>
-      </axsl:choose>
-      <axsl:apply-templates select="@*|*" mode="M7"/>
-   </axsl:template>
-
-	<!--RULE -->
-
-   <axsl:template match="cbc:TransportHandlingUnitTypeCode" priority="1009" mode="M7">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:TransportHandlingUnitTypeCode"/>
-
-		<!--ASSERT -->
-
-      <axsl:choose>
-         <axsl:when test="( ( not(contains(normalize-space(.),' ')) and contains( ' 1A 1B 1D 1G 1W 2C 3A 3H 43 4A 4B 4C 4D 4F 4G 4H 5H 5L 5M 6H 6P AA AB AC AD AE AF AG AH AI AJ AM AP AT AV BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO BO BP BQ BQ BR BS BT BU BV BV BW BX BY BZ CA CB CC CD CE CF CG CH CI CJ CK CL CM CN CO CP CQ CR CS CT CU CV CW CX CY CZ DA DB DC DG DH DI DJ DK DL DM DN DP DR DS DT DU DV DW DX DY EC ED EE EF EG EH EI EN FC FD FI FL FO FP FR FT FW FX GB GI GR GU GZ HA HB HC HG HR IA IB IC ID IE IF IG IH IK IL IN IZ JC JG JR JT JY KG LG LT LV LZ MB MC MR MS MT MW MX NA NE NF NG NS NT NU NV OA OB OC OD OE OF OK PA PB PC PD PE PF PG PH PI PJ PK PL PN PO PR PT PU PV PX PY PZ QA QB QC QD QF QG QH QJ QK QL QM QN QP QQ QR QS RD RG RJ RK RL RO RT RZ SA SB SC SD SE SH SI SK SL SM SO SP SS ST SU SV SW SX SY SZ TB TC TD TI TK TL TN TO TR TS TU TV TY TZ UC VA VG VI VK VL VO VP VQ VN VR VY WA WB WC WD WF WG WH WJ WK WL WM WN WP WQ WR WS WT WU WV WW WX WY WZ XA XB XC XD XF XG XH XJ XK YA YB YC YD YF YG YH YJ YK YL YM YN YP YQ YR YS YT YV YW YX YY YZ ZA ZB ZC ZD ZF ZG ZH ZJ ZK ZL ZM ZN ZP ZQ ZR ZS ZT ZU ZV ZW ZX ZY ZZ ',concat(' ',normalize-space(.),' ') ) ) )"/>
-         <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="( ( not(contains(normalize-space(.),' ')) and contains( ' 1A 1B 1D 1G 1W 2C 3A 3H 43 4A 4B 4C 4D 4F 4G 4H 5H 5L 5M 6H 6P AA AB AC AD AE AF AG AH AI AJ AM AP AT AV BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO BO BP BQ BQ BR BS BT BU BV BV BW BX BY BZ CA CB CC CD CE CF CG CH CI CJ CK CL CM CN CO CP CQ CR CS CT CU CV CW CX CY CZ DA DB DC DG DH DI DJ DK DL DM DN DP DR DS DT DU DV DW DX DY EC ED EE EF EG EH EI EN FC FD FI FL FO FP FR FT FW FX GB GI GR GU GZ HA HB HC HG HR IA IB IC ID IE IF IG IH IK IL IN IZ JC JG JR JT JY KG LG LT LV LZ MB MC MR MS MT MW MX NA NE NF NG NS NT NU NV OA OB OC OD OE OF OK PA PB PC PD PE PF PG PH PI PJ PK PL PN PO PR PT PU PV PX PY PZ QA QB QC QD QF QG QH QJ QK QL QM QN QP QQ QR QS RD RG RJ RK RL RO RT RZ SA SB SC SD SE SH SI SK SL SM SO SP SS ST SU SV SW SX SY SZ TB TC TD TI TK TL TN TO TR TS TU TV TY TZ UC VA VG VI VK VL VO VP VQ VN VR VY WA WB WC WD WF WG WH WJ WK WL WM WN WP WQ WR WS WT WU WV WW WX WY WZ XA XB XC XD XF XG XH XJ XK YA YB YC YD YF YG YH YJ YK YL YM YN YP YQ YR YS YT YV YW YX YY YZ ZA ZB ZC ZD ZF ZG ZH ZJ ZK ZL ZM ZN ZP ZQ ZR ZS ZT ZU ZV ZW ZX ZY ZZ ',concat(' ',normalize-space(.),' ') ) ) )">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
-               <axsl:attribute name="location">
-                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
-               </axsl:attribute>
-               <svrl:text>[OP-T19-R004]-A transport handling unit type MUST be coded according to the UN/ECE Recommendation 21</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -600,8 +589,8 @@
 
 	<!--RULE -->
 
-   <axsl:template match="cbc:OrderableUnitCode" priority="1003" mode="M7">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:OrderableUnitCode"/>
+   <axsl:template match="cbc:OrderableUnit" priority="1003" mode="M7">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:OrderableUnit"/>
 
 		<!--ASSERT -->
 
@@ -613,7 +602,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[OP-T19-R010]-Orderable unit code MUST be coded according to the UN/ECE Recommendation 20</svrl:text>
+               <svrl:text>[OP-T19-R010]-Orderable unit MUST be coded according to the UN/ECE Recommendation 20</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
