@@ -179,7 +179,7 @@
       
       		<!--ASSERT -->
 		<axsl:choose>
-			<axsl:when test="not(count(//*[not(text())]) &gt; 0)"/>
+		   <axsl:when test="not(count(//*[not(node())]) &gt; 0)"/>
 			<axsl:otherwise>
 				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(count(//*[not(text())]) &gt; 0)">
 					<axsl:attribute name="flag">warning</axsl:attribute>
