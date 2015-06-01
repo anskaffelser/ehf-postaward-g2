@@ -3,7 +3,6 @@
     the preferred method for meta-stylesheets to use where possible. -->
 
 
-
 <!--PHASES-->
 
 
@@ -185,7 +184,6 @@
          <axsl:when test="@schemeID"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID">
-               <axsl:attribute name="id">EUGEN-T76-R001</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -208,7 +206,6 @@
          <axsl:when test="@listID='UNCL1225'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID='UNCL1225'">
-               <axsl:attribute name="id">EUGEN-T76-R004</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -231,7 +228,6 @@
          <axsl:when test="@schemeID"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@schemeID">
-               <axsl:attribute name="id">EUGEN-T76-R002</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -254,7 +250,6 @@
          <axsl:when test="@listID='UNCL1225'"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID='UNCL1225'">
-               <axsl:attribute name="id">EUGEN-T76-R003</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
@@ -358,7 +353,7 @@
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
-      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()"  mode="M7"/>
    </axsl:template>
 
 	<!--RULE -->
