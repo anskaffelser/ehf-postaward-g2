@@ -3,7 +3,6 @@
     the preferred method for meta-stylesheets to use where possible. -->
 
 
-
 <!--PHASES-->
 
 
@@ -724,9 +723,9 @@
 		<!--ASSERT -->
 
       <axsl:choose>
-         <axsl:when test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (number(cbc:TaxAmount - 1) &lt; number(cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100))) and (number(cbc:TaxAmount + 1) &gt; number(cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100)))) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)"/>
+         <axsl:when test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (cbc:TaxAmount = round((cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100)) *10 * 10) div 100)) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)"/>
          <axsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (number(cbc:TaxAmount - 1) &lt; number(cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100))) and (number(cbc:TaxAmount + 1) &gt; number(cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100)))) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (cbc:TaxAmount = round((cbc:TaxableAmount * (cac:TaxCategory/cbc:Percent div 100)) *10 * 10) div 100)) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)">
                <axsl:attribute name="id">EUGEN-T14-R042</axsl:attribute>
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
