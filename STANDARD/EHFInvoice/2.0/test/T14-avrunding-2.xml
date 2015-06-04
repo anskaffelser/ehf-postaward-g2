@@ -6,7 +6,7 @@
                 Errors:
                 NONAT-T14-R006
 				        NOGOV-T10-R008
-				        NOGOV-T14-R013 twice
+				        NOGOV-T14-R013 2 times
 
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
+
+    <package>EHF Catalogue 1.0.2</package>
+	
+	<!-- Catalogue -->
+    <configuration>
+        <identifier>ehf-01-catalogue-1.0</identifier>
+        <title>EHF Catalogue 1.0 (Profile 01)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</customizationId>
+        <inherit>ubl-catalogue-2.1</inherit>
+        <file path="xsl/NOGOV-UBL-T19.xsl" />
+        <file path="xsl/BIIRULES-UBL-T19.xsl" />
+        <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
+    </configuration>
+
+    <!-- Catalogue response -->
+    <configuration>
+        <identifier>ehf-01-catalogueresponse-1.0</identifier>
+        <title>EHF Catalogue response 1.0 (Profile 01)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</customizationId>
+        <inherit>ubl-applicationresponse-2.1</inherit>
+        <file path="xsl/NOGOV-UBL-T58.xsl" />
+        <file path="xsl/BIIRULES-UBL-T58.xsl" />
+        <file path="xsl/OPENPEPPOL-UBL-T58.xsl" />
+    </configuration>
+
+</configurations>
