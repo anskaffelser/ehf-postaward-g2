@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
 
-    <package>EHF Ordering 1.0.2</package>
+    <package>EHF Ordering 1.0.3</package>
 
     <!-- Order -->
     <configuration>
