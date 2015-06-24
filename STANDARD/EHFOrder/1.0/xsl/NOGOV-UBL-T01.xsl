@@ -606,6 +606,29 @@
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
 	</axsl:template>
 	
+	<!--RULE -->
+	
+	<axsl:template match="//cbc:OrderTypeCode" priority="1003" mode="M6">
+		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:OrderTypeCode"/>
+		
+		<!--ASSERT -->
+		
+		<axsl:choose>
+			<axsl:when test="@listID='UNCL1001' or @listID='UNCLD1001'"/>
+			<axsl:otherwise>
+				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="@listID='UNCL1001' or @listID='UNCLD1001'">
+					<axsl:attribute name="id">NOGOV-T01-R022</axsl:attribute>
+					<axsl:attribute name="flag">fatal</axsl:attribute>
+					<axsl:attribute name="location">
+						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
+					</axsl:attribute>
+					<svrl:text>[NOGOV-T01-R022]-An order type code MUST have a list identifier attribute “UNCL1001”</svrl:text>
+				</svrl:failed-assert>
+			</axsl:otherwise>
+		</axsl:choose>
+		<axsl:apply-templates select="@*|*" mode="M6"/>
+	</axsl:template>
+	
 	
 	<axsl:template match="text()" priority="-1" mode="M6"/>
 	<axsl:template match="@*|node()" priority="-2" mode="M6">
