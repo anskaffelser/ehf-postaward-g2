@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
 
     <package>EHF Ordering 1.0.3</package>
 
     <!-- Order -->
     <configuration>
-        <identifier>ehf-28-order-1.0</identifier>
+        <identifier>ehf-t01-28-1.0</identifier>
         <title>EHF Order 1.0 (Profile 28)</title>
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordre:ver1.0</customizationId>
@@ -17,7 +17,7 @@
 
     <!-- Order response -->
     <configuration>
-        <identifier>ehf-28-orderresponse-1.0</identifier>
+        <identifier>ehf-t76-28-1.0</identifier>
         <title>EHF Order response 1.0 (Profile 28)</title>
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0</customizationId>
@@ -27,4 +27,4 @@
         <file path="xsl/OPENPEPPOL-UBL-T76.xsl" />
     </configuration>
 
-</configurations>
+</buildConfigurations>

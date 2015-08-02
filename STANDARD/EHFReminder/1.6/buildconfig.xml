@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
 
     <package>EHF Reminder 1.1.0</package>
 	
@@ -7,7 +7,7 @@
 
     <!-- Reminder -->
     <configuration>
-        <identifier>ehf-xy-reminder-1.0</identifier>
+        <identifier>ehf-t17-xy-1.0</identifier>
         <title>EHF Reminder 1.0 (Profile XY)</title>
         <profileId>urn:www.cenbii.eu:profile:biixy:ver1.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:purring:ver1</customizationId>
@@ -15,4 +15,4 @@
         <file path="xsl/UBL-T17-Nonat.xsl" />
     </configuration>
 
-</configurations>
+</buildConfigurations>

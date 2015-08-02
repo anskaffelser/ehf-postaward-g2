@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator" build="20150415">
 
     <package>EHF Catalogue 1.0.3</package>
 	
 	<!-- Catalogue -->
     <configuration>
-        <identifier>ehf-01-catalogue-1.0</identifier>
+        <identifier>ehf-t19-01-1.0</identifier>
         <title>EHF Catalogue 1.0 (Profile 01)</title>
         <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</customizationId>
@@ -17,7 +17,7 @@
 
     <!-- Catalogue response -->
     <configuration>
-        <identifier>ehf-01-catalogueresponse-1.0</identifier>
+        <identifier>ehf-t58-01-1.0</identifier>
         <title>EHF Catalogue response 1.0 (Profile 01)</title>
         <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</customizationId>
@@ -27,4 +27,4 @@
         <file path="xsl/OPENPEPPOL-UBL-T58.xsl" />
     </configuration>
 
-</configurations>
+</buildConfigurations>
