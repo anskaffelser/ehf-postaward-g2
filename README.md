@@ -1,3 +1,5 @@
+**The validator application belonging to this project will be abandoned October 1st, 2015. Make sure to migrate to the [new validator](https://github.com/difi/vefa-validator).**
+
 This repository contains the configuration files for the [VEFA validator](http://vefa.difi.no) which is being developed by [Difi](http://www.difi.no).
 
 The validator consists of two Github projects:
