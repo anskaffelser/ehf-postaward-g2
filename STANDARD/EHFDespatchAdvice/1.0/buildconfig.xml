@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <package>EHF Despatch Advice 1.0.1</package>
+
+    <!-- Despatch advice -->
+    <configuration>
+        <identifier>ehf-t16-30-1.0</identifier>
+        <title>EHF Despatch advise 1.0 (Profile 30)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii30:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0:extended:urn:www.difi.no:ehf:pakkseddel:ver1.0</customizationId>
+        <inherit>ubl-despatchadvice-2.1</inherit>
+        <file path="xsl/NOGOV-UBL-T16.xsl" />
+        <file path="xsl/BIIRULES-UBL-T16.xsl" />
+        <file path="xsl/OPENPEPPOL-UBL-T16.xsl" />
+    </configuration>
+
+</buildConfigurations>
