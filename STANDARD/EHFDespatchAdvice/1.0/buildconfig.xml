@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <package>EHF Despatch Advice 1.0.2</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-despatch-advice-1.0.2/">EHF Despatch Advice 1.0.2</package>
 
     <!-- Despatch advice -->
     <configuration>

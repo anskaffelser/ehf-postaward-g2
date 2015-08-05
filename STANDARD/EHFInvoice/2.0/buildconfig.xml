@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0" build="20150415">
 
-    <package>EHF Invoice and Creditnote 2.0.5</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.5/">EHF Invoice and Creditnote 2.0.5</package>
 	
 	<testfolder>test</testfolder>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <package>EHF Reminder 1.1.0</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-reminder-1.1.0/">EHF Reminder 1.1.0</package>
 	
 	<testfiles>test</testfiles>
 
