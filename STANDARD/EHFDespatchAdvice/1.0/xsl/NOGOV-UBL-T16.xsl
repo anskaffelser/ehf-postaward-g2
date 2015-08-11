@@ -214,6 +214,21 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
+        
+        <!--ASSERT -->
+        <axsl:choose>
+            <!--check that node is not empty, or only contains comments-->
+            <axsl:when test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"/>
+            <axsl:otherwise>
+                <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)">
+                    <axsl:attribute name="flag">fatal</axsl:attribute>
+                    <axsl:attribute name="location">
+                        <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                    </axsl:attribute>
+                    <svrl:text>[NOGOV-T16-R011]-A despatch advice MUST not contain empty elements.</svrl:text>
+                </svrl:failed-assert>
+            </axsl:otherwise>
+        </axsl:choose>
 
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>

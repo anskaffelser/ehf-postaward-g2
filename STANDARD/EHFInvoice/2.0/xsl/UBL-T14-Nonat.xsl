@@ -179,14 +179,15 @@
       
       		<!--ASSERT -->
 		<axsl:choose>
-		   <axsl:when test="not(count(//*[not(node())]) &gt; 0)"/>
+		   <!--check that node is not empty, or only contains comments-->
+		   <axsl:when test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"/>
 			<axsl:otherwise>
-				<svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(count(//*[not(text())]) &gt; 0)">
-					<axsl:attribute name="flag">warning</axsl:attribute>
+			   <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)">
+					<axsl:attribute name="flag">fatal</axsl:attribute>
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[NONAT-T14-R023]-A credit note SHOULD not contain empty elements.</svrl:text>
+					<svrl:text>[NONAT-T14-R023]-A credit note MUST not contain empty elements.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
