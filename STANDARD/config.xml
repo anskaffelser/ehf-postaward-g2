@@ -287,6 +287,18 @@
 	</validate>
 	
 	<validate 
+		id="urn:www.cenbii.eu:profile:bii03:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol03a:ver2.0" 		
+		version="1.0">
+		<name>
+			<en>PEPPOL BIS Order, International actors</en>
+			<no>PEPPOL BIS Ordre, utenlandske aktører</no>
+		</name>
+		<step id="XSD" file="/STANDARD/common/xsd/UBL-2.1/xsd/maindoc/UBL-Order-2.1.xsd" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/BIIRULES-UBL-T01.xsl" />
+		<step id="XSL" file="/STANDARD/EHFOrder/1.0/xsl/OPENPEPPOL-UBL-T01.xsl" />
+	</validate>
+
+	<validate 
 		id="urn:www.cenbii.eu:profile:bii28:ver2.0#urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0" 		
 		version="1.0">
 		<name>
