@@ -752,10 +752,10 @@
 
 		    <!--ASSERT -->
       <xsl:choose>
-         <xsl:when test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (xs:decimal((cbc:TaxAmount)) = round((xs:decimal(cbc:TaxableAmount) * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100)) *10 * 10) div 100)) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)"/>
+         <xsl:when test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (xs:decimal(cbc:TaxAmount - 1) &lt; xs:decimal(cbc:TaxableAmount * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100))) and (xs:decimal(cbc:TaxAmount + 1) &gt; xs:decimal(cbc:TaxableAmount * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100)))) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (xs:decimal((cbc:TaxAmount)) = round((xs:decimal(cbc:TaxableAmount) * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100)) *10 * 10) div 100)) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)">
+                                test="((cbc:TaxableAmount) and (cac:TaxCategory/cbc:Percent) and (xs:decimal(cbc:TaxAmount - 1) &lt; xs:decimal(cbc:TaxableAmount * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100))) and (xs:decimal(cbc:TaxAmount + 1) &gt; xs:decimal(cbc:TaxableAmount * (xs:decimal(cac:TaxCategory/cbc:Percent) div 100)))) or not(cac:TaxCategory/cbc:Percent) or not(cbc:TaxableAmount)">
                <xsl:attribute name="id">EUGEN-T14-R042</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
