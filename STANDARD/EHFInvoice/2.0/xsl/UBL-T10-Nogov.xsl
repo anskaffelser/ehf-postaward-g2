@@ -285,11 +285,11 @@
          <axsl:when test="(matches(.,'[A-Z][A-Z]')= true()) and (substring(.,3) castable as xs:integer)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(matches(.,'[A-Z][A-Z]')= true()) and (substring(.,3) castable as xs:integer)">
-               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R033]-IBAN numbers MUST be Alpha-2 country code, followed by two check digits and then the BBAN. Only numbers and upper case literals A-Z is allowed.</svrl:text>
+               <svrl:text>[NOGOV-T10-R033]- IBAN number is not for a norwegain bank account</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>   
