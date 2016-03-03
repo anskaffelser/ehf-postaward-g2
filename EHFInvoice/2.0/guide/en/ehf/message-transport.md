@@ -1,0 +1,8 @@
+# Message Transport
+
+Open PEPPOL Transport Infrastructure will provide an efficient use and transport of the EHF formats.
+The objective is to make it easy for parties in different countries to do cross-border trade. Experience shows that it is easy to implement electronic  messaging in Norway, because most of the service providers use standard processes.
+
+It must be noted that every document scheduled for this infrastructure must be validated with no fatal errors by Difi’s own validation service. This is likely to be done by the document issuer or by the service provider on behalf of the document issuer.
+
+According to circular [P-10/2012](http://www.regjeringen.no/nb/dep/fad/dok/rundskriv/2012/digitaliseringsrundskrivet.html?id=706462) FAD recommends all central government agencies to use this transport infrastructure.

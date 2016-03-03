@@ -1,0 +1,16 @@
+= Leverandørens MVA-nummer
+
+Leverandørens MVA nummer angis  i elementet Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID og
+er opprinnelig et valgfritt felt, men i følge EU COUNCIL DIRECTIVE 2001/115/ må elementet sendes dersom faktura eller kreditnota har en MVA total. Det betyr i praksis at feltet nesten alltid må sendes. For virksomheter registrert i Norge er det organisasjonsnr. etterfulgt av bokstavene MVA (123456789MVA) som skal sendes. Det anbefales bruk av NO som prefiks ved fakturering til utlandet.
+
+Eksempel:
+
+[source,xml]
+----
+<cac:PartyTaxScheme>
+	<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
+	<cac:TaxScheme>
+		<cbc:ID>VAT</cbc:ID>
+	</cac:TaxScheme>
+</cac:PartyTaxScheme>
+----

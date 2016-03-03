@@ -1,0 +1,38 @@
+# Accounting Information
+
+If the customer wants to automatically post the costs, the accounting information must be transferred to the supplier before or with the order . The supplier should then return the accounting information on the invoice line level.
+
+Example:
+[source,xml]
+----
+<cbc:AccountingCost>Prosjekt kostnadskode 123</cbc:AccountingCost>
+----
+
+The accounting cost element is just a simple text element.  Posting in accounts payable and general ledger often requires several «dimensions».  A structured solution regarding content in the accounting cost string has been demanded from a number of stakeholders.
+
+Below you will a proposal regarding content in the account cost string.  The structure of the string will be as follows:
+
+* Format-ID.  Fixed text indicating which Chart of Accounts is used. (NS4102 = Norwegain standard)
+* Fieldname. Up to 7 fields may be used:
+** Konto (Account)
+** Avd (Department)
+** Prod (Product)
+** Prosj (Project)
+** MVAkode (VAT code)
+** Dim6
+** Dim7
+* Value
+* Separator regarding fieldname and value:  Use the  ‘=’ character
+* Separator regarding fields: Use the ‘;’ character
+
+Content in general:
+<Kontoplan>;Konto=<Accountno>;Avd=<Department>;Prod=<Product>;Prosj=<Project>;MVAkode=<VAT code in GL>;Dim6=<Free to use as needed>;Dim7=<Free to use as needed>
+
+Chart of Accounts must always be the first element in the string.  No requirements regarding sequence of the other elements.  If norwegian standard Chart of Accounts is used by the invoice receiver, then NS4102 must be the leftmost content of the account cost string.  For receivers using standard agricultural Chart of Accounts, version 1, the text ‘Landbruk_kontostreng_v01’ must the leftmost content of the accounting cost string.
+Any other posting requirements than account number, department, product, project and VAT code, may be implemented by using the Dim6 and Dim7 fields.  In agricultural context there is a need for a field called ‘driftsgreinkode’.  Dim6 may be used in this case.
+
+Example:
+[source,xml]
+----
+<cbc:AccountingCost>NS4102;Konto=4010;Avd=25;Prod=5421;Prosj=4098;MVAkode=1</cbc:AccountingCost>
+----

@@ -1,0 +1,13 @@
+= Use of Party Tax Scheme for Accounting Supplier Party
+
+PartyTaxScheme under AccountingSupplierParty is an optional  element, but according to EU COUNCIL DIRECTIVE 2001/115/ the PartyTaxScheme must be specified if the invoice or the credit note have a VAT total. That means that the element almost always has to be specified. The specification should be the supplier party’s organization number followed by the letters MVA, like this:
+
+[source,xml]
+----
+<cac:PartyTaxScheme>
+	<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
+	<cac:TaxScheme>
+		<cbc:ID>VAT</cbc:ID>
+	</cac:TaxScheme>
+</cac:PartyTaxScheme>
+----

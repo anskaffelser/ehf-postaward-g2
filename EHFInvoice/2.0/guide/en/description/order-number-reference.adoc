@@ -1,0 +1,18 @@
+= Order/Order Number/Order Reference
+
+The customer will issue an order with a unique order number. This unique customer order number must be supplied as the order reference on the invoice.
+
+If the order reference is specified on the header level (OrderReference), the assumption is that the invoice is based on one order only. If order reference is stated at header level, the order reference element on line level is used to state the order line numbers.
+
+Example:
+[source,xml]
+----
+<cac:OrderReference>
+	<cbc:ID>123456</cbc:ID>
+</cac:OrderReference>
+----
+
+If the invoice is based on more than one order, the order number should be concatenated with the order line number on each invoice line in this way “order number##order line number”. Example:
+The exact syntax should be agreed upon by the two parties.
+
+If reference numbers other than order- or contract reference (see chapter 6.8) is needed, the additional document references should be used (see chapter 6.11)

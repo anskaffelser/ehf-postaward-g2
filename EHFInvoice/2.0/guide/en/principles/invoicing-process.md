@@ -1,0 +1,33 @@
+# The Invoicing Process
+
+The invoicing process  includes issuing and sending the Invoice and the Credit note from the Supplier to the Customer and the reception  and handling of the same at the customer’s site.
+
+The invoicing process is shown in this work flow:
+1. A Supplier issues and sends an EHF Invoice to a Customer. The invoice refers to one or more  orders and a specification of delivered goods and services.
+An invoice may also refer to a contract or a frame agreement. The invoice may specify articles (goods and services) with article number or article description.  
+1. The Customer receives the invoice and processes it in the invoice control system leading to one of the following results:
+  1. The Customer fully approves the invoice, posts it in the accounting system and passes it on to be paid.
+  1. The Customer completely rejects the invoice, contacts the Supplier and requests a Credit note.
+  1. The Customer disputes parts of the invoice, contacts the Supplier and requests a Credit note and a new Invoice.
+
+The diagram below shows the invoicing process with the use of EHF invoice messages. This process is based on the profile 5 in CENBII (BII05 - Billing), which assumes that both the invoice and the credit note are exchanged electronically. The profile also includes the message type «Corrective invoice», but this is not used in Norway. If the customer disputes the invoice, the supplier must issue a credit note and a new invoice.
+
+![The invoicing process](../images/invoicing-process.png "The invoicing process")
+
+## Exception Handling, Validation by the Issuer
+
+An EHF Invoice or EHF Credit note should be validated by the issuer before submitted to the transport infrastructure. The validation process is described in chapter 8.  Validation may be performed at several stages and by several services:  
+
+1.	In the ERP-system.  Validation is included in the process that creates the invoice/credit note document.  If validation fails the document will not be created. The information the document is based on must be modified and the creation process rerun.  
+1.	In the access point. The service provider offers to validate documents on behalf of the client. If the validation fails the document is returned to the client and not forwarded into the infrastructure. The issuer has in that case 2 options:
+  1.	If the document is not posted in the issuing accounting system, it may be modified and resubmitted.
+  1.	If the document is posted in the issuing accounting system, it cannot be modified. Instead a credit note must be posted (internally) and not submitted. After modifying the data for the invoice a new invoice may be issued.
+
+## Exception Handling, Validation by the Receiver
+
+Some receivers want to validate incoming documents even though the documents should have been validated before they were submitted to the transport infrastructure. The following scenarios may arise:
+
+1. The document fails to validate:
+  1. Due to the use of different versions of the EHF formats (cf. chap. 2.1.2), the receiver must process the document manually.
+  1. Other reasons. The received document is discarded (not processed).The receiver sends a «Message Level Response» to the supplier and requests a new, correct document.
+1. The document validates correctly, but the receiver disputes all or parts of the contents. The receiver informs the sender manually about the situation.  The sender issues a  credit note and may issue a new invoice.

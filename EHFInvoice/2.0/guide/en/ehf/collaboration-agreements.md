@@ -1,0 +1,5 @@
+# Use of Collaboration Agreements
+
+The combination of the ELMA registration and the implementation guides referred to in that context eliminates the need for any formal collaboration agreement between the sender and the receiver.  The  ELMA registration verifies that an actor has declared the ability and the commitment to receive business documents composed according to the specific implementation guide, and any party is free to send the business document to this actor.
+
+Exchanging Catalogue and Order requires no registration in ELMA, and actors are advised  to include the use of electronic messages in the purchase contract or to supply an [collaboration agreement](http://anskaffelser.no/e-handel/ehandelsplatform/avtaler-og-priser/samhandlingsavtale) as an attachment, in order to link the electronic collaboration with the mercantile regulations and thus achieve a regularly revision of the electronic process.

@@ -1,0 +1,34 @@
+= Definitions
+
+Supplier::
+Person or company supplying goods or services on own  or someone else’s behalf.
+
+Seller::
+Person or organisation with the necessary authority to sign a contract and transfer the ownership of a product or service.
+
+Customer::
+Person or organisation acquiring the ownership of a product or a service against agreed price and payment terms.
+
+Buyer::
+Person or organisation acquiring the ownership of a product or a service for an agreed price and payment terms.
+
+Invoice::
+A commercial document confirming a sale between a seller and a buyer. The invoice is issued by the seller and the buyer has to pay the claim.
+
+Electronic invoice::
+An invoice transferred electronically from the issuer to the receiver. The invoice is imported into and processed by the receiver's computerized accounting system.
+
+Invoice issuer::
+Person or organisation that issues an invoice.
+
+Invoice receiver::
+Person or organisation that receives an invoice.
+
+Payment receiver::
+Person or organisation that receives the payment.
+
+Credit note::
+A commercial document cancelling all or part of an invoice already issued. The Credit note must have a distinct reference to the originating invoice.
+
+Electronic Credit note::
+A credit note transferred electronically from the issuer to the receiver. The credit note is imported into and processed by the receiver's computerized accounting system.

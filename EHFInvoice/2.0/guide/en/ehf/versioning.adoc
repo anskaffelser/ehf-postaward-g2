@@ -1,0 +1,18 @@
+= Versioning
+
+Difi claims the right to exchange the current format with a new one as and when needed. If so, Difi will inform the public via the web site and their registered users via e-mail.
+
+Difi manages the formats in this way:
+
+Main Version::
+A new main version will be announced at least 5 months prior to release. When a main version is released, there will be at least a 12 months implementation period before the new version is made mandatory. +
++
+Difi intends to relate every main version to the regulations concerning IT standards in the public sector.
+
+Sub Version::
+A new sub version will be announced at least 3 months prior to release and is made mandatory 5 months after release. +
++
+All sub versions must be backwards compatible. 2 months after the new sub version has become mandatory, the support (validation service and implementation guide) is ceased for preceding versions.
+
+Revision::
+A revision is in principle a result of bug fixing the latest sub version, and will be announced at release time and should be implemented without further delay.

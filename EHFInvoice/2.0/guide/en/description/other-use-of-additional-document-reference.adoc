@@ -1,0 +1,34 @@
+= Other Use of Additional Document Reference
+
+The need to distribute information not included in the EHF format arises from time to time. To satisfy this need, the element AdditionalDocumentReference is used. As mentioned above, this element can be repeated multiple times. Examples of information to go into this element are packing lists and the supplier’s order number.
+Important to notice, there is no code list for this element, and the interactive parties must agree on syntaxes and semantics.
+
+Example:
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+	<cbc:ID>Doc1</cbc:ID>
+	<cbc:DocumentType>Timesheet</cbc:DocumentType>
+	<cac:Attachment>
+		<cac:ExternalReference>
+			<cbc:URI>http://www.suppliersite.eu/sheet001.html</cbc:URI>
+		</cac:ExternalReference>
+	</cac:Attachment>
+</cac:AdditionalDocumentReference>
+<cac:AdditionalDocumentReference>
+	<cbc:ID>Doc2</cbc:ID>
+	<cbc:DocumentType>Drawing</cbc:DocumentType>
+	<cac:Attachment>
+		<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">mimecode</cbc:EmbeddedDocumentBinaryObject>
+	</cac:Attachment>
+</cac:AdditionalDocumentReference>
+----
+
+Example, referencing a subscription:
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+	<cbc:ID>1442316</cbc:ID>
+	<cbc:DocumentType>Abonnement</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+----

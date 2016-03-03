@@ -1,0 +1,2 @@
+* [English](en)
+* [Norsk](no)

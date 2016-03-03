@@ -1,0 +1,34 @@
+= Fakturering av forbrukere (B2C)
+
+Fra og med versjon 2.0 er EHF Faktura tilrettelagt for å støtte faktura til forbruker. Dette innebærer at fakturautstedere kan benytte formatet overfor både bedriftskunder og forbrukere. Formidling av faktura til forbruker forventes å skje via nettbank eller tilsvarende tjenester som sikker digital post, under forutsetning av at det er inngått avtale om en slik tjeneste.
+
+Referanse til en elektronisk B2C-faktura overføres som Additional DocumentReference hvor DocumentType skal settes til «elektroniskB2Cfaktura».  Ved bruk av sikker digital post, skal fødselsnummer angis i ID elementet. Merk at det kun er offentlige organ som har tilgang til Kontakt- og reservasjonsregisteret.
+
+Angivelse av organisasjonsnummer for kjøper kreves ikke oppgitt når elektroniskB2Cfaktura er oppgitt.
+
+Eksempel:
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+	<cbc:ID>147987</cbc:ID>
+	<cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+----
+
+Overfor forbrukermarkedet er Avtalegiro utbredt som betalingsmåte.
+
+Eksempel, elektronisk faktura B2C med Avtalegiro: +
+PaymentMeansCode: 3 (Automated clearing house debit)
+
+[source,xml]
+----
+<cac:PaymentMeans>
+  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode>
+  <cbc:PaymentDueDate>2014-07-25</cbc:PaymentDueDate>
+  <cbc:PaymentID>0265590215686</cbc:PaymentID>
+  <cac:PayeeFinancialAccount>
+    <cbc:ID schemeID="BBAN">51401099999</cbc:ID>
+  </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----

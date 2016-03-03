@@ -1,0 +1,14 @@
+= Contract Number
+
+To reference or match an invoice to a signed purchase contract, the contract number could be specified like this:
+
+[source,xml]
+----
+<cac:ContractDocumentReference>
+	<cbc:ID>Kontrakt 321</cbc:ID>
+	<cbc:DocumentTypeCode listID="UNCL1001">2</cbc:DocumentTypeCode>
+	<cbc:DocumentType>Framework Agreement</cbc:DocumentType>
+</cac:ContractDocumentReference>
+----
+
+If other references than Order number (ref. ch. 6.7) and Contract number is needed, the element Additional document reference (ref. ch. 6.11) may be used.
