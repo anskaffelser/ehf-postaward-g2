@@ -1,9 +1,8 @@
-# EHF Invoice and Creditnote 2.0
+# ehf-creditnote-2.0
 
-Version: 2.0.**6**
+This folder contains:
 
+* Rules
+* Tests
 
-## Links
-
-* [VEFA](https://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.6/)
-* [Milestone](https://github.com/difi/vefa-validator-conf/issues?q=milestone%3A%22EHF+Invoice+and+Creditnote+2.0.6%22)
+See "ehf-invoice-2.0" for guide and attachments.
