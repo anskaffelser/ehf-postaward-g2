@@ -3,7 +3,7 @@
 
     <package url="http://vefa.difi.no/ehf/standard/ehf-reminder-1.1.0/">EHF Reminder 1.1.0</package>
 	
-	<testfiles>test</testfiles>
+	<testfolder>test</testfolder>
 
     <!-- Reminder -->
     <configuration>
