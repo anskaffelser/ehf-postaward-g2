@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+	<testfolder>test</testfolder>
+
+    <!-- Creditnote -->
+    <configuration>
+        <identifier>ehf-t14-xx-2.0</identifier>
+        <title>EHF Creditnote 2.0 (Profile XX)</title>
+        <profileId>urn:www.cenbii.eu:profile:biixx:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ubl-creditnote-2.1</inherit>
+		<inherit>ehf-t10-stylesheet-2.0</inherit>
+        <file path="xsl/UBL-T14-BiiRules.xsl" />
+        <file path="xsl/UBL-T14-EUgen.xsl" />
+        <file path="xsl/UBL-T14-EHFCore.xsl" />
+        <file path="xsl/UBL-T14-Nonat.xsl" />
+        <file path="xsl/UBL-T14-Nogov.xsl" />
+        <rule identifier="BII2-T14-R025" action="suppress" />
+        <rule identifier="BII2-T14-R035" action="suppress" />
+        <rule identifier="BII2-T14-R037" action="suppress" />
+        <rule identifier="BII2-T14-R044" action="suppress" />
+        <rule identifier="BII2-T14-R047" action="suppress" />
+        <rule identifier="BII2-T14-R048" action="suppress" />
+        <rule identifier="BII2-T14-R049" action="suppress" />
+        <rule identifier="BII2-T14-R050" action="suppress" />
+        <rule identifier="EUGEN-T14-R041" action="suppress" />
+        <rule identifier="CL-T14-R007" action="suppress" />
+        <rule identifier="OP-T14-R004" action="suppress" />
+    </configuration>
+    <configuration>
+        <identifier>ehf-t14-05-2.0</identifier>
+        <title>EHF Creditnote 2.0 (Profile 05)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii05:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ehf-t14-xx-2.0</inherit>
+    </configuration>
+    <configuration>
+        <identifier>ehf-t14-xy-2.0</identifier>
+        <title>EHF Creditnote 2.0 (Profile XY)</title>
+        <profileId>urn:www.cenbii.eu:profile:biixy:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixy:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ehf-t14-xx-2.0</inherit>
+        <rule identifier="EUGEN-T14-R047" action="suppress" />
+    </configuration>
+
+</buildConfigurations>

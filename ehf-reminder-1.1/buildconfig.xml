@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <package url="http://vefa.difi.no/ehf/standard/ehf-reminder-1.1.0/">EHF Reminder 1.1.0</package>
-	
 	<testfolder>test</testfolder>
 
     <!-- Reminder -->
@@ -12,7 +10,7 @@
         <profileId>urn:www.cenbii.eu:profile:biixy:ver1.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:purring:ver1</customizationId>
         <inherit>ubl-reminder-2.0</inherit>
-        <file path="xsl/UBL-T17-Nonat.xsl" />
+        <file path="xsl/NONAT-UBL-T17.xsl" />
     </configuration>
 
 </buildConfigurations>
