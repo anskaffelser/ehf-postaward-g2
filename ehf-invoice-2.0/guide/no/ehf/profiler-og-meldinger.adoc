@@ -33,3 +33,13 @@ Nedenstående eksempel på CustomizationID indikerer at innholdet i den aktuelle
 ----
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
 ----
+
+Eksempel på CustomizationID dersom det sendes en PEPPOL BIS, ytterligere info om PEPPOL BIS kan finnes på
+http://www.peppol.eu/[PEPPOL]
+
+[source,xml]
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0</cbc:CustomizationID>
+----
+
+Det presiseres at dersom begge aktørene er hjemmehørende i Norge, skal EHF customizationID benyttes. PEPPOL BIS bør kun benyttes dersom en av partene er utenlandske.

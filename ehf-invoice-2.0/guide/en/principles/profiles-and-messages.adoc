@@ -29,3 +29,16 @@ Invoice only:::urn:www.cenbii.eu:profile:bii04:ver2.0
 Credit note only:::urn:www.cenbii.eu:profile:biixx:ver2.0
 Invoice and Credit note:::urn:www.cenbii.eu:profile:bii05:ver2.0
 Invoice, Credit note and Reminder:::urn:www.cenbii.eu:profile:biixy:ver2.0
+
+Please note that it is strongly recommended to use EHF CustomizationID if both parties are norwegian, and PEPPOL BIS only if one of the parties are foreign (cross-border trade):
+
+[source,xml]
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+----
+
+
+[source,xml]
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0</cbc:CustomizationID>
+----
