@@ -1,5 +1,15 @@
 # Version 2.x
 
+## 2.0.6 (23.05.2016)
+
+Changes in validator:
+* Check to ensure all document level amounts have maximum 2 decimals [Github issue 125](https://github.com/difi/vefa-validator-conf/issues/125)
+* Check to ensure a norwegian organisational number is 9 digits if schemeID = NO:ORGNR [Github issue 114](https://github.com/difi/vefa-validator-conf/issues/114)
+* Check to verify that if allowance or charge is sent on document level, the element for total allowance or charge exists [Github issue 116](https://github.com/difi/vefa-validator-conf/issues/116)
+
+Editorial changes:
+* Changed description of Your ref [Github issue 99](https://github.com/difi/vefa-validator-conf/issues/99)
+* Added recommondation that PEPPOL BIS is only used in cases where one of the parties are foreign (cross border trade) [Github issue 71](https://github.com/difi/vefa-validator-conf/issues/71)
 
 ## 2.0.5 (01.09.2015)
 
