@@ -896,6 +896,76 @@
    <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
    
+   <!--RULE -->
+   
+   <axsl:template match="//cac:LegalMonetaryTotal" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:LegalMonetaryTotal"/>
+      
+      <xsl:for-each select="child::*">
+      <!--ASSERT -->
+      <axsl:choose>
+         <axsl:when test="string-length(substring-after(., '.')) &lt;= 2"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(substring-after(., '.')) &lt;= 2">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T10-R037]- Document level amounts cannot have more than 2 decimals</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      </xsl:for-each>
+      
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+
+   <!--RULE -->
+   
+   <axsl:template match="/ubl:Invoice/cac:TaxTotal" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:TaxTotal"/>
+      
+     
+         <!--ASSERT -->
+         <axsl:choose>
+            <axsl:when test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"/>
+            <axsl:otherwise>
+               <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2">
+                  <axsl:attribute name="flag">fatal</axsl:attribute>
+                  <axsl:attribute name="location">
+                     <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                  </axsl:attribute>
+                  <svrl:text>[NOGOV-T10-R038]- Total tax amount cannot have more than 2 decimals</svrl:text>
+               </svrl:failed-assert>
+            </axsl:otherwise>
+         </axsl:choose>
+      
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   <!--RULE -->
+   
+   <axsl:template match="/ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal"/>
+      
+      <xsl:for-each select="child::*">
+         <!--ASSERT -->
+         <axsl:choose>
+            <axsl:when test="string-length(substring-after(., '.')) &lt;= 2"/>
+            <axsl:otherwise>
+               <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(substring-after(., '.')) &lt;= 2">
+                  <axsl:attribute name="flag">fatal</axsl:attribute>
+                  <axsl:attribute name="location">
+                     <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+                  </axsl:attribute>
+                  <svrl:text>[NOGOV-T10-R039]- Tax subtotal amounts cannot have more than 2 decimals</svrl:text>
+               </svrl:failed-assert>
+            </axsl:otherwise>
+         </axsl:choose>
+      </xsl:for-each>
+      
+      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+      
    <axsl:template match="text()" priority="-1" mode="M17"/>
    <axsl:template match="@*|node()" priority="-2" mode="M17">
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
