@@ -747,8 +747,8 @@
    
    <!--RULE -->
    
-   <axsl:template match="@mimeCode" priority="1001" mode="M17">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="@mimeCode"/>
+   <axsl:template match="*/@mimeCode" priority="1001" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="*/@mimeCode"/>
       
       <!--ASSERT -->
       
@@ -871,13 +871,31 @@
          </axsl:otherwise>
       </axsl:choose>
       
-      
-      
-      
- 
-      
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
+   
+   <!--RULE -->
+   
+   <axsl:template match="//cac:PartyIdentification/cbc:ID[@schemeID='NO:ORGNR']" priority="1000" mode="M17">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/cac:PartyIdentification/cbc:ID[@schemeID='NO:ORGNR']"/>
+      
+   <!--ASSERT -->
+   <axsl:choose>
+      <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
+      <axsl:otherwise>
+         <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:integer) and (string-length(.) = 9)">
+            <axsl:attribute name="flag">fatal</axsl:attribute>
+            <axsl:attribute name="location">
+               <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+            </axsl:attribute>
+            <svrl:text>[NOGOV-T10-R036]- When scheme is NO:ORGNR, a norwegian organizational number must be used. Only numerical value allowed</svrl:text>
+         </svrl:failed-assert>
+      </axsl:otherwise>
+   </axsl:choose>
+   
+   <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
+   </axsl:template>
+   
    <axsl:template match="text()" priority="-1" mode="M17"/>
    <axsl:template match="@*|node()" priority="-2" mode="M17">
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
