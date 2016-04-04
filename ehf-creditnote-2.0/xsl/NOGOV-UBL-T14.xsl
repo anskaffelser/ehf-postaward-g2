@@ -215,6 +215,37 @@
          </axsl:otherwise>
       </axsl:choose>
       
+      <axsl:choose>
+         <axsl:when test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) 
+            and (cac:LegalMonetaryTotal/cbc:ChargeTotalAmount != '')
+            or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) and (cac:LegalMonetaryTotal/cbc:ChargeTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) )">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R021]-If charge is present on document level, total charge must be stated.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+      <axsl:choose>
+         <axsl:when test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) 
+            and (cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount != '')
+            or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) )"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) and (cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) )">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T10-R022]-If allowance is present on document level, total allowance must be stated.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      <!--ASSERT -->
+      
       <!--ASSERT -->
       <axsl:choose>
          <axsl:when test="local-name(/*) = 'CreditNote' and
