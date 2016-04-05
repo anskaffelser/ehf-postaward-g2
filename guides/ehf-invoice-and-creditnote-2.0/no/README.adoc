@@ -1,4 +1,4 @@
-= EHF faktura og kreditnota 2.0.5
+= EHF faktura og kreditnota 2.0.6
 
 Dette dokumentet beskriver Elektronisk Handelsformat (EHF) for utveksling av fakturainformasjon elektronisk mellom handelspartnere. Dokumentet er utarbeidet som en del av satsingen til Direktoratet for Forvaltning og IKT (Difi) innen standardisering av elektroniske handelsprosesser.
 
@@ -52,4 +52,4 @@ Vedlegg 1,2,6 og 7 er separate dokumenter.  Vedlegg 3, 4 og 5 er kun henvisninge
 
 ## Ikrafttredelse
 
-Denne revisjonen gjøres tilgjengelig for bruk fra 1. oktober 2015. Den vil være obligatorisk fra samme dato.
+Denne revisjonen gjøres tilgjengelig for bruk fra 23. mai 2016. Den vil være obligatorisk fra samme dato.

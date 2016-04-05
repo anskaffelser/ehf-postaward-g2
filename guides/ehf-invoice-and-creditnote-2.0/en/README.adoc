@@ -1,4 +1,4 @@
-= EHF Invoice and Creditnote 2.0.5
+= EHF Invoice and Creditnote 2.0.6
 
 This document describes the data formats used when trading partners exchange invoice information electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “Agency for Public Management and eGovernment” (Difi) within the standardization of electronic trade processes.
 
@@ -52,4 +52,4 @@ Appendices 1, 2 and 6 are separate documents.  Appendices 3, 4 and 5 serve as li
 
 ## Mandatory Use
 
-This version is valid from 1. October 2015, and is mandatory from the same date.
+This version is valid from 23. May 2016, and is mandatory from the same date.
