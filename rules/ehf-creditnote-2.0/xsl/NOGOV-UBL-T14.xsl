@@ -710,21 +710,36 @@
    <axsl:template match="/ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal" priority="1000" mode="M17">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal"/>
       
-      <xsl:for-each select="child::*">
-         <!--ASSERT -->
-         <axsl:choose>
-            <axsl:when test="string-length(substring-after(., '.')) &lt;= 2"/>
-            <axsl:otherwise>
-               <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="string-length(substring-after(., '.')) &lt;= 2">
-                  <axsl:attribute name="flag">fatal</axsl:attribute>
-                  <axsl:attribute name="location">
-                     <axsl:apply-templates select="." mode="schematron-get-full-path"/>
-                  </axsl:attribute>
-                  <svrl:text>[NOGOV-T14-R026]- Tax subtotal amounts cannot have more than 2 decimals</svrl:text>
-               </svrl:failed-assert>
-            </axsl:otherwise>
-         </axsl:choose>
-      </xsl:for-each>
+      <axsl:choose>
+         <axsl:when test="string-length(substring-after(cbc:TaxableAmount, '.')) &lt;= 2"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+               test="string-length(substring-after(., '.')) &lt;= 2">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R026]- Tax subtotal amounts cannot have more than 2
+                  decimals</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
+      <axsl:choose>
+         <axsl:when test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+               test="string-length(substring-after(., '.')) &lt;= 2">
+               <axsl:attribute name="flag">fatal</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T14-R026]- Tax subtotal amounts cannot have more than 2
+                  decimals</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+      
       
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
