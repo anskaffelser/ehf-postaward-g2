@@ -170,10 +170,10 @@
                               title="OPENPEPPOL  T16 bound to UBL"
                               schemaVersion="">
          <xsl:comment>
-            <xsl:value-of select="$archiveDirParameter"/>   
-		 <xsl:value-of select="$archiveNameParameter"/>  
-		 <xsl:value-of select="$fileNameParameter"/>  
-		 <xsl:value-of select="$fileDirParameter"/>
+            <xsl:value-of select="$archiveDirParameter"/>
+            <xsl:value-of select="$archiveNameParameter"/>
+            <xsl:value-of select="$fileNameParameter"/>
+            <xsl:value-of select="$fileDirParameter"/>
          </xsl:comment>
          <svrl:ns-prefix-in-attribute-values uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                                              prefix="cbc"/>
@@ -209,7 +209,7 @@
 
 
 	  <!--RULE -->
-   <xsl:template match="//*[contains(name(),'Quantity')]" priority="1005" mode="M6">
+   <xsl:template match="//*[contains(name(),'Quantity')]" priority="1006" mode="M6">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                        context="//*[contains(name(),'Quantity')]"/>
 
@@ -232,7 +232,7 @@
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="cbc:UNDGCode" priority="1004" mode="M6">
+   <xsl:template match="cbc:UNDGCode" priority="1005" mode="M6">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cbc:UNDGCode"/>
 
 		    <!--ASSERT -->
@@ -253,7 +253,7 @@
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="cbc:TransportHandlingUnitTypeCode" priority="1003" mode="M6">
+   <xsl:template match="cbc:TransportHandlingUnitTypeCode" priority="1004" mode="M6">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                        context="cbc:TransportHandlingUnitTypeCode"/>
 
@@ -275,7 +275,7 @@
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="//cbc:EndpointID" priority="1002" mode="M6">
+   <xsl:template match="//cbc:EndpointID" priority="1003" mode="M6">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:EndpointID"/>
 
 		    <!--ASSERT -->
@@ -296,15 +296,15 @@
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="//cac:Party" priority="1001" mode="M6">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:Party"/>
+   <xsl:template match="//cac:PartyIdentification" priority="1002" mode="M6">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                       context="//cac:PartyIdentification"/>
 
 		    <!--ASSERT -->
       <xsl:choose>
-         <xsl:when test="cac:PartyIdentification/cbc:ID/@schemeID"/>
+         <xsl:when test="cbc:ID/@schemeID"/>
          <xsl:otherwise>
-            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="cac:PartyIdentification/cbc:ID/@schemeID">
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="cbc:ID/@schemeID">
                <xsl:attribute name="id">EUGEN-T16-R002</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -318,7 +318,7 @@
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="/cac:Country" priority="1000" mode="M6">
+   <xsl:template match="/cac:Country" priority="1001" mode="M6">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/cac:Country"/>
 
 		    <!--ASSERT -->
@@ -333,6 +333,27 @@
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
                <svrl:text>[EUGEN-T16-R003]-A country identification code MUST have a list identifier attribute ISO3166-1:Alpha2.</svrl:text>
+            </svrl:failed-assert>
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:apply-templates select="@*|*" mode="M6"/>
+   </xsl:template>
+
+	  <!--RULE -->
+   <xsl:template match="//cac:DespatchLine" priority="1000" mode="M6">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:DespatchLine"/>
+
+		    <!--ASSERT -->
+      <xsl:choose>
+         <xsl:when test="(cbc:DeliveredQuantity)"/>
+         <xsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(cbc:DeliveredQuantity)">
+               <xsl:attribute name="id">EUGEN-T16-R007</xsl:attribute>
+               <xsl:attribute name="flag">fatal</xsl:attribute>
+               <xsl:attribute name="location">
+                  <xsl:apply-templates select="." mode="schematron-select-full-path"/>
+               </xsl:attribute>
+               <svrl:text>[EUGEN-T16-R007]-Each despatch advice line MUST have a delivered quantity</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
