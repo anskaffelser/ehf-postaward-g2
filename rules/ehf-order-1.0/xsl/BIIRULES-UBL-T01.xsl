@@ -170,10 +170,10 @@
                               title="BIIRULES  T01 bound to UBL"
                               schemaVersion="">
          <xsl:comment>
-            <xsl:value-of select="$archiveDirParameter"/>   
-		 <xsl:value-of select="$archiveNameParameter"/>  
-		 <xsl:value-of select="$fileNameParameter"/>  
-		 <xsl:value-of select="$fileDirParameter"/>
+            <xsl:value-of select="$archiveDirParameter"/>
+            <xsl:value-of select="$archiveNameParameter"/>
+            <xsl:value-of select="$fileNameParameter"/>
+            <xsl:value-of select="$fileDirParameter"/>
          </xsl:comment>
          <svrl:ns-prefix-in-attribute-values uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                                              prefix="cbc"/>
@@ -338,10 +338,10 @@
 
 		    <!--ASSERT -->
       <xsl:choose>
-         <xsl:when test="(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = ((cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount) + (cbc:ChargeTotalAmount) - (cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  - (cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  + (cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and  ((cbc:PayableAmount) = ((cbc:LineExtensionAmount) + (cbc:ChargeTotalAmount) - (cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount)  - (cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount)  + (cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount)))"/>
+         <xsl:when test="((/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  and  (((cbc:ChargeTotalAmount) and  (cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount + cbc:ChargeTotalAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or  (not(cbc:ChargeTotalAmount) and  (cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or  ((cbc:ChargeTotalAmount) and  not(cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount + cbc:ChargeTotalAmount) * 10 * 10) div 100)))  or  (not(cbc:ChargeTotalAmount) and  not(cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount ) * 10 * 10) div 100)))))  or  ( not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount)  and  (((cbc:ChargeTotalAmount) and  (cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + cbc:ChargeTotalAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or  (not(cbc:ChargeTotalAmount) and  (cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or  ((cbc:ChargeTotalAmount) and  not(cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount + cbc:ChargeTotalAmount) * 10 * 10) div 100)))  or  (not(cbc:ChargeTotalAmount) and  not(cbc:AllowanceTotalAmount) and  (cbc:PayableAmount = (round((cbc:LineExtensionAmount ) * 10 * 10) div 100)))))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = ((cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount) + (cbc:ChargeTotalAmount) - (cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount) - (cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount) + (cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (/ubl:Order/cac:TaxTotal/cbc:TaxAmount))) or not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and ((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = ((cbc:LineExtensionAmount) + (cbc:ChargeTotalAmount) - (cbc:AllowanceTotalAmount)))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) - (cbc:AllowanceTotalAmount))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount) + (cbc:ChargeTotalAmount))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and ((cbc:PayableAmount) = (cbc:LineExtensionAmount)))">
+                                test="((/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and (((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount + cbc:ChargeTotalAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount + cbc:ChargeTotalAmount) * 10 * 10) div 100))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + /ubl:Order/cac:TaxTotal/cbc:TaxAmount ) * 10 * 10) div 100))))) or ( not(/ubl:Order/cac:TaxTotal/cbc:TaxAmount) and (((cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + cbc:ChargeTotalAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or (not(cbc:ChargeTotalAmount) and (cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount - cbc:AllowanceTotalAmount) * 10 * 10) div 100))) or ((cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount + cbc:ChargeTotalAmount) * 10 * 10) div 100))) or (not(cbc:ChargeTotalAmount) and not(cbc:AllowanceTotalAmount) and (cbc:PayableAmount = (round((cbc:LineExtensionAmount ) * 10 * 10) div 100)))))">
                <xsl:attribute name="id">BII2-T01-R017</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
@@ -542,10 +542,10 @@
 
 		    <!--ASSERT -->
       <xsl:choose>
-         <xsl:when test="(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0"/>
+         <xsl:when test="((cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0) or (not(cac:LineItem/cac:Price))"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0">
+                                test="((cac:LineItem/cac:Price/cbc:PriceAmount) &gt;= 0) or (not(cac:LineItem/cac:Price))">
                <xsl:attribute name="id">BII2-T01-R011</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
