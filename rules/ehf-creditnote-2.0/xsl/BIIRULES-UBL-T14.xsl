@@ -170,10 +170,10 @@
                               title="BIIRULES  T14 bound to UBL"
                               schemaVersion="">
          <xsl:comment>
-            <xsl:value-of select="$archiveDirParameter"/>   
-		 <xsl:value-of select="$archiveNameParameter"/>  
-		 <xsl:value-of select="$fileNameParameter"/>  
-		 <xsl:value-of select="$fileDirParameter"/>
+            <xsl:value-of select="$archiveDirParameter"/>
+            <xsl:value-of select="$archiveNameParameter"/>
+            <xsl:value-of select="$fileNameParameter"/>
+            <xsl:value-of select="$fileDirParameter"/>
          </xsl:comment>
          <svrl:ns-prefix-in-attribute-values uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                                              prefix="cbc"/>
@@ -233,10 +233,10 @@
 
 		    <!--ASSERT -->
       <xsl:choose>
-         <xsl:when test="(/ubl:CreditNote/cac:TaxTotal/*/*/*/cbc:ID = 'VAT') and (cac:TaxCategory/cbc:ID)"/>
+         <xsl:when test="((/ubl:CreditNote/cac:TaxTotal/*/*/*/cbc:ID = 'VAT') and (cac:TaxCategory/cbc:ID)) or not(/ubl:CreditNote/cac:TaxTotal)"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="(/ubl:CreditNote/cac:TaxTotal/*/*/*/cbc:ID = 'VAT') and (cac:TaxCategory/cbc:ID)">
+                                test="((/ubl:CreditNote/cac:TaxTotal/*/*/*/cbc:ID = 'VAT') and (cac:TaxCategory/cbc:ID)) or not(/ubl:CreditNote/cac:TaxTotal)">
                <xsl:attribute name="id">BII2-T14-R043</xsl:attribute>
                <xsl:attribute name="flag">fatal</xsl:attribute>
                <xsl:attribute name="location">
