@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-	<testfolder>test</testfolder>
-
     <configuration>
         <identifier>ehf-t01-28-1.0</identifier>
         <title>EHF Order 1.0 (Profile 28)</title>
