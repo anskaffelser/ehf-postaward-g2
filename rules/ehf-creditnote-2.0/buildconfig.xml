@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-	<testfolder>test</testfolder>
+    <testfolder>test</testfolder>
 
     <configuration>
         <identifier>ehf-t14-xx-2.0</identifier>
@@ -9,7 +9,7 @@
         <profileId>urn:www.cenbii.eu:profile:biixx:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ubl-creditnote-2.1</inherit>
-		<inherit>ehf-t10-stylesheet-2.0</inherit>
+        <inherit>ehf-t10-stylesheet-2.0</inherit>
         <file path="xsl/BIIRULES-UBL-T14.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T14.xsl" />
         <file path="xsl/EHFCORE-UBL-T14.xsl" />
