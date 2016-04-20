@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <!-- Despatch advice -->
+	<testfolder>test</testfolder>
+
     <configuration>
         <identifier>ehf-t16-30-1.0</identifier>
         <title>EHF Despatch advise 1.0 (Profile 30)</title>
