@@ -490,8 +490,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R023]-Item classification code MUST be specified when
-                  describing commodity classification.</svrl:text>
+               <svrl:text>[NOGOV-T10-R023]-Item classification code MUST be specified when describing commodity classification.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -522,8 +521,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R014]-If the VAT total amount in an invoice exists it MUST
-                  contain the suppliers VAT number.</svrl:text>
+               <svrl:text>[NOGOV-T10-R014]-If the VAT total amount in an invoice exists it MUST contain the suppliers VAT number.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -542,8 +540,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R034]-If charge is present on document level, total charge must
-                  be stated.</svrl:text>
+               <svrl:text>[NOGOV-T10-R034]-If charge is present on document level, total charge must be stated.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -561,8 +558,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R035]-If allowance is present on document level, total
-                  allowance must be stated.</svrl:text>
+               <svrl:text>[NOGOV-T10-R035]-If allowance is present on document level, total allowance must be stated.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -577,8 +573,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R005]-ContractDocumentReference SHOULD be provided according to
-                  EHF.</svrl:text>
+               <svrl:text>[NOGOV-T10-R005]-ContractDocumentReference SHOULD be provided according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -594,8 +589,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R016]- An EHF invoice MUST have an invoice type
-                  code.</svrl:text>
+               <svrl:text>[NOGOV-T10-R016]- An EHF invoice MUST have an invoice type code.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -611,8 +605,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R019]- An invoice MUST have payment means
-                  information.</svrl:text>
+               <svrl:text>[NOGOV-T10-R019]- An invoice MUST have payment means information.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -640,8 +633,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R030]- A VAT number MUST be nine numbers followed by the
-                  letters MVA.</svrl:text>
+               <svrl:text>[NOGOV-T10-R030]- A VAT number MUST be nine numbers followed by the letters MVA.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -666,8 +658,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R031]- An organisational number for seller, buyer and payee
-                  MUST be nine numbers..</svrl:text>
+               <svrl:text>[NOGOV-T10-R031]- An organisational number for seller, buyer and payee MUST be nine numbers..</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -691,8 +682,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R020]- Note MUST be specified when describing Payment
-                  terms.</svrl:text>
+               <svrl:text>[NOGOV-T10-R020]- Note MUST be specified when describing Payment terms.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -735,8 +725,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R017]- Name MUST be specified when describing a Tax
-                  Representative</svrl:text>
+               <svrl:text>[NOGOV-T10-R017]- Name MUST be specified when describing a Tax Representative</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -752,8 +741,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R018]- Company identifier MUST be specified when describing a
-                  Tax Representative</svrl:text>
+               <svrl:text>[NOGOV-T10-R018]- Company identifier MUST be specified when describing a Tax Representative</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -777,8 +765,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R021]- An invoice MUST have Tax Subtotal
-                  specifications.</svrl:text>
+               <svrl:text>[NOGOV-T10-R021]- An invoice MUST have Tax Subtotal specifications.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -804,9 +791,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R025]- The attribute currencyID must have the same value as
-                  DocumentCurrencyCode, except the attribute for
-                  TransactionCurrencyTaxAmount.</svrl:text>
+               <svrl:text>[NOGOV-T10-R025]- The attribute currencyID must have the same value as DocumentCurrencyCode, except the attribute for TransactionCurrencyTaxAmount.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -879,8 +864,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value
-                  'NO:ORGNR'.</svrl:text>
+               <svrl:text>[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -895,8 +879,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R026]- MUST be a norwegian organizational number. Only
-                  numerical value allowed</svrl:text>
+               <svrl:text>[NOGOV-T10-R026]- MUST be a norwegian organizational number. Only numerical value allowed</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -922,8 +905,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R006]-A customer number for AccountingCustomerParty SHOULD be
-                  provided according to EHF.</svrl:text>
+               <svrl:text>[NOGOV-T10-R006]-A customer number for AccountingCustomerParty SHOULD be provided according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -939,8 +921,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R007]-A contact reference identifier MUST be provided for
-                  AccountingCustomerParty according to EHF.</svrl:text>
+               <svrl:text>[NOGOV-T10-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -957,8 +938,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R009]-PartyLegalEntity for AccountingCustomerParty MUST be
-                  provided according to EHF.</svrl:text>
+               <svrl:text>[NOGOV-T10-R009]-PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -977,8 +957,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R015]-Registration name for AccountingCustomerParty MUST be
-                  provided according to EHF.</svrl:text>
+               <svrl:text>[NOGOV-T10-R015]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -1003,8 +982,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R036]- When scheme is NO:ORGNR, a norwegian organizational
-                  number must be used. Only numerical value allowed</svrl:text>
+               <svrl:text>[NOGOV-T10-R036]- When scheme is NO:ORGNR, a norwegian organizational number must be used. Only numerical value allowed</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -1029,8 +1007,7 @@
                   <axsl:attribute name="location">
                      <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                   </axsl:attribute>
-                  <svrl:text>[NOGOV-T10-R037]- Document level amounts cannot have more than 2
-                     decimals</svrl:text>
+                  <svrl:text>[NOGOV-T10-R037]- Document level amounts cannot have more than 2 decimals</svrl:text>
                </svrl:failed-assert>
             </axsl:otherwise>
          </axsl:choose>
@@ -1056,8 +1033,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R038]- Total tax amount cannot have more than 2
-                  decimals</svrl:text>
+               <svrl:text>[NOGOV-T10-R038]- Total tax amount cannot have more than 2 decimals</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -1080,8 +1056,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R039]- Tax subtotal amounts cannot have more than 2
-                  decimals</svrl:text>
+               <svrl:text>[NOGOV-T10-R039]- Tax subtotal amounts cannot have more than 2 decimals</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -1095,8 +1070,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R039]- Tax subtotal amounts cannot have more than 2
-                  decimals</svrl:text>
+               <svrl:text>[NOGOV-T10-R039]- Tax subtotal amounts cannot have more than 2 decimals</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>
@@ -1120,8 +1094,7 @@
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
-               <svrl:text>[NOGOV-T10-R040]- Allowance or charge amounts on document level cannot
-                  have more than 2 decimals</svrl:text>
+               <svrl:text>[NOGOV-T10-R040]- Allowance or charge amounts on document level cannot have more than 2 decimals</svrl:text>
             </svrl:failed-assert>
          </axsl:otherwise>
       </axsl:choose>

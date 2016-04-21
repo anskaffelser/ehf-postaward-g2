@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger error when organization number doesn't apply to rules.
+
+Scope:
+NOGOV-T10-R031
+
+Error:
+NOGOV-T10-R031 x 6
+
+-->
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+
+	<cac:PartyLegalEntity>
+		<cbc:CompanyID>122</cbc:CompanyID>
+		<cbc:CompanyID>123 456 789</cbc:CompanyID>
+		<cbc:CompanyID>A23456789</cbc:CompanyID>
+		<cbc:CompanyID>NO123456789</cbc:CompanyID>
+		<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+		<cbc:CompanyID>NO123456789MVA</cbc:CompanyID>
+	</cac:PartyLegalEntity>
+
+</Invoice>
