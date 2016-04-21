@@ -32,6 +32,7 @@
         <profileId>urn:www.cenbii.eu:profile:biixx:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ehf-t14-base-2.0</inherit>
+        <rule identifier="EUGEN-T14-R047" action="suppress" />
     </configuration>
     <configuration>
         <identifier>ehf-t14-05-2.0</identifier>
@@ -46,7 +47,7 @@
         <profileId>urn:www.cenbii.eu:profile:biixy:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixy:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ehf-t14-base-2.0</inherit>
-        <rule identifier="EUGEN-T14-R047" action="suppress" />
+     
     </configuration>
 
 </buildConfigurations>
