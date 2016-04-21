@@ -13,10 +13,8 @@
              	EUGEN-T10-R004
 				NOGOV-T10-R005
 				NOGOV-T10-R012
-
-				On all invoice lines:
-				NOGOV-T10-R003
-				NOGOV-T10-R004
+				NOGOV-T10-R003 34 times
+				NOGOV-T10-R004 34 times
 -->
 <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
   <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
@@ -107,10 +105,10 @@
     </cac:PayeeFinancialAccount>
   </cac:PaymentMeans>
   <cac:TaxTotal>
-    <cbc:TaxAmount currencyID="NOK">511752.180000</cbc:TaxAmount>
+    <cbc:TaxAmount currencyID="NOK">511752.18</cbc:TaxAmount>
     <cac:TaxSubtotal xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-      <cbc:TaxableAmount currencyID="NOK">2047008.730000</cbc:TaxableAmount>
-      <cbc:TaxAmount currencyID="NOK">511752.180000</cbc:TaxAmount>
+      <cbc:TaxableAmount currencyID="NOK">2047008.73</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="NOK">511752.18</cbc:TaxAmount>
       <cac:TaxCategory>
       <cbc:ID schemeID="UNCL5305">S</cbc:ID>
         <cbc:Percent>25.0000</cbc:Percent>
@@ -120,11 +118,11 @@
       </cac:TaxCategory>
     </cac:TaxSubtotal>
     <cac:TaxSubtotal xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-      <cbc:TaxableAmount currencyID="NOK">798392.650000</cbc:TaxableAmount>
-      <cbc:TaxAmount currencyID="NOK">0.000000</cbc:TaxAmount>
+      <cbc:TaxableAmount currencyID="NOK">798392.65</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="NOK">0.00</cbc:TaxAmount>
       <cac:TaxCategory>
               <cbc:ID schemeID="UNCL5305">S</cbc:ID>
-        <cbc:Percent>0.0000</cbc:Percent>
+        <cbc:Percent>0.00</cbc:Percent>
         <cac:TaxScheme>
           <cbc:ID>VAT</cbc:ID>
         </cac:TaxScheme>
@@ -132,15 +130,15 @@
     </cac:TaxSubtotal>
   </cac:TaxTotal>
   <cac:LegalMonetaryTotal>
-    <cbc:LineExtensionAmount currencyID="NOK">2845401.380000</cbc:LineExtensionAmount>
-    <cbc:TaxExclusiveAmount currencyID="NOK">2845401.380000</cbc:TaxExclusiveAmount>
-    <cbc:TaxInclusiveAmount currencyID="NOK">3357153.560000</cbc:TaxInclusiveAmount>
-    <cbc:PayableAmount currencyID="NOK">3357153.560000</cbc:PayableAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">2845401.38</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="NOK">2845401.38</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="NOK">3357153.56</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="NOK">3357153.56</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>1</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">90000.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">90000.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Midlertidig trafikkavvikling</cbc:Name>
       <cac:SellersItemIdentification>
@@ -161,7 +159,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>2</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">847.25</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">526989.500000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">526989.50</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - oppretting</cbc:Name>
       <cac:SellersItemIdentification>
@@ -182,7 +180,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>3</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">2604.10</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">1775996.200000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">1775996.20</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 16 Pmb - slitelag</cbc:Name>
       <cac:SellersItemIdentification>
@@ -203,7 +201,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>4</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">35890.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">53835.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">53835.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Klebing</cbc:Name>
       <cac:SellersItemIdentification>
@@ -224,7 +222,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>5</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1008.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">49392.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">49392.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Traufresing - rundkjøring</cbc:Name>
       <cac:SellersItemIdentification>
@@ -245,7 +243,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>6</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1612.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">78988.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">78988</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Traufresing - kulvrt</cbc:Name>
       <cac:SellersItemIdentification>
@@ -266,7 +264,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>7</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">640.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">48000.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">48000</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Traufresing - busslomme</cbc:Name>
       <cac:SellersItemIdentification>
@@ -287,7 +285,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>8</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">138.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">13110.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">13110</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Buttskjøt</cbc:Name>
       <cac:SellersItemIdentification>
@@ -308,7 +306,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>9</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">9.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">8100.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">8100</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Justering kummer og sluk</cbc:Name>
       <cac:SellersItemIdentification>
@@ -329,7 +327,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>10</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">3.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">2700.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">2700.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>senking av kummer og sluk PDA</cbc:Name>
       <cac:SellersItemIdentification>
@@ -350,7 +348,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>11</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">176.25</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">43710.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">43710.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Oppjustering av skuldre</cbc:Name>
       <cac:SellersItemIdentification>
@@ -371,7 +369,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>12</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">2604.10</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">67706.600000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">67706.60</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Steinmaterialer Mv = &amp;lt; 4</cbc:Name>
       <cac:SellersItemIdentification>
@@ -392,7 +390,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>13</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">3573.50</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">219770.250000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">219770.25</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Transport</cbc:Name>
       <cac:SellersItemIdentification>
@@ -414,7 +412,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>14</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">-174.65</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">-10740.980000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">-10740.98</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Transport  - overlast</cbc:Name>
       <cac:SellersItemIdentification>
@@ -435,7 +433,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>15</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">4.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">22000.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">22000.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Fjerning av fartsdempere</cbc:Name>
       <cac:SellersItemIdentification>
@@ -456,7 +454,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>16</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">100.85</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">78864.700000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">78864.70</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 - utspleis kryss</cbc:Name>
       <cac:SellersItemIdentification>
@@ -477,7 +475,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>17</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">21.30</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">16656.600000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">16656.60</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - HP 3</cbc:Name>
       <cac:SellersItemIdentification>
@@ -498,7 +496,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>18</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">192.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">18240.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">18240.00</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Traufresing - Hp 3</cbc:Name>
       <cac:SellersItemIdentification>
@@ -519,7 +517,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>19</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">5500.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">5500</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Dirigering for fres/asfalt - Hp 3</cbc:Name>
       <cac:SellersItemIdentification>
@@ -540,7 +538,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>20</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">88.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">8360.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">8360</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Fresing - leggekanter</cbc:Name>
       <cac:SellersItemIdentification>
@@ -561,7 +559,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>21</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">10380.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">10380.</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Bonus pkt. 9 - felt 1 - 3</cbc:Name>
       <cac:SellersItemIdentification>
@@ -582,7 +580,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>22</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">27785.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">27785</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Bonus pkt. 12 - felt 2 - 4</cbc:Name>
       <cac:SellersItemIdentification>
@@ -603,7 +601,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>23</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">-1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">-335714.000000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">-335714</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Kredit avtalt</cbc:Name>
       <cac:SellersItemIdentification>
@@ -624,7 +622,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>24</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">6100.020000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">6100.02</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - oppretting (Prisregulering)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -645,7 +643,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>25</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">21118.050000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">21118.05</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 16 Pmb - slitelag (Prisregulering)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -666,7 +664,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>26</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">915.210000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">915.21</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 - utspleis kryss (Prisregulering)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -687,7 +685,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>27</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">216.490000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">216.49</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - HP 3 (Prisregulering)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -708,7 +706,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>28</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS"  unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">455800.990000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">455800.99</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - oppretting (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -729,7 +727,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>29</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">1450874.320000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">1450874.32</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 16 Pmb - slitelag (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -750,7 +748,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>30</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">43426.900000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">43426.90</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Klebing (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -771,7 +769,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>31</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">18418.130000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">18418.13</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Oppjustering av skuldre (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -792,7 +790,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>32</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">38679.710000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">38679.71</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 - utspleis kryss (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -813,7 +811,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>33</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">11458.910000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">11458.91</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Ab 11 Pmb - HP 3 (mva. grunnlag)</cbc:Name>
       <cac:SellersItemIdentification>
@@ -834,7 +832,7 @@
   <cac:InvoiceLine xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     <cbc:ID>34</cbc:ID>
     <cbc:InvoicedQuantity unitCode="LS" unitCodeListID="UNECERec20">-1.00</cbc:InvoicedQuantity>
-    <cbc:LineExtensionAmount currencyID="NOK">-2021236.220000</cbc:LineExtensionAmount>
+    <cbc:LineExtensionAmount currencyID="NOK">-2021236.22</cbc:LineExtensionAmount>
     <cac:Item>
       <cbc:Name>Utligning av mva. grunnlag linjer</cbc:Name>
       <cac:SellersItemIdentification>
