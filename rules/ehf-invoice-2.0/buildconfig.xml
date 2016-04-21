@@ -2,6 +2,7 @@
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
     <testfolder>test</testfolder>
+    <testfolder>unit</testfolder>
 
     <configuration>
         <identifier>ehf-t10-base-2.0</identifier>

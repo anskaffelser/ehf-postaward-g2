@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger warning when identification is not provided when origin country is provided.
+
+Scope:
+NOGOV-T10-R022
+
+Warning:
+NOGOV-T10-R022
+
+-->
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+
+	<cac:InvoiceLine>
+		<cac:Item>
+			<cac:OriginCountry>
+				<!-- <cbc:IdentificationCode>NO</cbc:IdentificationCode> -->
+			</cac:OriginCountry>
+		</cac:Item>
+	</cac:InvoiceLine>
+
+</Invoice>
