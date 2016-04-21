@@ -4,5 +4,4 @@ services:
   - docker
 
 script:
-  - date
   - docker run -it -v $(pwd):/src difi/vefa-validator-build
