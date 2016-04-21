@@ -352,7 +352,7 @@
     
     <!--RULE -->
     
-    <axsl:template match="cac:SellerSupplierParty" priority="1010" mode="M6">
+    <axsl:template match="cac:SellerSupplierParty/cac:Party" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:SellerSupplierParty"/>
         
         
