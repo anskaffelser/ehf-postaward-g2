@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-                Content:
-                This file contains a norwegian creditnote, profile invoice and creditnote
+        Content:
+        This file contains a norwegian creditnote, profile invoice and creditnote
 
-                Errors:
-                NONAT-T14-R006
-				        NOGOV-T10-R008
-				        NOGOV-T14-R013 2 times
+        Errors:
+        NONAT-T14-R006
+        NOGOV-T14-R013 2 times
+        NOGOV-T14-R025
+        NOGOV-T14-R026 4 times
+        NOGOV-T14-R024 4 times
 
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
@@ -63,7 +65,7 @@
         <cbc:CityName>VADSØ</cbc:CityName>
         <cbc:PostalZone>9815</cbc:PostalZone>
         <cac:Country>
-					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
@@ -73,6 +75,7 @@
         </cac:TaxScheme>
       </cac:PartyTaxScheme>
       <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Statens Vegvesen Regnskap</cbc:RegistrationName>
         <cbc:CompanyID schemeID="NO:ORGNR">971032081</cbc:CompanyID>
       </cac:PartyLegalEntity>
       <cac:Contact>
