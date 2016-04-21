@@ -15,15 +15,15 @@
 	<cbc:IssueDate>2013-09-23</cbc:IssueDate>
 	<cbc:VersionID>v1.0</cbc:VersionID>
 	<cac:ValidityPeriod>
-		<cbc:StartDate>2014-09-25</cbc:StartDate>
-		<cbc:EndDate>2014-12-31</cbc:EndDate>
+		<cbc:StartDate>2016-04-01</cbc:StartDate>
+		<cbc:EndDate>2016-12-31</cbc:EndDate>
 	</cac:ValidityPeriod>
 	<cac:ReferencedContract>
 		<cbc:ID>123123</cbc:ID>
 		<cbc:ContractType>StandardContract</cbc:ContractType>
 	</cac:ReferencedContract>
 	<cac:ProviderParty>
-		<cbc:EndpointID schemeID="NO:ORGNR">1234567890</cbc:EndpointID>
+		<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
 		<cac:PartyIdentification>
 			<cbc:ID schemeID="ZZZ">Provider AS</cbc:ID>
 		</cac:PartyIdentification>
@@ -41,10 +41,11 @@
 		</cac:PartyName>
 	</cac:ReceiverParty>
 	<cac:SellerSupplierParty>
+		
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="NO:ORGNR">984297793</cbc:ID>
+				<cbc:ID schemeID="NO:ORGNR">987654321</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Supplier</cbc:Name>
@@ -156,8 +157,8 @@
 			>1</cbc:MaximumOrderQuantity>
 		<cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
 		<cac:LineValidityPeriod>
-			<cbc:StartDate>2014-10-01</cbc:StartDate>
-			<cbc:EndDate>2014-12-01</cbc:EndDate>
+			<cbc:StartDate>2016-10-01</cbc:StartDate>
+			<cbc:EndDate>2016-12-01</cbc:EndDate>
 		</cac:LineValidityPeriod>
 		<cac:RequiredItemLocationQuantity>
 			<cbc:LeadTimeMeasure unitCode="DAY">13</cbc:LeadTimeMeasure>
@@ -166,7 +167,7 @@
 			</cac:Price>
 		</cac:RequiredItemLocationQuantity>
 		<cac:Item>
-			<cbc:Description/>
+
 			<cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
 			<cbc:Name>LÅSKASSE LK1362/28 R STOLPE25</cbc:Name>
 			<cac:SellersItemIdentification>
