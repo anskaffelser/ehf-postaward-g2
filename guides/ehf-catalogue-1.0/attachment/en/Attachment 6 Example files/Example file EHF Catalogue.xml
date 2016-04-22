@@ -15,8 +15,8 @@
 	<cbc:IssueDate>2013-09-23</cbc:IssueDate>
 	<cbc:VersionID>v1.0</cbc:VersionID>
 	<cac:ValidityPeriod>
-		<cbc:StartDate>2016-04-01</cbc:StartDate>
-		<cbc:EndDate>2016-12-31</cbc:EndDate>
+		<cbc:StartDate>2016-01-01</cbc:StartDate>
+		<cbc:EndDate>2017-01-01</cbc:EndDate>
 	</cac:ValidityPeriod>
 	<cac:ReferencedContract>
 		<cbc:ID>123123</cbc:ID>
