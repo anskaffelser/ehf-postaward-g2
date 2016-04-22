@@ -3,6 +3,7 @@
 
     <testfolder>test</testfolder>
     <testfolder>unit-NOGOV</testfolder>
+    <testfolder>unit-NONAT</testfolder>
 
     <configuration>
         <identifier>ehf-t10-base-2.0</identifier>
@@ -11,7 +12,6 @@
         <inherit>ehf-t10-stylesheet-2.0</inherit>
         <file path="xsl/BIIRULES-UBL-T10.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T10.xsl" />
-        <file path="xsl/EHFCORE-UBL-T10.xsl" />
         <file path="xsl/NONAT-UBL-T10.xsl" />
         <file path="xsl/NOGOV-UBL-T10.xsl" />
         <rule identifier="BII2-T10-R025" action="suppress" />
@@ -27,11 +27,18 @@
         <rule identifier="OP-T10-R004" action="suppress" />
     </configuration>
     <configuration>
+        <identifier>ehf-t10-core-2.0</identifier>
+        <title>EHF Invoice 2.0 (Core)</title>
+        <file path="xsl/EHFCORE-UBL-T10.xsl" />
+    </configuration>
+
+    <configuration>
         <identifier>ehf-t10-04-2.0</identifier>
         <title>EHF Invoice 2.0 (Profile 04)</title>
         <profileId>urn:www.cenbii.eu:profile:bii04:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</customizationId>
         <inherit>ehf-t10-base-2.0</inherit>
+        <inherit>ehf-t10-core-2.0</inherit>
     </configuration>
     <configuration>
         <identifier>ehf-t10-05-2.0</identifier>
@@ -39,6 +46,7 @@
         <profileId>urn:www.cenbii.eu:profile:bii05:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</customizationId>
         <inherit>ehf-t10-base-2.0</inherit>
+        <inherit>ehf-t10-core-2.0</inherit>
     </configuration>
     <configuration>
         <identifier>ehf-t10-xy-2.0</identifier>
@@ -46,6 +54,7 @@
         <profileId>urn:www.cenbii.eu:profile:biixy:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.cenbii.eu:profile.eu:biixy:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</customizationId>
         <inherit>ehf-t10-base-2.0</inherit>
+        <inherit>ehf-t10-core-2.0</inherit>
     </configuration>
 
 </buildConfigurations>

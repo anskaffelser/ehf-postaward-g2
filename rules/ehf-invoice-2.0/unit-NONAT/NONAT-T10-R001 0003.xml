@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger error when company identifier is not present.
+
+Scope:
+NONAT-T10-R001
+
+Error:
+NONAT-T10-R001
+
+-->
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+		<cac:AccountingSupplierParty>
+			<cac:Party>
+				<!-- <cac:PartyLegalEntity>
+					<cbc:CompanyID>123456789</cbc:CompanyID>
+				</cac:PartyLegalEntity> -->
+			</cac:Party>
+		</cac:AccountingSupplierParty>
+
+	</Invoice>
+</test>

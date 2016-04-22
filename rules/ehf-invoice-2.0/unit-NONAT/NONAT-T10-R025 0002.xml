@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger error when empty elements are present.
+
+Scope:
+NONAT-T10-R025
+
+Error:
+NONAT-T10-R025
+
+-->
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+		<cac:AccountingSupplierParty>
+			<cac:Party>
+				<cac:PartyLegalEntity>
+					<cbc:CompanyID></cbc:CompanyID>
+					<cbc:RegistrationName></cbc:RegistrationName>
+				</cac:PartyLegalEntity>
+				<cac:PostalAddress>
+					<cbc:CityName></cbc:CityName>
+					<cbc:PostalZone></cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode></cbc:IdentificationCode>
+					</cac:Country>
+				</cac:PostalAddress>
+			</cac:Party>
+		</cac:AccountingSupplierParty>
+
+	</Invoice>
+</test>

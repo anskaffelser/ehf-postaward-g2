@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger error when syntax identifier is incorrect.
+
+Scope:
+NONAT-T10-R020
+
+Error:
+NONAT-T10-R020
+
+-->
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+		<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+
+	</Invoice>
+</test>

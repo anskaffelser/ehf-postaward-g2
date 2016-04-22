@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Content:
+Trigger warning when delivery address is not complete.
+
+Scope:
+NONAT-T10-R004
+
+Warning:
+NONAT-T10-R004
+
+-->
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+		<cac:Delivery>
+			<cac:DeliveryLocation>
+				<cac:Address>
+					<!-- <cbc:CityName>Test</cbc:CityName> -->
+					<cbc:PostalZone>0000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+
+	</Invoice>
+</test>
