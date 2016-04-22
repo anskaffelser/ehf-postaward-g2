@@ -320,10 +320,10 @@
 
       <axsl:choose>
          <axsl:when
-            test="(matches(., '[A-Z][A-Z]') = true()) and (substring(., 3) castable as xs:integer)"/>
+            test="(matches(., 'NO') = true()) and (substring(., 3) castable as xs:integer)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-               test="(matches(.,'[A-Z][A-Z]')= true()) and (substring(.,3) castable as xs:integer)">
+               test="(matches(.,'NO')= true()) and (substring(.,3) castable as xs:integer)">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
