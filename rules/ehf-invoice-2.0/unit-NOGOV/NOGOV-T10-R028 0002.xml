@@ -11,26 +11,25 @@ Error:
 NOGOV-T10-R028 x 10
 
 -->
-<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
-	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+		<b><cbc:IssueDate>30.06.2013</cbc:IssueDate></b>
+		<c><cbc:IssueDate>30-06-2013</cbc:IssueDate></c>
+		<d><cbc:IssueDate>2013-06-30T12:00:00</cbc:IssueDate></d>
 
-	<b><cbc:IssueDate>30.06.2013</cbc:IssueDate></b>
-	<c><cbc:IssueDate>30-06-2013</cbc:IssueDate></c>
-	<d><cbc:IssueDate>2013-06-30T12:00:00</cbc:IssueDate></d>
+		<b><cbc:TaxPointDate>30.06.2013</cbc:TaxPointDate></b>
+		<c><cbc:TaxPointDate>30-06-2013</cbc:TaxPointDate></c>
+		<d><cbc:TaxPointDate>2013-06-30T12:00:00</cbc:TaxPointDate></d>
 
-	<b><cbc:TaxPointDate>30.06.2013</cbc:TaxPointDate></b>
-	<c><cbc:TaxPointDate>30-06-2013</cbc:TaxPointDate></c>
-	<d><cbc:TaxPointDate>2013-06-30T12:00:00</cbc:TaxPointDate></d>
+		<cac:InvoicePeriod>
+			<a><cbc:StartDate>01.06.2013</cbc:StartDate></a>
+			<b><cbc:StartDate>2013-06-01T12:00:00</cbc:StartDate></b>
+			<a><cbc:EndDate>30.06.2013</cbc:EndDate></a>
+			<b><cbc:EndDate>2013-06-30T12:00:00</cbc:EndDate></b>
+		</cac:InvoicePeriod>
 
-	<cac:InvoicePeriod>
-		<a><cbc:StartDate>01.06.2013</cbc:StartDate></a>
-		<b><cbc:StartDate>2013-06-01T12:00:00</cbc:StartDate></b>
-		<a><cbc:EndDate>30.06.2013</cbc:EndDate></a>
-		<b><cbc:EndDate>2013-06-30T12:00:00</cbc:EndDate></b>
-	</cac:InvoicePeriod>
-
-</Invoice>
+	</Invoice>
+</test>
