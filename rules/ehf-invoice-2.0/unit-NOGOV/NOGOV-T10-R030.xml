@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<assert>
+		<scope>NOGOV-T10-R030</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify tax number apply to rules.</description>
+			<success>NOGOV-T10-R030</success>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+			</cac:PartyTaxScheme>
+
+		</Invoice>
+	</test>
+
+	<test>
+		<assert>
+			<description>Trigger error when tax number doesn't apply to rules.</description>
+			<error number="6">NOGOV-T10-R030</error>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>123 456 789MVA</cbc:CompanyID>
+				<cbc:CompanyID>123456789</cbc:CompanyID>
+				<cbc:CompanyID>123 456  789</cbc:CompanyID>
+				<cbc:CompanyID>A23456789MVA</cbc:CompanyID>
+				<cbc:CompanyID>MVA123456789</cbc:CompanyID>
+				<cbc:CompanyID>NO123456789MVA</cbc:CompanyID>
+			</cac:PartyTaxScheme>
+
+		</Invoice>
+	</test>
+</testSet>
