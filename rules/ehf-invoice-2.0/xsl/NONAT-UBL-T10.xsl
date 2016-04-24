@@ -428,7 +428,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[ NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</svrl:text>
+					<svrl:text>[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -464,7 +464,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[ NONAT-T10-R023]-Tax inclusive amount in an invoice SHOULD NOT be negative</svrl:text>
+					<svrl:text>[NONAT-T10-R023]-Tax inclusive amount in an invoice SHOULD NOT be negative</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -477,7 +477,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[ NONAT-T10-R022]-Total payable amount in an invoice SHOULD NOT be negative</svrl:text>
+					<svrl:text>[NONAT-T10-R022]-Total payable amount in an invoice SHOULD NOT be negative</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -495,7 +495,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[ NONAT-T10-R011]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</svrl:text>
+					<svrl:text>[NONAT-T10-R011]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
@@ -513,7 +513,7 @@
 					<axsl:attribute name="location">
 						<axsl:apply-templates select="." mode="schematron-get-full-path"/>
 					</axsl:attribute>
-					<svrl:text>[ NONAT-T10-R016]-Each invoice line MUST contain the product/service name</svrl:text>
+					<svrl:text>[NONAT-T10-R016]-Each invoice line MUST contain the product/service name</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
