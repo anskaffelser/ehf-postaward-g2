@@ -228,10 +228,10 @@
 
         <axsl:choose>
             <axsl:when
-                test="number(translate(substring-before(string(current-date()),'+'),'-','')) &lt;= number(translate(string(cac:ValidityPeriod/cbc:EndDate),'-',''))"/>
+                test="current-date() &lt;= xs:date(cac:ValidityPeriod/cbc:EndDate)"/>
             <axsl:otherwise>
                 <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                    test="number(translate(substring-before(string(current-date()),'+'),'-','')) &lt;= number(translate(string(cac:ValidityPeriod/cbc:EndDate),'-',''))">
+                    test="current-date() &lt;= xs:date(cac:ValidityPeriod/cbc:EndDate)">
                     <axsl:attribute name="flag">fatal</axsl:attribute>
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
