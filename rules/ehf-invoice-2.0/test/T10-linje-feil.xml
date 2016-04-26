@@ -2,13 +2,8 @@
 <!--
                 Content:
                 This file contains a norwegian invoice, profile invoice only
-				
-				XSD error:
-				Error: cvc-complex-type.2.4.a: Invalid content was found starting with element 'cbc:LineExtensionAmount'. 
-				One of '	{"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2":ID}' is expected.
 
                 Errors:
-               	BII2-T10-R017
 				BII2-T10-R018
 				BII2-T10-R019
 				BII2-T10-R032
@@ -16,12 +11,11 @@
 				CL-T10-R003
 				NONAT-T10-R014
 				NOGOV-T10-R025
-
-                
-                Warnings:
-                NOGOV-T10-R003
-                NOGOV-T10-R004
-                NOGOV-T10-R002
+				
+				Warnings:
+NOGOV-T10-R003
+NOGOV-T10-R004
+NOGOV-T10-R002
               
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -168,6 +162,7 @@
 		<cbc:PayableAmount currencyID="NOK">125.00</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
 	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
 		<cbc:LineExtensionAmount currencyID="NOK">100.00</cbc:LineExtensionAmount>
 		<cac:Item>
 			<cbc:Name>Vare A123456789012345678901234567890123456789012345</cbc:Name>
