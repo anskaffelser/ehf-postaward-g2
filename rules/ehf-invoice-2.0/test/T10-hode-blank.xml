@@ -6,11 +6,11 @@
                 Errors:
 				BII2-T10-R039
 				BII2-T10-R051
+				BII2-T10-R058
                 EUGEN-T10-R024 2 times
                 EUGEN-T10-R043
                 NONAT-T10-R001
                 NONAT-T10-R002
-                NONAT-T10-R003
                 NONAT-T10-R008
                 NONAT-T10-R018 2 times
 				NONAT-T10-R025
@@ -20,9 +20,6 @@
 				NOGOV-T10-R011
                 
                 Warnings:
-                BIICORE-T10-R001
-				BIICORE-T10-R404
-				BIIRULE-T10-R007
                 NOGOV-T10-R005
 				NOGOV-T10-R013
 				NOGOV-T10-R001
