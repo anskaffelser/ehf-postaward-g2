@@ -15,7 +15,7 @@ s| AA | Utgående avgift, redusert sats – lav sats | 8%
 s| E | Fritatt for merverdiavgift (avgiftsfritt salg) | 0%
 s| Z | Unntatt fra merverdiavgiftsloven (utenfor merverdiavgiftsloven) | Ingen (0%)
 s| K | Klimakvoter til næringsdrivende eller offentlig virksomhet – kjøper beregner MVA | Ingen (0%)
-|===
+!===
 
 MVA kategori må angis på linjenivå. På hodenivå angis MVA grunnlaget, MVA satsen samt MVA beløpet  pr. MVA kategori  samt totalt MVA beløp.
 
