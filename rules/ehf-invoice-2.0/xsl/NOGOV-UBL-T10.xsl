@@ -1038,6 +1038,21 @@
          </axsl:otherwise>
       </axsl:choose>
 
+      <!--ASSERT -->
+      <axsl:choose>
+         <axsl:when test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/text())) = count(cac:TaxSubtotal)"/>
+         <axsl:otherwise>
+            <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+               test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/text())) = count(cac:TaxSubtotal)">
+               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="location">
+                  <axsl:apply-templates select="." mode="schematron-get-full-path"/>
+               </axsl:attribute>
+               <svrl:text>[NOGOV-T10-R041]- Multiple tax subtotals per tax category is not allowed.</svrl:text>
+            </svrl:failed-assert>
+         </axsl:otherwise>
+      </axsl:choose>
+
       <axsl:apply-templates select="@* | * | comment() | processing-instruction()" mode="M17"/>
    </axsl:template>
    <!--RULE -->
