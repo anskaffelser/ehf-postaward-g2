@@ -70,7 +70,6 @@
 
 		</Invoice>
 	</test>
-	
 	<test>
 		<assert>
 			<description>Verify that code 'Z' and 'Z ' triggers warning (normalize-space).</description>
