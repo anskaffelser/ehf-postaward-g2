@@ -1040,10 +1040,10 @@
 
       <!--ASSERT -->
       <axsl:choose>
-         <axsl:when test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/text())) = count(cac:TaxSubtotal)"/>
+         <axsl:when test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-               test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/text())) = count(cac:TaxSubtotal)">
+               test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)">
                <axsl:attribute name="flag">warning</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
