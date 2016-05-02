@@ -3,6 +3,7 @@
 
     <testfolder>test</testfolder>
     <testfolder>unit-OPENPEPPOL</testfolder>
+    <testfolder>unit-NOGOV</testfolder>
 
     <configuration>
         <identifier>ehf-t14-base-2.0</identifier>

@@ -10,6 +10,9 @@
         NOGOV-T14-R026 4 times
         NOGOV-T14-R024 4 times
 
+        Warnings:
+        NOGOV-T14-R041
+
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
