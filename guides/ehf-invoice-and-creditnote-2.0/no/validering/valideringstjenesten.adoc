@@ -2,19 +2,5 @@
 
 Difis Validator er et program som brukes til å validere EHF XML-filer.
 
-Validatoren leser en XML-fil og validerer den mot et sett av valideringstrinn (ref. kapittel 8.1). For hvert av disse trinnene akkumuleres potensielle advarsler og feil.  Etter at validatoren er ferdig vil den returnere en XML-fil med potensielle meldinger.
-
-Validatoren opererer på tre tjenestenivåer, disse er:
-
-Klipp og lim::
-Her kan man «lime inn» XML koden og får den validert mot et gitt regelsett.
-
-Last opp fil::
-Denne tjenesten laster opp en XML-fil fra datamaskin og validerer den mot et gitt regelsett.
-
-Webservice::
-I denne tjenesten kan man sendt inn XML-filen for validering. Dersom versjon av EHF ikke er oppgitt, vil den validere mot siste versjon.
-
-Validatoren vil også være tilgjengelig som åpen kildekode. Denne kan lastes ned fra følgende nettsted:
--	VEFAvalidatorApplikasjon https://github.com/difi/VEFAvalidatorApp
--	VEFAvalidatorConfigurasjon og veileder https://github.com/difi/VEFAvalidatorConf
+Informasjon om tjenesten her:
+https://vefa.difi.no/ehf/knowledge-base/validation/

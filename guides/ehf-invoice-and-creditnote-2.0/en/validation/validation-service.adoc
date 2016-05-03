@@ -2,18 +2,5 @@
 
 Difi's Validator is an application program used to validate EHF XML-files.
 
-The Validator reads an XML-file and validates it against a set of validation rules and levels. For each of these levels, any warnings and error messages are accumulated and presented in a separate XML-file.
-The Validator operates on 3 service levels:
-
-Cut and paste::
-Paste your own XML tags (your file) to validate against the default set of rules.
-
-Upload your file::
-Upload your XML-file and validate it against the default set of rules.
-
-Web service::
-Call the web service, supply your file and specify which EHF version it is based on. If the version is not specified, the file is assumed to be based on the latest version.
-
-The Validator is available as open source code, downloadable from this address:
-*	VEFAvalidatorApplication https://github.com/difi/VEFAvalidatorApp
-*	VEFAvalidatorConfiguration and guide https://github.com/difi/VEFAvalidatorConf
+Further information can be found here:
+https://vefa.difi.no/ehf/knowledge-base/validation/
