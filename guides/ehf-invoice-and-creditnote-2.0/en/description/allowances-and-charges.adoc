@@ -3,7 +3,7 @@
 . Several allowances and charges may be supplied both on header level and line level. For the Price element the validation routine will produce a warning if more than one occurrence of AllowanceCharge is present. The element AllowanceCharge with sub element AllowanceIndicator indicates whether the instance is a charge (true) or an allowance (false).
 . Specification of VAT for allowances and charges, AllowanceCharge/TaxCategory with sub elements,  may be supplied both on the header level and on the line level, but not for the Price element. Since allowances and charges on the Price element simply information, there is no VAT calculation on those.
 . The sum of all allowances and charges on the header level must be specified in AllowanceTotalAmount and ChargeTotalAmount respectively (Ref. chap.  6.2.1.1.3).
-. The sum of all allowances and charges on the line level must be taken into account, subtracted or added, when calculating the LineTotalAmount . These line level allowances and charges must not be calculated into the header level elements.
+. The sum of all allowances and charges on the line level must be taken into account, subtracted or added, when calculating the LineExtensionAmount . These line level allowances and charges must not be calculated into the header level elements.
 . Allowances and charges related to Price shall not be part of any other calculations.
 . Allowances and charges related to Price may specify amount (AllowanceCharge/Amount), base amount (AllowanceCharge/BaseAmount) and a multiplier (AllowanceCharge/MultiplierFactorNumeric).
 
