@@ -11,6 +11,8 @@ Editorial changes:
 * Changed description of Your ref [Github issue 99](https://github.com/difi/vefa-validator-conf/issues/99)
 * Added recommondation that PEPPOL BIS is only used in cases where one of the parties are foreign (cross border trade) [Github issue 71](https://github.com/difi/vefa-validator-conf/issues/71)
 * Changed text in chapter 6.2 from LineTotalAmount to LineExtensionAmount [Github issue 134](https://github.com/difi/vefa-validator-conf/issues/134)
+* Low VAT rate (category AA) changed from 8 to 10%, in chapter 6.6 [Github issue 135](https://github.com/difi/vefa-validator-conf/issues/135)
+
 
 ## 2.0.5 (01.09.2015)
 

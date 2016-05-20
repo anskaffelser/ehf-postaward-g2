@@ -9,6 +9,7 @@ Validator endringer:
 Editorielle endringer:
 * Tydeliggjøring av bruk av deres ref [Github issue 99](https://github.com/difi/vefa-validator-conf/issues/99)
 * Tydeliggjøring av anbefaling om at PEPPOL BIS kun brukes dersom en av aktørene er utenlandske [Github issue 71](https://github.com/difi/vefa-validator-conf/issues/71)
+* Lav mva sats (kategori AA) endret fra 8 til 10% i kapittel 6.6 [Github issue 135](https://github.com/difi/vefa-validator-conf/issues/135)
 
 
 

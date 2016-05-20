@@ -11,7 +11,7 @@ VAT categories used in Norway as of july 1, 2013 are specified in the table belo
 s| S | Outgoing VAT, ordinary rate | 25%
 s| H | Outgoing VAT, reduced rate – food & beverage | 15%
 s| R | Outgoing VAT, reduced rate  – raw fish | 11,11%
-s| AA | Outgoing VAT, low rate | 8%
+s| AA | Outgoing VAT, low rate | 10%
 s| E | VAT excempt | 0%
 s| Z | VAT excempt (Goods and services not included in the VAT regulations) | None (0%)
 s| K | Emission allowances for private or public businesses  – buyer calculates VAT | None (0%)
