@@ -7,6 +7,7 @@
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0</customizationId>
         <inherit>ubl-orderresponse-2.1</inherit>
+        <inherit>ehf-t76-stylesheet-1.0</inherit>
         <file path="xsl/NOGOV-UBL-T76.xsl" />
         <file path="xsl/BIIRULES-UBL-T76.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T76.xsl" />
