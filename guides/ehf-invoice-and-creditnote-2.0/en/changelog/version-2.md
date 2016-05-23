@@ -6,6 +6,7 @@ Changes in validator:
 * Check to ensure all document level amounts have maximum 2 decimals [Github issue 125](https://github.com/difi/vefa-validator-conf/issues/125)
 * Check to ensure a norwegian organisational number is 9 digits if schemeID = NO:ORGNR [Github issue 114](https://github.com/difi/vefa-validator-conf/issues/114)
 * Check to verify that if allowance or charge is sent on document level, the element for total allowance or charge exists [Github issue 116](https://github.com/difi/vefa-validator-conf/issues/116)
+* Check to verify that only one TaxSubtotal exists per TaxCategory in TaxTotal. Implemented as warning identified as NOGOV-T10-R041 and NOGOV-T14-R041. [Github issue 133](https://github.com/difi/vefa-validator-conf/issues/133)
 
 Editorial changes:
 * Changed description of Your ref [Github issue 99](https://github.com/difi/vefa-validator-conf/issues/99)

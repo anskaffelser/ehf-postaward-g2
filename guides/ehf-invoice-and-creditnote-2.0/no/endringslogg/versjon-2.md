@@ -5,6 +5,7 @@ Validator endringer:
 * Sjekker at alle beløp på dokumentnivå kun har to desimaler [Github issue 125](https://github.com/difi/vefa-validator-conf/issues/125)
 * Sjekker at et organisasjonsnummer er 9 siffer, dersom schemeID = NO:ORGNR [Github issue 114](https://github.com/difi/vefa-validator-conf/issues/114)
 * Sjekker at dersom det er oppgitt rabatt/gebyr på dokumentnivå, så finnes elementer for totale gebyrer/rabatter [Github issue 116](https://github.com/difi/vefa-validator-conf/issues/116)
+* Sjekker at det det er en TaxSubtotal per TaxCategory i TaxTotal. Implementert som advarsel og er identifisert som NOGOV-T10-R041 og NOGOV-T14-R041. [Github issue 133](https://github.com/difi/vefa-validator-conf/issues/133)
 
 Editorielle endringer:
 * Tydeliggjøring av bruk av deres ref [Github issue 99](https://github.com/difi/vefa-validator-conf/issues/99)
