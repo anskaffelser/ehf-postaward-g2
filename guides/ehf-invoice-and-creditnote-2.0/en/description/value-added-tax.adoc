@@ -4,7 +4,7 @@ VAT categories used in Norway as of july 1, 2013 are specified in the table belo
 
 [cols="1,5,2",options="header"]
 !===
-| VAT categori
+| VAT category
 | Description
 | Rate as of july 1, 2013
 
