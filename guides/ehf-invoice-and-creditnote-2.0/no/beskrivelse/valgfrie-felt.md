@@ -1,5 +1,0 @@
-# Bruk av valgfrie felt
-
-Mottakers system  må kunne forholde seg til alle felt på en faktura (inkludert alle valgfrie) og minimum kunne vise alle utfylte element for kontroll og attestering.
-
-Dynamisk visning av faktura og kreditnota vil utvikles av Difi.

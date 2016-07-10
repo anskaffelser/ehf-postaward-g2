@@ -1,0 +1,19 @@
+= Validation
+
+To optimize the flexibility in the validation process, each EHF document is validated in different stages with shifting focus in every stage. The pyramid below illustrates the different stages.
+
+image::images/validation.png[Pyramid of Validation]
+
+:leveloffset: +1
+
+include::validation-principles.adoc[]
+
+include::dynamic-validation.adoc[]
+
+= Validation Rules per ProfileID and CustomizationID
+
+= Validation Rules
+
+include::validation-service.adoc[]
+
+:leveloffset: -1

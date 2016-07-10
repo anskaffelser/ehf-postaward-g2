@@ -1,3 +1,0 @@
-# Generelt om fakturameldingene
-
-De elektroniske meldingene som denne veilederen omfatter er faktura og kreditnota. Meldingene setter en leverandør  i stand til å sende en faktura  til kunde som på sin side får i oppdrag å betale denne. 

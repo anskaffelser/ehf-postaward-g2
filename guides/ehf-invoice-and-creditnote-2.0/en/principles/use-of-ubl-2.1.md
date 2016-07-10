@@ -1,3 +1,0 @@
-# Use of UBL 2.1
-
-This version of EHF Invoice and Creditnote is based on UBL XML schema version 2.1.  Previous versions of the EHF Invoice and Creditnote used UBL version 2.0.

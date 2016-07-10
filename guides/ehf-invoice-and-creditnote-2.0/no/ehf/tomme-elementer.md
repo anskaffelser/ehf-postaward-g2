@@ -1,5 +1,0 @@
-# Tomme elementer
-
-Bruk av tomme elementer er ikke lov i UBL, som EHF er basert på. Dette skyldes at tomme elementer kan tolkes til å ha mening, f.eks. at et element ikke er tilgjengelig ved utsendelse. I tillegg vil numeriske felt og datofelt ha krav til innhold som vil feile i validering dersom de sendes som tomme elementer.
-
-**Bruk av tomme elementer er derfor ikke tillatt i EHF.**

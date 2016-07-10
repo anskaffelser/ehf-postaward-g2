@@ -1,4 +1,4 @@
-# Valideringstjenesten
+= Valideringstjenesten
 
 Difis Validator er et program som brukes til å validere EHF XML-filer.
 

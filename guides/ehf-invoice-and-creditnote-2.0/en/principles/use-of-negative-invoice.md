@@ -1,5 +1,0 @@
-# Use of Negative Invoice
-
-Negative invoice is an invoice where the total invoiced amount is less than zero. This version of EHF Invoice accepts that, but Difi’s validation service will give a warning message. Earlier it gave an error message.
-
-A negative invoice must not be confused with a credit note. A negative invoice invoices the sale of new goods or services. A credit note resets or repays all or part of a previously received invoice.

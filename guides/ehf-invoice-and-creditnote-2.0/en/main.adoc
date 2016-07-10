@@ -1,0 +1,96 @@
+= EHF Invoice and Creditnote {version}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:sectnums:
+:version: 2.0.7
+
+:leveloffset: +1
+
+include::background.adoc[]
+
+= Changelog
+
+:leveloffset: +1
+
+include::changelog/consequences.adoc[]
+
+include::changelog/version-2.adoc[]
+
+// include::changelog/version-1.adoc[]
+
+:leveloffset: -1
+
+include::ehf/index.adoc[]
+
+include::definitions.adoc[]
+
+include::principles/index.adoc[]
+
+:leveloffset: +1
+
+include::principles/invoice-messages-in-general.adoc[]
+
+include::principles/functionality-and-roles.adoc[]
+
+include::principles/profiles-and-messages.adoc[]
+
+include::principles/use-of-ubl-2.1.adoc[]
+
+include::principles/invoicing-process.adoc[]
+
+include::principles/use-of-negative-invoice.adoc[]
+
+include::principles/financial-advance-vs-on-account-invoicing.adoc[]
+
+:leveloffset: -1
+
+include::description/index.adoc[]
+
+:leveloffset: +1
+
+include::description/roles-and-actor.adoc[]
+
+include::description/allowances-and-charges.adoc[]
+
+include::description/price-and-line-amount.adoc[]
+
+include::description/rounding.adoc[]
+
+include::description/use-of-supplier-and-customer-contacts.adoc[]
+
+include::description/value-added-tax.adoc[]
+
+include::description/special-taxes-charges.adoc[]
+
+include::description/order-number-reference.adoc[]
+
+include::description/contract-number.adoc[]
+
+include::description/accounting-information.adoc[]
+
+include::description/attachments.adoc[]
+
+include::description/other-use-of-additional-document-reference.adoc[]
+
+include::description/invoicing-of-consumers-b2c.adoc[]
+
+include::description/delivery-details.adoc[]
+
+include::description/use-of-party-tax-scheme-for-accounting-supplier-party.adoc[]
+
+include::description/bank-account.adoc[]
+
+include::description/endpointid-legal-registrationid.adoc[]
+
+include::description/tax-representative.adoc[]
+
+include::description/optional-elements.adoc[]
+
+:leveloffset: -1
+
+include::validation/index.adoc[]
+
+include::appendix.adoc[]

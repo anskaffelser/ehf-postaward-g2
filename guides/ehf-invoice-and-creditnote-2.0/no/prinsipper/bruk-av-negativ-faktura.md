@@ -1,5 +1,0 @@
-# Bruk av negativ faktura
-
-Negativ faktura er når fakturaens totalsum er mindre en null. Denne versjonen av EHF Faktura tillater dette, men Difis validator vil gi en advarsel ved validering.
-
-En kreditnota nullstiller hele eller deler av en tidligere sendt faktura, mens en negativ faktura er en faktura som i tillegg til salg av nye varer og/eller tjenester også inneholder andre poster (for eksempel retur av varer) som medfører at totalen blir mindre enn null.

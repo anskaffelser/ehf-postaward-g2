@@ -1,0 +1,19 @@
+= EHF Release {release}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:release: 2016-05-23
+
+== Norsk
+
+=== EHF Faktura og kreditnota 2.0.6
+
+include::../../ehf-invoice-and-creditnote-2.0/no/endringslogg/{release}-2.0.6.adoc[]
+
+== English
+
+=== EHF Invoice and Creditnote 2.0.6
+
+include::../../ehf-invoice-and-creditnote-2.0/en/changelog/{release}-2.0.6.adoc[]

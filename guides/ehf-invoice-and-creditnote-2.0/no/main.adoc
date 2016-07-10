@@ -1,0 +1,97 @@
+= EHF faktura og kreditnota {version}
+:icons: font
+:toc: left
+:toclevels: 2
+:toc-title: Innholdsfortegnelse
+:source-highlighter: coderay
+:sectanchors:
+:sectnums:
+:version: 2.0.7
+
+:leveloffset: +1
+
+include::bakgrunn.adoc[]
+
+= Endringslogg
+
+:leveloffset: +1
+
+include::endringslogg/konsekvenser.adoc[]
+
+include::endringslogg/versjon-2.adoc[]
+
+// include::endringslogg/versjon-1.adoc[]
+
+:leveloffset: -1
+
+include::ehf/index.adoc[]
+
+include::definisjoner.adoc[]
+
+include::prinsipper/index.adoc[]
+
+:leveloffset: +1
+
+include::prinsipper/generelt-om-fakturameldingene.adoc[]
+
+include::prinsipper/funksjoner-og-roller.adoc[]
+
+include::prinsipper/profiler-og-meldinger.adoc[]
+
+include::prinsipper/bruk-av-ubl-2.1.adoc[]
+
+include::prinsipper/faktureringsprosessen.adoc[]
+
+include::prinsipper/bruk-av-negativ-faktura.adoc[]
+
+include::prinsipper/finansielt-forskudd-vs-a-konto-faktura.adoc[]
+
+:leveloffset: -1
+
+include::beskrivelse/index.adoc[]
+
+:leveloffset: +1
+
+include::beskrivelse/roller-og-aktorer.adoc[]
+
+include::beskrivelse/rabatter-og-gebyrer.adoc[]
+
+include::beskrivelse/pris-og-linjesum.adoc[]
+
+include::beskrivelse/avrunding.adoc[]
+
+include::beskrivelse/leverandor-og-kjoperreferanse.adoc[]
+
+include::beskrivelse/merverdiavgift.adoc[]
+
+include::beskrivelse/saeravgift.adoc[]
+
+include::beskrivelse/ordre-bestillingsnummer.adoc[]
+
+include::beskrivelse/kontraktsnummer.adoc[]
+
+include::beskrivelse/konteringsstrengen.adoc[]
+
+include::beskrivelse/vedleggshandtering.adoc[]
+
+include::beskrivelse/andre-dokumentreferanser.adoc[]
+
+include::beskrivelse/fakturering-av-forbrukere-b2c.adoc[]
+
+include::beskrivelse/leveringsdetaljer.adoc[]
+
+include::beskrivelse/leverandorens-mva-nummer.adoc[]
+
+include::beskrivelse/utfylling-av-bankkontonummer.adoc[]
+
+include::beskrivelse/endepunktid-organisasjonsnummer.adoc[]
+
+include::beskrivelse/selgers-mva-representant.adoc[]
+
+include::beskrivelse/valgfrie-felt.adoc[]
+
+:leveloffset: -1
+
+include::validering/index.adoc[]
+
+include::vedlegg.adoc[]

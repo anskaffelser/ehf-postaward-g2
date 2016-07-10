@@ -1,0 +1,37 @@
+[cols="1,9,2"]
+|===
+| Issue | Description | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/125[#125]
+| Check to ensure all document level amounts have maximum 2 decimals.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/114[#114]
+| Check to ensure a norwegian organisational number is 9 digits if schemeID = NO:ORGNR.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/116[#116]
+| Check to verify that if allowance or charge is sent on document level, the element for total allowance or charge exists.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/133[#133]
+| Check to verify that only one TaxSubtotal exists per TaxCategory in TaxTotal. Implemented as warning identified as NOGOV-T10-R041 and NOGOV-T14-R041.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/99[#99]
+| Changed description of Your ref.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/71[#71]
+| Added recommondation that PEPPOL BIS is only used in cases where one of the parties are foreign (cross border trade).
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/134[#134]
+| Changed text in chapter 6.2 from LineTotalAmount to LineExtensionAmount.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/135[#135]
+| Low VAT rate (category AA) changed from 8 to 10%, in chapter 6.6.
+| Guide
+
+|===

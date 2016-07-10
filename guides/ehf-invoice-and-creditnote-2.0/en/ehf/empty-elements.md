@@ -1,5 +1,0 @@
-# Empty Elements
-
-The use of empty elements is prohibited in UBL, which is the base for EHF. The reason for this, is that empty elements may be interpreted to have a certain meaning, it could mean that the information was not available at the time of sending as an example. In addition, numeric- and date elements have requirements that would generate validation errors if they were empty.
-
-**The use of empty elements is, for the above mentioned reasons, not allowed in EHF.**

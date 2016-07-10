@@ -9,7 +9,7 @@ If external link is used, the buyer is committed to download the information con
 
 Additional recommendations:
 
-Coding:::
+Coding::
 Base64
 Document format::
 MIME types:
@@ -19,9 +19,9 @@ MIME types:
 * TIFF – image / tiff
 * JPEG, JPG – image / jpeg
 * PNG – image / png
-Size:::
+Size::
 5MB
-Description of attachment:::
+Description of attachment::
 It is advised to supply a good description of each attachment and the element to use is: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
 Should only be used for description of the document content.
 

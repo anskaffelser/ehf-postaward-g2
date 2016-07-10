@@ -1,0 +1,137 @@
+= Version 1.x
+
+:sectnums!:
+
+== Version 1.6 (16.01.2013)
+
+* English version
+
+Authors:
+
+* Gunnar Stensby, Edisys
+
+
+== Version 1.6.1 (14.01.2013)
+
+* Adding a colon in CustomizationID.
+* Allow more than one occurrence of AllowanceCharge under Price.
+* Accounting string on InvoiceLine is changed from recommended to optional.
+* Urge to not use optional Note elements.
+* Text adjustments.
+
+Authors:
+
+* Olav A. Kristiansen, Difi
+* Jostein Frømyr, Edisys
+* Erik Gustavsen, Edisys
+
+
+== Version 1.6 (02.01.2013)
+
+Several adjustments and clarifications about:
+* Endpoint ID
+* Organisation number
+* VAT-number
+* Allowances
+* Charges
+* Amount
+* Rounding rules description
+* Profiles and messages
+
+In addition introducing technical and functional modifications for
+
+* Allowing negative invoice
+* Delivery Address on invoice line
+* Support for Norwegian profiles
+* Mandatory elements made optional (StreetAddress for supplier and customer)
+* Introduced recommended elements (LegalEntityName for supplier and customer)
+
+Authors:
+
+* Olav A. Kristiansen, Difi
+* Jostein Frømyr, Edisys
+* Erik Gustavsen, Edisys
+
+
+== Version 1.5 (30.11.2011)
+
+* Updated preview for invoice where PaymentMeans is repeatable (appendix 5)
+* Updated all test files. Updated XSLT for credit note for preview of appendix (appendices 5 and 8).
+* Updated structure tables (appendix 1)
+* Updated message matrices with better descriptions (appendix 2) and correction of XPath for mapping from e2b to EHF
+* Updated unit code list adding some Norwegian translations (appendix 3)
+* Updated validation help files (schematron, xslt) (Vefa page)
+* New appendix about validation rules (appendix 10)
+* Updated validation text in chapter 3.2
+* Updated text; VAT rate increased from 14% to 15%, chapter 4.3
+* Updated text; format of OrderReference at line level, for chapter 4.5
+* Updated text; recommendation for appendices description, chapter 4.8
+* Credit note message may include attached files
+* New paragraph in chapter 4.9 about the use of document reference
+* New paragraph in chapter 4.10 about allowances and charges
+* New paragraph in 4.11 about PartyTaxScheme for supplier
+* Updated text; infrastructure for exchanging EHFs, chapter 6.6
+
+Authors:
+
+* Bao Nguyen, Difi
+
+
+== Version 1.4 (18.04.2011)
+
+* 4.8 Recommendation for the use of appendices
+
+Authors:
+
+* Bao Nguyen, Difi
+
+
+== Version 1.3 (25.03.2011)
+
+* Name change
+* New appendix with Xpath to mandatory and recommended elements.
+
+Authors:
+
+* Bao Nguyen, Difi
+
+
+== Version 1.2 (24.02.2011)
+
+* Correcting chapter 3.1.1 (Bank Account No becomes mandatory)
+
+Authors:
+
+* Bao Nguyen, Difi
+
+
+== Version 1.1 (20.01.2011)
+
+* Correcting chapters  3.1.1, 3.1.2, 3.2
+* Appendices 1, 2 and 5 (new data element: TaxCategory in  Allowance Charge) English version
+* Test files
+
+Authors:
+
+* Bao Nguyen, Difi
+* Kristin V. Gulbrandsen, Difi
+
+
+== Version 1.01 (04.05.2010)
+
+* Correcting definitions
+
+Authors:
+
+* Bao Nguyen, Difi
+
+
+== Version 1.0 (27.04.2010)
+
+* Final version
+
+Authors:
+
+* Bao Nguyen, Difi
+
+:sectnums:

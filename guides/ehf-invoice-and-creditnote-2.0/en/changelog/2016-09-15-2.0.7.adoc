@@ -1,0 +1,9 @@
+[cols="1,9,2"]
+|===
+| Issue | Description | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/145[#145]
+| Converting guide to Asciidoctor format.
+| Guide
+
+|===
