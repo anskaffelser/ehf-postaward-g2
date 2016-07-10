@@ -2,9 +2,8 @@
 
 Prisen på en varelinje er eksklusiv eventuelle rabatter og gebyrer på varelinjenivå, men inklusive rabatt/gebyr på prisnivå. Se også ytterligere spesifisering av rabatt/gebyr i kapitttel 6.2.
 
-Eksempel ved rabatt på linjenivå:
-
 [source,xml]
+.Eksempel ved rabatt på linjenivå
 ----
 <cac:InvoiceLine>
 	<cbc:ID>1</cbc:ID>
@@ -51,9 +50,8 @@ Eksempel ved rabatt på linjenivå:
 ----
 <1> Her er gebyret angitt på linjenivå, og må derfor medtas ved beregning av linjesum. Linjesum = (1*1261)+12 =1273
 
-Eksempel ved rabatt på prisnivå:
-
 [source,xml]
+.Eksempel ved rabatt på prisnivå
 ----
 <cac:InvoiceLine>
 	<cbc:ID>3</cbc:ID>

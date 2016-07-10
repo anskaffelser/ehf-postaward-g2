@@ -205,9 +205,8 @@ s| Payable amount >| 4474,00
 
 === XML for Invoice Lines
 
-Line 1
-
 [source,xml]
+.Line 1
 ----
 <cbc:ID>1</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">24.00</cbc:InvoicedQuantity>
@@ -239,9 +238,8 @@ Line 1
 </cac:Price>
 ----
 
-Line 2
-
 [source,xml]
+.Line 2
 ----
 <cbc:ID>2</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>
@@ -273,9 +271,8 @@ Line 2
 </cac:Price>
 ----
 
-Line 3
-
 [source,xml]
+.Line 3
 ----
 <cbc:ID>3</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">21.00</cbc:InvoicedQuantity>

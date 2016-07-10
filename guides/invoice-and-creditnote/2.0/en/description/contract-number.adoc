@@ -3,6 +3,7 @@
 To reference or match an invoice to a signed purchase contract, the contract number could be specified like this:
 
 [source,xml]
+.Example
 ----
 <cac:ContractDocumentReference>
 	<cbc:ID>Kontrakt 321</cbc:ID>

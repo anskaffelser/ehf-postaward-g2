@@ -1,18 +1,18 @@
-= Versjon 2.x
+= Versjon 2.x [[changelog-2.x]]
 
 :sectnums!:
 
-== Versjon 2.0.7 (tentativ 15.09.2016)
+== Versjon 2.0.7 (tentativt 15.09.2016) [[changelog-2.0.7]]
 
 include::2016-09-15-2.0.7.adoc[]
 
 
-== Versjon 2.0.6 (23.05.2016)
+== Versjon 2.0.6 (23.05.2016) [[changelog-2.0.6]]
 
 include::2016-05-23-2.0.6.adoc[]
 
 
-== Versjon 2.0.5 (01.05.2015)
+== Versjon 2.0.5 (01.05.2015) [[changelog-2.0.5]]
 
 Validator endringer:
 
@@ -34,7 +34,7 @@ Forfatter:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Hotfix (15.04.2015)
+== Hotfix (15.04.2015) [[changelog-hotfix-2015-04-15]]
 
 Fjernet  validering av schemeID for ClassifiedTaxCategory på faktura og kreditnota, da denne brøt mot bakoverkompatibilitet
 
@@ -43,7 +43,7 @@ Forfatter:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Versjon 2.0.4 (01.03.2015)
+== Versjon 2.0.4 (01.03.2015) [[changelog-2.0.4]]
 
 Validator endringer:
 
@@ -62,7 +62,7 @@ Forfatter:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Versjon 2.0.3 (01.12.2014)
+== Versjon 2.0.3 (01.12.2014) [[changelog-2.0.3]]
 
 Validator-endringer:
 
@@ -87,7 +87,7 @@ Forfatter:
 * Yngve Pettersen, Edisys Consulting AS
 
 
-== Versjon 2.0.2 (29.09.2014)
+== Versjon 2.0.2 (29.09.2014) [[changelog-2.0.2]]
 
 Endret regel for leverandørs MVA nummer, for å tillate fakturaer fra bedrifter som ikke er registrert i MVA-registeret. Editoriske endringer i vedlegg 3
 
@@ -96,7 +96,7 @@ Forfatter:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Versjon 2.0.1 (19.08.2014)
+== Versjon 2.0.1 (19.08.2014) [[changelog-2.0.1]]
 
 Tillat med fakturadato frem i tid, for bade faktura og kreditnota. NONAT-T10-R009 og NONAT-T14-R005 endret fra feil til advarsel. Lagt inn ny regel for å kontrollere at verdiene i Profil ID er korrekte.
 
@@ -104,7 +104,7 @@ Forfatter:
 
 * Siw Meckelborg, Edisys Consulting AS
 
-== Versjon 2.0 (07.05.2014)
+== Versjon 2.0 (07.05.2014) [[changelog-2.0.0-r1]]
 
 Endringer, både faktura og kreditnota:
 
@@ -135,7 +135,7 @@ Forfatter:
 * Trond Bertil Barstad, Edisys
 
 
-== Versjon 2.0 (30.05.2013)
+== Versjon 2.0 (30.05.2013) [[changelog-2.0.0]]
 
 Utvidelser, både faktura og kreditnota:
 

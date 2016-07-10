@@ -1,16 +1,16 @@
-= Version 2.x
+= Version 2.x [[changelog-2.x]]
 
 :sectnums!:
 
-== Version 2.0.7 (Tentative 15.09.2016)
+== Version 2.0.7 (Tentative 15.09.2016) [[changelog-2.0.7]]
 
 include::2016-09-15-2.0.7.adoc[]
 
-== Version 2.0.6 (23.05.2016)
+== Version 2.0.6 (23.05.2016) [[changelog-2.0.6]]
 
 include::2016-05-23-2.0.6.adoc[]
 
-== Version 2.0.5 (01.09.2015)
+== Version 2.0.5 (01.09.2015) [[changelog-2.0.5]]
 
 [cols="10,2"]
 |===
@@ -41,7 +41,7 @@ Authors:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Hotfix (15.04.2015)
+== Hotfix (15.04.2015) [[changelog-hotfix-2016-04-15]]
 
 Removed  validation on schemeID for ClassifiedTaxCatagory for both invoice and creditnote as this was breaking backwards compatibility.
 
@@ -50,7 +50,7 @@ Authors:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 2.0.4 (01.03.2015)
+== Version 2.0.4 (01.03.2015) [[changelog-2.0.4]]
 
 Changes in validator:
 
@@ -69,7 +69,7 @@ Authors:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 2.0.3 (01.12.2014)
+== Version 2.0.3 (01.12.2014) [[changelog-2.0.3]]
 
 Changes in validator:
 
@@ -94,7 +94,7 @@ Authors:
 * Yngve Pettersen, Edisys Consuling AS
 
 
-== Version 2.0.2 (29.09.2014)
+== Version 2.0.2 (29.09.2014) [[changelog-2.0.2]]
 
 Change in rule for Sellers VAT number, to allow invoices and credit notes for companies not registered for VAT
 
@@ -105,7 +105,7 @@ Authors:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 2.0.1 (19.08.2014)
+== Version 2.0.1 (19.08.2014) [[changelog-2.0.1]]
 
 Allowing for issue date set to future date for both invoice and credit note. NONAT-T10-R009 and  NONAT-T14-R005 changed from Fatal error to warning.
 
@@ -116,7 +116,7 @@ Authors:
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 2.0 (07.05.2014)
+== Version 2.0 (07.05.2014) [[changelog-2.0.0-r1]]
 
 Changes, invoice and credit note:
 
@@ -148,7 +148,7 @@ Authors:
 * Trond Bertil Barstad, Edisys Consulting AS
 
 
-== Version 2.0 (30.05.2013)
+== Version 2.0 (30.05.2013) [[changelog-2.0.0]]
 
 Extensions,  invoice and creditnote:
 

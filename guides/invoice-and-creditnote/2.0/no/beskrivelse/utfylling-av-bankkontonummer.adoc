@@ -2,9 +2,8 @@
 
 Det anbefales at både BBAN (Basic Bank Account Number) og IBAN (International Bank Account Number) angis når begge er tilgjengelige. BBAN bør angis først i XML instansdokumentet. Dersom det er et norsk kontonummer anbefales det alltid å oppgi BBAN.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:PaymentMeans>
 	<cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>

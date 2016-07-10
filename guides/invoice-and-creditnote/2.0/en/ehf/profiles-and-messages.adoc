@@ -4,24 +4,30 @@ In line with the underlying methodology for the EHF formats (cf. www.cenbii.eu) 
 
 CEN BII has defined a profile as “A specification of how one or more Business Processes are executed by specifying the business rules governing its business collaborations and the information content (data model) of the electronic business transactions exchanged.”
 
-If possible, the EHF is using profiles prepared by BII (ref www.cenbii.eu) or PEPPOL (cf. www.peppol.eu). Examples of relevant profiles are:
+If possible, the EHF is using profiles prepared by link:{link-cen-bii}[BII] or link:{link-peppol}[PEPPOL]. Examples of relevant profiles are:
 
-Invoice only (bii04):::
-* Invoice
-Credit note only (biixx):::
-* Credit note
-Invoice and credit note (bii05):::
-* Invoice
-* Credit note
-Invoice, credit note and reminder (biixy):::
-* Invoice
-* Credit note
-* Reminder
-Order and invoice (bii06):::
-* Order
-* Order response
-* Invoice
-* Credit note
+[cols="3,5", options="header"]
+|===
+
+| Profile
+| Document types
+
+| Invoice only (bii04)
+| Invoice
+
+| Credit note only (biixx)
+| Credit note
+
+| Invoice and credit note (bii05)
+| Invoice, Credit note
+
+| Invoice, credit note and reminder (biixy)
+| Invoice, Credit note, Reminder
+
+| Order and invoice (bii06)
+| Order, Order response, Invoice, Credit note
+
+|===
 
 The messages being exchanged within a profile are customized to comply with the requirements given for that particular business document.
 

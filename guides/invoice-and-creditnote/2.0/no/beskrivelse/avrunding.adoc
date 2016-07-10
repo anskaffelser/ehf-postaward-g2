@@ -203,9 +203,8 @@ s| Betalingsbeløp >| 4474,00
 
 === XML for fakturalinjer
 
-Linje 1
-
 [source,xml]
+.Linje 1
 ----
 <cbc:ID>1</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">24.00</cbc:InvoicedQuantity>
@@ -237,9 +236,8 @@ Linje 1
 </cac:Price>
 ----
 
-Linje 2
-
 [source,xml]
+.Linje 2
 ----
 <cbc:ID>2</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>
@@ -271,9 +269,8 @@ Linje 2
 </cac:Price>
 ----
 
-Linje 3
-
 [source,xml]
+.Linje 3
 ----
 <cbc:ID>3</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">21.00</cbc:InvoicedQuantity>

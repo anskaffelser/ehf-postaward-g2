@@ -4,8 +4,8 @@ The customer will issue an order with a unique order number. This unique custome
 
 If the order reference is specified on the header level (OrderReference), the assumption is that the invoice is based on one order only. If order reference is stated at header level, the order reference element on line level is used to state the order line numbers.
 
-Example:
 [source,xml]
+.Example
 ----
 <cac:OrderReference>
 	<cbc:ID>123456</cbc:ID>

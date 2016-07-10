@@ -2,9 +2,8 @@
 
 Selgers MVA-representant er aktuelt for selgere som leverer varer og tjenester i Norge, men som ikke har fast driftssted i Norge. I slike tilfeller må MVA-representantens navn og adresse oppgis i fakturaen.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:TaxRepresentativeParty>
 	<cac:PartyName>

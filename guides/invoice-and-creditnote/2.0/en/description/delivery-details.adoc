@@ -8,8 +8,8 @@ Place of delivery is recommended, and should be sent unless the place of deliver
 
 The delivery element contains an identifer (DeliveryLocation/ID) which may be used if the place of delivery is  defined through an identifier.  Examples are GLN (Global Location Number) or GSRN (Global Service Relationship Number) both issued by GS1.  GSRN is used in the norwegian market for identifying  measuring points in the energy sector.  Ref. appendix 7.
 
-Example:
 [source,xml]
+.Example
 ----
 <cac:Delivery>
   <cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>

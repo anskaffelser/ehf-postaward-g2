@@ -8,9 +8,8 @@ Leveringssted anbefales fylt ut, men kan utelates dersom stedet for levering ikk
 
 Elementet inneholder en identifikator (DeliveryLocation/ID) som kan benyttes dersom leveringsstedet er unikt definert gjennom en identifikator.  Eksempler på dette er GLN (Global Location Number) eller GSRN (Global Sevice Relationship Number) begge utgitt av GS1.  GSRN benyttes i det norske markedet til identifikasjon av Målepunkt ID i energi bransjen.  Ref. vedlegg 7 Veileder for energi bransjen.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:Delivery>
 	<cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>

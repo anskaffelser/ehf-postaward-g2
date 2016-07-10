@@ -9,9 +9,8 @@ Kjøper::
 Betalingsmottaker::
 (PayeeParty)	Betalingsmottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt, er betalingsmottaker samme som selger.
 
-Eksempel på utfylling av selgerinformasjon på hodenivå i en EHF Fakturamelding.
-
 [source,xml]
+.Eksempel på utfylling av selgerinformasjon på hodenivå i en EHF Fakturamelding
 ----
 <cac:AccountingSupplierParty>
 	<cac:Party>
@@ -59,9 +58,8 @@ Eksempel på utfylling av selgerinformasjon på hodenivå i en EHF Fakturameldin
 </cac:AccountingSupplierParty>
 ----
  
-Eksempel på utfylling av kjøperinformasjon på hodenivå i en EHF Fakturamelding:
-
 [source,xml]
+.Eksempel på utfylling av kjøperinformasjon på hodenivå i en EHF Fakturamelding.
 ----
 <cac:AccountingCustomerParty>
 	<cac:Party>
@@ -109,9 +107,17 @@ Kundenummer angis i <cac:PartyIdentification>. Hvilken type aktøridentifikasjon
 
 De mest brukte aktøridentifikasjonene i Norge er:
 
-ZZZ::
-Ukjent utsteder, brukes ved interne kundenummer
-GLN::
-Global Location Number fra GS1
-NO:ORGNR::
-Registrering i Brønnøysundregisteret
+[cols="2,7", options="header"]
+|===
+| schemeID
+| Beskrivelse
+
+| ZZZ
+| Ukjent utsteder, brukes ved interne kundenummer
+
+| GLN
+| Global Location Number fra GS1
+
+| NO:ORGNR
+| Registrering i Brønnøysundregisteret
+|===

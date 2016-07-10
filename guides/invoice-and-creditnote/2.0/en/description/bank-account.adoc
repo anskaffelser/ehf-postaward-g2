@@ -2,8 +2,8 @@
 
 If both BBAN (Basic Bank Account Number) and  IBAN (International Bank Account Number) are available when the XML instance document is generated, the sequence should be BBAN first and  IBAN last. If account is Norwegian, BBAN should allways be submitted.
 
-Example:
 [source,xml]
+.Example
 ----
 <cac:PaymentMeans>
 	<cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>

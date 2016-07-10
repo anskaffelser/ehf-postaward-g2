@@ -104,9 +104,8 @@ EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer
 
 ==== XML for rabatter på linjenivå
 
-Linje 1
-
 [source,xml]
+.Linje 1
 ----
 <cbc:ID>1</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">10.00</cbc:InvoicedQuantity>
@@ -118,9 +117,8 @@ Linje 1
 </cac:AllowanceCharge>
 ----
 
-Linje 2
-
 [source,xml]
+.Linje 2
 ----
 <cbc:ID>2</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>

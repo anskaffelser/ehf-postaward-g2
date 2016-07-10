@@ -1,3 +1,9 @@
+:language: no
+
 include::../settings.adoc[]
 
-:shared-dir: {shared-dir}/no
+:doctitle: EHF faktura og kreditnota
+
+:date-review: tentativt 15. august 2016
+:date-release: tentativt 15. september 2016
+:date-mandatory: tentativt 15. september 2016

@@ -2,8 +2,8 @@
 
 If the customer wants to automatically post the costs, the accounting information must be transferred to the supplier before or with the order . The supplier should then return the accounting information on the invoice line level.
 
-Example:
 [source,xml]
+.Example
 ----
 <cbc:AccountingCost>Prosjekt kostnadskode 123</cbc:AccountingCost>
 ----
@@ -31,8 +31,8 @@ Content in general:
 Chart of Accounts must always be the first element in the string.  No requirements regarding sequence of the other elements.  If norwegian standard Chart of Accounts is used by the invoice receiver, then NS4102 must be the leftmost content of the account cost string.  For receivers using standard agricultural Chart of Accounts, version 1, the text ‘Landbruk_kontostreng_v01’ must the leftmost content of the accounting cost string.
 Any other posting requirements than account number, department, product, project and VAT code, may be implemented by using the Dim6 and Dim7 fields.  In agricultural context there is a need for a field called ‘driftsgreinkode’.  Dim6 may be used in this case.
 
-Example:
 [source,xml]
+.Example
 ----
 <cbc:AccountingCost>NS4102;Konto=4010;Avd=25;Prod=5421;Prosj=4098;MVAkode=1</cbc:AccountingCost>
 ----

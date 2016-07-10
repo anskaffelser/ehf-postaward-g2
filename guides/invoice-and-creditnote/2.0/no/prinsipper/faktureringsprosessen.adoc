@@ -11,7 +11,7 @@ Fakturaprosessen kan beskrives ved følgende arbeidsflyt:
 
 Figuren under viser fakturaprosessen ved bruk av EHF Fakturameldingene. Denne prosessen er basert på profil 5 i CENBII (BII05 – Billing) som forutsetter at både faktura og kreditnota blir sendt elektronisk.  Profilen inneholder også meldingstypen «Corrective invoice».  Denne benyttes ikke i Norge.  Dersom kunden ikke aksepterer fakturaen, må leverandøren utstede kreditnota og eventuelt ny faktura.
 
-image:images/fakturaprosess.png[Fakturaprosess]
+image::images/fakturaprosess.png[Fakturaprosess, align="center"]
 
 
 == Avvikshåndtering, validering hos avsender

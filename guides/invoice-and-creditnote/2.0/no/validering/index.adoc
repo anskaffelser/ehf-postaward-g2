@@ -2,7 +2,7 @@
 
 For å oppnå optimal fleksibilitet blir EHF dokumenter validert på ulike nivåer og med ulikt fokus. Pyramiden under illustrerer valideringshierarkiet:
 
-image:{shared-dir}/images/validering.png[Valideringspyramide]
+image::{shared-dir}/images/validering.png[Valideringspyramide, align="center"]
 
 :leveloffset: +1
 

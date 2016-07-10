@@ -1,4 +1,4 @@
-= Endringslogg
+= Endringslogg [[changelog]]
 
 :leveloffset: +1
 

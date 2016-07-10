@@ -8,8 +8,8 @@ E-invoice reference must be placed in the ID element of  Additional DocumentRefe
 
 The buyer’s legal entity is not mandatory when “elektroniskB2Cfaktura” is given as documenttype.
 
-Example, E-invoice reference:
 [source,xml]
+.Example, E-invoice reference
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>147987</cbc:ID>
@@ -19,13 +19,11 @@ Example, E-invoice reference:
 
 In the consumers market automatic debit (Avtalegiro) is  widespread as payment method.
 
-Example, electronic invoice B2C with  automatic debit (Avtalegiro): +
-PaymentMeansCode: 3 (Automated clearing house debit)
-
 [source,xml]
+.Example, electronic invoice B2C with  automatic debit (Avtalegiro)
 ----
 <cac:PaymentMeans>
-  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode>
+  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode> <1>
   <cbc:PaymentDueDate>2014-07-25</cbc:PaymentDueDate>
   <cbc:PaymentID>0265590215686</cbc:PaymentID>
   <cac:PayeeFinancialAccount>
@@ -33,3 +31,4 @@ PaymentMeansCode: 3 (Automated clearing house debit)
   </cac:PayeeFinancialAccount>
 </cac:PaymentMeans>
 ----
+<1> PaymentMeansCode: 3 (Automated clearing house debit)

@@ -1,13 +1,23 @@
 include::settings.adoc[]
 
-= EHF Invoice and Creditnote {version}
+= {doctitle}
+{name-difi-en}
+v{revision}
+:description: This document describes the data formats used when trading partners exchange invoice information electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “{name-difi-en}” (Difi) within the standardization of electronic trade processes.
+:doctype: book
 :icons: font
 :toc: left
 :toclevels: 2
 :source-highlighter: coderay
 :sectanchors:
 :sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
 
+{description}
+
+include::{shared-dir}/content/status-{status}.adoc[]
+
+include::{shared-dir}/content/download.adoc[]
 
 :leveloffset: +1
 
@@ -22,48 +32,6 @@ include::definitions.adoc[]
 include::principles/index.adoc[]
 
 include::description/index.adoc[]
-
-:leveloffset: +1
-
-include::description/roles-and-actor.adoc[]
-
-include::description/allowances-and-charges.adoc[]
-
-include::description/price-and-line-amount.adoc[]
-
-include::description/rounding.adoc[]
-
-include::description/use-of-supplier-and-customer-contacts.adoc[]
-
-include::description/value-added-tax.adoc[]
-
-include::description/special-taxes-charges.adoc[]
-
-include::description/order-number-reference.adoc[]
-
-include::description/contract-number.adoc[]
-
-include::description/accounting-information.adoc[]
-
-include::description/attachments.adoc[]
-
-include::description/other-use-of-additional-document-reference.adoc[]
-
-include::description/invoicing-of-consumers-b2c.adoc[]
-
-include::description/delivery-details.adoc[]
-
-include::description/use-of-party-tax-scheme-for-accounting-supplier-party.adoc[]
-
-include::description/bank-account.adoc[]
-
-include::description/endpointid-legal-registrationid.adoc[]
-
-include::description/tax-representative.adoc[]
-
-include::description/optional-elements.adoc[]
-
-:leveloffset: -1
 
 include::validation/index.adoc[]
 

@@ -2,4 +2,4 @@
 
 Figuren under viser hvilke  roller som inngår i fakturaprosessen. I EHF er henholdvis kunde og fakturamottaker, samt leverandør og fakturautsteder alltid den samme.
 
-image:images/funksjoner-og-roller.png[Funksjoner og roller]
+image::images/funksjoner-og-roller.png[Funksjoner og roller, align="center"]

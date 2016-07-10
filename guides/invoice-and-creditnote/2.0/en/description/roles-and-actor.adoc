@@ -9,9 +9,8 @@ Buyer:::
 Payment receiver:::
 (PayeeParty)	Payment receiver is optional information in EHF. If this information is not supplied, the seller is the payment receiver.
 
-Example: Supplying seller information on the header level in an EHF invoice message.
-
 [source,xml]
+.Example: Supplying seller information on the header level in an EHF invoice message.
 ----
 <cac:AccountingSupplierParty>
 <cac:Party>
@@ -59,9 +58,8 @@ Example: Supplying seller information on the header level in an EHF invoice mess
 </cac:AccountingSupplierParty>
 ----
  
-Example: Supplying buyer information on the header level in an EHF invoice message.
-
 [source,xml]
+.Example: Supplying buyer information on the header level in an EHF invoice message.
 ----
 <cac:AccountingCustomerParty>
 	<cac:Party>
@@ -109,9 +107,17 @@ The customer number is stated in <cac:PartyIdentification>. Specification of the
 
 The most commonly used identifiers in the Norwegian market is:
 
-ZZZ:::
-Issuer unknown, used for internal customer numbers
-GLN:::
-Global Location Number issued by GS1
-NO:ORGNR:::
-Registration in The Brønnøysund Register Centre
+[cols="2,7", options="header"]
+|===
+| SchemeID
+| Description
+
+| ZZZ
+| Issuer unknown, used for internal customer numbers
+
+| GLN
+| Global Location Number issued by GS1
+
+| NO:ORGNR
+| Registration in The Brønnøysund Register Centre
+|===

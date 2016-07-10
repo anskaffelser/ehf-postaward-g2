@@ -104,9 +104,8 @@ The EHF Invoice format has elements for AllowanceCharge on 3 levels:
 
 ==== XML for Allowances on the Line Level
 
-Line 1
-
 [source,xml]
+.Line 1
 ----
 <cbc:ID>1</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">10.00</cbc:InvoicedQuantity>
@@ -118,9 +117,8 @@ Line 1
 </cac:AllowanceCharge>
 ----
 
-Line 2
-
 [source,xml]
+.Line 2
 ----
 <cbc:ID>2</cbc:ID>
 <cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>

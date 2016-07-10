@@ -4,9 +4,8 @@ For at behandling av elektronisk faktura skal bli mest mulig effektiv for kjøpe
 
 Dersom ordrenummer er angitt på hodenivå forutsettes det at fakturaen kun er basert på en ordre. Ordrereferansene på linjenivå viser da kun de aktuelle ordrelinjene.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:OrderReference>
 	<cbc:ID>123456</cbc:ID>

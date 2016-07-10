@@ -2,9 +2,8 @@
 
 Det er ofte et behov for å få angitt hvordan fakturainnholdet skal konteres i mottakers regnskap. Konteringsstrengen er anbefalt sendt på linjenivå forutsatt at leverandøren har mottatt konteringsstrengen fra kjøperen. Angivelse av konteringsstrengen muliggjør automatisk kontering for kjøper.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cbc:AccountingCost>Prosjekt kostnadskode 123</cbc:AccountingCost>
 ----
@@ -31,9 +30,8 @@ Generelt innhold:
 Kontoplan må alltid komme først i strengen.  Ingen krav ang. rekkefølge eller innhold i de andre feltene.  Dersom norsk kontoplan benyttes av mottaker, skal NS4102 angis først i konteringsstrengen.  For mottakere som benytter standard kontostreng for landbruk, versjon 1, skal Landbruk_kontostreng_v01 angis.
 Er det behov for andre felt i forbindelse med kontering enn konto, avdeling, produkt, prosjekt og MVA kode, kan feltene Dim6 og Dim7 benyttes.  For eksempel er det i landbruksssammenheng behov for et felt for driftsgreinkode.  Dim6 kan benyttes til dette.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cbc:AccountingCost>NS4102;Konto=4010;Avd=25;Prod=5421;Prosj=4098;MVAkode=1</cbc:AccountingCost>
 ----

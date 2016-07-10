@@ -1,0 +1,15 @@
+//
+:status: dev
+
+// Difi
+:link-github: https://github.com/difi/vefa-validator-conf
+:link-issues: https://github.com/difi/vefa-validator-conf/issues
+:link-portal: https://vefa.difi.no/
+
+:name-difi-en: Agency of Public Management and eGovernment
+:name-difi-no: Direktoratet for forvaltning og IKT
+
+// External
+:link-cen-bii: http://www.cenbii.eu/
+:link-oasis-ubl: http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl
+:link-peppol: http://www.peppol.eu/

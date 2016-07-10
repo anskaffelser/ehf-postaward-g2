@@ -1,4 +1,4 @@
-[cols="1,9,2"]
+[cols="1,9,2", options="header"]
 |===
 | Sak | Beskrivelse | Type
 

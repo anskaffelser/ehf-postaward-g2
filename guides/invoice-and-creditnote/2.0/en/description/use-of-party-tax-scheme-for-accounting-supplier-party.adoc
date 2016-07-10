@@ -16,8 +16,8 @@ PartyTaxScheme under AccountingSupplierParty is an optional  element, but accord
 
 Suppliers that is not registered for VAT, cannot send invoices with VAT amounts > 0. VAT Categories must be set to "Z", and all VAT amounts must be 0,-. The element 'cac:PartyTaxScheme' must be omitted.
 
-.Example supplier information:
 [source, xml]
+.Example supplier information
 ----
 <cac:AccountingSupplierParty>
 	<cac:Party>

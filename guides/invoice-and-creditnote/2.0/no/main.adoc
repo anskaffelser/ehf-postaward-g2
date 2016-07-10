@@ -1,6 +1,10 @@
 include::settings.adoc[]
 
-= EHF faktura og kreditnota {version}
+= {doctitle}
+{name-difi-no}
+v{revision}
+:description: Dette dokumentet beskriver Elektronisk Handelsformat (EHF) for utveksling av fakturainformasjon elektronisk mellom handelspartnere. Dokumentet er utarbeidet som en del av satsingen til {name-difi-no} (Difi) innen standardisering av elektroniske handelsprosesser.
+:doctype: book
 :icons: font
 :toc: left
 :toclevels: 2
@@ -8,7 +12,13 @@ include::settings.adoc[]
 :source-highlighter: coderay
 :sectanchors:
 :sectnums:
-:version: 2.0.7
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+{description}
+
+include::{shared-dir}/content/status-{status}.adoc[]
+
+include::{shared-dir}/content/download.adoc[]
 
 :leveloffset: +1
 
@@ -23,48 +33,6 @@ include::definisjoner.adoc[]
 include::prinsipper/index.adoc[]
 
 include::beskrivelse/index.adoc[]
-
-:leveloffset: +1
-
-include::beskrivelse/roller-og-aktorer.adoc[]
-
-include::beskrivelse/rabatter-og-gebyrer.adoc[]
-
-include::beskrivelse/pris-og-linjesum.adoc[]
-
-include::beskrivelse/avrunding.adoc[]
-
-include::beskrivelse/leverandor-og-kjoperreferanse.adoc[]
-
-include::beskrivelse/merverdiavgift.adoc[]
-
-include::beskrivelse/saeravgift.adoc[]
-
-include::beskrivelse/ordre-bestillingsnummer.adoc[]
-
-include::beskrivelse/kontraktsnummer.adoc[]
-
-include::beskrivelse/konteringsstrengen.adoc[]
-
-include::beskrivelse/vedleggshandtering.adoc[]
-
-include::beskrivelse/andre-dokumentreferanser.adoc[]
-
-include::beskrivelse/fakturering-av-forbrukere-b2c.adoc[]
-
-include::beskrivelse/leveringsdetaljer.adoc[]
-
-include::beskrivelse/leverandorens-mva-nummer.adoc[]
-
-include::beskrivelse/utfylling-av-bankkontonummer.adoc[]
-
-include::beskrivelse/endepunktid-organisasjonsnummer.adoc[]
-
-include::beskrivelse/selgers-mva-representant.adoc[]
-
-include::beskrivelse/valgfrie-felt.adoc[]
-
-:leveloffset: -1
 
 include::validering/index.adoc[]
 

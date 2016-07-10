@@ -2,8 +2,8 @@
 
 Tax representative party for the seller is relevant for sellers delivering goods and services in Norway without having a permanent establishment in Norway.  In such cases the name and address of the tax representative must be included in the invoice.
 
-Example:
 [source,xml]
+.Example
 ----
 <cac:TaxRepresentativeParty>
 	<cac:PartyName>

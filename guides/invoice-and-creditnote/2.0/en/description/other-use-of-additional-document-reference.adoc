@@ -3,8 +3,8 @@
 The need to distribute information not included in the EHF format arises from time to time. To satisfy this need, the element AdditionalDocumentReference is used. As mentioned above, this element can be repeated multiple times. Examples of information to go into this element are packing lists and the supplier’s order number.
 Important to notice, there is no code list for this element, and the interactive parties must agree on syntaxes and semantics.
 
-Example:
 [source,xml]
+.Example
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>Doc1</cbc:ID>
@@ -24,8 +24,8 @@ Example:
 </cac:AdditionalDocumentReference>
 ----
 
-Example, referencing a subscription:
 [source,xml]
+.Example, referencing a subscription
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>1442316</cbc:ID>

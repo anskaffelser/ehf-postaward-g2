@@ -27,9 +27,8 @@ In cases when invoices are issued in other currencies than the national currency
 
 TaxTotal/TaxAmount is given in the DocumentCurrency, whilst the element TransactionCurrencyTaxAmount is used for the tax amount pr. Category in local currency (TaxCurrency). The conversion between DocumentCurrency and TaxCurrency is found in the composite element TaxExchangeRate.
 
-Example: Invoice total EUR 900 EUR exclusive VAT. Exchange rate EUR/NOK = 8.3804
-
 [source,xml]
+.Example: Invoice total EUR 900 EUR exclusive VAT. Exchange rate EUR/NOK = 8.3804
 ----
 .....
 <cbc:DocumentCurrencyCode listID="ISO4217">EUR</cbc:DocumentCurrencyCode>

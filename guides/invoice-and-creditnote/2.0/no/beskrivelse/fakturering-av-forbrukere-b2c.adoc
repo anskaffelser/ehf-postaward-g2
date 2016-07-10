@@ -6,9 +6,8 @@ Referanse til en elektronisk B2C-faktura overføres som Additional DocumentRefer
 
 Angivelse av organisasjonsnummer for kjøper kreves ikke oppgitt når elektroniskB2Cfaktura er oppgitt.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>147987</cbc:ID>
@@ -18,13 +17,11 @@ Eksempel:
 
 Overfor forbrukermarkedet er Avtalegiro utbredt som betalingsmåte.
 
-Eksempel, elektronisk faktura B2C med Avtalegiro: +
-PaymentMeansCode: 3 (Automated clearing house debit)
-
 [source,xml]
+.Eksempel, elektronisk faktura B2C med Avtalegiro:
 ----
 <cac:PaymentMeans>
-  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode>
+  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode><1>
   <cbc:PaymentDueDate>2014-07-25</cbc:PaymentDueDate>
   <cbc:PaymentID>0265590215686</cbc:PaymentID>
   <cac:PayeeFinancialAccount>
@@ -32,3 +29,4 @@ PaymentMeansCode: 3 (Automated clearing house debit)
   </cac:PayeeFinancialAccount>
 </cac:PaymentMeans>
 ----
+<1> PaymentMeansCode: 3 (Automated clearing house debit)

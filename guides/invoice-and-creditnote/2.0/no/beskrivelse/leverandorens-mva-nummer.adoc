@@ -3,9 +3,8 @@
 Leverandørens MVA nummer angis  i elementet Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID og
 er opprinnelig et valgfritt felt, men i følge EU COUNCIL DIRECTIVE 2001/115/ må elementet sendes dersom faktura eller kreditnota har en MVA total. Det betyr i praksis at feltet nesten alltid må sendes. For virksomheter registrert i Norge er det organisasjonsnr. etterfulgt av bokstavene MVA (123456789MVA) som skal sendes. Det anbefales bruk av NO som prefiks ved fakturering til utlandet.
 
-Eksempel:
-
 [source,xml]
+.Eksempel
 ----
 <cac:PartyTaxScheme>
 	<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
@@ -19,8 +18,8 @@ Eksempel:
 
 Dersom leverandør ikke er registrert for MVA, så kan ikke fakturaen inneholde MVA. Det vil si at MVA kategori settes lik "Z", og MVA-beløp settes til 0,-. Elementet 'cac:PartyTaxScheme' skal heller ikke sendes.
 
-.Eksempel på leverandørinfo:
 [source, xml]
+.Eksempel på leverandørinfo:
 ----
 <cac:AccountingSupplierParty>
 	<cac:Party>
@@ -56,8 +55,8 @@ Dersom leverandør ikke er registrert for MVA, så kan ikke fakturaen inneholde 
 </cac:AccountingSupplierParty>
 ----
 
-.Eksempel MVA og totalbeløp
 [source, xml]
+.Eksempel MVA og totalbeløp
 ----
 <cac:TaxTotal>
 		<cbc:TaxAmount currencyID="NOK">0.00</cbc:TaxAmount>
@@ -82,8 +81,8 @@ Dersom leverandør ikke er registrert for MVA, så kan ikke fakturaen inneholde 
 	</cac:LegalMonetaryTotal>
 ----
 
-.Eksempler MVA på fakturalinje:
 [source, xml]
+.Eksempler MVA på fakturalinje:
 ----
 <cac:ClassifiedTaxCategory>
 	<cbc:ID schemeID="UNCL5305">Z</cbc:ID>

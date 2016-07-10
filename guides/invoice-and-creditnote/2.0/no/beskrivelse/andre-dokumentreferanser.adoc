@@ -2,9 +2,9 @@
 
 Det er ofte et behov å sende annen referanseinformasjon som ikke finnes direkte i EHF formatet. Til det formålet kan feltet AdditionalDocumentReference benyttes. Dette er et valgfritt felt som kan repeteres mange ganger. For eksempel kan det brukes til angivelse av pakkseddelnummer.
 
-Eksempel, vedlegg:
 
 [source,xml]
+.Eksempel, vedlegg
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>Doc1</cbc:ID>
@@ -24,9 +24,8 @@ Eksempel, vedlegg:
 </cac:AdditionalDocumentReference>
 ----
 
-Eksempel, referanse til abonnement:
-
 [source,xml]
+.Eksempel, referanse til abonnement
 ----
 <cac:AdditionalDocumentReference>
 	<cbc:ID>1442316</cbc:ID>
