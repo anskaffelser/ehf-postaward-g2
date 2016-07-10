@@ -1,0 +1,3 @@
+include::../settings.adoc[]
+
+:shared-dir: {shared-dir}/en

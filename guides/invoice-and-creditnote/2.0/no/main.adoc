@@ -1,3 +1,5 @@
+include::settings.adoc[]
+
 = EHF faktura og kreditnota {version}
 :icons: font
 :toc: left
@@ -12,41 +14,13 @@
 
 include::bakgrunn.adoc[]
 
-= Endringslogg
-
-:leveloffset: +1
-
-include::endringslogg/konsekvenser.adoc[]
-
-include::endringslogg/versjon-2.adoc[]
-
-// include::endringslogg/versjon-1.adoc[]
-
-:leveloffset: -1
+include::endringslogg/index.adoc[]
 
 include::ehf/index.adoc[]
 
 include::definisjoner.adoc[]
 
 include::prinsipper/index.adoc[]
-
-:leveloffset: +1
-
-include::prinsipper/generelt-om-fakturameldingene.adoc[]
-
-include::prinsipper/funksjoner-og-roller.adoc[]
-
-include::prinsipper/profiler-og-meldinger.adoc[]
-
-include::prinsipper/bruk-av-ubl-2.1.adoc[]
-
-include::prinsipper/faktureringsprosessen.adoc[]
-
-include::prinsipper/bruk-av-negativ-faktura.adoc[]
-
-include::prinsipper/finansielt-forskudd-vs-a-konto-faktura.adoc[]
-
-:leveloffset: -1
 
 include::beskrivelse/index.adoc[]
 

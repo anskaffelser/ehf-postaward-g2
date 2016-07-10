@@ -1,0 +1,11 @@
+= Changelog
+
+:leveloffset: +1
+
+include::consequences.adoc[]
+
+include::version-2.adoc[]
+
+// include::changelog/version-1.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,11 @@
+= Endringslogg
+
+:leveloffset: +1
+
+include::konsekvenser.adoc[]
+
+include::versjon-2.adoc[]
+
+// include::versjon-1.adoc[]
+
+:leveloffset: -1

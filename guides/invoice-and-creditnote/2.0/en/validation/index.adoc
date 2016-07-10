@@ -2,7 +2,7 @@
 
 To optimize the flexibility in the validation process, each EHF document is validated in different stages with shifting focus in every stage. The pyramid below illustrates the different stages.
 
-image::images/validation.png[Pyramid of Validation]
+image::{shared-dir}/images/validation.png[Pyramid of Validation]
 
 :leveloffset: +1
 

@@ -1,3 +1,5 @@
+include::settings.adoc[]
+
 = EHF Invoice and Creditnote {version}
 :icons: font
 :toc: left
@@ -5,47 +7,19 @@
 :source-highlighter: coderay
 :sectanchors:
 :sectnums:
-:version: 2.0.7
+
 
 :leveloffset: +1
 
 include::background.adoc[]
 
-= Changelog
-
-:leveloffset: +1
-
-include::changelog/consequences.adoc[]
-
-include::changelog/version-2.adoc[]
-
-// include::changelog/version-1.adoc[]
-
-:leveloffset: -1
+include::changelog/index.adoc[]
 
 include::ehf/index.adoc[]
 
 include::definitions.adoc[]
 
 include::principles/index.adoc[]
-
-:leveloffset: +1
-
-include::principles/invoice-messages-in-general.adoc[]
-
-include::principles/functionality-and-roles.adoc[]
-
-include::principles/profiles-and-messages.adoc[]
-
-include::principles/use-of-ubl-2.1.adoc[]
-
-include::principles/invoicing-process.adoc[]
-
-include::principles/use-of-negative-invoice.adoc[]
-
-include::principles/financial-advance-vs-on-account-invoicing.adoc[]
-
-:leveloffset: -1
 
 include::description/index.adoc[]
 

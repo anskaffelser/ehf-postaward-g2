@@ -12,7 +12,7 @@ An invoice may also refer to a contract or a frame agreement. The invoice may sp
 
 The diagram below shows the invoicing process with the use of EHF invoice messages. This process is based on the profile 5 in CENBII (BII05 - Billing), which assumes that both the invoice and the credit note are exchanged electronically. The profile also includes the message type «Corrective invoice», but this is not used in Norway. If the customer disputes the invoice, the supplier must issue a credit note and a new invoice.
 
-![The invoicing process](../images/invoicing-process.png "The invoicing process")
+image:images/invoicing-process.png[The invoicing process]
 
 == Exception Handling, Validation by the Issuer
 

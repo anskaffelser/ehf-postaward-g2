@@ -1,4 +1,5 @@
 = Fakturaprosessen
+
 Fakturaprosessen omfatter opprettelse og oversendelse av faktura og kreditnota fra leverandør til kunde, samt mottak og behandling hos kunde.
 
 Fakturaprosessen kan beskrives ved følgende arbeidsflyt:

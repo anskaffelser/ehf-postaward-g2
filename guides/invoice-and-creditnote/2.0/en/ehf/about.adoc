@@ -8,4 +8,4 @@ Documents, from the tender catalogue to the credit note will be gathered under t
 
 By using the EHF documents the collaboration between the supplier and the customer will be predictable.  Elements from the tender Catalogue will be re-used in the Order, and elements from the Order will be re-used in the Invoice. This leads to a holistic use of all the documents under the EHF umbrella.
 
-Difi has chosen to use link:http://www.cen.eu/cwa/bii/specs/[CEN BII] as a base for the EHF formats and the [Universal Business Language link:http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl[UBL] as a foundation for the implemented syntax. Both EHF and UBL are open standards and as such not liable to any licensing fees  or royalties. EHF is managed and maintained by Difi.
+Difi has chosen to use link:http://www.cen.eu/cwa/bii/specs/[CEN BII] as a base for the EHF formats and the link:http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl[Universal Business Language (UBL)] as a foundation for the implemented syntax. Both EHF and UBL are open standards and as such not liable to any licensing fees  or royalties. EHF is managed and maintained by Difi.

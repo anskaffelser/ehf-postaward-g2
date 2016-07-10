@@ -10,10 +10,10 @@
 
 === EHF Faktura og kreditnota 2.0.7
 
-include::../../ehf-invoice-and-creditnote-2.0/no/endringslogg/{release}-2.0.7.adoc[]
+include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.7.adoc[]
 
 == English
 
 === EHF Invoice and Creditnote 2.0.7
 
-include::../../ehf-invoice-and-creditnote-2.0/en/changelog/{release}-2.0.7.adoc[]
+include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.7.adoc[]
