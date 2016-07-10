@@ -22,7 +22,7 @@ include::{shared-dir}/content/download.adoc[]
 
 :leveloffset: +1
 
-include::bakgrunn.adoc[]
+include::forord.adoc[]
 
 include::endringslogg/index.adoc[]
 

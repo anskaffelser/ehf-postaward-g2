@@ -1,5 +1,5 @@
 [preface]
-= Freface
+= Preface
 
 == Background and Objective
 

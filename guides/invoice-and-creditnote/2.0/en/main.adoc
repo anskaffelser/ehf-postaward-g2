@@ -21,7 +21,7 @@ include::{shared-dir}/content/download.adoc[]
 
 :leveloffset: +1
 
-include::background.adoc[]
+include::preface.adoc[]
 
 include::changelog/index.adoc[]
 
