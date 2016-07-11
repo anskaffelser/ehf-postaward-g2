@@ -16,9 +16,9 @@ v{revision}
 
 {description}
 
-include::{shared-dir}/content/status-{status}.adoc[]
+include::{shared-dir}/message/status-{status}.adoc[]
 
-include::{shared-dir}/content/download.adoc[]
+include::{shared-dir}/message/download.adoc[]
 
 :leveloffset: +1
 
@@ -26,7 +26,7 @@ include::forord.adoc[]
 
 include::endringslogg/index.adoc[]
 
-include::ehf/index.adoc[]
+include::{shared-dir}/content/ehf/index.adoc[]
 
 include::definisjoner.adoc[]
 
@@ -34,6 +34,6 @@ include::prinsipper/index.adoc[]
 
 include::beskrivelse/index.adoc[]
 
-include::validering/index.adoc[]
+include::{shared-dir}/content/validering/index.adoc[]
 
 include::vedlegg.adoc[]

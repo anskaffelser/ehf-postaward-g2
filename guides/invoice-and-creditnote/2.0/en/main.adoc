@@ -15,9 +15,9 @@ v{revision}
 
 {description}
 
-include::{shared-dir}/content/status-{status}.adoc[]
+include::{shared-dir}/message/status-{status}.adoc[]
 
-include::{shared-dir}/content/download.adoc[]
+include::{shared-dir}/message/download.adoc[]
 
 :leveloffset: +1
 

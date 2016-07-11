@@ -1,6 +1,6 @@
-= Beskrivelse av utvalgte deler av EHF fakturameldinger
+= Beskrivelse av utvalgte deler
 
-Nedenfor følger beskrivelse av utvalgte deler av informasjonsinnholdet i EHF Faktura og - Kreditnota.  Komplett informasjonsinnhold er listet i tabellene i kapittel 7.
+Nedenfor følger beskrivelse av utvalgte deler av informasjonsinnholdet i {doctitle}.  Komplett informasjonsinnhold er listet i tabellene i kapittel 7.
 
 :leveloffset: +1
 

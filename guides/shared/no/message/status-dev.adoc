@@ -1,0 +1,9 @@
+[IMPORTANT]
+====
+Dette dokumentet en **tidlig utgave** av {doctitle} {revision}.
+Inntil dokumentet kommer i endelig utgave må man regne med at endringer gjort fra forrige versjon kan endres og at det kan komme mye endringer.
+
+Denne versjonen av dokumentet forventes å være obligatisk fra **{date-mandatory}** og vil komme på høring ("review") senest **{date-review}**.
+
+Følg med på Difi sin portal link:{link-portal}[VEFA] for hvilke datoer som gjelder for denne versjonen.
+====

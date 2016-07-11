@@ -1,0 +1,57 @@
+= Versjon 1.x
+
+:sectnums!:
+
+== Versjon 1.0.3 (10.04.2016)
+
+Validator endringer:
+
+*	Ny regel EUGEN-T16-R007, for å sjekke at Delivered Quantity finnes i instansdokumentet.
+*	Korrigering av regel EUGEN-T16-R002
+
+Forfatter:
+
+Siw Meckelborg, Edisys Consulting AS
+
+
+== Versjon 1.0.2 (01.09.2015)
+
+Validator endringer:
+
+*	Nye valideringsartefakter fra PEPPOL og BII, oppgradering til XSLT/xPath 2.0
+*	Tomme elementer vil medføre feilmelding, ikke advarsel som tidligere, gjelder regel NOGOV-T16-R011
+
+Forfatter:
+
+Siw Meckelborg, Edisys Consulting AS
+
+
+== Versjon 1.0.1 (07.03.2015)
+
+Validator endringer:
+
+*	Validering av alle påkrevde og anbefalte felt.
+*	Validering av ulike datatyper (organisasjons-nummer, dato o.l)
+*	Validering av at EndpointID kun kan være organisasjonsnummer.
+
+Editorielle endringer:
+
+*	Lagt til regel ID i meldingstabellen
+*	Nytt kapittel 2.1 og 3.3
+*	Tydeliggjøring av avhengige felt (D)
+*	Oppdaterte regler i kapittel 8.3
+
+Forfatter:
+
+Siw Meckelborg, Edisys Consulting AS
+
+
+== Versjon 1.0 (10.10.2013)
+
+Godkjent
+
+Forfatter:
+
+Edisys Consulting
+
+:sectnums:

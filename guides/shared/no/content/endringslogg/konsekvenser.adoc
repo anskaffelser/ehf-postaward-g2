@@ -1,0 +1,8 @@
+= Konsekvenser av implementinger av denne versjonen
+
+Versjon {revision} er en revisjon av {doctitle} {minor}, og dette innebærer at endringene i denne revisjonen er bakoverkompatibel med {doctitle} {minor}, og dermed at instansdokumenter som er gyldige i henhold til {doctitle} {minor} også vil være gyldige i versjon {revision}. Det presiseres her at gyldig i henhold til {doctitle} {minor} innebærer at det er gyldig i henhold til veilederen til {doctitle} {minor}, da det er dette som er den normative kilden.
+
+
+== Registrering i ELMA
+
+Alle som er registrert i ELMA for mottak av {doctitle} {minor}, vil kunne motta {revision} uten endringer i ELMA.

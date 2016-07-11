@@ -5,4 +5,4 @@ Version {revision} is a revision of {doctitle} {minor}, and this version is back
 
 == Registration in ELMA
 
-Invoice and creditnote receivers capable of receiving {doctitle} {minor} instance documents is also capable of receiving EHF {revision}, so no change is needed in the registration in ELMA.
+Invoice and creditnote receivers capable of receiving {doctitle} {minor} instance documents is also capable of receiving {doctitle} {revision}, so no change is needed in the registration in ELMA.

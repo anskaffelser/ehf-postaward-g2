@@ -1,0 +1,160 @@
+= Pakkseddellinje
+
+Beskrivelsene nedenfor gjelder elementer på pakkseddellinje.
+
+== Varebeskrivelse og -identifisering
+
+Hver pakkseddellinje inneholder elementer for beskrivelse og identifisering av varen.  Beskrivelse og/eller varenummer må angis på linjen.
+
+[source,xml]
+.Eksempel
+----
+<cac:Item>
+	<cbc:Name>Item123</cbc:Name>
+	<cac:SellersItemIdentification>
+		<cbc:ID>010120401</cbc:ID>
+	</cac:SellersItemIdentification>
+	<cac:StandardItemIdentification>
+    <cbc:ID schemeID="GTIN" >05704368124358</cbc:ID>
+	</cac:StandardItemIdentification>
+</cac:Item>
+----
+
+== Restnotering
+
+Elementet for restnotering på pakkseddel linjen (OutstandingQuantity), benyttes både til informasjon om restnotering og leveringsavvik.
+
+Håndtering av problematikken  “Antallet restnotert vil aldri bli levert” gjøres på følgende måte:
+
+Antallet spesifisert i elementet  OutstandingQuantity er antallet som bli bli levert på en senere levering.  Er antall levert på pakkseddel linjen (DeliveredQuantity) + antall restnotert (OutstandingQuantity) på pakkseddel linjen lavere enn antall bestilt på ordren, indikerer dette at det resterende antallet ikke vil bli levert.
+
+
+.Eksempel 1
+====
+10 stk bestilt, 6 stk levert og 4 stk vil bli levert  senere:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 4
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">4</cbc:OutstandingQuantity>
+----
+====
+
+.Eksempel 2
+====
+10 stk bestilt, 6 stk levert og de 4 resterende vil IKKE bli levert:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 0
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">0</cbc:OutstandingQuantity>
+----
+====
+
+.Eksempel 3
+====
+10 stk bestilt, 6 stk levert , 3 stk vil bli levert  senere og 1 stk vil IKKE bli levert:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 3
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">3</cbc:OutstandingQuantity>
+----
+====
+
+== Farlig gods
+
+Pakkseddel meldingen inneholder også mulighet for å informere mottaker om at forsendelsen inneholder farlig gods.  Dette gjøres ved å benytte elementene farlig gods kode (UNDGCode) og farlig gods klasse (HazardClassID).
+
+=== Farlig gods-kode
+
+Kode som indikerer hvilket regelverk som legges til grunn for klassifisering av det farlige godset.  For eksempel ADR (Regelverk ang. veitransport), IMDG (sjøtransport) og RID (transport på jernbane).  Kodeliste 8273 (Dangerous goods regulations code) utgitt av FN benyttes.
+
+=== Farlig gods-klasse
+
+Kode for klassifisering (type farlig gods) av det farlige godset i henhold til hvilket regelverk som er oppgitt i farlig gods kode.  ADR, IMDG og RID benytter alle samme kodifisering.  Eksempel: 2.3 indikerer giftig gass.
+
+[source,xml]
+.Eksempel
+----
+<cac:HazardousItem>
+	<cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
+	<cbc:HazardClassID>2.3</cbc:HazardClassID>
+</cac:HazardousItem>
+----
+
+==	Serienummer
+
+Dersom varene som leveres er merket med indivuelle serienr, kan dette angis på varenivå på pakkseddel linje i pakkseddel meldingen.
+
+[source,xml]
+.Eksempel
+----
+<cac:Item>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ444</cbc:SerialID>
+	</cac:ItemInstance>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ4445</cbc:SerialID>
+	</cac:ItemInstance>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ4446</cbc:SerialID>
+	</cac:ItemInstance>
+</cac:Item>
+----
+
+== Batch/LOT-nummer og "Best før"/utløpsdato
+
+Batch/LOT-nummer gjelder alle varene på en pakkseddel linje. Utløpsdato (ExpiryDate) indikerer siste dato varene kan benyttes (relevant for f. eks medisiner). "Best før"-dato (BestBeforeDate) benyttes ofte for matvarer.
+
+[source,xml]
+.Eksempel 1
+----
+<cac:ItemInstance>
+	<cac:LotIdentification>
+		<cbc:LotNumberID>898A129</cbc:LotNumberID>
+		<cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
+	</cac:LotIdentification>
+</cac:ItemInstance>
+----
+
+[source.xml]
+.Eksempel 2
+----
+<cac:ItemInstance>
+	<cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
+</cac:ItemInstance>
+----
+
+== Transportenhet
+
+Varene på en pakkseddel linje kan være pakket i flere transportenheter (kolli), slik som kasse, pall, container, etc.  Serial shipping container code (SSCC) utgitt av GS1 kan benyttes til å identifisere transportenheten.  En transportenhet kan inneholde varer fra ulike pakkseddel-linjer.  Dette implementeres i meldingen ved at ID-elementet til transportenheten inneholder samme verdi på ulike linjer.
+
+Pakkseddel meldingen støtter ikke forpakningshierarki, det vil si at en transportenhet består av en eller flere  transportenheter.
+
+[source,xml]
+.Eksempel
+----
+<cac:TransportHandlingUnit>
+  <cbc:ID schemeID="SSCC" schemeAgencyName="GS1">123456789012345675</cbc:ID>
+  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT </cbc:TransportHandlingUnitTypeCode>
+	  <cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit
+  </cbc:ShippingMarks>
+	<cac:MeasurementDimension>
+		<cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
+		<cbc:Measure unitCode="KGM">23.00</cbc:Measure>
+	</cac:MeasurementDimension>
+</cac:TransportHandlingUnit>
+----

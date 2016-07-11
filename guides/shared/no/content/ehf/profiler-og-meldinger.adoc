@@ -1,0 +1,50 @@
+= Profiler og meldinger
+
+I tråd med den metodiske tilnærmingen som ligger til grunn for EHF formatene (se www.cenbii.eu) vil de elektroniske meldingene som inngår i et format bli utvekslet mellom de aktuelle aktørene som en del av en elektronisk samhandlingsprosess – en profil.
+
+En profil er definert som den elektroniske samhandlingsprosess som en aktuell meldingsutveksling er en del av. En profil vil typisk omfatte flere relaterte meldinger som utveksles mellom to parter, men kan i sin enkleste form omfatte utveksling av kun en enkelt melding.
+
+Så langt det har latt seg gjøre benytter EHF seg av profiler utarbeidet av link:{link-cen-bii}[BII] eller link:{link-peppol}[PEPPOL]. Eksempler på relevante profiler er:
+
+[cols="3,5", options="header"]
+|===
+
+| Profil
+| Dokumenttyper
+
+| Kun faktura (bii04)
+| Faktura
+
+| Kun kreditnota (biixx)
+| Kreditnota
+
+| Faktura og kreditnota (bii05)
+| Faktura, Kreditnota
+
+| Faktura, kreditnota og purring (biixy)
+| Faktura, Kreditnota, Purring
+
+| Ordre og faktura (bii06)
+| Ordre, Ordrebekreftelse, Faktura, Kreditnota
+
+|===
+
+De meldinger som utveksles innenfor en profil er tilpasset (engelsk: customized) for å tilfredsstille de krav til innformasjonsinnhold som gjelder for den spesifikke bruken av det aktuelle forretningsdokumentet.
+
+En CustomizationID (tilpasningsidentifikator) benyttes for å identifisere *de forretningsregler som gjelder for det aktuelle forretningsdokumentet, dvs. det sett av forretningsregler som ble lagt til grunn av utsteder når dokumentet ble etablert.*
+
+Nedenstående eksempel på CustomizationID indikerer at innholdet i den aktuelle meldingen er basert på forretningsregler fastsatt av BII (urn:www.cenbii.eu:transaction:biitrns010:ver2.0), utvidet (extended), tilpasset og presisert av PEPPOL (urn:www.peppol.eu:bis:peppol5a:ver2.0) og ytterligere utvidet, tilpasset og presisert for norske forhold i EHF Faktura veilederen (urn:www.difi.no:ehf:faktura:ver2.0).
+
+[source,xml]
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+----
+
+Eksempel på CustomizationID dersom det sendes en PEPPOL BIS, ytterligere info om PEPPOL BIS kan finnes på link:{link-peppol}[PEPPOL].
+
+[source,xml]
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0</cbc:CustomizationID>
+----
+
+Det presiseres at dersom begge aktørene er hjemmehørende i Norge, skal EHF customizationID benyttes. PEPPOL BIS bør kun benyttes dersom en av partene er utenlandske.

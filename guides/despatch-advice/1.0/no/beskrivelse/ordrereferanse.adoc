@@ -1,0 +1,29 @@
+= Ordrereferanse
+
+Benyttes for å refere til hvilken ordre pakkseddelen gjelder.  En pakkseddel kan kun gjelde EN ordre.  En ordre kan leveres ved hjelp av flere pakksedler.
+
+Hver pakkseddel linje må referene til hvilken ordrelinje pakkseddel linjen gjelder.  Dersom pakkseddel linjen ikke gjelder en spesifikk ordrelinje, kan verdien NA  (Not Applicable) angis i elementet OrderLineReference.
+
+[source,xml]
+.Eksempel pakkseddel hode nivå.
+----
+<cac:OrderReference>
+  <cbc:ID>1234</cbc:ID>
+</cac:OrderReference>
+----
+
+[source,xml]
+.Eksempel pakkseddel linje nivå.
+----
+<cac:OrderLineReference>
+	<cbc:LineID>5</cbc:LineID>
+</cac:OrderLineReference>
+----
+
+[source,xml]
+.Eksempel pakkseddel linje nivå, alternativ.
+----
+<cac:OrderLineReference>
+	<cbc:LineID>NA</cbc:LineID>
+</cac:OrderLineReference>
+----

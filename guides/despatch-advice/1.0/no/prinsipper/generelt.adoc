@@ -1,0 +1,3 @@
+= Generelt om pakkseddelmeldingen
+
+Den elektroniske meldingen som denne veilederen omfatter er pakkseddel. Pakkseddelen er en melding fra leverandør/selger til kjøper, og er en annonsering av en nært forestående leveranse.  Den forteller hvilke kolli leveransen består av og hvilke varer som inngår i hvilke kolli.  Pakkseddelen har referanse til ordren som leveransen gjelder.

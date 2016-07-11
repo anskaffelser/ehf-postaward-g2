@@ -1,0 +1,9 @@
+[IMPORTANT]
+====
+Dette dokumentet en **høringsutgave** av {doctitle} {revision}.
+Inntil dokumentet kommer i endelig utgave kan endringer gjort fra forrige versjon endres og at det kan komme mye endringer basert på tilbakemelding.
+
+Denne versjonen av dokumentet forventes å være obligatisk fra **{date-mandatory}**.
+
+Følg med på Difi sin portal link:{link-portal}[VEFA] for hvilke datoer som gjelder for denne versjonen.
+====

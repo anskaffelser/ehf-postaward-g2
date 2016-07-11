@@ -2,7 +2,7 @@
 
 :leveloffset: +1
 
-include::konsekvenser.adoc[]
+include::../{shared-dir}/content/endringslogg/konsekvenser.adoc[]
 
 include::versjon-2.adoc[]
 
