@@ -1,0 +1,20 @@
+= Validation Principles
+
+Stages in the validation process:
+
+.	Validation of syntax against UBL 2.1 Schema, for example:
+  * Tag names and attributes must be correctly written and follow the UBL 2.1 sequence
+  * All UBL 2.1 mandatory tag names must be present.
+  * The element’s contents must be according to the element’s type definition.
+.	Validation against  CEN BII Core to verify that the message is according to international requirements, like:
+  * Valid codes for currencies, countries, tax  etc.
+  * Mandatory tag names according to CEN BII Core.
+  * Logical correlations between information element, i.e. that  start date is at least lower than end date, sub totals must be totaled, multiplications give the correct result etc.
+.	Validation against PEPPOL (EU) rules and regulations
+.	Validation against Norwegian accounting legislation, like:
+  * Organisation number must be specified for the seller/supplier.
+.	Validation against Norwegian public requirements, like:
+  * «Your ref» must be specified.
+  * Addresses, postal zone number and post office/city must be specified for the buyer/customer.
+
+Validation stage 6 and 7 is decided upon by the trading parties if deemed necessary.

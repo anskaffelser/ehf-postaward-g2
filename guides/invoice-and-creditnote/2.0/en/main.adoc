@@ -25,7 +25,7 @@ include::preface.adoc[]
 
 include::changelog/index.adoc[]
 
-include::ehf/index.adoc[]
+include::{shared-dir}/content/ehf/index.adoc[]
 
 include::definitions.adoc[]
 
@@ -33,6 +33,6 @@ include::principles/index.adoc[]
 
 include::description/index.adoc[]
 
-include::validation/index.adoc[]
+include::{shared-dir}/content/validation/index.adoc[]
 
 include::appendix.adoc[]

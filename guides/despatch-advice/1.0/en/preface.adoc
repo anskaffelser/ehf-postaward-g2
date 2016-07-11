@@ -1,0 +1,41 @@
+[preface]
+= Preface
+
+include::{shared-dir}/content/preface/background-and-objective.adoc[]
+
+== Target Audience
+
+*The target audience* for this implementation guide is both accounting and IT professionals in organizations aiming at performing the fulfillment process completely or partially electronic. That means issuing a dispatch advice. This document may also benefit system suppliers, ERP suppliers and message brokers.
+
+*	Accounting professionals are advised to read chapters 1 through 5.
+*	Chapters 5 through 7 are for both accounting professionals as technical implementers
+*	IT professionals may concentrate on chapters 6 through 9.
+
+
+== Document Structure
+
+This document consists of the following chapters and contents:
+
+* Chapter 1 gives a short introduction describing the background and objective of this implementation guide.
+* Chapter 2 gives the change history of the document.
+* Chapter 3 describes the EHF formats in general.
+* Chapter 4 links to definitions relevant to this EHF format.
+* Chapter 5 links to general principles and conditions for the despatch advice.
+* Chapter 6 describes in detail central information elements.
+* Chapter 7 gives the complete information contents of the despatch advice.
+* Chapter 8 deals with validation.
+* Chapter 9 embraces these appendices:
+** Appendix 1: Message structure
+** Appendix 2: Message matrix
+** Appendix 3: Code lists
+** Appendix 4: Link to UBL 2.1 schema for despatch advice
+** Appendix 5: Link to Schematron files used in validation
+** Appendix 6: XML example files
+** Appendix 7: Conformance statement
+
+Appendices 1, 2 and 6 are separate documents.  Appendices 3, 4 and 5 serve as links to information on the internet.
+
+
+## Mandatory Use
+
+This version is valid from {date-mandatory}, and is mandatory from the same date.

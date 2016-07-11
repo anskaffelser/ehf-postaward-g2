@@ -2,17 +2,13 @@
 
 :sectnums!:
 
+== Versjon 1.0.4 (15.09.2016)
+
+include::2016-09-15-1.0.4.adoc[]
+
 == Versjon 1.0.3 (10.04.2016)
 
-Validator endringer:
-
-*	Ny regel EUGEN-T16-R007, for å sjekke at Delivered Quantity finnes i instansdokumentet.
-*	Korrigering av regel EUGEN-T16-R002
-
-Forfatter:
-
-Siw Meckelborg, Edisys Consulting AS
-
+include::2016-04-10-1.0.3.adoc[]
 
 == Versjon 1.0.2 (01.09.2015)
 

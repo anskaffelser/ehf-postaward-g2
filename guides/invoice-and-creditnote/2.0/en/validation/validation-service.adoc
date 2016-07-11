@@ -1,6 +1,0 @@
-= Validation Service
-
-Difi's Validator is an application program used to validate EHF XML-files.
-
-Further information can be found here:
-https://vefa.difi.no/ehf/knowledge-base/validation/
