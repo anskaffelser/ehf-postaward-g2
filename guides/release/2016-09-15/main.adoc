@@ -22,3 +22,7 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.4.adoc[]
 === EHF Invoice and Creditnote 2.0.7
 
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.7.adoc[]
+
+=== EHF Despatch Advice 1.0.4
+
+include::../../despatch-advice/1.0/en/changelog/{release}-1.0.4.adoc[]

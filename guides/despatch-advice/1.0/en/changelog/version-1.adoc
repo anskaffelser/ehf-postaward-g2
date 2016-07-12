@@ -1,0 +1,52 @@
+= Version 1.x
+
+:sectnums!:
+
+== Version 1.0.4 (2016-09-15)
+
+include::2016-09-15-1.0.4.adoc[]
+
+== Version 1.0.3 (2016-04-10)
+
+.Changes in validator:
+* New validation rule (EUGEN-T16-R007) to ensure Delivered Quantity is present.
+* Correction of rule EUGEN-T16-R002
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS
+
+== Version 1.0.2 (2015-09-01)
+
+.Changes in validator:
+* Update of PEPPOL and BII validation artefacts
+* Empty elements will generate error, not warning (rule NOGOV-T16-R011)
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Version 1.0.1 (2015-03-07)
+
+.Validation changes:
+* Validation of all mandatory and recommended elements.
+* Validation of datatypes (VAT number, date etc.)
+* Only organisational numbers are valid in EndpointID.
+
+.Editorial changes:
+* Added ruleID to message table
+* Adding Dependant to description of elements.
+* Added chapter 2.1 and new chapter 3.3
+* Update of chapter 8.3
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Version 1.0.0 (2013-10-10)
+
+Approved
+
+.Author:
+* Edisys Consulting AS
+
+:sectnums:

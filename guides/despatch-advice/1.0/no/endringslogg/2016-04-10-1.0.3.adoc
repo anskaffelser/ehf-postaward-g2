@@ -1,8 +1,6 @@
-Validator endringer:
-
+.Validator endringer:
 *	Ny regel EUGEN-T16-R007, for å sjekke at Delivered Quantity finnes i instansdokumentet.
 *	Korrigering av regel EUGEN-T16-R002
 
-Forfatter:
-
-Siw Meckelborg, Edisys Consulting AS
+.Forfatter:
+* Siw Meckelborg, Edisys Consulting AS

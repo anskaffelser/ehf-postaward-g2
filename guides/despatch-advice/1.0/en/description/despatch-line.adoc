@@ -1,0 +1,158 @@
+= Despatch Line
+
+Description of items that are being despatched.
+
+== Item Description and Identification
+
+Each despatch line contains elements for description and identification of the item. Normally only one of the identifiers is needed in the message.
+
+[source,xml]
+.Example
+----
+<cac:Item>
+	<cbc:Name>Item123</cbc:Name>
+	<cac:SellersItemIdentification>
+		<cbc:ID>010120401</cbc:ID>
+	</cac:SellersItemIdentification>
+	<cac:StandardItemIdentification>
+    <cbc:ID schemeID="GTIN" >05704368124358</cbc:ID>
+	</cac:StandardItemIdentification>
+</cac:Item>
+----
+
+== Outstanding Quantity
+
+The outstanding element on the Despatch line is both used to signal the outstanding quantity and to inform about delivery discrepancies.
+
+The handling of “The outstanding quantity which will never be delivered” is done like this: The amount that is declared in the element OutstandingQuantity is equivalent to the amount that will be delivered in a later Despatch. This implicitly means that the missing items that are NOT declared in the OutstandingQuantity cant or will not will be delivered.
+
+.Example 1
+====
+10 items are ordered, 6 items are delivered and the rest of 4 items will be delivered later:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 4
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">4</cbc:OutstandingQuantity>
+----
+====
+
+.Example 2
+====
+10 items are ordered. 6 items are delivered and the rest of 4 items will NOT be delivered:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 0
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">0</cbc:OutstandingQuantity>
+----
+====
+
+.Example 3
+====
+10 items are ordered. 6 items are delivered and 3 will be delivered later and 1 item will NOT be delivered:
+
+Quantity ordered: 10 +
+Quantity delivered: 6 +
+Outstanding quantity: 3
+
+[source,xml]
+----
+<cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:DeliveredQuantity>
+<cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">3</cbc:OutstandingQuantity>
+----
+====
+
+== Hazardous Item
+
+The EHF Despatch Advice also contains the possibility to inform the Consignee about Hazardous Items. This is done by informing the dangerous regulation code for example ADR (Road transport), IMDG (transport by sea) or RID (railroad transport). When declaring hazardous items it is recommended to use the UNDG code to inform about the convention the item is declared hazardous under. When the UNDG code has been declared the Hazard class is declared. The Hazard class corresponds to the hazardous class of the item for example class 2.3 which indicates Poisonous Gas.
+
+Additionally is it is important to state that the transport handling unit is containing Hazardous risks.
+
+See beneath for an example of declaring hazardous items.
+
+[source,xml]
+.Example
+----
+<cac:HazardousItem>
+	<cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
+	<cbc:HazardClassID>2.3</cbc:HazardClassID>
+</cac:HazardousItem>
+----
+
+== Serial Numbers
+
+If each of the delivered items is marked with an individual serial number, these numbers may be sent in the Despatch Advice on Item level.
+
+[source,xml]
+.Example
+----
+<cac:Item>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ444</cbc:SerialID>
+	</cac:ItemInstance>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ4445</cbc:SerialID>
+	</cac:ItemInstance>
+	<cac:ItemInstance>
+		<cbc:SerialID>OR250RHZ4446</cbc:SerialID>
+	</cac:ItemInstance>
+</cac:Item>
+----
+
+== Batch/LOT Numbers, Expiry Date and Best Before Date
+
+The Batch number (LOT number) applies to all items in the despatch line.
+
+Expiry date is used for medical drugs.
+
+Best before date is often used for food.
+
+[source,xml]
+.Example 1
+----
+<cac:ItemInstance>
+	<cac:LotIdentification>
+		<cbc:LotNumberID>898A129</cbc:LotNumberID>
+		<cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
+	</cac:LotIdentification>
+</cac:ItemInstance>
+----
+
+[source,xml]
+.Example 2:
+----
+<cac:ItemInstance>
+	<cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
+</cac:ItemInstance>
+----
+
+
+== Transport Handling Unit
+
+The items on a Despatch line may be packed in several transport handling units which are the physical handling units such as box, container, pallet, etc. containing the consignment.
+
+Serial shipping container code (SSCC) issued by GS1 may be used to identify the transport handling unit.  Note that the same physical handling unit may contain items from different despatch lines. Implemented by referencing the same SSCC code in the ID element of the TransportHandlingUnit on several despatch lines.
+
+[source,xml]
+.Example
+----
+<cac:TransportHandlingUnit>
+  <cbc:ID schemeID="SSCC" schemeAgencyName="GS1">123456789012345675</cbc:ID>
+  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT </cbc:TransportHandlingUnitTypeCode>
+  	<cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit
+  </cbc:ShippingMarks>
+	<cac:MeasurementDimension>
+		<cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
+		<cbc:Measure unitCode="KGM">23.00</cbc:Measure>
+	</cac:MeasurementDimension>
+</cac:TransportHandlingUnit>
+----

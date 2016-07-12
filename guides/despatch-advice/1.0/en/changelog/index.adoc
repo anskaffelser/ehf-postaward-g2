@@ -1,11 +1,9 @@
-= Changelog [[changelog]]
+= Changelog
 
 :leveloffset: +1
 
 include::../{shared-dir}/content/changelog/consequences.adoc[]
 
-include::version-2.adoc[]
-
-// include::version-1.adoc[]
+include::version-1.adoc[]
 
 :leveloffset: -1

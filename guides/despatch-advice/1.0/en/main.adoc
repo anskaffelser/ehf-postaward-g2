@@ -23,15 +23,15 @@ include::{shared-dir}/message/download.adoc[]
 
 include::preface.adoc[]
 
-//include::changelog/index.adoc[]
+include::changelog/index.adoc[]
 
 include::{shared-dir}/content/ehf/index.adoc[]
 
 include::definitions.adoc[]
 
-//include::principles/index.adoc[]
+include::principles/index.adoc[]
 
-//include::description/index.adoc[]
+include::description/index.adoc[]
 
 include::{shared-dir}/content/validation/index.adoc[]
 

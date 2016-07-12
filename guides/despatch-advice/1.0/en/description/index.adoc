@@ -1,0 +1,15 @@
+= Description of Selected Parts
+
+This chapter describes selected parts of the information contents of the EHF Despatch advice message. Go to chapter 7 for the complete information contents.
+
+:leveloffset: +1
+
+include::roles-and-actors.adoc[]
+
+include::order-reference.adoc[]
+
+include::shipment.adoc[]
+
+include::despatch-line.adoc[]
+
+:leveloffset: -1

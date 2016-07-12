@@ -1,0 +1,5 @@
+= Functionality and Roles
+
+The diagram below shows the roles involved in the fulfillment process.
+
+image::images/functionality-and-roles.png[Functions and roles, align="center"]

@@ -1,0 +1,27 @@
+= Order Reference
+
+Used to provide a reference to the purchase order on which the Despatch Advice is based. There may be multiple Despatch Advices to cover one purchase order.  Each Despatch Advice relates to one purchase order. The reference to Order Line-ID is required in the UBL syntax. To cater for scenarios where no order line reference exist a dummy value must be applied. The dummy value must consist of the characters **NA** (Not Applicable).
+
+[source,xml]
+.Example header level.
+----
+<cac:OrderReference>
+	<cbc:ID>4321</cbc:ID>
+</cac:OrderReference>
+----
+
+[source,xml]
+.Example Line level.
+----
+<cac:OrderLineReference>
+	<cbc:LineID>5</cbc:LineID>
+</cac:OrderLineReference>
+----
+
+[source,xml]
+.Example Line level, alternative.
+----
+<cac:OrderLineReference>
+	<cbc:LineID>NA</cbc:LineID>
+</cac:OrderLineReference>
+----
