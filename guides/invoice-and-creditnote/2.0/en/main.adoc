@@ -9,6 +9,7 @@ v{revision}
 :toc: left
 :toclevels: 2
 :source-highlighter: coderay
+:source-language: xml
 :sectanchors:
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
@@ -19,9 +20,11 @@ include::{shared-dir}/message/status-{status}.adoc[]
 
 include::{shared-dir}/message/download.adoc[]
 
+include::{shared-dir}/message/issues.adoc[]
+
 :leveloffset: +1
 
-include::preface.adoc[]
+include::introduction.adoc[]
 
 include::changelog/index.adoc[]
 
@@ -35,4 +38,4 @@ include::description/index.adoc[]
 
 include::{shared-dir}/content/validation/index.adoc[]
 
-include::appendix.adoc[]
+include::appendix/index.adoc[]

@@ -1,0 +1,31 @@
+= Vedlegg [[vedlegg]]
+
+:leveloffset: +1
+
+
+// Strukturtabell
+include::../{shared-dir}/content/vedlegg/strukturtabell.adoc[]
+* link:files/ehf_pakkseddel_strukturtabell.pdf[Strukturtabell for pakkseddel]
+
+
+// Meldingstabell
+include::../{shared-dir}/content/vedlegg/meldingstabell.adoc[]
+* link:files/ehf_pakkseddel_meldingstabell.pdf[Meldingstabell for pakkseddel]
+
+
+= Kodelister [[vedlegg-kodelister]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/vedlegg/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-DespatchAdvice-2.1.xsd[UBL DespatchAdvice 2.1]
+
+
+= Schematron [[vedlegg-schematron]]
+
+
+// Eksempelfiler
+include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
+
+
+:leveloffset: -1

@@ -13,108 +13,108 @@ Kjøper::
 Bestiller::
 (OriginatorCustomerParty)	Bestiller er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er bestiller samme som mottaker.
 
-[source,xml]
+[source]
 .Eksempel på utfylling av avsenderinformasjon i en EHF pakkseddelmelding.
 ----
 <cac:DespatchSupplierParty>
-	<cac:Party>
-	<cbc:EndpointID schemeID="NO:ORGNR">954321376</cbc:EndpointID>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN" >5790000435968</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Sender Company</cbc:Name>
-		</cac:PartyName>
-		<cac:Contact>
-			<cbc:Name>John</cbc:Name>
-			<cbc:Telephone>123456789</cbc:Telephone>
-			<cbc:Telefax>8273741728</cbc:Telefax>
-			<cbc:ElectronicMail>John@SenderCompany.no</cbc:ElectronicMail>
-		</cac:Contact>
+  <cac:Party>
+  <cbc:EndpointID schemeID="NO:ORGNR">954321376</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN" >5790000435968</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Sender Company</cbc:Name>
+    </cac:PartyName>
+    <cac:Contact>
+      <cbc:Name>John</cbc:Name>
+      <cbc:Telephone>123456789</cbc:Telephone>
+      <cbc:Telefax>8273741728</cbc:Telefax>
+      <cbc:ElectronicMail>John@SenderCompany.no</cbc:ElectronicMail>
+    </cac:Contact>
   </cac:Party>
 </cac:DespatchSupplierParty>
 ----
 
-[source,xml]
+[source]
 .Eksempel på utfylling av mottakerinformasjon i en EHF pakkseddelmelding.
 ----
 <cac:DeliveryCustomerParty>
-	<cac:Party>
-	<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN">5790000435944</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Reciever Company</cbc:Name>
-		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:ID>25</cbc:ID>
-			<cbc:StreetName>Reciever Street 1</cbc:StreetName>
-			<cbc:AdditionalStreetName>Reciever Building</cbc:AdditionalStreetName>
-			<cbc:CityName>Reciever City</cbc:CityName>
-			<cbc:PostalZone>9000</cbc:PostalZone>
-			<cbc:CountrySubentity>Region A</cbc:CountrySubentity>
-			<cac:Country>
-				<cbc:IdentificationCode listID=”ISO3166-1:Alpha2”>NO</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
-	</cac:Party>
-	<cac:DeliveryContact>
-		<cbc:Name>Tim</cbc:Name>
-		<cbc:Telephone>987654321</cbc:Telephone>
-		<cbc:Telefax>4546474849</cbc:Telefax>
-		<cbc:ElectronicMail>Tim@RecieverCompany.no</cbc:ElectronicMail>
-	</cac:DeliveryContact>
+  <cac:Party>
+  <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000435944</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Reciever Company</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:ID>25</cbc:ID>
+      <cbc:StreetName>Reciever Street 1</cbc:StreetName>
+      <cbc:AdditionalStreetName>Reciever Building</cbc:AdditionalStreetName>
+      <cbc:CityName>Reciever City</cbc:CityName>
+      <cbc:PostalZone>9000</cbc:PostalZone>
+      <cbc:CountrySubentity>Region A</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID=”ISO3166-1:Alpha2”>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+  </cac:Party>
+  <cac:DeliveryContact>
+    <cbc:Name>Tim</cbc:Name>
+    <cbc:Telephone>987654321</cbc:Telephone>
+    <cbc:Telefax>4546474849</cbc:Telefax>
+    <cbc:ElectronicMail>Tim@RecieverCompany.no</cbc:ElectronicMail>
+  </cac:DeliveryContact>
 </cac:DeliveryCustomerParty>
 ----
 
-[source,xml]
+[source]
 .Eksempel på utfylling av selgerinformasjon i en EHF pakkseddelmelding.
 ----
 <cac:SellerSupplierParty>
-	<cac:Party>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN">5790000435951</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Seller Company</cbc:Name>
-		</cac:PartyName>
-		<cac:Contact>
-			<cbc:Name>Allan</cbc:Name>
-			<cbc:Telephone>43444546</cbc:Telephone>
-			<cbc:Telefax>12345678</cbc:Telefax>
-			<cbc:ElectronicMail>Allan@SellerCompany.no</cbc:ElectronicMail>
-		</cac:Contact>
-	</cac:Party>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000435951</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Seller Company</cbc:Name>
+    </cac:PartyName>
+    <cac:Contact>
+      <cbc:Name>Allan</cbc:Name>
+      <cbc:Telephone>43444546</cbc:Telephone>
+      <cbc:Telefax>12345678</cbc:Telefax>
+      <cbc:ElectronicMail>Allan@SellerCompany.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
 </cac:SellerSupplierParty>
 ----
 
-[source,xml]
+[source]
 .Eksempel på utfylling av kjøperinformasjon i en EHF pakkseddelmelding.
 ----
 <cac:BuyerCustomerParty>
-	<cac:Party>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN">5790000436057</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Buyer Company</cbc:Name>
-		</cac:PartyName>
-	</cac:Party>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000436057</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Buyer Company</cbc:Name>
+    </cac:PartyName>
+  </cac:Party>
 </cac:BuyerCustomerParty>
 ----
 
-[source,xml]
+[source]
 .Eksempel på utfylling av bestillerinformasjon i en EHF pakkseddelmelding
 ----
 <cac:OriginatorCustomerParty>
-	<cac:Party>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN">5790000436057</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Originator</cbc:Name>
-		</cac:PartyName>
-	</cac:Party>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000436057</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Originator</cbc:Name>
+    </cac:PartyName>
+  </cac:Party>
 </cac:OriginatorCustomerParty>
 ----

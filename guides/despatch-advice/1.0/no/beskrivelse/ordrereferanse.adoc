@@ -4,7 +4,7 @@ Benyttes for å refere til hvilken ordre pakkseddelen gjelder.  En pakkseddel ka
 
 Hver pakkseddel linje må referene til hvilken ordrelinje pakkseddel linjen gjelder.  Dersom pakkseddel linjen ikke gjelder en spesifikk ordrelinje, kan verdien NA  (Not Applicable) angis i elementet OrderLineReference.
 
-[source,xml]
+[source]
 .Eksempel pakkseddel hode nivå.
 ----
 <cac:OrderReference>
@@ -12,18 +12,18 @@ Hver pakkseddel linje må referene til hvilken ordrelinje pakkseddel linjen gjel
 </cac:OrderReference>
 ----
 
-[source,xml]
+[source]
 .Eksempel pakkseddel linje nivå.
 ----
 <cac:OrderLineReference>
-	<cbc:LineID>5</cbc:LineID>
+  <cbc:LineID>5</cbc:LineID>
 </cac:OrderLineReference>
 ----
 
-[source,xml]
+[source]
 .Eksempel pakkseddel linje nivå, alternativ.
 ----
 <cac:OrderLineReference>
-	<cbc:LineID>NA</cbc:LineID>
+  <cbc:LineID>NA</cbc:LineID>
 </cac:OrderLineReference>
 ----

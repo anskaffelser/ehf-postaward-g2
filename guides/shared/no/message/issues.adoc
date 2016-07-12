@@ -1,0 +1,4 @@
+[NOTE]
+====
+Dersom du finner feil eller mangler i implementasjonsguiden ber vi om at det det meldes inn på link:{link-issues}[Github Issues].
+====

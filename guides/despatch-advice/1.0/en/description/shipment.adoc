@@ -6,7 +6,7 @@ Description of the actual shipment that contains the goods that are being despat
 
 In some uses of the Despath Advice, there is no unique identifier assigned to the shipment. However, the UBL syntax requires the Shipment ID. Consequently, to be able to use elements such as GrossWeightMeasure or CarrierParty, the Shipment/ID must be filled in. To cater for scenarios where no ID exist a dummy value must be applied. The dummy value must consist of the characters NA (Not  Applicable).
 
-[source,xml]
+[source]
 .Example
 ----
 <cac:Shipment>

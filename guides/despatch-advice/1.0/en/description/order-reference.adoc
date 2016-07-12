@@ -2,7 +2,7 @@
 
 Used to provide a reference to the purchase order on which the Despatch Advice is based. There may be multiple Despatch Advices to cover one purchase order.  Each Despatch Advice relates to one purchase order. The reference to Order Line-ID is required in the UBL syntax. To cater for scenarios where no order line reference exist a dummy value must be applied. The dummy value must consist of the characters **NA** (Not Applicable).
 
-[source,xml]
+[source]
 .Example header level.
 ----
 <cac:OrderReference>
@@ -10,7 +10,7 @@ Used to provide a reference to the purchase order on which the Despatch Advice i
 </cac:OrderReference>
 ----
 
-[source,xml]
+[source]
 .Example Line level.
 ----
 <cac:OrderLineReference>
@@ -18,7 +18,7 @@ Used to provide a reference to the purchase order on which the Despatch Advice i
 </cac:OrderLineReference>
 ----
 
-[source,xml]
+[source]
 .Example Line level, alternative.
 ----
 <cac:OrderLineReference>

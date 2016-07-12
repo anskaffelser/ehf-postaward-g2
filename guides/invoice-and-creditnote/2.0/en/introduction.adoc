@@ -1,7 +1,7 @@
 [preface]
-= Preface
+= Introduction
 
-include::{shared-dir}/content/preface/background-and-objective.adoc[]
+include::{shared-dir}/content/introduction/background-and-objective.adoc[]
 
 == Target Audience
 

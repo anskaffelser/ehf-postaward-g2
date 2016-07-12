@@ -6,7 +6,7 @@ Description of items that are being despatched.
 
 Each despatch line contains elements for description and identification of the item. Normally only one of the identifiers is needed in the message.
 
-[source,xml]
+[source]
 .Example
 ----
 <cac:Item>
@@ -34,7 +34,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 4
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">4</cbc:OutstandingQuantity>
@@ -49,7 +49,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 0
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">0</cbc:OutstandingQuantity>
@@ -64,7 +64,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 3
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">3</cbc:OutstandingQuantity>
@@ -79,7 +79,7 @@ Additionally is it is important to state that the transport handling unit is con
 
 See beneath for an example of declaring hazardous items.
 
-[source,xml]
+[source]
 .Example
 ----
 <cac:HazardousItem>
@@ -92,7 +92,7 @@ See beneath for an example of declaring hazardous items.
 
 If each of the delivered items is marked with an individual serial number, these numbers may be sent in the Despatch Advice on Item level.
 
-[source,xml]
+[source]
 .Example
 ----
 <cac:Item>
@@ -116,7 +116,7 @@ Expiry date is used for medical drugs.
 
 Best before date is often used for food.
 
-[source,xml]
+[source]
 .Example 1
 ----
 <cac:ItemInstance>
@@ -127,7 +127,7 @@ Best before date is often used for food.
 </cac:ItemInstance>
 ----
 
-[source,xml]
+[source]
 .Example 2:
 ----
 <cac:ItemInstance>
@@ -142,7 +142,7 @@ The items on a Despatch line may be packed in several transport handling units w
 
 Serial shipping container code (SSCC) issued by GS1 may be used to identify the transport handling unit.  Note that the same physical handling unit may contain items from different despatch lines. Implemented by referencing the same SSCC code in the ID element of the TransportHandlingUnit on several despatch lines.
 
-[source,xml]
+[source]
 .Example
 ----
 <cac:TransportHandlingUnit>

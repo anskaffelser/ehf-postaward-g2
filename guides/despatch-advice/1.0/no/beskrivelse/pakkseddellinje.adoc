@@ -6,17 +6,17 @@ Beskrivelsene nedenfor gjelder elementer på pakkseddellinje.
 
 Hver pakkseddellinje inneholder elementer for beskrivelse og identifisering av varen.  Beskrivelse og/eller varenummer må angis på linjen.
 
-[source,xml]
+[source]
 .Eksempel
 ----
 <cac:Item>
-	<cbc:Name>Item123</cbc:Name>
-	<cac:SellersItemIdentification>
-		<cbc:ID>010120401</cbc:ID>
-	</cac:SellersItemIdentification>
-	<cac:StandardItemIdentification>
+  <cbc:Name>Item123</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>010120401</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:StandardItemIdentification>
     <cbc:ID schemeID="GTIN" >05704368124358</cbc:ID>
-	</cac:StandardItemIdentification>
+  </cac:StandardItemIdentification>
 </cac:Item>
 ----
 
@@ -37,7 +37,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 4
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">4</cbc:OutstandingQuantity>
@@ -52,7 +52,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 0
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">0</cbc:OutstandingQuantity>
@@ -67,7 +67,7 @@ Quantity ordered: 10 +
 Quantity delivered: 6 +
 Outstanding quantity: 3
 
-[source,xml]
+[source]
 ----
 <cbc:DeliveredQuantity unitCode="EA" unitCodeListID="UNECERec20”>6</cbc:DeliveredQuantity>
 <cbc:OutstandingQuantity unitCode="EA" unitCodeListID="UNECERec20">3</cbc:OutstandingQuantity>
@@ -86,12 +86,12 @@ Kode som indikerer hvilket regelverk som legges til grunn for klassifisering av 
 
 Kode for klassifisering (type farlig gods) av det farlige godset i henhold til hvilket regelverk som er oppgitt i farlig gods kode.  ADR, IMDG og RID benytter alle samme kodifisering.  Eksempel: 2.3 indikerer giftig gass.
 
-[source,xml]
+[source]
 .Eksempel
 ----
 <cac:HazardousItem>
-	<cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
-	<cbc:HazardClassID>2.3</cbc:HazardClassID>
+  <cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
+  <cbc:HazardClassID>2.3</cbc:HazardClassID>
 </cac:HazardousItem>
 ----
 
@@ -99,19 +99,19 @@ Kode for klassifisering (type farlig gods) av det farlige godset i henhold til h
 
 Dersom varene som leveres er merket med indivuelle serienr, kan dette angis på varenivå på pakkseddel linje i pakkseddel meldingen.
 
-[source,xml]
+[source]
 .Eksempel
 ----
 <cac:Item>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ444</cbc:SerialID>
-	</cac:ItemInstance>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ4445</cbc:SerialID>
-	</cac:ItemInstance>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ4446</cbc:SerialID>
-	</cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ444</cbc:SerialID>
+  </cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ4445</cbc:SerialID>
+  </cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ4446</cbc:SerialID>
+  </cac:ItemInstance>
 </cac:Item>
 ----
 
@@ -119,22 +119,22 @@ Dersom varene som leveres er merket med indivuelle serienr, kan dette angis på 
 
 Batch/LOT-nummer gjelder alle varene på en pakkseddel linje. Utløpsdato (ExpiryDate) indikerer siste dato varene kan benyttes (relevant for f. eks medisiner). "Best før"-dato (BestBeforeDate) benyttes ofte for matvarer.
 
-[source,xml]
+[source]
 .Eksempel 1
 ----
 <cac:ItemInstance>
-	<cac:LotIdentification>
-		<cbc:LotNumberID>898A129</cbc:LotNumberID>
-		<cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
-	</cac:LotIdentification>
+  <cac:LotIdentification>
+    <cbc:LotNumberID>898A129</cbc:LotNumberID>
+    <cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
+  </cac:LotIdentification>
 </cac:ItemInstance>
 ----
 
-[source.xml]
+[source]
 .Eksempel 2
 ----
 <cac:ItemInstance>
-	<cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
+  <cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
 </cac:ItemInstance>
 ----
 
@@ -144,17 +144,16 @@ Varene på en pakkseddel linje kan være pakket i flere transportenheter (kolli)
 
 Pakkseddel meldingen støtter ikke forpakningshierarki, det vil si at en transportenhet består av en eller flere  transportenheter.
 
-[source,xml]
+[source]
 .Eksempel
 ----
 <cac:TransportHandlingUnit>
   <cbc:ID schemeID="SSCC" schemeAgencyName="GS1">123456789012345675</cbc:ID>
-  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT </cbc:TransportHandlingUnitTypeCode>
-	  <cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit
-  </cbc:ShippingMarks>
-	<cac:MeasurementDimension>
-		<cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
-		<cbc:Measure unitCode="KGM">23.00</cbc:Measure>
-	</cac:MeasurementDimension>
+  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT</cbc:TransportHandlingUnitTypeCode>
+  <cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit</cbc:ShippingMarks>
+  <cac:MeasurementDimension>
+    <cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
+    <cbc:Measure unitCode="KGM">23.00</cbc:Measure>
+  </cac:MeasurementDimension>
 </cac:TransportHandlingUnit>
 ----

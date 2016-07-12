@@ -1,7 +1,7 @@
 [preface]
-= Bakgrunn
+= Innledning
 
-include::{shared-dir}/content/forord/bakgrunn-og-malsetting.adoc[]
+include::{shared-dir}/content/innledning/bakgrunn-og-malsetting.adoc[]
 
 == Målgruppe
 

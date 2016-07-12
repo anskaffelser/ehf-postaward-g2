@@ -6,33 +6,33 @@ Beskrivelse av den aktuelle forsendelsen.
 
 Forsendelsenummer (Shipment/ID) er obligatorisk i pakkseddel meldingen når forsendelses elementet (Shipment) benyttes.  Dersom forsendelsnummer ikke er tilgjengelig for pakkseddelen, kan NA (Not Applicable) angis som forsendelsnummer.
 
-[source,xml]
+[source]
 .Eksempel
 ----
 <cac:Shipment>
-	<cbc:ID>NA</cbc:ID>
-	<cbc:Information>Free text information relating to the Shipment</cbc:Information>
-	<cbc:GrossWeightMeasure unitCode="KGM" unitCodeListID="UNECERec20">23</cbc:GrossWeightMeasure>
-	<cbc:GrossVolumeMeasure unitCode="MTQ" unitCodeListID="UNECERec20">27</cbc:GrossVolumeMeasure>
-	<cac:Consignment>
-		<cbc:ID>12345</cbc:ID>
-		<cac:CarrierParty>
-			<cac:PartyName>
-				<cbc:Name>CarrierPart</cbc:Name>
-			</cac:PartyName>
-		</cac:CarrierParty>
-	</cac:Consignment>
-	<cac:Delivery>
-		<cac:EstimatedDeliveryPeriod>
-			<cbc:StartDate>2013-03-15</cbc:StartDate>
-			<cbc:StartTime>08:00:00</cbc:StartTime>
-			<cbc:EndDate>2013-03-16</cbc:EndDate>
-			<cbc:EndTime>12:00:00</cbc:EndTime>
-		</cac:EstimatedDeliveryPeriod>
-		<cac:Despatch>
-			<cbc:ActualDespatchDate>2013-03-13</cbc:ActualDespatchDate>
-			<cbc:ActualDespatchTime>08:00:00</cbc:ActualDespatchTime>
-		</cac:Despatch>
-	</cac:Delivery>
+  <cbc:ID>NA</cbc:ID>
+  <cbc:Information>Free text information relating to the Shipment</cbc:Information>
+  <cbc:GrossWeightMeasure unitCode="KGM" unitCodeListID="UNECERec20">23</cbc:GrossWeightMeasure>
+  <cbc:GrossVolumeMeasure unitCode="MTQ" unitCodeListID="UNECERec20">27</cbc:GrossVolumeMeasure>
+  <cac:Consignment>
+    <cbc:ID>12345</cbc:ID>
+    <cac:CarrierParty>
+      <cac:PartyName>
+        <cbc:Name>CarrierPart</cbc:Name>
+      </cac:PartyName>
+    </cac:CarrierParty>
+  </cac:Consignment>
+  <cac:Delivery>
+    <cac:EstimatedDeliveryPeriod>
+      <cbc:StartDate>2013-03-15</cbc:StartDate>
+      <cbc:StartTime>08:00:00</cbc:StartTime>
+      <cbc:EndDate>2013-03-16</cbc:EndDate>
+      <cbc:EndTime>12:00:00</cbc:EndTime>
+    </cac:EstimatedDeliveryPeriod>
+    <cac:Despatch>
+      <cbc:ActualDespatchDate>2013-03-13</cbc:ActualDespatchDate>
+      <cbc:ActualDespatchTime>08:00:00</cbc:ActualDespatchTime>
+    </cac:Despatch>
+  </cac:Delivery>
 </cac:Shipment>
 ----

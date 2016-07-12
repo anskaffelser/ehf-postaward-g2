@@ -10,6 +10,7 @@ v{revision}
 :toclevels: 2
 :toc-title: Innholdsfortegnelse
 :source-highlighter: coderay
+:source-language: xml
 :sectanchors:
 :sectnums:
 :title-logo-image: {shared-dir}/images/logo.jpg
@@ -20,9 +21,11 @@ include::{shared-dir}/message/status-{status}.adoc[]
 
 include::{shared-dir}/message/download.adoc[]
 
+include::{shared-dir}/message/issues.adoc[]
+
 :leveloffset: +1
 
-include::forord.adoc[]
+include::innledning.adoc[]
 
 include::endringslogg/index.adoc[]
 
@@ -36,4 +39,4 @@ include::beskrivelse/index.adoc[]
 
 include::{shared-dir}/content/validering/index.adoc[]
 
-include::vedlegg.adoc[]
+include::vedlegg/index.adoc[]

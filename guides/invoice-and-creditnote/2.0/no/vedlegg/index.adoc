@@ -1,0 +1,34 @@
+= Vedlegg [[vedlegg]]
+
+:leveloffset: +1
+
+
+// Strukturtabell
+include::../{shared-dir}/content/vedlegg/strukturtabell.adoc[]
+* link:files/ehf_faktura_strukturtabell.pdf[Strukturtabell for faktura]
+* link:files/ehf_kreditnota_strukturtabell.pdf[Strukturtabell for kreditnota]
+
+
+// Meldingstabell
+include::../{shared-dir}/content/vedlegg/meldingstabell.adoc[]
+* link:files/ehf_faktura_meldingstabell.pdf[Meldingstabell for faktura]
+* link:files/ehf_kreditnota_meldingstabell.pdf[Meldingstabell for kreditnota]
+
+
+= Kodelister [[vedlegg-kodelister]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/vedlegg/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-CreditNote-2.1.xsd[UBL CreditNote 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-Invoice-2.1.xsd[UBL Invoice 2.1]
+
+
+= Schematron [[vedlegg-schematron]]
+
+
+// Eksempelfiler
+include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
+
+
+:leveloffset: -1

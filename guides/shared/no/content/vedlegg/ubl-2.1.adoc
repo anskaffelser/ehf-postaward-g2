@@ -1,0 +1,9 @@
+= UBL 2.1 [[vedlegg-ubl]]
+
+UBL 2.1 Schema som denne implementasjonsguiden baserer seg på er tilgjengelig fra OASIS.
+
+Ved validering vil syntaksvalidering gjøres mot aktuelle schema.
+
+For mer informasjon om UBL 2.1 henviser vi til link:{link-oasis-ubl-21}[standarden]. link:{link-oasis-ubl-21-resources}[Ytterligere ressurser] er også tilgjengelig.
+
+.Aktuelle skjema

@@ -1,4 +1,7 @@
+include::../settings.adoc[]
+
 = EHF Release {release}
+{name-link-no}
 :icons: font
 :toc: left
 :toclevels: 2
@@ -6,14 +9,14 @@
 :sectanchors:
 :release: 2016-05-23
 
-== Norsk
+== Norsk [[norsk]]
 
-=== EHF Faktura og kreditnota 2.0.6
+=== EHF Faktura og kreditnota 2.0.6 [[faktura-og-kreditnota]]
 
 include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.6.adoc[]
 
-== English
+== English [[english]]
 
-=== EHF Invoice and Creditnote 2.0.6
+=== EHF Invoice and Creditnote 2.0.6 [[invoice-and-creditnote]]
 
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.6.adoc[]

@@ -1,5 +1,6 @@
 //
 :status: dev
+:release: 2016-09-15
 
 // Difi
 :link-github: https://github.com/difi/vefa-validator-conf
@@ -12,4 +13,7 @@
 // External
 :link-cen-bii: http://www.cenbii.eu/
 :link-oasis-ubl: http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl
+:link-oasis-ubl-21: http://docs.oasis-open.org/ubl/UBL-2.1.html
+:link-oasis-ubl-21-resources: http://docs.oasis-open.org/ubl/os-UBL-2.1/
+:link-oasis-ubl-21-xsd: http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/
 :link-peppol: http://www.peppol.eu/

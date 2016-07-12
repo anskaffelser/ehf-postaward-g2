@@ -22,7 +22,7 @@ Originating party::
 (UBL:OriginatorCustomerParty)	The party who will eventually receive and consume the goods and on whose behalf the buyer makes the purchase. +
 Originating party is optional information in EHF.
 
-[source,xml]
+[source]
 .Example: Consignee information in in an EHF Despatch advice message.
 ----
 <cac:DeliveryCustomerParty>
@@ -55,7 +55,7 @@ Originating party is optional information in EHF.
 </cac:DeliveryCustomerParty>
 ----
 
-[source,xml]
+[source]
 .Example: Information regarding the Despatch party in a EHF Despatch advice message.
 ----
 <cac:DespatchSupplierParty>
@@ -77,7 +77,7 @@ Originating party is optional information in EHF.
 </cac:DespatchSupplierParty>
 ----
 
-[source,xml]
+[source]
 .Example: Buyer information in a EHF Despatch advice message.
 ----
 <cac:BuyerCustomerParty>
@@ -92,7 +92,7 @@ Originating party is optional information in EHF.
 </cac:BuyerCustomerParty>
 ----
 
-[source,xml]
+[source]
 .Example: Seller information in a EHF Despatch advice message.
 ----
 <cac:SellerSupplierParty>
@@ -113,7 +113,7 @@ Originating party is optional information in EHF.
 </cac:SellerSupplierParty>
 ----
 
-[source,xml]
+[source]
 .Example: Originator party in a EHF Despatch advice message.
 ----
 <cac:OriginatorCustomerParty>

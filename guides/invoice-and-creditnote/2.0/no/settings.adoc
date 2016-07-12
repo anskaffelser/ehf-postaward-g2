@@ -2,7 +2,7 @@
 
 include::../settings.adoc[]
 
-:doctitle: EHF faktura og kreditnota
+:doctitle: EHF Faktura og Kreditnota
 
 :date-review: tentativt 15. august 2016
 :date-release: tentativt 15. september 2016

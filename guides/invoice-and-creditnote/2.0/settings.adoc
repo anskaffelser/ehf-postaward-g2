@@ -2,6 +2,7 @@ include::../../settings.adoc[]
 
 :minor: 2.0
 :revision: 2.0.7
-:version: {revision}
-:release: 2016-09-15
+:release: {release}
+:status: {status}
+
 :shared-dir: ../../../shared/{language}
