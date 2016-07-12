@@ -1,12 +1,13 @@
-= Version 1.x
+= Version 1.x [[changelog-1.x]]
 
 :sectnums!:
 
-== Version 1.0.4 (2016-09-15)
+== Version 1.0.4 (2016-09-15) [[changelog-1.0.4]]
 
 include::2016-09-15-1.0.4.adoc[]
 
-== Version 1.0.3 (2016-04-10)
+
+== Version 1.0.3 (2016-04-10) [[changelog-1.0.3]]
 
 .Changes in validator:
 * New validation rule (EUGEN-T16-R007) to ensure Delivered Quantity is present.
@@ -15,7 +16,8 @@ include::2016-09-15-1.0.4.adoc[]
 .Author:
 * Siw Meckelborg, Edisys Consulting AS
 
-== Version 1.0.2 (2015-09-01)
+
+== Version 1.0.2 (2015-09-01) [[changelog-1.0.2]]
 
 .Changes in validator:
 * Update of PEPPOL and BII validation artefacts
@@ -25,7 +27,7 @@ include::2016-09-15-1.0.4.adoc[]
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 1.0.1 (2015-03-07)
+== Version 1.0.1 (2015-03-07) [[changelog-1.0.1]]
 
 .Validation changes:
 * Validation of all mandatory and recommended elements.
@@ -42,7 +44,7 @@ include::2016-09-15-1.0.4.adoc[]
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Version 1.0.0 (2013-10-10)
+== Version 1.0.0 (2013-10-10) [[changelog-1.0.0]]
 
 Approved
 

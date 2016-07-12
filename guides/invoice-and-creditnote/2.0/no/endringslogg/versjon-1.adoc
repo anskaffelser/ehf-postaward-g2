@@ -9,8 +9,7 @@
 * Konteringsstreng på fakturalinje er endret fra anbefalt til valgfritt.
 * Diverse tekstlige justeringer.
 
-Forfatter:
-
+.Forfatter:
 * Olav A. Kristiansen, Difi
 * Jostein Frømyr, Edisys Consulting AS
 * Erik Gustavsen, Edisys Consulting AS
@@ -18,8 +17,7 @@ Forfatter:
 
 == Versjon 1.6 (02.01.2013)
 
-Diverse tekstlige justeringer og presiseringer, blant annet i forhold til utfylling av
-
+.Diverse tekstlige justeringer og presiseringer, blant annet i forhold til utfylling av
 * EndPoint ID,
 * organisasjonsnummer,
 * moms-nummer,
@@ -29,16 +27,14 @@ Diverse tekstlige justeringer og presiseringer, blant annet i forhold til utfyll
 * beskrivelse av avrundingsregler, samt
 * profiler og meldinger
 
-Dessuten er det introdusert tekniske og funksjonelle endringer i forhold til
-
+.Dessuten er det introdusert tekniske og funksjonelle endringer i forhold til
 * støtte for negativ faktura,
 * leveringssted på fakturalinje,
 * støtte for norske profiler,
 * krav til utfylling av gateadresse på leverandør og kunde er fjernet,
 * anbefale å fylle ut navn på juridisk enhet på leverandør og kunde.	Olav A. Kristiansen, Difi
 
-Forfatter:
-
+.Forfatter:
 * Jostein Frømyr, Edisys Consulting AS
 * Erik Gustavsen, Edisys Consulting AS
 
@@ -63,8 +59,7 @@ Forfatter:
 * Ny del kapitel 4.11 om party Tax Scheme for leverandør
 * Oppdatert tekst for kapitel 6.6 om infrastruktur for utveksling av EHF
 
-Forfatter:
-
+.Forfatter:
 * Bao Nguyen, Difi
 
 
@@ -72,8 +67,7 @@ Forfatter:
 
 * 4.8 Anbefaling til vedleggshåndtering	Bao
 
-Forfatter:
-
+.Forfatter:
 * Nguyen, Difi
 
 
@@ -82,17 +76,15 @@ Forfatter:
 * Navneendring
 * Nytt vedlegg med Xpath til obligatoriske og anbefalte felter.
 
-Forfatter:
-
-Bao Nguyen, Difi
+.Forfatter:
+* Bao Nguyen, Difi
 
 
 == Versjon 1.2 (24.02.2011)
 
 * Retting av kap 3.1.1 (bankkontonummer blir obligatorisk)
 
-Forfatter:
-
+.Forfatter:
 * Bao Nguyen, Difi
 
 
@@ -103,8 +95,7 @@ Forfatter:
 * Engelsk versjon
 * Testfiler
 
-Forfatter:
-
+.Forfatter:
 * Bao Nguyen, Difi
 * Kristin V. Gulbrandsen, Difi
 
@@ -113,8 +104,7 @@ Forfatter:
 
 Retting av definisjoner
 
-Forfatter:
-
+.Forfatter:
 * Bao Nguyen, Difi
 
 
@@ -122,8 +112,7 @@ Forfatter:
 
 Endelig versjon
 
-Forfatter:
-
+.Forfatter:
 * Bao Nguyen, Difi
 
 :sectnums:

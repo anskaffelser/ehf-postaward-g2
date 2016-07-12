@@ -6,8 +6,7 @@
 
 * English version
 
-Authors:
-
+.Authors:
 * Gunnar Stensby, Edisys
 
 
@@ -19,8 +18,7 @@ Authors:
 * Urge to not use optional Note elements.
 * Text adjustments.
 
-Authors:
-
+.Authors:
 * Olav A. Kristiansen, Difi
 * Jostein Frømyr, Edisys
 * Erik Gustavsen, Edisys
@@ -28,7 +26,7 @@ Authors:
 
 == Version 1.6 (02.01.2013)
 
-Several adjustments and clarifications about:
+.Several adjustments and clarifications about:
 * Endpoint ID
 * Organisation number
 * VAT-number
@@ -38,16 +36,14 @@ Several adjustments and clarifications about:
 * Rounding rules description
 * Profiles and messages
 
-In addition introducing technical and functional modifications for
-
+.In addition introducing technical and functional modifications for
 * Allowing negative invoice
 * Delivery Address on invoice line
 * Support for Norwegian profiles
 * Mandatory elements made optional (StreetAddress for supplier and customer)
 * Introduced recommended elements (LegalEntityName for supplier and customer)
 
-Authors:
-
+.Authors:
 * Olav A. Kristiansen, Difi
 * Jostein Frømyr, Edisys
 * Erik Gustavsen, Edisys
@@ -72,8 +68,7 @@ Authors:
 * New paragraph in 4.11 about PartyTaxScheme for supplier
 * Updated text; infrastructure for exchanging EHFs, chapter 6.6
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 
@@ -81,8 +76,7 @@ Authors:
 
 * 4.8 Recommendation for the use of appendices
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 
@@ -91,8 +85,7 @@ Authors:
 * Name change
 * New appendix with Xpath to mandatory and recommended elements.
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 
@@ -100,8 +93,7 @@ Authors:
 
 * Correcting chapter 3.1.1 (Bank Account No becomes mandatory)
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 
@@ -111,8 +103,7 @@ Authors:
 * Appendices 1, 2 and 5 (new data element: TaxCategory in  Allowance Charge) English version
 * Test files
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 * Kristin V. Gulbrandsen, Difi
 
@@ -121,8 +112,7 @@ Authors:
 
 * Correcting definitions
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 
@@ -130,8 +120,7 @@ Authors:
 
 * Final version
 
-Authors:
-
+.Authors:
 * Bao Nguyen, Difi
 
 :sectnums:

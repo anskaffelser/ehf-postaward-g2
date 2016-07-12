@@ -1,16 +1,18 @@
-= Versjon 1.x
+= Versjon 1.x [[changelog-1.x]]
 
 :sectnums!:
 
-== Versjon 1.0.4 (15.09.2016)
+== Versjon 1.0.4 (15.09.2016) [[changelog-1.0.4]]
 
 include::2016-09-15-1.0.4.adoc[]
 
-== Versjon 1.0.3 (10.04.2016)
+
+== Versjon 1.0.3 (10.04.2016) [[changelog-1.0.3]]
 
 include::2016-04-10-1.0.3.adoc[]
 
-== Versjon 1.0.2 (01.09.2015)
+
+== Versjon 1.0.2 (01.09.2015) [[changelog-1.0.2]]
 
 .Validator endringer:
 *	Nye valideringsartefakter fra PEPPOL og BII, oppgradering til XSLT/xPath 2.0
@@ -20,7 +22,7 @@ include::2016-04-10-1.0.3.adoc[]
 * Siw Meckelborg, Edisys Consulting AS
 
 
-== Versjon 1.0.1 (07.03.2015)
+== Versjon 1.0.1 (07.03.2015) [[changelog-1.0.1]]
 
 .Validator endringer:
 *	Validering av alle påkrevde og anbefalte felt.
@@ -37,7 +39,7 @@ include::2016-04-10-1.0.3.adoc[]
 *Siw Meckelborg, Edisys Consulting AS
 
 
-== Versjon 1.0 (10.10.2013)
+== Versjon 1.0 (10.10.2013) [[changelog-1.0.0]]
 
 Godkjent
 
