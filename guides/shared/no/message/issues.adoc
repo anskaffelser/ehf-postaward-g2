@@ -1,4 +1,3 @@
 [NOTE]
-====
-Dersom du finner feil eller mangler i implementasjonsguiden ber vi om at det det meldes inn på link:{link-issues}[Github Issues].
-====
+.Innmelding av feil og mangler
+Dersom du finner feil eller mangler i dokumentet ber vi om at det det meldes inn på link:{link-issues}[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.

@@ -2,20 +2,7 @@
 
 VAT categories used in Norway as of july 1, 2013 are specified in the table below.  Use of other VAT categories than those specified below leads to rejection of the XML instance document during validation.
 
-[cols="1,5,2",options="header"]
-!===
-| VAT category
-| Description
-| Rate as of july 1, 2013
-
-s| S | Outgoing VAT, ordinary rate | 25%
-s| H | Outgoing VAT, reduced rate – food & beverage | 15%
-s| R | Outgoing VAT, reduced rate  – raw fish | 11,11%
-s| AA | Outgoing VAT, low rate | 10%
-s| E | VAT excempt | 0%
-s| Z | VAT excempt (Goods and services not included in the VAT regulations) | None (0%)
-s| K | Emission allowances for private or public businesses  – buyer calculates VAT | None (0%)
-!===
+include::../{shared-dir}/partial/mva.adoc[]
 
 The VAT category must be specified on line level.  On the header level both the VAT rate and the category must be specified. In addition the basis for calculating the VAT value, the VAT value itself and the total amount for VAT  must be specified on the header level.
 
