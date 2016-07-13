@@ -1,0 +1,12 @@
+= Anbefalt artikkel
+
+Anbefalt artikkel angis som en tilleggsegenskap med kodeverdi ABF.
+
+[source]
+.Eksempel på utfylling i EHF katalog.
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ABF</cbc:Name>
+  <cbc:Value>true</cbc:Value>
+</cac:AdditionalItemProperty>
+----

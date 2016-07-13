@@ -1,0 +1,34 @@
+= Vedlegg [[vedlegg]]
+
+:leveloffset: +1
+
+
+// Strukturtabell
+include::../{shared-dir}/content/vedlegg/strukturtabell.adoc[]
+* link:files/ehf_katalog_strukturtabell.pdf[Strukturtabell for katalog]
+* link:files/ehf_katalogbekreftelse_strukturtabell.pdf[Strukturtabell for katalogbekreftelse]
+
+
+// Meldingstabell
+include::../{shared-dir}/content/vedlegg/meldingstabell.adoc[]
+* link:files/ehf_katalog_meldingstabell.pdf[Meldingstabell for katalog]
+* link:files/ehf_katalogbekreftelse_meldingstabell.pdf[Meldingstabell for katalogbekreftelse]
+
+
+= Kodelister [[vedlegg-kodelister]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/vedlegg/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-Catalogue-2.1.xsd[UBL Catalogue 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-ApplicationResponse-2.1.xsd[UBL ApplicationResponse 2.1]
+
+
+= Schematron [[vedlegg-schematron]]
+
+
+// Eksempelfiler
+include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
+
+
+:leveloffset: -1

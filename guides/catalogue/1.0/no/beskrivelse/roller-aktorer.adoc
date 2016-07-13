@@ -1,0 +1,69 @@
+= Roller og aktører
+
+Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller ulike aktører avhengig av hvordan håndtering av kataloginformasjon er organisert.
+
+Rolle	Beskrivelse
+
+Katalogutsteder (ProviderParty)::
+Den som er ansvarlig for å klargjøre og overføre katalog til mottaker. Dette kan være samme som leverandør eller en aktør som utfører denne oppgaven for leverandør
+
+Katalogmottaker (ReceiverParty)::
+Den som er ansvarlig for å motta og kontrollere katalogen. Dette kan være en tredjepart som utfører denne oppgaven for kjøper.
+
+Leverandør (SellerSupplierParty)::
+Den som er ansvarlig for å levere varen eller tjenesten som er spesifisert i katalogen.
+
+Kjøper (ContractorCustomerParty)::
+Den som gjør innkjøp fra katalogen.
+
+Produsent (ManufacturerParty)::
+Den som har produsert varen (angis med navn på linjenivå).
+
+
+[source]
+.Eksempel på utfylling av leverandørinformasjon på hodenivå.
+----
+<cac:SellerSupplierParty>
+	<cac:Party>
+		<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="NO:ORGNR">984297793</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Supplier</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Per Krohgs vei 1,Karihaugen</cbc:StreetName>
+			<cbc:CityName>OSLO</cbc:CityName>
+			<cbc:CountrySubentity>Norway</cbc:CountrySubentity>
+			<cac:Country>
+				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO
+</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:Contact>
+			<cbc:Name>Ole Olsen</cbc:Name>
+			<cbc:Telephone>+46123123123</cbc:Telephone>
+			<cbc:ElectronicMail>test@ibxeurope.com</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:Party>
+</cac:SellerSupplierParty>
+----
+
+[source]
+.Eksempel på utfylling av produsentinformasjon i EHF katalog.
+----
+<cac:CatalogueLine>
+...
+  <cac:Item>
+  ...
+    <cac:ManufacturerParty>
+      <cac:PartyName>
+        <cbc:Name>Produsent</cbc:Name>
+      </cac:PartyName>
+    </cac:ManufacturerParty>
+  ...
+  </cac:Item>
+...
+</cac:CatalogueLine>
+----

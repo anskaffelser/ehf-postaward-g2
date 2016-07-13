@@ -1,0 +1,18 @@
+= Prinsipper og forutsetninger
+
+Dette kapitlet beskriver de prinsipper og forutsetninger som ligger til grunn for bruk av EHF Katalog.  Dette er i hovedsak basert på tilsvarende beskrivelser i profil CEN BII01 Catalogue Only.
+
+
+:leveloffset: +1
+
+include::generelt.adoc[]
+
+include::funksjoner-og-roller.adoc[]
+
+include::profiler-og-meldinger.adoc[]
+
+include::katalogprosess.adoc[]
+
+include::katalogbekreftelse.adoc[]
+
+:leveloffset: -1

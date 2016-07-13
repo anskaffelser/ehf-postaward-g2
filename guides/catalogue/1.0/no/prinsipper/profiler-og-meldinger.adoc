@@ -1,0 +1,16 @@
+= Profiler og meldinger
+
+En profil er den elektroniske samhandlingsprosess som en aktuell meldingsutveksling er en del av. En profil vil typisk omfatte flere relaterte meldinger som utveksles mellom to parter, men kan i sin enkleste form omfatte kun en enkelt melding.
+
+Den profilen som er aktuell i forbindelse med EHF Katalog er vist i nedenstående tabell.
+
+Katalogprosess (BII01)::
+Katalog, Katalogbekreftelse
+
+
+== ProfileID
+
+Identifiserer den prosess forretningsdokumentene er en del av. EHF benytter identifikasjonssystem i henhold til BII.
+
+Katalog::
+urn:www.cenbii.eu:profile:bii01:ver2.0

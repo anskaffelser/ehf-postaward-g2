@@ -1,0 +1,29 @@
+= Farlig gods
+
+Dersom produktet er klassifisert som farlig gods skal dette angis med referanse til aktuell klassifiseringskode og link til aktuelt HMS-blad som vedlegg (Attachment).
+
+Framstillere, importører og etterfølgende brukere har plikt til å klassifisere stoffer og stoffblandinger som de bringer i omsetning. Dette gjelder uavhengig av hvilke mengder som framstilles eller importeres. Se informasjon på Klima og Forurensningsdirektoratets (KLIFF) nettside.
+
+I BII og UBL er det referert til UNDG-koder, men aktørene står fritt til å benytte andre klassifiseringssystemer.
+
+[source]
+.Eksempel på utfylling i EHF katalog.
+----
+<cac:HazardousItem>
+  <cbc:HazardClassID>H332</cbc:HazardClassID>
+</cac:HazardousItem>
+----
+
+[source]
+.Dersom risiko
+----
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>1</cbc:ID>
+  <cbc:DocumentDescription languageID="en">HMS Safety sheet</cbc:DocumentDescription>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>http://www.klif.no/no/Tema/Kjemikalier/Klassifisering-og-merking-av-kjemikalier-CLP/Klassifisering-CLP-avsnitt-I-II-og-V/</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+----

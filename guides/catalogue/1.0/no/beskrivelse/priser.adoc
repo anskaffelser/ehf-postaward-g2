@@ -1,0 +1,52 @@
+= Priser
+
+Alle priser i formatet er relatert til artikkelen eller tjenesten brukt i den aktuelle katalogen. Det er mulig å angi følgende priselementer:
+
+* Nettopris inkludert rabatter og tillegg men uten Mva. Her er det også mulig å angi en gyldighetsperiode for den aktuelle prisen
+* Sammenligningspris for en gitt enhet.
+* Betinget pris som gjelder i spesifikke situasjoner, f.eks. knyttet til en bestemt lokasjon eller bestilling av et gitt antall.
+* Kampanjevarer
+
+NOTE: Merk at bruttopriser før eventuelle rabatter og tillegg ikke er mulig å angi.
+
+For alle priser skal det angis valuta i henhold til kodeliste. Dette angis som et attributt, currency, som vist under.
+
+Eksempel på utfylling av prisinformasjon i EHF katalog:
+
+[source]
+.Nettopris
+----
+<cac:RequiredItemLocationQuantity>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="NOK">100.00</cbc:PriceAmount>
+    <cac:ValidityPeriod>
+      <cbc:StartDate>2012-04-26</cbc:StartDate>
+      <cbc:EndDate>2012-05-26</cbc:EndDate>
+    </cac:ValidityPeriod>
+  </cac:Price>
+<cac:RequiredItemLocationQuantity>
+----
+
+[source]
+.Prissammenligning
+----
+<cac:ItemComparision>
+  <cbc:PriceAmount currencyID="NOK">100.00</cbc:PriceAmount>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:ItemComparision>
+----
+
+[source]
+.Betinget pris (knyttet til kvantum)
+----
+<cac:RequiredItemLocationQuantity>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="NOK">75.00</cbc:PriceAmount>
+    <cbc:BaseQuantity unitCode="EA" unitCodeListID="UNECERec20">100</cbc:BaseQuantity>
+    <cac:ValidityPeriod>
+      <cbc:StartDate>2012-04-26</cbc:StartDate>
+      <cbc:EndDate>2012-05-26</cbc:EndDate>
+    </cac:ValidityPeriod>
+  </cac:Price>
+<cac:RequiredItemLocationQuantity>
+----

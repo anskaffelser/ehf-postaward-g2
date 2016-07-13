@@ -1,0 +1,24 @@
+= Dimensjon (høyde, bredde, mm.)
+
+Fysiske egenskaper til et produkt er viktig i logistikk-sammenheng.
+
+Følgende verdier er mulig å angi i formatet:
+
+* Høyde (HT)
+* Bredde (WD)
+* Lengde (LN)
+* Bruttovekt (AAE)
+* Temperatur (TC)
+
+[source]
+.Eksempel på utfylling i EHF katalog:
+----
+<cac:Item>
+  ...
+  <cac:Dimension>
+    <cbc:AttributeID schemeID="UNCL6313">HT</cbc:AttributeID>
+    <cbc:Measure unitCode="CMT">12.5</cbc:Measure>
+  </cac:Dimension>
+  ...
+</cac:Item>
+----

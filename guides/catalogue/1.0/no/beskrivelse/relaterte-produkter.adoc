@@ -1,0 +1,38 @@
+= Relaterte produkter og tilbehør
+
+Produkter kan være relatert til hverandre på ulike måter avhengig av om de kan/skal selges sammen med et gitt produkt eller inngår i en produktstruktur. Dette kan angis på følgende måter:
+
+* Artikler som inngår som komponenter i det aktuelle produktet, f.eks. pant til en flaske.
+* Artikler som er knyttet sammen i en produkt- eller pakningsstruktur, f.eks. pall, D-pak og F-pak
+* Tilbehør til det aktuelle produktet og som det er naturlig å selge sammen med det, f.eks. strømforsyning til en PC.
+
+Alle relaterte artikler må også sendes som egne kataloglinjer.
+
+Eksempel på utfylling av relaterte produkter i EHF katalog. ID til det relaterte produktet:
+
+[source]
+.Integrerte komponenter
+----
+<cac:RequiredRelatedItem>
+  <cbc:ID>987654</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:RequiredRelatedItem>
+----
+
+[source]
+.Pakningsstruktur
+----
+<cac:ComponentRelatedItem>
+  <cbc:ID>2</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">12</cbc:Quantity>
+</cac:ComponentRelatedItem>
+----
+
+[source]
+.Tilbehør
+----
+<cac:AccessoryRelatedItem>
+  <cbc:ID>123456</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:AccessoryRelatedItem>
+----

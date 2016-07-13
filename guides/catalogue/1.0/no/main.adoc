@@ -1,0 +1,42 @@
+include::settings.adoc[]
+
+= {doctitle}
+{name-difi-no}
+v{revision}
+:description: Dette dokumentet beskriver EHF (Elektronisk Handelsformat) Katalog for utveksling av kataloginformasjon elektronisk mellom handelspartnere. Dokumentet er utarbeidet som en del av satsingen til {name-difi-no} (Difi) innen standardisering av elektronisk handelsprosesser.
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:toc-title: Innholdsfortegnelse
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+{description}
+
+include::{shared-dir}/message/status-{status}.adoc[]
+
+include::{shared-dir}/message/download.adoc[]
+
+include::{shared-dir}/message/issues.adoc[]
+
+:leveloffset: +1
+
+include::innledning.adoc[]
+
+include::endringslogg/index.adoc[]
+
+include::{shared-dir}/content/ehf/index.adoc[]
+
+include::definisjoner.adoc[]
+
+include::prinsipper/index.adoc[]
+
+include::beskrivelse/index.adoc[]
+
+include::{shared-dir}/content/validering/index.adoc[]
+
+include::vedlegg/index.adoc[]

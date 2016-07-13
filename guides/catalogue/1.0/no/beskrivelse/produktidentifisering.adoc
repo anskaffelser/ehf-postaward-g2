@@ -1,0 +1,17 @@
+= Produktidentifisering
+
+Et produkt kan identifiseres på ulike måter avhengig av hva som er tilgjengelig på det tidspunkt katalogen utveksles. Hvilken id som er aktuell kan også være bransjeavhengig.  Følgende id’er er mulige i formatet:
+
+* Selgers identifikasjon
+* Identifikasjon ihht. en standard, f.eks. GTIN
+* Produsents identifikasjon som er nødvendig når samme produkt kjøpes fra flere leverandører
+
+Enten Selgers id eller Standard id må være med. I tillegg skal Produsents id angis dersom denne er tilgjengelig.
+
+[source]
+.Eksempel på utfylling i EHF katalog,
+----
+<cac:SellersItemIdentification>
+  <cbc:ID>222222</cbc:ID>
+</cac:SellersItemIdentification>
+----

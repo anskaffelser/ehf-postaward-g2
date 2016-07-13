@@ -1,0 +1,25 @@
+# Definisjoner
+
+Katalog::
+Katalog er et dokument som brukes for å beskrive en vare eller tjenestes egenskaper.
+
+Leverandør::
+En person eller et firma som leverer en vare eller en tjeneste.
+
+Kjøper::
+Person eller organisasjon som overtar råderett over en vare eller tjeneste mot betaling, for en bestemt pris.
+
+Katalogutsteder::
+Person eller organisasjon som sammenstiller og sender en katalog. Påkrevd i formatet.
+
+Katalogmottaker::
+Person eller organisasjon som mottar og behandler en katalog. Påkrevd i formatet.
+
+UBL::
+UBL (Universal Business Language) er et sett av XML-formater (XML Schema) for elektronisk utveksling handelsdokumenter som bl.a. katalog, ordre og faktura.
+
+CEN BII::
+CEN BII (Business Interoperability Interfaces) er et subset av UBL med de dokumenter og det innhold som kreves for elektronisk samhandling i offentlig sektor i Europa. Omfatter ikke egne XML Schema.
+
+Schematron validering::
+Kontroll av en melding mot et sett av definerte forretningsregler. Disse kommer i tillegg til syntaks som sjekkes mot XML Schema.

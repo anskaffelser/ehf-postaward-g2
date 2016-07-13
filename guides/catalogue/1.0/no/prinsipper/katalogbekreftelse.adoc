@@ -1,0 +1,9 @@
+= Katalogbekreftelse
+
+Katalogbekreftelse inngår som en del av katalogprosessen som er beskrevet i kapittel 5.4. Katalogbekreftelsen sendes fra katalogmottaker/kjøper til katalogutsteder/leverandør og er en forretningsmessig kvittering for å angi om katalogen og dens innhold er akseptert eller avvist. Dette i motsetning til en teknisk kvittering som brukes for å gi tilbakemelding om at en melding er mottatt.
+
+Det er ikke retur av elektroniske kataloger fra kjøper til leverandør.  Hvis en katalog er avslått må ny korrigert katalog sendes inn.
+
+Dersom utveksling av katalog omfatter bruk av et katalogverktøy kan dette være satt opp med en enkel returmelding som beskrevet over, eller med en litt mer avansert dialog mellom kjøper og leverandør.
+
+Kvittering på at en EHF melding er mottatt kan være i form av en e-post, telefon eller en elektronisk kvitteringsmelding. Bruk av elektronisk kvitteringsmelding er beskrevet i kapittel 3.4. Dette må eventuelt avtales spesielt mellom aktørene.

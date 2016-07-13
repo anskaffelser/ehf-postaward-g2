@@ -1,0 +1,8 @@
+include::../../settings.adoc[]
+
+:minor: 1.0
+:revision: 1.0.5
+:release: {release}
+:status: {status}
+
+:shared-dir: ../../../shared/{language}

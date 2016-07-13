@@ -1,0 +1,52 @@
+= Tilleggsegenskaper
+
+Produktegenskaper som ikke er spesifisert i egne felt kan angis som tilleggsegenskaper med beskrivelse av hva elementet inneholder og selve innholdet.
+
+Eksempler på egenskaper som kan spesifiseres er:
+
+* Farge
+* Allergener +
+Lovlige verdier: YES, NO, UNKNOWN, FREE.
+* Næringsinnhold. +
+Angis med mengde pr. 100 g/ml.
+* Genmodifisert +
+Lovlige verdier: true, false
+
+.Eksempel på utfylling i EHF katalog.
+====
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name languageID="NO">Farge</cbc:Name>
+  <cbc:Value languageID="NO">Rød</cbc:Value>
+  <cbc:ValueQualifier>Color</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ContainNuts</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>NutritionProtein</cbc:Name>
+  <cbc:ValueQuantity unitCode="GRM" unitCodeListID="UNECERec20">2.5</cbc:ValueQuantity>
+  <cbc:ValueQualifier>Nutrition</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>GeneticallyModified</cbc:Name>
+  <cbc:Value>true</cbc:Value>
+</cac:AdditionalItemProperty>
+----
+====

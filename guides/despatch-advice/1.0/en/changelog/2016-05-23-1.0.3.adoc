@@ -1,0 +1,6 @@
+.Changes in validator:
+* New validation rule (EUGEN-T16-R007) to ensure Delivered Quantity is present.
+* Correction of rule EUGEN-T16-R002
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS

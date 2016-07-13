@@ -1,0 +1,89 @@
+= Pakningsinformasjon
+
+I EHF katalog er det definert pakningsfelter for å støtte behovet for logistikkinformasjon i formatet, noe som er et behov i mange bransjer i det norske markedet. Disse feltene er ikke obligatoriske, men kan kreves utfylt via inngåtte innkjøpsavtaler.
+
+Pakningsfeltene gir mulighet for å definere ulike pakningsstørrelser for et og samme produkt og retningslinjene for utfylling er som følger:
+
+* Hvert pakningsnivå må angis som en egen kataloglinje(CatalogueLine) med all påkrevd linje- og produktinformasjon og pakningsinformasjon utfylt.
+* Identifikasjon av pakningsnivå gjøres i feltet PackLevelCode under CatalogueLine. Pakningskodene er hentet fra Edifact/Eancom-standarden og følgende koder kan angis:
+** DU (Despatch Unit) = Transportpakning (omtales også som T-Pak eller Pall)
+** HN (Handling Unit) = Samlekartong (nivå mellom TU og DU). Ikke så ofte brukt.
+** TU (Traded Unit) = Detaljistpakning eller lagerpakning (omtales også som D-Pak eller L-Pak)
+** CU (Consumer Unit) = Forbrukerpakning (omtales også som F-Pak)
+* For hvert pakningsnivå må det defineres et eget produkt (Item) med unik produktidentifikasjon, f.eks. GTIN.
+* Det må angis om det aktuelle pakningsnivået er bestillbart.
+* Relasjonen mellom de ulike pakningsnivåene må spesifiseres, dvs. at en forbrukerpakning kan inngå i en grossistpakning som igjen kan inngå i en transportpakning.
+
+.Eksempel på utfylling av pakningsinformasjon i EHF katalog.
+====
+
+Her er det spesifisert en Pall (DU) med to underliggende enheter (TU og CU).
+
+[source]
+.Kataloglinje som angir øverste pakningsnivå (Pall/T-pak).
+----
+<!-- Inneholder 12 pakninger (D-pak/L-pak) med Drikke ...-->
+<cac:CatalogueLine>
+  <cbc:ID>1</cbc:ID>
+  <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
+  <cbc:OrderableIndicator>false</cbc:OrderableIndicator>
+  <cbc:PackLevelCode listID="GS17009:PEPPOL">DU</cbc:PackLevelCode>
+  <cac:ComponentRelatedItem>
+    <cbc:ID>2</cbc:ID>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">12</cbc:Quantity>
+  </cac:ComponentRelatedItem>
+  <cac:Item>
+    <cbc:Description>Drikke Helpall</cbc:Description>
+    <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
+    <cbc:Name languageID="no">Drikke</cbc:Name>
+    <cac:SellersItemIdentification>
+      <cbc:ID>111111</cbc:ID>
+    </cac:SellersItemIdentification>
+  </cac:Item>
+</cac:CatalogueLine>
+----
+
+[source]
+.Kataloglinje for pakningsnivå D-pak/L-pak.
+----
+<!-- Inneholder 6 pakninger (F-pak) med Drikke 4-pakning...-->
+<cac:CatalogueLine>
+  <cbc:ID>2</cbc:ID>
+  <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
+  <cbc:OrderableIndicator>true</cbc:OrderableIndicator>
+  <cbc:PackLevelCode listID="GS17009:PEPPOL">TU</cbc:PackLevelCode>
+  <cac:ComponentRelatedItem>
+    <cbc:ID>3</cbc:ID>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:Quantity>
+  </cac:ComponentRelatedItem>
+  <cac:Item>
+    <cbc:Description>Drikke lagerpakning</cbc:Description>
+    <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
+    <cbc:Name languageID="no">Drikke</cbc:Name>
+    <cac:SellersItemIdentification>
+      <cbc:ID>222222</cbc:ID>
+    </cac:SellersItemIdentification>
+  </cac:Item>
+</cac:CatalogueLine>
+----
+
+[source]
+.Kataloglinje som angir laveste pakningsnivå (F-pak).
+----
+<!-- Inneholder 4-pakning med Drikke...-->
+<cac:CatalogueLine>
+  <cbc:ID>3</cbc:ID>
+  <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
+  <cbc:OrderableIndicator>false</cbc:OrderableIndicator>
+  <cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
+  <cac:Item>
+    <cbc:Description>Drikke 4-pack</cbc:Description>
+    <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
+    <cbc:Name languageID="no">Drikke</cbc:Name>
+    <cac:SellersItemIdentification>
+      <cbc:ID>333333</cbc:ID>
+    </cac:SellersItemIdentification>
+  </cac:Item>
+</cac:CatalogueLine>
+----
+====

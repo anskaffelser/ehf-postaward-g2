@@ -1,0 +1,37 @@
+[preface]
+= Innledning
+
+include::{shared-dir}/content/innledning/bakgrunn-og-malsetting.adoc[]
+
+== Målgruppe
+
+*Målgruppen* for dokumentet (heretter omtalt som implementeringsveileder) er både faglig og teknisk personell hos brukere som ønsker å sende og motta katalogmelding elektronisk. Dokumentet kan også benyttes av systemleverandør, ERP leverandør og meldingsformidlere.
+
+*	Kapittel 1 til 5 er rettet mot faglig personell
+*	Kapittel 6 til 9 (vedlegg) er rettet mot teknisk personell
+
+
+== Dokumentstruktur
+
+Dokumentet er inndelt i følgende deler:
+
+* Kapittel 1 gir en kort introduksjon som beskriver bakgrunn og målsetning med implementeringsveileder.
+* Kapittel 2 beskriver de endringer som er gjort mellom forskjellige versjoner av implementasjonsveilederen.
+* Kapittel 3 beskriver EHF formatene generelt.
+* Kapittel 4 inneholder definisjoner som er relevant for katalogformatet.
+* Kapittel 5 beskriver generelle prinsipper og forutsetninger for katalogformatet.
+* Kapittel 6 gir en detaljerte beskriver av sentrale informasjonselementer i katalogformatet.
+* Kapittel 7 inneholder komplett beskrivelse av informasjonsinnhold i katalogformatet.
+* Kapittel 8 omhandler validering.
+* Kapittel 9 inneholder følgende vedlegg som separate dokumenter:
+** Vedlegg 1: Meldingsstruktur
+** Vedlegg 2: Meldingstabell
+** Vedlegg 3: Kodelister
+** Vedlegg 4: UBL 2.1 Schema for Katalog
+** Vedlegg 5: Schematron filer
+** Vedlegg 6: XML eksempelfiler
+
+
+== Ikrafttredelse
+
+Denne revisjonen gjøres tilgjengelig for bruk fra {date-mandatory}. Den vil være obligatorisk fra samme dato.
