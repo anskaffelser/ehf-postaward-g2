@@ -8,7 +8,6 @@ v{revision}
 :icons: font
 :toc: left
 :toclevels: 2
-:toc-title: Innholdsfortegnelse
 :source-highlighter: coderay
 :source-language: xml
 :sectanchors:

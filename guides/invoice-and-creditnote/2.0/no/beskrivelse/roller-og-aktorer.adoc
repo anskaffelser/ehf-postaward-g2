@@ -4,8 +4,10 @@ Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller u
 
 Selger (AccountingSupplierParty)::
 Selger er obligatorisk informasjon i EHF.
+
 Kjøper (AccountingCustomerParty)::
 Kjøper er obligatorisk informasjon i EHF.
+
 Betalingsmottaker (PayeeParty)::
 Betalingsmottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt, er betalingsmottaker samme som selger.
 

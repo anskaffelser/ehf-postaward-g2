@@ -36,7 +36,7 @@ include::2016-05-23-1.0.3.adoc[]
 *	Oppdaterte regler i kapittel 8.3
 
 .Forfatter:
-*Siw Meckelborg, Edisys Consulting AS
+* Siw Meckelborg, Edisys Consulting AS
 
 
 == Versjon 1.0 (10.10.2013) [[changelog-1.0.0]]

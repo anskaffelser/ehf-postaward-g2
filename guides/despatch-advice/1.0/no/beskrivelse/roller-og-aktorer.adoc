@@ -2,16 +2,20 @@
 
 Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller ulike aktører avhengig av hvordan håndtering av meldingen er organisert.
 
-Avsender::
-(DespatchSupplierParty)	Avsender er obligatorisk informasjon i EHF.
-Mottaker::
-(DeliveryCustomerParty)	Mottaker er obligatorisk informasjon i EHF.
-Selger::
-(SellerSupplierParty)	Selger er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er selger samme som avsender.
-Kjøper::
-(BuyerCustomerParty)	Kjøper er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er kjøper samme som mottaker.
-Bestiller::
-(OriginatorCustomerParty)	Bestiller er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er bestiller samme som mottaker.
+Avsender (DespatchSupplierParty)::
+Avsender er obligatorisk informasjon i EHF.
+
+Mottaker (DeliveryCustomerParty)::
+Mottaker er obligatorisk informasjon i EHF.
+
+Selger (SellerSupplierParty)::
+Selger er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er selger samme som avsender.
+
+Kjøper (BuyerCustomerParty)::
+Kjøper er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er kjøper samme som mottaker.
+
+Bestiller (OriginatorCustomerParty)::
+Bestiller er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er bestiller samme som mottaker.
 
 [source]
 .Eksempel på utfylling av avsenderinformasjon i en EHF pakkseddelmelding.

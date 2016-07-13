@@ -2,8 +2,6 @@
 
 Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller ulike aktører avhengig av hvordan håndtering av kataloginformasjon er organisert.
 
-Rolle	Beskrivelse
-
 Katalogutsteder (ProviderParty)::
 Den som er ansvarlig for å klargjøre og overføre katalog til mottaker. Dette kan være samme som leverandør eller en aktør som utfører denne oppgaven for leverandør
 

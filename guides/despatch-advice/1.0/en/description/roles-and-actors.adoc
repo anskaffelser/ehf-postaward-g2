@@ -7,7 +7,8 @@ The consignee is the person or organization to which the products will be shippe
 Consignee is mandatory information in EHF.
 
 Despatch Party (UBL:DespatchSupplierParty)::
-The Despatch Party is the person or organization who provides (despatch) the goods or services. The role is carried out by the supplier or on behalf of the supplier. + (Despatch Party is sometimes known as the Consignor) +
+The Despatch Party is the person or organization who provides (despatch) the goods or services. The role is carried out by the supplier or on behalf of the supplier. +
+(Despatch Party is sometimes known as the Consignor) +
 Despatch party is mandatory information in EHF.
 
 Buyer (UBL:BuyerCustomerParty)::

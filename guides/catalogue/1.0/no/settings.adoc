@@ -1,4 +1,4 @@
-:language: no
+:lang: no
 
 include::../settings.adoc[]
 

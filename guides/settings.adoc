@@ -2,6 +2,12 @@
 :status: dev
 :release: 2016-09-15
 
+// Translation
+ifeval::["{lang}" == "no"]
+include::shared/no/translation.adoc[]
+endif::[]
+
+
 // Difi
 :link-github: https://github.com/difi/vefa-validator-conf
 :link-issues: https://github.com/difi/vefa-validator-conf/issues

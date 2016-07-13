@@ -15,6 +15,7 @@ include::../{shared-dir}/content/vedlegg/meldingstabell.adoc[]
 * link:files/ehf_katalogbekreftelse_meldingstabell.pdf[Meldingstabell for katalogbekreftelse]
 
 
+[appendix]
 = Kodelister [[vedlegg-kodelister]]
 
 
@@ -24,6 +25,7 @@ include::../{shared-dir}/content/vedlegg/ubl-2.1.adoc[]
 * link:{link-oasis-ubl-21-xsd}UBL-ApplicationResponse-2.1.xsd[UBL ApplicationResponse 2.1]
 
 
+[appendix]
 = Schematron [[vedlegg-schematron]]
 
 

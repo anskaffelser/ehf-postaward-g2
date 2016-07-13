@@ -1,3 +1,4 @@
+[appendix]
 = UBL 2.1 [[vedlegg-ubl]]
 
 UBL 2.1 Schema som denne implementasjonsguiden baserer seg på er tilgjengelig fra OASIS.

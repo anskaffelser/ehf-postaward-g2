@@ -1,1 +1,2 @@
+[appendix]
 = Eksempelfiler [[vedlegg-eksempelfiler]]

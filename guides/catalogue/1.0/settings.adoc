@@ -5,4 +5,4 @@ include::../../settings.adoc[]
 :release: {release}
 :status: {status}
 
-:shared-dir: ../../../shared/{language}
+:shared-dir: ../../../shared/{lang}
