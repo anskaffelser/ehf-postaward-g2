@@ -9,22 +9,22 @@ Følgende koder er identifisert: http://www.anskaffelser.no/verktoy/koder-bruk-i
 Ved innføring av klassifiseringskoder kan også innkjøpsadferd måles ved at ordreformatet bringer med seg miljømerkingen i ordren.  Innkjøpssystemet må da fange de ordrelinjer som sendes og kunne presentere disse i statistikkverktøyet som er tilgjengelig for kjøpers organisasjon.  Dermed kan de offentlige virksomheters krav i konkurransen kontrolleres og riktig kjøp kan tilstrebes.
 
 .Eksempel på klassifiseringskoder
-[cols="^2a,8a", options="header"]
+[cols="^.^2a,8a", options="header"]
 |===
 <| Logo
 | Informasjon
 
-| image::images/label-neo.png[Svanemerket]
+| image:images/label-neo.png[Svanemerket]
 | *Svanemerket* +
 Classification Code (ID): NEO +
 Certificate TypeCode: EcoLabel (Miljø)
 
-| image::images/label-fbl.png[Fairtrade]
+| image:images/label-fbl.png[Fairtrade]
 | *Fairtrade* +
 Classification Code (ID): FBL +
 Certificate TypeCode: SosialLabel (Sosialt ansvar)
 
-| image::images/label-eop.png[EU organic products label]
+| image:images/label-eop.png[EU organic products label]
 | *EU organic products label* +
 Classification Code (ID): EOP +
 Certificate TypeCode: OrganicLabel (Økologisk)
@@ -34,21 +34,21 @@ Certificate TypeCode: OrganicLabel (Økologisk)
 .Eksempel på utfylling av Miljømerking i EHF katalog
 ----
 <cac:Certificate>
-	<cbc:ID>NEO</cbc:ID>
-	<cbc:CertificateTypeCode>EcoLabel</cbc:CertificateTypeCode>
-	<cbc:CertificateType>EcoLabel</cbc:CertificateType>
-	<cac:IssuerParty>
-		<cac:PartyName>
-			<cbc:Name>Svanemerket</cbc:Name>
-		</cac:PartyName>
-	</cac:IssuerParty>
-	<cac:DocumentReference>
-		<cac:Attachment>
-			<cac:ExternalReference>
-				<cbc:URI>http://www.svanemerket.no/</cbc:URI>
-			</cac:ExternalReference>
-		</cac:Attachment>
-	</cac:DocumentReference>
+  <cbc:ID>NEO</cbc:ID>
+  <cbc:CertificateTypeCode>EcoLabel</cbc:CertificateTypeCode>
+  <cbc:CertificateType>EcoLabel</cbc:CertificateType>
+  <cac:IssuerParty>
+    <cac:PartyName>
+      <cbc:Name>Svanemerket</cbc:Name>
+    </cac:PartyName>
+  </cac:IssuerParty>
+  <cac:DocumentReference>
+    <cac:Attachment>
+      <cac:ExternalReference>
+        <cbc:URI>http://www.svanemerket.no/</cbc:URI>
+      </cac:ExternalReference>
+    </cac:Attachment>
+  </cac:DocumentReference>
 </cac:Certificate>
 ----
 

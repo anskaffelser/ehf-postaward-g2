@@ -12,8 +12,8 @@ The buyer’s legal entity is not mandatory when “elektroniskB2Cfaktura” is 
 .Example, E-invoice reference
 ----
 <cac:AdditionalDocumentReference>
-	<cbc:ID>147987</cbc:ID>
-	<cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
+  <cbc:ID>147987</cbc:ID>
+  <cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 ----
 

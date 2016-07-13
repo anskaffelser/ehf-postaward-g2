@@ -8,7 +8,7 @@ Dersom ordrenummer er angitt på hodenivå forutsettes det at fakturaen kun er b
 .Eksempel
 ----
 <cac:OrderReference>
-	<cbc:ID>123456</cbc:ID>
+  <cbc:ID>123456</cbc:ID>
 </cac:OrderReference>
 ----
 

@@ -6,9 +6,9 @@ Kontraktsnummer kan benyttes i tillegg til ordre-/bestilingsnummer for å spore 
 .Eksempel
 ----
 <cac:ContractDocumentReference>
-	<cbc:ID>Kontrakt 321</cbc:ID>
-	<cbc:DocumentTypeCode listID="UNCL1001">2</cbc:DocumentTypeCode>
-	<cbc:DocumentType>Framework Agreement</cbc:DocumentType>
+  <cbc:ID>Kontrakt 321</cbc:ID>
+  <cbc:DocumentTypeCode listID="UNCL1001">2</cbc:DocumentTypeCode>
+  <cbc:DocumentType>Framework Agreement</cbc:DocumentType>
 </cac:ContractDocumentReference>
 ----
 

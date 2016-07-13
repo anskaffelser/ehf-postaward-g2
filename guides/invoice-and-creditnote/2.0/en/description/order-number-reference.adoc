@@ -8,7 +8,7 @@ If the order reference is specified on the header level (OrderReference), the as
 .Example
 ----
 <cac:OrderReference>
-	<cbc:ID>123456</cbc:ID>
+  <cbc:ID>123456</cbc:ID>
 </cac:OrderReference>
 ----
 

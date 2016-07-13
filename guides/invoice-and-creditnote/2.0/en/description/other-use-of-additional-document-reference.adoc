@@ -7,20 +7,20 @@ Important to notice, there is no code list for this element, and the interactive
 .Example
 ----
 <cac:AdditionalDocumentReference>
-	<cbc:ID>Doc1</cbc:ID>
-	<cbc:DocumentType>Timesheet</cbc:DocumentType>
-	<cac:Attachment>
-		<cac:ExternalReference>
-			<cbc:URI>http://www.suppliersite.eu/sheet001.html</cbc:URI>
-		</cac:ExternalReference>
-	</cac:Attachment>
+  <cbc:ID>Doc1</cbc:ID>
+  <cbc:DocumentType>Timesheet</cbc:DocumentType>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>http://www.suppliersite.eu/sheet001.html</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
 </cac:AdditionalDocumentReference>
 <cac:AdditionalDocumentReference>
-	<cbc:ID>Doc2</cbc:ID>
-	<cbc:DocumentType>Drawing</cbc:DocumentType>
-	<cac:Attachment>
-		<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">mimecode</cbc:EmbeddedDocumentBinaryObject>
-	</cac:Attachment>
+  <cbc:ID>Doc2</cbc:ID>
+  <cbc:DocumentType>Drawing</cbc:DocumentType>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">mimecode</cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
 </cac:AdditionalDocumentReference>
 ----
 
@@ -28,7 +28,7 @@ Important to notice, there is no code list for this element, and the interactive
 .Example, referencing a subscription
 ----
 <cac:AdditionalDocumentReference>
-	<cbc:ID>1442316</cbc:ID>
-	<cbc:DocumentType>Abonnement</cbc:DocumentType>
+  <cbc:ID>1442316</cbc:ID>
+  <cbc:DocumentType>Abonnement</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 ----

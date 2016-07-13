@@ -10,13 +10,13 @@ Each despatch line contains elements for description and identification of the i
 .Example
 ----
 <cac:Item>
-	<cbc:Name>Item123</cbc:Name>
-	<cac:SellersItemIdentification>
-		<cbc:ID>010120401</cbc:ID>
-	</cac:SellersItemIdentification>
-	<cac:StandardItemIdentification>
+  <cbc:Name>Item123</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>010120401</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:StandardItemIdentification>
     <cbc:ID schemeID="GTIN" >05704368124358</cbc:ID>
-	</cac:StandardItemIdentification>
+  </cac:StandardItemIdentification>
 </cac:Item>
 ----
 
@@ -83,8 +83,8 @@ See beneath for an example of declaring hazardous items.
 .Example
 ----
 <cac:HazardousItem>
-	<cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
-	<cbc:HazardClassID>2.3</cbc:HazardClassID>
+  <cbc:UNDGCode listID="UNCL8273">ADR</cbc:UNDGCode>
+  <cbc:HazardClassID>2.3</cbc:HazardClassID>
 </cac:HazardousItem>
 ----
 
@@ -96,15 +96,15 @@ If each of the delivered items is marked with an individual serial number, these
 .Example
 ----
 <cac:Item>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ444</cbc:SerialID>
-	</cac:ItemInstance>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ4445</cbc:SerialID>
-	</cac:ItemInstance>
-	<cac:ItemInstance>
-		<cbc:SerialID>OR250RHZ4446</cbc:SerialID>
-	</cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ444</cbc:SerialID>
+  </cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ4445</cbc:SerialID>
+  </cac:ItemInstance>
+  <cac:ItemInstance>
+    <cbc:SerialID>OR250RHZ4446</cbc:SerialID>
+  </cac:ItemInstance>
 </cac:Item>
 ----
 
@@ -120,10 +120,10 @@ Best before date is often used for food.
 .Example 1
 ----
 <cac:ItemInstance>
-	<cac:LotIdentification>
-		<cbc:LotNumberID>898A129</cbc:LotNumberID>
-		<cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
-	</cac:LotIdentification>
+  <cac:LotIdentification>
+    <cbc:LotNumberID>898A129</cbc:LotNumberID>
+    <cbc:ExpiryDate>2015-07-01</cbc:ExpiryDate>
+  </cac:LotIdentification>
 </cac:ItemInstance>
 ----
 
@@ -131,7 +131,7 @@ Best before date is often used for food.
 .Example 2:
 ----
 <cac:ItemInstance>
-	<cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
+  <cbc:BestBeforeDate>2015-04-15</cbc:BestBeforeDate>
 </cac:ItemInstance>
 ----
 
@@ -147,12 +147,11 @@ Serial shipping container code (SSCC) issued by GS1 may be used to identify the 
 ----
 <cac:TransportHandlingUnit>
   <cbc:ID schemeID="SSCC" schemeAgencyName="GS1">123456789012345675</cbc:ID>
-  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT </cbc:TransportHandlingUnitTypeCode>
-  	<cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit
-  </cbc:ShippingMarks>
-	<cac:MeasurementDimension>
-		<cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
-		<cbc:Measure unitCode="KGM">23.00</cbc:Measure>
-	</cac:MeasurementDimension>
+  <cbc:TransportHandlingUnitTypeCode listID="UNECERec21">CT</cbc:TransportHandlingUnitTypeCode>
+    <cbc:ShippingMarks>Free text information that is written/printed on to the transport handling unit</cbc:ShippingMarks>
+  <cac:MeasurementDimension>
+    <cbc:AttributeID schemeID="UNCL6313">AAB</cbc:AttributeID>
+    <cbc:Measure unitCode="KGM">23.00</cbc:Measure>
+  </cac:MeasurementDimension>
 </cac:TransportHandlingUnit>
 ----

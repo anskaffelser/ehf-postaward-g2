@@ -12,18 +12,18 @@ Elementet inneholder en identifikator (DeliveryLocation/ID) som kan benyttes der
 .Eksempel
 ----
 <cac:Delivery>
-	<cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>
-	<cac:DeliveryLocation>
-		<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
-		<cac:Address>
-			<cbc:StreetName>Storgata</cbc:StreetName>
-			<cbc:BuildingNumber>12</cbc:BuildingNumber>
-			<cbc:CityName>Bergen</cbc:CityName>
-			<cbc:PostalZone>5000</cbc:PostalZone>
-			<cac:Country>
-				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:Address>
-	</cac:DeliveryLocation>
+  <cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>
+  <cac:DeliveryLocation>
+    <cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+    <cac:Address>
+      <cbc:StreetName>Storgata</cbc:StreetName>
+      <cbc:BuildingNumber>12</cbc:BuildingNumber>
+      <cbc:CityName>Bergen</cbc:CityName>
+      <cbc:PostalZone>5000</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:Address>
+  </cac:DeliveryLocation>
 </cac:Delivery>
 ----

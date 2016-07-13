@@ -24,29 +24,28 @@ Den som har produsert varen (angis med navn på linjenivå).
 .Eksempel på utfylling av leverandørinformasjon på hodenivå.
 ----
 <cac:SellerSupplierParty>
-	<cac:Party>
-		<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="NO:ORGNR">984297793</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Supplier</cbc:Name>
-		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:StreetName>Per Krohgs vei 1,Karihaugen</cbc:StreetName>
-			<cbc:CityName>OSLO</cbc:CityName>
-			<cbc:CountrySubentity>Norway</cbc:CountrySubentity>
-			<cac:Country>
-				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO
-</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
-		<cac:Contact>
-			<cbc:Name>Ole Olsen</cbc:Name>
-			<cbc:Telephone>+46123123123</cbc:Telephone>
-			<cbc:ElectronicMail>test@ibxeurope.com</cbc:ElectronicMail>
-		</cac:Contact>
-	</cac:Party>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="NO:ORGNR">984297793</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Supplier</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:StreetName>Per Krohgs vei 1,Karihaugen</cbc:StreetName>
+      <cbc:CityName>OSLO</cbc:CityName>
+      <cbc:CountrySubentity>Norway</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:Contact>
+      <cbc:Name>Ole Olsen</cbc:Name>
+      <cbc:Telephone>+46123123123</cbc:Telephone>
+      <cbc:ElectronicMail>test@ibxeurope.com</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
 </cac:SellerSupplierParty>
 ----
 

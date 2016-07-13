@@ -109,8 +109,8 @@ Example:  amount  999.81 rounded to  1000.  PayableRounding Amount = 0.19.
 | VAT calculated
 | VAT per category
 
-| S	| 1689,72 | 25 % | 422,43 | 422,43
-| H	| 2141,05 | 15 % | 321,1575 | 321,16
+| S  | 1689,72 | 25 % | 422,43 | 422,43
+| H  | 2141,05 | 15 % | 321,1575 | 321,16
 | Total VAT s| 3830,77 | | 743,5875 s| 743,59
 |===
 
@@ -131,28 +131,28 @@ s| Payable amount >| 4474,00
 [source,xml]
 ----
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>2.35% Totalrabatt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">89.7744</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>2.35% Totalrabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">89.7744</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
 </cac:AllowanceCharge>
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">100.345</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.345</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
 </cac:AllowanceCharge>
 ----
 
@@ -161,29 +161,29 @@ s| Payable amount >| 4474,00
 [source,xml]
 ----
 <cac:TaxTotal>
-	<cbc:TaxAmount currencyID="NOK">743,59</cbc:TaxAmount>
-	<cac:TaxSubtotal>
-		<cbc:TaxableAmount currencyID="NOK">1689.72</cbc:TaxableAmount>
-		<cbc:TaxAmount currencyID="NOK">422.43</cbc:TaxAmount>
-		<cac:TaxCategory>
-			<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-			<cbc:Percent>25.00</cbc:Percent>
-			<cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-			</cac:TaxScheme>
-		</cac:TaxCategory>
-	</cac:TaxSubtotal>
-	<cac:TaxSubtotal>
-		<cbc:TaxableAmount currencyID="NOK">2141.05</cbc:TaxableAmount>
-		<cbc:TaxAmount currencyID="NOK">321.16</cbc:TaxAmount>
-		<cac:TaxCategory>
-			<cbc:ID schemeID="UNCL5305">H</cbc:ID>
-			<cbc:Percent>15.00</cbc:Percent>
-			<cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-			</cac:TaxScheme>
-		</cac:TaxCategory>
-	</cac:TaxSubtotal>
+  <cbc:TaxAmount currencyID="NOK">743,59</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">1689.72</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">422.43</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">2141.05</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">321.16</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">H</cbc:ID>
+      <cbc:Percent>15.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
 </cac:TaxTotal>
 ----
 
@@ -192,14 +192,14 @@ s| Payable amount >| 4474,00
 [source,xml]
 ----
 <cac:LegalMonetaryTotal>
-	<cbc:LineExtensionAmount currencyID="NOK">3820.19</cbc:LineExtensionAmount>
-	<cbc:TaxExclusiveAmount currencyID="NOK">3830.77</cbc:TaxExclusiveAmount>
-	<cbc:TaxInclusiveAmount currencyID="NOK">4574.00</cbc:TaxInclusiveAmount>
-	<cbc:AllowanceTotalAmount currencyID="NOK">89.77</cbc:AllowanceTotalAmount>
-	<cbc:ChargeTotalAmount currencyID="NOK">100.35</cbc:ChargeTotalAmount>
-	<cbc:PrepaidAmount currencyID="NOK">100.00</cbc:PrepaidAmount>
-	<cbc:PayableRoundingAmount currencyID="NOK">-0.36</cbc:PayableRoundingAmount>
-	<cbc:PayableAmount currencyID="NOK">4474.00</cbc:PayableAmount>
+  <cbc:LineExtensionAmount currencyID="NOK">3820.19</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="NOK">3830.77</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="NOK">4574.00</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="NOK">89.77</cbc:AllowanceTotalAmount>
+  <cbc:ChargeTotalAmount currencyID="NOK">100.35</cbc:ChargeTotalAmount>
+  <cbc:PrepaidAmount currencyID="NOK">100.00</cbc:PrepaidAmount>
+  <cbc:PayableRoundingAmount currencyID="NOK">-0.36</cbc:PayableRoundingAmount>
+  <cbc:PayableAmount currencyID="NOK">4474.00</cbc:PayableAmount>
 </cac:LegalMonetaryTotal>
 ----
 
@@ -213,28 +213,28 @@ s| Payable amount >| 4474,00
 <cbc:LineExtensionAmount currencyID="NOK">1108.17</cbc:LineExtensionAmount>
 <cbc:AccountingCost>123</cbc:AccountingCost>
 <cac:OrderLineReference>
-	<cbc:LineID>1</cbc:LineID>
+  <cbc:LineID>1</cbc:LineID>
 </cac:OrderLineReference>
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>10% Rabatt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">123.1296</cbc:Amount>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>10% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">123.1296</cbc:Amount>
 </cac:AllowanceCharge>
 <cac:Item>
-	<cbc:Name>Vare A</cbc:Name>
-	<cac:SellersItemIdentification>
-		<cbc:ID>AAA</cbc:ID>
-	</cac:SellersItemIdentification>
-	<cac:ClassifiedTaxCategory>
-		<cbc:ID schemeID=" UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:ClassifiedTaxCategory>
+  <cbc:Name>Vare A</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>AAA</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:ClassifiedTaxCategory>
+    <cbc:ID schemeID=" UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:ClassifiedTaxCategory>
 </cac:Item>
 <cac:Price>
-	<cbc:PriceAmount currencyID="NOK">51.304</cbc:PriceAmount>
+  <cbc:PriceAmount currencyID="NOK">51.304</cbc:PriceAmount>
 </cac:Price>
 ----
 
@@ -254,20 +254,20 @@ s| Payable amount >| 4474,00
   <cbc:Amount currencyID="NOK">100.760175</cbc:Amount>
 </cac:AllowanceCharge>
 <cac:Item>
- 	<cbc:Name>Vare B</cbc:Name>
+   <cbc:Name>Vare B</cbc:Name>
   <cac:SellersItemIdentification>
- 		<cbc:ID>BBB</cbc:ID>
- 	</cac:SellersItemIdentification>
+     <cbc:ID>BBB</cbc:ID>
+   </cac:SellersItemIdentification>
   <cac:ClassifiedTaxCategory>
-   	<cbc:ID schemeID=" UNCL5305">S</cbc:ID>
-   	<cbc:Percent>25.00</cbc:Percent>
+     <cbc:ID schemeID=" UNCL5305">S</cbc:ID>
+     <cbc:Percent>25.00</cbc:Percent>
     <cac:TaxScheme>
-   		<cbc:ID>VAT</cbc:ID>
-   	</cac:TaxScheme>
+       <cbc:ID>VAT</cbc:ID>
+     </cac:TaxScheme>
   </cac:ClassifiedTaxCategory>
 </cac:Item>
 <cac:Price>
-	<cbc:PriceAmount currencyID="NOK">44.7823</cbc:PriceAmount>
+  <cbc:PriceAmount currencyID="NOK">44.7823</cbc:PriceAmount>
 </cac:Price>
 ----
 
@@ -279,27 +279,27 @@ s| Payable amount >| 4474,00
 <cbc:LineExtensionAmount currencyID="NOK">2141.05</cbc:LineExtensionAmount>
 <cbc:AccountingCost>123</cbc:AccountingCost>
 <cac:OrderLineReference>
-	<cbc:LineID>2</cbc:LineID>
+  <cbc:LineID>2</cbc:LineID>
 </cac:OrderLineReference>
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>24.45% Rabatt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">692.9007</cbc:Amount>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>24.45% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">692.9007</cbc:Amount>
 </cac:AllowanceCharge>
 <cac:Item>
-	<cbc:Name>Vare C</cbc:Name>
-	<cac:SellersItemIdentification>
-		<cbc:ID>CCC</cbc:ID>
-	</cac:SellersItemIdentification>
-	<cac:ClassifiedTaxCategory>
-		<cbc:ID schemeID=" UNCL5305">H</cbc:ID>
-		<cbc:Percent>15.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:ClassifiedTaxCategory>
+  <cbc:Name>Vare C</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>CCC</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:ClassifiedTaxCategory>
+    <cbc:ID schemeID=" UNCL5305">H</cbc:ID>
+    <cbc:Percent>15.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:ClassifiedTaxCategory>
 </cac:Item>
 <cac:Price>
-	<cbc:PriceAmount currencyID="NOK">134.95</cbc:PriceAmount>
+  <cbc:PriceAmount currencyID="NOK">134.95</cbc:PriceAmount>
 </cac:Price>
 ----

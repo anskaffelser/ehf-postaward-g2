@@ -17,31 +17,31 @@ TaxTotal/TaxAmount is given in the DocumentCurrency, whilst the element Transact
 [source,xml]
 .Example: Invoice total EUR 900 EUR exclusive VAT. Exchange rate EUR/NOK = 8.3804
 ----
-.....
+...
 <cbc:DocumentCurrencyCode listID="ISO4217">EUR</cbc:DocumentCurrencyCode>
 <cbc:TaxCurrencyCode listID="ISO4217">NOK</cbc:TaxCurrencyCode>
-.....
+...
 <cac:TaxExchangeRate>
-	<cbc:SourceCurrencyCode listID="ISO4217">EUR</cbc:SourceCurrencyCode>
-	<cbc:TargetCurrencyCode listID="ISO4217">NOK</cbc:TargetCurrencyCode>
-	<cbc:CalculationRate>8.3804</cbc:CalculationRate>
-	<cbc:MathematicOperatorCode>Multiply</cbc:MathematicOperatorCode>
-	<cbc:Date>2014-02-20</cbc:Date>
+  <cbc:SourceCurrencyCode listID="ISO4217">EUR</cbc:SourceCurrencyCode>
+  <cbc:TargetCurrencyCode listID="ISO4217">NOK</cbc:TargetCurrencyCode>
+  <cbc:CalculationRate>8.3804</cbc:CalculationRate>
+  <cbc:MathematicOperatorCode>Multiply</cbc:MathematicOperatorCode>
+  <cbc:Date>2014-02-20</cbc:Date>
 </cac:TaxExchangeRate>
 <cac:TaxTotal>
-	<cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
-	<cac:TaxSubtotal>
-		<cbc:TaxableAmount currencyID="EUR">900.00</cbc:TaxableAmount>
-		<cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
-		<cbc:TransactionCurrencyTaxAmount currencyID="NOK">1885.59</cbc:TransactionCurrencyTaxAmount>
-		<cac:TaxCategory>
-			<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-			<cbc:Percent>25</cbc:Percent>
-			<cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-			</cac:TaxScheme>
-		</cac:TaxCategory>
-	</cac:TaxSubtotal>
+  <cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="EUR">900.00</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
+    <cbc:TransactionCurrencyTaxAmount currencyID="NOK">1885.59</cbc:TransactionCurrencyTaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
 </cac:TaxTotal>
-.....
+...
 ----

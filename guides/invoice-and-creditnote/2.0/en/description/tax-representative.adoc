@@ -6,14 +6,14 @@ Tax representative party for the seller is relevant for sellers delivering goods
 .Example
 ----
 <cac:TaxRepresentativeParty>
-	<cac:PartyName>
-		<cbc:Name>Company name AS</cbc:Name>
-	</cac:PartyName>
-	<cac:PartyTaxScheme>
-		<cbc:CompanyID schemeID="NO:VAT">904312347MVA</cbc:CompanyID>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:PartyTaxScheme>
+  <cac:PartyName>
+    <cbc:Name>Company name AS</cbc:Name>
+  </cac:PartyName>
+  <cac:PartyTaxScheme>
+    <cbc:CompanyID schemeID="NO:VAT">904312347MVA</cbc:CompanyID>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:PartyTaxScheme>
 </cac:TaxRepresentativeParty>
 ----

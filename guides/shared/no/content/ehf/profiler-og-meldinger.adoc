@@ -47,4 +47,4 @@ Eksempel på CustomizationID dersom det sendes en PEPPOL BIS, ytterligere info o
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0</cbc:CustomizationID>
 ----
 
-Det presiseres at dersom begge aktørene er hjemmehørende i Norge, skal EHF customizationID benyttes. PEPPOL BIS bør kun benyttes dersom en av partene er utenlandske.
+IMPORTANT: Det presiseres at dersom begge aktørene er hjemmehørende i Norge, skal EHF customizationID benyttes. PEPPOL BIS bør kun benyttes dersom en av partene er utenlandske.

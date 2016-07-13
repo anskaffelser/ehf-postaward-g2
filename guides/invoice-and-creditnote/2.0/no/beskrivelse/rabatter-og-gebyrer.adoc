@@ -30,40 +30,40 @@ EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer
 [source,xml]
 ----
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">100.00</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
 </cac:AllowanceCharge>
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>Fakturagebyr</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">75.00</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Fakturagebyr</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">75.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
 </cac:AllowanceCharge>
 <cac:AllowanceCharge>
-	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReason>2% Totalrabatt</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">69.00</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25.00</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>2% Totalrabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">69.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
 </cac:AllowanceCharge>
 ----
 
@@ -72,18 +72,18 @@ EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer
 [source,xml]
 ----
 <cac:TaxTotal>
-	<cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
-	<cac:TaxSubtotal>
+  <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
+  <cac:TaxSubtotal>
     <cbc:TaxableAmount currencyID="NOK">3556.00</cbc:TaxableAmount>
     <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
-		<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-			<cbc:Percent>25.00</cbc:Percent>
-        <cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-      			</cac:TaxScheme>
-    		</cac:TaxCategory>
-  	</cac:TaxSubtotal>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
 </cac:TaxTotal>
 ----
 
@@ -92,13 +92,13 @@ EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer
 [source,xml]
 ----
 <cac:LegalMonetaryTotal>
-	<cbc:LineExtensionAmount currencyID="NOK">3450.00</cbc:LineExtensionAmount>
-	<cbc:TaxExclusiveAmount currencyID="NOK">3556.00</cbc:TaxExclusiveAmount>
-	<cbc:TaxInclusiveAmount currencyID="NOK">4445.00</cbc:TaxInclusiveAmount>
-	<cbc:AllowanceTotalAmount currencyID="NOK">69.00</cbc:AllowanceTotalAmount>
-	<cbc:ChargeTotalAmount currencyID="NOK">175.00</cbc:ChargeTotalAmount>
-	<cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
-	<cbc:PayableAmount currencyID="NOK">4445.00</cbc:PayableAmount>
+  <cbc:LineExtensionAmount currencyID="NOK">3450.00</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="NOK">3556.00</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="NOK">4445.00</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="NOK">69.00</cbc:AllowanceTotalAmount>
+  <cbc:ChargeTotalAmount currencyID="NOK">175.00</cbc:ChargeTotalAmount>
+  <cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
+  <cbc:PayableAmount currencyID="NOK">4445.00</cbc:PayableAmount>
 </cac:LegalMonetaryTotal>
 ----
 
@@ -135,14 +135,14 @@ EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer
 [source,xml]
 ----
 <cac:Price>
-	<cbc:PriceAmount currencyID="NOK">200.00</cbc:PriceAmount>
-	<cac:AllowanceCharge>
-		<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-		<cbc:AllowanceChargeReason>20% Kampanjerabatt</cbc:AllowanceChargeReason>
-		<cbc:MultiplierFactorNumeric>0.200</cbc:MultiplierFactorNumeric>
-		<cbc:Amount currencyID="NOK">50.00</cbc:Amount>
-		<cbc:BaseAmount currencyID="NOK">250.00</cbc:BaseAmount>
-	</cac:AllowanceCharge>
+  <cbc:PriceAmount currencyID="NOK">200.00</cbc:PriceAmount>
+  <cac:AllowanceCharge>
+    <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReason>20% Kampanjerabatt</cbc:AllowanceChargeReason>
+    <cbc:MultiplierFactorNumeric>0.200</cbc:MultiplierFactorNumeric>
+    <cbc:Amount currencyID="NOK">50.00</cbc:Amount>
+    <cbc:BaseAmount currencyID="NOK">250.00</cbc:BaseAmount>
+  </cac:AllowanceCharge>
 </cac:Price>
 ----
 

@@ -2,59 +2,59 @@
 
 Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller ulike aktører avhengig av hvordan håndtering av meldingene er organisert.
 
-Selger::
-(AccountingSupplierParty)	Selger er obligatorisk informasjon i EHF.
-Kjøper::
-(AccountingCustomerParty)	Kjøper er obligatorisk informasjon i EHF.
-Betalingsmottaker::
-(PayeeParty)	Betalingsmottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt, er betalingsmottaker samme som selger.
+Selger (AccountingSupplierParty)::
+Selger er obligatorisk informasjon i EHF.
+Kjøper (AccountingCustomerParty)::
+Kjøper er obligatorisk informasjon i EHF.
+Betalingsmottaker (PayeeParty)::
+Betalingsmottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt, er betalingsmottaker samme som selger.
 
 [source,xml]
 .Eksempel på utfylling av selgerinformasjon på hodenivå i en EHF Fakturamelding
 ----
 <cac:AccountingSupplierParty>
-	<cac:Party>
-		<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="ZZZ">123456</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>Salgsbedriften ASA</cbc:Name>
-		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:StreetName>Storgata 34</cbc:StreetName>
-			<cbc:AdditionalStreetName>Suite 123</cbc:AdditionalStreetName>
-			<cbc:CityName>Storevik</cbc:CityName>
-			<cbc:PostalZone>1234</cbc:PostalZone>
-			<cbc:CountrySubentity>Region A</cbc:CountrySubentity>
-			<cac:Country>
-				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
-		<cac:PartyTaxScheme>
-			<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
-			<cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-			</cac:TaxScheme>
-		</cac:PartyTaxScheme>
-		<cac:PartyLegalEntity>
-			<cbc:RegistrationName>Salgsbedriften ASA</cbc:RegistrationName>
-			<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456789</cbc:CompanyID>
-			<cac:RegistrationAddress>
-				<cbc:CityName>Storevik</cbc:CityName>
-				<cac:Country>
-					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
-				</cac:Country>
-				</cac:RegistrationAddress>
-		</cac:PartyLegalEntity>
-		<cac:Contact>
-			<cbc:ID>Vår ref</cbc:ID>
-			<cbc:Name>Ola Nordmann</cbc:Name>
-			<cbc:Telephone>46211230</cbc:Telephone>
-			<cbc:Telefax>46211231</cbc:Telefax>
-			<cbc:ElectronicMail>ola@salgsbedriften.no</cbc:ElectronicMail>
-		</cac:Contact>
-	</cac:Party>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">123456</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Salgsbedriften ASA</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:StreetName>Storgata 34</cbc:StreetName>
+      <cbc:AdditionalStreetName>Suite 123</cbc:AdditionalStreetName>
+      <cbc:CityName>Storevik</cbc:CityName>
+      <cbc:PostalZone>1234</cbc:PostalZone>
+      <cbc:CountrySubentity>Region A</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyTaxScheme>
+      <cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:PartyTaxScheme>
+    <cac:PartyLegalEntity>
+      <cbc:RegistrationName>Salgsbedriften ASA</cbc:RegistrationName>
+      <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456789</cbc:CompanyID>
+      <cac:RegistrationAddress>
+        <cbc:CityName>Storevik</cbc:CityName>
+        <cac:Country>
+          <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+        </cac:Country>
+        </cac:RegistrationAddress>
+    </cac:PartyLegalEntity>
+    <cac:Contact>
+      <cbc:ID>Vår ref</cbc:ID>
+      <cbc:Name>Ola Nordmann</cbc:Name>
+      <cbc:Telephone>46211230</cbc:Telephone>
+      <cbc:Telefax>46211231</cbc:Telefax>
+      <cbc:ElectronicMail>ola@salgsbedriften.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
 </cac:AccountingSupplierParty>
 ----
  
@@ -62,42 +62,42 @@ Betalingsmottaker::
 .Eksempel på utfylling av kjøperinformasjon på hodenivå i en EHF Fakturamelding.
 ----
 <cac:AccountingCustomerParty>
-	<cac:Party>
-		<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
-		<cac:PartyIdentification>
-			<cbc:ID schemeID="GLN">5790000436033</cbc:ID>
-		</cac:PartyIdentification>
-		<cac:PartyName>
-			<cbc:Name>AS Innkjøper</cbc:Name>
-		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:StreetName>Hovedgata 23</cbc:StreetName>
-			<cbc:AdditionalStreetName>Bakdøra</cbc:AdditionalStreetName>
-			<cbc:CityName>Lillevik</cbc:CityName>
-			<cbc:PostalZone>8523</cbc:PostalZone>
-			<cbc:CountrySubentity>Region B</cbc:CountrySubentity>
-			<cac:Country>
-				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
-		<cac:PartyTaxScheme>
-			<cbc:CompanyID schemeID="NO:VAT">987654321MVA</cbc:CompanyID>
-			<cac:TaxScheme>
-				<cbc:ID>VAT</cbc:ID>
-			</cac:TaxScheme>
-		</cac:PartyTaxScheme>
-		<cac:PartyLegalEntity>
-			<cbc:RegistrationName>AS Innkjøper</cbc:RegistrationName>
-			<cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID>
-		</cac:PartyLegalEntity>
-		<cac:Contact>
-			<cbc:ID>3150bdn</cbc:ID>
-			<cbc:Name>Kari Navnesen</cbc:Name>
-			<cbc:Telephone>5121230</cbc:Telephone>
-			<cbc:Telefax>5121231</cbc:Telefax>
-			<cbc:ElectronicMail>kari.navnesen@innkjoper.no</cbc:ElectronicMail>
-		</cac:Contact>
-	</cac:Party>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000436033</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>AS Innkjøper</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:StreetName>Hovedgata 23</cbc:StreetName>
+      <cbc:AdditionalStreetName>Bakdøra</cbc:AdditionalStreetName>
+      <cbc:CityName>Lillevik</cbc:CityName>
+      <cbc:PostalZone>8523</cbc:PostalZone>
+      <cbc:CountrySubentity>Region B</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyTaxScheme>
+      <cbc:CompanyID schemeID="NO:VAT">987654321MVA</cbc:CompanyID>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:PartyTaxScheme>
+    <cac:PartyLegalEntity>
+      <cbc:RegistrationName>AS Innkjøper</cbc:RegistrationName>
+      <cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID>
+    </cac:PartyLegalEntity>
+    <cac:Contact>
+      <cbc:ID>3150bdn</cbc:ID>
+      <cbc:Name>Kari Navnesen</cbc:Name>
+      <cbc:Telephone>5121230</cbc:Telephone>
+      <cbc:Telefax>5121231</cbc:Telefax>
+      <cbc:ElectronicMail>kari.navnesen@innkjoper.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
 </cac:AccountingCustomerParty>
 ----
 
