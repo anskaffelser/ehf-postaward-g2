@@ -1,0 +1,12 @@
+= Recommended Article
+
+Recommended article is stated in AdditionalItemProperties with Name=ABF.
+
+[source]
+.Example in EHF Catalogue message
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ABF</cbc:Name>
+  <cbc:Value>true</cbc:Value>
+</cac:AdditionalItemProperty>
+----

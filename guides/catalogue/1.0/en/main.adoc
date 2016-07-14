@@ -1,0 +1,41 @@
+include::settings.adoc[]
+
+= {doctitle}
+{name-difi-en}
+v{revision}
+:description: This document describes the EHF Catalogue format to be used for the exchange of Catalogue information between trading partners. The document is part of Norwegian "{name-difi-en}" (Difi) standardization work related to electronic commerce.
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:title-logo-image: {shared-dir}/images/logo.jpg
+
+{description}
+
+include::{shared-dir}/message/status-{status}.adoc[]
+
+include::{shared-dir}/message/download.adoc[]
+
+include::{shared-dir}/message/issues.adoc[]
+
+:leveloffset: +1
+
+include::introduction.adoc[]
+
+include::changelog/index.adoc[]
+
+include::{shared-dir}/content/ehf/index.adoc[]
+
+include::definitions.adoc[]
+
+include::principles/index.adoc[]
+
+include::description/index.adoc[]
+
+include::{shared-dir}/content/validation/index.adoc[]
+
+include::appendix/index.adoc[]

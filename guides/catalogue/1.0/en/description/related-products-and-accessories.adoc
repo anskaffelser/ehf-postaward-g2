@@ -1,0 +1,38 @@
+= Related Products and Accessories
+
+Products can be related to each other for ordering or logistic purposes.  All related products must also be sent as separate Catalogue lines.
+
+Types of relations:
+
+* Products that are bundled and ordered/invoiced together, e.g. bottles and desposits.
+* Products that are connected in a product line or a logistics structure, e.g. consumer units and trading units of the same article.
+* Accessories that might be sold together with a product, e.g. disk station to a laptop.
+
+Example of related products in an EHF Catalogue message:
+
+[source]
+.Bundled products
+----
+<cac:RequiredRelatedItem>
+  <cbc:ID>987654</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:RequiredRelatedItem>
+----
+
+[source]
+.Logistics structure (also described in chapter 4.11)
+----
+<cac:ComponentRelatedItem>
+  <cbc:ID>2</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">12</cbc:Quantity>
+</cac:ComponentRelatedItem>
+----
+
+[source]
+.Accessories
+----
+<cac:AccessoryRelatedItem>
+  <cbc:ID>123456</cbc:ID>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:AccessoryRelatedItem>
+----

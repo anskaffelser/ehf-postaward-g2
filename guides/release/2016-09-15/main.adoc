@@ -33,6 +33,11 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.4.adoc[]
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.7.adoc[]
 
 
+=== EHF Catalogue 1.0.5 [[catalogue]]
+
+include::../../catalogue/1.0/en/changelog/{release}-1.0.5.adoc[]
+
+
 === EHF Despatch Advice 1.0.4 [[despatch-advice]]
 
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.4.adoc[]

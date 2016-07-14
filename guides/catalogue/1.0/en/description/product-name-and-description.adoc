@@ -1,0 +1,15 @@
+= Product Name and Description
+
+The Product name shall be sent in tag <Item/Name> on line level. Long Description of a product shall be sent in <Item/Description> on line level.
+
+The Product name is often sent in the order from buyer to seller. The field length should not exceed 160 characters being the maximum length sent from most existing public purchasing systems. This element is also included in the shopping basket when OCI punch-out (round trip) is used.
+
+Description should not exceed 2000 characters since this is stated as maximum field length from most existing public purchasing systems. This element is not included in the shopping basket when OCI punch-out (round trip) and is not sent in the order. The Description is only shown to the Buyer when searching for the product in the Catalogue.
+
+[source]
+.Example in an EHF Catalogue message.
+----
+<cbc:Description>GUDBRANDSDALOST G35 1KG. En enhet består av: 10STK à 1KG</cbc:Description>
+...
+<cbc:Name>GUDBRAND.OST G35 1KG</cbc:Name>
+----

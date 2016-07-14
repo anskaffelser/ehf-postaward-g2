@@ -1,0 +1,13 @@
+= Catalogue Process
+
+The Catalogue exchange is the first part of the post-award process and can be described as follows:
+
+. The Catalogue provider (Supplier) collects information about products or services and transforms these into a Catalogue format. This can either be a complete Catalogue or a Catalogue containing selected articles with changes.
+. The Catalogue is sent to the Catalogue receiver (Buyer) either directly or via a third party.
+. The Catalogue receiver controls if the Catalogue is syntactically correct and contains sufficient information.
+. If the Catalogue is accepted, the Catalogue receiver sends a positive Catalogue Response to the Catalogue provider. The Catalogue is now approved for ordering purposes.
+. If the Catalogue is rejected, the Catalogue receiver sends a negative Catalogue Response to the Catalogue provider with an explanation to the rejection. The Catalogue provider will make corrections to the Catalogue and resend it.
+
+Figure 2 shows the Catalogue process including the exchange of the EHF Catalogue messages.
+
+image::images/catalogue-process.png[Process model for Catalogue exchange., align="center"]

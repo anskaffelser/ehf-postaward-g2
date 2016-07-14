@@ -1,0 +1,54 @@
+= Description of Selected Parts
+
+There are no formal requirements to catalogue content according to Norwegian regulations. The content requirements are therefore based on the following:
+
+* Information content in the existing Procurement Platform (EPP)
+* UBL 2.1
+* CEN BII2
+* Peppol BIS 1A catalogue
+
+The format will also be verified against requirements in certain areas of the Norwegian private sector.
+
+The following chapters describe selected areas of the format and specifically information elements being important for use in the Norwegian market.
+
+:leveloffset: +1
+
+include::roles-and-actors.adoc[]
+
+include::action-code.adoc[]
+
+include::product-identification.adoc[]
+
+include::product-name-and-description.adoc[]
+
+include::keyword.adoc[]
+
+include::quantities-and-units.adoc[]
+
+include::prices.adoc[]
+
+include::related-products-and-accessories.adoc[]
+
+include::product-classification.adoc[]
+
+include::hazardous-item.adoc[]
+
+include::vat.adoc[]
+
+include::attachments.adoc[]
+
+include::logistics-information.adoc[]
+
+include::labels.adoc[]
+
+include::dimension.adoc[]
+
+include::replacement-product.adoc[]
+
+include::recommended-article.adoc[]
+
+include::smartform-id.adoc[]
+
+include::additional-item-properties.adoc[]
+
+:leveloffset: -1

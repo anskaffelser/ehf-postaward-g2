@@ -1,0 +1,22 @@
+= Dimension (Height, Width ETC.)
+
+Physical properties are important for logistics. The following values can be stated:
+
+* Height (HT)
+* Width (WD)
+* Length (LN)
+* Gross weight (AAE)
+* Temperature (TC)
+
+[source]
+.Example
+----
+<cac:Item>
+  ...
+  <cac:Dimension>
+    <cbc:AttributeID schemeID="UNCL6313">HT</cbc:AttributeID>
+    <cbc:Measure unitCode="CMT">12.5</cbc:Measure>
+  </cac:Dimension>
+  ...
+</cac:Item>
+----

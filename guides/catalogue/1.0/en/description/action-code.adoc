@@ -1,0 +1,70 @@
+= Action Code
+
+The Action code holds instructions about the treatment of the Catalogue by the recipients system. The Action code can be stated either on header or line level.
+
+It is strongly recommended only to use Action code on header level.
+
+Use of Action codes on line level must be explicitly agreed between sender and receiver.
+
+.Guidelines for use
+* Action code must be sent on either header or line level. If Action code is not sent the Catalogue message will be rejected.
+* Action code sent on header level will overrule possible Action codes sent on line level.
+* If Action code is not sent on header level it is mandatory to send Action codes on all catalogue lines.
+* Legal values for Action Code are Add, Replace, Update or Delete.
+
+[cols="1h,6", options="header"]
+.Action Code on header level.
+|===
+
+| Action code
+| Treatment
+
+| Add
+| A new Catalogue with belonging product lines shall be created.  If the Catalogue already exists, it must be rejected by receiver.
+
+| Replace
+| An existing Catalogue shall be completely replaced by a new version. The current version should be archived by the receiver. If the Catalogue does not exist, it must be rejected by receiver.
+
+| Update
+| Catalogue lines that are sent shall update existing Catalogue lines. The current version should be archived by the receiver. If the Catalogue does not exist, it must be rejected by receiver.
+
+| Delete
+| The whole Catalogue shall be deleted. If the Catalogue does not exist, the complete Catalogue message must be rejected.
+
+|===
+
+[cols="1h,6", options="header"]
+.Action Code on line level.
+|===
+
+| Action code
+| Treatment
+
+| Add
+| A new Catalogue line shall be created. If the Catalogue line already exists, the complete Catalogue message must be rejected.
+
+| Update
+| An existing Catalogue line shall be completely replaced by a new version of the line. If the Catalogue line does not exist, the complete Catalogue message must be rejected.
+
+| Delete
+| The Catalogue line shall be deleted. If the Catalogue line does not exist, the complete Catalogue message must be rejected.
+
+|===
+
+Message response from receiver to sender shall be done according to description in chapter 3.3.
+
+[source]
+.Example of Action code on header level.
+----
+<cac:Catalogue>
+  ...
+  <cbc:ActionCode listID="ACTIONCODE:PEPPOL">Add</cbc:ActionCode>
+----
+
+[source]
+.Example of Action code on line level.
+----
+<cac:CatalogueLine>
+  <cbc:ID>12345</cbc:ID>
+  <cbc:ActionCode listID="ACTIONCODE:BII2">Update</cbc:ActionCode>
+----

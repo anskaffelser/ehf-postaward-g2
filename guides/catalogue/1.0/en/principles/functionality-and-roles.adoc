@@ -1,0 +1,7 @@
+= Functionality and Roles
+
+This Implementation Guide covers exchange of catalogues in a post-award process, i.e. after the contract is signed between supplier and buyer. The content may also be used in a pre-award process (tendering), but with less mandatory elements.
+
+The figure below shows the business functions and roles covered by EHF Catalogue.
+
+image::images/functionality-and-roles.png[Functionality and roles, align="center"]

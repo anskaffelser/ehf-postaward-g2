@@ -1,0 +1,19 @@
+= Product Identification
+
+Product identification must be done using the identifiers described below.
+
+* Sellers ID.
+* Standard ID, e.g. GTIN
+* Manufacturers ID which is necessary when the same product is bought from several suppliers.
+
+Either Sellers ID or Standard ID must be sent. Manufacturers ID shall be sent if available.
+
+Which identifier to use depends on what is known at the time of catalogue exchange or what is commonly used in the relevant business sector.
+
+[source]
+.Example of Sellers ID
+----
+<cac:SellersItemIdentification>
+  <cbc:ID>222222</cbc:ID>
+</cac: SellersItemIdentification>
+----

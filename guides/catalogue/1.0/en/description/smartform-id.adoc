@@ -1,0 +1,12 @@
+= Smartform ID
+
+Smartform ID is stated in AdditionalItemProperties with Name=SmartFormID.
+
+[source]
+.Example in EHF Catalogue message
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>SmartFormID</cbc:Name>
+  <cbc:Value>12345</cbc:Value>
+</cac:AdditionalItemProperty>
+----

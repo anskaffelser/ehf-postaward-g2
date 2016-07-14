@@ -1,0 +1,60 @@
+= Additional Item Properties
+
+Additional properties are meant for product properties that cannot be sent in any of the defined elements in EHF Catalogue. Additional properties consist of the Name of the property and the actual Value.
+
+.Example of additional properties:
+* Color
+* Allergens +
+Legal values: YES, NO, UNKNOWN, FREE.
+* Nutrition +
+Stated with amount per 100 g/ml.
+* Genetically modified +
+Legal values: True, False
+
+.Example in EHF Catalogue message
+====
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name languageID="no">Farge</cbc:Name>
+  <cbc:Value languageID="no">Rød</cbc:Value>
+  <cbc:ValueQualifier>Color</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>Farge</cbc:Name>
+  <cbc:Value>Rød</cbc:Value>
+  <cbc:ValueQualifier>Color</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ContainNuts</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>NutritionProtein</cbc:Name>
+  <cbc:ValueQuantity unitCode="GRM" unitCodeListID="UNECERec20">2.5</cbc:ValueQuantity>
+  <cbc:ValueQualifier>Nutrition</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>GeneticallyModified</cbc:Name>
+  <cbc:Value>True</cbc:Value>
+</cac:AdditionalItemProperty>
+----
+====

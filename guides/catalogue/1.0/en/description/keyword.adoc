@@ -1,0 +1,33 @@
+= Keyword
+
+Keywords are sent to let the Buyer search for a product without knowing the Product ID or name. Keywords can be repeated, but the number should be limited to ensure correct handling in the receiving system.  If more than one Keyword is sent, they should be put in the same tag separated by the %-sign since this is already being used by several actors (but a different sign can be agreed by the trading partners).
+
+Keywords may also be put in separate tags.
+
+[source]
+.Example of several Keywords in the same tag.
+----
+<cac:Item>
+  <cbc:Description> Pallet of water </cbc:Description>
+  <cbc:Name languageID="no">Water</cbc:Name>
+  <cbc:Keyword>sparkling%natural%water</cbc:Keyword>
+  <cac:SellersItemIdentification>
+    <cbc:ID>111111</cbc:ID>
+  </cac:SellersItemIdentification>
+</cac:Item>
+----
+
+[source]
+.Example of Keywords in separate tags.
+----
+<cac:Item>
+  <cbc:Description>Pallet of water</cbc:Description>
+  <cbc:Name languageID="no">Water</cbc:Name>
+  <cbc:Keyword>sparkling</cbc:Keyword>
+  <cbc:Keyword>natural</cbc:Keyword>
+  <cbc:Keyword>water</cbc:Keyword>
+  <cac:SellersItemIdentification>
+    <cbc:ID>111111</cbc:ID>
+  </cac:SellersItemIdentification>
+</cac:Item>
+----

@@ -1,0 +1,16 @@
+= About the Catalogue Messages
+
+The messages covered by this Implementation guide are EHF Catalogue and EHF Catalogue Response. Buyer and Seller must exchange both messages electronically to be in compliance with this guide.
+
+An Electronic Catalogue is a listing of products and services to be used in a purchasing process. The EHF Catalogue can serve different purposes during the lifecycle of Catalogue information:
+
+* Establish a new Catalogue
+* Replace an existing Catalogue
+* Add or delete Catalogue lines
+* Update product properties or prizes on existing Catalogue lines
+
+When doing changes to catalogue lines, it is recommended to replace the whole catalogue and not update separate lines.
+
+A Catalogue containing sufficient information about articles and services will prevent faulty deliveries causing lost income for both suppliers and buyers.
+
+Most often an Electronic Catalogue will be integrated with a Catalogue tool and a Search engine. The Search engines are set up differently providing possibility to search for different catalogue elements. The number of elements available will decide the preciseness of the search, and a well set up Search engine will in the end improve the quality of the purchase. 

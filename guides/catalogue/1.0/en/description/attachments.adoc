@@ -1,0 +1,21 @@
+= Attachments
+
+Attachments can be sent on line level in the Catalogue. This can be images or additional descriptions of a product. It is strongly recommended to use external references in the form of URI’s for attachments.
+
+[source]
+.Example
+----
+<cac:Item>
+  ...
+  <cac:ItemSpecificationDocumentReference>
+    <cbc:ID>LK8788</cbc:ID>
+    <cbc:DocumentDescription>Product image</cbc:DocumentDescription>
+    <cac:Attachment>
+      <cac:ExternalReference>
+        <cbc:URI>http://img.trioving.net/Låskasser/LK8788_PRD_FPM_000.JPG</cbc:URI>
+      </cac:ExternalReference>
+    </cac:Attachment>
+  </cac:ItemSpecificationDocumentReference>
+  ...
+</cac:Item>
+----

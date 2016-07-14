@@ -1,0 +1,17 @@
+= Principles and Prerequisites
+
+This chapter describes the catalogue process and functional requirements covered by EHF Catalogue.  The description is based on the CEN BII profile BII01 Catalogue Only.
+
+:leveloffset: +1
+
+include::general.adoc[]
+
+include::functionality-and-roles.adoc[]
+
+include::profiles-and-messages.adoc[]
+
+include::catalogue-process.adoc[]
+
+include::catalogue-response.adoc[]
+
+:leveloffset: -1
