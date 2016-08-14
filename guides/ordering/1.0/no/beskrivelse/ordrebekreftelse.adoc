@@ -1,0 +1,169 @@
+= EHF Ordrebekreftelse
+
+Ordrebekreftelse er en melding fra selger til kjøper der selger angir evne til å etterkomme bestillingen. Følgende regler gjelder for ordrebekreftelsen:
+
+* Ordrebekreftelsen må referere til den opprinnelige bestillingen
+* Selger kan akseptere eller avvise ordren i sin helhet
+* Ordrebekreftelsen kan inneholde en forklaring på en avvisning
+* Selger kan akseptere eller avvise ordrelinjer
+* Dersom selger aksepterer/avviser på linjenivå må alle linjer returneres i ordrebekreftelsen
+* Linjene i ordrebekreftelsen må referere til tilsvarende linje i ordren
+* Referanse mellom linjer i ordrebekreftelsen og ordren må være 1 til 1
+* Følgende felt er mulig å endre i ordrebekreftelsen. Hva som faktisk skal kunne endres må avtales i den merkantile avtalen eller samhandlingsavtalen.
+** Kvantum
+** Leveringstidspunkt
+** Erstatningsvare
+** Pris
+* Ved avvisning eller endring må ordrebekreftelsen inneholde kontaktinformasjon til selger
+
+== Responskode
+
+Responskoden angir selgers evne til å etterkomme bestillingen og må angis enten på hode- eller linjenivå i ordrebekreftelsen.
+Responskodene som benyttes er basert på tilsvarende koder fra Edifact.
+
+.Retningslinjer for utfylling
+* Responskode må være utfylt både på hodenivå og linjenivå.
+* Dersom responskode mangler vil hele ordrebekreftelsen bli avvist.
+* Responskode kan ha 3 ulike verdier: 27 (Rejected) 29 (Accepted), og 30 (Accepted with amendment/change).
+
+[cols="1,7", options="header"]
+.Responskode utfylt på hodenivå
+|===
+| Responskode
+| Behandling
+
+| 27
+| Hele ordren er avvist. Linjer kan sendes, men informasjon på hodenivå vil overstyre linjeinformasjon.
+
+| 29
+| Hele ordren er akseptert. Linjer kan sendes, men informasjon på hodenivå vil overstyre linjeinformasjon.
+
+| 30
+| Ordren er akseptert med endringer. Alle linjer må sendes.
+|===
+
+[source]
+.Eksempel på angivelse av reponskode på hodenivå i en EHF ordrebekreftelse:
+----
+<cbc:ID>34</cbc:ID>
+<cbc:IssueDate>2012-10-01</cbc:IssueDate>
+<cbc:IssueTime>12:30:00</cbc:IssueTime>
+<cbc:OrderResponseCode listID="UNCL1225">30</cbc:OrderResponseCode>
+<cbc:Note>Changes in 2 orderlines</cbc:Note>
+----
+
+[cols="1,7", options="header"]
+.Responskode utfylt på linjenivå
+|===
+| Responskode
+| Behandling
+
+| 27
+| Ordrelinjen er avvist i sin helhet.
+
+| 29
+| Ordrelinjen er akseptert uendret.
+
+| 30
+| Ordrelinjen er akseptert med endringer.
+|===
+
+[source]
+.Eksempel på angivelse av responskode på linjenivå i en EHF ordrebekreftelse. Avvisning av en ordrelinje som er avvist
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>1</cbc:ID>
+		<cbc:LineStatusCode listID="UNCL1225">27</cbc:LineStatusCode>
+		<cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20”>0</cbc:Quantity>
+		<cac:Item/>
+	</cac:LineItem>
+</cac:OrderLine>
+----
+
+== Referanse til bestillingen
+
+Referanse til opprinnelig bestilling gjøres på hodenivå og eventuelt på linjenivå dersom det sendes linjer.
+
+[source]
+.Eksempel på angivelse av ordrereferanse på hodenivå i en EHF ordrebekreftelse
+----
+<cbc:ID>12</cbc:ID>
+<cbc:IssueDate>2012-10-01</cbc:IssueDate>
+<cbc:IssueTime>12:30:00</cbc:IssueTime>
+<cbc:OrderResponseCode listID="UNCL1225">30</cbc:OrderResponseCode>
+<cbc:Note>Changes in 1 orderline</cbc:Note>
+<cac:OrderReference>
+	<cbc:ID>34</cbc:ID>
+</cac:OrderReference>
+----
+
+[source]
+.Eksempel på angivelse av ordrereferanse på linjenivå i en EHF ordrebekreftelse
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>2</cbc:ID>
+		<cbc:LineStatusCode listID="UNCL1225">29</cbc:LineStatusCode>
+	</cac:LineItem>
+	<cac:OrderLineReference>
+		<cbc:LineID>2</cbc:LineID>
+	</cac:OrderLineReference>
+</cac:OrderLine>
+----
+
+== Endringer på ordren
+
+Når selger aksepterer en ordrelinje med endringer skal Responskode «Accepted with change» angis både på hode- og linjenivå. I tillegg må aktuelt element som endres og ny verdi sendes.
+
+Det kan gjøres endringer på følgende elementer:
+
+* Kvantum
+* Leveringstidspunkt (kan endres både på hode- og linjenivå)
+* Pris
+* Erstatningsvare
+
+[source]
+.Eksempel på endring av kvantum i en EHF Ordrebekreftelse
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>1</cbc:ID>
+		<cbc:LineStatusCode listID="UNCL1225">30</cbc:LineStatusCode>
+		<cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">18</cbc:Quantity>
+		<cac:Item/>
+	</cac:LineItem>
+</cac:OrderLine>
+----
+
+[source]
+.Eksempel på erstatningsvare i en EHF Ordrebekreftelse
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>2</cbc:ID>
+		<cbc:LineStatusCode listID=" UNCL1225">30</cbc:LineStatusCode>
+		<cac:Item>
+			<cbc:Name>Wet tissues</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>SItemNo011</cbc:ID>
+			</cac:SellersItemIdentification>
+		</cac:Item>
+	</cac:LineItem>
+	<cac:SellerSubstitutedLineItem>
+		<cbc:ID>2</cbc:ID>
+		<cac:Item>
+			<cbc:Name>Wet tissues</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>SItemNo012</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeID="GTIN">05449000035882</cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="UNSPSC">675634</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+		</cac:Item>
+	</cac:SellerSubstitutedLineItem>
+</cac:OrderLine>
+----

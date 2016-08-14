@@ -1,0 +1,36 @@
+= Vedleggshåndtering
+
+Feltet for å sende vedlegg i formatet er valgfritt og kan gjentas mange ganger. Det er for eksempel grafikk, image eller andre tilleggsopplysninger som kan være et vedlegg til en ordremelding. Vedlegget kan da sendes som et binært objekt innebygd i meldingen, eller at det overføres en referanse til stedet hvor vedlegget er lagret, for eksempel en URL. Vedlegg kan kun sendes på hodenivå.
+
+Det er anbefalt å sende tilleggsinformasjon innebygd i dokumentet og ikke som eksternt vedlegg.
+
+Andre anbefalinger:
+
+Koding:::
+Base64
+Dokumentformat:::
+MIME typer anbefales:
+* Pdf – applikasjon / pdf
+* TXT – tekst / txt
+* GIF – image / gif
+* TIFF – image / tiff
+* JPEG, JPG – image / jpeg
+* PNG – image / png
+Størrelse:::
+5MB
+Beskrivelse av vedlegg:::
+Det anbefales å gi en god beskrivelse av hva slag vedlegg det gjelder. Kodelisten DocumentTypeCode anbefales brukt og beskrivelsen gjøres i feltet: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
+Elementet benyttes kun til å gi en beskrivelse av vedleggets innhold eller type dokument/vedlegg.
+
+
+[source]
+.Eksempel på innebygd vedlegg i en EHF ordremelding.
+----
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Ordredetaljer.pdf</cbc:ID>
+  <cbc:DocumentType>Orderdetaljer</cbc:DocumentType>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="applikasjon/pdf">PD94bWwgdm… +PC9PcmRlcj4=</cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+----

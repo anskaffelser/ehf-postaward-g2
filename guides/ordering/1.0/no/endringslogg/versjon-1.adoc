@@ -1,0 +1,62 @@
+= Versjon 1.x [[changelog-1.x]]
+
+:sectnums!:
+
+== Versjon 1.0.5 (15.09.2016) [[changelog-1.0.5]]
+
+include::2016-09-15-1.0.5.adoc[]
+
+
+== Versjon 1.0.4 (23.05.2016) [[changelog-1.0.4]]
+
+include::2016-05-23-1.0.4.adoc[]
+
+
+== Versjon 1.0.3 (01.09.2015) [[changelog-1.0.3]]
+
+.Validator endringer:
+*	Nye valideringsartefakter fra PEPPOL og BII, oppgradering til XSLT/xPath 2.0
+*	Tomme elementer vil medføre feilmelding, ikke advarsel som tidligere, gjelder regel NOGOV-T01-R006 og NOGOV-T76-R010.
+
+.Forfatter:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Versjon 1.0.2 (03.03.2015) [[changelog-1.0.2]]
+
+.Validator endringer:
+* Validering av alle påkrevde og anbefalte felt.
+* Validering av ulike datatyper (organisasjons-nummer, dato o.l)
+* Validering av at EndpointID kun kan være organisasjonsnummer.
+
+.Editorielle endringer:
+* Lagt til regel ID i meldingstabellen
+* Tydeliggjøring i kapittel 2.1
+* Tydeliggjøring av avhengige felt (D)
+
+.Forfatter:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Versjon 1.0.1 (02.09.2014) [[changelog-1.0.1]]
+
+.Endringer:
+* Endret krav og feiltype for DocumentCurrencyCode i kapittel 8
+* Endret kodeliste, vedlegg 3
+* Beskrevet bruk av kode ZZZ for PartyID i kapittel 6.1.1
+* Lagt til nytt kapittel 3.3
+* Lagt til regler for currencyID, mimeCode, Endpoint Identifier scheme og Party identifier scheme.
+* Lagt til regel for å sikre korrekt bruk av ProfileID
+
+.Forfatter:
+* Edisys Consulting AS
+
+
+== Versjon 1.0 (25.09.2013) [[changelog-1.0.0]]
+
+Godkjent
+
+.Forfatter:
+* Edisys Consulting
+
+:sectnums:

@@ -1,0 +1,112 @@
+= Roller og aktører
+
+Følgende roller kan angis i formatet. Disse kan innehas av samme aktør eller ulike aktører avhengig av hvordan håndtering av ordremeldingene er organisert.
+Type aktøridentifikator som brukes skal angis i schemeID med kodeliste i henhold til «Peppol Policy for use of identifiers» . Følgende koder er aktuelle for bruk i Norge:
+
+[cols="2,5", options="header"]
+|===
+| Scheme ID
+| Scheme Agency
+
+| GLN
+| GS1
+
+| NO:ORGNR
+| Enhetsregisteret ved Brønnøysundregisterne
+
+| NO:VAT
+| Enhetsregisteret ved Brønnøysundregisterne
+
+| ZZZ
+| Unknown issuer agency
+|===
+
+ZZZ skal som et eksempel brukes for interne kunde- eller leverandørnummer.
+
+Kjøper (BuyerCustomerParty)::
+Den juridiske person eller organisasjonen som kjøper en vare eller tjeneste. Kjøper er obligatorisk informasjon i EHF
+
+Rekvirent (OriginatorCustomerParty)::
+Den person som har identifisert et behov og som ordren er generert på vegne av. Dette vil i de fleste tilfeller være sluttbruker eller endelig sluttmottaker.
+
+Fakturamottaker (AccountingCustomerParty)::
+Den juridiske person eller organisasjon som skal motta fakturaen som skal sendes på grunnlag av ordren. Fakturamottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt er fakturamottaker samme som kjøper.
+
+Selger (SellerSupplierParty)::
+Den juridiske person eller organisasjon som mottar en bestilling. Selger er obligatorisk informasjon i EHF
+
+
+[source]
+.Eksempel på utfylling av leverandørinformasjon på hodenivå i en EHF ordremelding.
+----
+<cac:SellerSupplierParty>
+	<cac:Party>
+		<cbc:EndpointID schemeID="NO:ORGNR">938752655</cbc:EndpointID>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="ZZZ">12345</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Medical</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:CityName>Oslo</cbc:CityName>
+			<cbc:PostalZone>0585</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:Contact>
+			<cbc:Name>Nils Nilsen</cbc:Name>
+			<cbc:Telephone>22150510</cbc:Telephone>
+			<cbc:ElectronicMail>post@medical.no</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:Party>
+</cac:SellerSupplierParty>
+----
+
+[source]
+.Eksempel på utfylling av kjøperinformasjon på hodenivå i en EHF ordremelding.
+----
+<cac:BuyerCustomerParty>
+	<cac:Party>
+		<cbc:EndpointID schemeID="NO:ORGNR">931186755</cbc:EndpointID>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="GLN">7080000985134</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Helseforetak</cbc:Name>
+		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Sinsenveien 40</cbc:StreetName>
+			<cbc:CityName>Oslo</cbc:CityName>
+			<cbc:PostalZone>0501</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyTaxScheme>
+			<cbc:CompanyID>9311867455MVA</cbc:CompanyID>
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>
+			</cac:TaxScheme>
+		</cac:PartyTaxScheme>
+		<cac:PartyLegalEntity>
+			<cbc:RegistrationName>Helseforetak AS</cbc:RegistrationName>
+			<cbc:CompanyID schemeID="NO:ORGNR">931186755</cbc:CompanyID>
+			<cac:RegistrationAddress>
+				<cbc:CityName>Oslo</cbc:CityName>
+				<cac:Country>
+				<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:RegistrationAddress>
+		</cac:PartyLegalEntity>
+		<cac:Contact>
+			<cbc:ID>3150bdn</cbc:ID> <1>
+			<cbc:Name>Ole Olsen</cbc:Name>
+			<cbc:Telephone>23055000</cbc:Telephone>
+			<cbc:ElectronicMail>post@helseforetak.no</cbc:ElectronicMail>
+		</cac:Contact>
+	</cac:Party>
+</cac:BuyerCustomerParty>
+----
+<1> Contact/ID er anbefalt å fylle ut siden dette feltet er påkrevd i EHF Faktura. Dette er en utvidelse i forhold til CEN BII.

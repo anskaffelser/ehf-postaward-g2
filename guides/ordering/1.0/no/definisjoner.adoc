@@ -1,0 +1,41 @@
+# Definisjoner
+
+Faktura::
+Faktura er et dokument som regnskapsmessig stadfester et salg mellom en selger og en kjøper. Fakturaen utstedes av selgeren og kjøperen får i oppdrag å betale denne
+
+Katalog::
+Katalog er et dokument som brukes for å beskrive en vare eller tjenestes egenskaper.
+
+Kreditnota::
+En kreditnota er et dokument som opphever hele eller deler av en faktura som allerede er sendt. Kreditnota skal ha en tydelig henvisning til hvilken faktura den gjelder for.
+
+Ordre::
+Ordre er et dokument som brukes for å bestille en vare eller tjeneste.
+
+Ordrebekreftelse::
+Ordrebekreftelse er et dokument som brukes for enten å bekrefte eller avvise en ordre. En ordrebekreftelse kan være på hodenivå eller linjenivå.
+
+Leverandør::
+En person eller et firma som leverer en vare eller en tjeneste på egne eller andres vegne.
+
+Selger::
+Person eller organisasjon som har til oppgave på egne eller andres vegne å slutte en avtale eller kontrakt om overdragelse av et produkt, en vare eller tjeneste mot et avtalt vederlag til en kjøper.
+
+Kunde::
+Person eller organisasjon som overtar råderett over en vare eller tjeneste mot betaling, for en bestemt pris.
+
+Kjøper::
+Person eller organisasjon som kjøper en vare eller en tjeneste på egne eller på andres vegne. I Prosjektveiviseren er det brukt begrepet Bestiller.
+
+Rekvirent::
+Person eller organisasjon som initierer et ønske om en bestilling. Kan også angis som endelig sluttmottaker.
+
+UBL::
+UBL (Universal Business Language) er et sett av XML-formater (XML Schema) for elektronisk utveksling handelsdokumenter som bl.a. katalog, ordre og faktura. Gjeldende versjon som brukes for ordre er 2.1.
+
+BII2::
+BII (Business Interoperability Interfaces) er et subset av UBL med de dokumenter og det innhold som kreves for elektronisk samhandling i offentlig sektor i Europa. Omfatter ikke egne XML Schema. +
+BII2 er en videreføring av BII1.
+
+Schematron validering::
+Kontroll av en melding mot et sett av definerte forretningsregler. Disse kommer i tillegg til syntaks som sjekkes mot XML Schema.

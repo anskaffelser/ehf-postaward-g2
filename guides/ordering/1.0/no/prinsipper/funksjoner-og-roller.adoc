@@ -1,0 +1,6 @@
+= Funksjoner og roller
+
+Ordreprosessen foregår post-award, dvs. etter at avtale er inngått mellom leverandør og kjøper.
+Figuren under viser hvilke funksjoner som dekkes av EHF ordremeldinger og hvilke roller som inngår. I tillegg må også leveringssted angis i meldingene.
+
+image::images/funksjoner-og-roller.png[Funksjoner og roller, align="center"]

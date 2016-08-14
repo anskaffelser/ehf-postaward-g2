@@ -1,0 +1,21 @@
+= Priser
+
+Dersom priser skal kontrolleres som en del av ordreprosessen må pris overføres i ordren. Dette vil være aktuelt både for katalogordre og fritekst-ordre. Alternativt kan priser være avtalt som en del av katalogprosessen og overføres og kontrolleres som en del av fakturaprosessen.
+Dersom pris overføres i ordren vil det også være mulig å endre denne i ordrebekreftelsen.
+
+Alle priser er relatert til artikkelen eller tjenesten brukt i ordren og det er mulig å angi følgende priselementer:
+
+* Nettopris etter rabatt og tillegg. Nettopris betyr i denne sammenheng pris uten MVA.
+* Rabatter og tillegg.
+
+Merk at bruttopriser før eventuelle rabatter og tillegg ikke er mulig å angi.
+
+[source]
+.Eksempel på utfylling av prisinformasjon i EHF ordre (Nettopris)
+----
+<cac:Price>
+	<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount> <1>
+	<cbc:BaseQuantity unitCode="LTR" unitCodeListID="UNECERec20”>1</cbc:BaseQuantity>
+</cac:Price>
+----
+<1> Attributt "currencyID" viser valuta med kode NOK.

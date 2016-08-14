@@ -1,0 +1,4 @@
+= Generelt om ordremeldingene
+
+De elektroniske ordremeldingene som denne veilederen omfatter er EHF Ordre og EHF Ordrebekreftelse. Kjøper og selger må kunne utveksle begge meldingene elektronisk for å være i overenstemmelse med denne veilederen.
+Kjøper sender en ordre til selger som via en ordrebekreftelse kan angi et begrenset antall endringsmuligheter i forhold til hva som kan leveres. Ordrebekreftelsen setter dermed leverandøren i stand til å informere kjøper om hva som blir levert og kan gjennomføre leveransen uten forsinkelser.  Omfanget av endringene, hvilke endringer som tillates og tidspunktet for når meldinger skal sendes bør avtales mellom partene i en kjøpsavtale eller en samhandlingsavtale, ref. kapittel 3.6.  
