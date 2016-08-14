@@ -1,0 +1,7 @@
+= Functionality and Roles
+
+The Ordering process is a post-award process being performed after the Commercial agreement is signed between Supplier and Buyer.
+
+The figure below shows the business functions and roles covered by EHF Order messages. In addition to these roles the Delivery location must be stated in the messages.
+
+image::images/functionality-and-roles.png[Functionality and roles, align="center"]

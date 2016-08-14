@@ -1,0 +1,29 @@
+= Additional Item Properties
+
+Item properties that cannot be stated in any of the defined elements can be sent as Additional item properties. The Name of the property must be declared together with the actual Value.
+
+Example of additional properties:
+
+* Color
+* Weight
+
+[source]
+.Example of Additional item properties in an EHF Order message
+----
+<cac:Item>
+  <cbc:Description>God pensel for panel</cbc:Description>
+  <cbc:Name>Pensel 20 mm</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>SItemNo011</cbc:ID>
+  </cac:SellersItemIdentification>
+  ...
+  <cac:AdditionalItemProperty>
+    <cbc:Name>Hair color</cbc:Name>
+    <cbc:Value>Black</cbc:Value>
+  </cac:AdditionalItemProperty>
+  <cac:AdditionalItemProperty>
+    <cbc:Name>Width</cbc:Name>
+    <cbc:Value>20mm</cbc:Value>
+  </cac:AdditionalItemProperty>
+</cac:Item>
+----

@@ -1,0 +1,9 @@
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/149[#149]
+| Converting guide to Asciidoctor format.
+| Guide
+
+|===

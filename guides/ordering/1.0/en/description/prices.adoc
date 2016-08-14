@@ -1,0 +1,22 @@
+= Prices
+
+Prices may be exchanged in the Ordering process both for Catalogue-orders and free text orders. This also allows for the Supplier to change the price in the Order response.
+
+If prices are not sent in the order the normal process is to do price matching during the billing process comparing prices in the Invoice to prices in the Catalogue.
+
+Price sent in EHF Order is related to the articles or services within this order. The following price can be stated:
+
+* Net price including all allowances and charges but excluded Vat
+
+Be aware that Gross prices cannot be sent in the format (price before discount and charges).
+
+Price must have Currency as an attribute. Currency shall be according to Code list.
+
+[source]
+.Example of price information in an EHF Order message
+----
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
+  <cbc:BaseQuantity unitCode="LTR" unitCodeListID="UNECERec20”>1</cbc:BaseQuantity>
+</cac:Price>
+----

@@ -1,0 +1,41 @@
+= Definitions
+
+EHF (Elektronisk Handelsformat)::
+The formats to be used for the exchange of electronic documents towards the Norwegian public sector (catalogue, order, and invoice). EHF is based on BII2 and UBL 2.1.
+
+Catalogue::
+A document describing the properties of products and services.
+
+Invoice::
+The financial confirmation of a purchase. The Invoice is sent from Seller to Buyer with amount to be paid and payment instructions.
+
+Order::
+The Order is used by the Buyer to purchase goods and services.
+
+Order Response::
+An Order Response is used to accept or reject an Order on header or line level.
+
+Supplier::
+A Company delivering products or services.
+
+Seller::
+A person or unit within the Suppliers organisation being responsible for selling a product or a service to a Customer.
+
+Customer::
+A Company taking over the ownership of a product or service based on an agreement with Supplier.
+
+Buyer::
+A person or unit within the Customers organisation buying a product or service at a set price.
+
+Originator::
+A person or unit within the Customers organisation that initiates an order.
+
+UBL::
+UBL (Universal Business Language) is a collection of XML-formats (XML Schema) for the exchange of electronic documents such as Catalogue, Order and Invoice.
+
+BII2::
+BII (Business Interoperability Interfaces) is a subset of UBL containing documents and content that is required for electronic collaboration in the European public sector. +
+Does not include separate XML Schemas
+
+Schematron validation::
+Validation of a message towards business requirements. Additional to the syntax check against XML Schema.

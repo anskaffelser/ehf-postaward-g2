@@ -1,0 +1,34 @@
+= Attachments
+
+Non-XML documents can be sent as attachments to the EHF Order. This could be drawings or timesheets or other documents relevant for the order. The attachment can either be sent as a binary objetc embedded in the message or as a URI to an external address as a link.
+It is recommended to send attachments as embedded, binary objects and not as external references.
+
+Additional recommendations:
+
+Coding::
+Base64
+Document format::
+MIME types:
+* Pdf – application / pdf
+* TXT – text / txt
+* GIF – image / gif
+* TIFF – image / tiff
+* JPEG, JPG – image / jpeg
+* PNG – image / png
+Size::
+5MB
+Description of attachment::
+It is advised to supply a good description of each attachment and the element to use is: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
+Should only be used for description of the document content.
+
+[source]
+.Example of attachment as an embedded, binary object in an EHF Order message.
+----
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Orderdetails.pdf</cbc:ID>
+  <cbc:DocumentType>Order details</cbc:DocumentType>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">PD94bWwgdm… +PC9PcmRlcj4=</cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+----

@@ -1,0 +1,35 @@
+[preface]
+= Introduction
+
+include::{shared-dir}/content/introduction/background-and-objective.adoc[]
+
+== Target Audience
+
+*The target audience* for this implementation guide (hereafter called IG) is both technical and non-technical personnel involved in the exchange of Order messages.  The IG may also be used by system providers and message brokers.
+* Chapters 1 to 6 are directed to non-technical personnel
+* Chapters 7 to 9 (appendices) are directed to technical personnel
+
+
+== Document Structure
+
+The document consists of the following parts:
+* Chapter 1 outlines the background and objective for the document.
+* Chapter 2 contains document history.
+* Chapter 3 describes the principles and conditions for EHF.
+* Chapter 4 contains definitions.
+* Chapter 5 describes the ordering process.
+* Chapter 6 describes selected parts of the formats.
+* Chapter 7 contains the information contents of the messages.
+* Chapter 8 describes the validation of the messages.
+* Chapter 9 contains the following references to separate documents:
+** Appendix 1: Message structure (branching tree)
+** Appendix 2: Message description
+** Appendix 3: Code lists
+** Appendix 4: Link to UBL 2.1 Schema for Order and Order Response
+** Appendix 5: Schematron files
+** Appendix 6: XML Example files
+
+
+## Mandatory Use
+
+This version is valid from {date-mandatory}, and is mandatory from the same date.

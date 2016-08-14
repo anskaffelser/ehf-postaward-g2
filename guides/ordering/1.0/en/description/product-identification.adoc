@@ -1,0 +1,25 @@
+= Product Identification
+
+Product identification must be done using the identifiers described below.
+
+* Sellers ID
+* Standard ID, e.g. GTIN
+
+Either Sellers ID or Standard ID must be sent.
+
+Which identifier to use depends on what is known at the time of order exchange or what is commonly used in the relevant business sector.
+
+[source]
+.Example of an EHF Order message using both Sellers ID and Standard ID (GTIN)
+----
+<cac:Item
+  ...
+  <cac:SellersItemIdentification>
+    <cbc:ID>541706</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:StandardItemIdentification>
+    <cbc:ID schemeID ="GTIN">05449000035882</cbc:ID>
+  </cac:StandardItemIdentification>
+  ...
+</cac:Item>
+----

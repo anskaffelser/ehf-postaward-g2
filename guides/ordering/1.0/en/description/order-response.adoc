@@ -1,0 +1,171 @@
+= Order Response
+
+Order response is a message sent from seller to buyer stating the sellers ability to fulfill the order. The following rules applies to the EHF Order Response:
+
+* The Order response must refer to the preceding Order.
+* Seller may accept or reject the entire Order.
+* The Order response should contain an explanation to a rejection.
+* Seller may accept or reject the separate order lines.
+* If Seller accepts or rejects order lines, all order lines must be sent in the Order response.
+* Lines in the Order response must refer to corresponding lines in the Order 1 to 1.
+* The following informaiton may be changes in the Order response:
+** Quantity
+** Delivery period
+** Replacement item
+** Price
+* If the Order is rejected or changed, the Order response must contain contact information to Seller.
+
+== Response Code
+
+The Response code states the Sellers ability to fulfill the order and must be sent on both header level and line level if lines are sent.
+
+.Rules for use
+* Response code must be sent on both Header and Line level.
+* If Response code is missing the Order response will be rejected .
+* Response code may have 3 values: 27=Rejected, 29=Accepted, and 30=Accepted with change/Amendment.
+
+[cols="1,5", options="header"]
+.Response code on Header level:
+|===
+| Response code
+| Action
+
+| 27
+| The Order is rejected. No lines should be sent.
+
+| 29
+| The Order is accepted. No lines should be sent.
+
+| 30
+| The Order is accepted with changes. All lines must be sent.
+|===
+
+[source]
+.Example of Response code on Header level in an EHF Order Response message
+----
+<cbc:ID>34</cbc:ID>
+<cbc:IssueDate>2012-10-01</cbc:IssueDate>
+<cbc:IssueTime>12:30:00</cbc:IssueTime>
+<cbc:OrderResponseCode listID="UNCL1225">30</cbc:OrderResponseCode>
+<cbc:Note>Changes in 2 orderlines</cbc:Note>
+----
+
+[cols="1,5"]
+.Response code on Line level
+|===
+| Response code
+| Action
+
+| 27
+| The Order line is rejected.
+
+| 29
+| The Order line is accepted without changes.
+
+| 30
+| The Order line is accepted with changes.
+|===
+
+[source]
+.Example of Response code on Line level in an EHF Order Response message
+----
+<cac:OrderLine>
+  <cac:LineItem>
+    <cbc:ID>1</cbc:ID>
+    <cbc:LineStatusCode listID=" UNCL1225">27</cbc:LineStatusCode>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20”>0</cbc:Quantity>
+    <cac:Item/>
+  </cac:LineItem>
+</cac:OrderLine>
+----
+
+== Order Reference
+
+Reference to the preceding order must be done on Header level and on Line level if lines are sent.
+
+[source]
+.Example of Order reference on Header level in an EHF Order Response message
+----
+<cbc:ID>12</cbc:ID>
+<cbc:IssueDate>2012-10-01</cbc:IssueDate>
+<cbc:IssueTime>12:30:00</cbc:IssueTime>
+<cbc:OrderResponseCode listID=" UNCL1225">30</cbc:OrderResponseCode>
+<cbc:Note>Changes in 1 orderline</cbc:Note>
+<cac:OrderReference>
+  <cbc:ID>34</cbc:ID>
+</cac:OrderReference>
+----
+
+[source]
+.Example of Order reference on Line level in an EHF Order Response message
+----
+<cac:OrderLine>
+  <cac:LineItem>
+    <cbc:ID>2</cbc:ID>
+    <cbc:LineStatusCode listID=" UNCL1225">29</cbc:LineStatusCode>
+  </cac:LineItem>
+  <cac:OrderLineReference>
+    <cbc:LineID>2</cbc:LineID>
+  </cac:OrderLineReference>
+</cac:OrderLine>
+----
+
+== Order Response with Changes
+
+When Seller accepts an order with changes, the Response code «Accepted with change» must be sent on both Header and Line level.
+
+In addition the elements to be changed must be sent with new values.
+
+The following elements can be changed:
+
+* Quantity
+* Delivery period
+* Replacement item
+* Price
+
+[source]
+.Example of changes in an EHF Order Response message
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>1</cbc:ID>
+		<cbc:LineStatusCode listID=" UNCL1225">30</cbc:LineStatusCode>
+		<cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20”>18</cbc:Quantity>
+		<cac:Item/>
+	</cac:LineItem>
+</cac:OrderLine>
+----
+
+[source]
+.Example of Replacement item in an EHF Order Response message
+----
+<cac:OrderLine>
+	<cac:LineItem>
+		<cbc:ID>2</cbc:ID>
+		<cbc:LineStatusCode listID="UNCL1225">30</cbc:LineStatusCode>
+		<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+		<cac:Item>
+			<cbc:Description>Wet tissues for children</cbc:Description>
+			<cbc:Name>Wet tissues</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>SItemNo011</cbc:ID>
+			</cac:SellersItemIdentification>
+		</cac:Item>
+	</cac:LineItem>
+	<cac:SellerSubstitutedLineItem>
+		<cbc:ID>2</cbc:ID>
+		<cac:Item>
+			<cbc:Description>Wet tissues for adults</cbc:Description>
+			<cbc:Name>Wet tissues</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>SItemNo012</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeID="GTIN">05449000035882</cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="UNSPSC">675634</cbc:ItemClassificationCode>
+		</cac:Item>
+	</cac:SellerSubstitutedLineItem>
+</cac:OrderLine>
+----

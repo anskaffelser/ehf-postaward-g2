@@ -1,0 +1,14 @@
+= Product Name and Description
+
+The Product name shall be sent in tag <Item/Name> on line level. Description of a product can be sent in <Item/Description>, but is normally not used in the order.
+
+The Product name is often sent in the order from buyer to seller. The field length should not exceed 160 characters being the maximum length sent from most existing public purchasing systems. This element is also included in the shopping basket when OCI punch-out (round trip) is used.
+
+[source]
+.Example in an EHF Order message
+----
+<cac:Item>
+  <cbc:Name>TUNFISK I VANN 6 BX Á 1880 MILLIGRAM</cbc:Name>
+  ...
+</cac:Item>
+----

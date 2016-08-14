@@ -1,0 +1,21 @@
+= Ordering process
+
+The Ordering process descibed in this guide is a common process in most trading businesses. We expect companies to understand this process even if they may have organised it differently.
+
+The Ordering process is as follows:
+. A Buyer sends an order to a Seller specifying goods or services to be delivered. The goods or services can either be identified through article numbers or descibed as free text.
+. The order may refer to a Commercial agreement stating terms and regulations for the purchase. If not these terms can be specified in the order.
+. The Seller receives and vaildates the order message. If the message is not according to agreed format the Seller must inform the Buyer that it will not be processed.
+. If validation is OK the Seller processes the order and sends an order response to the Buyer with the result of the processing.
+.. The order is accepted completely with a positive order reponse and delivery  will be fulfilled according to agreed terms.
+.. The order is accepted with changes on one or more order lines. Further processing should be described in the Collaboration agreement but could potentially lead to some manual handling.
+.. The order is rejected completely with a negativ order response and no delivery can be expected.
+. When receiving a negative order response rejecting the whole order, the Buyer may initiate a new purchase taking into account the reason for the rejection.
+
+The figure below describes the ordering process using EHF Order messages. The process is based on Profile CENBII 28 - Ordering. This profile assumes that both the Order and the Order Response is sent electronically.
+
+image::images/ordering-process.png[Ordering process, align="center"]
+
+Feedback on reception of the EHF Order and EHF Order Response can be done via e-mail, Telephone or as an electronic message. The use of an electronic message is descibed in chapter 3.4 in this document.
+
+The use of Message Level Response must be agreed between Buyer and Seller.

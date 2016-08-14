@@ -1,0 +1,15 @@
+= Principles and Prerequisites
+
+This chapter describes the ordering process and functional requirements covered by EHF Order and Order Response.  The description is based on the business rules described in profile CEN BII2 28 Ordering.
+
+:leveloffset: +1
+
+include::general.adoc[]
+
+include::functionality-and-roles.adoc[]
+
+include::profiles-and-messages.adoc[]
+
+include::ordering-process.adoc[]
+
+:leveloffset: -1
