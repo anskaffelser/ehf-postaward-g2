@@ -39,3 +39,5 @@ include::description/index.adoc[]
 include::{shared-dir}/content/validation/index.adoc[]
 
 include::appendix/index.adoc[]
+
+include::{shared-dir}/message/piwik.adoc[]

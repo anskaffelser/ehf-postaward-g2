@@ -39,3 +39,5 @@ include::beskrivelse/index.adoc[]
 include::{shared-dir}/content/validering/index.adoc[]
 
 include::vedlegg/index.adoc[]
+
+include::{shared-dir}/message/piwik.adoc[]

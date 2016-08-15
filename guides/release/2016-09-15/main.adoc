@@ -61,3 +61,5 @@ include::../../ordering/1.0/en/changelog/{release}-1.0.5.adoc[]
 === EHF Despatch Advice 1.0.4 [[despatch-advice]]
 
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.4.adoc[]
+
+include::{shared-dir}/no/message/piwik.adoc[]
