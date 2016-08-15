@@ -12,4 +12,9 @@ a| Konvertere guiden til Asciidoctor-format.
 * Presentasjoner og illustrasjoner er endret grunnet nytt format.
 * Flytte kapittel 9 til kapittel 8.
 a| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/151[#151]
+| Endre regelen BII2-T10-R034 til å være WARNING for å tillate negativ faktura.
+| Validator
+
 |===

@@ -2,6 +2,7 @@
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
     <testfolder>test</testfolder>
+    <testfolder>unit-BII2</testfolder>
     <testfolder>unit-NOGOV</testfolder>
     <testfolder>unit-NONAT</testfolder>
 
@@ -16,6 +17,7 @@
         <file path="xsl/NOGOV-UBL-T10.xsl" />
         <rule identifier="BII2-T10-R025" action="suppress" />
         <rule identifier="BII2-T10-R035" action="suppress" />
+		<rule identifier="BII2-T10-R034" action="setWarning" />
         <rule identifier="BII2-T10-R037" action="suppress" />
         <rule identifier="BII2-T10-R044" action="suppress" />
         <rule identifier="BII2-T10-R047" action="suppress" />

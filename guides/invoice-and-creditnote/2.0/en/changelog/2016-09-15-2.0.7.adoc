@@ -14,4 +14,8 @@ a| Converting guide to Asciidoctor format.
 
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/151[#151]
+| Changing rule BII2-T10-R034 to trigger WARNING to allow for negative invoices.
+| Validator
+
 |===
