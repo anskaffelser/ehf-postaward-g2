@@ -1,0 +1,6 @@
+[appendix]
+= Structure Table [[appendix-structure-table]]
+
+Attached is structure tables providing a structured overview of the document types.
+
+.Structure Tables

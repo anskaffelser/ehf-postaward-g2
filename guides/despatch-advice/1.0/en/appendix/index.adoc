@@ -1,1 +1,33 @@
-= Appendix
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/ehf_despatch_advice_structure_table.pdf[Structure Table for Despatch Advice]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/ehf_despatch_advice_message_table.pdf[Message Table for Despatch Advice]
+
+
+[appendix]
+= Codelists [[appendix-codelists]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-DespatchAdvice-2.1.xsd[UBL DespatchAdvice 2.1]
+
+
+[appendix]
+= Schematron [[appendix-schematron]]
+
+
+// Example files
+include::../{shared-dir}/content/appendix/example-files.adoc[]
+
+
+:leveloffset: -1

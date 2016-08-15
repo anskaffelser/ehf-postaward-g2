@@ -1,0 +1,2 @@
+[appendix]
+= Example files [[appendix-example-files]]

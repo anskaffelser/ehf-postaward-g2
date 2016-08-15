@@ -1,1 +1,36 @@
-= Appendix
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/ehf_credit_note_structure_table.pdf[Structure Table for Credit Note]
+* link:files/ehf_invoice_structure_table.pdf[Structure Table for Invoice]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/ehf_credit_note_message_table.pdf[Message Table for Credit Note]
+* link:files/ehf_invoice_message_table.pdf[Message Table for Invoice]
+
+
+[appendix]
+= Codelists [[appendix-codelists]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-Order-2.1.xsd[UBL Order 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-OrderResponse-2.1.xsd[UBL OrderResponse 2.1]
+
+
+[appendix]
+= Schematron [[appendix-schematron]]
+
+
+// Example files
+include::../{shared-dir}/content/appendix/example-files.adoc[]
+
+
+:leveloffset: -1

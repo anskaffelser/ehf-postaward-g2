@@ -35,7 +35,7 @@ A CustomizationID is used to identify the business rules that apply to the docum
 
 The example CustomizationID below indicates that the contents of the current message is based on business rules determined by BII (urn:www.cenbii.eu:transaction:biitrns010:ver2.0), extended, customized and clarified by PEPPOL (urn:www.peppol.eu:bis:peppol5a:ver2.0) and further extended, customized and clarified in this implementation guide regarding the Norwegian businesses  (urn:www.difi.no:ehf:faktura:ver2.0).
 
-[source,xml]
+[source]
 ----
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
 ----

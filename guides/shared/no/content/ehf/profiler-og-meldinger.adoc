@@ -35,14 +35,14 @@ En CustomizationID (tilpasningsidentifikator) benyttes for å identifisere *de f
 
 Nedenstående eksempel på CustomizationID indikerer at innholdet i den aktuelle meldingen er basert på forretningsregler fastsatt av BII (urn:www.cenbii.eu:transaction:biitrns010:ver2.0), utvidet (extended), tilpasset og presisert av PEPPOL (urn:www.peppol.eu:bis:peppol5a:ver2.0) og ytterligere utvidet, tilpasset og presisert for norske forhold i EHF Faktura veilederen (urn:www.difi.no:ehf:faktura:ver2.0).
 
-[source,xml]
+[source]
 ----
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
 ----
 
 Eksempel på CustomizationID dersom det sendes en PEPPOL BIS, ytterligere info om PEPPOL BIS kan finnes på link:{link-peppol}[PEPPOL].
 
-[source,xml]
+[source]
 ----
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns10:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0</cbc:CustomizationID>
 ----

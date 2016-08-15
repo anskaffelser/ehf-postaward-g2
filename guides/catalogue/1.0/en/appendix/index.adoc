@@ -1,1 +1,36 @@
-= Appendix
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/ehf_catalogue_structure_table.pdf[Structure Table for Catalogue]
+* link:files/ehf_catalogue_response_structure_table.pdf[Structure Table for Catalogue Response]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/ehf_catalogue_message_table.pdf[Message Table for Catalogue]
+* link:files/ehf_catalogue_response_message_table.pdf[Message Table for Catalogue Response]
+
+
+[appendix]
+= Codelists [[appendix-codelists]]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-Catalogue-2.1.xsd[UBL Catalogue 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-ApplicationResponse-2.1.xsd[UBL ApplicationResponse 2.1]
+
+
+[appendix]
+= Schematron [[appendix-schematron]]
+
+
+// Example files
+include::../{shared-dir}/content/appendix/example-files.adoc[]
+
+
+:leveloffset: -1
