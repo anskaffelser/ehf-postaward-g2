@@ -1,3 +1,4 @@
+////
 ifeval::["{backend}" == "html5"]
 
 [NOTE]
@@ -5,3 +6,4 @@ ifeval::["{backend}" == "html5"]
 Dette dokumentet kan også link:document.pdf[lastes ned som PDF]. Dersom det oppleves problemer med denne versjonen, eksempelvis bilder som mangler eller lenker som ikke fungerer, ber vi om at man benytter versjonen tilgjengelig på nett for de aktuelle delene.
 
 endif::[]
+////

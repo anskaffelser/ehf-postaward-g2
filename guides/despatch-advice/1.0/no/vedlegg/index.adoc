@@ -12,16 +12,17 @@ include::../{shared-dir}/content/vedlegg/strukturtabell.adoc[]
 include::../{shared-dir}/content/vedlegg/meldingstabell.adoc[]
 * link:files/ehf_pakkseddel_meldingstabell.pdf[Meldingstabell for pakkseddel]
 
-[appendix]
-= Kodelister [[vedlegg-kodelister]]
+// Kodeliste
+include::../{shared-dir}/content/vedlegg/kodeliste.adoc[]
 
 
 // UBL 2.1
 include::../{shared-dir}/content/vedlegg/ubl-2.1.adoc[]
 * link:{link-oasis-ubl-21-xsd}UBL-DespatchAdvice-2.1.xsd[UBL DespatchAdvice 2.1]
 
-[appendix]
-= Schematron [[vedlegg-schematron]]
+
+// Schematron
+include::../{shared-dir}/content/vedlegg/schematron.adoc[]
 
 
 // Eksempelfiler

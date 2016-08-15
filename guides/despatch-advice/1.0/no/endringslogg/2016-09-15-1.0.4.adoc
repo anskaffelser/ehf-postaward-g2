@@ -3,7 +3,13 @@
 | Sak | Beskrivelse | Type
 
 | link:https://github.com/difi/vefa-validator-conf/issues/146[#146]
-| Konvertere guiden til Asciidoctor-format.
-| Guide
+a| Konvertere guiden til Asciidoctor-format.
 
+* Justere kapittel 1 så det er mer likt andre guider.
+* Justere kapittel 3 så det er mer likt andre guider.
+* Fjerne kapittel 7 til fordel for GEFEG-visning tilgjengelig på link:https://vefa.difi.no/[VEFA].
+* Flytte kapittel 8 til kapittel 7.
+* Flytte kapittel 9 til kapittel 8.
+* Presentasjoner og illustrasjoner er endret grunnet nytt format.
+| Guide
 |===

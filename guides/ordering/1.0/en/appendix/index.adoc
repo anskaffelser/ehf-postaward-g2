@@ -15,8 +15,8 @@ include::../{shared-dir}/content/appendix/message-table.adoc[]
 * link:files/ehf_order_response_message_table.pdf[Message Table for Order Response]
 
 
-[appendix]
-= Codelists [[appendix-codelists]]
+// Codelist
+include::../{shared-dir}/content/appendix/codelist.adoc[]
 
 
 // UBL 2.1
@@ -25,8 +25,8 @@ include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
 * link:{link-oasis-ubl-21-xsd}UBL-OrderResponse-2.1.xsd[UBL OrderResponse 2.1]
 
 
-[appendix]
-= Schematron [[appendix-schematron]]
+// Schematron
+include::../{shared-dir}/content/appendix/schematron.adoc[]
 
 
 // Example files

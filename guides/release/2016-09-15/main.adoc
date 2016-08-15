@@ -11,6 +11,11 @@ include::../settings.adoc[]
 
 == Norsk [[norsk]]
 
+I denne release er det fokusert på å konvertere implementasjonsguidene til et nytt format.
+Formatet på guidene er endret fra PDF til HTML, og i den prosessen er også innhold samkjørt på tvers av guidene.
+Dersom man skulle finne endringer som gjør at standardene endres er dette gjort ved uhell og vi ber om at man melder til inn til oss for retting.
+
+
 === EHF Faktura og kreditnota 2.0.7 [[faktura-og-kreditnota]]
 
 include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.7.adoc[]
@@ -21,12 +26,22 @@ include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.7.adoc[]
 include::../../catalogue/1.0/no/endringslogg/{release}-1.0.5.adoc[]
 
 
+=== EHF Ordreprosess 1.0.5 [[ordreprosess]]
+
+include::../../ordering/1.0/no/endringslogg/{release}-1.0.5.adoc[]
+
+
 === EHF Pakkseddel 1.0.4 [[pakkseddel]]
 
 include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.4.adoc[]
 
 
 == English [[english]]
+
+This release focuses on converting our implementation guides to a new format.
+Format is changed from PDF to HTML, and during the process are also content align between the guides.
+Converting of guides is not intended to change the standards in any way, please notify if you find that this has happened by accident.
+
 
 === EHF Invoice and Creditnote 2.0.7 [[invoice-and-creditnote]]
 
@@ -36,6 +51,11 @@ include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.7.adoc[]
 === EHF Catalogue 1.0.5 [[catalogue]]
 
 include::../../catalogue/1.0/en/changelog/{release}-1.0.5.adoc[]
+
+
+=== EHF Ordering 1.0.5 [[ordering]]
+
+include::../../ordering/1.0/en/changelog/{release}-1.0.5.adoc[]
 
 
 === EHF Despatch Advice 1.0.4 [[despatch-advice]]

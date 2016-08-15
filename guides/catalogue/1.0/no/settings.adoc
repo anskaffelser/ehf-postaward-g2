@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Katalog
 
-:date-review: tentativt 15. august 2016
-:date-release: tentativt 15. september 2016
-:date-mandatory: tentativt 15. september 2016
+:date-review: 15. august 2016
+:date-release: 15. september 2016
+:date-mandatory: 15. september 2016
