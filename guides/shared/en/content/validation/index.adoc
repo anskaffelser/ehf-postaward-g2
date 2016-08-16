@@ -14,6 +14,10 @@ include::dynamic-validation.adoc[]
 
 = Validation Rules
 
+:leveloffset: +1
+include::../../../../{cwd}/validering/validation-rules.adoc[]
+:leveloffset: -1
+
 include::validation-service.adoc[]
 
 :leveloffset: -1

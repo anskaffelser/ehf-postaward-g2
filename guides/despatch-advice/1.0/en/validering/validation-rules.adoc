@@ -1,0 +1,9 @@
+= Norwegian Rules for Despatch Advice
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T16.xsl.adoc[]
+|====

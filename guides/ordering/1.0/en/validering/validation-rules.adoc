@@ -1,0 +1,19 @@
+= Norwegian Rules for Order
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T01.xsl.adoc[]
+|====
+
+= Norwegian Rules for Order Response
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T76.xsl.adoc[]
+|====

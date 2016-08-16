@@ -1,0 +1,19 @@
+= Norwegian Rules for Catalogue
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+|====
+
+= Norwegian Rules for Catalogue Response
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T58.xsl.adoc[]
+|====

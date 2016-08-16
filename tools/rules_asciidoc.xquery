@@ -23,4 +23,4 @@ let $tekst := $x/text()
 
 return
 
-    concat(".3+| ", $RuleId, " *(", $flag , ")* | *", $rule, "* | ",  $assert, " | ", $tekst, "&#10;")
+    concat(".3+| ", $RuleId, " *(", $flag , ")* | *", $tekst, "* | ",  $rule, " | ", $assert, "&#10;")
