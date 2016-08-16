@@ -6,3 +6,4 @@ include::../../settings.adoc[]
 :status: {status}
 
 :shared-dir: ../../../shared/{lang}
+:cwd: ordering/1.0/{lang}

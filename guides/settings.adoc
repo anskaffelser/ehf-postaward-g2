@@ -3,10 +3,10 @@
 :release: 2016-09-15
 
 // Translation
-ifeval::["{lang}" == "no"]
-include::shared/no/translation.adoc[]
-endif::[]
+include::shared/{lang}/translation.adoc[]
 
+// Folders
+:rules-dir: /tmp/rules
 
 // Difi
 :link-github: https://github.com/difi/vefa-validator-conf
