@@ -18,11 +18,12 @@
             <pattern>
                 <xsl:for-each select="xsl:template">
                     <xsl:if test="starts-with(@priority, '1') and starts-with(@mode, 'M')">
-                        <rule context="{@match}">
+			<xsl:variable name="context" select="replace(@match, '^\s+|\s+$', '')" />
+                        <rule context="{$context}">
                             <xsl:for-each select="xsl:choose">
-                                <xsl:variable name="assert" select="replace(replace(replace(replace(xsl:when/@test, '    ', ' '), '   ', ' '), '  ', ' '), '  ', ' ')" />
+                                <xsl:variable name="assert" select="replace(replace(replace(replace(replace(xsl:when/@test, '    ', ' '), '   ', ' '), '  ', ' '), '  ', ' '), '^\s+|\s+$', '')" />
                                 <xsl:variable name="identifier" select="substring-after(substring-before(xsl:otherwise/svrl:failed-assert/svrl:text,']-'),'[')" />
-                                <xsl:variable name="message" select="substring-after(xsl:otherwise/svrl:failed-assert/svrl:text,']-')" />
+                                <xsl:variable name="message" select="replace(substring-after(xsl:otherwise/svrl:failed-assert/svrl:text,']-'), '^\s+|\s+$', '')" />
                                 <xsl:variable name="flag" select="xsl:otherwise/svrl:failed-assert/xsl:attribute[@name = 'flag']" />
 
                                 <assert id="{$identifier}" test="{$assert}" flag="{$flag}"><xsl:value-of select="$message" /></assert>
