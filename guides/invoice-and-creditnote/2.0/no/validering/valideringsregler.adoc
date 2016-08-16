@@ -1,25 +1,21 @@
 = Norske valideringsregler for faktura
 
-[cols="5", options="header"]
+[cols="1,4", options="header"]
 |====
-|RuleID
-|Rule
-|Flag
-|Test
-|Message
+|Regel
+|Melding/Kontekst/Test
+
 include::{rules-dir}/NOGOV-UBL-T10.xsl.adoc[]
 include::{rules-dir}/NONAT-UBL-T10.xsl.adoc[]
 |====
 
 = Norske valideringsregler for kreditnota
 
-[cols="5", options="header"]
+[cols="1,4", options="header"]
 |====
-|RuleID
-|Rule
-|Flag
-|Test
-|Message
+|Regel
+|Melding/Kontekst/Test
+
 include::{rules-dir}/NOGOV-UBL-T14.xsl.adoc[]
 include::{rules-dir}/NONAT-UBL-T14.xsl.adoc[]
 |====

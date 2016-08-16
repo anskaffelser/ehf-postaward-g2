@@ -22,7 +22,5 @@ let $assert := string($x/@test)
 let $tekst := $x/text()
 
 return
-    
-    concat("| ", $RuleId, " | ", $rule, " | ", $flag, " | ",  $assert, " | ", $tekst, "&#10;")
 
-
+    concat(".3+| ", $RuleId, " *(", $flag , ")* | *", $rule, "* | ",  $assert, " | ", $tekst, "&#10;")

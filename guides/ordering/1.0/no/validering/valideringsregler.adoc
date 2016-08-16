@@ -1,0 +1,19 @@
+= Norske valideringsregler for ordre
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T01.xsl.adoc[]
+|====
+
+= Norske valideringsregler for ordrebekreftelse
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T76.xsl.adoc[]
+|====

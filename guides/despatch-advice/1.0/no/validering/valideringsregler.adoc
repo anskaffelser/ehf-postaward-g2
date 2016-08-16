@@ -1,0 +1,9 @@
+= Norske valideringsregler for pakkseddel
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T16.xsl.adoc[]
+|====
