@@ -21,9 +21,8 @@ include::../{shared-dir}/content/appendix/codelist.adoc[]
 
 // UBL 2.1
 include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
-* link:{link-oasis-ubl-21-xsd}UBL-Order-2.1.xsd[UBL Order 2.1]
-* link:{link-oasis-ubl-21-xsd}UBL-OrderResponse-2.1.xsd[UBL OrderResponse 2.1]
-
+* link:{link-oasis-ubl-21-xsd}UBL-CreditNote-2.1.xsd[UBL CreditNote 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-Invoice-2.1.xsd[UBL Invoice 2.1]
 
 // Schematron
 include::../{shared-dir}/content/appendix/schematron.adoc[]
@@ -31,6 +30,9 @@ include::../{shared-dir}/content/appendix/schematron.adoc[]
 
 // Example files
 include::../{shared-dir}/content/appendix/example-files.adoc[]
+
+* link:files/example/BII05%20T10%gyldig%20kreditnota.xml[Credit Note]
+* link:files/example/BII05%20T10%gyldig%20faktura.xml[Invoice]
 
 
 :leveloffset: -1

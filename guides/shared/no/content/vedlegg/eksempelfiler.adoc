@@ -1,2 +1,4 @@
 [appendix]
 = Eksempelfiler [[vedlegg-eksempelfiler]]
+
+Eksempelfiler er gjort tilgjengelig for å hjelpe utviklere. Denne implementasjonsguiden har følgende filer:

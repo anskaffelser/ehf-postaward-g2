@@ -32,5 +32,8 @@ include::../{shared-dir}/content/vedlegg/schematron.adoc[]
 // Eksempelfiler
 include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
 
+* link:files/example/Eksempelfil%20EHF%20Ordre.xml[Ordre]
+* link:files/example/Eksempelfil%20EHF%20Ordrebekreftelse.xml[Ordrebekreftelse]
+
 
 :leveloffset: -1

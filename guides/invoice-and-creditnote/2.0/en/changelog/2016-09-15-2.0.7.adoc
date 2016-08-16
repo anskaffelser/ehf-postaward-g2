@@ -11,11 +11,11 @@ a| Converting guide to Asciidoctor format.
 * Moving chapter 8 to chapter 7.
 * Moving chapter 9 to chapter 8.
 * Presentations and illustrations are changed due to new format.
-
 | Guide
 
 | link:https://github.com/difi/vefa-validator-conf/issues/151[#151]
 | Changing rule BII2-T10-R034 to trigger WARNING to allow for negative invoices.
 | Validator
-
 |===
+
+Change of NOGOV-T10-R034 and NOGOV-T10-R035 from warning to error announced earlier for this release is moved to version 2.0.8.

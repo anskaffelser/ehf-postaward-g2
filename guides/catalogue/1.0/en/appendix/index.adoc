@@ -32,5 +32,7 @@ include::../{shared-dir}/content/appendix/schematron.adoc[]
 // Example files
 include::../{shared-dir}/content/appendix/example-files.adoc[]
 
+* link:files/example/Example%20file%20EHF%20Catalogue%20Response.xml[Catalogue Response]
+* link:files/example/Example%20file%20EHF%20Catalogue.xml[Catalogue]
 
 :leveloffset: -1

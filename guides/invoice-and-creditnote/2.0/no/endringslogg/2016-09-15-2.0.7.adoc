@@ -16,5 +16,6 @@ a| Guide
 | link:https://github.com/difi/vefa-validator-conf/issues/151[#151]
 | Endre regelen BII2-T10-R034 til å være WARNING for å tillate negativ faktura.
 | Validator
-
 |===
+
+Tidligere annonsert endring av NOGOV-T10-R034 og NOGOV-T10-R035 fra advarsel (warning) til feil (errir) er utsatt til versjon 2.0.8.
