@@ -1,6 +1,6 @@
 = Profiles and Messages
 
-In line with the underlying methodology for the EHF formats (cf. www.cenbii.eu) the electronic messages included in a specific format will be exchanged between the parties as a part of an electronic collaboration process – a profile.
+In line with the underlying methodology for the EHF formats (cf. link:http://www.cenbii.eu/[CEN BII]) the electronic messages included in a specific format will be exchanged between the parties as a part of an electronic collaboration process – a profile.
 
 CEN BII has defined a profile as “A specification of how one or more Business Processes are executed by specifying the business rules governing its business collaborations and the information content (data model) of the electronic business transactions exchanged.”
 

@@ -1,6 +1,6 @@
 = Profiler og meldinger
 
-I tråd med den metodiske tilnærmingen som ligger til grunn for EHF formatene (se www.cenbii.eu) vil de elektroniske meldingene som inngår i et format bli utvekslet mellom de aktuelle aktørene som en del av en elektronisk samhandlingsprosess – en profil.
+I tråd med den metodiske tilnærmingen som ligger til grunn for EHF formatene (se link:http://www.cenbii.eu/[CEN BII]) vil de elektroniske meldingene som inngår i et format bli utvekslet mellom de aktuelle aktørene som en del av en elektronisk samhandlingsprosess – en profil.
 
 En profil er definert som den elektroniske samhandlingsprosess som en aktuell meldingsutveksling er en del av. En profil vil typisk omfatte flere relaterte meldinger som utveksles mellom to parter, men kan i sin enkleste form omfatte utveksling av kun en enkelt melding.
 

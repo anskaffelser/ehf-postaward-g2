@@ -18,4 +18,4 @@ a| Guide
 | Validator
 |===
 
-Tidligere annonsert endring av NOGOV-T10-R034 og NOGOV-T10-R035 fra advarsel (warning) til feil (errir) er utsatt til versjon 2.0.8.
+Tidligere annonsert endring av NOGOV-T10-R034 og NOGOV-T10-R035 fra advarsel (warning) til feil (error) er utsatt til versjon 2.0.8.

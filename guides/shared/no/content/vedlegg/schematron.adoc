@@ -2,6 +2,6 @@
 = Schematron [[appendix-schematron]]
 
 Valideringsfiler basert på link:Schematron[http://www.schematron.com/] er tilgjengelig i vårt link:{link-github}[Github-repoistory].
-Branch "master" inneholder gjeldende versjon og branch "upcoming" inneholder utvikling og høring.
+link:{link-github}/tree/master[Branch "master"] inneholder gjeldende versjon og link:{link-github}/tree/upcoming[branch "upcoming"] inneholder utvikling og høring.
 
 Filer tilgjengeliggjort av Difi er per nå kun tilgjengelig som XSLT-filer basert på Schematron.
