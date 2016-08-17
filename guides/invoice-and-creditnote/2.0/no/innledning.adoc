@@ -7,9 +7,9 @@ include::{shared-dir}/content/innledning/bakgrunn-og-malsetting.adoc[]
 
 *Målgruppen* for dokumentet (heretter omtalt som implementeringsveileder) er både faglig og teknisk personell hos brukere som ønsker å utføre hele eller deler av fakturaprosessen elektronisk. Det vil i praksis si å sende elektronisk faktura og kreditnota. Dokumentet kan også benyttes av systemleverandør, ERP leverandør og meldingsformidlere.
 
-* Kapittel 1 til 5 er rettet mot faglig personell
-* Kapittel 5 til 7 er rettet både mot faglig og teknisk personell
-* Kapittel 8 til 9 (vedlegg) er rettet mot teknisk personell
+* Kapittel 1 til 5 er rettet mot faglig personell.
+* Kapittel 5 til 6 er rettet både mot faglig og teknisk personell.
+* Kapittel 7 til 8 (vedlegg) er rettet mot teknisk personell.
 
 
 == Dokumentstruktur
@@ -22,18 +22,9 @@ Dokumentet er inndelt i følgende deler:
 * Kapittel 4 inneholder definisjoner som er relevant for fakturaformatene.
 * Kapittel 5 beskriver generelle prinsipper og forutsetninger for fakturaformatene.
 * Kapittel 6 gir detaljerte beskriver av sentrale informasjonselementer i fakturaformatene.
-* Kapittel 7 inneholder komplett beskrivelse av informasjonsinnhold i faktura og kreditnota.
-* Kapittel 8 omhandler validering, det vil si kontroll av informasjonsinnhold.
-* Kapittel 9 inneholder følgende vedlegg:
-** Vedlegg 1: Meldingsstruktur
-** Vedlegg 2: Meldingstabell
-** Vedlegg 3: Kodelister
-** Vedlegg 4: UBL 2.1 schema for faktura og kreditnota
-** Vedlegg 5: Schematron filer som benyttes ved validering
-** Vedlegg 6: XML eksempelfiler
-** Vedlegg 7: Veiledning for energibransjen
+* Kapittel 7 omhandler validering, det vil si kontroll av informasjonsinnhold.
+* Kapittel 8 inneholder vedlegg.
 
-Vedlegg 1,2,6 og 7 er separate dokumenter.  Vedlegg 3, 4 og 5 er kun henvisninger til hvor informasjonen finnes på Internett.
 
 == Ikrafttredelse
 
