@@ -1,5 +1,5 @@
+////
 = Profiler og meldinger
-
 De profiler som er aktuelle i forbindelse med EHF Fakturaprosess  er vist i nedenstående tabell.
 
 Kun faktura (bii04)::
@@ -26,3 +26,13 @@ Faktura og kreditnota::
 urn:www.cenbii.eu:profile:bii05:ver2.0
 Faktura , kreditnota og purring::
 urn:www.cenbii.eu:profile:biixy:ver2.0
+////
+
+include::../{shared-dir}/profiles/info.adoc[]
+
+:leveloffset: +1
+include::../{shared-dir}/profiles/04.adoc[]
+include::../{shared-dir}/profiles/05.adoc[]
+include::../{shared-dir}/profiles/xx.adoc[]
+include::../{shared-dir}/profiles/xy.adoc[]
+:leveloffset: -1

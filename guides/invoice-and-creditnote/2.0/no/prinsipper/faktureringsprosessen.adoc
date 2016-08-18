@@ -3,6 +3,7 @@
 Fakturaprosessen omfatter opprettelse og oversendelse av faktura og kreditnota fra leverandør til kunde, samt mottak og behandling hos kunde.
 
 Fakturaprosessen kan beskrives ved følgende arbeidsflyt:
+
 .	En leverandør utsteder og sender en EHF Faktura til en kunde.  Fakturaen refererer til en eller flere ordre samt en spesifikasjon av leverte varer og tjenester. En faktura kan også referere til en kontrakt eller rammeavtale. Fakturaen kan inneholde artikler (varer eller tjenester) med artikkelnummer eller artikler med fritekstbeskrivelse.
 .	Kunden mottar fakturaen og behandler denne i sitt fakturakontrollsystem.  Resultatet av fakturakontrollen vil være en av følgende:
 ..	Kunden aksepterer fakturaen i sin helhet, bokfører den i regnskapet og sender den videre til betaling.

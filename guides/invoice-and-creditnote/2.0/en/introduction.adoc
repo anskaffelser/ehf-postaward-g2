@@ -8,8 +8,8 @@ include::{shared-dir}/content/introduction/background-and-objective.adoc[]
 *The target audience* for this implementation guide is both accounting and IT professionals in organizations aiming at performing the invoicing process completely or partially electronic. That means issuing an invoice, a credit note and a reminder. This document may also benefit system suppliers, ERP suppliers and message brokers.
 
 *	Accounting professionals are advised to read chapters 1 through 5.
-*	Chapters 5 through 7 are for both accounting professionals as technical implementers
-*	IT professionals may concentrate on chapters 6 through 9.
+*	Chapters 5 through 6 are for both accounting professionals as technical implementers
+*	IT professionals may concentrate on chapters 7 through 7.
 
 
 == Document Structure
@@ -22,17 +22,8 @@ This document consists of the following chapters and contents:
 *	Chapter 4 links to definitions relevant to EHF formats.
 *	Chapter 5 links to general principles and conditions for the formats.
 *	Chapter 6 describes in detail central information elements.
-*	Chapter 7 gives the complete information contents of the invoice and the credit note formats.
-*	Chapter 8 deals with validation.
-*	Chapter 9 embraces these appendices:
-** Appendix 1: Message structure
-** Appendix 2: Message matrix
-** Appendix 3: Code lists
-** Appendix 4: Link to UBL 2.0 schema for invoice and credit note
-** Appendix 5: Link to Schematron files used in validation
-** Appendix 6: XML example files
-
-Appendices 1, 2 and 6 are separate documents.  Appendices 3, 4 and 5 serve as links to information on the internet.
+*	Chapter 7 deals with validation.
+*	Chapter 8 embraces appendices.
 
 
 ## Mandatory Use
