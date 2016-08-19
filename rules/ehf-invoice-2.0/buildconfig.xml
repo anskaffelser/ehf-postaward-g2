@@ -13,8 +13,8 @@
         <inherit>ehf-t10-stylesheet-2.0</inherit>
         <file path="xsl/BIIRULES-UBL-T10.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T10.xsl" />
-        <file path="xsl/NONAT-UBL-T10.xsl" />
-        <file path="xsl/NOGOV-UBL-T10.xsl" />
+        <file path="xsl/NONAT-UBL-T10.xsl" infoUrl="/ehf/rule/ehf-invoice-2.0/{}/" />
+        <file path="xsl/NOGOV-UBL-T10.xsl" infoUrl="/ehf/rule/ehf-invoice-2.0/{}/" />
         <rule identifier="BII2-T10-R025" action="suppress" />
         <rule identifier="BII2-T10-R035" action="suppress" />
 		<rule identifier="BII2-T10-R034" action="setWarning" />
