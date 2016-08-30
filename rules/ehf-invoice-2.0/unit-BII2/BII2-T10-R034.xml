@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify price higher than zero does not trigger warning.</description>
+			<description>Verify price higher than zero does not trigger error.</description>
 			<success>BII2-T10-R034</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -22,7 +22,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify price at zero does not trigger warning.</description>
+			<description>Verify price at zero does not trigger error.</description>
 			<success>BII2-T10-R034</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -39,8 +39,8 @@
 	</test>
 	<test>
 		<assert>
-			<description>Verify price below zero does trigger warning.</description>
-			<warning>BII2-T10-R034</warning>
+			<description>Verify price below zero does trigger error.</description>
+			<error>BII2-T10-R034</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
