@@ -1,33 +1,3 @@
-////
-= Profiler og meldinger
-De profiler som er aktuelle i forbindelse med EHF Fakturaprosess  er vist i nedenstående tabell.
-
-Kun faktura (bii04)::
-* Faktura
-Kun kreditnota (biixx)::
-* Kreditnota
-Faktura og kreditnota (bii05)::
-* Faktura
-* Kreditnota
-Faktura, kreditnota og purring (biixy)::
-* Faktura
-* Kreditnota
-* Purring
-
-== ProfileID
-
-Identifiserer den prosess det aktuelle forretningsdokumentet er en del av. EHF benytter identifikasjonssystem i henhold til BII, med tillegg av to norske profiler (biixx og biixy):
-
-Kun faktura::
-urn:www.cenbii.eu:profile:bii04:ver2.0
-Kun kreditnota::
-urn:www.cenbii.eu:profile:biixx:ver2.0
-Faktura og kreditnota::
-urn:www.cenbii.eu:profile:bii05:ver2.0
-Faktura , kreditnota og purring::
-urn:www.cenbii.eu:profile:biixy:ver2.0
-////
-
 include::../{shared-dir}/profiles/info.adoc[]
 
 :leveloffset: +1

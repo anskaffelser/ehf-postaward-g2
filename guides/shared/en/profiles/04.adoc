@@ -1,0 +1,15 @@
+= Profile 04 - Invoice Only
+
+ProfileID::
+urn:www.cenbii.eu:profile:bii04:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Role
+
+| Invoice
+| urn:www.cenbii.eu:transaction:biitrns010:ver2.0 :extended:urn:www.peppol.eu:bis:peppol4a:ver2.0 :extended:urn:www.difi.no:ehf:faktura:ver2.0
+| Contracting Authority
+|===

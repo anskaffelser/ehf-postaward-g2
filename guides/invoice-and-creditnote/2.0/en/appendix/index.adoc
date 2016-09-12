@@ -32,7 +32,7 @@ include::../{shared-dir}/content/appendix/schematron.adoc[]
 include::../{shared-dir}/content/appendix/example-files.adoc[]
 
 * link:files/example/BII05%20T10%20gyldig%20kreditnota.xml[Credit Note]
-* link:files/example/BII05%20T10%20gyldig%20faktura.xml[Invoice]
+* link:files/example/BII05%20T14%20gyldig%20faktura.xml[Invoice]
 
 
 :leveloffset: -1
