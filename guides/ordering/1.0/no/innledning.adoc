@@ -9,7 +9,7 @@ include::{shared-dir}/content/innledning/bakgrunn-og-malsetting.adoc[]
 *Målgruppen* for dokumentet (heretter omtalt som implementeringsveileder) er både faglig og teknisk personell hos brukere som ønsker å utføre hele eller deler av ordreprosessen elektronisk. Det vil i praksis si å sende og motta elektronisk ordre og ordrebekreftelse. Dokumentet kan også benyttes av systemleverandør, ERP leverandør og meldingsformidlere.
 
 * Kapittel 1 til 5 er rettet mot faglig personell
-* Kapittel 6 til 9 (vedlegg) er rettet mot teknisk personell
+* Kapittel 6 til 8 (vedlegg) er rettet mot teknisk personell
 
 
 == Dokumentstruktur
@@ -21,17 +21,8 @@ Dokumentet er inndelt i følgende deler:
 * Kapittel 4 inneholder definisjoner som er relevant for ordreformatene.
 * Kapittel 5 beskriver generelle prinsipper og forutsetninger for ordreformatene.
 * Kapittel 6 gir en detaljerte beskriver av sentrale informasjonselementer i ordreformatene.
-* Kapittel 7 inneholder komplett beskrivelse av informasjonsinnhold i ordreformatene.
-* Kapittel 8 omhandler validering.
-* Kapittel 9 inneholder følgende vedlegg som separate dokumenter:
-** Vedlegg 1: Meldingsstruktur
-** Vedlegg 2: Meldingstabell
-** Vedlegg 3: Kodelister
-** Vedlegg 4: UBL 2.1 Schema for Ordre og Ordrebekreftelse
-** Vedlegg 4: Schematron filer
-** Vedlegg 6: XML eksempelfiler
-
-Vedlegg 1,2,6 og 7 er separate dokumenter.  Vedlegg 3, 4 og 5 er kun henvisninger til hvor informasjonen finnes på Internett.
+* Kapittel 7 omhandler validering.
+* Kapittel 8 inneholder vedlegg som separate dokumenter.
 
 
 == Ikrafttredelse
