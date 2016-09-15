@@ -5,8 +5,10 @@
 |Regel
 |Melding/Kontekst/Test
 
-include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+//include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
 |====
+
+Uthenting av regler fungerer ikke som den skal. Forventet rettet i neste release.
 
 = Norske valideringsregler for katalogbekreftelse
 

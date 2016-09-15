@@ -1,9 +1,9 @@
 = Profiles and messgaes [[profiles]]
 
-Alle meldinger har ProfileID og CustomizationID. ProfileID identifiserer forretningsprosessen meldingen er en del, CustomizationID identifiserer hvilken dokumenttype meldingen er og hvilke regler meldingen etterlever.
+All messages contains ProfileID and CustomizationID. ProfileID identifies what business process a given message is part of, and CustomizationID identifies the kind of message and the rules applied.
 
-Profiler er knyttet til en forretningsprosess og en eller flere dokumenttyper. Gyldige instansdokumenter må ha både ProfileID og CustomizationID fra samme profil.
+Profiles are connected to one business process, and may contain multiple document types. Valid document instances must contain corresponding ProfileID and CustomizationID.
 
-I oversikten under er hver dokumenttype knyttet til *mottakers* rolle når instansdokumenter sendes. Ved registrering i ELMA er det hvilke dokumenttyper mottaker kan motta som registreres.
+The listing below are related document types connected to the role of *receiver* in the conversation. Registration in ELMA describes the receivers capabilities.
 
-IMPORTANT: CustomizationID er en streng uten mellomrom. Under er det lagt til mellomrom i CustomizationID for å lette lesbarheten. *Husk å fjerne mellomrom før bruk.*
+IMPORTANT: CustomizationID is a string without spaces. The list below contains spaces in CustomizationID to make them easier to read. *Make sure to remove any spaces before use.*
