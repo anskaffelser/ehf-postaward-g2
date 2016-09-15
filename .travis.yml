@@ -4,4 +4,5 @@ services:
   - docker
 
 script:
-  - docker run -it -v $(pwd):/src difi/vefa-validator-build
+  - docker run --rm -it -v $(pwd):/documents -e "pdf=false" difi/asciidoctor
+  - docker run --rm -it -v $(pwd):/src difi/vefa-validator build -x -t /src

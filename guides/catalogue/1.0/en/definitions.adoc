@@ -1,0 +1,26 @@
+= Definitions
+
+Catalogue::
+A document describing the properties of products and services.
+
+Supplier::
+A person or company delivering products or services.
+
+Buyer::
+A person or company buying a product or service at a set price.
+
+Catalogue provider::
+A person or company collecting catalogue information and sending the catalogue.
+
+Catalogue receiver::
+A person or company that is responsible for the reception of the catalogue.
+
+UBL::
+UBL (Universal Business Language) is a collection of XML-formats (XML Schema) for the exchange of electronic documents such as Catalogue, Order and Invoice.
+
+CEN BII::
+CEN BII (Business Interoperability Interfaces) is a subset of UBL containing documents and content that is required for electronic collaboration in the European public sector. +
+Does not include separate XML Schemas.
+
+Schematron validation::
+Validation of a message towards business requirements. Additional to the syntax check against XML Schema.

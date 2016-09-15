@@ -1,0 +1,155 @@
+= Rabatter og gebyrer, generelle regler
+
+. Flere rabatter og gebyrer kan oppgis på dokumentnivå og linjenivå. Elementet ChargeIndicator indikerer om forekomsten i AllowanceCharge gjelder rabatt (false) eller gebyr (true).
+. MVA håndtering av rabatter og gebyrer legges inn i AllowanceCharge/TaxCategory med underliggende elementer på dokumentnivå, ikke på  linjenivå og  pris.  Dette fordi rabatter og gebyrer knyttet til linje forutsetter bruk av samme MVA kode som linjen.  Rabatter og gebyrer knyttet til pris er kun ment som informasjon og inngår ikke i andre elementer.  Dermed skal heller ikke MVA for rabatter og gebyrer knyttet til pris beregnes.
+. Totale rabatter og gebyrer på dokumentnivå summeres i henholdsvis AllowanceTotal Amount og ChargeTotalAmount (Ref. pkt.  6.2.1.1.3).
+. Totale rabatter og gebyrer på linjenivå må tas hensyn til (trekkes fra/legges til) ved beregning av linjetotal.  Disse rabattene og gebyrene skal ikke summeres inn i elementene som gjelder dokumentnivå.
+. Rabatter og gebyrer relatert til pris skal ikke inngå i beregning av andre elementer.
+. Rabatter og gebyrer relatert til pris kan inneholde både beløp, grunnlagsbeløp (AllowanceCharge/BaseAmount)  og multiplikator (AllowanceCharge/MultiplierFactorNumeric).
+
+== Faktura
+
+EHF Faktura formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer:
+
+. På dokumentnivå som gjelder hele fakturaen og er med i beregningen av fakturasummen.
+. På linjenivå som gjelder fakturalinjen og er med i beregningen av fakturalinjebeløpet.
+. På linjenivå relatert til prisen.  Dette er kun ment for å synliggjøre overfor kjøper  hvordan prisen er fremkommet.  Er i tillegg relevant dersom selger eller kjøper vil bokføre rabatten eller gebyret i sitt regnskap.  Selve prisen i formatet skal alltid være  pris etter at eventuelle rabatter/gebyrer knyttet til pris er trukket fra/lagt til.
+
+=== Eksempel
+
+* Netto fakturabeløp eks. mva: kr. 3450.  2 fakturalinjer:
+** Linje 1:  10 stk av vare A.  Kr. 100 pr. stk og 10% rabatt.
+** Linje 2:  15 stk av vare B.  Kr. 200 pr. stk og 15% rabatt.
+*** Prisen på kr. 200 er inkludert kampanjerabatt på 20%  for å illustrere bruk av AllowanceCharge knyttet til pris.
+* Totalrabatt: 2 %
+* Fakturagebyr: kr. 75
+* Frakt: kr. 100
+
+==== XML for rabatt og gebyr på dokumentnivå
+
+[source,xml]
+----
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Fakturagebyr</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">75.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>2% Totalrabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">69.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+----
+
+==== XML for merverdiavgift på dokumentnivå
+
+[source,xml]
+----
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">3556.00</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+</cac:TaxTotal>
+----
+
+==== XML for totaler på dokumentnivå
+
+[source,xml]
+----
+<cac:LegalMonetaryTotal>
+  <cbc:LineExtensionAmount currencyID="NOK">3450.00</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="NOK">3556.00</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="NOK">4445.00</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="NOK">69.00</cbc:AllowanceTotalAmount>
+  <cbc:ChargeTotalAmount currencyID="NOK">175.00</cbc:ChargeTotalAmount>
+  <cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
+  <cbc:PayableAmount currencyID="NOK">4445.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+----
+
+==== XML for rabatter på linjenivå
+
+[source,xml]
+.Linje 1
+----
+<cbc:ID>1</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">10.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">900.00</cbc:LineExtensionAmount>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>10% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
+</cac:AllowanceCharge>
+----
+
+[source,xml]
+.Linje 2
+----
+<cbc:ID>2</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">2550.00</cbc:LineExtensionAmount>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>15% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">450.00</cbc:Amount>
+</cac:AllowanceCharge>
+----
+
+==== XML for rabatt knyttet til pris for fakturalinje 2
+
+[source,xml]
+----
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">200.00</cbc:PriceAmount>
+  <cac:AllowanceCharge>
+    <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReason>20% Kampanjerabatt</cbc:AllowanceChargeReason>
+    <cbc:MultiplierFactorNumeric>0.200</cbc:MultiplierFactorNumeric>
+    <cbc:Amount currencyID="NOK">50.00</cbc:Amount>
+    <cbc:BaseAmount currencyID="NOK">250.00</cbc:BaseAmount>
+  </cac:AllowanceCharge>
+</cac:Price>
+----
+
+== Kreditnota
+
+EHF Kreditnota-formatet har mulighet for rabatter og gebyrer relatert til 3 nivåer for kreditnota:
+
+. På dokumentnivå. Identisk med faktura (ref  kapittel 6.2.1.1.1)
+. På linjenivå. Identisk med faktura (ref kapittel 6.2.1.1.2).
+. På linjenivå relatert til prisen. Identisk med faktura (ref kapittel 6.2.1.1.3).

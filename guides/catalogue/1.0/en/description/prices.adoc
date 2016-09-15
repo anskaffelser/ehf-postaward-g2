@@ -1,0 +1,50 @@
+= Prices
+
+All prices in the format are related to the article or service within this Catalogue. The following prices can be stated:
+
+* Net price including all discounts and charges but excluded Vat.
+* Item comparison price defining price for a certain quantity. Used for comparing prices for different articles with various quantities.
+* Conditional price related to a specific location or a certain order quantity.
+* Campaign price.
+
+Be aware that no Gross prices can be sent in the format (price before discount and charges). All prices must have Currency as an attribute. Currency shall be according to Code list.
+
+Example of Prices in EHF Catalogue:
+
+[source]
+.Net Price
+----
+<cac:RequiredItemLocationQuantity>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="NOK">100.00</cbc:PriceAmount>
+    <cac:ValidityPeriod>
+      <cbc:StartDate>2012-04-26</cbc:StartDate>
+      <cbc:EndDate>2012-05-26</cbc:EndDate>
+    </cac:ValidityPeriod>
+  </cac:Price>
+<cac:RequiredItemLocationQuantity>
+----
+
+[source]
+.Comparition Price
+----
+<cac:ItemComparision>
+  <cbc:PriceAmount currencyID="NOK">100.00</cbc:PriceAmount>
+  <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:Quantity>
+</cac:ItemComparision>
+----
+
+[source]
+.Conditional Price
+----
+<cac:RequiredItemLocationQuantity>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="NOK">75.00</cbc:PriceAmount>
+    <cbc:BaseQuantity unitCode="EA" unitCodeListID="UNECERec20">100</cbc:BaseQuantity>
+    <cac:ValidityPeriod>
+      <cbc:StartDate>2012-04-26</cbc:StartDate>
+      <cbc:EndDate>2012-05-26</cbc:EndDate>
+    </cac:ValidityPeriod>
+  </cac:Price>
+<cac:RequiredItemLocationQuantity>
+----

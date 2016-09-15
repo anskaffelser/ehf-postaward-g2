@@ -1,0 +1,17 @@
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/146[#146]
+a| Converting guide to Asciidoctor format.
+
+* Aligning chapter 1 to other guides.
+* Aligning chapter 3 to other guides.
+* Removing chapter 7 in favor of GEFEG presentation found on link:https://vefa.difi.no/[VEFA].
+* Moving chapter 8 to chapter 7.
+* Moving chapter 9 to chapter 8.
+* Presentations and illustrations are changed due to new format.
+
+| Guide
+
+|===

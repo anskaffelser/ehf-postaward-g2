@@ -1,0 +1,7 @@
+[appendix]
+= Schematron [[appendix-schematron]]
+
+Validation files based on link:http://www.schematron.com/[Schematron] may be found in our link:{link-github}[Github repoistory].
+link:{link-github}/tree/master[Branch "master"] is used for the current version of resources and link:{link-github}/tree/upcoming[branch "upcoming"] is for development and review.
+
+Files provided by Difi is currently only available as XSLT files based on Schematron.

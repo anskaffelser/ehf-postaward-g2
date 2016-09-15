@@ -1,0 +1,15 @@
+= Profile XX - Credit Note Only
+
+ProfileID::
+urn:www.cenbii.eu:profile:biixx:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Role
+
+| Credit Note
+| urn:www.cenbii.eu:transaction:biitrns014:ver2.0 :extended:urn:www.cenbii.eu:profile:biixx:ver2.0 :extended:urn:www.difi.no:ehf:kreditnota:ver2.0
+| Contracting Authority
+|===

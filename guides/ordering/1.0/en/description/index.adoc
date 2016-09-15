@@ -1,0 +1,36 @@
+= Description of Selected Parts
+
+There are no formal requirements to order content according to Norwegian regulations. The content requirements are therefore based on the following:
+
+* Information content in the existing Procurement Platform (EPP)
+* UBL 2.1
+* CEN BII2
+
+The format will also be verified against requirements in certain areas of the Norwegian private sector.
+
+Chapter 6.1 and 6.2 describe selected areas of the format and specifically information elements being important for use in the Norwegian market.
+Part of the content of chapter 6.1 is relevant for both messages while chapter 6.2 contains information relevant only for Order Response.
+
+Complete Information content is defined in chapter 7.
+
+:leveloffset: +1
+
+include::roles-and-actors.adoc[]
+
+include::product-identification.adoc[]
+
+include::product-name-and-description.adoc[]
+
+include::quantities-and-units.adoc[]
+
+include::prices.adoc[]
+
+include::attachments.adoc[]
+
+include::labels.adoc[]
+
+include::additional-item-properties.adoc[]
+
+include::order-response.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,15 @@
+== Background and Objective
+
+The government white paper labeled “St.Meld. nr. 36 (2008-2009) Det gode innkjøp” (The good procurement), states among other things:
+
+[quote]
+It’s the Government’s opinion that increased use of electronic solutions is important to improve and increase the efficiency of public procurement. The use of electronic solutions may reduce time spent on public procurement, increase the competition and arrange for purchases to be more transparent and easier to re-examine. By spending less time and money on procurement, resources will be available for both modernizing the public sector and more welfare.
+The goal for introducing electronic solutions is to contribute to a better, simpler and more secure procurement.
+
+The previous «Ministry of Government Administration, Reform and Church Affairs» (FAD) considered use of open standards as a vital means to build a well-functioning public administration, with good internal collaboration and a high level of service for both inhabitants and businesses.
+
+[quote]
+.Definition of link:http://no.wikipedia.org/wiki/%C3%85pen_standard[open standards]:
+An open standard is characterized by its reputation and will be maintained by a non-commercial organization, and the continuing development is based on decision processes open to every interested party. The standard is published and the documentation is available, either free of charge or for a small, insignificant fee. Anyone must be allowed to copy, distribute and use the standard free of charge or for a small, insignificant fee. The intellectual rights related to the standard (e.g. patents) are irrevocably available, without any royalties. There is no reservation regarding re-use of the standard.
+
+*The purpose* of this document is to describe a common format for invoice messages in the Norwegian market, and to facilitate an efficient implementation and increased use of electronic collaboration regarding the invoicing process based on this format.

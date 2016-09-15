@@ -1,0 +1,28 @@
+= Beskrivelse av utvalgte deler
+
+Det fins ingen formelle krav til innholdet i en ordre i forhold til norsk regelverk. Innholdskravene er derfor basert på gjeldende praksis og det som er angitt i UBL 2.1 og i profil CEN BII28 Ordering.  I tillegg vil krav til innhold verifiseres mot det som brukes i utvalgte deler av privat sektor.  Videre er innholdskravet også sett i sammenheng med innhold i EHF Faktura og EHF Katalog.
+
+Kapittel 6.1 og 6.2 beskriver utvalgte deler av EHF Ordre og Ordrebekreftelse. Det som er beskrevet er innhold som er påkrevd eller som er spesielt viktige i forhold til bruk i det norske markedet. En del av innholdet i kapittel 6.1 vil være relevant for begge meldingene. I kapittel 6.2 er det kun med elementer som gjelder for Ordrebekreftelse.
+
+
+:leveloffset: +1
+
+include::roller-og-aktorer.adoc[]
+
+include::produktidentifisering.adoc[]
+
+include::produktnavn-og-beskrivelse.adoc[]
+
+include::kvantum-og-bestillingsmengder.adoc[]
+
+include::priser.adoc[]
+
+include::vedleggshandtering.adoc[]
+
+include::merking.adoc[]
+
+include::tilleggsegenskaper.adoc[]
+
+include::ordrebekreftelse.adoc[]
+
+:leveloffset: -1

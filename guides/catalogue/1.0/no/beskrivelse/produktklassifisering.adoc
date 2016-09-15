@@ -1,0 +1,13 @@
+= Produktklassifisering
+
+Produktklassifisering kan enten angis i forhold til bransjedefinerte klassifiseringssystemer eller i henhold til regulatoriske krav. Type klassifisering skal angis i attributtet listID.
+
+Klassifisering av produktet i henhold til et aktuelt klassifiseringssystem som f.eks. UNSPSC som er påkrevd i det offentlige. Spesifiseres i feltet ItemClassificationCode.
+
+[source]
+.Eksempel på utfylling i EHF katalog.
+----
+<cac:CommodityClassification>
+  <cbc:ItemClassificationCode listID="UNSPSC">43212105</cbc:ItemClassificationCode>
+</cac:CommodityClassification>
+----

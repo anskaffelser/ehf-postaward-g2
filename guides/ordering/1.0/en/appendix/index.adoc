@@ -1,0 +1,39 @@
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/ehf_order_structure_table.pdf[Structure Table for Ordre]
+* link:files/ehf_order_response_structure_table.pdf[Structure Table for Order Response]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/ehf_order_message_table.pdf[Message Table for Order]
+* link:files/ehf_order_response_message_table.pdf[Message Table for Order Response]
+
+
+// Codelist
+include::../{shared-dir}/content/appendix/codelist.adoc[]
+
+
+// UBL 2.1
+include::../{shared-dir}/content/appendix/ubl-2.1.adoc[]
+* link:{link-oasis-ubl-21-xsd}UBL-Order-2.1.xsd[UBL Order 2.1]
+* link:{link-oasis-ubl-21-xsd}UBL-OrderResponse-2.1.xsd[UBL OrderResponse 2.1]
+
+
+// Schematron
+include::../{shared-dir}/content/appendix/schematron.adoc[]
+
+
+// Example files
+include::../{shared-dir}/content/appendix/example-files.adoc[]
+
+* link:files/example/Eksempelfil%20EHF%20Ordre.xml[Order]
+* link:files/example/Eksempelfil%20EHF%20Ordrebekreftelse.xml[Order Response]
+
+
+:leveloffset: -1

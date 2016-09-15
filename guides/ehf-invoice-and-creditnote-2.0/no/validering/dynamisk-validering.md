@@ -1,5 +1,0 @@
-# Dynamisk validering
-
-Kombinasjonen av ProfileID og CustomizationID i et XML instansdokument definerer hvilke valideringsregler som gjelder for meldingen.  
-
-CustomizationID kan utvides med flere element for bransjespesikke og firmaspesifikke valideringsregler.

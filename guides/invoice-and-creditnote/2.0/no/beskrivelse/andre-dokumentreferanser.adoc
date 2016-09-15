@@ -1,0 +1,34 @@
+= Bruk av andre dokumentreferanser
+
+Det er ofte et behov å sende annen referanseinformasjon som ikke finnes direkte i EHF formatet. Til det formålet kan feltet AdditionalDocumentReference benyttes. Dette er et valgfritt felt som kan repeteres mange ganger. For eksempel kan det brukes til angivelse av pakkseddelnummer.
+
+
+[source,xml]
+.Eksempel, vedlegg
+----
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Doc1</cbc:ID>
+  <cbc:DocumentType>Timesheet</cbc:DocumentType>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>http://www.suppliersite.eu/sheet001.html</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Doc2</cbc:ID>
+  <cbc:DocumentType>Drawing</cbc:DocumentType>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">mimecode</cbc:EmbeddedDocumentBinaryObject>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+----
+
+[source,xml]
+.Eksempel, referanse til abonnement
+----
+<cac:AdditionalDocumentReference>
+  <cbc:ID>1442316</cbc:ID>
+  <cbc:DocumentType>Abonnement</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+----

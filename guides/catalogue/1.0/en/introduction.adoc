@@ -1,0 +1,28 @@
+[preface]
+= Introduction
+
+include::{shared-dir}/content/introduction/background-and-objective.adoc[]
+
+== Target Audience
+
+*The target audience* for this Implementation Guide (hereafter called IG) is both technical and non-technical personnel involved in the exchange of catalogue messages.  The IG may also be used by system providers and message brokers.
+* Chapter 1 to 5 are directed to non-technical personnel
+* Chapter 6 to 8 (attachments) are directed to technical personnel
+
+
+== Document Structure
+
+The document consists of the following parts:
+* Chapter 1 outlines the background and objective for the document.
+* Chapter 2 contains document history.
+* Chapter 3 describes the principles and conditions for EHF.
+* Chapter 4 contains definitions.
+* Chapter 5 describes the ordering process.
+* Chapter 6 describes selected parts of the formats.
+* Chapter 7 describes the validation of the messages.
+* Chapter 8 contains the references to separate documents.
+
+
+## Mandatory Use
+
+This version is valid from {date-mandatory}, and is mandatory from the same date.

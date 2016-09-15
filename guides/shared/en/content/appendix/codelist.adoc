@@ -1,0 +1,6 @@
+[appendix]
+= Codelists [[appendix-codelists]]
+
+To ensure consistency and quality of the code lists used in EHF, a decision has been made to move these to a website. This site contains all code lists used in all the different EHF guides, and you find it here:
+
+link:http://www.anskaffelser.no/temaer-elektronisk-handel/ehf-formater-innhold/kodelister[]

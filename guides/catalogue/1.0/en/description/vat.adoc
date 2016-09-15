@@ -1,0 +1,18 @@
+= VAT
+
+VAT-information is optional in EHF Catalogue and should be sent as a Category defining the VAT-percent. Catalogue receivers may require VAT-information in the Catalogues based on user or system requirements. If so this must be stated in the Purchasing contract or the Collaboration agreement.
+
+The following VAT-codes are available:
+
+include::../{shared-dir}/partial/mva.adoc[]
+
+[source]
+.Example
+----
+<cac:ClassifiedTaxCategory>
+  <cbc:ID schemeID="UNECE5305">S</cbc:ID>
+  <cac:TaxScheme>
+    <cbc:ID>VAT</cbc:ID>
+  </cac:TaxScheme>
+</cac:ClassifiedTaxCategory>
+----

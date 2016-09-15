@@ -1,0 +1,14 @@
+= Produktnavn og -beskrivelse
+
+Selve produktnavnet legges i <Name> under <Item> på linjenivå. Lang beskrivelse av en vare kan legges i <Description> under <Item> på linjenivå, men ofte sendes ikke lang beskrivelse i ordren.
+
+<Name> blir ofte hentet fra katalogen til leverandør. Lengden på dette feltet bør ikke overstige 160 tegn da dette er kommunisert ut som maksimalt antall karakterer til de fleste innkjøpssystemer som offentlige virksomheter benytter i dag. Dette feltet overføres også i handlekurven i forbindelse med OCI punchout (round trip).
+
+[source]
+.Eksempel på EHF Ordre
+----
+<cac:Item>
+  <cbc:Name>TUNFISK I VANN 6 BX Á 1880 MILLIGRAM</cbc:Name>
+  ...
+</cac:Item>
+----

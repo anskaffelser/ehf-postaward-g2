@@ -1,0 +1,32 @@
+= Quantities and Units
+
+Various Quantities and Units can be stated in the EHF Order. These are both related to the ordering process and the logistics process.
+
+The table below lists quantities and units in the format. To all quantities there must be a legal Unit according to the Code list.
+
+[cols="3,5", options="header"]
+|===
+| Element name / (Tag name)
+| Description
+
+| Price Quantity / (BaseQuantity)
+| Quantity related to Price.
+
+| Order Quantity / (Quantity)
+| Quantity that is ordered, e.g. number of pieces or volume in litre.
+|===
+
+[source]
+.Example of an EHF Order line with a quantity of 120 litre (cbc:Quantity) and price is given per litre. (BaseQuantity):
+----
+<cbc:ID>1</cbc:ID>
+<cbc:Quantity unitCode="LTR" unitCodeListID="UNECERec20”>120</cbc:Quantity>
+<cbc:LineExtensionAmount currencyID="NOK">6000</cbc:LineExtensionAmount>
+<cbc:TotalTaxAmount currencyID="NOK">1500</cbc:TotalTaxAmount>
+<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+<cbc:AccountingCostCode>ProjectID123</cbc:AccountingCostCode>
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
+  <cbc:BaseQuantity unitCode="LTR" unitCodeListID="UNECERec20”>1</cbc:BaseQuantity>
+</cac:Price>
+----

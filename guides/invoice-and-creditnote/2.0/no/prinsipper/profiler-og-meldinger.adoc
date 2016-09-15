@@ -1,0 +1,8 @@
+include::../{shared-dir}/profiles/info.adoc[]
+
+:leveloffset: +1
+include::../{shared-dir}/profiles/04.adoc[]
+include::../{shared-dir}/profiles/05.adoc[]
+include::../{shared-dir}/profiles/xx.adoc[]
+include::../{shared-dir}/profiles/xy.adoc[]
+:leveloffset: -1

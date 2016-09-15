@@ -1,0 +1,16 @@
+= Profiles and Messages
+
+The definition of a profile is given in chapter 3.5.
+
+The profile relevant to the EHF ordering process is shown in the table below:
+
+Ordering process (BII28)::
+Order, Order response
+
+
+== ProfileID
+
+The ProfileID identifies the process the business document is part of. EHF uses the identification system according to BII:
+
+Ordering process::
+urn:www.cenbii.eu:profile:bii28:ver2.0

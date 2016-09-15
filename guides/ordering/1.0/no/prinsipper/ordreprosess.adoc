@@ -1,0 +1,21 @@
+= Ordreprosess
+
+Ordreprosessen omfatter opprettelse og oversendelse av ordre fra kjøper til selger og ordrebekreftelse i retur fra selger til kjøper. Dette er en vanlig gangbar forretningsprosess som de fleste foretak som bedriver handel forstår.
+
+Ordreprosessen kan beskrives som følgende arbeidsflyt:
+
+. En kjøper sender en ordre til selger med ønske om levering av varer eller tjenester.
+Ordren kan inneholde artikler (varer eller tjenester) med artikkelnummer, eller artikler med fritekst-beskrivelse.
+. Ordren kan referere til en kjøpsavtale eller en rammeavtale hvor tilhørende kjøpsbetingelsene gjøres gjeldene, alternativt så gjelder betingelsene som kjøper har spesifisert i ordren.
+. Selger mottar ordren og kontrollerer om denne er på riktig format og er korrekt utfylt. Alternativt må selger informere kjøper om at ordren ikke kan prosesseres, eventuelt via en meldingskvittering.
+. Selger prosesserer ordren og sender en ordrebekreftelse til kjøper med resultatet av denne.
+.. Ordren kan aksepteres i sin helhet med en positiv ordrebekreftelse og en avtale om leveranse anses som inngått.
+.. Ordren kan aksepteres med endringer på en eller flere ordrelinje. Håndtering av denne type situasjoner bør være beskrevet i Kjøpsavtalen eller Samhandlingsavtalen men kan også kreve en manuell tilbakemelding fra kjøper til selger om videre håndtering.
+.. Ordren kan avvises i sin helhet med en negativ ordrebekreftelse som innebærer at det ikke inngås noen avtale om leveranse av varer eller tjenester.
+. I tilfeller hvor kjøper har mottatt en negativ ordrebekreftelse (c), så kan det startes en ny ordreprosess hvor årsaken til avvisningen blir hensyntatt.
+
+Figuren under viser ordreprosessen med bruk av EHF ordremeldingene. Denne prosessen er basert på profil 28 i CENBII (BII28 - Ordering). Denne profilen forutsetter at både ordre og ordrebekreftelse blir sendt elektronisk, og at bekreftelsen kan innebære at ordren enten aksepteres eller helt eller delvis eller forkastes.
+
+image::images/ordreprosess.png[Ordreprosses, align="center"]
+
+Kvittering på at en EHF melding er mottatt kan være i form av en e-post, telefon eller en elektronisk kvitteringsmelding. Bruk av elektronisk kvitteringsmelding er beskrevet i kapittel 3.4. Dette må eventuelt avtales spesielt mellom aktørene.

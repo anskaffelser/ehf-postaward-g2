@@ -1,0 +1,6 @@
+= About the Order Messages
+
+The messages covered by this Implementation guide are EHF Order and EHF Order Response.
+Buyer and Seller must exchange both messages electronically to be in compliance with this guide.
+
+The Order message is used to send an order from Buyer to Seller. Via the Order Response message the Seller can respond to the order as a whole or partially with suggested changes to the order. This enables the Seller and Buyer to perform the ordering process wihout unnecessary delays.  Which changes to be allowed and when to send messages should be agreed in the Commercial agreement or the Collaboration agreement. See also chapter 3.6.  

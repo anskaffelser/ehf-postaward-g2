@@ -1,0 +1,33 @@
+= Nøkkelord
+
+Nøkkelord eller søkeord legges i <Keyword> og gir mulighet for kjøper til å søke seg fram til aktuelle produkter på en intuitiv måte.
+
+<Keyword> kan gjentas uendelig mange ganger for samme produkt, men mange gjentagelser kan vise seg å være krevende for de som skal lage en katalog. Det vil for mange være enklere å legge inn flere nøkkelord i samme <Keyword> tag med skilletegn mellom nøkkelordene. Hvilket skilletegn som skal benyttes må avtales med mottaker av katalogen. Vi anbefaler å benytte «%» som skilletegn siden dette er i bruk i en del sammenhenger allerede.
+
+[source]
+.Eksempel på flere nøkkelord ved hjelp av gjentagende <KeyWord>.
+----
+<cac:Item>
+  <cbc:Description>Drikke Helpall</cbc:Description>
+  <cbc:Name languageID="no">NNdrikk</cbc:Name>
+  <cbc:Keyword>kullsyreholdig</cbc:Keyword>
+  <cbc:Keyword>leskedrikk</cbc:Keyword>
+  <cbc:Keyword>mineralvann</cbc:Keyword>
+  <cac:SellersItemIdentification>
+    <cbc:ID>111111</cbc:ID>
+  </cac:SellersItemIdentification>
+</cac:Item>
+----
+
+[source]
+.Eksempel på flere nøkkelord ved hjelp av ett <KeyWord> og bruk av «%» som skilletegn.
+----
+<cac:Item>
+  <cbc:Description>Drikke Helpall</cbc:Description>
+  <cbc:Name languageID="no">NNdrikk</cbc:Name>
+  <cbc:Keyword>kullsyreholdig%leskedrikk%mineralvann</cbc:Keyword>
+  <cac:SellersItemIdentification>
+    <cbc:ID>111111</cbc:ID>
+  </cac:SellersItemIdentification>
+</cac:Item>
+----

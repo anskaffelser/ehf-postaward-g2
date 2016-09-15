@@ -1,0 +1,142 @@
+= Quantities and Units
+
+Various Quantities and Units can be stated in the EHF Catalogue. These are both related to the ordering process and the logistics process.
+
+The table below lists quantities and units in the format. To all quantities there must be a legal Unit according to the Code list.
+
+Orderable unit (OrderableUnit)::
+Unit code for the line item.  Mandatory if the item is orderable. Code according to Code list
+
+Content of Consumer item(s) (ContentUnitQuantity)::
+Content of Consumer item(s) in orderable unit, e.g. ml in bottles of Shampoo.
+
+Quantity increment (OrderQuantityIncrementNumeric)::
+Possible limitation to the number of articles that can be ordered. If the Quantity increment is 6 the article must be ordered in a quantity of 6, 12, 18 etc.
+
+Minimum Order Quantity (MinimumOrderQuantity)::
+The smallest number of items that can be ordered (most often 1).
+
+Maximum Order Quantity (MaximumOrderQuantity)::
+The largest number of items that can be ordered (most often unlimited).
+
+Pack Quantity (Item/PackQuantity)::
+Number of items on next lower level, e.g. number of Consumer units in a Trading unit.
+
+Number of Consumer items (Item/PackSizeNumeric)::
+Number of Consumer items. E.g. number of bottles on a Pallet.
+
+.Example 1
+====
+
+[cols="5h,2,2,2", options="header"]
+|===
+| Element | 1 bottle | Case of 6 bottles | Pallet of 18 cases
+| Line identifier | 4 | 5 | 6
+| Supplier Item identifier | 1111 | 111 | 11
+| Item Name  Shampoo | 250 ml | 6x250 ml Shampoo | Shampoo
+| Orderable unit | EA | CS | PF
+| Packaging level | CU | TU | DU
+| Packed units | | EA | CS
+| Packed quantity | | 6 | 18
+| Consumable unit | EA | EA | EA
+| Consumable unit quantity | 1 | 6 | 108
+| ItemNetQuantity | 250 | 1500 | 27000
+| Unit | MLT | MLT | MLT
+| MinimumOrderQuantity | 1 | 1 | 1
+| Unit | EA | EA | EA
+| Component related item Identifier | | 1111 | 111
+| Component related item quantity | | 6 | 18
+|===
+
+
+[source]
+.EHF example
+----
+<cac:CatalogueLine>
+  <cbc:ID>4</cbc:ID>
+  <cbc:OrderableUnit>EA</cbc:OrderableUnit>
+  <cbc:ContentUnitQuantity unitCode="ML" unitCodeListID="UNECERec20">250</cbc:ContentUnitQuantity>
+  <cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+  <cbc:MinimumOrderQuantity unitCode="CS" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
+  <cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
+  ...
+  <cac:Item>
+    <cbc:Description languageID="en">Shampoo 250 ml</cbc:Description>
+    <cbc:PackSizeNumeric>1</cbc:PackSizeNumeric>
+    <cac:SellersItemIdentification>
+      <cbc:ID>1111</cbc:ID>
+    </cac:SellersItemIdentification>
+    ...
+  </cac:Item>
+  ...
+</cac:CatalogueLine>
+----
+
+====
+
+.Example 2
+====
+
+[cols="5h,2,2,2", options="header"]
+|===
+| Element | Pack of 500 sheets paper | Case of 5 packs paper | Pallet of 18 cases copypaper
+| Line identifier | 7 | 8 | 9
+| Supplier Item identifier | A | AA | AAA
+| Item Name | 500 copy paper | 5*500 Copy paper | Pallet of paper
+| Orderable unit | EA | CS | PX
+| Packaging level | CU | TU | DU
+| Packed units | | EA | CS
+| Packed quantity | | 5 | 18
+| Consumable unit | EA | EA | EA
+| Consumable unit quantity | 1 | 5 | 90
+| ItemNetQuantity | 500 | 2500 | 45000
+| Unit | EA | EA | EA
+| MinimumOrderQuantity | 1 | 1 | 1
+| Unit | EA | EA | EA
+| Component related item Identifier | | A | AA
+| Component related item quantity | | 5 | 18
+|===
+
+[source]
+.EHF Example
+----
+<cac:CatalogueLine>
+  <cbc:ID>8</cbc:ID>
+  <cbc:OrderableUnit>CS</cbc:OrderableUnit>
+  <cbc:ContentUnitQuantity unitCode="EA" unitCodeListID="UNECERec20">2500</cbc:ContentUnitQuantity>
+  <cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
+  <cbc:MinimumOrderQuantity unitCode="CS" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
+  <cbc:PackLevelCode listID="GS17009:PEPPOL">TU</cbc:PackLevelCode>
+  <cac:ComponentRelatedItem>
+    <cbc:ID>A</cbc:ID>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">5</cbc:Quantity>
+  </cac:ComponentRelatedItem>
+  ...
+  <cac:Item>
+    <cbc:Description languageID="en">5*500 Copy paper</cbc:Description>
+    <cbc:PackQuantity unitCode="CS" unitCodeListID="UNECERec20">5</cbc:PackQuantity>
+    <cbc:PackSizeNumeric>5</cbc:PackSizeNumeric>
+    <cac:SellersItemIdentification>
+      <cbc:ID>AA</cbc:ID>
+    </cac:SellersItemIdentification>
+    ...
+  </cac:Item>
+  ...
+</cac:CatalogueLine>
+----
+====
+
+
+= Catch Weight
+
+To inform that an item is catch weight (ex. Orderable quantity is pcs, but invoiced quantity is kilo, and  where one pcs can be of variable weight), set unit code for content unit to 31 (catch weight) according to UN Recommondations 20.
+
+[source]
+.Example
+----
+<cac:CatalogueLine>
+  <cbc:ID>8</cbc:ID>
+  <cbc:OrderableUnit>EA</cbc:OrderableUnit>
+  <cbc:ContentUnitQuantity unitCode="31" unitCodeListID="UNECERec20">10
+</cbc:ContentUnitQuantity>
+----

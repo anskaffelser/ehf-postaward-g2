@@ -1,0 +1,31 @@
+[preface]
+= Introduction
+
+include::{shared-dir}/content/introduction/background-and-objective.adoc[]
+
+== Target Audience
+
+*The target audience* for this implementation guide is both accounting and IT professionals in organizations aiming at performing the invoicing process completely or partially electronic. That means issuing an invoice, a credit note and a reminder. This document may also benefit system suppliers, ERP suppliers and message brokers.
+
+*	Accounting professionals are advised to read chapters 1 through 5.
+*	Chapters 5 through 6 are for both accounting professionals as technical implementers
+*	IT professionals may concentrate on chapters 7 through 7.
+
+
+== Document Structure
+
+This document consists of the following chapters and contents:
+
+*	Chapter 1 gives a short introduction describing the background and objective of this implementation guide.
+*	Chapter 2 gives the change history of the document.
+*	Chapter 3 describes the EHF formats (Invoice and Credit note) in general.
+*	Chapter 4 links to definitions relevant to EHF formats.
+*	Chapter 5 links to general principles and conditions for the formats.
+*	Chapter 6 describes in detail central information elements.
+*	Chapter 7 deals with validation.
+*	Chapter 8 embraces appendices.
+
+
+## Mandatory Use
+
+This version is valid from {date-mandatory}, and is mandatory from the same date.

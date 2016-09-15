@@ -1,0 +1,21 @@
+= Prinsipper og forutsetninger
+
+Dette kapitlet beskriver de prinsipper og forutsetninger som ligger til grunn for bruk av EHF Fakturaprosess. Dette er i hovedsak basert på tilsvarende beskrivelser i profil CEN BII 05 Billing og PEPPOL BIS 5a.
+
+:leveloffset: +1
+
+include::generelt-om-fakturameldingene.adoc[]
+
+include::funksjoner-og-roller.adoc[]
+
+include::profiler-og-meldinger.adoc[]
+
+include::bruk-av-ubl-2.1.adoc[]
+
+include::faktureringsprosessen.adoc[]
+
+include::bruk-av-negativ-faktura.adoc[]
+
+include::finansielt-forskudd-vs-a-konto-faktura.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,9 @@
+= Endringslogg [[changelog]]
+
+:leveloffset: +1
+
+include::../{shared-dir}/content/endringslogg/konsekvenser.adoc[]
+
+include::versjon-1.adoc[]
+
+:leveloffset: -1

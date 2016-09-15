@@ -1,0 +1,15 @@
+= Beskrivelse av utvalgte deler
+
+Nedenfor følger beskrivelse av utvalgte deler av informasjonsinnholdet i {doctitle}.  Komplett informasjonsinnhold er listet i tabellene i kapittel 7.
+
+:leveloffset: +1
+
+include::roller-og-aktorer.adoc[]
+
+include::ordrereferanse.adoc[]
+
+include::forsendelse.adoc[]
+
+include::pakkseddellinje.adoc[]
+
+:leveloffset: -1

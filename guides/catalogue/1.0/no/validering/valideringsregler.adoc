@@ -1,0 +1,21 @@
+= Norske valideringsregler for katalog
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+//include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+|====
+
+Uthenting av regler fungerer ikke som den skal. Forventet rettet i neste release.
+
+= Norske valideringsregler for katalogbekreftelse
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T58.xsl.adoc[]
+|====

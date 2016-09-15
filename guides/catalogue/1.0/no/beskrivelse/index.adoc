@@ -1,0 +1,48 @@
+= Beskrivelse av utvalgte deler
+
+Det fins ingen formelle krav til innholdet i en katalog i forhold til norsk regelverk. Innholdskravene er derfor basert på det som brukes på Ehandelsplattformen i dag og det som er angitt i UBL 2.1 og CEN BII Catalogue. I tillegg vil man verifisere krav til innhold mot det som brukes i utvalgte deler av privat sektor.
+
+Dette kapitlet beskriver det som er påkrevd innhold og noen spesifikke elementer som er spesielt viktige i forhold til bruk i det norske markedet.
+
+
+:leveloffset: +1
+
+include::roller-aktorer.adoc[]
+
+include::aksjonskode.adoc[]
+
+include::produktidentifisering.adoc[]
+
+include::produktnavn-og-beskrivelse.adoc[]
+
+include::nokkelord.adoc[]
+
+include::kvantum-og-bestillingsmengder.adoc[]
+
+include::priser.adoc[]
+
+include::relaterte-produkter.adoc[]
+
+include::produktklassifisering.adoc[]
+
+include::farlig-gods.adoc[]
+
+include::merverdiavgift.adoc[]
+
+include::vedleggshandtering.adoc[]
+
+include::pakningsinformasjon.adoc[]
+
+include::merking.adoc[]
+
+include::dimensjon.adoc[]
+
+include::erstatningsvare.adoc[]
+
+include::anbefalt-artikkel.adoc[]
+
+include::smartform-id.adoc[]
+
+include::tilleggsegenskaper.adoc[]
+
+:leveloffset: -1

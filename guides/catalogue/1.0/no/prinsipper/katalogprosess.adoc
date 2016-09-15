@@ -1,0 +1,13 @@
+= Katalogprosess
+
+Katalogprosessen er første del av post-award prosessen og kan beskrives som følgende arbeidsflyt:
+
+. Katalogutsteder (leverandør) sammenstiller sine vare- eller tjenestedata og transformerer disse inn i katalogformatet. Dette kan enten være en komplett katalog eller en avgrenset katalog med produkt- eller prisendringer.
+. Katalogutsteder sender katalogen til Katalogmottaker (kjøper) enten direkte eller via tredjepart.
+. Katalogmottaker kontrollerer om katalogen er på riktig format og er korrekt utfylt.
+. Dersom katalogen aksepteres sender katalogmottaker en positiv katalogbekreftelse til katalogutsteder. Denne vil nå være godkjent som grunnlag for å gjøre bestillinger.
+. Dersom katalogen avvises sender katalogmottaker en negativ katalogbekreftelse med en forklaring til avvisningen til katalogutsteder. Katalogutsteder må da rette eventuelle feil og sende en ny katalog.
+
+Figuren viser katalogprosessen med bruk av EHF katalogmeldingene. Denne prosessen er basert på profil 1 i CENBII (BII01 – Catalogue Only). Denne profilen forutsetter at katalog og katalogbekreftelse blir sendt elektronisk.
+
+image::images/katalogprosessen.png[Prosessmodell for Innmelding og vedlikehold av kataloginformasjon, align="center"]

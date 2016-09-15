@@ -1,0 +1,7 @@
+[appendix]
+= Schematron [[appendix-schematron]]
+
+Valideringsfiler basert på link:http://www.schematron.com/[Schematron]] er tilgjengelig i vårt link:{link-github}[Github-repoistory].
+link:{link-github}/tree/master[Branch "master"] inneholder gjeldende versjon og link:{link-github}/tree/upcoming[branch "upcoming"] inneholder utvikling og høring.
+
+Filer tilgjengeliggjort av Difi er per nå kun tilgjengelig som XSLT-filer basert på Schematron.

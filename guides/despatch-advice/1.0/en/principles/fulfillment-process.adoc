@@ -1,0 +1,13 @@
+= The Fulfillment Process
+
+The fulfillment process includes issuing and sending the despatch advice message from a supplier to a customer and receiving of the goods at the customer’s site.
+
+The main activities supported by this message are:
+
+Transport:: Full description of how the goods are packed and delivered.  A delivery is taken to be a number of items that are despatched as a single consignment to a single delivery address.
+Ordering:: States what is shipped; the quantity of goods shipped and what is outstanding.
+Receiving goods:: Full support of the process of receiving goods into a warehouse, inventory, in stores or simply at a reception counter.
+
+The diagram below shows the fulfillment process by using the EHF despatch advice message.  This process is based on profile 30 in CENBII2 (BII30 – Dispatch only).
+
+image::images/fulfillment-process.png[Fulfillment process, align="center"]

@@ -1,0 +1,38 @@
+include::../settings.adoc[]
+
+= EHF Release {release}
+{name-difi-no}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:release: 2016-05-23
+
+== Norsk [[norsk]]
+
+=== EHF Faktura og kreditnota 2.0.6 [[faktura-og-kreditnota]]
+
+include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.6.adoc[]
+
+
+=== EHF Katalog 1.0.4 [[katalog]]
+
+include::../../catalogue/1.0/no/endringslogg/{release}-1.0.4.adoc[]
+
+
+=== EHF Pakkseddel 1.0.3 [[pakkseddel]]
+
+include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.3.adoc[]
+
+
+== English [[english]]
+
+=== EHF Invoice and Creditnote 2.0.6 [[invoice-and-creditnote]]
+
+include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.6.adoc[]
+
+
+=== EHF Despatch Advice 1.0.3 [[despatch-advice]]
+
+include::../../despatch-advice/1.0/en/changelog/{release}-1.0.3.adoc[]

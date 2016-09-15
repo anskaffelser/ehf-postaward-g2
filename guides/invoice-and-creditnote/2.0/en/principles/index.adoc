@@ -1,0 +1,21 @@
+= Principles and Prerequisites
+
+This chapter describes the principles and assumptions that underlie the use of EHF invoicing process. This is basically similar to the CEN BII 05 Billing profile.
+
+:leveloffset: +1
+
+include::invoice-messages-in-general.adoc[]
+
+include::functionality-and-roles.adoc[]
+
+include::profiles-and-messages.adoc[]
+
+include::use-of-ubl-2.1.adoc[]
+
+include::invoicing-process.adoc[]
+
+include::use-of-negative-invoice.adoc[]
+
+include::financial-advance-vs-on-account-invoicing.adoc[]
+
+:leveloffset: -1

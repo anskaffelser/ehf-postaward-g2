@@ -1,0 +1,22 @@
+= Profiler og meldinger
+
+En profil er den elektroniske samhandlingsprosess som en aktuell meldingsutveksling er en del av. En profil vil typisk omfatte flere relaterte meldinger som utveksles mellom to parter, men kan i sin enkleste form omfatte kun en enkelt melding.
+
+Kun en profil er tilgjengelig i forbindelse med leveringsprosessen.
+
+Samhandlingsprosess	Meldinger	BII/PEPPOL
+ProfilID	EHF
+ProfilID
+Kun pakkseddel 	                     Pakkseddel
+
+Bii30
+
+Kun pakkseddel (bii30)::
+* Pakkseddel
+
+== ProfileID
+
+Identifiserer den prosess forretningsdokumentet er en del av. EHF benytter identifikasjonssystem i henhold til BII:
+
+Kun pakkseddel::
+urn:www.cenbii.eu:profile:bii30:ver2.0

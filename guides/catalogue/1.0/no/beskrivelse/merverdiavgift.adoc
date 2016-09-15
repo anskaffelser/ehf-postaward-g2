@@ -1,0 +1,20 @@
+= Merverdiavgift (MVA/VAT)
+
+I EHF Katalog er det definert felt for å angi MVA-sats pr artikkel.  Dette er valgfritt og angis som en kode som definerer aktuell prosentsats. Kjøpere kan stille krav til utfylling av MVA dersom de anser at dette vil gi merverdi for sine bestillere, eller om deres innkjøps-systemer er avhengig av MVA-satsen for å kunne matche ordre med faktura.
+
+Dette må i så fall avtales via kontrakt eller samhandlingsavtale.
+
+Følgende MVA-koder er mulig å angi:
+
+include::../{shared-dir}/partial/mva.adoc[]
+
+[source]
+.Eksempel på utfylling
+----
+<cac:ClassifiedTaxCategory>
+  <cbc:ID schemeID="UNECE5305">S</cbc:ID>
+  <cac:TaxScheme>
+    <cbc:ID>VAT</cbc:ID>
+  </cac:TaxScheme>
+</cac:ClassifiedTaxCategory>
+----

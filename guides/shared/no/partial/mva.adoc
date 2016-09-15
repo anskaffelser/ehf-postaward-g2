@@ -1,0 +1,14 @@
+[cols="1,5,2",options="header"]
+!===
+| MVA kategori
+| Beskrivelse
+| Sats pr. 1.juli 2013
+
+s| S | Utgående avgift, ordinær sats | 25%
+s| H | Utgående avgift, redusert sats – næringsmidler | 15%
+s| R | Utgående avgift, redusert sats – råfisk | 11,11%
+s| AA | Utgående avgift, redusert sats – lav sats | 10%
+s| E | Fritatt for merverdiavgift (avgiftsfritt salg) | 0%
+s| Z | Unntatt fra merverdiavgiftsloven (utenfor merverdiavgiftsloven) | Ingen (0%)
+s| K | Klimakvoter til næringsdrivende eller offentlig virksomhet – kjøper beregner MVA | Ingen (0%)
+!===

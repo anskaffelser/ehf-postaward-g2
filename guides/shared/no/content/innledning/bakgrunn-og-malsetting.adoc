@@ -1,0 +1,15 @@
+== Bakgrunn og målsetning
+
+I Stortingsmelding nr. 36:2008-2009 Det gode innkjøp står det:
+
+[quote]
+Regjeringa meiner auka bruk av elektroniske løysingar er viktig for å forbetre og effektivisere offentleg innkjøp. Bruk av elektroniske løysingar kan redusere tidsbruken ved offentlege innkjøp, auke konkurransen og leggje til rette for innkjøp som er meir gjennomsiktige og lettare kan etterprøvast. Ved å bruke mindre tid og pengar på innkjøp frigjer ein ressursar som kan brukast til både fornying av offentleg sektor og meir velferd.
+Målet med å innføre elektroniske løysingar er å medverke til betre, enklare og sikrare innkjøp.
+
+Fornyings- og administrasjonsdepartementet og Kirkedepartementet (FAD) anså bruk av åpne standarder som et grunnleggende element for å skape en velfungerende offentlig sektor, med god intern samhandling og et godt tjenestetilbud til innbyggere og næringsliv.
+
+[quote]
+.Definisjon av link:http://no.wikipedia.org/wiki/%C3%85pen_standard[åpen standard]:
+En åpen standard kjennetegnes ved at den er anerkjent og vil bli vedlikeholdt av en ikke-kommersiell organisasjon, og det løpende utviklingsarbeidet foregår på basis av beslutningsprosesser som er åpne for alle interesserte parter. Standarden er publisert og dokumentasjonen er tilgjengelig, enten gratis eller til en ubetydelig avgift. Det må være tillatt for alle å kopiere, distribuere og bruke standarden gratis eller for en ubetydelig avgift. Den intellektuelle rettighet knyttet til standarden (eks. patenter) er gjort ugjenkallelig tilgjengelig, uten royalty. Det er ingen forbehold om gjenbruk av standarden.
+
+*Målsetningen* med dette dokumentet er å definere et felles format for fakturameldinger i det norske markedet, og å legge til rette for en effektiv innføring og utbredelse av elektronisk samhandling i fakturaprosessen basert på disse formatene.

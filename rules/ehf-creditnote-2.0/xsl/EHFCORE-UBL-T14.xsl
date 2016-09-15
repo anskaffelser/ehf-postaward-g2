@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<axsl:stylesheet xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" version="2.0"><!--Implementers: please note that overriding process-prolog or process-root is 
+<axsl:stylesheet xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:axsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saxon="http://saxon.sf.net/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:schold="http://www.ascc.net/xml/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" version="2.0"><!--Implementers: please note that overriding process-prolog or process-root is
     the preferred method for meta-stylesheets to use where possible. -->
 
    <axsl:param name="archiveDirParameter" tunnel="no"/>
@@ -79,7 +79,7 @@
          <axsl:text/>/@<axsl:value-of select="name(.)"/>
       </axsl:if>
    </axsl:template><!--MODE: SCHEMATRON-FULL-PATH-3-->
-<!--This mode can be used to generate prefixed XPath for humans 
+<!--This mode can be used to generate prefixed XPath for humans
 	(Top-level element has index)-->
 
    <axsl:template match="node() | @*" mode="schematron-get-full-path-3">
@@ -148,7 +148,7 @@
 <!--SCHEMA METADATA-->
 
    <axsl:template match="/">
-      <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" title="Sjekk mot Bii Core " schemaVersion="">
+      <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" title="Sjekk mot EHF Core" schemaVersion="">
          <axsl:comment>
             <axsl:value-of select="$archiveDirParameter"/>   
 		 <axsl:value-of select="$archiveNameParameter"/>  
@@ -5615,7 +5615,7 @@
       </axsl:choose>
       <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M12"/>
    </axsl:template>
-   
+
    <!--CARDINALITY CHECKS-->
 	<axsl:template match="/ubl:CreditNote/cac:AccountingCustomerParty/cac:Party" priority="1007" mode="M12">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:AccountingCustomerParty/cac:Party"/>
@@ -5841,9 +5841,9 @@
 		</axsl:choose>
 		<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M12"/>
 	</axsl:template>
-	
-	
-	
+
+
+
 		<axsl:template match="/ubl:CreditNote/cac:InvoiceLine" priority="1007" mode="M12">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:InvoiceLine"/>
 		<!--ASSERT -->
@@ -5858,11 +5858,11 @@
 					<svrl:text>[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</svrl:text>
 				</svrl:failed-assert>
 			</axsl:otherwise>
-		</axsl:choose>	
+		</axsl:choose>
 			<axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M12"/>
 	</axsl:template>
-	
-	
+
+
 	<!--RULE -->
 	<axsl:template match="/ubl:CreditNote/cac:PayeeParty" priority="1001" mode="M12">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:CreditNote/cac:PayeeParty"/>

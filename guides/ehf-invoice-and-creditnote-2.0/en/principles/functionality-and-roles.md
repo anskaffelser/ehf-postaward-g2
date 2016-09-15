@@ -1,5 +1,0 @@
-# Functionality and Roles
-
-The diagram below shows the roles involved in the invoicing process. In EHF, the customer and invoice recipient is the same entity, as is the supplier and the invoice issuer.
-
-![Functionality and roles](../images/functionality-and-roles.png "Functionality and roles")

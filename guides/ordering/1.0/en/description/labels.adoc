@@ -1,0 +1,20 @@
+= Environment, Social Responsibility and Ecological
+
+Public actors will have requirements related to the environment, ecologically produced food and fair trade. They will also demand that basic human rights are respected in the product production and trade.
+
+Environmental lables defined in the Catalogue can also be sent in the Order to motivate the purchasers to follow up  these requirements in their daily work.
+
+[source]
+.Example of Encironmental lables in an EHF Order message:
+----
+<cac:Attachment>
+  <cac:ExternalReference>
+    <cbc:URI>http://www.ecolabelindex.com/ecolabel/forest-stewardship-council-fsc-chain-of-custody-certification</cbc:URI>
+  </cac:ExternalReference>
+</cac:Attachment>
+...
+<cac:AdditionalItemProperty>
+  <cbc:Name>EnvironmentMarking</cbc:Name>
+  <cbc:Value>FSC</cbc:Value>
+</cac:AdditionalItemProperty>
+----

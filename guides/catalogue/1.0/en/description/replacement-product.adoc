@@ -1,0 +1,17 @@
+= Replacement Product
+
+Replacement product is used to identify a product replacing an existing product in the Catalogue. The existing product is stated as replaced on the Catalogue line for the new product.
+
+[source]
+.Example
+----
+<cac:CatalogueLine>
+  ...
+  <cac:ReplacedRelatedItem>
+    <cbc:ID>12345</cbc:ID>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">5</cbc:Quantity>
+    <cbc:Description languageID="no">Toner B (erstattes av Toner C)</cbc:Description>
+  </cac:ReplacedRelatedItem>
+  ...
+</cac:CatalogueLine>
+----

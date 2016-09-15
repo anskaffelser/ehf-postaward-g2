@@ -1,0 +1,16 @@
+= Prinsipper og forutsetninger
+
+Dette kapitlet beskriver de prinsipper og forutsetninger som ligger til grunn for bruk av EHF ordreprosess.  Dette er i hovedsak basert på tilsvarende beskrivelser i profil CEN BII2 28 Ordering.
+
+
+:leveloffset: +1
+
+include::generelt.adoc[]
+
+include::funksjoner-og-roller.adoc[]
+
+include::profiler-og-meldinger.adoc[]
+
+include::ordreprosess.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,5 @@
+.Validator endringer:
+* Korrigering av reglene BII2-T01-R011 og R017
+
+.Forfatter:
+* Siw Meckelborg, Edisys Consulting AS

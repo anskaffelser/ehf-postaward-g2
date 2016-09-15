@@ -1,0 +1,31 @@
+[preface]
+= Innledning
+
+include::{shared-dir}/content/innledning/bakgrunn-og-malsetting.adoc[]
+
+== Målgruppe
+
+*Målgruppen* for dokumentet (heretter omtalt som implementeringsveileder) er både faglig og teknisk personell hos brukere som ønsker å utføre hele eller deler av fakturaprosessen elektronisk. Det vil i praksis si å sende elektronisk faktura og kreditnota. Dokumentet kan også benyttes av systemleverandør, ERP leverandør og meldingsformidlere.
+
+* Kapittel 1 til 5 er rettet mot faglig personell.
+* Kapittel 5 til 6 er rettet både mot faglig og teknisk personell.
+* Kapittel 7 til 8 (vedlegg) er rettet mot teknisk personell.
+
+
+== Dokumentstruktur
+
+Dokumentet er inndelt i følgende deler:
+
+* Kapittel 1 gir en kort introduksjon som beskriver bakgrunn og målsetting med implementeringsveileder.
+* Kapittel 2 beskriver de endringer som er gjort mellom forskjellige versjoner av implementeringsveilederen.
+* Kapittel 3 beskriver EHF formatene generelt.
+* Kapittel 4 inneholder definisjoner som er relevant for fakturaformatene.
+* Kapittel 5 beskriver generelle prinsipper og forutsetninger for fakturaformatene.
+* Kapittel 6 gir detaljerte beskriver av sentrale informasjonselementer i fakturaformatene.
+* Kapittel 7 omhandler validering, det vil si kontroll av informasjonsinnhold.
+* Kapittel 8 inneholder vedlegg.
+
+
+== Ikrafttredelse
+
+Denne revisjonen gjøres tilgjengelig for bruk fra {date-mandatory}. Den vil være obligatorisk fra samme dato.

@@ -1,0 +1,6 @@
+[appendix]
+= Kodelister [[vedlegg-kodelister]]
+
+For å sikre konsistens og kvalitet på kodelistene som brukes i EHF, er det besluttet at disse legges ut som en egen nettside. Denne siden inneholder alle kodelister som brukes i alle EHF veilderne, og finnes her:
+
+link:http://www.anskaffelser.no/temaer-elektronisk-handel/ehf-formater-innhold/kodelister[]

@@ -1,0 +1,33 @@
+= Kvantum og bestillingsmengder
+
+Det er mulig å angi ulike kvantum som gjelder for en artikkel eller tjeneste i en ordre.  For alle typer kvantum må det angis enhet. I priselementet på linjenivå angis antall eller volum som en ordre omfatter for den aktuelle artikkel. I priselementet på samme linje skal det angis hvilke enhet prisen gjelder for.
+
+Følgende kvantum er mulig å angi:
+
+[cols="3,5", options="header"]
+|===
+| Element
+| Beskrivelse
+
+| Priskvantum (BaseQuantity)
+| Kvantum som en pris gjelder for
+
+| Ordrekvantum (Quantity)
+| Angir det antall eller volum som en ordrelinje omfatter
+|===
+
+
+[source]
+.Eksempel på en EHF ordrelinje med kvantum 120 liter (cbc:Quantity) og hvor prisen er angitt per liter (BaseQuantity)
+----
+<cbc:ID>1</cbc:ID>
+<cbc:Quantity unitCode="LTR" unitCodeListID="UNECERec20”>120</cbc:Quantity>
+<cbc:LineExtensionAmount currencyID="NOK">6000</cbc:LineExtensionAmount>
+<cbc:TotalTaxAmount currencyID="NOK">1500</cbc:TotalTaxAmount>
+<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+<cbc:AccountingCostCode>ProjectID123</cbc:AccountingCostCode>
+<cac:Price>
+ 	<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
+	<cbc:BaseQuantity unitCode="LTR" unitCodeListID="UNECERec20”>1</cbc:BaseQuantity>
+</cac:Price>
+----

@@ -1,0 +1,12 @@
+= Smartform ID
+
+Smartform ID angis som en tilleggsegenskap med kodeverdi SmartFormID.
+
+[source]
+.Eksempel på utfylling i EHF katalog.
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>SmartFormID</cbc:Name>
+  <cbc:Value>12345</cbc:Value>
+</cac:AdditionalItemProperty>
+----

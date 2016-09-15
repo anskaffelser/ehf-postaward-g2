@@ -1,0 +1,21 @@
+= Norwegian Rules for Catalogue
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+//include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+|====
+
+Extraction of rules is currently not working as exptected. To be fixed in next release.
+
+= Norwegian Rules for Catalogue Response
+
+[cols="1,4", options="header"]
+|====
+|Rule
+|Message/Context/Test
+
+include::{rules-dir}/NOGOV-UBL-T58.xsl.adoc[]
+|====

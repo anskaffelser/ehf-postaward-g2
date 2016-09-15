@@ -1,0 +1,14 @@
+= Miljømerking, sosialt ansvar og økologisk
+
+Offentlige virksomheter stiller krav til miljø, økologisk produsert mat og at grunnleggende menneskerettigheter blir respektert i produksjon og handel av varer (sosialt ansvar eller etisk handel).
+
+I katalogen er det definert klassifiseringskoder for miljømerking og annen merking slik at dette kan vurderes ved valg av leverandør. Disse kodene er det også mulig å overføre i ordren for å måle innkjøpsadferd direkte i innkjøpssystemene.  Informasjon om merking må da kunne presentere i statistikkverktøy som er tilgjengelig for kjøpers organisasjon.  Slik kan offentlige virksomheters krav i konkurransen kontrolleres og riktige kjøp kan tilstrebes.
+
+[source]
+.Eksempel på utfylling av Miljømerking i EHF Ordre
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>EnvironmentMarking</cbc:Name>
+	<cbc:Value>FSC</cbc:Value>
+</cac:AdditionalItemProperty>
+----

@@ -1,0 +1,28 @@
+= Tilleggsegenskaper
+
+Produktegenskaper som ikke er spesifisert i egne felt kan angis som tilleggsegenskaper med beskrivelse av hva elementet inneholder og selve innholdet. Dette kan også brukes for Smartform.
+
+.Eksempler på egenskaper som kan spesifiseres
+* Farge
+* Vekt
+
+[source]
+.Eksempel på angivelse av tilleggsegenskaper i en EHF ordremelding
+----
+<cac:Item>
+  <cbc:Description>God pensel for panel</cbc:Description>
+  <cbc:Name>Pensel 20 mm</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>SItemNo011</cbc:ID>
+  </cac:SellersItemIdentification>
+  ...
+  <cac:AdditionalItemProperty>
+    <cbc:Name>Hair color</cbc:Name>
+    <cbc:Value>Black</cbc:Value>
+  </cac:AdditionalItemProperty>
+  <cac:AdditionalItemProperty>
+    <cbc:Name>Width</cbc:Name>
+    <cbc:Value>20mm</cbc:Value>
+  </cac:AdditionalItemProperty>
+</cac:Item>
+----

@@ -1,0 +1,35 @@
+= Definitions
+
+The table below gives the definitions of key concepts of the fulfillment process.
+
+Supplier::
+The supplier is the legal person or organization who provides a product or service. +
+Examples of supplier roles: seller, despatch party,  creditor, economic operator.
+
+Despatch Party::
+The Despatch Party is the person or organization who provides (despatch) the goods or services. The role is carried out by the supplier or on behalf of the supplier. (Despatch Party is sometimes known as the Consignor)
+
+Seller::
+The seller is the legal person or organization who sells goods or services to the customer. The role is carried out by the supplier or on behalf of the supplier.
+
+Customer::
+The customer is the legal person or organization who is in demand of a product or service. +
+Examples of customer roles: buyer, consignee, debtor, contracting authority.
+
+Consignee::
+The consignee is the person or organization to which the products will be shipped and who is taking possession. The role is carried out by the customer or on behalf of the customer.
+
+Buyer::
+The buyer is the legal person or organization who buys or purchases the goods or services. The role is carried out by the customer or on behalf of the customer.
+
+Originating party::
+The party who will eventually receive and consume the goods and on whose behalf the buyer makes the purchase.
+
+Shipment::
+A contractual arrangement whereby an identifiable collection of goods items is to be transported from one party (usually a Supplier) to another party (usually a Customer).
+
+Consignment::
+The transportation of an identifiable collection of goods items from one party (the Despatch Party) to another party (the Consignee) via one or more modes of transport.
+
+Transport Handling Unit::
+A description of individual handling units in which the line items are packed.

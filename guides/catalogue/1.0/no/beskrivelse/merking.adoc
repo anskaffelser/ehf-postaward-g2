@@ -1,0 +1,55 @@
+= Miljømerking, sosialt ansvar og økologisk
+
+Offentlige virksomheter stiller krav til miljø, økologisk produsert mat og at grunnleggende menneskerettigheter blir respektert i produksjon og handel av varer (sosialt ansvar eller etisk handel). For å kunne synliggjøre varer som oppfyller noen av disse kriterier er felter i EHF katalogen definert som bærer av disse merker.  Merkene er knyttet inn mot hvert produkt/tjeneste på linjenivå.  Forskjellige innkjøpssystemers søkemotorer har dermed mulighet å gi kjøper informasjon om varen/tjenestens egenskaper via merkeordningen som kan danne grunnlag for en innkjøpsbeslutning. For mer utfyllende informasjon om merket er det definert et felt per merke til ekstern url-link som kan knyttes til informasjonsside eller produktdatablad for dypere informasjon om merkets krav.
+
+Feltene per produkt er dynamiske det vil si at man kan knytte så mange merker man ønsker til hver varelinje.  For å kunne få til en optimal visning har Ehandelsplattformen begrenset antall merker per produkt til 8.
+
+Følgende koder er identifisert: http://www.anskaffelser.no/verktoy/koder-bruk-i-ehf-katalog-merkeordninger-miljo-og-samfunnsansvar
+
+Ved innføring av klassifiseringskoder kan også innkjøpsadferd måles ved at ordreformatet bringer med seg miljømerkingen i ordren.  Innkjøpssystemet må da fange de ordrelinjer som sendes og kunne presentere disse i statistikkverktøyet som er tilgjengelig for kjøpers organisasjon.  Dermed kan de offentlige virksomheters krav i konkurransen kontrolleres og riktig kjøp kan tilstrebes.
+
+.Eksempel på klassifiseringskoder
+[cols="^.^2a,8a", options="header"]
+|===
+<| Logo
+| Informasjon
+
+| image:images/label-neo.png[Svanemerket]
+| *Svanemerket* +
+Classification Code (ID): NEO +
+Certificate TypeCode: EcoLabel (Miljø)
+
+| image:images/label-fbl.png[Fairtrade]
+| *Fairtrade* +
+Classification Code (ID): FBL +
+Certificate TypeCode: SosialLabel (Sosialt ansvar)
+
+| image:images/label-eop.png[EU organic products label]
+| *EU organic products label* +
+Classification Code (ID): EOP +
+Certificate TypeCode: OrganicLabel (Økologisk)
+|===
+
+[source]
+.Eksempel på utfylling av Miljømerking i EHF katalog
+----
+<cac:Certificate>
+  <cbc:ID>NEO</cbc:ID>
+  <cbc:CertificateTypeCode>EcoLabel</cbc:CertificateTypeCode>
+  <cbc:CertificateType>EcoLabel</cbc:CertificateType>
+  <cac:IssuerParty>
+    <cac:PartyName>
+      <cbc:Name>Svanemerket</cbc:Name>
+    </cac:PartyName>
+  </cac:IssuerParty>
+  <cac:DocumentReference>
+    <cac:Attachment>
+      <cac:ExternalReference>
+        <cbc:URI>http://www.svanemerket.no/</cbc:URI>
+      </cac:ExternalReference>
+    </cac:Attachment>
+  </cac:DocumentReference>
+</cac:Certificate>
+----
+
+Type merkekode (CertificateTypeCode) har ikke noen funksjon i dag, men kan benyttes hvis innkjøpssystemet trenger å gruppere eller styre de forskjellige kodene.

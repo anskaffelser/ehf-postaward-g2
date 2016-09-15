@@ -1,0 +1,303 @@
+= Avrunding
+
+. Avrunding skal som hovedregel utføres ved beregning av sluttresultatet i en kalkulasjon, ikke i forbindelse med mellomregninger, for at resultatet skal bli matematisk korrekt.
+. Avrunding skal utføres til 2 desimaler i henhold til standard regelverk.   (Større enn eller lik 5  rundes opp, mindre en 5 rundes ned)
+. EHF formatet forutsetter at alle beløp på dokumentnivå samt linjetotal på linjenivå maksimalt inneholder 2 desimaler.  Beløp som er resultatet av en kalkulasjon (for eksempel merverdiavgift) må avrundes dersom antall desimaler overstiger 2.  Beløp som fremkommer ved å addere eller subtrahere andre beløp er det ikke nødvendig å avrunde dersom de inngående beløpene allerede er avrundet.  (For eksempel Betalingsbeløp og Totalbeløp inklusiv merverdiavgift)
+
+== Elementer som må avrundes
+
+. Linjetotal (LineExtensionAmount).  Må avrundes siden linjetotalen kan være gjenstand for bokføring i selgers eller kjøpers regnskap. **Merk at elementene som inngår i linjetotalen (pris \* antall, rabatt og gebyr) må avrundes hver for seg ved beregning av linjetotalen.**
+. Avrundet beløp i pkt. a) skal inngå i beregningen av totalt linjebeløp (MonetaryTotal/Line Extension Amount).
+. Avrundet beløp i pkt. a) skal inngå i MVA grunnlaget pr. MVA kategori  på hodet. (Tax Subtotal/ TaxableAmount)
+. Summen av rabatter på dokumentnivå må avrundes ved beregning av elementet Monetary Total/AllowanceTotalAmount.
+. Summen av gebyrer  på dokumentnivå må avrundes ved beregning av elementet Monetary Total/ChargeTotalAmount.
+. MVA grunnlag pr. avgiftskategori  (TaxSubTotal/TaxableAmount).
+. MVA beløp pr. avgiftskategori (TaxSubTotal/TaxAmount).
+
+== Avrunding av betalingsbeløp
+
+Avrunding av betalingsbeløp angis på dokumentnivå (Monetary Total/PayableRoundingAmount) som gjelder hele fakturaen/kreditnotaen og er med i beregningen av totalen TaxInclusiveAmount.   Elementet benyttes kun for å få en «kosmetisk penere» fakturatotal.
+
+Eks.  Kr.  999.81 avrundes til kr. 1000.   PayableRounding Amount = 0.19.
+
+== Eksempel på avrunding
+
+* Faktura med  3 fakturalinjer:
+** Linje 1:  24 stk av vare A.  Kr. 51.304 pr. stk og 10% rabatt. 25% MVA.
+** Linje 2:  15 stk av vare B.  Kr. 44.7823 pr. stk og 15% rabatt. 25 % MVA.
+** Linje 3:  21 stk av vare C.  Kr. 134.95 pr. stk og 24.45 % rabatt. 15% MVA.
+* Totalrabatt: 2.35 %
+* Frakt:  100.345
+* Forhåndsbetalt:  100
+* Avrunding: -0.36
+
+== Innhold i beløpselementer
+
+[cols="1,*,1,6*", options="header"]
+|===
+| Linje
+| Pris
+| Antall
+| Rabatt
+| Pris * antall, avr
+| Rabatt beløp, ar
+| Linjetotal
+| MVA %
+
+| 1
+| 51,304
+| 24
+| 10 %
+| 1231,3
+| 123,13
+>| 1108,17
+| 25 %
+
+| 2
+| 44,7823
+| 15
+| 15 %
+| 671,73
+| 100,76
+>| 570,97
+| 25 %
+
+| 3
+| 134,95
+| 21
+| 24,45 %
+| 2833,95
+| 692,9
+>| 2141,05
+| 15 %
+
+| Total
+|
+|
+|
+|
+|
+>s| 3820,19
+|
+|===
+
+[cols="5,1,2", options="header"]
+|===
+
+| AllowanceCharge (Invoice)
+|
+|
+
+| Totalrabatt (25% mva)
+| 2,35 %
+| 89,774465
+
+| Frakt (25% mva)
+|
+| 100,345
+|===
+
+
+[cols="2,>2,>2,>2,>2", options="header"]
+|===
+
+| AvgKat
+| MVA grl
+| %
+| Kalkulert MVA
+| Merverdiavgiftsbeløp pr. avgiftskategori
+
+| S  | 1689,72 | 25 % | 422,43 | 422,43
+| H  | 2141,05 | 15 % | 321,1575 | 321,16
+| Totalbeløp merverdiavgift s| 3830,77 | | 743,5875 s| 743,59
+|===
+
+[cols="5,>2"]
+|===
+s| Totalbeløp på linjer >| 3820,19
+s| Totalbeløp eksklusiv merverdiavgift >| 3830,77
+s| Totalbeløp inklusiv merverdiavgift >| 4574,00
+s| Totalbeløp rabatt >| 89,77
+s| Totalbeløp gebyr >| 100,35
+s| Forhåndsbetalt beløp >| 100,00
+s| Avrundingsbeløp >| -0,36
+s| Betalingsbeløp >| 4474,00
+|===
+
+### XML for rabatt og gebyr på dokumentnivå
+
+[source,xml]
+----
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>2.35% Totalrabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">89.7744</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.345</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+----
+
+=== XML for merverdiavgift på dokumentnivå
+
+[source,xml]
+----
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="NOK">743,59</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">1689.72</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">422.43</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">2141.05</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">321.16</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">H</cbc:ID>
+      <cbc:Percent>15.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+</cac:TaxTotal>
+----
+
+=== XML for totaler på dokumentnivå
+
+[source,xml]
+----
+<cac:LegalMonetaryTotal>
+  <cbc:LineExtensionAmount currencyID="NOK">3820.19</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="NOK">3830.77</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="NOK">4574.00</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="NOK">89.77</cbc:AllowanceTotalAmount>
+  <cbc:ChargeTotalAmount currencyID="NOK">100.35</cbc:ChargeTotalAmount>
+  <cbc:PrepaidAmount currencyID="NOK">100.00</cbc:PrepaidAmount>
+  <cbc:PayableRoundingAmount currencyID="NOK">-0.36</cbc:PayableRoundingAmount>
+  <cbc:PayableAmount currencyID="NOK">4474.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+----
+
+=== XML for fakturalinjer
+
+[source,xml]
+.Linje 1
+----
+<cbc:ID>1</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">24.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">1108.17</cbc:LineExtensionAmount>
+<cbc:AccountingCost>123</cbc:AccountingCost>
+<cac:OrderLineReference>
+  <cbc:LineID>1</cbc:LineID>
+</cac:OrderLineReference>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>10% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">123.1296</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:Item>
+  <cbc:Name>Vare A</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>AAA</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:ClassifiedTaxCategory>
+    <cbc:ID schemeID=" UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:ClassifiedTaxCategory>
+</cac:Item>
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">51.304</cbc:PriceAmount>
+</cac:Price>
+----
+
+[source,xml]
+.Linje 2
+----
+<cbc:ID>2</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">570.97</cbc:LineExtensionAmount>
+<cbc:AccountingCost>123</cbc:AccountingCost>
+<cac:OrderLineReference>
+  <cbc:LineID>2</cbc:LineID>
+</cac:OrderLineReference>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>15% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.760175</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:Item>
+   <cbc:Name>Vare B</cbc:Name>
+   <cac:SellersItemIdentification>
+     <cbc:ID>BBB</cbc:ID>
+   </cac:SellersItemIdentification>
+  <cac:ClassifiedTaxCategory>
+     <cbc:ID schemeID=" UNCL5305">S</cbc:ID>
+     <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+       <cbc:ID>VAT</cbc:ID>
+     </cac:TaxScheme>
+   </cac:ClassifiedTaxCategory>
+</cac:Item>
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">44.7823</cbc:PriceAmount>
+</cac:Price>
+----
+
+[source,xml]
+.Linje 3
+----
+<cbc:ID>3</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">21.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">2141.05</cbc:LineExtensionAmount>
+<cbc:AccountingCost>123</cbc:AccountingCost>
+<cac:OrderLineReference>
+  <cbc:LineID>2</cbc:LineID>
+</cac:OrderLineReference>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+<cbc:AllowanceChargeReason>24.45% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">692.9007</cbc:Amount>
+</cac:AllowanceCharge>
+<cac:Item>
+  <cbc:Name>Vare C</cbc:Name>
+  <cac:SellersItemIdentification>
+    <cbc:ID>CCC</cbc:ID>
+  </cac:SellersItemIdentification>
+  <cac:ClassifiedTaxCategory>
+    <cbc:ID schemeID=" UNCL5305">H</cbc:ID>
+    <cbc:Percent>15.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:ClassifiedTaxCategory>
+</cac:Item>
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">134.95</cbc:PriceAmount>
+</cac:Price>
+----

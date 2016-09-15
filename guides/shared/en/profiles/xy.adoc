@@ -1,0 +1,23 @@
+= Profile XY - Invoice, Credit Note and Reminder
+
+ProfileID::
+urn:www.cenbii.eu:profile:biixy:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Role
+
+| Invoice
+| urn:www.cenbii.eu:transaction:biitrns010:ver2.0 :extended:urn:www.cenbii.eu:profile.eu:biixy:ver2.0 :extended:urn:www.difi.no:ehf:faktura:ver2.0
+| Contracting Authority
+
+| Credit Note
+| urn:www.cenbii.eu:transaction:biitrns014:ver2.0 :extended:urn:www.cenbii.eu:profile:biixy:ver2.0 :extended:urn:www.difi.no:ehf:kreditnota:ver2.0
+| Contracting Authority
+
+| Reminder
+| NA
+| Contracting Authority
+|===

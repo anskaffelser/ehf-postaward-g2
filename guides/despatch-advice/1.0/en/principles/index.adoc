@@ -1,0 +1,17 @@
+= Principles and Prerequisites
+
+This chapter describes the principles and assumptions that underlie the use of EHF fulfillment process. This is basically similar to the CEN BII2 30  Dispatch Only.
+
+:leveloffset: +1
+
+include::general.adoc[]
+
+include::functionality-and-roles.adoc[]
+
+include::profiles-and-messages.adoc[]
+
+include::use-of-ubl-2.1.adoc[]
+
+include::fulfillment-process.adoc[]
+
+:leveloffset: -1

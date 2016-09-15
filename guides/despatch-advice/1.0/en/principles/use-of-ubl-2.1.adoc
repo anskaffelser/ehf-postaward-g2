@@ -1,0 +1,3 @@
+= Use of UBL 2.1
+
+This version of EHF Despatch Advice is based on UBL XML schema version 2.1.

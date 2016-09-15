@@ -1,0 +1,34 @@
+= Invoicing of Consumers (B2C)
+
+EHF Invoice 2.0 facilitates invoicing of consumers (B2C). This means that invoice issuers may use the EHF 2.0 format both for business customers and consumers.
+
+Transmission of an invoice to a consumer from an invoice issuer is performed by use of either secure digital post or the consumers «netbank» assuming that the issuer has an agreement.
+
+E-invoice reference must be placed in the ID element of  Additional DocumentReference. DocumentType must be set to  « elektroniskB2Cfaktura».  If secure digital post is used, the personal identity number (fødselsnummer) should be filled in the ID element.
+
+The buyer’s legal entity is not mandatory when “elektroniskB2Cfaktura” is given as documenttype.
+
+[source,xml]
+.Example, E-invoice reference
+----
+<cac:AdditionalDocumentReference>
+  <cbc:ID>147987</cbc:ID>
+  <cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+----
+
+In the consumers market automatic debit (Avtalegiro) is  widespread as payment method.
+
+[source,xml]
+.Example, electronic invoice B2C with  automatic debit (Avtalegiro)
+----
+<cac:PaymentMeans>
+  <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode> <1>
+  <cbc:PaymentDueDate>2014-07-25</cbc:PaymentDueDate>
+  <cbc:PaymentID>0265590215686</cbc:PaymentID>
+  <cac:PayeeFinancialAccount>
+    <cbc:ID schemeID="BBAN">51401099999</cbc:ID>
+  </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+----
+<1> PaymentMeansCode: 3 (Automated clearing house debit)

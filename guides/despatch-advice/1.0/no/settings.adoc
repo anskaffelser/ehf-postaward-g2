@@ -1,0 +1,9 @@
+:lang: no
+
+include::../settings.adoc[]
+
+:doctitle: EHF Pakkseddel
+
+:date-review: 15. august 2016
+:date-release: 15. september 2016
+:date-mandatory: 15. september 2016

@@ -1,0 +1,29 @@
+= Delivery Details (Date and Location)
+
+Delivery details may be given at document (Mandatory) or line level (Optional).
+
+Delivery date should allways be sent, exept for delivery by forwarder, post or the like. See further details in The bookkeeping regulation (bokføringsforskriften) § 5-1-4.
+
+Place of delivery is recommended, and should be sent unless the place of delivery does not affect the ability to ensure the correctness of the invoice. Examples of this can be invoices covering services like investigations and legal assistance. See also NOU 2002:20 point 9.4.1.4.
+
+The delivery element contains an identifer (DeliveryLocation/ID) which may be used if the place of delivery is  defined through an identifier.  Examples are GLN (Global Location Number) or GSRN (Global Service Relationship Number) both issued by GS1.  GSRN is used in the norwegian market for identifying  measuring points in the energy sector.  Ref. appendix 7.
+
+[source,xml]
+.Example
+----
+<cac:Delivery>
+  <cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>
+  <cac:DeliveryLocation>
+    <cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+    <cac:Address>
+      <cbc:StreetName>Storgata</cbc:StreetName>
+      <cbc:BuildingNumber>12</cbc:BuildingNumber>
+      <cbc:CityName>Bergen</cbc:CityName>
+      <cbc:PostalZone>5000</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:Address>
+  </cac:DeliveryLocation>
+</cac:Delivery>
+----

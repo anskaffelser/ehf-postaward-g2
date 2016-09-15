@@ -1,0 +1,8 @@
+.Editorielle endringer:
+* Korrigert eksempel kapittel 6.6
+
+.Validator endring: 
+* Korrigering av regel NOGOV-T19-R002 for tidssoner
+
+.Forfatter:
+* Siw Meckelborg, Edisys Consulting AS

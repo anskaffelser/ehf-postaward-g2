@@ -1,0 +1,49 @@
+= Version 1.x [[changelog-1.x]]
+
+:sectnums!:
+
+== Version 1.0.4 (2016-09-15) [[changelog-1.0.4]]
+
+include::2016-09-15-1.0.4.adoc[]
+
+
+== Version 1.0.3 (2016-05-23) [[changelog-1.0.3]]
+
+include::2016-05-23-1.0.3.adoc[]
+
+
+== Version 1.0.2 (2015-09-01) [[changelog-1.0.2]]
+
+.Changes in validator:
+* Update of PEPPOL and BII validation artefacts
+* Empty elements will generate error, not warning (rule NOGOV-T16-R011)
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Version 1.0.1 (2015-03-07) [[changelog-1.0.1]]
+
+.Validation changes:
+* Validation of all mandatory and recommended elements.
+* Validation of datatypes (VAT number, date etc.)
+* Only organisational numbers are valid in EndpointID.
+
+.Editorial changes:
+* Added ruleID to message table
+* Adding Dependant to description of elements.
+* Added chapter 2.1 and new chapter 3.3
+* Update of chapter 8.3
+
+.Author:
+* Siw Meckelborg, Edisys Consulting AS
+
+
+== Version 1.0.0 (2013-10-10) [[changelog-1.0.0]]
+
+Approved
+
+.Author:
+* Edisys Consulting AS
+
+:sectnums:

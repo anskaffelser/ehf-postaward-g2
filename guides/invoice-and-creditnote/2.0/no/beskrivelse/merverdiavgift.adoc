@@ -1,0 +1,50 @@
+= Merverdiavgift
+
+MVA kategorier og satser pr. 1. juli 2013 for bruk  i Norge er spesifisert i tabellen under. Bruk av andre MVA kategorier enn disse medfører at EHF instansdokumentet avvises ved validering.
+
+include::../{shared-dir}/partial/mva.adoc[]
+
+MVA kategori må angis på linjenivå. På hodenivå angis MVA grunnlaget, MVA satsen samt MVA beløpet  pr. MVA kategori  samt totalt MVA beløp.
+
+Ref kapittel 6.3.3.3 for eksempel ang. XML for MVA.
+
+== Fakturering i annen valuta
+
+Dersom fakturaen er utstedt i annet enn selgers nasjonale/lokale valuta, kan det være ønskelig å angi MVA informasjon både i transaksjonsvaluta og i lokal valuta.
+
+MVA beløp i transaksjonsvaluta angis i elementet cac:TaxTotal/cbc:TaxAmount. Selve valutakoden angis i cbc:DocumentCurrency.  MVA beløp pr. MVA kategori i lokal valuta angis i elementet cbc:TransactionCurrencyTaxAmount. Valutakoden angis i cbc:TaxCurrency.
+
+Beregningene mellom transaksjonsvaluta og lokalvaluta vises i komposittelementet cac:TaxExchangeRate.
+
+I eksempelet under viser vi hvordan disse elementene fylles ut dersom fakturaen er utstedt i EUR, mens lokal valuta er NOK, og med en kurs på 8,3804:
+
+[source,xml]
+----
+....
+<cbc:DocumentCurrencyCode listID="ISO4217">EUR</cbc:DocumentCurrencyCode>
+<cbc:TaxCurrencyCode listID="ISO4217">NOK</cbc:TaxCurrencyCode>
+....
+<cac:TaxExchangeRate>
+  <cbc:SourceCurrencyCode listID="ISO4217">EUR</cbc:SourceCurrencyCode>
+  <cbc:TargetCurrencyCode listID="ISO4217">NOK</cbc:TargetCurrencyCode>
+  <cbc:CalculationRate>8.3804</cbc:CalculationRate>
+  <cbc:MathematicOperatorCode>Multiply</cbc:MathematicOperatorCode>
+  <cbc:Date>2014-02-20</cbc:Date>
+</cac:TaxExchangeRate>
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="EUR">900.00</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="EUR">225.00</cbc:TaxAmount>
+    <cbc:TransactionCurrencyTaxAmount currencyID="NOK">1885.59</cbc:TransactionCurrencyTaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+</cac:TaxTotal>
+...
+----

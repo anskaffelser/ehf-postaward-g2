@@ -1,0 +1,9 @@
+= Catalogue Response
+
+The Catalogue Response message is part of the Catalogue process described in chapter 5.4. The Catalogue Response is sent from the Catalogue Receiver/Buyer to the Catalogue Provider/Supplier as a business receipt stating that the Catalogue is accepted or rejected.
+
+In other words, this is not a technical receipt only stating that the catalogue message is received.
+
+The Catalogue itself will not be returned from buyer to supplier. If a Catalogue message is rejected, a new corrected Catalogue must be sent.
+
+If the exchange involves the use of a Catalogue tool, this may include a more advanced dialogue between buyer and supplier than described here.

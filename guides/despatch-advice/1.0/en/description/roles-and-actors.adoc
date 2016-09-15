@@ -1,0 +1,130 @@
+= Roles and Actors
+
+The following roles may be specified in the format. The same actor may play more than one role depending on the handling routine.
+
+Consignee (UBL:DeliveryCustomerParty)::
+The consignee is the person or organization to which the products will be shipped and who is taking possession. The role is carried out by the customer or on behalf of the customer. +
+Consignee is mandatory information in EHF.
+
+Despatch Party (UBL:DespatchSupplierParty)::
+The Despatch Party is the person or organization who provides (despatch) the goods or services. The role is carried out by the supplier or on behalf of the supplier. +
+(Despatch Party is sometimes known as the Consignor) +
+Despatch party is mandatory information in EHF.
+
+Buyer (UBL:BuyerCustomerParty)::
+The buyer is the legal person or organization who buys or purchases the goods or services. The role is carried out by the customer or on behalf of the customer. +
+Buyer is optional information in EHF.
+
+Seller (UBL:SellerSupplierParty)::
+The seller is the legal person or organization who sells goods or services to the customer. The role is carried out by the supplier or on behalf of the supplier. +
+Seller is optional information in EHF.
+
+Originating party (UBL:OriginatorCustomerParty)::
+The party who will eventually receive and consume the goods and on whose behalf the buyer makes the purchase. +
+Originating party is optional information in EHF.
+
+[source]
+.Example: Consignee information in in an EHF Despatch advice message.
+----
+<cac:DeliveryCustomerParty>
+  <cac:Party>
+  <cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000435944</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Reciever Company</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:ID>25</cbc:ID>
+      <cbc:StreetName>Reciever Street 1</cbc:StreetName>
+      <cbc:AdditionalStreetName>Reciever Building</cbc:AdditionalStreetName>
+      <cbc:CityName>Reciever City</cbc:CityName>
+      <cbc:PostalZone>9000</cbc:PostalZone>
+      <cbc:CountrySubentity>Region A</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID=”ISO3166-1:Alpha2”>NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+  </cac:Party>
+  <cac:DeliveryContact>
+    <cbc:Name>Tim</cbc:Name>
+    <cbc:Telephone>987654321</cbc:Telephone>
+    <cbc:Telefax>4546474849</cbc:Telefax>
+    <cbc:ElectronicMail>Tim@RecieverCompany.no</cbc:ElectronicMail>
+  </cac:DeliveryContact>
+</cac:DeliveryCustomerParty>
+----
+
+[source]
+.Example: Information regarding the Despatch party in a EHF Despatch advice message.
+----
+<cac:DespatchSupplierParty>
+  <cac:Party>
+  <cbc:EndpointID schemeID="NO:ORGNR">954321376</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN" >5790000435968</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Sender Company</cbc:Name>
+    </cac:PartyName>
+    <cac:Contact>
+      <cbc:Name>John</cbc:Name>
+      <cbc:Telephone>123456789</cbc:Telephone>
+      <cbc:Telefax>8273741728</cbc:Telefax>
+      <cbc:ElectronicMail>John@SenderCompany.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
+</cac:DespatchSupplierParty>
+----
+
+[source]
+.Example: Buyer information in a EHF Despatch advice message.
+----
+<cac:BuyerCustomerParty>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000436057</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Buyer Company</cbc:Name>
+    </cac:PartyName>
+  </cac:Party>
+</cac:BuyerCustomerParty>
+----
+
+[source]
+.Example: Seller information in a EHF Despatch advice message.
+----
+<cac:SellerSupplierParty>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000435951</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Seller Company</cbc:Name>
+    </cac:PartyName>
+    <cac:Contact>
+      <cbc:Name>Allan</cbc:Name>
+      <cbc:Telephone>43444546</cbc:Telephone>
+      <cbc:Telefax>12345678</cbc:Telefax>
+      <cbc:ElectronicMail>Allan@SellerCompany.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
+</cac:SellerSupplierParty>
+----
+
+[source]
+.Example: Originator party in a EHF Despatch advice message.
+----
+<cac:OriginatorCustomerParty>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">5790000436057</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Originator</cbc:Name>
+    </cac:PartyName>
+  </cac:Party>
+</cac:OriginatorCustomerParty>
+----

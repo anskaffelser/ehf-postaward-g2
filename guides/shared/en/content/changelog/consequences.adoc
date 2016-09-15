@@ -1,0 +1,8 @@
+= Consequences of Implementing this version
+
+Version {revision} is a revision of {doctitle} {minor}, and this version is backwards compatible to {doctitle} {minor}. This means that any instance documents valid towards {doctitle} {minor} is also valid in version {revision}. Please note that valid here reflects the validity against the implementation guide of {doctitle} {minor}, as this is the normative reference.
+
+
+== Registration in ELMA
+
+Invoice and creditnote receivers capable of receiving {doctitle} {minor} instance documents is also capable of receiving {doctitle} {revision}, so no change is needed in the registration in ELMA.

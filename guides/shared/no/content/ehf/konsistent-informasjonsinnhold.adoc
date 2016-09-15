@@ -1,0 +1,3 @@
+= Konsistent informasjonsinnhold
+
+De ulike EHF-formatene nevnt over, inneholder en del felles informasjonselementer.  (Leverandør, kunde, vare, etc).   Det er viktig at felles informasjon er konsistent i de ulike formatene.  Det vil si at elementer med identisk innhold er definert på samme måte og så langt det lar seg gjøre har samme navn. For eksempel vil EHF Fakturaformatene gjenbruke elementer fra katalog og ordre for å sikre konsistens på tvers av meldingene slik at innhold i disse transaksjonene reflekteres i fakturameldingene. På denne måten understøttes en effektiv og automatisert kontroll av faktura mot bakenforliggende transaksjoner.

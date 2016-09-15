@@ -1,0 +1,9 @@
+include::../../settings.adoc[]
+
+:minor: 1.0
+:revision: 1.0.4
+:release: {release}
+:status: {status}
+
+:shared-dir: ../../../shared/{lang}
+:cwd: despatch-advice/1.0/{lang}

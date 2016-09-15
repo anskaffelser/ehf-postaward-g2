@@ -1,0 +1,21 @@
+= Norske valideringsregler for faktura
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T10.xsl.adoc[]
+include::{rules-dir}/NONAT-UBL-T10.xsl.adoc[]
+|====
+
+= Norske valideringsregler for kreditnota
+
+[cols="1,4", options="header"]
+|====
+|Regel
+|Melding/Kontekst/Test
+
+include::{rules-dir}/NOGOV-UBL-T14.xsl.adoc[]
+include::{rules-dir}/NONAT-UBL-T14.xsl.adoc[]
+|====

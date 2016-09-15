@@ -1,0 +1,6 @@
+[appendix]
+= Strukturtabell [[vedlegg-strukturtabell]]
+
+Vedlagt er strukturtabell som gir en skjematisk oversikt for aktuelle meldinger.
+
+.Strukturtabeller

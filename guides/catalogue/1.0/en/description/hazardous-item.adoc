@@ -1,0 +1,25 @@
+= Hazardous Item
+
+If a product is classified as Hazardous item, a reference to the relevant UNDG-code must be stated and further specification must be provided in an attached document or on a web-site (URI).
+
+[source]
+.Example
+----
+<cac:HazardousItem>
+  <cbc:HazardClassID>H332</cbc:HazardClassID>
+</cac:HazardousItem>
+----
+
+[source]
+.If Hazardous
+----
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>1</cbc:ID>
+  <cbc:DocumentDescription languageID="en">HMS Safety sheet</cbc:DocumentDescription>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>http://www.klif.no/no/Tema/Kjemikalier/Klassifisering-og-merking-av-kjemikalier-CLP/Klassifisering-CLP-avsnitt-I-II-og-V/</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+----

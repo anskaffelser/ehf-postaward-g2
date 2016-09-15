@@ -1,0 +1,33 @@
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/125[#125]
+| Sjekker at alle beløp på dokumentnivå kun har to desimaler.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/114[#114]
+| Sjekker at et organisasjonsnummer er 9 siffer, dersom schemeID = NO:ORGNR.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/116[#116]
+| Sjekker at dersom det er oppgitt rabatt/gebyr på dokumentnivå, så finnes elementer for totale gebyrer/rabatter.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/133[#133]
+| Sjekker at det det er en TaxSubtotal per TaxCategory i TaxTotal. Implementert som advarsel og er identifisert som NOGOV-T10-R041 og NOGOV-T14-R041.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/99[#99]
+| Tydeliggjøring av bruk av deres ref.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/71[#71]
+| Tydeliggjøring av anbefaling om at PEPPOL BIS kun brukes dersom en av aktørene er utenlandske.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/135[#135]
+| Lav mva sats (kategori AA) endret fra 8 til 10% i kapittel 6.6.
+| Guide
+
+|===

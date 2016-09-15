@@ -1,3 +1,0 @@
-# Invoice Messages in General
-
-The electronic messages described in this implementation guide are Invoice and Credit note. The messages make it possible for the supplier to issue an invoice, send it to the customer and receive the agreed payment.

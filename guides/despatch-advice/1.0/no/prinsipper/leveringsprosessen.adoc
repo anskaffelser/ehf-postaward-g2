@@ -1,0 +1,15 @@
+= Leveringsprosessen
+
+Leveringsprosessen omfatter opprettelse og oversendelse av pakkseddel  fra leverandør til kunde samt mottak og behandling hos kunde.
+
+Leveringsprosessen kan beskrives ved følgende arbeidsflyt:
+
+.	En leverandør utsteder og sender en EHF pakkseddel til en kunde.  Pakkseddelen refererer til  EN ordre samt en spesifikasjon av leverte varer og tjenester.
+I tillegg inneholder pakkseddelen  informasjon om hvordan varene er pakket.
+.	Kunden mottar pakkseddelen og behandler denne i sitt varemottakssystem.  Informasjon i pakkseddel- meldingen kan benyttes til følgende:
+..	Oppdatering av ordre status.  Pakkseddelen inneholder referanse til ordren som leveransen gjelder slik at ordrelinjene kan oppdateres med antall levert og antall restnotert.
+..	Oppdatering av lagerbeholdning.  Pakkseddelen inneholder informasjon om varenummer og antall slik at lagerbeholdning kan oppdateres.
+
+Figuren under viser leveringsprosessen med bruk av EHF pakkseddel meldingen. Denne prosessen er basert på profil 30 i CENBII2 (BII30 – Dispatch only).
+
+image::images/leveringsprosessen.png[Leveringsprosessen, align="center"]

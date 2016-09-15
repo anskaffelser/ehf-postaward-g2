@@ -1,0 +1,7 @@
+= Funksjoner og roller
+
+Denne veilederen dekker kun utveksling av katalogen post-award, dvs. etter at avtale er inngått mellom leverandør og kjøper. Innholdsmessig vil katalogen også kunne brukes pre-award i en tilbudsfase, men da med andre krav til utfylling.
+
+Figurene under viser hvilke funksjoner dekkes av EHF Katalog og hvilke roller som inngår.
+
+image::images/funksjoner-og-roller.png[Funksjoner og roller, align="center"]

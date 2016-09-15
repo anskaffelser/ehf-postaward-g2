@@ -1,0 +1,3 @@
+= Despatch Advice Messages in General
+
+The electronic transaction described in this implementation guide is the despatch advice message. The Despatch Advice message is used in the fulfillment process by the supplier to notify the receiver about the despatch and delivery period for the goods being sent, as well as details about the goods for cross checking with the order and ultimately the despatch advice is used for declaring how the despatched goods are packed.

@@ -1,0 +1,155 @@
+= Allowances and Charges, General Rules
+
+. Several allowances and charges may be supplied both on header level and line level. For the Price element the validation routine will produce a warning if more than one occurrence of AllowanceCharge is present. The element AllowanceCharge with sub element AllowanceIndicator indicates whether the instance is a charge (true) or an allowance (false).
+. Specification of VAT for allowances and charges, AllowanceCharge/TaxCategory with sub elements,  may be supplied both on the header level and on the line level, but not for the Price element. Since allowances and charges on the Price element simply information, there is no VAT calculation on those.
+. The sum of all allowances and charges on the header level must be specified in AllowanceTotalAmount and ChargeTotalAmount respectively (Ref. chap.  6.2.1.1.3).
+. The sum of all allowances and charges on the line level must be taken into account, subtracted or added, when calculating the LineExtensionAmount . These line level allowances and charges must not be calculated into the header level elements.
+. Allowances and charges related to Price shall not be part of any other calculations.
+. Allowances and charges related to Price may specify amount (AllowanceCharge/Amount), base amount (AllowanceCharge/BaseAmount) and a multiplier (AllowanceCharge/MultiplierFactorNumeric).
+
+== Invoice
+
+The EHF Invoice format has elements for AllowanceCharge on 3 levels:
+
+. The header level, applies to the whole invoice and is included in the calculation of the invoice total amount.
+. The line level, applies to the line level and is included in the calculation of the line amount.
+. The line level Price element. Only a way to inform the buyer how the price is set. Is also relevant if the seller or buyer want to post the allowance or charge in their accounting systems.  The price itself shall always be the net price, i.e. the base amount  reduced/increased with AllowanceCharge/Amount.
+
+=== Example
+
+* Net invoice amount exclusive VAT: NOK 3450.  2 invoice lines:
+** Line 1:  10 units of item A.  NOK 100 per item and 10% discount.
+** Line 2:  15 units of item B.  NOK 200 per item and 15% discount.
+*** The price NOK 200 is included the campaign discount of 20% to illustrate the use of AllowanceCharge related to Price.
+* Total discount: 2 %
+* Invoice charge: NOK 75
+* Shipping cost: NOK 100
+
+==== XML for Allowances and Charges on the Header Level
+
+[source,xml]
+----
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Frakt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>Fakturagebyr</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">75.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>2% Totalrabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">69.00</cbc:Amount>
+  <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+    <cbc:Percent>25.00</cbc:Percent>
+    <cac:TaxScheme>
+      <cbc:ID>VAT</cbc:ID>
+    </cac:TaxScheme>
+  </cac:TaxCategory>
+</cac:AllowanceCharge>
+----
+
+==== XML for VAT on the Header Level
+
+[source,xml]
+----
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="NOK">3556.00</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="NOK">889.00</cbc:TaxAmount>
+    <cac:TaxCategory>
+    <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+      <cbc:Percent>25.00</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>VAT</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+</cac:TaxTotal>
+----
+
+==== XML for the Header Level Totals
+
+[source,xml]
+----
+<cac:LegalMonetaryTotal>
+  <cbc:LineExtensionAmount currencyID="NOK">3450.00</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="NOK">3556.00</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="NOK">4445.00</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="NOK">69.00</cbc:AllowanceTotalAmount>
+  <cbc:ChargeTotalAmount currencyID="NOK">175.00</cbc:ChargeTotalAmount>
+  <cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
+  <cbc:PayableAmount currencyID="NOK">4445.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+----
+
+==== XML for Allowances on the Line Level
+
+[source,xml]
+.Line 1
+----
+<cbc:ID>1</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">10.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">900.00</cbc:LineExtensionAmount>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>10% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
+</cac:AllowanceCharge>
+----
+
+[source,xml]
+.Line 2
+----
+<cbc:ID>2</cbc:ID>
+<cbc:InvoicedQuantity unitCode="NAR">15.00</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="NOK">2550.00</cbc:LineExtensionAmount>
+<cac:AllowanceCharge>
+  <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+  <cbc:AllowanceChargeReason>15% Rabatt</cbc:AllowanceChargeReason>
+  <cbc:Amount currencyID="NOK">450.00</cbc:Amount>
+</cac:AllowanceCharge>
+----
+
+==== XML for Allowances Releated to Price for Invoice Line 2
+
+[source,xml]
+----
+<cac:Price>
+  <cbc:PriceAmount currencyID="NOK">200.00</cbc:PriceAmount>
+  <cac:AllowanceCharge>
+    <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReason>20% Kampanjerabatt</cbc:AllowanceChargeReason>
+    <cbc:MultiplierFactorNumeric>0.200</cbc:MultiplierFactorNumeric>
+    <cbc:Amount currencyID="NOK">50.00</cbc:Amount>
+    <cbc:BaseAmount currencyID="NOK">250.00</cbc:BaseAmount>
+  </cac:AllowanceCharge>
+</cac:Price>
+----
+
+== Credit note
+
+The EHF Credit note format have elements for AllowanceCharge on 3 levels:
+
+. The header level.  Identical to the EHF Invoice format.
+. The line level.  Identical to the EHF Invoice format.
+. The line level Price element. Identical to the EHF Invoice format.

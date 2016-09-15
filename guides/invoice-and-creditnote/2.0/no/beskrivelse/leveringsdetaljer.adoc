@@ -1,0 +1,29 @@
+= Leveringsdetaljer (dato og sted)
+
+Leveringsdato og -sted (Delivery) kan angis både på dokument og linjenivå.
+
+Leveringsdato bør alltid spesifiseres, unntatt ved leveranse via speditør, post m.v, se nærmere spesifikasjon i bokføringsforskriften § 5-1-4.
+
+Leveringssted anbefales fylt ut, men kan utelates dersom stedet for levering ikke har betydning for å kunne vurdere transaksjonen. Eksempler kan være ved fakturering av tjenester som utredninger og juridisk bistand. Se også NOU 2002:20 punkt 9.4.1.4
+
+Elementet inneholder en identifikator (DeliveryLocation/ID) som kan benyttes dersom leveringsstedet er unikt definert gjennom en identifikator.  Eksempler på dette er GLN (Global Location Number) eller GSRN (Global Sevice Relationship Number) begge utgitt av GS1.  GSRN benyttes i det norske markedet til identifikasjon av Målepunkt ID i energi bransjen.  Ref. vedlegg 7 Veileder for energi bransjen.
+
+[source,xml]
+.Eksempel
+----
+<cac:Delivery>
+  <cbc:ActualDeliveryDate>2013-02-15</cbc:ActualDeliveryDate>
+  <cac:DeliveryLocation>
+    <cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+    <cac:Address>
+      <cbc:StreetName>Storgata</cbc:StreetName>
+      <cbc:BuildingNumber>12</cbc:BuildingNumber>
+      <cbc:CityName>Bergen</cbc:CityName>
+      <cbc:PostalZone>5000</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:Address>
+  </cac:DeliveryLocation>
+</cac:Delivery>
+----

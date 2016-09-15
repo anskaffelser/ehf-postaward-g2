@@ -1,0 +1,23 @@
+= Profil XY - Faktura, kreditnota og purring
+
+ProfileID::
+urn:www.cenbii.eu:profile:biixy:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Rolle
+
+| Faktura
+| urn:www.cenbii.eu:transaction:biitrns010:ver2.0 :extended:urn:www.cenbii.eu:profile.eu:biixy:ver2.0 :extended:urn:www.difi.no:ehf:faktura:ver2.0
+| Oppdragsgiver
+
+| Kreditnota
+| urn:www.cenbii.eu:transaction:biitrns014:ver2.0 :extended:urn:www.cenbii.eu:profile:biixy:ver2.0 :extended:urn:www.difi.no:ehf:kreditnota:ver2.0
+| Oppdragsgiver
+
+| Purring
+| NA
+| Oppdragsgiver
+|===

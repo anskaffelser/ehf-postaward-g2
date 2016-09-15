@@ -1,0 +1,72 @@
+=	Aksjonskode
+
+Aksjonskode (ActionCode) er en instruksjonskode som angir hvordan varekatalogen skal behandles i det mottagende system. Aksjonskode kan benyttes på hodenivå eller på linjenivå.
+
+.Anbefalinger:
+* Det anbefales kun å benytte aksjonskoder på hodenivå hvis ikke annet er eksplisitt avtalt mellom avsender og mottager.
+* Ved endringer anbefales det å bruke Replace og erstatte hele katalogen.
+
+.Retningslinjer for utfylling:
+* Aksjonskode må sendes og være utfylt enten på hodenivå eller linjenivå. Dersom Aksjonskode mangler vil hele katalogen bli avvist.
+* Når det er benyttet aksjonskode på hodenivå, vil den overstyre eventuelle aksjonskoder som sendes på linjenivå.
+* Hvis det ikke sendes aksjonskode på hodenivå, er det obligatorisk med aksjonskode på alle kataloglinjene.
+* Aksjonskoden kan ha følgende verdier: Add, Replace, Update og Delete.
+
+[cols="1h,6", options="header"]
+.Aksjonskode utfylt på hodenivå:
+|===
+
+| Aksjonskode
+| Behandling
+
+| Add
+| Ny katalog med alle tilhørende linjer blir opprettet. Hvis katalogen eksisterer fra før skal meldingen avvises av mottakende system.
+
+| Replace
+| Hele den gamle katalogen erstattes av den nye. Mottakende system bør arkivere den gamle katalogen. Hvis katalogen ikke eksisterer skal meldingen avvises av mottakende system.
+
+| Update
+| De kataloglinjer som sendes skal oppdateres i eksisterende katalog. Mottakende system bør arkivere den gamle katalogen. Hvis katalogen ikke eksisterer skal meldingen avvises av mottakende system.
+
+| Delete
+| Hele katalogen skal slettes. Hvis katalogen ikke eksisterer skal meldingen avvises av mottakende system.
+
+|===
+
+[cols="1h,6", options="header"]
+.Aksjonskode utfylt på linjenivå:
+|===
+
+| Aksjonskode
+| Behandling
+
+| Add
+| Ny kataloglinje blir opprettet. Hvis linjen eksisterer skal hele katalogen avvises.
+
+| Update
+| Hele kataloglinjen erstattes med den nye. Hvis linjen ikke eksisterer i gjeldende katalog skal hele katalogen avvises.
+
+| Delete
+| Kataloglinjen slettes. Hvis linjen ikke eksisterer skal hele katalogen avvises.
+
+|===
+
+Respons tilbake til avsender håndteres som beskrevet under 3.3 Katalogprosess.
+
+[source]
+.Eksempel på utfylling av aksjonskode på hodenivå.
+----
+<cac:Catalogue>
+  ...
+  <cbc:ActionCode listID="ACTIONCODE:PEPPOL">Add</cbc:ActionCode>
+  ...
+----
+
+[source]
+.Eksempel på utfylling av aksjonskode på linjenivå.
+----
+<cac:CatalogueLine>
+  <cbc:ID>12345</cbc:ID>
+  <cbc:ActionCode listID="ACTIONCODE:BII2">Update</cbc:ActionCode>
+  ...
+----

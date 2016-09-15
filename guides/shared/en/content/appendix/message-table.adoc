@@ -1,0 +1,6 @@
+[appendix]
+= Message table [[appendix-message-table]]
+
+Attached is complete message table for the document types.
+
+.Message Tables

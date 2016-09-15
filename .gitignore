@@ -1,3 +1,6 @@
 *.log
 *.iml
 target
+main.html
+main.pdf
+main.epub

@@ -1,0 +1,103 @@
+= Roles and Actors
+
+The following roles are defined in EHF Order. These roles can either be hold by the same physical actor of by different actors depending on how the order processing is organized.
+
+The type of Party ID that is used shall be defined in the schemeID according to code list in defined in the «Peppol Policy for use of identifiers». The following codes are relevant for use in Norway:
+
+[cols="2,5", options="header"]
+|===
+| Scheme ID
+| Scheme Agency
+
+| GLN
+| GS1
+
+| NO:ORGNR
+| Enhetsregisteret ved Brønnøysundregisterne
+
+| NO:VAT
+| Enhetsregisteret ved Brønnøysundregisterne
+
+| ZZZ
+| Unknown issuer agency
+|===
+
+ZZZ is to be used for internal customerid’s or supplierid’s.
+
+[cols="3,5", options="header"]
+|===
+| Role
+| Description
+
+| Buyer (BuyerCustomerParty)
+| The party buying products or services. Mandatory.
+
+| Originator (OriginatorCustomerParty)
+| The unit initiating the order. Most often the end user.
+
+| Invoicee (AccountingCustomerParty)
+| The invoice receiver can be stated in the order.
+
+| Seller (SellerSupplierParty)
+| The party receiving an order from Buyer. Mandatory.
+|===
+
+[source]
+.Example of supplier information on header level in a EHF Order message
+----
+<cac:SellerSupplierParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">976502132</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">12345</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>WENAAS AS</cbc:Name>
+    </cac:PartyName>
+    <cac:PartyLegalEntity>
+      <cbc:RegistrationName/>
+      <cbc:CompanyID schemeID="NO:ORGNR">976502132</cbc:CompanyID>
+    </cac:PartyLegalEntity>
+    <cac:Contact>
+      <cbc:ID>Unknown</cbc:ID>
+      <cbc:Name/>
+      <cbc:Telephone/>
+      <cbc:ElectronicMail/>
+    </cac:Contact>
+  </cac:Party>
+</cac:SellerSupplierParty>
+----
+
+[source]
+.Example of buyer information on header level in a EHF Order message.
+----
+<cac:BuyerCustomerParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">984661185</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="GLN">7080000555134</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Posten Norge As</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress>
+      <cbc:StreetName>BISKOP GUNNERUS' GATE 14</cbc:StreetName>
+      <cbc:CityName>OSLO</cbc:CityName>
+      <cbc:PostalZone>0185</cbc:PostalZone>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:PartyLegalEntity>
+      <cbc:CompanyID schemeID="NO:ORGNR">984661185</cbc:CompanyID>
+    </cac:PartyLegalEntity>
+    <cac:Contact>
+      <cbc:ID>3150bdn</cbc:ID> <1>
+      <cbc:Name>Johansen, Pat</cbc:Name>
+      <cbc:Telephone>91508465</cbc:Telephone>
+      <cbc:ElectronicMail>pat.johansen@posten.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
+</cac:BuyerCustomerParty>
+----
+<1> Contact/ID is recommended to use. This is an extension to BII Core.

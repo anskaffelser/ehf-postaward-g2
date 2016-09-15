@@ -1,0 +1,17 @@
+= Erstatningsvare
+
+En erstatningsvare er en vare som erstatter en eksisterende vare som går ut av sortimentet. Dette gjøres ved at eksisterende/gammel vare angis som erstattet (replaced) på den nye varen.
+
+[source]
+.Eksempel på utfylling i EHF katalog:
+----
+<cac:CatalogueLine>
+  ...
+  <cac:ReplacedRelatedItem>
+    <cbc:ID>12345</cbc:ID>
+    <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">5</cbc:Quantity>
+    <cbc:Description languageID ="no">Toner B (erstattes av Toner C)</cbc:Description>
+  </cac:ReplacedRelatedItem>
+  ...
+</cac:CatalogueLine>
+----

@@ -1,0 +1,9 @@
+[IMPORTANT]
+====
+This document is an **early edition** of {doctitle} {revision}.
+Further changes may be expected to this document until the final edition is published.
+
+This version is expected to be mandatory as of **{date-mandatory}** after review starting no later than **{date-review}**.
+
+Please consult our portal link:{link-portal}[VEFA] for final dates and editions.
+====

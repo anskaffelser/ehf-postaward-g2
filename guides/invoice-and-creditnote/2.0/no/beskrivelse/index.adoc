@@ -1,0 +1,45 @@
+= Beskrivelse av utvalgte deler
+
+Nedenfor følger beskrivelse av utvalgte deler av informasjonsinnholdet i {doctitle}.  Komplett informasjonsinnhold er listet i tabellene i kapittel 7.
+
+:leveloffset: +1
+
+include::roller-og-aktorer.adoc[]
+
+include::rabatter-og-gebyrer.adoc[]
+
+include::pris-og-linjesum.adoc[]
+
+include::avrunding.adoc[]
+
+include::leverandor-og-kjoperreferanse.adoc[]
+
+include::merverdiavgift.adoc[]
+
+include::saeravgift.adoc[]
+
+include::ordre-bestillingsnummer.adoc[]
+
+include::kontraktsnummer.adoc[]
+
+include::konteringsstrengen.adoc[]
+
+include::vedleggshandtering.adoc[]
+
+include::andre-dokumentreferanser.adoc[]
+
+include::fakturering-av-forbrukere-b2c.adoc[]
+
+include::leveringsdetaljer.adoc[]
+
+include::leverandorens-mva-nummer.adoc[]
+
+include::utfylling-av-bankkontonummer.adoc[]
+
+include::endepunktid-organisasjonsnummer.adoc[]
+
+include::selgers-mva-representant.adoc[]
+
+include::valgfrie-felt.adoc[]
+
+:leveloffset: -1

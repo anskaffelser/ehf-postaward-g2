@@ -1,0 +1,5 @@
+= Funksjoner og roller
+
+Figuren under viser hvilke  roller som inngår i leveringsprosessen.
+
+image::images/funksjoner-og-roller.png[Funksjoner og roller, align="center"]
