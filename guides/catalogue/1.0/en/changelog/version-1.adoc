@@ -2,6 +2,11 @@
 
 :sectnums!:
 
+== Version 1.0.6 (2016-11-15) [[changelog-1.0.6]]
+
+include::2016-11-15-1.0.6.adoc[]
+
+
 == Version 1.0.5 (2016-09-15) [[changelog-1.0.5]]
 
 include::2016-09-15-1.0.5.adoc[]
@@ -13,7 +18,7 @@ include::2016-09-15-1.0.5.adoc[]
 * Example in chapter 6.6, addition or chapter 6.6.1
 
 .Validator change:
-* Correct rule NOGOV-T19-R002 to allow for Z as timezone indicator 
+* Correct rule NOGOV-T19-R002 to allow for Z as timezone indicator
 
 .Author:
 * Siw Meckelborg, Edisys Consulting AS

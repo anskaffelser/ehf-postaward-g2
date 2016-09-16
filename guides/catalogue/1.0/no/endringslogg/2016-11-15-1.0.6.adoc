@@ -1,0 +1,13 @@
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
+| Skrive om regel NOGOV-T19-R001.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
+| Legge til manglende liste over NOGOV-regler for katalog..
+| Guide
+
+|===

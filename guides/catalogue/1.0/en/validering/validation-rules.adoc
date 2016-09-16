@@ -5,10 +5,8 @@
 |Rule
 |Message/Context/Test
 
-//include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
 |====
-
-Extraction of rules is currently not working as exptected. To be fixed in next release.
 
 = Norwegian Rules for Catalogue Response
 
