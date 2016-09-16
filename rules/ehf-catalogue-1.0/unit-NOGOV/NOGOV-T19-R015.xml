@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t19-01-1.0">
+	<assert>
+		<scope>NOGOV-T19-R015</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Verify valid organization number on EndpointID throws no error.</description>
+			<success>NOGOV-T19-R015</success>
+		</assert>
+		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
+
+			<cac:ProviderParty>
+				<cbc:EndpointID>987654321</cbc:EndpointID>
+			</cac:ProviderParty>
+
+		</Catalogue>
+	</test>
+	<test>
+		<assert>
+			<description>Verify non-valid organization number on EndpointID throws error.</description>
+			<error number="3">NOGOV-T19-R015</error>
+		</assert>
+		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
+
+			<cac:ProviderParty>
+				<cbc:EndpointID>987 654 321</cbc:EndpointID>
+				<cbc:EndpointID>987.654.321</cbc:EndpointID>
+				<cbc:EndpointID>9876543210</cbc:EndpointID>
+			</cac:ProviderParty>
+
+		</Catalogue>
+	</test>
+</testSet>
