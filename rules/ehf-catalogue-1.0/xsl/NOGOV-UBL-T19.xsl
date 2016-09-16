@@ -7,8 +7,8 @@
     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
     xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
     xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" version="2.0">
-    <!--Implementers: please note that overriding process-prolog or process-root is 
-    the preferred method for meta-stylesheets to use where possible. 	
+    <!--Implementers: please note that overriding process-prolog or process-root is
+    the preferred method for meta-stylesheets to use where possible.
 	Oppdatert 02.10.2013 GuS-->
 
     <axsl:param name="archiveDirParameter" tunnel="no"/>
@@ -89,7 +89,7 @@
             <axsl:text/>/@<axsl:value-of select="name(.)"/></axsl:if>
     </axsl:template>
     <!--MODE: SCHEMATRON-FULL-PATH-3-->
-    <!--This mode can be used to generate prefixed XPath for humans 
+    <!--This mode can be used to generate prefixed XPath for humans
 	(Top-level element has index)-->
 
     <axsl:template match="node() | @*" mode="schematron-get-full-path-3">
@@ -205,15 +205,14 @@
     <axsl:template match="/ubl:Catalogue" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Catalogue"/>
 
-  
+
         <!-- ASSERT -->
 
         <axsl:choose>
-            <axsl:when test="string-length(cbc:ActionCode) &gt;0"> </axsl:when>
-            <axsl:when test="not(cac:CatalogueLine[cbc:ActionCode =''])"> </axsl:when>
+            <axsl:when test="cbc:ActionCode or count(cac:CatalogueLine/cbc:ActionCode) = count(cac:CatalogueLine)"> </axsl:when>
             <axsl:otherwise>
                 <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                    test="cbc:ActionCode ='' and cac:CatalogueLine[cbc:Actioncode !='']">
+                    test="cbc:ActionCode or count(cac:CatalogueLine/cbc:ActionCode) = count(cac:CatalogueLine)">
                     <axsl:attribute name="flag">fatal</axsl:attribute>
                     <axsl:attribute name="location">
                         <axsl:apply-templates select="." mode="schematron-get-full-path-3"/>
@@ -223,7 +222,7 @@
             </axsl:otherwise>
         </axsl:choose>
 
-     
+
         <!-- ASSERT -->
 
         <axsl:choose>
@@ -240,7 +239,7 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="(cbc:UBLVersionID != '')"/>
@@ -254,8 +253,8 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
-        
+
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="cac:ValidityPeriod"/>
@@ -269,7 +268,7 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="cbc:VersionID"/>
@@ -283,7 +282,7 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <!--check that node is not empty, or only contains comments-->
@@ -298,18 +297,18 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-        
 
-    
+
+
     <!--RULE -->
-    
+
     <axsl:template match="cac:Catalogue/cac:ValidityPeriod" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:Catalogue/cac:ValidityPeriod"/>
-        
-        
+
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="cbc:StartDate"/>
@@ -323,16 +322,16 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
-    
+
     <axsl:template match="cac:ReceiverParty" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ReceiverParty"/>
-        
-        
+
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="cbc:EndpointID"/>
@@ -346,16 +345,16 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
-    
+
     <axsl:template match="cac:SellerSupplierParty/cac:Party" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:SellerSupplierParty"/>
-        
-        
+
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="cbc:EndpointID"/>
@@ -369,14 +368,14 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
     <axsl:template match="cac:ProviderParty/cbc:EndpointID" priority="1000" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ProviderParty/cbc:EndpointID"/>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="@schemeID = 'NO:ORGNR'"/>
@@ -390,7 +389,7 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
@@ -404,16 +403,16 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
 
-    
+
+
     <!--RULE -->
     <axsl:template match="cac:ReceiverParty/cbc:EndpointID" priority="1000" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:ReceiverParty/cbc:EndpointID"/>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="@schemeID = 'NO:ORGNR'"/>
@@ -427,7 +426,7 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="(string(.) castable as xs:integer) and (string-length(.) = 9)"/>
@@ -441,11 +440,11 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
-    
+
+
     <!--RULE -->
     <axsl:template match="//cac:TaxScheme" priority="1012" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxScheme"/>
@@ -464,17 +463,17 @@
         </axsl:choose>
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
-    
+
     <axsl:template match="cac:CatalogueLine" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine"/>
-        
-        
+
+
         <!-- ASSERT -->
-        
+
         <axsl:choose>
-            <axsl:when test="cbc:OrderableIndicator"/> 
+            <axsl:when test="cbc:OrderableIndicator"/>
             <axsl:otherwise>
                 <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                     test="cbc:OrderableIndicator">
@@ -486,11 +485,11 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-      
+
     <!-- ASSERT -->
-    
+
     <axsl:choose>
-        <axsl:when test="cac:Item"/> 
+        <axsl:when test="cac:Item"/>
         <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                 test="cac:Item">
@@ -504,17 +503,17 @@
     </axsl:choose>
     <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
-    
+
+
     <!--RULE-->
     <axsl:template match="cac:CatalogueLine/cac:Item" priority="1010" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:CatalogueLine/cac:Item"/>
-        
-        
+
+
         <!-- ASSERT -->
-        
+
         <axsl:choose>
-            <axsl:when test="cbc:Name"/> 
+            <axsl:when test="cbc:Name"/>
             <axsl:otherwise>
                 <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                     test="cbc:Name">
@@ -528,16 +527,16 @@
         </axsl:choose>
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
-    
+
     <axsl:template match="//*[contains(name(),'Date')]" priority="1000" mode="M6">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//*[contains(name(),'Date')]"/>
-        
+
         <!--ASSERT -->
         <axsl:choose>
             <axsl:when test="(string(.) castable as xs:date) and (string-length(.) = 10)"/>
-            
+
             <axsl:otherwise>
                 <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl" test="(string(.) castable as xs:date) and (string-length(.) = 10)">
                     <axsl:attribute name="flag">fatal</axsl:attribute>
@@ -548,23 +547,23 @@
                 </svrl:failed-assert>
             </axsl:otherwise>
         </axsl:choose>
-        
+
         <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
-    
+
+
     <axsl:template match="text()" priority="-1" mode="M6"/>
     <axsl:template match="@*|node()" priority="-2" mode="M6">
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M6"/>
     </axsl:template>
-    
+
     <!--RULE -->
-    
+
     <axsl:template match="//cbc:ProfileID" priority="1001" mode="M7">
         <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cbc:ProfileID"/>
-        
+
         <!--ASSERT -->
-        
+
         <axsl:choose>
             <axsl:when test=". = 'urn:www.cenbii.eu:profile:bii01:ver2.0'"/>
             <axsl:otherwise>
@@ -580,7 +579,7 @@
         </axsl:choose>
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
     </axsl:template>
-    
+
     <axsl:template match="text()" priority="-1" mode="M7"/>
     <axsl:template match="@*|node()" priority="-2" mode="M7">
         <axsl:apply-templates select="*|comment()|processing-instruction()" mode="M7"/>
