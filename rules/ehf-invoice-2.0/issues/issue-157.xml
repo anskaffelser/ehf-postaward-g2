@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+	<assert>
+		<description>Issue #157</description>
+		<success>NONAT-T10-R026</success>
+		<scope>NONAT-T10-R026</scope>
+	</assert>
+	<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+		<cac:InvoiceLine>
+			<cbc:InvoicedQuantity unitCodeListID="UNECERec20" unitCode="EA">1</cbc:InvoicedQuantity>
+			<cbc:LineExtensionAmount currencyID="NOK">401.09</cbc:LineExtensionAmount>
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+				<cbc:Amount currencyID="NOK">70.785</cbc:Amount>
+			</cac:AllowanceCharge>
+			<cac:Price>
+				<cbc:PriceAmount currencyID="NOK">471.875</cbc:PriceAmount>
+				<cbc:BaseQuantity unitCodeListID="UNECERec20" unitCode="EA">1</cbc:BaseQuantity>
+			</cac:Price>
+		</cac:InvoiceLine>
+
+	</Invoice>
+</test>
