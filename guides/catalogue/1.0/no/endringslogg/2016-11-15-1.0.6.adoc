@@ -6,8 +6,12 @@
 | Skrive om regel NOGOV-T19-R001.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
+| Rette regel NOGOV-T19-R009 så den trigger.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
-| Legge til manglende liste over NOGOV-regler for katalog..
+| Legge til manglende liste over NOGOV-regler for katalog.
 | Guide
 
 |===

@@ -6,6 +6,10 @@
 | Rewrite of rule NOGOV-T19-R001.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
+| Fix rule NOGOV-T19-R009 so it triggers as intended.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
 | Adding missing list of NOGOV rules for Catalogue.
 | Guide
