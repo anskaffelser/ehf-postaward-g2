@@ -12,7 +12,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
 
-		  <cbc:UBLVersionID></cbc:UBLVersionID>
+		  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
 
 		</Catalogue>
 	</test>

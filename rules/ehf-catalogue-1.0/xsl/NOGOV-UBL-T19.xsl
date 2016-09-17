@@ -305,8 +305,8 @@
 
     <!--RULE -->
 
-    <axsl:template match="ubl:Catalogue/cac:ValidityPeriod" priority="1010" mode="M6">
-        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="cac:Catalogue/cac:ValidityPeriod"/>
+    <axsl:template match="/ubl:Catalogue/cac:ValidityPeriod" priority="1010" mode="M6">
+        <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="/ubl:Catalogue/cac:ValidityPeriod"/>
 
 
         <!--ASSERT -->
