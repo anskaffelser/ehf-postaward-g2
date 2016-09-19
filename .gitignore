@@ -1,6 +1,7 @@
 *.log
 *.iml
+*.jar
 target
-main.html
-main.pdf
-main.epub
+*.html
+*.pdf
+*.epub
