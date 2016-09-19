@@ -1,13 +1,33 @@
-<schema xmlns="http://purl.oclc.org/dsdl/schematron"
-        schemaVersion="iso"
-        queryBinding="xslt2">
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
+  schemaVersion="iso" queryBinding="xslt2">
+
    <title>Sjekk mot norsk bokf.lov</title>
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-       prefix="cbc"/>
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-       prefix="cac"/>
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
-       prefix="ubl"/>
+
+   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
+   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
+   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" prefix="ubl"/>
+   <ns uri="utils" prefix="u"/>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:sif">
+     <param name="expr"/>
+     <param name="ret1"/>
+     <param name="ret2"/>
+
+     <choose>
+       <when test="$expr">
+         <value-of select="$ret1"/>
+       </when>
+       <otherwise>
+         <value-of select="$ret2"/>
+       </otherwise>
+     </choose>
+   </function>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:twodec">
+     <param name="val"/>
+     <value-of select="round($val * 100) div 100"/>
+   </function>
+
    <pattern>
       <rule context="//cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T10-R001"
@@ -65,7 +85,7 @@
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</assert>
       </rule>
-      <rule context="cac:TaxCategory//cbc:ID">
+      <rule context="cac:TaxCategory/cbc:ID">
          <assert id="NONAT-T10-R021"
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
@@ -73,7 +93,7 @@
       <rule context="//cac:TaxScheme">
          <assert id="NONAT-T10-R017" test="cbc:ID" flag="fatal">Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
-      <rule context="cac:TaxScheme//cbc:ID">
+      <rule context="cac:TaxScheme/cbc:ID">
          <assert id="NONAT-T10-R014"
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">Invoice tax schemes MUST be 'VAT'</assert>
@@ -92,16 +112,19 @@
                  flag="warning">AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
       </rule>
       <rule context="//cac:InvoiceLine">
+         <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
+         <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
+         <let name="baseQuantity" value="xs:decimal(u:sif(cac:Price/cbc:BaseQuantity, cac:Price/cbc:BaseQuantity, 1))"/>
+         <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
+         <let name="invoicedQuantity" value="xs:decimal(cbc:InvoicedQuantity)"/>
+         <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
+         <let name="quiet" value="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
+
          <assert id="NONAT-T10-R016" test="(cac:Item/cbc:Name)" flag="fatal">Each invoice line MUST contain the product/service name</assert>
          <assert id="NONAT-T10-R015" test="cac:Price/cbc:PriceAmount" flag="fatal">Invoice lines MUST contain the item price</assert>
          <assert id="NONAT-T10-R026"
-                 test="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &gt; 0 or (cbc:InvoicedQuantity) &gt; 0 or (not(cac:Price/cbc:BaseQuantity) and abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:InvoicedQuantity))) div 100) + ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)"
-                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level</assert>
-         <assert id="NONAT-T10-R026"
-                 test="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &lt; 0 or (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"
-                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level</assert>
-         <assert id="NONAT-T10-R026"
-                 test="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &gt; 0 or (cbc:InvoicedQuantity) &lt; 0 or (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:InvoicedQuantity)) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:InvoicedQuantity))) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"
+                 test="$quiet or
+                 $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $invoicedQuantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
                  flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level</assert>
       </rule>
    </pattern>
