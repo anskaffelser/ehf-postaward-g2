@@ -11,15 +11,19 @@
 | Attachment
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
-| Rewrite of rule NOGOV-T19-R001.
+| Rewrite of rule NOGOV-T19-R001 (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
-| Fix rule NOGOV-T19-R009 so it triggers as intended.
+| Fix rule NOGOV-T19-R009 (**F**) so it triggers as intended.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
-| Fix rules NOGOV-T58-R002, NOGOV-T58-R003, NOGOV-T58-R004, NOGOV-T58-R005, NOGOV-T58-R006, NOGOV-T58-R007 and NOGOV-T58-R008.
+| Fix rules NOGOV-T58-R002 (**F**), NOGOV-T58-R003 (**W**), NOGOV-T58-R004 (**W**), NOGOV-T58-R005 (**F**), NOGOV-T58-R006 (**F**), NOGOV-T58-R007 (**F**) and NOGOV-T58-R008 (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T58.
 | Validator
 
 |===

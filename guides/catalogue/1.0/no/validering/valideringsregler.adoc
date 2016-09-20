@@ -15,5 +15,5 @@ include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
 |Regel
 |Melding/Kontekst/Test
 
-include::{rules-dir}/NOGOV-UBL-T58.xsl.adoc[]
+include::{rules-dir}/NOGOV-UBL-T58.sch.adoc[]
 |====

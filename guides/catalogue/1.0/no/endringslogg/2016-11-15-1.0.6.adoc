@@ -11,15 +11,19 @@
 | Vedlegg
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
-| Skrive om regel NOGOV-T19-R001.
+| Skrive om regel NOGOV-T19-R001 (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
-| Rette regel NOGOV-T19-R009 så den trigger.
+| Rette regel NOGOV-T19-R009 (**F**) så den trigger.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
-| Rette reglene NOGOV-T58-R002, NOGOV-T58-R003, NOGOV-T58-R004, NOGOV-T58-R005, NOGOV-T58-R006, NOGOV-T58-R007 og NOGOV-T58-R008.
+| Rette reglene NOGOV-T58-R002 (**F**), NOGOV-T58-R003 (**W**), NOGOV-T58-R004 (**W**), NOGOV-T58-R005 (**F**), NOGOV-T58-R006 (**F**), NOGOV-T58-R007 (**F**) og NOGOV-T58-R008 (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T58.
 | Validator
 
 |===
