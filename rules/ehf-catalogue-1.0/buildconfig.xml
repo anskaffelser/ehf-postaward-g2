@@ -4,15 +4,20 @@
     <testfolder>unit-NOGOV</testfolder>
 
     <configuration>
+        <identifier>ehf-t19-base-1.0</identifier>
+        <title>EHF Catalogue 1.0 (Base)</title>
+        <inherit>ubl-catalogue-2.1</inherit>
+        <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" />
+        <file path="xsl/BIIRULES-UBL-T19.xsl" />
+        <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
+    </configuration>
+
+    <configuration>
         <identifier>ehf-t19-01-1.0</identifier>
         <title>EHF Catalogue 1.0 (Profile 01)</title>
         <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</customizationId>
-        <inherit>ubl-catalogue-2.1</inherit>
-        <inherit>ehf-t01-stylesheet-2.0</inherit>
-        <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" />
-        <file path="xsl/BIIRULES-UBL-T19.xsl" />
-        <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
+        <inherit>ehf-t19-base-1.0</inherit>
     </configuration>
 
 </buildConfigurations>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t58-01-1.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t58-base-1.0">
 	<assert>
 		<scope>NOGOV-T58-R001</scope>
 	</assert>
