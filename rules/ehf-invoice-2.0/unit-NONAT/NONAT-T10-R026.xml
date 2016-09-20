@@ -237,7 +237,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Amount set to zero when though it is not correct.</description>
+			<description>Amount set to zero even though it is not correct.</description>
 			<error>NONAT-T10-R026</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
