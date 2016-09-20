@@ -26,4 +26,8 @@
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T58.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#163]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T19.
+| Validator
+
 |===

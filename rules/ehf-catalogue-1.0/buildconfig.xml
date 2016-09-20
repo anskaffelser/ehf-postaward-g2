@@ -10,7 +10,7 @@
         <customizationId>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</customizationId>
         <inherit>ubl-catalogue-2.1</inherit>
         <inherit>ehf-t01-stylesheet-2.0</inherit>
-        <file path="xsl/NOGOV-UBL-T19.xsl" />
+        <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" />
         <file path="xsl/BIIRULES-UBL-T19.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
     </configuration>

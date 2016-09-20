@@ -26,4 +26,8 @@
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T58.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/163[#163]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T19.
+| Validator
+
 |===

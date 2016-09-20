@@ -5,7 +5,7 @@
 |Rule
 |Message/Context/Test
 
-include::{rules-dir}/NOGOV-UBL-T19.xsl.adoc[]
+include::{rules-dir}/NOGOV-UBL-T19.sch.adoc[]
 |====
 
 = Norwegian Rules for Catalogue Response
