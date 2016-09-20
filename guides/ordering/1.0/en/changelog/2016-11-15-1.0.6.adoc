@@ -1,0 +1,5 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+|===

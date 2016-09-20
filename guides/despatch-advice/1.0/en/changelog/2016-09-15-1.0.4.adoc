@@ -1,6 +1,6 @@
 [cols="1,9,2", options="header"]
 |===
-| Sak | Beskrivelse | Type
+| Issue | Description | Type
 
 | link:https://github.com/difi/vefa-validator-conf/issues/146[#146]
 a| Converting guide to Asciidoctor format.
