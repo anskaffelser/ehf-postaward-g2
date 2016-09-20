@@ -6,7 +6,7 @@
 	<cbc:ID>1</cbc:ID>
 	<cbc:IssueDate>2012-05-29</cbc:IssueDate>
 	<cac:SenderParty>
-		<cbc:EndpointID schemeID="NO:ORGNR">1234567890</cbc:EndpointID>
+		<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
 		<cac:PartyIdentification>
 			<cbc:ID schemeID="ZZZ">98765</cbc:ID>
 		</cac:PartyIdentification>

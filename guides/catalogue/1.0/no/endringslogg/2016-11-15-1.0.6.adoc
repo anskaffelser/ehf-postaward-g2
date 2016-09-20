@@ -2,6 +2,14 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
+| Legge til manglende liste over NOGOV-regler for katalog.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Rette mindre feil i eksempelfil for katalogrespons.
+| Vedlegg
+
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
 | Skrive om regel NOGOV-T19-R001.
 | Validator
@@ -10,8 +18,8 @@
 | Rette regel NOGOV-T19-R009 så den trigger.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
-| Legge til manglende liste over NOGOV-regler for katalog.
-| Guide
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Rette reglene NOGOV-T58-R002, NOGOV-T58-R003, NOGOV-T58-R004, NOGOV-T58-R005, NOGOV-T58-R006, NOGOV-T58-R007 og NOGOV-T58-R008.
+| Validator
 
 |===

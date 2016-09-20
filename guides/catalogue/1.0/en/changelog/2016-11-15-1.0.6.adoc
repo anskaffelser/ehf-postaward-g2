@@ -2,6 +2,14 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
+| Adding missing list of NOGOV rules for Catalogue.
+| Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Fix minor bug in Catalogue Response example file.
+| Attachment
+
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
 | Rewrite of rule NOGOV-T19-R001.
 | Validator
@@ -10,8 +18,8 @@
 | Fix rule NOGOV-T19-R009 so it triggers as intended.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
-| Adding missing list of NOGOV rules for Catalogue.
-| Guide
+| link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
+| Fix rules NOGOV-T58-R002, NOGOV-T58-R003, NOGOV-T58-R004, NOGOV-T58-R005, NOGOV-T58-R006, NOGOV-T58-R007 and NOGOV-T58-R008.
+| Validator
 
 |===
