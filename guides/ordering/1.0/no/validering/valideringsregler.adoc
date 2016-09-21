@@ -5,7 +5,7 @@
 |Regel
 |Melding/Kontekst/Test
 
-include::{rules-dir}/NOGOV-UBL-T01.xsl.adoc[]
+include::{rules-dir}/NOGOV-UBL-T01.sch.adoc[]
 |====
 
 = Norske valideringsregler for ordrebekreftelse

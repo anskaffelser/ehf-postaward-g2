@@ -2,4 +2,8 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
+| Fix rule NOGOV-T01-R021 (**W**) so it triggers as intended.
+| Validator
+
 |===
