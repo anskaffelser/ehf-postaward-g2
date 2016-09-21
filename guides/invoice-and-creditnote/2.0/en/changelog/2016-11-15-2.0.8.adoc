@@ -1,4 +1,4 @@
-:ruleurl-inv: /ehf/rule/ehf-invoice-2.0/
+:ruleurl-inv: /ehf/rule/invoice-2.0/
 
 [cols="1,9,2", options="header"]
 |===
