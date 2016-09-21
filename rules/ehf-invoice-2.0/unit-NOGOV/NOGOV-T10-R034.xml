@@ -44,7 +44,7 @@
 	<test>
 		<assert>
 			<description>Trigger warning if total change is not available when charge is specified on document level.</description>
-			<warning>NOGOV-T10-R034</warning>
+			<error>NOGOV-T10-R034</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

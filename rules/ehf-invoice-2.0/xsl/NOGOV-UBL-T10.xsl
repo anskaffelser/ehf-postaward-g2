@@ -8,7 +8,7 @@
    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
    xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" version="2.0">
-   <!--Implementers: please note that overriding process-prolog or process-root is 
+   <!--Implementers: please note that overriding process-prolog or process-root is
     the preferred method for meta-stylesheets to use where possible. -->
 
    <axsl:param name="archiveDirParameter" tunnel="no"/>
@@ -91,7 +91,7 @@
       </axsl:if>
    </axsl:template>
    <!--MODE: SCHEMATRON-FULL-PATH-3-->
-   <!--This mode can be used to generate prefixed XPath for humans 
+   <!--This mode can be used to generate prefixed XPath for humans
 	(Top-level element has index)-->
 
    <axsl:template match="node() | @*" mode="schematron-get-full-path-3">
@@ -536,7 +536,7 @@
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) and (cac:LegalMonetaryTotal/cbc:ChargeTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) )">
-               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
@@ -554,7 +554,7 @@
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) and (cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) )">
-               <axsl:attribute name="flag">warning</axsl:attribute>
+               <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">
                   <axsl:apply-templates select="." mode="schematron-get-full-path"/>
                </axsl:attribute>
@@ -690,7 +690,7 @@
       <axsl:apply-templates select="@* | * | comment() | processing-instruction()" mode="M17"/>
    </axsl:template>
    <!--
-   
+
 	<axsl:template match="//cac:TaxSubtotal[cac:TaxCategory/cac:TaxScheme/cbc:ID = 'VAT']" priority="1000" mode="M17">
 		<svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:TaxSubtotal[cac:TaxCategory/cac:TaxScheme/cbc:ID = 'VAT']"/>
 			<axsl:choose>
@@ -705,7 +705,7 @@
 				</svrl:failed-assert>
 			</axsl:otherwise>
 		</axsl:choose>
- 
+
      <axsl:apply-templates select="@*|*|comment()|processing-instruction()" mode="M17"/>
    </axsl:template>
    -->
@@ -944,14 +944,14 @@
       </axsl:choose>
 
       <!--ASSERT -->
-      <!-- 2013-05-10 EG Changed from warning to Fatal 
+      <!-- 2013-05-10 EG Changed from warning to Fatal
 								Test on AdditionalDocumentReference/DocumentType = 'elektroniskB2Cfaktura', indicates B2C-->
       <axsl:choose>
          <axsl:when
             test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"/>
          <axsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-               test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or 
+               test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or
              (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')">
                <axsl:attribute name="flag">fatal</axsl:attribute>
                <axsl:attribute name="location">

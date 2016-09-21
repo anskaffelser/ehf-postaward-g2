@@ -1,13 +1,19 @@
+:ruleurl-inv: /ehf/rule/ehf-invoice-2.0/
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Updating NONAT-T10-R026 (**F**) and adding 0.01 slack. Introducing NONAT-T10-R027 (**W**) without slack.
+| Updating link:{ruleurl-inv}NONAT-T10-R026/[NONAT-T10-R026] (**F**) and adding 0.01 slack. Introducing link:{ruleurl-inv}NONAT-T10-R027/[NONAT-T10-R027] (**W**) without slack.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Fix of NONAT-T10-R014 (**F**) and NONAT-T10-R021 (**F**).
+| Fix of link:{ruleurl-inv}NONAT-T10-R014/[NONAT-T10-R014] (**F**) and link:{ruleurl-inv}NONAT-T10-R021/[NONAT-T10-R021] (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
+| Changing link:{ruleurl-inv}NONAT-T10-R034/[NOGOV-T10-R034] (**F**) and link:{ruleurl-inv}NONAT-T10-R035/[NOGOV-T10-R035] (**F**) from warning to fatal.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
