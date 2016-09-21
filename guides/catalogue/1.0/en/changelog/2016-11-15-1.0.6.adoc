@@ -1,3 +1,6 @@
+:ruleurl-cat: /ehf/rule/catalogue-2.0/
+:ruleurl-res: /ehf/rule/catalogue-response-2.0/
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
@@ -11,15 +14,15 @@
 | Attachment
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
-| Rewrite of rule NOGOV-T19-R001 (**F**).
+| Rewrite of rule link:{rulesurl-cat}NOGOV-T19-R001[NOGOV-T19-R001] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
-| Fix rule NOGOV-T19-R009 (**F**) so it triggers as intended.
+| Fix rule link:{rulesurl-cat}NOGOV-T19-R001[NOGOV-T19-R001] (**F**) so it triggers as intended.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
-| Fix rules NOGOV-T58-R002 (**F**), NOGOV-T58-R003 (**W**), NOGOV-T58-R004 (**W**), NOGOV-T58-R005 (**F**), NOGOV-T58-R006 (**F**), NOGOV-T58-R007 (**F**) and NOGOV-T58-R008 (**F**).
+| Fix rules link:{rulesurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{rulesurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{rulesurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{rulesurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{rulesurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{rulesurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) and link:{rulesurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]

@@ -1,9 +1,12 @@
+:ruleurl-ord: /ehf/rule/order-2.0/
+:ruleurl-res: /ehf/rule/order-response-2.0/
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
-| Fix rule NOGOV-T01-R021 (**W**) so it triggers as intended.
+| Fix rule link:{ruleurl-ord}NOGOV-T01-R021/[NOGOV-T01-R021] (**W**) so it triggers as intended.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
