@@ -7,7 +7,7 @@
         <identifier>ehf-t01-base-1.0</identifier>
         <title>EHF Order 1.0 (Base)</title>
         <inherit>ubl-order-2.1</inherit>
-        <file source="sch/NOGOV-UBL-T01.sch" path="xsl/NOGOV-UBL-T01.xsl" />
+        <file source="sch/NOGOV-UBL-T01.sch" path="xsl/NOGOV-UBL-T01.xsl" infoUrl="/ehf/rule/order-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T01.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T01.xsl" />
     </configuration>

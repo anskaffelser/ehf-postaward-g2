@@ -2,10 +2,6 @@
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
 	<assert>
 		<scope>NONAT-T10-R026</scope>
-		<scope>NONAT-T10-R026a</scope>
-		<scope>NONAT-T10-R026b</scope>
-		<scope>NONAT-T10-R026c</scope>
-		<scope>NONAT-T10-R026d</scope>
 	</assert>
 	<test>
 		<assert>

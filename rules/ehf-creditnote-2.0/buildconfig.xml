@@ -4,6 +4,7 @@
     <testfolder>test</testfolder>
     <testfolder>unit-OPENPEPPOL</testfolder>
     <testfolder>unit-NOGOV</testfolder>
+    <testfolder>unit-NONAT</testfolder>
 
     <configuration>
         <identifier>ehf-t14-base-2.0</identifier>
@@ -13,8 +14,8 @@
         <file path="xsl/BIIRULES-UBL-T14.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T14.xsl" />
         <file path="xsl/EHFCORE-UBL-T14.xsl" />
-        <file path="xsl/NONAT-UBL-T14.xsl" infoUrl="/ehf/rule/ehf-creditnote-2.0/{}/" />
-        <file path="xsl/NOGOV-UBL-T14.xsl" infoUrl="/ehf/rule/ehf-creditnote-2.0/{}/" />
+        <file path="xsl/NONAT-UBL-T14.xsl" infoUrl="/ehf/rule/creditnote-2.0/{}/" />
+        <file path="xsl/NOGOV-UBL-T14.xsl" infoUrl="/ehf/rule/creditnote-2.0/{}/" />
         <rule identifier="BII2-T14-R025" action="suppress" />
         <rule identifier="BII2-T14-R035" action="suppress" />
         <rule identifier="BII2-T14-R037" action="suppress" />

@@ -9,7 +9,7 @@
         <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</customizationId>
         <inherit>ubl-applicationresponse-2.1</inherit>
-        <file source="sch/NOGOV-UBL-T58.sch" path="xsl/NOGOV-UBL-T58.xsl" />
+        <file source="sch/NOGOV-UBL-T58.sch" path="xsl/NOGOV-UBL-T58.xsl" infoUrl="/ehf/rule/catalogue-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T58.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T58.xsl" />
     </configuration>

@@ -14,11 +14,11 @@
 | Vedlegg
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
-| Skrive om regel link:{ruleurl-res}NOGOV-T19-R001[NOGOV-T19-R001] (**F**).
+| Skrive om regel link:{ruleurl-cat}NOGOV-T19-R001[NOGOV-T19-R001] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
-| Rette regel link:{ruleurl-res}NOGOV-T19-R009[NOGOV-T19-R009] (**F**) så den trigger.
+| Rette regel link:{ruleurl-cat}NOGOV-T19-R009[NOGOV-T19-R009] (**F**) så den trigger.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
