@@ -1,5 +1,5 @@
-:ruleurl-cat: /ehf/rule/catalogue-2.0/
-:ruleurl-res: /ehf/rule/catalogue-response-2.0/
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
 
 [cols="1,9,2", options="header"]
 |===
@@ -14,15 +14,15 @@
 | Vedlegg
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
-| Skrive om regel link:{rulesurl-res}NOGOV-T19-R001[NOGOV-T19-R001] (**F**).
+| Skrive om regel link:{ruleurl-res}NOGOV-T19-R001[NOGOV-T19-R001] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/160[#160]
-| Rette regel link:{rulesurl-res}NOGOV-T19-R009[NOGOV-T19-R009] (**F**) så den trigger.
+| Rette regel link:{ruleurl-res}NOGOV-T19-R009[NOGOV-T19-R009] (**F**) så den trigger.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
-| Rette reglene link:{rulesurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{rulesurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{rulesurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{rulesurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{rulesurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{rulesurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) og link:{rulesurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
+| Rette reglene link:{ruleurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{ruleurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{ruleurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{ruleurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{ruleurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{ruleurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) og link:{ruleurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
