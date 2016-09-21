@@ -2,4 +2,16 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Updating NONAT-T10-R026 (**F**) and adding 0.01 slack. Introducing NONAT-T10-R027 (**W**) without slack.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Fix of NONAT-T10-R014 (**F**) and NONAT-T10-R021 (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NONAT-T10.
+| Validator
+
 |===

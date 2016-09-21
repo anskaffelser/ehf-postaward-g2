@@ -28,6 +28,13 @@
      <value-of select="round($val * 100) div 100"/>
    </function>
 
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:slack">
+     <param name="exp"/>
+     <param name="val"/>
+     <param name="slack"/>
+     <value-of select="$exp + xs:decimal($slack) &gt;= $val and $exp - xs:decimal($slack) &lt;= $val"/>
+   </function>
+
    <pattern>
       <rule context="//cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T10-R001"
@@ -124,8 +131,12 @@
          <assert id="NONAT-T10-R015" test="cac:Price/cbc:PriceAmount" flag="fatal">Invoice lines MUST contain the item price</assert>
          <assert id="NONAT-T10-R026"
                  test="$quiet or
+                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $invoicedQuantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
+                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (with slack!)</assert>
+         <assert id="NONAT-T10-R027"
+                 test="$quiet or
                  $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $invoicedQuantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
-                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level</assert>
+                 flag="warning">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (without slack!)</assert>
       </rule>
    </pattern>
 </schema>

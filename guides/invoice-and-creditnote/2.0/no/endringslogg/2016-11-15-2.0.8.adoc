@@ -2,4 +2,16 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Oppdatere NONAT-T10-R026 (**F**) og legge til 0,01 i slakk. Introduserer NONAT-T10-R027 (**W**) uten slakk.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Retting av NONAT-T10-R014 (**F**) og NONAT-T10-R021 (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T10.
+| Validator
+
 |===

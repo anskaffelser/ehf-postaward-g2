@@ -6,7 +6,7 @@
 |Melding/Kontekst/Test
 
 include::{rules-dir}/NOGOV-UBL-T10.xsl.adoc[]
-include::{rules-dir}/NONAT-UBL-T10.xsl.adoc[]
+include::{rules-dir}/NONAT-UBL-T10.sch.adoc[]
 |====
 
 = Norske valideringsregler for kreditnota
