@@ -6,4 +6,8 @@
 | Fix rule NOGOV-T01-R021 (**W**) so it triggers as intended.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T01.
+| Validator
+
 |===
