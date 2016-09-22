@@ -10,7 +10,15 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Oppdatere link:{ruleurl-inv}NONAT-T14-R024/[NONAT-T14-R024] (**F**) og legge til 0,01 i slakk. Introduserer link:{ruleurl-inv}NONAT-T14-R025/[NONAT-T14-R025] (**W**) uten slakk.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Retting av link:{ruleurl-inv}NONAT-T10-R014/[NONAT-T10-R014] (**F**) og link:{ruleurl-inv}NONAT-T10-R027/[NONAT-T10-R027] (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Retting av link:{ruleurl-inv}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
@@ -19,6 +27,10 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T10.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T14.
 | Validator
 
 |===

@@ -9,7 +9,15 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Updating link:{ruleurl-inv}NONAT-T14-R024/[NONAT-T14-R024] (**F**) and adding 0.01 slack. Introducing link:{ruleurl-inv}NONAT-T14-R025/[NONAT-T14-R025] (**W**) without slack.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Fix of link:{ruleurl-inv}NONAT-T10-R014/[NONAT-T10-R014] (**F**) and link:{ruleurl-inv}NONAT-T10-R021/[NONAT-T10-R021] (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Fix of link:{ruleurl-inv}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
@@ -18,6 +26,10 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NONAT-T10.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NONAT-T14.
 | Validator
 
 |===
