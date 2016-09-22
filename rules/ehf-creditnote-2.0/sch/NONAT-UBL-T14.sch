@@ -1,4 +1,4 @@
-<schema xmlns="http://purl.oclc.org/dsdl/schematron"
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
    <title>Sjekk mot norsk bokf. lov</title>
@@ -6,6 +6,34 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
+   <ns uri="utils" prefix="u"/>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:sif">
+     <param name="expr"/>
+     <param name="ret1"/>
+     <param name="ret2"/>
+
+     <choose>
+       <when test="$expr">
+         <value-of select="$ret1"/>
+       </when>
+       <otherwise>
+         <value-of select="$ret2"/>
+       </otherwise>
+     </choose>
+   </function>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:twodec">
+     <param name="val"/>
+     <value-of select="round($val * 100) div 100"/>
+   </function>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:slack">
+     <param name="exp"/>
+     <param name="val"/>
+     <param name="slack"/>
+     <value-of select="$exp + xs:decimal($slack) &gt;= $val and $exp - xs:decimal($slack) &lt;= $val"/>
+   </function>
 
    <pattern>
       <rule context="/ubl:CreditNote">
@@ -85,17 +113,25 @@
          <assert id="NONAT-T14-R013" test="cbc:ID" flag="fatal">Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
       <rule context="//cac:CreditNoteLine">
+         <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
+        <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
+         <let name="baseQuantity" value="xs:decimal(u:sif(cac:Price/cbc:BaseQuantity, cac:Price/cbc:BaseQuantity, 1))"/>
+         <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
+         <let name="quantity" value="xs:decimal(cbc:CreditedQuantity)"/>
+         <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
+         <let name="quiet" value="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
+
+
          <assert id="NONAT-T14-R012" test="(cac:Item/cbc:Name)" flag="fatal">Each credit note line MUST contain the product/service name</assert>
          <assert id="NONAT-T14-R011" test="cac:Price/cbc:PriceAmount" flag="fatal">Credit Note line MUST contain the item price</assert>
          <assert id="NONAT-T14-R024"
-                 test="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &gt; 0 or (cbc:CreditedQuantity) &gt; 0 or (not(cac:Price/cbc:BaseQuantity) and abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * abs(xs:decimal(cbc:CreditedQuantity))) div 100) + ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 )) * -1 ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and abs(number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity)) * abs(xs:decimal(cbc:CreditedQuantity))) div 100) + ((round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) * -1) *10 *10) div 100)"
-                 flag="fatal">Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
-         <assert id="NONAT-T14-R024"
-                 test="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &lt; 0 or (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:CreditedQuantity)) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:CreditedQuantity))) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"
-                 flag="fatal">Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
-         <assert id="NONAT-T14-R024"
-                 test="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount) or number(cbc:LineExtensionAmount) &gt; 0 or (cbc:CreditedQuantity) &lt; 0 or (not(cac:Price/cbc:BaseQuantity) and (number(cbc:LineExtensionAmount)) = round(((round((10 * 10) * xs:decimal(cac:Price/cbc:PriceAmount) * xs:decimal(cbc:CreditedQuantity)) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) *10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100 ) ) * 10 * 10) div 100) or ((cac:Price/cbc:BaseQuantity) and number(cbc:LineExtensionAmount) = round(((round((10 * 10) * (xs:decimal(cac:Price/cbc:PriceAmount) div xs:decimal(cac:Price/cbc:BaseQuantity) * xs:decimal(cbc:CreditedQuantity))) div 100) + (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount) * 10 * 10) div 100 ) - (round(sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount) *10 * 10) div 100)) *10 *10) div 100)"
-                 flag="fatal">Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
+                 test="$quiet or
+                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
+                 flag="fatal">Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level. (with slack!)</assert>
+         <assert id="NONAT-T14-R025"
+                 test="$quiet or
+                 $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
+                 flag="warning">Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level. (without slack!)</assert>
       </rule>
    </pattern>
 </schema>

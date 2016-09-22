@@ -123,7 +123,7 @@
          <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
          <let name="baseQuantity" value="xs:decimal(u:sif(cac:Price/cbc:BaseQuantity, cac:Price/cbc:BaseQuantity, 1))"/>
          <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
-         <let name="invoicedQuantity" value="xs:decimal(cbc:InvoicedQuantity)"/>
+         <let name="quantity" value="xs:decimal(cbc:InvoicedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
          <let name="quiet" value="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
 
@@ -131,11 +131,11 @@
          <assert id="NONAT-T10-R015" test="cac:Price/cbc:PriceAmount" flag="fatal">Invoice lines MUST contain the item price</assert>
          <assert id="NONAT-T10-R026"
                  test="$quiet or
-                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $invoicedQuantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
+                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
                  flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (with slack!)</assert>
          <assert id="NONAT-T10-R027"
                  test="$quiet or
-                 $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $invoicedQuantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
+                 $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
                  flag="warning">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (without slack!)</assert>
       </rule>
    </pattern>
