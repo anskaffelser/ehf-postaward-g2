@@ -71,7 +71,7 @@
                  test="(cbc:AllowanceChargeReason)"
                  flag="warning">AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
       </rule>
-      <rule context="cac:TaxCategory//cbc:ID">
+      <rule context="cac:TaxCategory/cbc:ID">
          <assert id="NONAT-T14-R017"
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">Credit Note tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
