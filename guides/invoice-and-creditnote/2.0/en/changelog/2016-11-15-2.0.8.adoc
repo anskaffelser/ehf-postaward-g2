@@ -21,6 +21,10 @@
 | Fix of link:{ruleurl-cre}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/168[#168]
+| Fix of link:{ruleurl-cre}NONAT-T14-R004/[NONAT-T14-R004] (**F**).
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
 | Changing link:{ruleurl-inv}NONAT-T10-R034/[NOGOV-T10-R034] (**F**) and link:{ruleurl-inv}NONAT-T10-R035/[NOGOV-T10-R035] (**F**) from warning to fatal.
 | Validator

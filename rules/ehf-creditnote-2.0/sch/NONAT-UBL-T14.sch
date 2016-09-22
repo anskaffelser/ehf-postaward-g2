@@ -70,7 +70,7 @@
       </rule>
       <rule context="//cac:AccountingCustomerParty/cac:Party">
          <assert id="NONAT-T14-R004"
-                 test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode) and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"
+                 test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode and (cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or not(cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')"
                  flag="fatal">A customer postal address in a credit note MUST contain at least, city name, zip code and country code.</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity">

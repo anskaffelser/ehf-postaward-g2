@@ -22,6 +22,10 @@
 | Retting av link:{ruleurl-cre}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/168[#168]
+| Retting av link:{ruleurl-cre}NONAT-T14-R004/[NONAT-T14-R004] (**F**).
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
 | Endre link:{ruleurl-inv}NOGOV-T10-R034/[NOGOV-T10-R034] (**F**) og link:{ruleurl-inv}NOGOV-T10-R035/[NOGOV-T10-R035] (**F**) fra advarsel til feil.
 | Validator
