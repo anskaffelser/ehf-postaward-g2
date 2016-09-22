@@ -1,6 +1,7 @@
 [cols="1,9,2", options="header"]
 
 :ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
 
 |===
 | Sak | Beskrivelse | Type
@@ -10,7 +11,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Oppdatere link:{ruleurl-inv}NONAT-T14-R024/[NONAT-T14-R024] (**F**) og legge til 0,01 i slakk. Introduserer link:{ruleurl-inv}NONAT-T14-R025/[NONAT-T14-R025] (**W**) uten slakk.
+| Oppdatere link:{ruleurl-cre}NONAT-T14-R024/[NONAT-T14-R024] (**F**) og legge til 0,01 i slakk. Introduserer link:{ruleurl-cre}NONAT-T14-R025/[NONAT-T14-R025] (**W**) uten slakk.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
@@ -18,7 +19,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Retting av link:{ruleurl-inv}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
+| Retting av link:{ruleurl-cre}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]

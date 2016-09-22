@@ -17,5 +17,5 @@ include::{rules-dir}/NONAT-UBL-T10.sch.adoc[]
 |Message/Context/Test
 
 include::{rules-dir}/NOGOV-UBL-T14.xsl.adoc[]
-include::{rules-dir}/NONAT-UBL-T14.xsl.adoc[]
+include::{rules-dir}/NONAT-UBL-T14.sch.adoc[]
 |====

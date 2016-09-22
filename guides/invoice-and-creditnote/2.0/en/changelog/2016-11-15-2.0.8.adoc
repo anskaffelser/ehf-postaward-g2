@@ -1,4 +1,5 @@
 :ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
 
 [cols="1,9,2", options="header"]
 |===
@@ -9,7 +10,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Updating link:{ruleurl-inv}NONAT-T14-R024/[NONAT-T14-R024] (**F**) and adding 0.01 slack. Introducing link:{ruleurl-inv}NONAT-T14-R025/[NONAT-T14-R025] (**W**) without slack.
+| Updating link:{ruleurl-cre}NONAT-T14-R024/[NONAT-T14-R024] (**F**) and adding 0.01 slack. Introducing link:{ruleurl-cre}NONAT-T14-R025/[NONAT-T14-R025] (**W**) without slack.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
@@ -17,7 +18,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Fix of link:{ruleurl-inv}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
+| Fix of link:{ruleurl-cre}NONAT-T14-R017/[NONAT-T14-R017] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
