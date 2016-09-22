@@ -14,8 +14,8 @@
 
 			<cac:Delivery>
 				<cac:DeliveryLocation>
-					<cbc:ID schemeId="GLN"/>
-					<cbc:ID schemeId="GSRN"/>
+					<cbc:ID schemeID="GLN"/>
+					<cbc:ID schemeID="GSRN"/>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
 
@@ -32,7 +32,7 @@
 
 			<cac:Delivery>
 				<cac:DeliveryLocation>
-					<cbc:ID schemeId="TEST"/>
+					<cbc:ID schemeID="TEST"/>
 				</cac:DeliveryLocation>
 			</cac:Delivery>
 

@@ -13,9 +13,9 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cac:PayeeFinancialAccount>
-				<cbc:ID schemeId="IBAN"/>
-				<cbc:ID schemeId="BBAN"/>
-				<cbc:ID schemeId="LOCAL"/>
+				<cbc:ID schemeID="IBAN"/>
+				<cbc:ID schemeID="BBAN"/>
+				<cbc:ID schemeID="LOCAL"/>
 			</cac:PayeeFinancialAccount>
 
 		</CreditNote>
@@ -30,8 +30,8 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cac:PayeeFinancialAccount>
-				<cbc:ID schemeId="VISA"/>
-				<cbc:ID schemeId="TEST"/>
+				<cbc:ID schemeID="VISA"/>
+				<cbc:ID schemeID="TEST"/>
 			</cac:PayeeFinancialAccount>
 
 		</CreditNote>
