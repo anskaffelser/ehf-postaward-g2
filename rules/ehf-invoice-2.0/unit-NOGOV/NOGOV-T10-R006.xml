@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-Content:
-.
-
-Scope:
-NOGOV-T10-R006
-
-Success:
-NOGOV-T10-R006
-
--->
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
 	<assert>
 		<scope>NOGOV-T10-R006</scope>

@@ -132,11 +132,11 @@
          <assert id="NONAT-T10-R026"
                  test="$quiet or
                  xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
-                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (with slack!)</assert>
+                 flag="fatal">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (Slack!)</assert>
          <assert id="NONAT-T10-R027"
                  test="$quiet or
                  $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
-                 flag="warning">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (without slack!)</assert>
+                 flag="warning">Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level, expected LineExtensionAmount to be "<value-of select="u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"/>".</assert>
       </rule>
    </pattern>
 </schema>

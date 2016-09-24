@@ -15,7 +15,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
-| Retting av link:{ruleurl-inv}NONAT-T10-R014/[NONAT-T10-R014] (**F**) og link:{ruleurl-inv}NONAT-T10-R027/[NONAT-T10-R027] (**F**).
+| Retting av link:{ruleurl-inv}NONAT-T10-R014/[NONAT-T10-R014] (**F**) og link:{ruleurl-inv}NONAT-T10-R021/[NONAT-T10-R021] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
