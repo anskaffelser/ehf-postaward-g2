@@ -1,16 +1,5 @@
-= Profiler og meldinger
+include::../{shared-dir}/profiles/info.adoc[]
 
-En profil er den elektroniske samhandlingsprosess som en aktuell meldingsutveksling er en del av. En profil vil typisk omfatte flere relaterte meldinger som utveksles mellom to parter, men kan i sin enkleste form omfatte kun en enkelt melding.
-Den profilen som er aktuell i forbindelse med EHF Ordreprosess er vist i nedenstående tabell.
-Samhandlingsprosess	Meldinger	BII/PEPPOL
-
-Ordreprosess (BII28)::
-Ordre, Ordrebekreftelse
-
-
-== ProfileID
-
-Identifiserer den prosess forretningsdokumentet er en del av.   EHF benytter identifikasjonssystem i henhold til BII.
-
-Ordreprosess::
-urn:www.cenbii.eu:profile:bii28:ver2.0
+:leveloffset: +1
+include::../{shared-dir}/profiles/28.adoc[]
+:leveloffset: -1
