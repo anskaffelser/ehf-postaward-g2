@@ -1,0 +1,20 @@
+= Profil 01 - Katalog
+
+ProfileID::
+urn:www.cenbii.eu:profile:bii01:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Rolle
+
+| Katalog
+| urn:www.cenbii.eu:transaction:biitrns019:ver2.0 :extended:urn:www.peppol.eu:bis:peppol1a:ver2.0 :extended:urn:www.difi.no:ehf:katalog:ver1.0
+| Oppdragsgiver
+
+| Katalogbekreftelse
+| urn:www.cenbii.eu:transaction:biitrns058:ver2.0 :extended:urn:www.peppol.eu:bis:peppol1a:ver2.0 :extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0
+| Leverandør
+
+|===

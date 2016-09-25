@@ -9,6 +9,10 @@
 | Adding missing list of NOGOV rules for Catalogue.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/164[#164]
+| Aligning chapter 5.3 with EHF Invoice and Credit Note.
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Fix minor bug in Catalogue Response example file.
 | Attachment

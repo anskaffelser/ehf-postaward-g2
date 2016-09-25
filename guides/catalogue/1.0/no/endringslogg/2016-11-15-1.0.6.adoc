@@ -9,6 +9,10 @@
 | Legge til manglende liste over NOGOV-regler for katalog.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/164[#164]
+| Samkjøre kapittel 5.3 med EHF Faktura og kreditnota.
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Rette mindre feil i eksempelfil for katalogrespons.
 | Vedlegg
