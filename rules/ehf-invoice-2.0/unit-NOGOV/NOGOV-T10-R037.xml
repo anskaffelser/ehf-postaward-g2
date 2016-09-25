@@ -13,11 +13,11 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:LegalMonetaryTotal>
-				<Value>0.00</Value>
-				<Value>0.0</Value>
-				<Value>0.</Value>
-				<Value>0</Value>
-				<Value>10</Value>
+				<cbc:SomeAmount>0.00</cbc:SomeAmount>
+				<cbc:SomeAmount>0.0</cbc:SomeAmount>
+				<cbc:SomeAmount>0.</cbc:SomeAmount>
+				<cbc:SomeAmount>0</cbc:SomeAmount>
+				<cbc:SomeAmount>10</cbc:SomeAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>
@@ -32,11 +32,11 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:LegalMonetaryTotal>
-				<Value>0.000</Value>
-				<Value>0.0000</Value>
-				<Value>0.00000</Value>
-				<Value>0.000000</Value>
-				<Value>0.0000000</Value>
+				<cbc:SomeAmount>0.000</cbc:SomeAmount>
+				<cbc:SomeAmount>0.0000</cbc:SomeAmount>
+				<cbc:SomeAmount>0.00000</cbc:SomeAmount>
+				<cbc:SomeAmount>0.000000</cbc:SomeAmount>
+				<cbc:SomeAmount>0.0000000</cbc:SomeAmount>
 			</cac:LegalMonetaryTotal>
 
 		</Invoice>

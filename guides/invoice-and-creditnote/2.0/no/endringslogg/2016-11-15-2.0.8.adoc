@@ -30,6 +30,10 @@
 | Endre link:{ruleurl-inv}NOGOV-T10-R034/[NOGOV-T10-R034] (**F**) og link:{ruleurl-inv}NOGOV-T10-R035/[NOGOV-T10-R035] (**F**) fra advarsel til feil.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/172[#172]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T10.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T10.
 | Validator
