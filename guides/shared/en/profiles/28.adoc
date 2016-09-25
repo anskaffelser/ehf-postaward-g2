@@ -1,0 +1,19 @@
+= Profile 28 - Ordering
+
+ProfileID::
+urn:www.cenbii.eu:profile:bii28:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Role
+
+| Order
+| urn:www.cenbii.eu:transaction:biitrns001:ver2.0 :extended:urn:www.peppol.eu:bis:peppol28a:ver1.0 :extended:urn:www.difi.no:ehf:ordre:ver1.0
+| Economic Operator
+
+| Order Response
+| urn:www.cenbii.eu:transaction:biitrns076:ver2.0 :extended:urn:www.peppol.eu:bis:peppol28a:ver1.0 :extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0
+| Contracting Authority
+|===
