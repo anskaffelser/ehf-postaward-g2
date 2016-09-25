@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" prefix="ubl"/>
 
    <pattern>
+      <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
+
       <rule context="//cbc:ProfileID">
          <assert id="EHFPROFILE-T10-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii04:ver2.0' or . = 'urn:www.cenbii.eu:profile:bii05:ver2.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver2.0'"
@@ -139,10 +141,10 @@
                  flag="warning">A customer number for AccountingCustomerParty SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R007" test="(cac:Contact/cbc:ID != '')" flag="fatal">A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
          <assert id="NOGOV-T10-R009"
-                 test="(cac:PartyLegalEntity/cbc:CompanyID != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
+                 test="$isB2C or (cac:PartyLegalEntity/cbc:CompanyID != '')"
                  flag="fatal">PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R015"
-                 test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
+                 test="$isB2C or (cac:PartyLegalEntity/cbc:RegistrationName != '')"
                  flag="fatal">Registration name for AccountingCustomerParty MUST be provided according to EHF.</assert>
       </rule>
       <rule context="//cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
