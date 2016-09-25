@@ -2,4 +2,8 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/165[#165]
+| Samkjøre kapittel 5.3 med EHF Faktura og kreditnota.
+| Guide
+
 |===

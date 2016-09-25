@@ -2,4 +2,8 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/165[#165]
+| Aligning chapter 5.3 with EHF Invoice and Credit Note.
+| Guide
+
 |===

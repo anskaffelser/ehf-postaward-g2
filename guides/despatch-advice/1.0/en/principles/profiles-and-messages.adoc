@@ -1,15 +1,5 @@
-= Profiles and Messages
+include::../{shared-dir}/profiles/info.adoc[]
 
-The definition of a profile is given in chapter 3.4.
-
-Only one profile is relevant regarding the fulfillment process.
-
-Despatch advice only (bii30)::
-Despatch advice
-
-== ProfileID
-
-The ProfileID identifies the process the business document is part of. EHF uses the identification system according to BII:
-
-Despatch advice only::
-urn:www.cenbii.eu:profile:bii30:ver2.0
+:leveloffset: +1
+include::../{shared-dir}/profiles/30.adoc[]
+:leveloffset: -1

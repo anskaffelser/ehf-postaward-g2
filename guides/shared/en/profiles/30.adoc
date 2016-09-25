@@ -1,0 +1,15 @@
+= Profile 30 - Despatch Advice
+
+ProfileID::
+urn:www.cenbii.eu:profile:bii30:ver2.0
+
+[cols="2,5,2", options="header"]
+|===
+| Type
+| CustomizationID
+| Role
+
+| Despatch Advice
+| urn:www.cenbii.eu:transaction:biitrns016:ver1.0 :extended:urn:www.peppol.eu:bis:peppol30a:ver1.0 :extended:urn:www.difi.no:ehf:pakkseddel:ver1.0
+| Contracting Authority
+|===
