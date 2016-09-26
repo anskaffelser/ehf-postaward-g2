@@ -8,21 +8,6 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
    <ns uri="utils" prefix="u"/>
 
-   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:sif">
-     <param name="expr"/>
-     <param name="ret1"/>
-     <param name="ret2"/>
-
-     <choose>
-       <when test="$expr">
-         <value-of select="$ret1"/>
-       </when>
-       <otherwise>
-         <value-of select="$ret2"/>
-       </otherwise>
-     </choose>
-   </function>
-
    <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:twodec">
      <param name="val"/>
      <value-of select="round($val * 100) div 100"/>
@@ -115,7 +100,7 @@
       <rule context="//cac:CreditNoteLine">
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
         <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
-         <let name="baseQuantity" value="xs:decimal(u:sif(cac:Price/cbc:BaseQuantity, cac:Price/cbc:BaseQuantity, 1))"/>
+         <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then cac:Price/cbc:BaseQuantity else 1)"/>
          <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
          <let name="quantity" value="xs:decimal(cbc:CreditedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
