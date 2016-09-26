@@ -20,6 +20,21 @@
 	</test>
 	<test>
 		<assert>
+			<description>Verify EndDate is optional.</description>
+			<success>NOGOV-T19-R002</success>
+		</assert>
+		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
+
+			<cac:ValidityPeriod>
+				<!-- <cbc:EndDate>2025-01-01</cbc:EndDate> -->
+			</cac:ValidityPeriod>
+
+		</Catalogue>
+	</test>
+	<test>
+		<assert>
 			<description>Trigger error when end date is not valid.</description>
 			<error>NOGOV-T19-R002</error>
 		</assert>

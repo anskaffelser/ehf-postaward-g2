@@ -25,6 +25,10 @@
 | Rette regel link:{ruleurl-cat}NOGOV-T19-R009[NOGOV-T19-R009] (**F**) så den trigger.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/171[#171]
+| Rette regel link:{ruleurl-cat}NOGOV-T19-R002[NOGOV-T19-R002] (**F**) så elementet EndDate er valgfritt.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Rette reglene link:{ruleurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{ruleurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{ruleurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{ruleurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{ruleurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{ruleurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) og link:{ruleurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
 | Validator

@@ -13,7 +13,7 @@
                  test="cbc:ActionCode or count(cac:CatalogueLine/cbc:ActionCode) = count(cac:CatalogueLine)"
                  flag="fatal">A Catalogue must contain ActionCode on either Header or Line level</assert>
          <assert id="NOGOV-T19-R002"
-                 test="current-date() &lt;= xs:date(cac:ValidityPeriod/cbc:EndDate)"
+                 test="not(cac:ValidityPeriod/cbc:EndDate) or current-date() &lt;= xs:date(cac:ValidityPeriod/cbc:EndDate)"
                  flag="fatal">A Catalogue must have a validity period enddate grater or equal to the current date</assert>
          <assert id="NOGOV-T19-R007" test="(cbc:UBLVersionID != '')" flag="fatal">A catalogue MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T19-R008" test="cac:ValidityPeriod" flag="fatal">A cataloge MUST have a validity period.</assert>
