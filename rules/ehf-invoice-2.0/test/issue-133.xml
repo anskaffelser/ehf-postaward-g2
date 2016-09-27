@@ -5,10 +5,10 @@ Content:
 This file contains two lines of TaxSubtotal with code Z.
 
 Errors:
-None
+NOGOV-T10-R041
 
 Warnings:
-NOGOV-T10-R041
+None
 
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

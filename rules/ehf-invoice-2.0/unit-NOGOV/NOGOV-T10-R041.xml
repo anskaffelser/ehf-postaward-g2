@@ -49,7 +49,7 @@
 	<test>
 		<assert>
 			<description>Verify two instances of a tax subtotal of the same tax category triggers warning.</description>
-			<warning>NOGOV-T10-R041</warning>
+			<error>NOGOV-T10-R041</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -73,12 +73,12 @@
 	<test>
 		<assert>
 			<description>Verify that code 'Z' and 'Z ' triggers warning (normalize-space).</description>
-			<warning>NOGOV-T10-R041</warning>
+			<error>NOGOV-T10-R041</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-			
+
 			<cac:TaxTotal>
 				<cac:TaxSubtotal>
 					<cac:TaxCategory>
@@ -91,7 +91,7 @@
 					</cac:TaxCategory>
 				</cac:TaxSubtotal>
 			</cac:TaxTotal>
-			
+
 		</Invoice>
 	</test>
 </testSet>
