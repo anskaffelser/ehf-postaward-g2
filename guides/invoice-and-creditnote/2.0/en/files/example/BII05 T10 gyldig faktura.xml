@@ -42,7 +42,7 @@
 	</cac:AdditionalDocumentReference>
 	<cac:AccountingSupplierParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">1238764941386</cbc:ID>
 			</cac:PartyIdentification>
@@ -60,14 +60,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:VAT">123456785MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>The Sellercompany ASA</cbc:RegistrationName>
-				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456789</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456785</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>Big city</cbc:CityName>
 					<cac:Country>
@@ -86,7 +86,7 @@
 	</cac:AccountingSupplierParty>
 	<cac:AccountingCustomerParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">3456789012091</cbc:ID>
 			</cac:PartyIdentification>
@@ -104,14 +104,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:CompanyID schemeID="NO:VAT">987654321MVA</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:VAT">987654325MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>Buyercompany ASA</cbc:RegistrationName>
-				<cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR">987654325</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>Mainplace</cbc:CityName>
 					<cac:Country>
@@ -136,7 +136,7 @@
 			<cbc:Name>Ebeneser Scrooge AS</cbc:Name>
 		</cac:PartyName>
 		<cac:PartyLegalEntity>
-			<cbc:CompanyID schemeID="NO:ORGNR">989823401</cbc:CompanyID>
+			<cbc:CompanyID schemeID="NO:ORGNR">999999999</cbc:CompanyID>
 		</cac:PartyLegalEntity>
 	</cac:PayeeParty>
 	<cac:TaxRepresentativeParty>
@@ -154,7 +154,7 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:CompanyID schemeID="NO:VAT">967611265MVA</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:VAT">999999999MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
