@@ -13,7 +13,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:PartyLegalEntity>
-				<cbc:CompanyID>123456789</cbc:CompanyID>
+				<cbc:CompanyID>123456785</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 
 		</Invoice>
@@ -21,19 +21,20 @@
 	<test>
 		<assert>
 			<description>Trigger error when organization number doesn't apply to rules.</description>
-			<error number="6">NOGOV-T10-R031</error>
+			<error number="7">NOGOV-T10-R031</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:PartyLegalEntity>
+				<cbc:CompanyID>123456789</cbc:CompanyID>
 				<cbc:CompanyID>122</cbc:CompanyID>
-				<cbc:CompanyID>123 456 789</cbc:CompanyID>
-				<cbc:CompanyID>A23456789</cbc:CompanyID>
-				<cbc:CompanyID>NO123456789</cbc:CompanyID>
-				<cbc:CompanyID>123456789MVA</cbc:CompanyID>
-				<cbc:CompanyID>NO123456789MVA</cbc:CompanyID>
+				<cbc:CompanyID>123 456 785</cbc:CompanyID>
+				<cbc:CompanyID>A23456785</cbc:CompanyID>
+				<cbc:CompanyID>NO123456785</cbc:CompanyID>
+				<cbc:CompanyID>123456785MVA</cbc:CompanyID>
+				<cbc:CompanyID>NO123456785MVA</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 
 		</Invoice>

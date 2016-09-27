@@ -13,7 +13,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:Party>
-				<cbc:EndpointID>123456789</cbc:EndpointID>
+				<cbc:EndpointID>123456785</cbc:EndpointID>
 			</cac:Party>
 
 		</Invoice>
@@ -21,18 +21,19 @@
 	<test>
 		<assert>
 			<description>Trigger error when EndpointID doesn't contain Norwegian organization number.</description>
-			<error number="5">NOGOV-T10-R026</error>
+			<error number="6">NOGOV-T10-R026</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
 			<cac:Party>
-				<cbc:EndpointID>123.456.789</cbc:EndpointID>
-				<cbc:EndpointID>123 456 789</cbc:EndpointID>
-				<cbc:EndpointID>NO123456789</cbc:EndpointID>
-				<cbc:EndpointID>123456789MVA</cbc:EndpointID>
-				<cbc:EndpointID>NO123456789MVA</cbc:EndpointID>
+				<cbc:EndpointID>123456789</cbc:EndpointID>
+				<cbc:EndpointID>123.456.785</cbc:EndpointID>
+				<cbc:EndpointID>123 456 785</cbc:EndpointID>
+				<cbc:EndpointID>NO123456785</cbc:EndpointID>
+				<cbc:EndpointID>123456785MVA</cbc:EndpointID>
+				<cbc:EndpointID>NO123456785MVA</cbc:EndpointID>
 			</cac:Party>
 
 		</Invoice>
