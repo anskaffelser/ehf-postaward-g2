@@ -13,7 +13,7 @@
      <variable name="length" select="string-length($val) - 1"/>
      <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
      <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
-     <value-of select="(11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
+     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
    </function>
 
    <pattern>
