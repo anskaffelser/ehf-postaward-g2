@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t14-base-2.0">
+	<assert>
+		<scope>NOGOV-T14-R010</scope>
+	</assert>
+	<test>
+		<assert>
+			<description>Trigger no error when schemeID for endpoint is Norwegian.</description>
+			<success>NOGOV-T14-R010</success>
+		</assert>
+		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+
+			<cac:Party>
+				<cbc:EndpointID schemeID="NO:ORGNR"/>
+			</cac:Party>
+
+		</CreditNote>
+	</test>
+	<test>
+		<assert>
+			<description>Trigger error when schemeID for endpoint is not Norwegian.</description>
+			<error number="2">NOGOV-T14-R010</error>
+		</assert>
+		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+
+			<cac:Party>
+				<cbc:EndpointID schemeID="GLN"/>
+				<cbc:EndpointID schemeID="DK:VAT"/>
+			</cac:Party>
+
+		</CreditNote>
+	</test>
+</testSet>
