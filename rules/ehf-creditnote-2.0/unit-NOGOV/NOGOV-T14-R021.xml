@@ -43,7 +43,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>No action when allowance is not set.</description>
+			<description>No action when charge is not set.</description>
 			<success>NOGOV-T14-R0021</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

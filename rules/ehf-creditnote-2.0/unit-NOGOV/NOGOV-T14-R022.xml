@@ -5,7 +5,7 @@
 	</assert>
 	<test>
 		<assert>
-			<description>Verify total charge is presented when charge is presented on document level.</description>
+			<description>Verify total allowance is presented when allowance is presented on document level.</description>
 			<success>NOGOV-T14-R0022</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -24,7 +24,7 @@
 	</test>
 	<test>
 		<assert>
-			<description>Trigger when total charge is not presented when charge is presented on document level.</description>
+			<description>Trigger when total allowance is not presented when allowance is presented on document level.</description>
 			<warning>NOGOV-T14-R0022</warning>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
