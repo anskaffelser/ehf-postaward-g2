@@ -12,9 +12,9 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2">
 
-			<cac:ReceiverParty>
-				<cbc:EndpointID schemeID="NO:ORGNR"></cbc:EndpointID>
-			</cac:ReceiverParty>
+			<cac:Party>
+				<cbc:EndpointID schemeID="NO:ORGNR"/>
+			</cac:Party>
 
 		</DespatchAdvice>
 	</test>
@@ -27,9 +27,9 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2">
 
-			<cac:ReceiverParty>
-				<cbc:EndpointID schemeID="GLN"></cbc:EndpointID>
-			</cac:ReceiverParty>
+			<cac:Party>
+				<cbc:EndpointID schemeID="GLN"/>
+			</cac:Party>
 
 		</DespatchAdvice>
 	</test>

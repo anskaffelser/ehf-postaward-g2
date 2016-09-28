@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t16-base-1.0">
 	<assert>
-		<scope>NOGOV-T16-R019</scope>
+		<scope>NOGOV-T16-R010</scope>
 	</assert>
 	<test>
 		<assert>
