@@ -6,4 +6,8 @@
 | Samkjøre kapittel 5.3 med EHF Faktura og kreditnota.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/175[#175]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T16.
+| Guide
+
 |===

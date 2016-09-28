@@ -6,4 +6,8 @@
 | Aligning chapter 5.3 with EHF Invoice and Credit Note.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/175[#175]
+| Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T16.
+| Validator
+
 |===

@@ -5,5 +5,5 @@
 |Regel
 |Melding/Kontekst/Test
 
-include::{rules-dir}/NOGOV-UBL-T16.xsl.adoc[]
+include::{rules-dir}/NOGOV-UBL-T16.sch.adoc[]
 |====
