@@ -6,6 +6,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Rette mindre feil i eksempelfil for faktura.
+| Vedlegg
+
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Oppdatere link:{ruleurl-inv}NONAT-T10-R026/[NONAT-T10-R026] (**F**) og legge til 0,01 i slakk. Introduserer link:{ruleurl-inv}NONAT-T10-R027/[NONAT-T10-R027] (**W**) uten slakk.
 | Validator
@@ -35,7 +39,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Oppdatere link:{ruleurl-inv}NONAT-T10-R026/[NOGOV-T10-R026] (**F**), link:{ruleurl-inv}NONAT-T10-R030/[NOGOV-T10-R030],  link:{ruleurl-inv}NONAT-T10-R031/[NOGOV-T10-R031] og link:{ruleurl-inv}NONAT-T10-R036/[NOGOV-T10-R036] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
+| Oppdatere link:{ruleurl-inv}NONAT-T10-R026/[NOGOV-T10-R026] (**F**), link:{ruleurl-inv}NONAT-T10-R030/[NOGOV-T10-R030] (**F**),  link:{ruleurl-inv}NONAT-T10-R031/[NOGOV-T10-R031] (**F**) og link:{ruleurl-inv}NONAT-T10-R036/[NOGOV-T10-R036] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]
