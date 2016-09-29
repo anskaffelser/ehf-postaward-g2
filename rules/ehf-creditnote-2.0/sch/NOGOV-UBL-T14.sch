@@ -36,6 +36,9 @@
          <assert id="NOGOV-T14-R005"
                  test="not(attribute::currencyID) or (attribute::currencyID and attribute::currencyID = /ubl:CreditNote/cbc:DocumentCurrencyCode)"
                  flag="fatal">The attribute currencyID must have the same value as DocumentCurrencyCode, except the attribute for TransactionCurrencyTaxAmount.</assert>
+         <assert id="NOGOV-T14-R024"
+                 test="not(name(parent::node()) = 'cac:LegalMonetaryTotal') or string-length(substring-after(., '.')) &lt;= 2"
+                 flag="fatal">Document level amounts cannot have more than 2 decimals</assert>
       </rule>
       <rule context="//cac:Item">
          <assert id="NOGOV-T14-R002"
@@ -113,11 +116,6 @@
          <assert id="NOGOV-T14-R023"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9)"
                  flag="fatal">When scheme is NO:ORGNR, a norwegian organizational number must be used. Only numerical value allowed</assert>
-      </rule>
-      <rule context="//cac:LegalMonetaryTotal/child::*">
-         <assert id="NOGOV-T14-R024"
-                 test="string-length(substring-after(., '.')) &lt;= 2"
-                 flag="fatal">Document level amounts cannot have more than 2 decimals</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal">
          <assert id="NOGOV-T14-R026"
