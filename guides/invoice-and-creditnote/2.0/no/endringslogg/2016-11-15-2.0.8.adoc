@@ -34,6 +34,10 @@
 | Endre link:{ruleurl-inv}NOGOV-T10-R034/[NOGOV-T10-R034] (**F**) og link:{ruleurl-inv}NOGOV-T10-R035/[NOGOV-T10-R035] (**F**) fra advarsel til feil.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/161[#161]
+| Endre link:{ruleurl-inv}NOGOV-T14-R021/[NOGOV-T14-R021] (**F**) og link:{ruleurl-inv}NOGOV-T14-R022/[NOGOV-T14-R022] (**F**) fra advarsel til feil.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/173[#173]
 | Endre link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) og link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) fra advarsel til feil.
 | Validator

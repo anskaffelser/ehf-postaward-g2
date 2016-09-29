@@ -25,7 +25,7 @@
 	<test>
 		<assert>
 			<description>Trigger when total allowance is not presented when allowance is presented on document level.</description>
-			<warning>NOGOV-T14-R022</warning>
+			<error>NOGOV-T14-R022</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

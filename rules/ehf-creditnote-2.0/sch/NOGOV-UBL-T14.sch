@@ -19,10 +19,10 @@
                  flag="fatal">If the VAT total amount in a credit note exists it MUST contain the suppliers VAT number.</assert>
          <assert id="NOGOV-T14-R021"
                  test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) and (cac:LegalMonetaryTotal/cbc:ChargeTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'true']) )"
-                 flag="warning">If charge is present on document level, total charge must be stated.</assert>
+                 flag="fatal">If charge is present on document level, total charge must be stated.</assert>
          <assert id="NOGOV-T14-R022"
                  test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) and (cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) )"
-                 flag="warning">If allowance is present on document level, total allowance must be stated.</assert>
+                 flag="fatal">If allowance is present on document level, total allowance must be stated.</assert>
          <assert id="EHFPROFILE-T14-R002"
                  test="local-name(/*) = 'CreditNote' and (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))"
                  flag="fatal">A creditnote transaction T14 in Profile other than xx MUST have an invoice or creditnote reference identifier.</assert>
