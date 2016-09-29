@@ -56,6 +56,12 @@
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxTotal">
          <assert id="NOGOV-T14-R018" test="(cac:TaxSubtotal)" flag="fatal">A credit note MUST have Tax Subtotal specifications.</assert>
+         <assert id="NOGOV-T14-R025"
+                 test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
+                 flag="fatal">Total tax amount cannot have more than 2 decimals</assert>
+         <assert id="NOGOV-T14-R041"
+                 test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)"
+                 flag="fatal">Multiple tax subtotals per tax category is not allowed.</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxRepresentativeParty">
          <assert id="NOGOV-T14-R017"
@@ -112,14 +118,6 @@
          <assert id="NOGOV-T14-R024"
                  test="string-length(substring-after(., '.')) &lt;= 2"
                  flag="fatal">Document level amounts cannot have more than 2 decimals</assert>
-      </rule>
-      <rule context="/ubl:CreditNote/cac:TaxTotal">
-         <assert id="NOGOV-T14-R025"
-                 test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
-                 flag="fatal">Total tax amount cannot have more than 2 decimals</assert>
-         <assert id="NOGOV-T14-R041"
-                 test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)"
-                 flag="fatal">Multiple tax subtotals per tax category is not allowed.</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal">
          <assert id="NOGOV-T14-R026"
