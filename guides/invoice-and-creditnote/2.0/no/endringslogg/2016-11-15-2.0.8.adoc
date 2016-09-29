@@ -50,6 +50,10 @@
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T10.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/176[#176]
+| Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T14.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NONAT-T14.
 | Validator
