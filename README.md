@@ -1,6 +1,6 @@
 # EHF Standards
 
-Release date: **2016-09-15**
+Release date: **2016-11-15**
 
 This repository defines standards part of Electronic Commerce Format (EHF).
 
