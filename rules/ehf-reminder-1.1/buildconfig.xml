@@ -3,14 +3,18 @@
 
 	<testfolder>test</testfolder>
 
-    <!-- Reminder -->
+    <configuration>
+        <identifier>ehf-t17-base-1.1</identifier>
+        <title>EHF Reminder 1.1 (Base)</title>
+        <inherit>ubl-reminder-2.0</inherit>
+        <file path="xsl/NONAT-UBL-T17.xsl" />
+    </configuration>
     <configuration>
         <identifier>ehf-t17-xy-1.1</identifier>
         <title>EHF Reminder 1.1 (Profile XY)</title>
         <profileId>urn:www.cenbii.eu:profile:biixy:ver1.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biicoretrdm017:ver1.0:#urn:www.cenbii.eu:profile:biixy:ver1.0#urn:www.difi.no:ehf:purring:ver1</customizationId>
-        <inherit>ubl-reminder-2.0</inherit>
-        <file path="xsl/NONAT-UBL-T17.xsl" />
+        <inherit>ehf-t17-base-1.1</inherit>
     </configuration>
 
 </buildConfigurations>

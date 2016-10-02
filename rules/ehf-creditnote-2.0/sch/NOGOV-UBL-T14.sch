@@ -123,8 +123,7 @@
                  flag="fatal">[NOGOV-T14-R026]-Tax subtotal amounts cannot have more than 2 decimals</assert>
          <assert id="NOGOV-T14-R026"
                  test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
-                 flag="fatal">[NOGOV-T14-R026]-Tax subtotal amounts cannot have more than 2
-                  decimals</assert>
+                 flag="fatal">[NOGOV-T14-R026]-Tax subtotal amounts cannot have more than 2 decimals</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:AllowanceCharge">
          <assert id="NOGOV-T14-R027"
