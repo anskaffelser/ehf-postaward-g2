@@ -5,6 +5,10 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Fix minor bug in Catalogue and Catalogue Response example files.
+| Attachment
+
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
 | Adding missing list of NOGOV rules for Catalogue.
 | Guide
@@ -31,6 +35,14 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Fix rules link:{ruleurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{ruleurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{ruleurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{ruleurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{ruleurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{ruleurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) and link:{ruleurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-cat}NOGOV-T19-R015/[NOGOV-T19-R015] (**F**) and link:{ruleurl-cat}NOGOV-T19-R017/[NOGOV-T19-R017] (**F**) to also verify checksum of organization number.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-res}NOGOV-T58-R006/[NOGOV-T58-R006] (**F**) and link:{ruleurl-res}NOGOV-T58-R008/[NOGOV-T58-R008] (**F**) to also verify checksum of organization number.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]

@@ -5,12 +5,24 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Fix minor bug in Order and Order Response example files.
+| Attachment
+
 | link:https://github.com/difi/vefa-validator-conf/issues/166[#166]
 | Aligning chapter 5.3 with EHF Invoice and Credit Note.
 | Guide
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Fix rule link:{ruleurl-ord}NOGOV-T01-R021/[NOGOV-T01-R021] (**W**) so it triggers as intended.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-ord}NOGOV-T01-R009/[NOGOV-T01-R009] (**F**), link:{ruleurl-ord}NOGOV-T01-R010/[NOGOV-T01-R010] (**F**) and link:{ruleurl-ord}NOGOV-T01-R011/[NOGOV-T01-R011] (**F**) to also verify checksum of organization number.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-res}NOGOV-T76-R003/[NOGOV-T76-R003] (**F**) to also verify checksum of organization number.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]

@@ -5,12 +5,24 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Rette mindre feil i eksempelfiler for ordre og ordrebekreftelse.
+| Vedlegg
+
 | link:https://github.com/difi/vefa-validator-conf/issues/166[#166]
 | Samkjøre kapittel 5.3 med EHF Faktura og kreditnota.
 | Guide
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Rette regel link:{ruleurl-ord}NOGOV-T01-R021/[NOGOV-T01-R021] (**W**) så den trigger.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Oppdatere link:{ruleurl-ord}NOGOV-T01-R009/[NOGOV-T01-R009] (**F**), link:{ruleurl-ord}NOGOV-T01-R010/[NOGOV-T01-R010] (**F**) og link:{ruleurl-ord}NOGOV-T01-R011/[NOGOV-T01-R011] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Oppdatere link:{ruleurl-res}NOGOV-T76-R003/[NOGOV-T76-R003] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]

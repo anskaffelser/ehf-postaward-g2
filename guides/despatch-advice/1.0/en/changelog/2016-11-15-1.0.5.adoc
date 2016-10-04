@@ -1,3 +1,5 @@
+:ruleurl-res: /ehf/rule/despatch-advice-1.0/
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
@@ -5,6 +7,14 @@
 | link:https://github.com/difi/vefa-validator-conf/issues/165[#165]
 | Aligning chapter 5.3 with EHF Invoice and Credit Note.
 | Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Fix minor bug in Despatch Advice example files.
+| Attachment
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-des}NOGOV-T16-R010/[NOGOV-T16-R010] (**F**) to also verify checksum of organization number.
+| Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/175[#175]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T16.

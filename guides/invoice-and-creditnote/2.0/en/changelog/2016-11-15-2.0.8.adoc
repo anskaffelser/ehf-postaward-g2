@@ -6,7 +6,7 @@
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Fix minor bug in Invoice example file.
+| Fix minor bug in Invoice and Credit Note example files.
 | Attachment
 
 | link:https://github.com/difi/vefa-validator-conf/issues/157[#157]
@@ -43,6 +43,10 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
 | Updating link:{ruleurl-inv}NOGOV-T10-R026/[NOGOV-T10-R026] (**F**), link:{ruleurl-inv}NOGOV-T10-R030/[NOGOV-T10-R030] (**F**),  link:{ruleurl-inv}NOGOV-T10-R031/[NOGOV-T10-R031] (**F**) and link:{ruleurl-inv}NOGOV-T10-R036/[NOGOV-T10-R036] (**F**) to also verify checksum of organization number.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Updating link:{ruleurl-cre}NOGOV-T15-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R013/[NOGOV-T14-R013] (**F**) and link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) to also verify checksum of organization number.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]

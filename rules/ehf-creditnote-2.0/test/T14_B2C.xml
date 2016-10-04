@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
                 Content:
-                This file contains a norwegian credit note to consumer, profile invoice & creditnote 
-                
+                This file contains a norwegian credit note to consumer, profile invoice & creditnote
+
                 Errors:
                 None
-                
+
                 Warning:
                	EUGEN-T14-R040
-				
+
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"
 	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -43,7 +43,7 @@
 	</cac:AdditionalDocumentReference>
 	<cac:AccountingSupplierParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyName>
 				<cbc:Name>Leverandøren AS</cbc:Name>
 			</cac:PartyName>
@@ -56,15 +56,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:CompanyID schemeID="NO:VAT">123456789MVA</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:VAT">123456785MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>Leverandøren AS</cbc:RegistrationName>
-				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret"
-					>123456789</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">123456785</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 			<cac:Contact>
 				<cbc:ID>Ref456</cbc:ID>

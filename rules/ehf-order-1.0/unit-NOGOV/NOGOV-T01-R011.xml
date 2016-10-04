@@ -13,7 +13,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
 		  <cac:PartyTaxScheme>
-				<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+				<cbc:CompanyID>123456785MVA</cbc:CompanyID>
 			</cac:PartyTaxScheme>
 
 		</Order>
@@ -21,17 +21,18 @@
 	<test>
 		<assert>
 			<description>Verify invalid content triggers error.</description>
-			<error number="4">NOGOV-T01-R011</error>
+			<error number="5">NOGOV-T01-R011</error>
 		</assert>
 		<Order xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
 		  <cac:PartyTaxScheme>
-				<cbc:CompanyID>123456789mva</cbc:CompanyID>
-				<cbc:CompanyID>123 456 789MVA</cbc:CompanyID>
-				<cbc:CompanyID>123.456.789MVA</cbc:CompanyID>
-				<cbc:CompanyID>1234567890MVA</cbc:CompanyID>
+				<cbc:CompanyID>123456789MVA</cbc:CompanyID>
+				<cbc:CompanyID>123456785mva</cbc:CompanyID>
+				<cbc:CompanyID>123 456 785MVA</cbc:CompanyID>
+				<cbc:CompanyID>123.456.785MVA</cbc:CompanyID>
+				<cbc:CompanyID>1234567850MVA</cbc:CompanyID>
 			</cac:PartyTaxScheme>
 
 		</Order>

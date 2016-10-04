@@ -13,7 +13,7 @@
 	</cac:OrderReference>
 	<cac:SellerSupplierParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">7080000123456</cbc:ID>
 			</cac:PartyIdentification>
@@ -29,7 +29,7 @@
 	</cac:SellerSupplierParty>
 	<cac:BuyerCustomerParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">931186755</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">7080000985134</cbc:ID>
 			</cac:PartyIdentification>

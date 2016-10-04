@@ -1,4 +1,4 @@
-<schema xmlns="http://purl.oclc.org/dsdl/schematron"
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
    <title>Norwegian rules for EHF Order</title>
@@ -6,6 +6,15 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Order-2" prefix="ubl"/>
+   <ns uri="utils" prefix="u"/>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
+     <param name="val"/>
+     <variable name="length" select="string-length($val) - 1"/>
+     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+     <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
+     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
+   </function>
 
    <pattern>
       <rule context="/ubl:Order">
@@ -35,18 +44,18 @@
       </rule>
       <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T01-R010"
-                 test="(string-length(.) = 9) and (string(.) castable as xs:integer)"
+                 test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T01-R010]-An organisational number MUST be nine numbers.</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T01-R011"
-                 test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')"
+                 test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and xs:boolean(u:mod11(substring(., 1, 9))) and (substring(.,10,12)='MVA')"
                  flag="fatal">[NOGOV-T01-R011]-A VAT number MUST be nine numbers followed by the letters MVA.</assert>
       </rule>
       <rule context="//cac:Party/cbc:EndpointID">
          <assert id="NOGOV-T01-R008" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T01-R008]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T01-R009"
-                 test="(string(.) castable as xs:integer) and (string-length(.) = 9)"
+                 test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T01-R009]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference">

@@ -1,4 +1,4 @@
-<schema xmlns="http://purl.oclc.org/dsdl/schematron"
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
    <title>Sjekk mot norske regler </title>
@@ -6,6 +6,15 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
+   <ns uri="utils" prefix="u"/>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
+     <param name="val"/>
+     <variable name="length" select="string-length($val) - 1"/>
+     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+     <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
+     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
+   </function>
 
    <pattern>
       <rule context="//cbc:ProfileID">
@@ -47,7 +56,7 @@
       </rule>
       <rule context="//cac:AccountingCustomerParty/cac:Party">
          <assert id="NOGOV-T14-R004"
-                 test="(cac:PartyLegalEntity/cbc:CompanyID != '')or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
+                 test="(cac:PartyLegalEntity/cbc:CompanyID != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
                  flag="fatal">[NOGOV-T14-R004]-PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T14-R008"
                  test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
@@ -74,17 +83,17 @@
       <rule context="//cac:Party/cbc:EndpointID">
          <assert id="NOGOV-T14-R010" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T14-R009"
-                 test="(string(.) castable as xs:integer) and (string-length(.) = 9)"
+                 test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T14-R009]-Endpoint ID MUST be a norwegian organizational number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T14-R014"
-                 test="(string-length(.) = 9) and (string(.) castable as xs:integer)"
+                 test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T14-R014]-An organisational number for seller, buyer and payee MUST be nine numbers..</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T14-R013"
-                 test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and (substring(.,10,12)='MVA')"
+                 test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and xs:boolean(u:mod11(substring(., 1, 9))) and (substring(.,10,12)='MVA')"
                  flag="fatal">[NOGOV-T14-R013]-A VAT number MUST be nine numbers followed by the letters MVA.</assert>
       </rule>
       <rule context="//*[contains(name(),'Date')]">

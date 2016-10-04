@@ -23,7 +23,7 @@
 		<cbc:ContractType>StandardContract</cbc:ContractType>
 	</cac:ReferencedContract>
 	<cac:ProviderParty>
-		<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+		<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 		<cac:PartyIdentification>
 			<cbc:ID schemeID="ZZZ">Provider AS</cbc:ID>
 		</cac:PartyIdentification>
@@ -32,7 +32,7 @@
 		</cac:PartyName>
 	</cac:ProviderParty>
 	<cac:ReceiverParty>
-		<cbc:EndpointID schemeID="NO:ORGNR">123456789</cbc:EndpointID>
+		<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 		<cac:PartyIdentification>
 			<cbc:ID schemeID="ZZZ">HBE 1018275</cbc:ID>
 		</cac:PartyIdentification>
@@ -41,11 +41,11 @@
 		</cac:PartyName>
 	</cac:ReceiverParty>
 	<cac:SellerSupplierParty>
-		
+
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="NO:ORGNR">987654321</cbc:ID>
+				<cbc:ID schemeID="NO:ORGNR">987654325</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Supplier</cbc:Name>

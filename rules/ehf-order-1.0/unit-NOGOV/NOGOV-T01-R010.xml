@@ -13,7 +13,7 @@
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
 		  <cac:PartyLegalEntity>
-				<cbc:CompanyID>123456789</cbc:CompanyID>
+				<cbc:CompanyID>123456785</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 
 		</Order>
@@ -21,16 +21,17 @@
 	<test>
 		<assert>
 			<description>Verify invalid content triggers error.</description>
-			<error number="3">NOGOV-T01-R010</error>
+			<error number="4">NOGOV-T01-R010</error>
 		</assert>
 		<Order xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
 		  <cac:PartyLegalEntity>
-				<cbc:CompanyID>123 456 789</cbc:CompanyID>
-				<cbc:CompanyID>123.456.789</cbc:CompanyID>
-				<cbc:CompanyID>1234567890</cbc:CompanyID>
+				<cbc:CompanyID>123456789</cbc:CompanyID>
+				<cbc:CompanyID>123 456 785</cbc:CompanyID>
+				<cbc:CompanyID>123.456.785</cbc:CompanyID>
+				<cbc:CompanyID>1234567850</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 
 		</Order>

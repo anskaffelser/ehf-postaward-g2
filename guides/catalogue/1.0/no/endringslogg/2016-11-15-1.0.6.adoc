@@ -5,6 +5,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Rette mindre feil i eksempelfiler for katalog og katalogrespons.
+| Vedlegg
+
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
 | Legge til manglende liste over NOGOV-regler for katalog.
 | Guide
@@ -31,6 +35,14 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Rette reglene link:{ruleurl-res}NOGOV-T58-R002[NOGOV-T58-R002] (**F**), link:{ruleurl-res}NOGOV-T58-R003[NOGOV-T58-R003] (**W**), link:{ruleurl-res}NOGOV-T58-R004[NOGOV-T58-R004] (**W**), link:{ruleurl-res}NOGOV-T58-R005[NOGOV-T58-R005] (**F**), link:{ruleurl-res}NOGOV-T58-R006[NOGOV-T58-R006] (**F**), link:{ruleurl-res}NOGOV-T58-R007[NOGOV-T58-R007] (**F**) og link:{ruleurl-res}NOGOV-T58-R008[NOGOV-T58-R008] (**F**).
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Oppdatere link:{ruleurl-cat}NOGOV-T19-R015/[NOGOV-T19-R015] (**F**) og link:{ruleurl-cat}NOGOV-T19-R017/[NOGOV-T19-R017] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
+| Validator
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Oppdatere link:{ruleurl-res}NOGOV-T58-R006/[NOGOV-T58-R006] (**F**) og link:{ruleurl-res}NOGOV-T58-R008/[NOGOV-T58-R008] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]

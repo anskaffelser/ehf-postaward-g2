@@ -43,7 +43,7 @@
 	</cac:Contract>
 	<cac:BuyerCustomerParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">931186755</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">7080000985134</cbc:ID>
 			</cac:PartyIdentification>
@@ -60,14 +60,14 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:CompanyID>931186755MVA</cbc:CompanyID>
+				<cbc:CompanyID>123456785MVA</cbc:CompanyID>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>Helseforetak AS</cbc:RegistrationName>
-				<cbc:CompanyID>931186755</cbc:CompanyID>
+				<cbc:CompanyID>123456785</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>Oslo</cbc:CityName>
 					<cac:Country>
@@ -85,7 +85,7 @@
 	</cac:BuyerCustomerParty>
 	<cac:SellerSupplierParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">938752655</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
 				<cbc:ID schemeID="GLN">7080000374200</cbc:ID>
 			</cac:PartyIdentification>
