@@ -5,13 +5,13 @@
 |===
 | Sak | Beskrivelse | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Rette mindre feil i eksempelfiler for ordre og ordrebekreftelse.
-| Vedlegg
-
 | link:https://github.com/difi/vefa-validator-conf/issues/166[#166]
 | Samkjøre kapittel 5.3 med EHF Faktura og kreditnota.
 | Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Rette mindre feil i eksempelfiler for ordre og ordrebekreftelse.
+| Vedlegg
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Rette regel link:{ruleurl-ord}NOGOV-T01-R021/[NOGOV-T01-R021] (**W**) så den trigger.

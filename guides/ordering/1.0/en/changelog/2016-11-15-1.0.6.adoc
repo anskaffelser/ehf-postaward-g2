@@ -5,13 +5,13 @@
 |===
 | Issue | Description | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Fix minor bug in Order and Order Response example files.
-| Attachment
-
 | link:https://github.com/difi/vefa-validator-conf/issues/166[#166]
 | Aligning chapter 5.3 with EHF Invoice and Credit Note.
 | Guide
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Fix minor bug in Order and Order Response example files.
+| Attachment
 
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Fix rule link:{ruleurl-ord}NOGOV-T01-R021/[NOGOV-T01-R021] (**W**) so it triggers as intended.

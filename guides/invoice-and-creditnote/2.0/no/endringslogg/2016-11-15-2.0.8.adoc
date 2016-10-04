@@ -47,7 +47,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Oppdatere link:{ruleurl-cre}NOGOV-T14-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R0131/[NOGOV-T14-R013] (**F**) og link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
+| Oppdatere link:{ruleurl-cre}NOGOV-T14-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R013/[NOGOV-T14-R013] (**F**) og link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]

@@ -5,10 +5,6 @@
 |===
 | Issue | Description | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Fix minor bug in Catalogue and Catalogue Response example files.
-| Attachment
-
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
 | Adding missing list of NOGOV rules for Catalogue.
 | Guide
@@ -19,6 +15,10 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Fix minor bug in Catalogue Response example file.
+| Attachment
+
+| link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
+| Fix minor bug in Catalogue and Catalogue Response example files.
 | Attachment
 
 | link:https://github.com/difi/vefa-validator-conf/issues/159[#159]
