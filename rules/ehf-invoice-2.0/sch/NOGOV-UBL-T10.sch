@@ -93,12 +93,12 @@
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T10-R030"
                  test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
-                 flag="fatal">[NOGOV-T10-R030]-A VAT number MUST be nine numbers followed by the letters MVA.</assert>
+                 flag="fatal">[NOGOV-T10-R030]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T10-R031"
                  test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T10-R031]-An organisational number for seller, buyer and payee MUST be nine numbers..</assert>
+                 flag="fatal">[NOGOV-T10-R031]-A valid Norwegian organization number for seller, buyer and payee MUST be nine numbers..</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:PaymentTerms">
          <assert id="NOGOV-T10-R020" test="(cbc:Note != '')" flag="fatal">[NOGOV-T10-R020]-Note MUST be specified when describing Payment terms.</assert>
@@ -142,7 +142,7 @@
          <assert id="NOGOV-T10-R027" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T10-R026"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T10-R026]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T10-R026]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:AccountingCustomerParty/cac:Party">
          <assert id="NOGOV-T10-R006"
@@ -159,7 +159,7 @@
       <rule context="//cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
          <assert id="NOGOV-T10-R036"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T10-R036]-When scheme is NO:ORGNR, a norwegian organizational number must be used. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T10-R036]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal">
          <assert id="NOGOV-T10-R039"

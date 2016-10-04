@@ -54,7 +54,7 @@
          <assert id="NOGOV-T16-R009" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T16-R010"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T16-R010]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T16-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cbc:ProfileID">
          <assert id="EHFPROFILE-T16-R001"

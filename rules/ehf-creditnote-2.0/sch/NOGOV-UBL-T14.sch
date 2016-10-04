@@ -84,17 +84,17 @@
          <assert id="NOGOV-T14-R010" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T14-R009"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T14-R009]-Endpoint ID MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T14-R009]-Endpoint ID MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T14-R014"
                  test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T14-R014]-An organisational number for seller, buyer and payee MUST be nine numbers..</assert>
+                 flag="fatal">[NOGOV-T14-R014]-A valid Norwegian organization number for seller, buyer and payee MUST be nine numbers..</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T14-R013"
                  test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and xs:boolean(u:mod11(substring(., 1, 9))) and (substring(.,10,12)='MVA')"
-                 flag="fatal">[NOGOV-T14-R013]-A VAT number MUST be nine numbers followed by the letters MVA.</assert>
+                 flag="fatal">[NOGOV-T14-R013]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
       </rule>
       <rule context="//*[contains(name(),'Date')]">
          <assert id="NOGOV-T14-R011"

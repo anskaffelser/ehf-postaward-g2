@@ -44,13 +44,13 @@
          <assert id="NOGOV-T19-R014" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T19-R014]-An endpoint identifier scheme for provider MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T19-R015"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T19-R015]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T19-R015]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="cac:ReceiverParty/cbc:EndpointID">
          <assert id="NOGOV-T19-R016" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T19-R016]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T19-R017"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T19-R017]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T19-R017]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:TaxScheme">
          <assert id="NOGOV-T19-R011" test="cbc:ID" flag="fatal">[NOGOV-T19-R011]-Every tax scheme MUST be defined through an identifier.</assert>

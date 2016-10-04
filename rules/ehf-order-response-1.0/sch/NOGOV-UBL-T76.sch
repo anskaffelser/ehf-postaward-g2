@@ -32,7 +32,7 @@
          <assert id="NOGOV-T76-R002" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T76-R002]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T76-R003"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T76-R003]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T76-R003]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:BuyerCustomerParty">
          <assert id="NOGOV-T76-R005" test="cac:Party/cbc:EndpointID" flag="warning">[NOGOV-T76-R005]-A buyer should have an EndpointID.</assert>

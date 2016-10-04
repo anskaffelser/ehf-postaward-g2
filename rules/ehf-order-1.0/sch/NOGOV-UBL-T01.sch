@@ -45,18 +45,18 @@
       <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T01-R010"
                  test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T01-R010]-An organisational number MUST be nine numbers.</assert>
+                 flag="fatal">[NOGOV-T01-R010]-A valid Norwegian organization number MUST be nine numbers.</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T01-R011"
                  test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and xs:boolean(u:mod11(substring(., 1, 9))) and (substring(.,10,12)='MVA')"
-                 flag="fatal">[NOGOV-T01-R011]-A VAT number MUST be nine numbers followed by the letters MVA.</assert>
+                 flag="fatal">[NOGOV-T01-R011]-A VAT number MUST be a valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
       </rule>
       <rule context="//cac:Party/cbc:EndpointID">
          <assert id="NOGOV-T01-R008" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T01-R008]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T01-R009"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T01-R009]-MUST be a norwegian organizational number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T01-R009]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference">
          <assert id="NOGOV-T01-R013" test="(cbc:URI !='')" flag="fatal">[NOGOV-T01-R013]-URI MUST be specified when describing external reference documents.</assert>
