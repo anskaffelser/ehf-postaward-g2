@@ -17,6 +17,8 @@
    </function>
 
    <pattern>
+      <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
+
       <rule context="//cbc:ProfileID">
          <assert id="EHFPROFILE-T14-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii05:ver2.0' or . = 'urn:www.cenbii.eu:profile:biixx:ver2.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver2.0'"
@@ -56,10 +58,10 @@
       </rule>
       <rule context="//cac:AccountingCustomerParty/cac:Party">
          <assert id="NOGOV-T14-R004"
-                 test="(cac:PartyLegalEntity/cbc:CompanyID != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
+                 test="$isB2C or (cac:PartyLegalEntity/cbc:CompanyID != '')"
                  flag="fatal">[NOGOV-T14-R004]-PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T14-R008"
-                 test="(cac:PartyLegalEntity/cbc:RegistrationName != '') or (//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura')"
+                 test="$isB2C or (cac:PartyLegalEntity/cbc:RegistrationName != '')"
                  flag="fatal">[NOGOV-T14-R008]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T14-R006"
                  test="(cac:PartyIdentification/cbc:ID != '')"
