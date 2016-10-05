@@ -33,7 +33,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when empty elements are present.</description>
-			<error>EUGEN-T10-R047</error>
+			<warning>EUGEN-T10-R047</warning>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -60,7 +60,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when empty elements are present.</description>
-			<error>EUGEN-T10-R047</error>
+			<warning>EUGEN-T10-R047</warning>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

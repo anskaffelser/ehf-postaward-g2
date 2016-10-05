@@ -22,7 +22,7 @@
 	<test>
 		<assert>
 			<description>Verify elements without content throws errors.</description>
-			<error>EUGEN-T19-R054</error>
+			<warning>EUGEN-T19-R054</warning>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
