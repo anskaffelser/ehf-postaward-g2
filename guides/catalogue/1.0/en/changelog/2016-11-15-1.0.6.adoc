@@ -45,6 +45,10 @@
 | Updating link:{ruleurl-res}NOGOV-T58-R006/[NOGOV-T58-R006] (**F**) and link:{ruleurl-res}NOGOV-T58-R008/[NOGOV-T58-R008] (**F**) to also verify checksum of organization number.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
+| Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T58.
 | Validator

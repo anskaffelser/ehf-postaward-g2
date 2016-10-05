@@ -208,8 +208,9 @@
 
 
 	  <!--RULE -->
-   <xsl:template match="//cac:AllowanceCharge" priority="1006" mode="M6">
-      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="//cac:AllowanceCharge"/>
+   <xsl:template match="/ubl:Order/cac:AllowanceCharge" priority="1006" mode="M6">
+      <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                       context="/ubl:Order/cac:AllowanceCharge"/>
 
 		    <!--ASSERT -->
       <xsl:choose>

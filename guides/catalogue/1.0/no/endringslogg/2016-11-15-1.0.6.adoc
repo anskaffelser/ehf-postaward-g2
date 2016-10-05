@@ -45,6 +45,10 @@
 | Oppdatere link:{ruleurl-res}NOGOV-T58-R006/[NOGOV-T58-R006] (**F**) og link:{ruleurl-res}NOGOV-T58-R008/[NOGOV-T58-R008] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
+| Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T58.
 | Validator
