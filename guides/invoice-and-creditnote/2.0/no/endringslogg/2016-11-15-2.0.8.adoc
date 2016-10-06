@@ -54,6 +54,10 @@
 | Regelen CI-T10-R001 (**F**) er undertrykt til fordel for link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
+| Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T10.
 | Validator

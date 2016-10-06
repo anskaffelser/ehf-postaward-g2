@@ -53,6 +53,10 @@
 | Rule CI-T10-R001 (**F**) is suppressed in favour of link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
+| Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T10.
 | Validator
