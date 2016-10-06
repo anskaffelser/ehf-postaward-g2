@@ -1,4 +1,4 @@
-:ruleurl-res: /ehf/rule/despatch-advice-1.0/
+:ruleurl-des: /ehf/rule/despatch-advice-1.0/
 
 [cols="1,9,2", options="header"]
 |===
@@ -14,10 +14,6 @@
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
 | Oppdatere link:{ruleurl-des}NOGOV-T16-R010/[NOGOV-T16-R010] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
-| Validator
-
-| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
-| Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/175[#175]

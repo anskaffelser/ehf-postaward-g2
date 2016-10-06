@@ -11,6 +11,8 @@ include::../settings.adoc[]
 
 == Norsk [[norsk]]
 
+NOTE: Valideringsreglene for PEPPOL BIS som er ute på høring er inkludert tatt med i denne release. Dersom det kommer ytterligere endringer på disse valideringsreglene underview u høringen vil de bli oppdatert.
+
 
 === EHF Faktura og kreditnota 2.0.8 [[faktura-og-kreditnota]]
 
@@ -33,6 +35,8 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.5.adoc[]
 
 
 == English [[english]]
+
+NOTE: This release contains updated validation artifacts from the PEPPOL BIS review. EHF will be updated with new validation artifacts from PEPPOL BIS in the case of further changes to PEPPOL BIS during the review.
 
 
 === EHF Invoice and Creditnote 2.0.8 [[invoice-and-creditnote]]
