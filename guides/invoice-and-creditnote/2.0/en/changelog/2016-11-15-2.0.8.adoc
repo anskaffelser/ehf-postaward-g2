@@ -46,11 +46,11 @@
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
-| Updating link:{ruleurl-cre}NOGOV-T15-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R013/[NOGOV-T14-R013] (**F**) and link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) to also verify checksum of organization number.
+| Updating link:{ruleurl-cre}NOGOV-T14-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R013/[NOGOV-T14-R013] (**F**) and link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) to also verify checksum of organization number.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
-| Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
+| link:https://github.com/difi/vefa-validator-conf/issues/115[#115]
+| Rule CI-T10-R001 (**F**) is suppressed in favour of link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]

@@ -50,8 +50,8 @@
 | Oppdatere link:{ruleurl-cre}NOGOV-T14-R004/[NOGOV-T14-R004] (**F**), link:{ruleurl-cre}NOGOV-T14-R009/[NOGOV-T14-R009] (**F**),  link:{ruleurl-cre}NOGOV-T14-R013/[NOGOV-T14-R013] (**F**) og link:{ruleurl-cre}NOGOV-T14-R014/[NOGOV-T14-R014] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
-| Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
+| link:https://github.com/difi/vefa-validator-conf/issues/115[#115]
+| Regelen CI-T10-R001 (**F**) er undertrykt til fordel for link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/172[#172]
