@@ -24,6 +24,9 @@
                  test=". = 'urn:www.cenbii.eu:profile:bii04:ver2.0' or . = 'urn:www.cenbii.eu:profile:bii05:ver2.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver2.0'"
                  flag="fatal">[EHFPROFILE-T10-R001]-An invoice transaction T10 must only be used in Profiles 4, 5 or xy.</assert>
       </rule>
+      <rule context="cbc:InvoiceTypeCode">
+        <assert id="NOGOV-T10-R042" test="index-of(tokenize('380 393 384', '\s'), .)" flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
+      </rule>
       <rule context="/ubl:Invoice/cac:AccountingSupplierParty/cac:Party">
          <assert id="NOGOV-T10-R001"
                  test="(cac:Contact/cbc:ID != '')"

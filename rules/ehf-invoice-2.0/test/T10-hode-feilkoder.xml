@@ -4,7 +4,7 @@
                 This file contains a norwegian invoice, profile only
 
                 Errors:
-                CL-T10-R001
+                NOGOV-T10-R042
                 CL-T10-R002
                 CL-T10-R004 5 times
                 CL-T10-R003 8 times
@@ -12,7 +12,7 @@
 				NONAT-T10-R014 3 times
 				NONAT-T10-R024
 				NONAT-T10-R021
-				NOGOV-T10-R025 5 times			
+				NOGOV-T10-R025 5 times
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

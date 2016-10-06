@@ -26,6 +26,7 @@
         <rule identifier="BII2-T10-R049" action="suppress" />
         <rule identifier="BII2-T10-R050" action="suppress" />
         <rule identifier="EUGEN-T10-R041" action="suppress" />
+        <rule identifier="CL-T10-R001" action="suppress" />
         <rule identifier="CL-T10-R007" action="suppress" />
         <rule identifier="OP-T10-R004" action="suppress" />
     </configuration>
