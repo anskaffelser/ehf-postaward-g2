@@ -21,12 +21,14 @@
    </function>
 
    <pattern>
+      <let name="isG2G" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+
       <rule context="//cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T10-R001"
-                 test="(cac:PartyLegalEntity/cbc:CompanyID != '')"
+                 test="$isG2G or (cac:PartyLegalEntity/cbc:CompanyID != '')"
                  flag="fatal">[NONAT-T10-R001]-The Norwegian legal registration ID for the supplier MUST be provided according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 2"</assert>
          <assert id="NONAT-T10-R008"
-                 test="(cac:PartyLegalEntity/cbc:RegistrationName != '')"
+                 test="$isG2G or (cac:PartyLegalEntity/cbc:RegistrationName != '')"
                  flag="fatal">[NONAT-T10-R008]-The Norwegian legal registration name for the supplier MUST be provided according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 2"</assert>
          <assert id="NONAT-T10-R006"
                  test="((cac:PostalAddress/cbc:CityName !='') and (cac:PostalAddress/cbc:PostalZone != '') and (cac:PostalAddress/cac:Country/cbc:IdentificationCode != ''))"
@@ -48,10 +50,10 @@
                  test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))"
                  flag="warning">[NONAT-T10-R009]-Issue date of an invoice should be today or earlier.</assert>
          <assert id="NONAT-T10-R003"
-                 test="//cac:Delivery/cbc:ActualDeliveryDate"
+                 test="$isG2G or //cac:Delivery/cbc:ActualDeliveryDate"
                  flag="warning">[NONAT-T10-R003]-The actual delivery date SHOULD be provided in the invoice according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 4 and § 5-1-4", see also “NOU 2002:20, point 9.4.1.4”"</assert>
          <assert id="NONAT-T10-R004"
-                 test="//cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName and //cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone and //cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode"
+                 test="$isG2G or //cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName and //cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone and //cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode"
                  flag="warning">[NONAT-T10-R004]-A Delivery address in an invoice SHOULD contain at least, city, zip code and country code according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 4 and § 5-1-4", see also “NOU 2002:20, point 9.4.1.4”</assert>
       </rule>
       <rule context="cbc:UBLVersionID">

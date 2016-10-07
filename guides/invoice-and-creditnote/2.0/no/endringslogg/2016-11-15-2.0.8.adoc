@@ -54,6 +54,10 @@
 | Regelen CI-T10-R001 (**F**) er undertrykt til fordel for link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/170[#170]
+| Oppdatere reglene link:{ruleurl-inv}NOGOV-T10-R001/[NOGOV-T10-R001] (**W**), link:{ruleurl-inv}NOGOV-T10-R002/[NOGOV-T10-R002] (**W**), link:{ruleurl-inv}NOGOV-T10-R004/[NOGOV-T10-R004] (**W**), link:{ruleurl-inv}NOGOV-T10-R005/[NOGOV-T10-R005] (**W**), link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**), link:{ruleurl-inv}NONAT-T10-R001/[NONAT-T10-R001] (**F**), link:{ruleurl-inv}NONAT-T10-R003/[NONAT-T10-R003] (**W**), link:{ruleurl-inv}NONAT-T10-R004/[NONAT-T10-R004] (**W**) og link:{ruleurl-inv}NONAT-T10-R008/[NONAT-T10-R008] (**F**) for å tillate dokumenttype for internt bruk i det offentlige.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
 | Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
