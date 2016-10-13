@@ -5,7 +5,7 @@ Fra og med versjon 2.0.8 støtter EHF Faktura forsendelse av utbetalingsanmodnin
 WARNING: Utbetalingsanmodning er ikke å regne som en faktura, og bruk utover forhåndsdefinerte prosesser i offentlig sektor er ikke tillatt.
 
 
-== Angivelse variant
+== Angivelse av variant
 
 For identifisering av dokumenttype brukes normale verdier foruten når det gjelder InvoiceTypeCode.
 
@@ -13,14 +13,14 @@ For identifisering av dokumenttype brukes normale verdier foruten når det gjeld
 ----
 <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID> <!--1-->
 <cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID> <!--2-->
-<cbc:ID>TOSL108</cbc:ID>
-<cbc:IssueDate>2016-01-01</cbc:IssueDate> <!--3-->
-<cbc:InvoiceTypeCode listID="UNCL1001">Z02</cbc:InvoiceTypeCode>
-<cbc:TaxPointDate>2016-01-01</cbc:TaxPointDate>
+<cbc:ID>108</cbc:ID> <!--3-->
+<cbc:IssueDate>2016-01-01</cbc:IssueDate>
+<cbc:InvoiceTypeCode listID="UNCL1001">Z02</cbc:InvoiceTypeCode> <!--4-->
 ----
 <1> CustomizationID som for vanlig faktura.
-<2> ProfileID som vanlig for faktura i prosess 4A.
-<3> Koden `Z02` angir at dokumentet er en utbetalingsanmodning.
+<2> ProfileID som vanlig for faktura i link:#_profil_04_kun_faktura[profil 04].
+<3> I stedet for fakturanummer skal en enhetlig referansekode benyttes, eksempelvis saksnummer.
+<4> Koden `Z02` angir at dokumentet er en utbetalingsanmodning.
 
 
 == Aktører
