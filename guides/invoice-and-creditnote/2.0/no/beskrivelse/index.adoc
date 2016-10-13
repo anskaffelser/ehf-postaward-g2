@@ -42,4 +42,6 @@ include::selgers-mva-representant.adoc[]
 
 include::valgfrie-felt.adoc[]
 
+include::utbetalingsanmodning.adoc[]
+
 :leveloffset: -1
