@@ -13,6 +13,8 @@ include::../settings.adoc[]
 
 NOTE: Valideringsreglene for PEPPOL BIS som er ute på høring er inkludert i denne release. Dersom det kommer ytterligere endringer på disse valideringsreglene underveis i høringen vil de bli oppdatert.
 
+IMPORTANT: Regler for EHF Core, som inneholder kun advarsler, blir lagt til for katalog, katelogrespons, ordre, ordrerespons og pakkseddel i løpet av høringsperioden.
+
 
 === EHF Faktura og kreditnota 2.0.8 [[faktura-og-kreditnota]]
 
@@ -37,6 +39,8 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.5.adoc[]
 == English [[english]]
 
 NOTE: This release contains updated validation artifacts from the PEPPOL BIS review. EHF will be updated with new validation artifacts from PEPPOL BIS in the case of further changes during the review.
+
+IMPORTANT: Rules for EHF Core, containing warnings only, for Catalogue, Catalogue Response, Order, Order Response and Despatch Advice will be made available during the review period.
 
 
 === EHF Invoice and Creditnote 2.0.8 [[invoice-and-creditnote]]
