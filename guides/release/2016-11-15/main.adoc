@@ -15,6 +15,8 @@ NOTE: Valideringsreglene for PEPPOL BIS som er ute på høring er inkludert i de
 
 IMPORTANT: Regler for EHF Core, som inneholder kun advarsler, blir lagt til for katalog, katelogrespons, ordre, ordrerespons og pakkseddel i løpet av høringsperioden.
 
+WARNING: Det er tatt i bruk ny funksjonalitet i Schematron for å øke kvaliteten på valideringen. De benytter VEFA Validator må oppgradere Saxon til en versjon 9.7.0-3 eller høyere.
+
 
 === EHF Faktura og kreditnota 2.0.8 [[faktura-og-kreditnota]]
 
@@ -41,6 +43,8 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.5.adoc[]
 NOTE: This release contains updated validation artifacts from the PEPPOL BIS review. EHF will be updated with new validation artifacts from PEPPOL BIS in the case of further changes during the review.
 
 IMPORTANT: Rules for EHF Core, containing warnings only, for Catalogue, Catalogue Response, Order, Order Response and Despatch Advice will be made available during the review period.
+
+WARNING: More functionality in Schematron is used in this revision to increase quality of validation. Those using VEFA Validator myst upgrade Saxon dependency to version 9.7.0-3 or higher.
 
 
 === EHF Invoice and Creditnote 2.0.8 [[invoice-and-creditnote]]
