@@ -17,8 +17,10 @@
    </function>
 
    <pattern>
-      <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
-      <let name="isG2G" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+     <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
+     <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+
+      <let name="isB2C" value="$isZ01 or //cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
 
       <rule context="//cbc:ProfileID">
          <assert id="EHFPROFILE-T10-R001"
@@ -26,11 +28,11 @@
                  flag="fatal">[EHFPROFILE-T10-R001]-An invoice transaction T10 must only be used in Profiles 4, 5 or xy.</assert>
       </rule>
       <rule context="cbc:InvoiceTypeCode">
-        <assert id="NOGOV-T10-R042" test="index-of(tokenize('380 393 384 Z02', '\s'), .)" flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
+        <assert id="NOGOV-T10-R042" test="index-of(tokenize('380 393 384 Z01 Z02', '\s'), .)" flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:AccountingSupplierParty/cac:Party">
          <assert id="NOGOV-T10-R001"
-                 test="$isG2G or (cac:Contact/cbc:ID != '')"
+                 test="$isZ02 or (cac:Contact/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R001]-A contact reference identifier SHOULD be provided for AccountingSupplierParty according to EHF.</assert>
       </rule>
       <rule context="//cac:PaymentMeans">
@@ -54,13 +56,13 @@
       </rule>
       <rule context="//cac:Item">
          <assert id="NOGOV-T10-R002"
-                 test="$isG2G or (cac:SellersItemIdentification/cbc:ID != '')"
+                 test="$isZ02 or (cac:SellersItemIdentification/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R002]-The sellers ID for the item SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="//cac:InvoiceLine">
          <assert id="NOGOV-T10-R003" test="(cbc:AccountingCost)" flag="warning">[NOGOV-T10-R003]-The buyer's accounting code applied to the Invoice Line SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R004"
-                 test="$isG2G or (cac:OrderLineReference/cbc:LineID != '')"
+                 test="$isZ02 or (cac:OrderLineReference/cbc:LineID != '')"
                  flag="warning">[NOGOV-T10-R004]-An association to Order Line Reference SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="//cac:InvoiceLine/cac:Item/cac:OriginCountry">
@@ -89,7 +91,7 @@
                  test="((cac:AllowanceCharge[cbc:ChargeIndicator = 'false']) and (cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount != '') or not(cac:AllowanceCharge[cbc:ChargeIndicator = 'false']))"
                  flag="fatal">[NOGOV-T10-R035]-If allowance is present on document level, total allowance must be stated.</assert>
          <assert id="NOGOV-T10-R005"
-                 test="$isG2G or (cac:ContractDocumentReference/cbc:ID != '')"
+                 test="$isZ02 or (cac:ContractDocumentReference/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R005]-ContractDocumentReference SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R016" test="(cbc:InvoiceTypeCode != '')" flag="fatal">[NOGOV-T10-R016]-An EHF invoice MUST have an invoice type code.</assert>
          <assert id="NOGOV-T10-R019" test="(cac:PaymentMeans)" flag="fatal">[NOGOV-T10-R019]-An invoice MUST have payment means information.</assert>
