@@ -42,4 +42,6 @@ include::tax-representative.adoc[]
 
 include::optional-elements.adoc[]
 
+include::payment-request.adoc[]
+
 :leveloffset: -1

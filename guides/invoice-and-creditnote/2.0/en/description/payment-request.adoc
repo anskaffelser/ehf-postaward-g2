@@ -1,0 +1,3 @@
+= Payment request
+
+NOTE: This part is currently on review in Norwegian only. The Norwegian description will be translated during review.
