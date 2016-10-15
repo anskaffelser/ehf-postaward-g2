@@ -6,6 +6,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/170[#170]
+| Legge til 6.20 som beskriver utbetalingsanmodning.
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
 | Rette mindre feil i eksempelfiler for faktura og kreditnota.
 | Vedlegg
