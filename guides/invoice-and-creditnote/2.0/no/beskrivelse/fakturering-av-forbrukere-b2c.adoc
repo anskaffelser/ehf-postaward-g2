@@ -10,15 +10,15 @@ Angivelse av organisasjonsnummer for kjøper kreves ikke oppgitt når elektronis
 .Eksempel
 ----
 <cac:AdditionalDocumentReference>
-	<cbc:ID>147987</cbc:ID>
-	<cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
+  <cbc:ID>147987</cbc:ID>
+  <cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 ----
 
 Overfor forbrukermarkedet er Avtalegiro utbredt som betalingsmåte.
 
 [source,xml]
-.Eksempel, elektronisk faktura B2C med Avtalegiro:
+.Eksempel, elektronisk faktura B2C med Avtalegiro
 ----
 <cac:PaymentMeans>
   <cbc:PaymentMeansCode listID="UNCL4461">3</cbc:PaymentMeansCode><1>
@@ -30,3 +30,92 @@ Overfor forbrukermarkedet er Avtalegiro utbredt som betalingsmåte.
 </cac:PaymentMeans>
 ----
 <1> PaymentMeansCode: 3 (Automated clearing house debit)
+
+== Støtte for utvidet bruk
+
+Fra versjon 2.0.8 er det åpnet for en alternativ angivelse av faktura til forbruker.
+Ved å benytte ```Z01``` som ```InvoiceTypeCode``` i fakturaen fungerer dette som er alternativ til ```elektroniskB2Cfaktura```.
+Dette er ikke til hinder for å fortsette å benytte ```elektroniskB2Cfaktura```.
+
+[source,xml]
+.Eksempel på angivelse av InvoiceTypeCode
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID> <!--1-->
+<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID> <!--2-->
+<cbc:ID>42</cbc:ID> <!--3-->
+<cbc:IssueDate>2016-11-15</cbc:IssueDate>
+<cbc:InvoiceTypeCode listID="UNCL1001">Z01</cbc:InvoiceTypeCode> <!--4-->
+----
+<1> CustomizationID som for vanlig faktura.
+<2> ProfileID som vanlig for faktura i link:#_profil_04_kun_faktura[profil 04].
+<3> Fakturanummber som for vanlig faktura.
+<4> Angivelse av at dette er faktura til forbruker ved å benytte koden ```Z01```.
+
+Ved bruk av ```Z01``` åpnes det for å ha flere og alternative identifikatorer for fakturamottaker.
+Alternative identifikatorer legges inn ved å benytte ```PartyIdentification``` som kan repeteres.
+Identifikatorer angis ved å benytte ```ZZZ``` som ```schemeID``` og å benytte et prefiks foran identifikatoren for å angi type.
+Identifikatorer som er av samme type som annen kontaktinformasjon på fakturamottaker kan være avvikende.
+
+NOTE: Bruk av ```InvoiceTypeCode``` for angivelse av forbrukerfaktura skal ikke benyttes i løsninger som sender fakturaer til Sikker Digital Post (SDP)/Digital Post til Innbygger (DPI).
+
+[source,xml]
+.Eksempel på utfylling av fakturamottaker
+----
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID> <!--1-->
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">phone:98765432</cbc:ID> <!--2-->
+    </cac:PartyIdentification>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">pid:12345612345</cbc:ID> <!--3-->
+    </cac:PartyIdentification>
+    <cac:PartyName> <!--4-->
+      <cbc:Name>Bob Buyer</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress> <!--5-->
+      <cbc:StreetName>Anystreet 8</cbc:StreetName>
+      <cbc:AdditionalStreetName>Back door</cbc:AdditionalStreetName>
+      <cbc:CityName>Anytown</cbc:CityName>
+      <cbc:PostalZone>101</cbc:PostalZone>
+      <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:Contact> <!--6-->
+      <cbc:ID>3150bdn</cbc:ID>
+      <cbc:Name>John Doe</cbc:Name>
+      <cbc:Telephone>5121230</cbc:Telephone>
+      <cbc:Telefax>5121231</cbc:Telefax>
+      <cbc:ElectronicMail>john@buyercompany.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
+</cac:AccountingCustomerParty>
+----
+<1> Angivelse av endepunkt brukt for mottak.
+<2> Eksempel på bruk av telefonnummer som identifikator.
+<3> Eksempel på bruk av personnummer som identifikator.
+<4> Navn på mottaker.
+<5> Postadresse til mottaker.
+<6> Kontaktinformasjon for mottaker.
+
+[cols="1,4",options="header"]
+.Forslag til prefikser benyttet for identifikatorer
+|===
+| Prefiks
+| Beskrivelse
+
+| email
+| E-post
+
+| phone
+| Telefonnummer
+
+| pid
+| Personnummer (forutsetter databehandleravtale)
+
+| reference
+| Felles referanse
+
+|===

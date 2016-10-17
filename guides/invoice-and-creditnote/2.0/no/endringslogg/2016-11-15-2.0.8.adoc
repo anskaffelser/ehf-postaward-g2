@@ -6,6 +6,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/156[#156]
+| Legge til 6.13.1 som beskriver utvidet bruk av faktura til forbruler (B2C).
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/170[#170]
 | Legge til 6.20 som beskriver utbetalingsanmodning.
 | Guide

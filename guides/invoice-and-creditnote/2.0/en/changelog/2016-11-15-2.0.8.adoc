@@ -5,6 +5,10 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/156[#156]
+| Adding 6.13.1 describing extended use of consumer invoice (B2C).
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/170[#170]
 | Adding 6.20 describing payment request variant.
 | Guide

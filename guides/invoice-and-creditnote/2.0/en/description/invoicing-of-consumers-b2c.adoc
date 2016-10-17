@@ -32,3 +32,92 @@ In the consumers market automatic debit (Avtalegiro) is  widespread as payment m
 </cac:PaymentMeans>
 ----
 <1> PaymentMeansCode: 3 (Automated clearing house debit)
+
+
+== Support for extended usage
+
+As of version 2.0.8 is it possible to use an alternative designation for consumer invoices.
+By using value ```Z01``` in field ```InvoiceTypeCode``` is the invoice threated as described above when using "elektroniskB2Cfaktura".
+It is possible to combine use of ```Z01``` and ```elektroniskB2Cfaktura```.
+
+[source,xml]
+.Example use of InvoiceTypeCode
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID> <!--1-->
+<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID> <!--2-->
+<cbc:ID>42</cbc:ID> <!--3-->
+<cbc:IssueDate>2016-11-15</cbc:IssueDate>
+<cbc:InvoiceTypeCode listID="UNCL1001">Z01</cbc:InvoiceTypeCode> <!--4-->
+----
+<1> CustomizationID as for normal invoice.
+<2> ProfileID as for normal invoice part of link:#_profile_04_invoice_only[profile 04].
+<3> Invoice number as for noram invoice.
+<4> Use of ```Z01``` defines this as a consumer invoice.
+
+Support for multiple consumer identifiers is made available by using ```Z01```.
+Identifiers for consumer are put in the repeatable element ```PartyIdentification```.
+An identifier requires ```ZZZ``` for ```schemeID``` and use of prefix for the individual identifier to define type of identifier.
+Identifiers of same kind as other given contact information may deviate from the contact information.
+
+NOTE: Use of ```InvoiceTypeCode``` for solutions sending invoices to Sikker Digital Post (SDP)/Digital Post til Innbygger (DPI) is not allowed.
+
+[source,xml]
+.Example of consumer information
+----
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID> <!--1-->
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">phone:98765432</cbc:ID> <!--2-->
+    </cac:PartyIdentification>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">pid:12345612345</cbc:ID> <!--3-->
+    </cac:PartyIdentification>
+    <cac:PartyName> <!--4-->
+      <cbc:Name>Bob Buyer</cbc:Name>
+    </cac:PartyName>
+    <cac:PostalAddress> <!--5-->
+      <cbc:StreetName>Anystreet 8</cbc:StreetName>
+      <cbc:AdditionalStreetName>Back door</cbc:AdditionalStreetName>
+      <cbc:CityName>Anytown</cbc:CityName>
+      <cbc:PostalZone>101</cbc:PostalZone>
+      <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
+      <cac:Country>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+      </cac:Country>
+    </cac:PostalAddress>
+    <cac:Contact> <!--6-->
+      <cbc:ID>3150bdn</cbc:ID>
+      <cbc:Name>John Doe</cbc:Name>
+      <cbc:Telephone>5121230</cbc:Telephone>
+      <cbc:Telefax>5121231</cbc:Telefax>
+      <cbc:ElectronicMail>john@buyercompany.no</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:Party>
+</cac:AccountingCustomerParty>
+----
+<1> Endpoint for sending.
+<2> Example of use when phone number is used as identifier.
+<3> Example of use when social security number is used as identifier.
+<4> Name of customer.
+<5> Post address of customer.
+<6> Contact information of customer.
+
+[cols="1,4",options="header"]
+.Proposed list of prefixes
+|===
+| Prefix
+| Description
+
+| email
+| E-mail
+
+| phone
+| Phone number
+
+| pid
+| Social security number (requires "databehandleravtale")
+
+| reference
+| Common reference
+|===
