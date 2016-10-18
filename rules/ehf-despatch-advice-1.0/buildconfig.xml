@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T16.sch" path="xsl/NOGOV-UBL-T16.xsl" />
         <file path="xsl/BIIRULES-UBL-T16.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T16.xsl" />
+        <file source="sch/EHFCORE-UBL-T16.sch" path="xsl/EHFCORE-UBL-T16.xsl" />
     </configuration>
 
     <configuration>

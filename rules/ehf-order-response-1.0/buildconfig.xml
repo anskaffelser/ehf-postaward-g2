@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T76.sch" path="xsl/NOGOV-UBL-T76.xsl" infoUrl="/ehf/rule/order-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T76.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T76.xsl" />
+        <file source="sch/EHFCORE-UBL-T76.sch" path="xsl/EHFCORE-UBL-T76.xsl" />
     </configuration>
     <configuration>
         <identifier>ehf-t76-28-1.0</identifier>

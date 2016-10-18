@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T01.sch" path="xsl/NOGOV-UBL-T01.xsl" infoUrl="/ehf/rule/order-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T01.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T01.xsl" />
+        <file source="sch/EHFCORE-UBL-T01.sch" path="xsl/EHFCORE-UBL-T01.xsl" />
     </configuration>
 
     <configuration>
