@@ -8,6 +8,7 @@
 	<cbc:IssueTime>12:30:00</cbc:IssueTime>
 	<cbc:OrderResponseCode listID="UNCL1225">30</cbc:OrderResponseCode>
 	<cbc:Note>Changes in 2 orderlines</cbc:Note>
+	<cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
 	<cac:OrderReference>
 		<cbc:ID>1</cbc:ID>
 	</cac:OrderReference>
