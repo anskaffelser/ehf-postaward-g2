@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T58.sch" path="xsl/NOGOV-UBL-T58.xsl" infoUrl="/ehf/rule/catalogue-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T58.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T58.xsl" />
+        <file source="sch/EHFCORE-UBL-T58.sch" path="xsl/EHFCORE-UBL-T58.xsl" />
     </configuration>
 
     <configuration>
