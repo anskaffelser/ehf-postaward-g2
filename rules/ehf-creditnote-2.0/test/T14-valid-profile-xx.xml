@@ -110,7 +110,7 @@
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>Buyercompany ASA</cbc:RegistrationName>
-				<cbc:CompanyID schemeAgencyID="NO:ORGNR">987654325</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR">987654325</cbc:CompanyID>
 			</cac:PartyLegalEntity>
 			<cac:Contact>
 				<cbc:ID>3150bdn</cbc:ID>
@@ -235,22 +235,6 @@
 			<cbc:LineID>1</cbc:LineID>
 		</cac:OrderLineReference>
 		<cac:Delivery>
-			<cbc:ActualDeliveryDate>2013-06-15</cbc:ActualDeliveryDate>
-			<cac:DeliveryLocation>
-				<cbc:ID schemeID="GLN">6754238987648</cbc:ID>
-				<cac:Address>
-					<cbc:StreetName>Deliverystreet 12</cbc:StreetName>
-					<cbc:AdditionalStreetName>Side door</cbc:AdditionalStreetName>
-					<cbc:CityName>DeliveryCity</cbc:CityName>
-					<cbc:PostalZone>523427</cbc:PostalZone>
-					<cbc:CountrySubentity>RegionD</cbc:CountrySubentity>
-					<cac:Country>
-						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:DeliveryLocation>
-		</cac:Delivery>
-				<cac:Delivery>
 			<cbc:ActualDeliveryDate>2013-06-15</cbc:ActualDeliveryDate>
 			<cac:DeliveryLocation>
 				<cbc:ID schemeID="GLN">6754238987648</cbc:ID>
