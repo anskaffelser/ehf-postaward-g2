@@ -46,12 +46,13 @@
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
-        <cbc:CompanyID>NO913536770MVA</cbc:CompanyID>
+        <cbc:CompanyID schemeID="NO:VAT">NO913536770MVA</cbc:CompanyID>
         <cac:TaxScheme>
           <cbc:ID>VAT</cbc:ID>
         </cac:TaxScheme>
       </cac:PartyTaxScheme>
       <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Veidekke Industri</cbc:RegistrationName>
         <cbc:CompanyID schemeID="NO:ORGNR">913536770</cbc:CompanyID>
       </cac:PartyLegalEntity>
       <cac:Contact>
