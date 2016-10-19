@@ -33,7 +33,7 @@
     <configuration>
         <identifier>ehf-t10-core-2.0</identifier>
         <title>EHF Invoice 2.0 (Core)</title>
-        <file path="xsl/EHFCORE-UBL-T10.xsl" />
+        <file source="sch/EHFCORE-UBL-T10.sch" path="xsl/EHFCORE-UBL-T10.xsl" />
     </configuration>
 
     <configuration>

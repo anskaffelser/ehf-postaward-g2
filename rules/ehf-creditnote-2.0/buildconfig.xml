@@ -13,7 +13,7 @@
         <inherit>ehf-t14-stylesheet-2.0</inherit>
         <file path="xsl/BIIRULES-UBL-T14.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T14.xsl" />
-        <file path="xsl/EHFCORE-UBL-T14.xsl" />
+        <file source="sch/EHFCORE-UBL-T14.sch" path="xsl/EHFCORE-UBL-T14.xsl" />
         <file source="sch/NONAT-UBL-T14.sch" path="xsl/NONAT-UBL-T14.xsl" infoUrl="/ehf/rule/creditnote-2.0/{}/" />
         <file source="sch/NOGOV-UBL-T14.sch" path="xsl/NOGOV-UBL-T14.xsl" infoUrl="/ehf/rule/creditnote-2.0/{}/" />
         <rule identifier="BII2-T14-R025" action="suppress" />
