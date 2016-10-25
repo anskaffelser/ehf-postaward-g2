@@ -10,7 +10,7 @@ EUGEN-T10-R043
 BII2-T10-R028
 
 Warnings:
-None
+EHFCORE-T10-R002
 
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -131,6 +131,7 @@ None
 		<cac:PayeeFinancialAccount>
 			<cbc:ID schemeID="IBAN">NO98745566558</cbc:ID>
 			<cac:FinancialInstitutionBranch>
+				<cbc:ID>9710</cbc:ID>
 				<cac:FinancialInstitution>
 					<cbc:ID schemeID="BIC">DNB</cbc:ID>
 				</cac:FinancialInstitution>
