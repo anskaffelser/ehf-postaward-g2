@@ -4,7 +4,6 @@ Content:
 This file contains a norwegian creditnote, profile invoice and creditnote
 
 Errors:
-BII2-T14-R017
 BII2-T14-R018
 BII2-T14-R019
 BII2-T14-R032
@@ -15,6 +14,7 @@ NOGOV-T14-R005 x 13
 
 Warnings:
 NOGOV-T14-R002
+EHFCORE-T14-R002
 
 -->
 <CreditNote

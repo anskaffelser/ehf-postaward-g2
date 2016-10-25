@@ -128,6 +128,7 @@
 		<cac:PayeeFinancialAccount>
 			<cbc:ID schemeID="IBAN">NO98745566558</cbc:ID>
 			<cac:FinancialInstitutionBranch>
+				<cbc:ID>9875</cbc:ID>
 				<cac:FinancialInstitution>
 					<cbc:ID schemeID="BIC">DNB</cbc:ID>
 				</cac:FinancialInstitution>
