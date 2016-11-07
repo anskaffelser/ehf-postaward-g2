@@ -11,14 +11,22 @@
         <file source="sch/NOGOV-UBL-T76.sch" path="xsl/NOGOV-UBL-T76.xsl" infoUrl="/ehf/rule/order-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T76.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T76.xsl" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-t76-core-1.0</identifier>
+        <title>EHF Order Response 1.0 (Core)</title>
+        <inherit>ubl-orderresponse-2.1</inherit>
         <file source="sch/EHFCORE-UBL-T76.sch" path="xsl/EHFCORE-UBL-T76.xsl" />
     </configuration>
+
     <configuration>
         <identifier>ehf-t76-28-1.0</identifier>
         <title>EHF Order Response 1.0 (Profile 28)</title>
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0</customizationId>
         <inherit>ehf-t76-base-1.0</inherit>
+        <inherit>ehf-t76-core-1.0</inherit>
     </configuration>
 
 </buildConfigurations>

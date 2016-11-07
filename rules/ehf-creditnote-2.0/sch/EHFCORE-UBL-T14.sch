@@ -10,6 +10,9 @@
   <ns uri="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
     prefix="ccts-cct"/>
   <ns uri="urn:un:unece:uncefact:documentation:2" prefix="ccts"/>
+
+  <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
+
   <pattern>
     <rule context="/p1:CreditNote">
       <assert flag="warning" id="EHFCORE-T14-R002" test="count(cbc:UBLVersionID) = 1"
@@ -67,7 +70,7 @@
         >[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
       <assert flag="warning" id="EHFCORE-T14-R002" test="count(cac:PartyTaxScheme) &lt;= 1"
         >[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
-      <assert flag="warning" id="EHFCORE-T14-R002" test="count(cac:PartyLegalEntity) = 1"
+      <assert flag="warning" id="EHFCORE-T14-R002" test="$isB2C or count(cac:PartyLegalEntity) = 1"
         >[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
       <assert flag="warning" id="EHFCORE-T14-R002" test="count(cac:Contact) = 1"
         >[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</assert>

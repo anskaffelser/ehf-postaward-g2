@@ -11,6 +11,11 @@
         <file source="sch/NOGOV-UBL-T01.sch" path="xsl/NOGOV-UBL-T01.xsl" infoUrl="/ehf/rule/order-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T01.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T01.xsl" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-t01-core-1.0</identifier>
+        <title>EHF Order 1.0 (Core)</title>
         <file source="sch/EHFCORE-UBL-T01.sch" path="xsl/EHFCORE-UBL-T01.xsl" />
     </configuration>
 
@@ -20,6 +25,7 @@
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns001:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordre:ver1.0</customizationId>
         <inherit>ehf-t01-base-1.0</inherit>
+        <inherit>ehf-t01-core-1.0</inherit>
     </configuration>
 
 </buildConfigurations>

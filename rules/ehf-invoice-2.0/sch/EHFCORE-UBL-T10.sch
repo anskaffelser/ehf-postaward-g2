@@ -10,6 +10,10 @@
   <ns uri="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
     prefix="ccts-cct"/>
   <ns uri="urn:un:unece:uncefact:documentation:2" prefix="ccts"/>
+
+  <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
+  <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+
   <pattern>
     <rule context="/p1:Invoice">
       <assert flag="warning" id="EHFCORE-T10-R002" test="count(cbc:UBLVersionID) = 1"
@@ -1288,7 +1292,7 @@
         >[EHFCORE-T10-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
       <assert flag="warning" id="EHFCORE-T10-R002" test="count(cac:PartyTaxScheme) &lt;= 1"
         >[EHFCORE-T10-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
-      <assert flag="warning" id="EHFCORE-T10-R002" test="count(cac:PartyLegalEntity) = 1"
+      <assert flag="warning" id="EHFCORE-T10-R002" test="$isZ02 or count(cac:PartyLegalEntity) = 1"
         >[EHFCORE-T10-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
     </rule>
   </pattern>
