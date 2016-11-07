@@ -33,6 +33,10 @@
 | Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/48[#66]
+| Legge til EHF Core for order og ordrebekreftelse.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Endre autorativ kilde for valideringsregler fra XSLT til Schematron for NOGOV-T01.
 | Validator

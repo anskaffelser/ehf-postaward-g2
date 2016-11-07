@@ -29,6 +29,10 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/48[#66]
+| Adding EHF Core for Order and Order Response.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/167[#167]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T01.
 | Validator

@@ -20,6 +20,10 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/67[#67]
+| Adding EHF Core for Despatch Advice.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/175[#175]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T16.
 | Validator

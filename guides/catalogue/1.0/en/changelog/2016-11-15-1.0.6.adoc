@@ -49,6 +49,10 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/48[#48]
+| Adding EHF Core for Catalogue and Catalogue Response.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/162[#162]
 | Change authoritative source of validation artifacts from XSLT to Schematron for NOGOV-T58.
 | Validator
