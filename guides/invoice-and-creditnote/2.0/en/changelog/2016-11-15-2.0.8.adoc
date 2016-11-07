@@ -65,6 +65,10 @@
 | Updated rules link:{ruleurl-inv}NOGOV-T10-R001/[NOGOV-T10-R001] (**W**), link:{ruleurl-inv}NOGOV-T10-R002/[NOGOV-T10-R002] (**W**), link:{ruleurl-inv}NOGOV-T10-R004/[NOGOV-T10-R004] (**W**), link:{ruleurl-inv}NOGOV-T10-R005/[NOGOV-T10-R005] (**W**), link:{ruleurl-inv}NOGOV-T10-R042/[NOGOV-T10-R042] (**F**), link:{ruleurl-inv}NONAT-T10-R001/[NONAT-T10-R001] (**F**), link:{ruleurl-inv}NONAT-T10-R003/[NONAT-T10-R003] (**W**), link:{ruleurl-inv}NONAT-T10-R004/[NONAT-T10-R004] (**W**) and link:{ruleurl-inv}NONAT-T10-R008/[NONAT-T10-R008] (**F**) to allow document type for internal govermental use.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/184[#184]
+| Adding rule link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R028] (**W**) and link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R028] (**W**), expected to become **F** in next release.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/179[#179]
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
