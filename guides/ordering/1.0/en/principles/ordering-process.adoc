@@ -3,6 +3,7 @@
 The Ordering process descibed in this guide is a common process in most trading businesses. We expect companies to understand this process even if they may have organised it differently.
 
 The Ordering process is as follows:
+
 . A Buyer sends an order to a Seller specifying goods or services to be delivered. The goods or services can either be identified through article numbers or descibed as free text.
 . The order may refer to a Commercial agreement stating terms and regulations for the purchase. If not these terms can be specified in the order.
 . The Seller receives and vaildates the order message. If the message is not according to agreed format the Seller must inform the Buyer that it will not be processed.
