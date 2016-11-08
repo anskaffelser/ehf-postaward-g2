@@ -46,9 +46,9 @@
 | Endre link:{ruleurl-inv}NOGOV-T14-R021/[NOGOV-T14-R021] (**F**) og link:{ruleurl-inv}NOGOV-T14-R022/[NOGOV-T14-R022] (**F**) fra advarsel til feil.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/173[#173]
-| Endre link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) og link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) fra advarsel til feil.
-| Validator
+| [line-through]#link:https://github.com/difi/vefa-validator-conf/issues/173[#173]#
+| [line-through]#Endre link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) og link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) fra advarsel til feil.#
+| [line-through]#Validator#
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
 | Oppdatere link:{ruleurl-inv}NOGOV-T10-R026/[NOGOV-T10-R026] (**F**), link:{ruleurl-inv}NOGOV-T10-R030/[NOGOV-T10-R030] (**F**),  link:{ruleurl-inv}NOGOV-T10-R031/[NOGOV-T10-R031] (**F**) og link:{ruleurl-inv}NOGOV-T10-R036/[NOGOV-T10-R036] (**F**) til også å kontrollere kontrollsiffer på organisasjonsnummer.

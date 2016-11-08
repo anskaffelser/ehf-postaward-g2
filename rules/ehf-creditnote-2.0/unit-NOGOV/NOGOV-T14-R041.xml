@@ -49,7 +49,7 @@
 	<test>
 		<assert>
 			<description>Verify two instances of a tax subtotal of the same tax category triggers warning.</description>
-			<error>NOGOV-T14-R041</error>
+			<warning>NOGOV-T14-R041</warning>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -73,7 +73,7 @@
 		<test>
 		<assert>
 			<description>Verify that code 'Z' and 'Z ' triggers warning (normalize-space).</description>
-			<error>NOGOV-T14-R041</error>
+			<warning>NOGOV-T14-R041</warning>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

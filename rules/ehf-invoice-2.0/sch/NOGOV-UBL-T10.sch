@@ -124,7 +124,7 @@
                  flag="fatal">[NOGOV-T10-R038]-Total tax amount cannot have more than 2 decimals</assert>
          <assert id="NOGOV-T10-R041"
                  test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)"
-                 flag="fatal">[NOGOV-T10-R041]-Multiple tax subtotals per tax category is not allowed.</assert>
+                 flag="warning">[NOGOV-T10-R041]-Multiple tax subtotals per tax category is not allowed.</assert>
       </rule>
       <rule context="//*[contains(name(), 'Amount') and not(contains(name(), 'Transaction'))]">
          <assert id="NOGOV-T10-R025"

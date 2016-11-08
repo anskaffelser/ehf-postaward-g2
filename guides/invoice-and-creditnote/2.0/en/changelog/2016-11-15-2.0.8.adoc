@@ -45,9 +45,9 @@
 | Changing link:{ruleurl-inv}NOGOV-T14-R021/[NOGOV-T14-R021] (**F**) and link:{ruleurl-inv}NOGOV-T14-R022/[NOGOV-T14-R022] (**F**) from warning to fatal.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/173[#173]
-| Changing link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) and link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) from warning to fatal.
-| Validator
+| [line-through]#link:https://github.com/difi/vefa-validator-conf/issues/173[#173]#
+| [line-through]#Changing link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) and link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) from warning to fatal.#
+| [line-through]#Validator#
 
 | link:https://github.com/difi/vefa-validator-conf/issues/169[#169]
 | Updating link:{ruleurl-inv}NOGOV-T10-R026/[NOGOV-T10-R026] (**F**), link:{ruleurl-inv}NOGOV-T10-R030/[NOGOV-T10-R030] (**F**),  link:{ruleurl-inv}NOGOV-T10-R031/[NOGOV-T10-R031] (**F**) and link:{ruleurl-inv}NOGOV-T10-R036/[NOGOV-T10-R036] (**F**) to also verify checksum of organization number.
