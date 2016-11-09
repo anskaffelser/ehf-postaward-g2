@@ -1,0 +1,37 @@
+= Allergens
+
+Correct indication of allergens is a matter about life and health, it is therefore important that all participants read allergen information equally.
+
+[cols="1,4", options="header"]
+.Legel values for allergens
+|===
+| Value | Description
+| YES | The item contains the specific type of allergen.
+| MAY | The item may contain the specific type of allergen.
+| UNKNOWN | Vet ikke om varen inneholder den spesifiserte typen allergener.
+| FREE | The item does not contain the specific type of allergen.
+|===
+
+NOTE: The value "NO" was a legal value prior to version 1.0.6. The value "NO" was removed and the value "MAY" was added.
+
+To ensure common understanding of the indication of allergens, it is recommended to use link:http://gs1.org/voc/AllergenTypeCode[code list "Allergen Type Code" provided by GS1].
+
+[source]
+.Example of use with code list (recommended)
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>HAZELNUTS</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>gs1:AllergenTypeCode</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Example of use without code list
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ContainNuts</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----

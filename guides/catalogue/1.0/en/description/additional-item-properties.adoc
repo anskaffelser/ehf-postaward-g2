@@ -4,8 +4,6 @@ Additional properties are meant for product properties that cannot be sent in an
 
 .Example of additional properties:
 * Color
-* Allergens +
-Legal values: YES, NO, UNKNOWN, FREE.
 * Nutrition +
 Stated with amount per 100 g/ml.
 * Genetically modified +
@@ -29,15 +27,6 @@ Legal values: True, False
   <cbc:Name>Farge</cbc:Name>
   <cbc:Value>Rød</cbc:Value>
   <cbc:ValueQualifier>Color</cbc:ValueQualifier>
-</cac:AdditionalItemProperty>
-----
-
-[source]
-----
-<cac:AdditionalItemProperty>
-  <cbc:Name>ContainNuts</cbc:Name>
-  <cbc:Value>YES</cbc:Value>
-  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
 </cac:AdditionalItemProperty>
 ----
 

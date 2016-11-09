@@ -45,4 +45,6 @@ include::smartform-id.adoc[]
 
 include::tilleggsegenskaper.adoc[]
 
+include::allergener.adoc[]
+
 :leveloffset: -1

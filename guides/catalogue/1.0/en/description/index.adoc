@@ -51,4 +51,6 @@ include::smartform-id.adoc[]
 
 include::additional-item-properties.adoc[]
 
+include::allergens.adoc[]
+
 :leveloffset: -1

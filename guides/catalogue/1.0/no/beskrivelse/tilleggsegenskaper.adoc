@@ -5,8 +5,6 @@ Produktegenskaper som ikke er spesifisert i egne felt kan angis som tilleggsegen
 Eksempler på egenskaper som kan spesifiseres er:
 
 * Farge
-* Allergener +
-Lovlige verdier: YES, NO, UNKNOWN, FREE.
 * Næringsinnhold. +
 Angis med mengde pr. 100 g/ml.
 * Genmodifisert +
@@ -21,15 +19,6 @@ Lovlige verdier: true, false
   <cbc:Name languageID="NO">Farge</cbc:Name>
   <cbc:Value languageID="NO">Rød</cbc:Value>
   <cbc:ValueQualifier>Color</cbc:ValueQualifier>
-</cac:AdditionalItemProperty>
-----
-
-[source]
-----
-<cac:AdditionalItemProperty>
-  <cbc:Name>ContainNuts</cbc:Name>
-  <cbc:Value>YES</cbc:Value>
-  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
 </cac:AdditionalItemProperty>
 ----
 

@@ -1,0 +1,37 @@
+= Allergener
+
+Korrekt angivelse av allergener handler om liv og helse, det er derfor viktig at alle aktører leser allergen-informasjon likt.
+
+[cols="1,4", options="header"]
+.Lovlige verdier for allergener
+|===
+| Verdi | Beskrivelse
+| YES | Varen inneholder den spesifiserte typen allergen.
+| MAY | Varen kan inneholde den spesifiserte typen allergen.
+| UNKNOWN | Vet ikke om varen inneholder den spesifiserte typen allergen.
+| FREE | Varen inneholder ikke den spesifiserte typen allergen.
+|===
+
+NOTE: Tidligere var "NO" en verdi for allergener, men fra 1.0.6 er den fjernet til fordel for "MAY".
+
+For å sikre felles forståelse av angivelse av allergener anbefaler man å benytte link:http://gs1.org/voc/AllergenTypeCode[GS1 sin kodeliste "Allergen Type Code"].
+
+[source]
+.Eksempel på utfylling med kodeliste (anbefalt)
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>HAZELNUTS</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>gs1:AllergenTypeCode</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Eksempel på utfylling uten kodeliste
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>ContainNuts</cbc:Name>
+  <cbc:Value>YES</cbc:Value>
+  <cbc:ValueQualifier>Allergen</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
