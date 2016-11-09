@@ -5,6 +5,10 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/121[#121]
+| Rewritten description of allergens.
+| Guide
+
 | link:https://github.com/difi/vefa-validator-conf/issues/155[#155]
 | Adding missing list of NOGOV rules for Catalogue.
 | Guide
