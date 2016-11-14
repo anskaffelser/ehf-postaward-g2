@@ -105,7 +105,7 @@ Payment receiver is optional information in EHF. If this information is not supp
 
 == Customer Number
 
-The customer number is stated in <cac:PartyIdentification>. Specification of the type of party identification used, is stated in the attribute schemeID. The values must be from the https://joinup.ec.europa.eu/svn/peppol/TransportInfrastructure/PEPPOL%20Policy%20for%20use%20of%20identifiers%20v3%200_2014-02-03.doc[PEPPOL Policy of Identifiers].
+The customer number is stated in <cac:PartyIdentification>. Specification of the type of party identification used, is stated in the attribute schemeID. The values must be from the link:https://vefa.difi.no/peppol/standard/identifiers/[PEPPOL Policy of Identifiers].
 
 The most commonly used identifiers in the Norwegian market is:
 

@@ -1,6 +1,6 @@
 # Accounting Information
 
-If the customer wants to automatically post the costs, the accounting information must be transferred to the supplier before or with the order . The supplier should then return the accounting information on the invoice line level.
+If the customer wants to automatically post the costs, the accounting information must be transferred to the supplier before or with the order. The supplier should then return the accounting information on the invoice line level.
 
 [source,xml]
 .Example

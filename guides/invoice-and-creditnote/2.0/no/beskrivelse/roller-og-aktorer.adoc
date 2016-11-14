@@ -105,7 +105,7 @@ Betalingsmottaker er valgfri informasjon i EHF. Dersom denne ikke er oppgitt, er
 
 == Kundenummer
 
-Kundenummer angis i <cac:PartyIdentification>. Hvilken type aktøridentifikasjon som benyttes, angis i attributtet schemeID. Gyldige verdier må være i henhold til https://joinup.ec.europa.eu/svn/peppol/TransportInfrastructure/PEPPOL%20Policy%20for%20use%20of%20identifiers%20v3%200_2014-02-03.doc[PEPPOLs Policy for Identifiers].
+Kundenummer angis i <cac:PartyIdentification>. Hvilken type aktøridentifikasjon som benyttes, angis i attributtet schemeID. Gyldige verdier må være i henhold til link:https://vefa.difi.no/peppol/standard/identifiers/[PEPPOLs Policy for Identifiers].
 
 De mest brukte aktøridentifikasjonene i Norge er:
 
