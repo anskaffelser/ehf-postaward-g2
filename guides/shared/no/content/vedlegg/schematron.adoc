@@ -2,6 +2,6 @@
 = Schematron [[appendix-schematron]]
 
 Valideringsfiler basert på link:http://www.schematron.com/[Schematron] er tilgjengelig i vårt link:{link-github}[Github-repoistory].
-link:{link-github}/tree/master[Branch "master"] inneholder gjeldende versjon og link:{link-github}/tree/upcoming[branch "upcoming"] inneholder utvikling og høring.
+link:{link-github}/tree/{release}[Release "{release}"] inneholder gjeldende versjon og link:{link-github}/tree/master[branch "master"] inneholder utvikling og høring.
 
 Fra og med link:/ehf/guide/release/2016-11-15/[release 2016-11-15] distribueres valideringsfiler som Schematron i stedet for XSLT.

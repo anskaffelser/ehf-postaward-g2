@@ -2,6 +2,6 @@
 = Schematron [[appendix-schematron]]
 
 Validation files based on link:http://www.schematron.com/[Schematron] may be found in our link:{link-github}[Github repoistory].
-link:{link-github}/tree/master[Branch "master"] is used for the current version of resources and link:{link-github}/tree/upcoming[branch "upcoming"] is for development and review.
+link:{link-github}/tree/{release}[Release "{release}"] is used for the current version of resources and link:{link-github}/tree/master[branch "master"] is for development and review.
 
 Difi provides validation artifacts as Schematron and not as XSLT as of link:/ehf/guide/release/2016-11-15/[release 2016-11-15].
