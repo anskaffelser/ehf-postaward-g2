@@ -9,7 +9,7 @@
     </configuration>
 
     <configuration>
-        <identifier>ehf-t76-28-1.0-px</identifier>
+        <identifier>ehf-t76-28-1.0-pc</identifier>
         <title>EHF Order Response 1.0 (Profile 28)</title>
         <profileId>urn:www.cenbii.eu:profile:bii28:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0</customizationId>
