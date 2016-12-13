@@ -13,7 +13,7 @@ include::../settings.adoc[]
 
 Denne utgivelsen inneholder utelukkende fjerning av regler som ikke har gitt noen verdi i produksjonssystemer. Basert på tilbakemelding har Difi vurdert det som formålstjenelig å slippe en utgivelse nå heller enn å vente til neste ordinære release.
 
-De som kjører forrige utgivelse i sine systemer står fri til å bytte til om man ønsker å bytte til denne utgivelsen.
+Denne utgivelsen er bakoverkompatibel med utgivelsen i november, og det er valgfritt om man ønsker å oppgradere til denne.
 
 Versjonsnummer er ikke oppdatert i denne utgivelsen.
 
@@ -42,7 +42,7 @@ include::../../despatch-advice/1.0/no/endringslogg/{release}-hotfix.adoc[]
 
 This release includes solely the removal of rules that have not given any value in production systems. Based on feedback has Difi considered it appropriate to publish a new release now rather than waiting until the next scheduled release.
 
-Those running the previous release in their systems are free to switch to this release if they want to.
+This release is backwards compatible towards the November release, and it is optional to upgrade to this release.
 
 Version numbers are not updated in this release.
 
