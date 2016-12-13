@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <configuration>
+        <identifier>ehf-t19-core-1.0</identifier>
+        <title>EHF Catalogue 1.0 (Core)</title>
+        <file source="sch/EHFCORE-UBL-T19.sch" path="xsl/EHFCORE-UBL-T19.xsl" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-t19-01-1.0-pc</identifier>
+        <title>EHF Catalogue 1.0 (Profile 01)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii01:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</customizationId>
+        <inherit>ehf-t19-01-1.0</inherit>
+        <inherit>ehf-t19-core-1.0</inherit>
+    </configuration>
+
+</buildConfigurations>

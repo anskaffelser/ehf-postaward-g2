@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+    <configuration>
+        <identifier>ehf-t14-core-2.0</identifier>
+        <title>EHF Creditnote 2.0 (Core)</title>
+        <file source="sch/EHFCORE-UBL-T14.sch" path="xsl/EHFCORE-UBL-T14.xsl" />
+    </configuration>
+
+    <configuration>
+        <identifier>ehf-t14-xx-2.0-pc</identifier>
+        <title>EHF Creditnote 2.0 (Profile XX)</title>
+        <profileId>urn:www.cenbii.eu:profile:biixx:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ehf-t14-xx-2.0-pc</inherit>
+        <inherit>ehf-t14-core-2.0</inherit>
+    </configuration>
+    <configuration>
+        <identifier>ehf-t14-05-2.0-pc</identifier>
+        <title>EHF Creditnote 2.0 (Profile 05)</title>
+        <profileId>urn:www.cenbii.eu:profile:bii05:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ehf-t14-05-2.0</inherit>
+        <inherit>ehf-t14-core-2.0</inherit>
+    </configuration>
+    <configuration>
+        <identifier>ehf-t14-xy-2.0-pc</identifier>
+        <title>EHF Creditnote 2.0 (Profile XY)</title>
+        <profileId>urn:www.cenbii.eu:profile:biixy:ver2.0</profileId>
+        <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixy:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
+        <inherit>ehf-t14-xy-2.0</inherit>
+        <inherit>ehf-t14-core-2.0</inherit>
+    </configuration>
+
+</buildConfigurations>

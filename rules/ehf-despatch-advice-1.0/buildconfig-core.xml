@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <testfolder>unit-EUGEN</testfolder>
-    <testfolder>unit-NOGOV</testfolder>
-
-    <configuration>
-        <identifier>ehf-t16-base-1.0</identifier>
-        <title>EHF Despatch Advise 1.0 (Base)</title>
-        <inherit>ubl-despatchadvice-2.1</inherit>
-        <file source="sch/NOGOV-UBL-T16.sch" path="xsl/NOGOV-UBL-T16.xsl" />
-        <file path="xsl/BIIRULES-UBL-T16.xsl" />
-        <file path="xsl/OPENPEPPOL-UBL-T16.xsl" />
-    </configuration>
-
     <configuration>
         <identifier>ehf-t16-core-1.0</identifier>
         <title>EHF Despatch Advise 1.0 (Core)</title>
         <inherit>ubl-despatchadvice-2.1</inherit>
-        <!-- <file source="sch/EHFCORE-UBL-T16.sch" path="xsl/EHFCORE-UBL-T16.xsl" /> -->
+        <file source="sch/EHFCORE-UBL-T16.sch" path="xsl/EHFCORE-UBL-T16.xsl" />
     </configuration>
 
     <configuration>
-        <identifier>ehf-t16-30-1.0</identifier>
+        <identifier>ehf-t16-30-1.0-pc</identifier>
         <title>EHF Despatch advise 1.0 (Profile 30)</title>
         <profileId>urn:www.cenbii.eu:profile:bii30:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0:extended:urn:www.difi.no:ehf:pakkseddel:ver1.0</customizationId>
-        <inherit>ehf-t16-base-1.0</inherit>
+        <inherit>ehf-t16-30-1.0</inherit>
         <inherit>ehf-t16-core-1.0</inherit>
     </configuration>
 

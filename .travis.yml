@@ -6,6 +6,7 @@ services:
 env:
   - PERFORM=guides
   - PERFORM=rules
+  - PERFORM=rules-core
 
 script:
   - sh .travis.$PERFORM.sh

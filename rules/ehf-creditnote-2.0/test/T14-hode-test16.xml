@@ -6,9 +6,9 @@
                 Errors:
                 NONAT-T14-R006
 				NOGOV-T14-R008
-                
+
                 Warnings:
-                EHFCORE-T14-R002 2 times
+                None
 -->
 <CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"  xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
@@ -119,7 +119,7 @@
   	<cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
   	<cbc:PayableAmount currencyID="NOK">125.00</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
-<cac:CreditNoteLine> 
+<cac:CreditNoteLine>
 <cbc:ID>1</cbc:ID>
 	<cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">1.00</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">100.00</cbc:LineExtensionAmount>
@@ -142,4 +142,3 @@
  </cac:Price>
  </cac:CreditNoteLine>
  </CreditNote>
-
