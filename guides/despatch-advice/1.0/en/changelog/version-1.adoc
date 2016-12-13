@@ -2,6 +2,11 @@
 
 :sectnums!:
 
+== Version 1.0.5 Hotfix (2016-12-13) [[changelog-hotfix-2016-12-13]]
+
+include::2016-12-13-hotfix.adoc[]
+
+
 == Version 1.0.5 (2016-11-15) [[changelog-1.0.5]]
 
 include::2016-11-15-1.0.5.adoc[]

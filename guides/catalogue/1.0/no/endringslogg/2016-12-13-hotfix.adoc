@@ -1,0 +1,12 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/192[#192]
+| Fjerne EHF Core for katalog og katalogrespons.
+| Validator
+
+|===

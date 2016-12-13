@@ -1,0 +1,11 @@
+:ruleurl-des: /ehf/rule/despatch-advice-1.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/192[#192]
+| Fjerne EHF Core for pakkseddel.
+| Validator
+
+|===
