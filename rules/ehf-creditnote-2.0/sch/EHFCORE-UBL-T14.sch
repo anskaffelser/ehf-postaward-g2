@@ -6876,13 +6876,6 @@
   </pattern>
   <pattern>
     <rule
-      context="/p1:CreditNote/cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch">
-      <assert flag="warning" id="EHFCORE-T14-R002" test="count(cbc:ID) = 1"
-        >[EHFCORE-T14-R002]-Cardinality SHOULD be according to EHF specifications.</assert>
-    </rule>
-  </pattern>
-  <pattern>
-    <rule
       context="/p1:CreditNote/cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cac:Address">
       <assert flag="warning" id="EHFCORE-T14-R001" test="true()">[EHFCORE-T14-R001]-Elements used
         SHOULD be according to EHF specifications</assert>

@@ -6,6 +6,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/193[#193]
+| Fjerne regelen som tilsier at cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID er obligatorisk i EHF Core.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/192[#192]
 | Fjerne EHF Core for faktura og kreditnota.
 | Validator

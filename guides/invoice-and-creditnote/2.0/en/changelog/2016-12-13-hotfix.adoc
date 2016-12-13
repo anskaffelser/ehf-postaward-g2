@@ -5,6 +5,10 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-validator-conf/issues/193[#193]
+| Removing rule implying cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID is mandatory in EHF Core.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/192[#192]
 | Removing EHF Core for Invoice and Credit Note.
 | Validator
