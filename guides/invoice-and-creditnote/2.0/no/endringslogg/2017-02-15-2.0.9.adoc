@@ -1,0 +1,13 @@
+[cols="1,9,2", options="header"]
+
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-validator-conf/issues/173[#173]
+| Endre link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) og link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) fra advarsel til feil.
+| Validator
+
+|===
