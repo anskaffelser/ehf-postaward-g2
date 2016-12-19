@@ -180,5 +180,10 @@
                  test="string-length(substring-after(cbc:Amount, '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T10-R040]-Allowance or charge amounts on document level cannot have more than 2 decimals</assert>
       </rule>
+      <rule context="cac:LegalMonetaryTotal">
+        <assert id="NOGOV-T10-R043"
+                test="not(cbc:PayableRoundingAmount) or abs(xs:decimal(cbc:PayableRoundingAmount)) &lt;= max((xs:decimal(abs(cbc:PayableAmount) div 10), xs:decimal(1)))"
+                flag="warning">[NOGOV-T10-R043]-Payable rounding amount should be no more than 10% of payable amount.</assert>
+      </rule>
    </pattern>
 </schema>
