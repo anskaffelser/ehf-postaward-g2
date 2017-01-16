@@ -2,6 +2,11 @@
 
 :sectnums!:
 
+== Versjon 2.0.9 (15.02.2016) [[changelog-2.0.9]]
+
+include::2017-02-15-2.0.9.adoc[]
+
+
 == Versjon 2.0.8 Feilretting (13.12.2016) [[changelog-hotfix-2016-12-13]]
 
 include::2016-12-13-hotfix.adoc[]
