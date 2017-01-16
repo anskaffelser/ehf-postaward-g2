@@ -10,6 +10,10 @@
 | Endre link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) og link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) fra advarsel til feil.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/187[#187]
+| Legge til link:{ruleurl-inv}NOGOV-T10-R043/[NOGOV-T10-R043] (**W**) for å validere at PayableRoundingAmount er lik eller mindre enn 10% av PayableAmount.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/195[#195]
 | Legge til informasjon de nye guidene for energi og finans.
 | Guide

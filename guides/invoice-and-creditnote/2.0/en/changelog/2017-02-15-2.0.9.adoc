@@ -9,6 +9,10 @@
 | Changing link:{ruleurl-inv}NOGOV-T10-R041/[NOGOV-T10-R041] (**F**) and link:{ruleurl-cre}NOGOV-T14-R041/[NOGOV-T14-R041] (**F**) from warning to fatal.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/187[#187]
+| Adding link:{ruleurl-inv}NOGOV-T10-R043/[NOGOV-T10-R043] (**W**) to validate PayableRoundingAmount to be equal or less than 10% of PayableAmount.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/195[#195]
 | Adding information regarding new industry guides for energy and finance.
 | Guide
