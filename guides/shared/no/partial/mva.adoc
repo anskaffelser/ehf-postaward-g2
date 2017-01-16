@@ -2,7 +2,7 @@
 !===
 | MVA kategori
 | Beskrivelse
-| Sats pr. 1.juli 2013
+| Sats pr. 1. januar 2016
 
 s| S | Utgående avgift, ordinær sats | 25%
 s| H | Utgående avgift, redusert sats – næringsmidler | 15%

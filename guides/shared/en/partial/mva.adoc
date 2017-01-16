@@ -2,7 +2,7 @@
 !===
 | VAT category
 | Description
-| Rate as of july 1, 2013
+| Rate as of January 1, 2016
 
 s| S | Outgoing VAT, ordinary rate | 25%
 s| H | Outgoing VAT, reduced rate – food & beverage | 15%

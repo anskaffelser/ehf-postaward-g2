@@ -35,4 +35,13 @@ include::../{shared-dir}/content/appendix/example-files.adoc[]
 * link:files/example/BII05%20T10%20gyldig%20faktura.xml[Invoice]
 
 
+[appendix]
+= Guidence [[attachment-guidenceg]]
+
+The following industry guides are available (Norwegian only):
+
+* link:/ehf/guide/energiveileder/[Guide for Energy]
+* link:/ehf/guide/finansveileder/[Guide for Finance]
+
+
 :leveloffset: -1

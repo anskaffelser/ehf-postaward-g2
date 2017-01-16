@@ -41,7 +41,7 @@ include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
 
 Det er utarbeidet følgende bransjeveiledere:
 
-* link:files/ehf_veileder_energi.pdf[Veileder for energibransjen]
-
+* link:/ehf/guide/energiveileder/[Veileder for energibransjen]
+* link:/ehf/guide/finansveileder/[Veileder for finansbransjen]
 
 :leveloffset: -1
