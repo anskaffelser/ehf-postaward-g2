@@ -11,6 +11,9 @@ include::../settings.adoc[]
 
 == Norsk [[norsk]]
 
+NOTE: Fra neste release vil særnorske regler som må være like for alle formatene samles i egen Schematron. I praksis betyr det et nytt regelsett som blir felles for alle formatene, og at dagens regler som flyttes fil få nye betegnelser.
+
+
 === EHF Faktura og kreditnota 2.0.9 [[faktura-og-kreditnota]]
 
 include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.9.adoc[]
@@ -32,6 +35,9 @@ include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.9.adoc[]
 
 
 == English [[english]]
+
+NOTE: As of next release will rules specific to Norway be maintained in a shared Schematron for all formats. In practice this means a new common set of rules for all formats, and those rules moved to the new set of rules will be assigned new codes.
+
 
 === EHF Invoice and Creditnote 2.0.9 [[invoice-and-creditnote]]
 
