@@ -4,13 +4,15 @@ Det er mulig å angi ulike kvantum og enheter som gjelder for en artikkel eller 
 
 Følgende kvantum og bestillingsmengder er mulig å angi. For alle kvanta skal det også angis enhet ihht. kodeliste.
 
+Elementnavn i UBL er nevnt i parantes, og er angitt fra CatalogueLine nivå.
+
 Bestillbar enhet (OrderableUnit)::
 Enhetskode for aktuelt produkt/pakningsnivå. Påkrevd dersom produktet er bestillbart. Kode ihht. kodeliste.
 
 Innhold i forbruksartikkel /artikler (ContentUnitQuantity)::
 Innhold i forbruksartikkel/forbruksartikler i bestillbar enhet, f.eks. ml i Shampo-flaske(r).
 
-Volumøkning (OrderQuantityIncrementNumeric)::
+Bestillingsintervall (OrderQuantityIncrementNumeric)::
 Angir antall enheter som en bestilling kan økes med. Default er 1.
 
 Minimumsbestilling (MinimumOrderQuantity)::
@@ -28,39 +30,38 @@ Totalt antall forbruksartikler i aktuelt produkt. F.eks. antall flasker på pall
 .Eksempel 1
 ====
 
-[cols="5h,2,2,2", options="header"]
+[cols="5h,2,2,2,2", options="header"]
 |===
-| Felt | 1 flaske | Case of 6 bottles | Pallet of 18 cases
-| Linjenummer | 4 | 5 | 6
-| Supplier Item identifier | 1111 | 111 | 11
-| Item Name |	Shampoo 250 ml | 6x250 ml Shampoo | Shampoo
-| Orderable unit | EA | CS | PF
-| Packaging level | CU | TU | DU
-| Packed units | | EA | CS
-| Packed quantity | | 6 | 18
-| Consumable unit | EA | EA | EA
-| Consumable unit quantity | 1 | 6 | 108
-| ItemNetQuantity | 250 | 1500 | 27000
-| Unit | MLT | MLT | MLT
-| MinimumOrderQuantity | 1 | 1 | 1
-| Unit | EA | EA | EA
-| Component related item Identifier | | 1111 | 111
-| Component related item quantity | | 6 | 18
+| Beskrivelse | Element (fra CatalogueLine nivå)| 1 flaske | Kasse med 6 flasker | Pall med 18 kasser
+| Linjeidentifikator | ID | 4 | 5 | 6
+| Leverandørens artikkelnummer |SellersItemIdentification/ID | 1111 | 111 | 11
+| Produktnavn | Item/Name |	Shampoo 250 ml | 6x250 ml Shampoo | Shampoo
+| Bestillbar enhet| OrderableUnit | EA | CS | PF
+| Pakningsnivå | PackLevelCode | CU | TU | DU
+| Pakningskvantum | Item/PackQuantity | | 6 | 18
+| Pakningsenhet | Item/PackQuantity/@unitCode | | EA | CS
+| Antall forbruksartiker | Item/PackSizeNumeric | 1 | 6 | 108
+| Innhold i forbruksartikkel | ContentUnitQuantity | 250 | 1500 | 27000
+| Enhetskode for innhold i forbruksartikkel |ContentUnitQuantity/@unitCode | MLT | MLT | MLT
+| Minimumsbestilling | MinimumOrderQuantity | 1 | 1 | 1
+| Enhetskode for minimumsbestilling | MinimumOrderQuantity/@unitCode | EA | EA | EA
+| Identifikator for komponenter | ComponentRelatedItem/ID | |1111 | 111
+| Kvantum for komponenter | ComponentRelatedItem/Quantity | | 6 | 18
 |===
 
 [source]
-.Eksempel på utfylling i EHF katalog.
+.Eksempel på utfylling i EHF katalog av kataloglinje med identifikator = 4 i tabellen over
 ----
 <cac:CatalogueLine>
   <cbc:ID>4</cbc:ID>
   <cbc:OrderableUnit>EA</cbc:OrderableUnit>
-  <cbc:ContentUnitQuantity unitCode="ML" unitCodeListID="UNECERec20">250</cbc:ContentUnitQuantity>
+  <cbc:ContentUnitQuantity unitCode="MLT" unitCodeListID="UNECERec20">250</cbc:ContentUnitQuantity>
   <cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
-  <cbc:MinimumOrderQuantity unitCode="CS" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
+  <cbc:MinimumOrderQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
   <cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
   ...
   <cac:Item>
-    <cbc:Description languageID="en">Shampoo 250 ml</cbc:Description>
+    <cbc:Name languageID="en">Shampoo 250 ml</cbc:Name>
     <cbc:PackSizeNumeric>1</cbc:PackSizeNumeric>
     <cac:SellersItemIdentification>
       <cbc:ID>1111</cbc:ID>
@@ -75,28 +76,27 @@ Totalt antall forbruksartikler i aktuelt produkt. F.eks. antall flasker på pall
 .Eksempel 2
 ====
 
-[cols="5h,2,2,2", options="header"]
+[cols="5h,2,2,2,2", options="header"]
 |===
-| Felt | Pack of 500 sheets paper | Case of 5 packs paper | Pallet of 18 cases copypaper
-| Line identifier | 7 | 8 | 9
-| Supplier Item identifier | A | AA | AAA
-| Item Name | 500 copy paper | 5*500 Copy paper | Pallet of paper
-| Orderable unit | EA | CS | PX
-| Packaging level | CU | TU | DU
-| Packed units | | EA | CS
-| Packed quantity | | 5 | 18
-| Consumable unit | EA | EA | EA
-| Consumable unit quantity | 1 | 5 | 90
-| ItemNetQuantity | 500 | 2500 | 45000
-| Unit | EA | EA | EA
-| MinimumOrderQuantity | 1 | 1 | 1
-| Unit | EA | EA | EA
-| Component related item Identifier | | A | AA
-| Component related item quantity | | 5 | 18
+| Beskrivelse | Element (fra CatalogueLine nivå)| Pakke med 500 ark papir | Kasse med 5 pakker papir | Pall med 18 kasser papir
+| Linjeidentifikator | ID | 7 | 8 | 9
+| Leverandørens artikkelnummer |SellersItemIdentification/ID | A | AA | AAA
+| Produktnavn | Item/Name | 500 copy paper | 5*500 Copy paper | Pallet of paper
+| Bestillbar enhet| OrderableUnit | EA | CS | PX
+| Pakningsnivå | PackLevelCode | CU | TU | DU
+| Pakningskvantum | Item/PackQuantity | | 5 | 18
+| Pakningsenhet | Item/PackQuantity/@unitCode | | EA | CS
+| Antall forbruksartiker | Item/PackSizeNumeric | 1 | 5 | 90
+| Innhold i forbruksartikkel |ContentUnitQuantity | 500 | 2500 | 45000
+| Enhetskode for innhold i forbruksartikkel |ContentUnitQuantity/@unitCode | EA | EA | EA
+| Minimumsbestilling | MinimumOrderQuantity | 1 | 1 | 1
+| Enhetskode for minimumsbestilling | MinimumOrderQuantity/@unitCode | EA | EA | EA
+| Identifikator for komponenter | ComponentRelatedItem/ID  | | A | AA
+| Kvantum for komponenter | ComponentRelatedItem/Quantity  | | 5 | 18
 |===
 
 [source]
-.Eksempel på utfylling i EHF katalog.
+.Eksempel på utfylling i EHF katalog av kataloglinje med identifikator = 8 i tabellen over
 ----
 <cac:CatalogueLine>
   cbc:ID>8</cbc:ID>

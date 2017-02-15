@@ -4,9 +4,9 @@ Products can be related to each other for ordering or logistic purposes.  All re
 
 Types of relations:
 
-* Products that are bundled and ordered/invoiced together, e.g. bottles and desposits.
-* Products that are connected in a product line or a logistics structure, e.g. consumer units and trading units of the same article.
-* Accessories that might be sold together with a product, e.g. disk station to a laptop.
+* Required related items are products that are bundled and ordered/invoiced together, e.g. bottles and desposits.
+* Component related items are products that are connected in a product line or a logistics structure, e.g. consumer units and trading units of the same article.
+* Assessory related item is used for accessories that might be sold together with a product, e.g. disk station to a laptop.
 
 Example of related products in an EHF Catalogue message:
 

@@ -2,8 +2,8 @@
 
 All prices in the format are related to the article or service within this Catalogue. The following prices can be stated:
 
-* Net price including all discounts and charges but excluded Vat.
-* Item comparison price defining price for a certain quantity. Used for comparing prices for different articles with various quantities.
+* Item price is net price including all discounts and charges but excluded Vat.
+* Item comparison unit price defining price for a certain quantity. Used for comparing prices for different articles with various quantities.
 * Conditional price related to a specific location or a certain order quantity.
 * Campaign price.
 
@@ -12,7 +12,7 @@ Be aware that no Gross prices can be sent in the format (price before discount a
 Example of Prices in EHF Catalogue:
 
 [source]
-.Net Price
+.Item Price
 ----
 <cac:RequiredItemLocationQuantity>
   <cac:Price>
@@ -26,7 +26,7 @@ Example of Prices in EHF Catalogue:
 ----
 
 [source]
-.Comparition Price
+.Comparison Price
 ----
 <cac:ItemComparision>
   <cbc:PriceAmount currencyID="NOK">100.00</cbc:PriceAmount>
