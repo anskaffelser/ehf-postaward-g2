@@ -21,7 +21,6 @@ Below is an example of Logistics information in an EHF Catalogue message.
 [source]
 .Catalogue line for Dispatch unit, highest pack level.
 ----
-<!—- Contains 12 Traded units (cases) -->
 <cac:CatalogueLine>
   <cbc:ID>1</cbc:ID>
   <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
@@ -32,9 +31,9 @@ Below is an example of Logistics information in an EHF Catalogue message.
     <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">12</cbc:Quantity>
   </cac:ComponentRelatedItem>
   <cac:Item>
-    <cbc:Description>Drikke Helpall</cbc:Description>
+    <cbc:Description>Soft drink, pallet</cbc:Description>
     <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
-    <cbc:Name languageID="no"> Drikke</cbc:Name>
+    <cbc:Name languageID="en">Soft drink</cbc:Name>
     <cac:SellersItemIdentification>
       <cbc:ID>111111</cbc:ID>
     </cac:SellersItemIdentification>
@@ -45,7 +44,6 @@ Below is an example of Logistics information in an EHF Catalogue message.
 [source]
 .Catalogue line for Traded unit.
 ----
-<!-- Contains 6 consumer units -->
 <cac:CatalogueLine>
   <cbc:ID>2</cbc:ID>
   <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
@@ -56,9 +54,9 @@ Below is an example of Logistics information in an EHF Catalogue message.
     <cbc:Quantity unitCode="EA" unitCodeListID="UNECERec20">6</cbc:Quantity>
   </cac:ComponentRelatedItem>
   <cac:Item>
-    <cbc:Description>Drikke lagerpakning</cbc:Description>
+    <cbc:Description>Soft drink, trading unit</cbc:Description>
     <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
-    <cbc:Name languageID="no">Drikke</cbc:Name>
+      <cbc:Name languageID="en">Soft drink</cbc:Name>
     <cac:SellersItemIdentification>
       <cbc:ID>222222</cbc:ID>
     </cac:SellersItemIdentification>
@@ -69,16 +67,15 @@ Below is an example of Logistics information in an EHF Catalogue message.
 [source]
 .Catalogue line for Consumer unit, lowest pack level.
 ----
-<!-- Contains prepack with 4 bottles of water -->
 <cac:CatalogueLine>
   <cbc:ID>3</cbc:ID>
   <cbc:ActionCode listID="ACTIONCODE:BII2">Add</cbc:ActionCode>
   <cbc:OrderableIndicator>false</cbc:OrderableIndicator>
   <cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
   <cac:Item>
-    <cbc:Description>Drikke 4-pack</cbc:Description>
+    <cbc:Description>Soft drink 4-pack</cbc:Description>
     <cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
-    <cbc:Name languageID="no">Drikke</cbc:Name>
+      <cbc:Name languageID="en">Soft drink</cbc:Name>
     <cac:SellersItemIdentification>
       <cbc:ID>333333</cbc:ID>
     </cac:SellersItemIdentification>

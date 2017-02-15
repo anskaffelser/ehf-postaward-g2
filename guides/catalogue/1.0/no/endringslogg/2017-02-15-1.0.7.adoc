@@ -1,0 +1,17 @@
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/198[#198]
+a| Rette inkonsistens i begreper/forretningstermer mellom veileder og tilhørende dokumentasjon (meldingstabell, katalogmal)
+
+Endringer gjort i følgende kapitler:
+
+* Kvantum- og bestillingsmengder
+* Pakningsinformasjon
+* Priser
+* Produktidentifisering
+* Relaterte produkter
+| Guide
+
+|===

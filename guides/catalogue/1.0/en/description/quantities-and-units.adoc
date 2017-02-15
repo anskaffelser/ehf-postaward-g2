@@ -1,107 +1,103 @@
 = Quantities and Units
 
-Various Quantities and Units can be stated in the EHF Catalogue. These are both related to the ordering process and the logistics process.
+Various quantities and units can be stated in the EHF Catalogue. These are both related to the ordering process and the logistics process.
 
 The table below lists quantities and units in the format. To all quantities there must be a legal Unit according to the Code list.
 
 Orderable unit (OrderableUnit)::
-Unit code for the line item.  Mandatory if the item is orderable. Code according to Code list
+The unit in which the item described in this catalogue line can be ordered. Mandatory if the item is orderable.
 
-Content of Consumer item(s) (ContentUnitQuantity)::
-Content of Consumer item(s) in orderable unit, e.g. ml in bottles of Shampoo.
+Item net quantity (ContentUnitQuantity)::
+The net quantity of the item that is contained in each consumable unit (excluding packaging material), e.g. ml in bottles of Shampoo.
 
-Quantity increment (OrderQuantityIncrementNumeric)::
+Order  quantity increment (OrderQuantityIncrementNumeric)::
 Possible limitation to the number of articles that can be ordered. If the Quantity increment is 6 the article must be ordered in a quantity of 6, 12, 18 etc.
 
-Minimum Order Quantity (MinimumOrderQuantity)::
+Minimum order quantity (MinimumOrderQuantity)::
 The smallest number of items that can be ordered (most often 1).
 
-Maximum Order Quantity (MaximumOrderQuantity)::
+Maximum order quantity (MaximumOrderQuantity)::
 The largest number of items that can be ordered (most often unlimited).
 
-Pack Quantity (Item/PackQuantity)::
+Packed quantity (Item/PackQuantity)::
 Number of items on next lower level, e.g. number of Consumer units in a Trading unit.
 
-Number of Consumer items (Item/PackSizeNumeric)::
-Number of Consumer items. E.g. number of bottles on a Pallet.
+Consumable unit quantity (Item/PackSizeNumeric)::
+Number of Consumer items in the orderable unit. E.g. number of bottles on a Pallet.
 
 .Example 1
 ====
 
-[cols="5h,2,2,2", options="header"]
+[cols="5h,2,2,2,2", options="header"]
 |===
-| Element | 1 bottle | Case of 6 bottles | Pallet of 18 cases
-| Line identifier | 4 | 5 | 6
-| Supplier Item identifier | 1111 | 111 | 11
-| Item Name  Shampoo | 250 ml | 6x250 ml Shampoo | Shampoo
-| Orderable unit | EA | CS | PF
-| Packaging level | CU | TU | DU
-| Packed units | | EA | CS
-| Packed quantity | | 6 | 18
-| Consumable unit | EA | EA | EA
-| Consumable unit quantity | 1 | 6 | 108
-| ItemNetQuantity | 250 | 1500 | 27000
-| Unit | MLT | MLT | MLT
-| MinimumOrderQuantity | 1 | 1 | 1
-| Unit | EA | EA | EA
-| Component related item Identifier | | 1111 | 111
-| Component related item quantity | | 6 | 18
+| Description | Element (from CatalogueLine level)| 1 bottle | Case of 6 bottles | Pallet of 18 cases
+| Line identifier | ID | 4 | 5 | 6
+| Sellers item identifier |SellersItemIdentification/ID | 1111 | 111 | 11
+| Item name | Item/Name |	Shampoo 250 ml | 6x250 ml Shampoo | Shampoo
+| Orderable unit| OrderableUnit | EA | CS | PF
+| Packaging level | PackLevelCode | CU | TU | DU
+| Packed quantity | Item/PackQuantity | | 6 | 18
+| Packed quantity unit | Item/PackQuantity/@unitCode | | EA | CS
+| Consumable unit quantity | Item/PackSizeNumeric | 1 | 6 | 108
+| Item net quantity | ContentUnitQuantity | 250 | 1500 | 27000
+| Item net quantity unit |ContentUnitQuantity/@unitCode | MLT | MLT | MLT
+| Minimum order quantity | MinimumOrderQuantity | 1 | 1 | 1
+| Minimum order quantity unit | MinimumOrderQuantity/@unitCode | EA | EA | EA
+| Component related item identifier | ComponentRelatedItem/ID | |1111 | 111
+| Item quantity for component related item | ComponentRelatedItem/Quantity | | 6 | 18
 |===
-
 
 [source]
-.EHF example
+.Example of catalogue line with line identifier = 4 in the above table
 ----
 <cac:CatalogueLine>
   <cbc:ID>4</cbc:ID>
   <cbc:OrderableUnit>EA</cbc:OrderableUnit>
-  <cbc:ContentUnitQuantity unitCode="ML" unitCodeListID="UNECERec20">250</cbc:ContentUnitQuantity>
+  <cbc:ContentUnitQuantity unitCode="MLT" unitCodeListID="UNECERec20">250</cbc:ContentUnitQuantity>
   <cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>
-  <cbc:MinimumOrderQuantity unitCode="CS" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
+  <cbc:MinimumOrderQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:MinimumOrderQuantity>
   <cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
   ...
   <cac:Item>
-    <cbc:Description languageID="en">Shampoo 250 ml</cbc:Description>
+    <cbc:Name languageID="en">Shampoo 250 ml</cbc:Name>
     <cbc:PackSizeNumeric>1</cbc:PackSizeNumeric>
     <cac:SellersItemIdentification>
       <cbc:ID>1111</cbc:ID>
     </cac:SellersItemIdentification>
-    ...
+  ...
   </cac:Item>
   ...
 </cac:CatalogueLine>
 ----
-
 ====
 
 .Example 2
 ====
 
-[cols="5h,2,2,2", options="header"]
+[cols="5h,2,2,2,2", options="header"]
 |===
-| Element | Pack of 500 sheets paper | Case of 5 packs paper | Pallet of 18 cases copypaper
-| Line identifier | 7 | 8 | 9
-| Supplier Item identifier | A | AA | AAA
-| Item Name | 500 copy paper | 5*500 Copy paper | Pallet of paper
-| Orderable unit | EA | CS | PX
-| Packaging level | CU | TU | DU
-| Packed units | | EA | CS
-| Packed quantity | | 5 | 18
-| Consumable unit | EA | EA | EA
-| Consumable unit quantity | 1 | 5 | 90
-| ItemNetQuantity | 500 | 2500 | 45000
-| Unit | EA | EA | EA
-| MinimumOrderQuantity | 1 | 1 | 1
-| Unit | EA | EA | EA
-| Component related item Identifier | | A | AA
-| Component related item quantity | | 5 | 18
+| Description | Element (from CatalogueLine level)| Pack of 500 sheets paper | Case of 5 packs paper | Pallet with 18 cases paper
+| Line identifier | ID | 7 | 8 | 9
+| Sellers item identifier  |SellersItemIdentification/ID | A | AA | AAA
+| Item name | Item/Name | 500 copy paper | 5*500 Copy paper | Pallet of paper
+| Orderable unit| OrderableUnit | EA | CS | PX
+| Packaging level | PackLevelCode | CU | TU | DU
+| Packed quantity | Item/PackQuantity | | 5 | 18
+| Packed quantity unit | Item/PackQuantity/@unitCode | | EA | CS
+| Consumable unit quantity  | Item/PackSizeNumeric | 1 | 5 | 90
+| Item net quantity |ContentUnitQuantity| 500 | 2500 | 45000
+| Item net quantity unit |ContentUnitQuantity/@unitCode | EA | EA | EA
+| Minimum order quantity | MinimumOrderQuantity | 1 | 1 | 1
+| Minimum order quantity unit | MinimumOrderQuantity/@unitCode | EA | EA | EA
+| Component related item identifier | ComponentRelatedItem/ID  | | A | AA
+| Item quantity for component related item | ComponentRelatedItem/Quantity  | | 5 | 18
 |===
 
 [source]
-.EHF Example
+.Example of catalogue line with line identifier = 8 in the above table
 ----
 <cac:CatalogueLine>
-  <cbc:ID>8</cbc:ID>
+  cbc:ID>8</cbc:ID>
   <cbc:OrderableUnit>CS</cbc:OrderableUnit>
   <cbc:ContentUnitQuantity unitCode="EA" unitCodeListID="UNECERec20">2500</cbc:ContentUnitQuantity>
   <cbc:OrderQuantityIncrementNumeric>1</cbc:OrderQuantityIncrementNumeric>

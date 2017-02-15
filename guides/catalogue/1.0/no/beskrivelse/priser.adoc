@@ -2,7 +2,7 @@
 
 Alle priser i formatet er relatert til artikkelen eller tjenesten brukt i den aktuelle katalogen. Det er mulig å angi følgende priselementer:
 
-* Nettopris inkludert rabatter og tillegg men uten Mva. Her er det også mulig å angi en gyldighetsperiode for den aktuelle prisen
+* Prisbeløp er nettopris inkludert rabatter og tillegg men uten Mva. Her er det også mulig å angi en gyldighetsperiode for den aktuelle prisen
 * Sammenligningspris for en gitt enhet.
 * Betinget pris som gjelder i spesifikke situasjoner, f.eks. knyttet til en bestemt lokasjon eller bestilling av et gitt antall.
 * Kampanjevarer
