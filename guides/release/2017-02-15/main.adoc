@@ -11,7 +11,7 @@ include::../settings.adoc[]
 
 == Norsk [[norsk]]
 
-NOTE: Fra neste release vil særnorske regler som må være like for alle formatene samles i egen Schematron. I praksis betyr det et nytt regelsett som blir felles for alle formatene, og at dagens regler som flyttes fil få nye betegnelser.
+NOTE: Fra neste release vil særnorske regler som må være like for alle formatene samles i egen Schematron. I praksis betyr det et nytt regelsett som blir felles for alle formatene, og at dagens regler som flyttes vil få nye betegnelser.
 
 
 === EHF Faktura og kreditnota 2.0.9 [[faktura-og-kreditnota]]
@@ -19,9 +19,9 @@ NOTE: Fra neste release vil særnorske regler som må være like for alle format
 include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.9.adoc[]
 
 
-// === EHF Katalog 1.0.7 [[katalog]]
+=== EHF Katalog 1.0.7 [[katalog]]
 
-// include::../../catalogue/1.0/no/endringslogg/{release}-1.0.7.adoc[]
+include::../../catalogue/1.0/no/endringslogg/{release}-1.0.7.adoc[]
 
 
 // === EHF Ordreprosess 1.0.7 [[ordreprosess]]
@@ -44,9 +44,9 @@ NOTE: As of next release will rules specific to Norway be maintained in a shared
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.9.adoc[]
 
 
-// === EHF Catalogue 1.0.6 [[catalogue]]
+=== EHF Catalogue 1.0.7 [[catalogue]]
 
-// include::../../catalogue/1.0/en/changelog/{release}-1.0.7.adoc[]
+include::../../catalogue/1.0/en/changelog/{release}-1.0.7.adoc[]
 
 
 // === EHF Ordering 1.0.6 [[ordering]]
