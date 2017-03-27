@@ -2,4 +2,4 @@
 
 Figuren under viser hvilke  roller som inngår i leveringsprosessen.
 
-image::images/funksjoner-og-roller.png[Funksjoner og roller, align="center"]
+image::images/funksjoner-og-roller.jpeg[Funksjoner og roller, align="center"]
