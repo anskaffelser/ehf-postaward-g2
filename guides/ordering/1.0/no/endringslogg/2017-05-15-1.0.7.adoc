@@ -3,10 +3,11 @@
 
 [cols="1,9,2", options="header"]
 |===
-| Issue | Description | Type
+| Sak | Beskrivelse | Type
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
-| Description of package level codes
+| Beskrivelse av anbrekksvarer
 | Guide
+
 
 |===

@@ -1,0 +1,16 @@
+= Anbrekkskode
+
+For å angi anbrekkskode (D-pak, F-pak o.l.) på en ordrelinje, kan elementet `cac:AdditionalItemProperty` benyttes.
+
+Selve anbrekkskoden legges i elementet `cbc:Name` og verdien hentes fra kodelisten https://vefa.difi.no/ehf/codelist/packagelevel[Packagelevel], og samsvarer med tilsvarende koder på EHF Katalog. Elementet `cbc:Value` skal inneholde verdien "Anbrekk"
+
+
+[source]
+.Eksempel på angivelse av anbrekkskode
+----
+  <cac:AdditionalItemProperty>
+    <cbc:Name>DU</cbc:Name>
+    <cbc:Value>Anbrekk</cbc:Value>
+  </cac:AdditionalItemProperty>
+</cac:Item>
+----
