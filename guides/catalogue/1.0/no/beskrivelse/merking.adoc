@@ -43,11 +43,7 @@ Certificate TypeCode: OrganicLabel (Økologisk)
     </cac:PartyName>
   </cac:IssuerParty>
   <cac:DocumentReference>
-    <cac:Attachment>
-      <cac:ExternalReference>
-        <cbc:URI>http://www.svanemerket.no/</cbc:URI>
-      </cac:ExternalReference>
-    </cac:Attachment>
+    <cbc:ID>http://www.svanemerket.no/</cbc:ID>
   </cac:DocumentReference>
 </cac:Certificate>
 ----

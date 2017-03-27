@@ -15,8 +15,8 @@
 	<cbc:IssueDate>2013-09-23</cbc:IssueDate>
 	<cbc:VersionID>v1.0</cbc:VersionID>
 	<cac:ValidityPeriod>
-		<cbc:StartDate>2016-01-01</cbc:StartDate>
-		<cbc:EndDate>2017-01-01</cbc:EndDate>
+		<cbc:StartDate>2017-01-01</cbc:StartDate>
+		<cbc:EndDate>2018-01-01</cbc:EndDate>
 	</cac:ValidityPeriod>
 	<cac:ReferencedContract>
 		<cbc:ID>123123</cbc:ID>
@@ -41,7 +41,7 @@
 		</cac:PartyName>
 	</cac:ReceiverParty>
 	<cac:SellerSupplierParty>
-
+		
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
@@ -129,16 +129,16 @@
 				<cbc:ItemClassificationCode listID="UNSPSC">43212105</cbc:ItemClassificationCode>
 			</cac:CommodityClassification>
 			<cac:Certificate>
-				<cbc:ID>BAL</cbc:ID>
-				<cbc:CertificateTypeCode>SVANEN</cbc:CertificateTypeCode>
-				<cbc:CertificateType>SVANEN</cbc:CertificateType>
+				<cbc:ID>NEO</cbc:ID>
+				<cbc:CertificateTypeCode>EcoLabel</cbc:CertificateTypeCode>
+				<cbc:CertificateType>EcoLabel</cbc:CertificateType>
 				<cac:IssuerParty>
 					<cac:PartyName>
-						<cbc:Name>SVANEN</cbc:Name>
+						<cbc:Name>Svanemerket</cbc:Name>
 					</cac:PartyName>
 				</cac:IssuerParty>
 				<cac:DocumentReference>
-					<cbc:ID>http://www.anskaffelser.no/artikler/2010/03/der-blaue-engel-blaa-engel</cbc:ID>
+					<cbc:ID>http://www.svanemerket.no/</cbc:ID>				
 				</cac:DocumentReference>
 			</cac:Certificate>
 		</cac:Item>
@@ -157,8 +157,8 @@
 			>1</cbc:MaximumOrderQuantity>
 		<cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
 		<cac:LineValidityPeriod>
-			<cbc:StartDate>2016-10-01</cbc:StartDate>
-			<cbc:EndDate>2016-12-01</cbc:EndDate>
+			<cbc:StartDate>2017-10-01</cbc:StartDate>
+			<cbc:EndDate>2017-12-01</cbc:EndDate>
 		</cac:LineValidityPeriod>
 		<cac:RequiredItemLocationQuantity>
 			<cbc:LeadTimeMeasure unitCode="DAY">13</cbc:LeadTimeMeasure>
@@ -167,7 +167,7 @@
 			</cac:Price>
 		</cac:RequiredItemLocationQuantity>
 		<cac:Item>
-
+			
 			<cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
 			<cbc:Name>LÅSKASSE LK1362/28 R STOLPE25</cbc:Name>
 			<cac:SellersItemIdentification>
