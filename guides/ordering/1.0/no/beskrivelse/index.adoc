@@ -23,6 +23,8 @@ include::merking.adoc[]
 
 include::tilleggsegenskaper.adoc[]
 
+include::anbrekkskode.adoc[]
+
 include::ordrebekreftelse.adoc[]
 
 :leveloffset: -1

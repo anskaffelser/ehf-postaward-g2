@@ -1,0 +1,12 @@
+:ruleurl-ord: /ehf/rule/order-1.0/
+:ruleurl-res: /ehf/rule/order-response-1.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
+| Description of package level codes
+| Guide
+
+|===

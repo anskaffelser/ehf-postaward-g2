@@ -1,0 +1,16 @@
+= Package level code
+
+Package level codes (D-pak, F-pak etc.) can be described in the element `cac:AdditionalItemProperty`.
+
+The package level code is placed in the element `cbc:Name`, and its values shall be from the code list https://vefa.difi.no/ehf/codelist/packagelevel[Packagelevel] and is the same as used in EHF Catalogue. The element `cbc:Value` must have the value "Anbrekk".
+
+
+[source]
+.Eksempel på angivelse av anbrekkskode
+----
+  <cac:AdditionalItemProperty>
+    <cbc:Name>DU</cbc:Name>
+    <cbc:Value>Anbrekk</cbc:Value>
+  </cac:AdditionalItemProperty>
+</cac:Item>
+----
