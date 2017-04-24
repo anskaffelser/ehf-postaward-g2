@@ -1,0 +1,57 @@
+include::../settings.adoc[]
+
+= EHF Release {release}
+{name-difi-no}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:release: 2017-05-15
+
+== Norsk [[norsk]]
+
+
+=== EHF Faktura og kreditnota 2.0.10 [[faktura-og-kreditnota]]
+
+include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.10.adoc[]
+
+
+=== EHF Katalog 1.0.8 [[katalog]]
+
+include::../../catalogue/1.0/no/endringslogg/{release}-1.0.8.adoc[]
+
+
+=== EHF Ordreprosess 1.0.7 [[ordreprosess]]
+
+include::../../ordering/1.0/no/endringslogg/{release}-1.0.7.adoc[]
+
+
+=== EHF Pakkseddel 1.0.6 [[pakkseddel]]
+
+include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.6.adoc[]
+
+
+== English [[english]]
+
+
+=== EHF Invoice and Creditnote 2.0.10 [[invoice-and-creditnote]]
+
+include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.10.adoc[]
+
+
+=== EHF Catalogue 1.0.8 [[catalogue]]
+
+include::../../catalogue/1.0/en/changelog/{release}-1.0.8.adoc[]
+
+
+=== EHF Ordering 1.0.7 [[ordering]]
+
+include::../../ordering/1.0/en/changelog/{release}-1.0.7.adoc[]
+
+
+=== EHF Despatch Advice 1.0.6 [[despatch-advice]]
+
+include::../../despatch-advice/1.0/en/changelog/{release}-1.0.6.adoc[]
+
+include::{shared-dir}/no/message/piwik.adoc[]
