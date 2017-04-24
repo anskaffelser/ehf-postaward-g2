@@ -124,12 +124,8 @@
          <assert id="NONAT-T10-R015" test="cac:Price/cbc:PriceAmount" flag="fatal">[NONAT-T10-R015]-Invoice lines MUST contain the item price</assert>
          <assert id="NONAT-T10-R026"
                  test="$quiet or
-                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.01))"
-                 flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level (Slack!)</assert>
-         <assert id="NONAT-T10-R027"
-                 test="$quiet or
-                 $lineExtensionAmount = u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"
-                 flag="warning">[NONAT-T10-R027]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level, expected LineExtensionAmount to be "<value-of select="u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance))"/>".</assert>
+                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
+                 flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level.</assert>
       </rule>
    </pattern>
 </schema>

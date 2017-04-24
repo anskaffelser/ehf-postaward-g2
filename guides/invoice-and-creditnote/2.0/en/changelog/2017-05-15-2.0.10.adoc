@@ -6,6 +6,10 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/209[#209]
+| Updating NONAT-T10-R026 and NONAT-T14-R024 to accept slack of 0.02. Removing NONAT-T10-R027 and NONAT-T14-R025.
+| Validator
+
 | link:https://github.com/difi/vefa-validator-conf/issues/208[#208]
 | Adding information on how to handle non-recommended attachment formats.
 | Guide
