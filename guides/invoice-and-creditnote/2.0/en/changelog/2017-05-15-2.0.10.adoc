@@ -6,4 +6,8 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/208[#208]
+| Adding information on how to handle non-recommended attachment formats.
+| Guide
+
 |===

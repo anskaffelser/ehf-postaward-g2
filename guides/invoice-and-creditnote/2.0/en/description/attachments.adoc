@@ -13,7 +13,7 @@ Coding::
 Base64
 Document format::
 MIME types:
-* Pdf – application / pdf
+* PDF – application / pdf
 * TXT – text / txt
 * GIF – image / gif
 * TIFF – image / tiff
@@ -25,6 +25,16 @@ Description of attachment::
 It is advised to supply a good description of each attachment and the element to use is: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
 Should only be used for description of the document content.
 
+
 == Copy of the Invoice/Creditnote as an Attachment
 
 There is one special case where it is absolutely required to send the invoice/creditnote as an attachment (cf: FOR 2004-12-01 nr 1558: Forskrift om bokføring). Companies without the ability to send EHF formats will create an invoice or creditnote as usual, e.g. as a document meant to be printed and mailed. Those companies can use an «invoice portal» to register necessary information about the invoice or creditnote and then add a pdf-version or an image of the invoice/creditnote as an attachment. In that case the element DocumentType must specify “Commercial invoice” for an invoice and “Credit note” for a creditnote.
+
+
+== Use of non-recommended attachment formats
+
+Senders may not expect receivers to have support for non-recommended attachment formats except in situations were this is actively agreed upon.
+If receiver is unable to use received attachments using non-recommended formats must sender resent the business document with updated attachments upon request.
+
+I.e. most computers today support opening HTML files, however not all invoicing systems support handling HTML.
+In such cases may receiver be seen as unable to handle the format.

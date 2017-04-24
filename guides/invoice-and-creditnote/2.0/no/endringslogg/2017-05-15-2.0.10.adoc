@@ -9,4 +9,8 @@
 | Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/208[#208]
+| Legge til informasjon om hvordan man skal håndtere vedlegg som ikke er iht. listen over anbefalte formater.
+| Guide
+
 |===

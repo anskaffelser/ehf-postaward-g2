@@ -12,7 +12,7 @@ Koding:::
 Base64
 Dokumentformat:::
 MIME typer anbefales:
-* Pdf – applikasjon / pdf
+* PDF – applikasjon / pdf
 * TXT – tekst / txt
 * GIF – image / gif
 * TIFF – image / tiff
@@ -24,6 +24,16 @@ Beskrivelse av vedlegg:::
 Det anbefales å gi en god beskrivelse av hva slag vedlegg det gjelder. Kodelisten DocumentTypeCode anbefales brukt og beskrivelsen gjøres i feltet: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
 Elementet benyttes kun til å gi en beskrivelse av vedleggets innhold eller type dokument/vedlegg.
 
+
 == Kopi av faktura/kreditnota som vedlegg
 
 Vedlegg skal i utgangspunktet ikke benyttes for å overføre en «pdf-versjon» av fakturaen/kreditnotaen.  Det er kun i ett tilfelle hvor det er lovpålagt med kopi av selve fakturaen/kreditnotaen som vedlegg:  I de tilfeller fakturautsteder benytter seg av en fakturaportal, hvor fakturautsteder har fakturert/kreditert i eget økonomi/faktura system. I denne situasjon skal fakturautsteder taste inn fakturainformasjonen som finnes på den systemgenererte fakturaen/kreditnotaen, for så å legge ved et bilde av original faktura/kreditnota.  I dette tilfellet SKAL feltet for dokumenttype ha verdien «Commercial  invoice» for faktura og «Credit note» for kreditnota.
+
+
+== Bruk av vedleggstyper utover anbefalte typer
+
+Dersom man sender vedleggstyper utover anbefalte typer uten at det er avtalt med mottaker kan man ikke forvente at mottaker har programvare for å vise det som er sendt.
+I tilfeller hvor avsender benytter vedleggstyper som mottaker ikke har programvare for å vise må avsender belage seg på å sende forretningsdokumentet på nytt med oppdatert vedlegg ved forespørsel.
+
+Eksempelvis vil de fleste i dag ha installert programvare for visning av HTML, men det betyr ikke at behandling av HTML i fakturasystemet er støttet.
+I slike tilfeller er vedlegget å regne som uleselig for mottaker.
