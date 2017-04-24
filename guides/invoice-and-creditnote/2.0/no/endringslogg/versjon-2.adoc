@@ -2,7 +2,7 @@
 
 :sectnums!:
 
-== Versjon 2.0.9 (15.02.2016) [[changelog-2.0.9]]
+== Versjon 2.0.9 (15.02.2017) [[changelog-2.0.9]]
 
 include::2017-02-15-2.0.9.adoc[]
 
