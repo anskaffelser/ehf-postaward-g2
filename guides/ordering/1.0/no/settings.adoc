@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Ordreprosess
 
-:date-review: 14. oktober 2016
-:date-release: 15. november 2016
-:date-mandatory: 15. november 2016
+:date-review: 25. april 2017
+:date-release: 15. mai 2017
+:date-mandatory: 15. mai 2017

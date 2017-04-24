@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Faktura og Kreditnota
 
-:date-review: 16. januar 2017
-:date-release: 15. februar 2017
-:date-mandatory: 15. februar 2017
+:date-review: 25. april 2017
+:date-release: 15. mai 2017
+:date-mandatory: 15. mai 2017
