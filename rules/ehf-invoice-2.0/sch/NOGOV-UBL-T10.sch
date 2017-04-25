@@ -145,7 +145,9 @@
                  flag="warning">[NOGOV-T10-R010]-Attachment is not a recommended MIMEType.</assert>
       </rule>
       <rule context="//cac:Party/cbc:EndpointID">
-         <assert id="NOGOV-T10-R027" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+         <assert id="NOGOV-T10-R027"
+                 test="@schemeID = 'NO:ORGNR'"
+                 flag="fatal">[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T10-R026"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T10-R026]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>

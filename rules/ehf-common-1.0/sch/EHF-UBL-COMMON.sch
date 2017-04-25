@@ -1,0 +1,63 @@
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
+        schemaVersion="iso" queryBinding="xslt2">
+
+   <title>Common EHF rules for Post-Award</title>
+
+   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
+   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
+   <ns uri="utils" prefix="u"/>
+
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
+     <param name="val"/>
+     <variable name="length" select="string-length($val) - 1"/>
+     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+     <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
+     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
+   </function>
+
+    <!--
+      R00X - Document in general
+      R01X - Validation of Norwegian organization numbers
+      R02X - Validation of tax
+      R03X - Format validation
+    -->
+
+   <pattern>
+     <rule context="/">
+        <assert id="EHF-COMMON-R001"
+                test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
+                flag="fatal">[EHF-COMMON-R001]-Document MUST not contain empty elements.</assert>
+     </rule>
+     <rule context="cbc:EndpointID[@schemeID = 'NO:ORGNR']">
+        <assert id="EHF-COMMON-R010"
+                test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+                flag="fatal">[EHF-COMMON-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+     </rule>
+     <rule context="cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
+        <assert id="EHF-COMMON-R011"
+                test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+                flag="fatal">[EHF-COMMON-R011]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
+     </rule>
+     <rule context="cbc:CompanyID[@schemeID = 'NO:VAT']">
+        <assert id="EHF-COMMON-R012"
+                test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
+                flag="fatal">[NOGOV-T10-R030]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
+     </rule>
+     <rule context="cbc:CompanyID[@schemeID = 'NO:ORGNR']">
+        <assert id="EHF-COMMON-R013"
+                test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+                flag="fatal">[EHF-COMMON-R013]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
+     </rule>
+     <rule context="cac:*[ends-with(name(), 'TaxCategory')]/cbc:ID">
+        <assert id="EHF-COMMON-R020"
+                test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
+                flag="fatal">[EHF-COMMON-R020]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+     </rule>
+     <rule context="cbc:*[ends-with(name(), 'Date')]">
+        <assert id="EHF-COMMON-R030"
+                test="(string(.) castable as xs:date) and (string-length(.) = 10)"
+                flag="fatal">[EHF-COMMON-R030]-A date must be formatted YYYY-MM-DD.</assert>
+     </rule>
+   </pattern>
+
+ </schema>
