@@ -69,7 +69,9 @@
          <assert id="NOGOV-T14-R007" test="(cac:Contact/cbc:ID != '')" flag="fatal">[NOGOV-T14-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxTotal">
-         <assert id="NOGOV-T14-R018" test="(cac:TaxSubtotal)" flag="fatal">[NOGOV-T14-R018]-A credit note MUST have Tax Subtotal specifications.</assert>
+         <assert id="NOGOV-T14-R018"
+                 test="(cac:TaxSubtotal)"
+                 flag="fatal">[NOGOV-T14-R018]-A credit note MUST have Tax Subtotal specifications.</assert>
          <assert id="NOGOV-T14-R025"
                  test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T14-R025]-Total tax amount cannot have more than 2 decimals</assert>
@@ -83,7 +85,9 @@
                  flag="fatal">[NOGOV-T14-R017]-Company identifier MUST be specified when describing a Tax Representative</assert>
       </rule>
       <rule context="//cac:Party/cbc:EndpointID">
-         <assert id="NOGOV-T14-R010" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+         <assert id="NOGOV-T14-R010"
+                 test="@schemeID = 'NO:ORGNR'"
+                 flag="fatal">[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T14-R009"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T14-R009]-Endpoint ID MUST be a valid Norwegian organization number. Only numerical value allowed</assert>

@@ -39,14 +39,18 @@
          <assert id="NONAT-T10-R025"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NONAT-T10-R025]-An invoice MUST not contain empty elements.</assert>
-         <assert id="NONAT-T10-R012" test="cac:TaxTotal" flag="fatal">[NONAT-T10-R012]-An invoice MUST contain tax information</assert>
+         <assert id="NONAT-T10-R012"
+                 test="cac:TaxTotal"
+                 flag="fatal">[NONAT-T10-R012]-An invoice MUST contain tax information</assert>
          <assert id="NONAT-T10-R002"
                  test="//cac:PaymentMeans/cbc:PaymentDueDate"
                  flag="fatal">[NONAT-T10-R002]-Payment due date MUST be provided in the invoice according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 5"</assert>
          <assert id="NONAT-T10-R013"
                  test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name != '')"
                  flag="fatal">[NONAT-T10-R013]-If payee information is provided then the payee name MUST be specified.</assert>
-         <assert id="NONAT-T10-R019" test="(cbc:UBLVersionID != '')" flag="fatal">[NONAT-T10-R019]-An invoice MUST have a syntax identifier.</assert>
+         <assert id="NONAT-T10-R019"
+                 test="(cbc:UBLVersionID != '')"
+                 flag="fatal">[NONAT-T10-R019]-An invoice MUST have a syntax identifier.</assert>
          <assert id="NONAT-T10-R009"
                  test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))"
                  flag="warning">[NONAT-T10-R009]-Issue date of an invoice should be today or earlier.</assert>
@@ -73,7 +77,9 @@
                  flag="warning">[NONAT-T10-R010]-Location identifiers SHOULD be GLN or GSRN</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity">
-         <assert id="NONAT-T10-R018" test="(cbc:CompanyID != '')" flag="fatal">[NONAT-T10-R018]-Company identifier MUST be specified when describing a company legal entity.</assert>
+         <assert id="NONAT-T10-R018"
+                 test="(cbc:CompanyID != '')"
+                 flag="fatal">[NONAT-T10-R018]-Company identifier MUST be specified when describing a company legal entity.</assert>
       </rule>
       <rule context="cac:PayeeFinancialAccount/cbc:ID//@schemeID">
          <assert id="NONAT-T10-R024"
@@ -91,7 +97,9 @@
                  flag="warning">[NONAT-T10-R028]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
       <rule context="//cac:TaxScheme">
-         <assert id="NONAT-T10-R017" test="cbc:ID" flag="fatal">[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</assert>
+         <assert id="NONAT-T10-R017"
+                 test="cbc:ID"
+                 flag="fatal">[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
       <rule context="cac:TaxScheme/cbc:ID">
          <assert id="NONAT-T10-R014"
@@ -120,11 +128,14 @@
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
          <let name="quiet" value="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
 
-         <assert id="NONAT-T10-R016" test="(cac:Item/cbc:Name)" flag="fatal">[NONAT-T10-R016]-Each invoice line MUST contain the product/service name</assert>
-         <assert id="NONAT-T10-R015" test="cac:Price/cbc:PriceAmount" flag="fatal">[NONAT-T10-R015]-Invoice lines MUST contain the item price</assert>
+         <assert id="NONAT-T10-R016"
+                 test="(cac:Item/cbc:Name)"
+                 flag="fatal">[NONAT-T10-R016]-Each invoice line MUST contain the product/service name</assert>
+         <assert id="NONAT-T10-R015"
+                 test="cac:Price/cbc:PriceAmount"
+                 flag="fatal">[NONAT-T10-R015]-Invoice lines MUST contain the item price</assert>
          <assert id="NONAT-T10-R026"
-                 test="$quiet or
-                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
+                 test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
                  flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level.</assert>
       </rule>
    </pattern>

@@ -30,13 +30,17 @@
                  flag="fatal">[NOGOV-T58-R009]-A catalogue response MUST not contain empty elements.</assert>
       </rule>
       <rule context="cac:ReceiverParty/cbc:EndpointID">
-         <assert id="NOGOV-T58-R007" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T58-R007]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</assert>
+         <assert id="NOGOV-T58-R007"
+                 test="@schemeID = 'NO:ORGNR'"
+                 flag="fatal">[NOGOV-T58-R007]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T58-R008"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T58-R008]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="cac:SenderParty/cbc:EndpointID">
-         <assert id="NOGOV-T58-R005" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T58-R005]-An endpoint identifier scheme for sender MUST have the value 'NO:ORGNR'.</assert>
+         <assert id="NOGOV-T58-R005"
+                 test="@schemeID = 'NO:ORGNR'"
+                 flag="fatal">[NOGOV-T58-R005]-An endpoint identifier scheme for sender MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T58-R006"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T58-R006]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>

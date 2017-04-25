@@ -17,9 +17,8 @@
    </function>
 
    <pattern>
-     <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
-     <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
-
+      <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
+      <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
       <let name="isB2C" value="$isZ01 or //cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
 
       <rule context="//cbc:ProfileID">
@@ -28,7 +27,9 @@
                  flag="fatal">[EHFPROFILE-T10-R001]-An invoice transaction T10 must only be used in Profiles 4, 5 or xy.</assert>
       </rule>
       <rule context="cbc:InvoiceTypeCode">
-        <assert id="NOGOV-T10-R042" test="index-of(tokenize('380 393 384 Z01 Z02', '\s'), .)" flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
+        <assert id="NOGOV-T10-R042"
+                test="index-of(tokenize('380 393 384 Z01 Z02', '\s'), .)"
+                flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:AccountingSupplierParty/cac:Party">
          <assert id="NOGOV-T10-R001"
@@ -39,7 +40,9 @@
          <assert id="NOGOV-T10-R011"
                  test="(cac:PayeeFinancialAccount/cbc:ID != '')"
                  flag="fatal">[NOGOV-T10-R011]-PayeeFinancialAccount MUST be provided according EHF.</assert>
-         <assert id="NOGOV-T10-R012" test="(cbc:PaymentID != '')" flag="warning">[NOGOV-T10-R012]-Payment Identifier (KID number) SHOULD be used according to EHF.</assert>
+         <assert id="NOGOV-T10-R012"
+                 test="(cbc:PaymentID != '')"
+                 flag="warning">[NOGOV-T10-R012]-Payment Identifier (KID number) SHOULD be used according to EHF.</assert>
       </rule>
       <rule context="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']">
          <assert id="NOGOV-T10-R032"
@@ -52,7 +55,9 @@
                  flag="warning">[NOGOV-T10-R033]-IBAN number is not for a norwegain bank account</assert>
       </rule>
       <rule context="//cac:OrderReference">
-         <assert id="NOGOV-T10-R013" test="(child::cbc:ID != '')" flag="warning">[NOGOV-T10-R013]-An association to Order Reference SHOULD be provided according to EHF.</assert>
+         <assert id="NOGOV-T10-R013"
+                 test="(child::cbc:ID != '')"
+                 flag="warning">[NOGOV-T10-R013]-An association to Order Reference SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="//cac:Item">
          <assert id="NOGOV-T10-R002"
@@ -60,7 +65,9 @@
                  flag="warning">[NOGOV-T10-R002]-The sellers ID for the item SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="//cac:InvoiceLine">
-         <assert id="NOGOV-T10-R003" test="(cbc:AccountingCost)" flag="warning">[NOGOV-T10-R003]-The buyer's accounting code applied to the Invoice Line SHOULD be provided according to EHF.</assert>
+         <assert id="NOGOV-T10-R003"
+                 test="(cbc:AccountingCost)"
+                 flag="warning">[NOGOV-T10-R003]-The buyer's accounting code applied to the Invoice Line SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R004"
                  test="$isZ02 or (cac:OrderLineReference/cbc:LineID != '')"
                  flag="warning">[NOGOV-T10-R004]-An association to Order Line Reference SHOULD be provided according to EHF.</assert>
@@ -93,8 +100,12 @@
          <assert id="NOGOV-T10-R005"
                  test="$isZ02 or (cac:ContractDocumentReference/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R005]-ContractDocumentReference SHOULD be provided according to EHF.</assert>
-         <assert id="NOGOV-T10-R016" test="(cbc:InvoiceTypeCode != '')" flag="fatal">[NOGOV-T10-R016]-An EHF invoice MUST have an invoice type code.</assert>
-         <assert id="NOGOV-T10-R019" test="(cac:PaymentMeans)" flag="fatal">[NOGOV-T10-R019]-An invoice MUST have payment means information.</assert>
+         <assert id="NOGOV-T10-R016"
+                 test="(cbc:InvoiceTypeCode != '')"
+                 flag="fatal">[NOGOV-T10-R016]-An EHF invoice MUST have an invoice type code.</assert>
+         <assert id="NOGOV-T10-R019"
+                 test="(cac:PaymentMeans)"
+                 flag="fatal">[NOGOV-T10-R019]-An invoice MUST have payment means information.</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T10-R030"
@@ -107,7 +118,9 @@
                  flag="fatal">[NOGOV-T10-R031]-A valid Norwegian organization number for seller, buyer and payee MUST be nine numbers..</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:PaymentTerms">
-         <assert id="NOGOV-T10-R020" test="(cbc:Note != '')" flag="fatal">[NOGOV-T10-R020]-Note MUST be specified when describing Payment terms.</assert>
+         <assert id="NOGOV-T10-R020"
+                 test="(cbc:Note != '')"
+                 flag="fatal">[NOGOV-T10-R020]-Note MUST be specified when describing Payment terms.</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:TaxRepresentativeParty">
          <assert id="NOGOV-T10-R017"
@@ -118,7 +131,9 @@
                  flag="fatal">[NOGOV-T10-R018]-Company identifier MUST be specified when describing a Tax Representative</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:TaxTotal">
-         <assert id="NOGOV-T10-R021" test="(cac:TaxSubtotal)" flag="fatal">[NOGOV-T10-R021]-An invoice MUST have Tax Subtotal specifications.</assert>
+         <assert id="NOGOV-T10-R021"
+                 test="(cac:TaxSubtotal)"
+                 flag="fatal">[NOGOV-T10-R021]-An invoice MUST have Tax Subtotal specifications.</assert>
          <assert id="NOGOV-T10-R038"
                  test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T10-R038]-Total tax amount cannot have more than 2 decimals</assert>
@@ -156,7 +171,9 @@
          <assert id="NOGOV-T10-R006"
                  test="(cac:PartyIdentification/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R006]-A customer number for AccountingCustomerParty SHOULD be provided according to EHF.</assert>
-         <assert id="NOGOV-T10-R007" test="(cac:Contact/cbc:ID != '')" flag="fatal">[NOGOV-T10-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
+         <assert id="NOGOV-T10-R007"
+                 test="(cac:Contact/cbc:ID != '')"
+                 flag="fatal">[NOGOV-T10-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
          <assert id="NOGOV-T10-R009"
                  test="$isB2C or (cac:PartyLegalEntity/cbc:CompanyID != '')"
                  flag="fatal">[NOGOV-T10-R009]-PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</assert>

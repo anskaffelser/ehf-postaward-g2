@@ -31,8 +31,12 @@
          <assert id="NONAT-T14-R021"
                  test="local-name(/*) = 'CreditNote' and (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))"
                  flag="fatal">[NONAT-T14-R021]-A creditnote transaction T14 in Profile other than xx MUST have an invoice or creditnote reference identifier.</assert>
-         <assert id="NONAT-T14-R015" test="(cbc:UBLVersionID)" flag="fatal">[NONAT-T14-R015]-A Credit Note MUST have a syntax identifier.</assert>
-         <assert id="NONAT-T14-R018" test="cac:TaxTotal" flag="fatal">[NONAT-T14-R018]-A Credit Note MUST contain tax information</assert>
+         <assert id="NONAT-T14-R015"
+                 test="(cbc:UBLVersionID)"
+                 flag="fatal">[NONAT-T14-R015]-A Credit Note MUST have a syntax identifier.</assert>
+         <assert id="NONAT-T14-R018"
+                 test="cac:TaxTotal"
+                 flag="fatal">[NONAT-T14-R018]-A Credit Note MUST contain tax information</assert>
          <assert id="NONAT-T14-R005"
                  test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))"
                  flag="warning">[NONAT-T14-R005]-Issue date of a creditnote should be today or earlier.</assert>
@@ -59,7 +63,9 @@
                  flag="fatal">[NONAT-T14-R004]-A customer postal address in a credit note MUST contain at least, city name, zip code and country code.</assert>
       </rule>
       <rule context="//cac:PartyLegalEntity">
-         <assert id="NONAT-T14-R014" test="(cbc:CompanyID)" flag="fatal">[NONAT-T14-R014]-Company identifier MUST be specified when describing a company legal entity.</assert>
+         <assert id="NONAT-T14-R014"
+                 test="(cbc:CompanyID)"
+                 flag="fatal">[NONAT-T14-R014]-Company identifier MUST be specified when describing a company legal entity.</assert>
       </rule>
       <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID//@schemeID">
          <assert id="NONAT-T14-R007"
@@ -100,23 +106,27 @@
                  flag="fatal">[NONAT-T14-R010]-Credit Note tax schemes MUST be 'VAT'</assert>
       </rule>
       <rule context="//cac:TaxScheme">
-         <assert id="NONAT-T14-R013" test="cbc:ID" flag="fatal">[NONAT-T14-R013]-Every tax scheme MUST be defined through an identifier.</assert>
+         <assert id="NONAT-T14-R013"
+                 test="cbc:ID"
+                 flag="fatal">[NONAT-T14-R013]-Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
       <rule context="//cac:CreditNoteLine">
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
-        <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
+         <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
          <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then cac:Price/cbc:BaseQuantity else 1)"/>
          <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
          <let name="quantity" value="xs:decimal(cbc:CreditedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
          <let name="quiet" value="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
 
-
-         <assert id="NONAT-T14-R012" test="(cac:Item/cbc:Name)" flag="fatal">[NONAT-T14-R012]-Each credit note line MUST contain the product/service name</assert>
-         <assert id="NONAT-T14-R011" test="cac:Price/cbc:PriceAmount" flag="fatal">[NONAT-T14-R011]-Credit Note line MUST contain the item price</assert>
+         <assert id="NONAT-T14-R012"
+                 test="(cac:Item/cbc:Name)"
+                 flag="fatal">[NONAT-T14-R012]-Each credit note line MUST contain the product/service name</assert>
+         <assert id="NONAT-T14-R011"
+                 test="cac:Price/cbc:PriceAmount"
+                 flag="fatal">[NONAT-T14-R011]-Credit Note line MUST contain the item price</assert>
          <assert id="NONAT-T14-R024"
-                 test="$quiet or
-                 xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
+                 test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
                  flag="fatal">[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
       </rule>
    </pattern>

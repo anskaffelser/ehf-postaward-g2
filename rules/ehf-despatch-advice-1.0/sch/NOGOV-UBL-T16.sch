@@ -18,7 +18,9 @@
 
    <pattern>
       <rule context="/ubl:DespatchAdvice">
-         <assert id="NOGOV-T16-R001" test="(cbc:UBLVersionID != '')" flag="fatal">[NOGOV-T16-R001]-A despatch advice MUST have a syntax identifier.</assert>
+         <assert id="NOGOV-T16-R001"
+                 test="(cbc:UBLVersionID != '')"
+                 flag="fatal">[NOGOV-T16-R001]-A despatch advice MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T16-R011"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NOGOV-T16-R011]-A despatch advice MUST not contain empty elements.</assert>
@@ -29,16 +31,24 @@
                  flag="fatal">[NOGOV-T16-R002]-Identification code MUST be specified when describing a country.</assert>
       </rule>
       <rule context="//cac:DespatchSupplierParty">
-         <assert id="NOGOV-T16-R003" test="(cac:Party !='')" flag="fatal">[NOGOV-T16-R003]-If despatch supplier element is present, party must be specified</assert>
+         <assert id="NOGOV-T16-R003"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T16-R003]-If despatch supplier element is present, party must be specified</assert>
       </rule>
       <rule context="//cac:DeliverCustomerParty">
-         <assert id="NOGOV-T16-R004" test="(cac:Party !='')" flag="fatal">[NOGOV-T16-R004]-If deliver customer element is present, party must be specified</assert>
+         <assert id="NOGOV-T16-R004"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T16-R004]-If deliver customer element is present, party must be specified</assert>
       </rule>
       <rule context="//cac:BuyerCustomerParty">
-         <assert id="NOGOV-T16-R005" test="(cac:Party !='')" flag="fatal">[NOGOV-T16-R005]-If buyer customer element is present, party must be specified</assert>
+         <assert id="NOGOV-T16-R005"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T16-R005]-If buyer customer element is present, party must be specified</assert>
       </rule>
       <rule context="//cac:OriginatorCustomerParty">
-         <assert id="NOGOV-T16-R006" test="(cac:Party !='')" flag="fatal">[NOGOV-T16-R006]-If originator customer element is present, party must be specified</assert>
+         <assert id="NOGOV-T16-R006"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T16-R006]-If originator customer element is present, party must be specified</assert>
       </rule>
       <rule context="//cac:CarrierParty/cac:Person">
          <assert id="NOGOV-T16-R007"
@@ -51,7 +61,9 @@
                  flag="fatal">[NOGOV-T16-R008]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
       <rule context="//cac:Party/cbc:EndpointID">
-         <assert id="NOGOV-T16-R009" test="@schemeID = 'NO:ORGNR'" flag="fatal">[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+         <assert id="NOGOV-T16-R009"
+                 test="@schemeID = 'NO:ORGNR'"
+                 flag="fatal">[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
          <assert id="NOGOV-T16-R010"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T16-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>

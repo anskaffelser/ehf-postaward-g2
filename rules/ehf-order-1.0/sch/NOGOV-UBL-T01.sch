@@ -24,13 +24,17 @@
          <assert id="NOGOV-T01-R018"
                  test="cac:SellerSupplierParty/cac:Party"
                  flag="fatal">[NOGOV-T01-R018]-An order MUST contain seller information</assert>
-         <assert id="NOGOV-T01-R012" test="(cbc:UBLVersionID != '')" flag="fatal">[NOGOV-T01-R012]-An order MUST have a syntax identifier.</assert>
+         <assert id="NOGOV-T01-R012"
+                 test="(cbc:UBLVersionID != '')"
+                 flag="fatal">[NOGOV-T01-R012]-An order MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T01-R006"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NOGOV-T01-R006]-An order MUST not contain empty elements.</assert>
       </rule>
       <rule context="//cac:OrderLine/cac:LineItem">
-         <assert id="NOGOV-T01-R005" test="cbc:Quantity" flag="fatal">[NOGOV-T01-R005]-An order line item MUST have a quantity</assert>
+         <assert id="NOGOV-T01-R005"
+                 test="cbc:Quantity"
+                 flag="fatal">[NOGOV-T01-R005]-An order line item MUST have a quantity</assert>
       </rule>
       <rule context="//cac:BuyerCustomerParty">
          <assert id="NOGOV-T01-R001"
@@ -59,16 +63,24 @@
                  flag="fatal">[NOGOV-T01-R009]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
       <rule context="//cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference">
-         <assert id="NOGOV-T01-R013" test="(cbc:URI !='')" flag="fatal">[NOGOV-T01-R013]-URI MUST be specified when describing external reference documents.</assert>
+         <assert id="NOGOV-T01-R013"
+                 test="(cbc:URI !='')"
+                 flag="fatal">[NOGOV-T01-R013]-URI MUST be specified when describing external reference documents.</assert>
       </rule>
       <rule context="//cac:Contract">
-         <assert id="NOGOV-T01-R014" test="(cbc:ID !='')" flag="fatal">[NOGOV-T01-R014]-Contract ID MUST be specified when referencing contracts.</assert>
+         <assert id="NOGOV-T01-R014"
+                 test="(cbc:ID !='')"
+                 flag="fatal">[NOGOV-T01-R014]-Contract ID MUST be specified when referencing contracts.</assert>
       </rule>
       <rule context="//cac:PartyTaxScheme">
-         <assert id="NOGOV-T01-R016" test="(cbc:CompanyID !='')" flag="fatal">[NOGOV-T01-R016]-VAT identifier MUST be specified when VAT information is present</assert>
+         <assert id="NOGOV-T01-R016"
+                 test="(cbc:CompanyID !='')"
+                 flag="fatal">[NOGOV-T01-R016]-VAT identifier MUST be specified when VAT information is present</assert>
       </rule>
       <rule context="//cac:TaxScheme">
-         <assert id="NOGOV-T01-R017" test="cbc:ID" flag="fatal">[NOGOV-T01-R017]-Every tax scheme MUST be defined through an identifier.</assert>
+         <assert id="NOGOV-T01-R017"
+                 test="cbc:ID"
+                 flag="fatal">[NOGOV-T01-R017]-Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
       <rule context="//cac:Country">
          <assert id="NOGOV-T01-R015"
@@ -76,10 +88,14 @@
                  flag="fatal">[NOGOV-T01-R015]-Identification code MUST be specified when describing a country.</assert>
       </rule>
       <rule context="//cac:OriginatorCustomerParty">
-         <assert id="NOGOV-T01-R019" test="(cac:Party !='')" flag="fatal">[NOGOV-T01-R019]-If originator element is present, party must be specified</assert>
+         <assert id="NOGOV-T01-R019"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T01-R019]-If originator element is present, party must be specified</assert>
       </rule>
       <rule context="//cac:AccountingCustomerParty">
-         <assert id="NOGOV-T01-R020" test="(cac:Party !='')" flag="fatal">[NOGOV-T01-R020]-If invoicee element is present, party must be specified</assert>
+         <assert id="NOGOV-T01-R020"
+                 test="(cac:Party !='')"
+                 flag="fatal">[NOGOV-T01-R020]-If invoicee element is present, party must be specified</assert>
       </rule>
       <rule context="@mimeCode">
          <assert id="NOGOV-T01-R021"
@@ -87,7 +103,9 @@
                  flag="warning">[NOGOV-T01-R021]-Attachment is not a recommended MIMEType.</assert>
       </rule>
       <rule context="//cac:ClassifiedTaxCategory">
-         <assert id="NOGOV-T01-R004" test="(cbc:ID !='')" flag="fatal">[NOGOV-T01-R004]-If classified tax category is present, VAT category code must be specified</assert>
+         <assert id="NOGOV-T01-R004"
+                 test="(cbc:ID !='')"
+                 flag="fatal">[NOGOV-T01-R004]-If classified tax category is present, VAT category code must be specified</assert>
       </rule>
       <rule context="//cac:CommodityClassification">
          <assert id="NOGOV-T01-R003"
