@@ -5,8 +5,12 @@
 |===
 | Sak | Beskrivelse | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/207[#207]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/207[#207]
 | Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
+| Oppdatere lenker i 3.6.
+| Guide
 
 |===

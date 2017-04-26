@@ -2,8 +2,12 @@
 |===
 | Issue | Description | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/207[#207]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/207[#207]
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
+| Updating links in 3.6.
+| Guide
 
 |===

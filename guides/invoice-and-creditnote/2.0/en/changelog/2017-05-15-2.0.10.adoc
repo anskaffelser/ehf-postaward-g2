@@ -2,19 +2,19 @@
 |===
 | Issue | Description | Type
 
-| link:https://github.com/difi/vefa-validator-conf/issues/207[#207]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/207[#207]
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/209[#209]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/209[#209]
 | Updating NONAT-T10-R026 and NONAT-T14-R024 to accept slack of 0.02. Removing NONAT-T10-R027 and NONAT-T14-R025.
 | Validator
 
-| link:https://github.com/difi/vefa-validator-conf/issues/208[#208]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/208[#208]
 | Adding information on how to handle non-recommended attachment formats.
 | Guide
 
-| link:https://github.com/difi/vefa-validator-conf/issues/206[#206]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Updating links in 3.6 and 5.7.
 | Guide
 
