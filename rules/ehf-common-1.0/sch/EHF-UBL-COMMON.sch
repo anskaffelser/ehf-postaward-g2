@@ -28,10 +28,20 @@
                 test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                 flag="fatal">[EHF-COMMON-R001]-Document MUST not contain empty elements.</assert>
      </rule>
+     <rule context="/*">
+        <assert id="EHF-COMMON-R002"
+                test="cbc:UBLVersionID != ''"
+                flag="fatal">[EHF-COMMON-R002]-Document MUST have a syntax identifier.</assert>
+     </rule>
      <rule context="cbc:EndpointID[@schemeID = 'NO:ORGNR']">
         <assert id="EHF-COMMON-R010"
                 test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                 flag="fatal">[EHF-COMMON-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+     </rule>
+     <rule context="cbc:EndpointID">
+        <assert id="EHF-COMMON-R014"
+                test="false()"
+                flag="fatal">[EHF-COMMON-R014]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
      </rule>
      <rule context="cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
         <assert id="EHF-COMMON-R011"
