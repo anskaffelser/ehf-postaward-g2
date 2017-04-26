@@ -17,4 +17,8 @@
 | Legge til informasjon om hvordan man skal håndtere vedlegg som ikke er iht. listen over anbefalte formater.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/206[#206]
+| Oppdatere lenker i 3.6 og 5.7.
+| Guide
+
 |===

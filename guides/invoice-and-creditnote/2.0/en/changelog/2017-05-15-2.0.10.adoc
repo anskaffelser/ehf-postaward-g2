@@ -14,4 +14,8 @@
 | Adding information on how to handle non-recommended attachment formats.
 | Guide
 
+| link:https://github.com/difi/vefa-validator-conf/issues/206[#206]
+| Updating links in 3.6 and 5.7.
+| Guide
+
 |===
