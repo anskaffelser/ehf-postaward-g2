@@ -138,5 +138,15 @@
                  test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
                  flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level.</assert>
       </rule>
+      <rule context="cac:TaxSubtotal">
+         <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>
+         <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:Invoice/cac:InvoiceLine[cac:Item/cac:ClassifiedTaxCategory/cbc:ID/normalize-space(text()) = $category]/cbc:LineExtensionAmount))"/>
+         <let name="sumAllowance" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'false']/cbc:Amount))"/>
+         <let name="sumCharge" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'true']/cbc:Amount))"/>
+
+         <assert id="NONAT-T10-R029"
+                 test="xs:decimal(cbc:TaxableAmount) = u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"
+                 flag="warning">Taxable amount in a tax subtotal MUST be the sum of line extension amount of all invoice lines and allowances and charges on document level with the same tax category.</assert>
+      </rule>
    </pattern>
 </schema>
