@@ -10,7 +10,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
-| Beskrivelse av anbrekksvarer
+| Beskrivelse av anbrekksvarer.
 | Guide
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]

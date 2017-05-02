@@ -10,7 +10,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
-| Description of package level codes
+| Description of package level codes.
 | Guide
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]

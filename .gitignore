@@ -2,6 +2,7 @@
 *.iml
 *.jar
 target
+/target-core
 *.html
 *.pdf
 *.epub
