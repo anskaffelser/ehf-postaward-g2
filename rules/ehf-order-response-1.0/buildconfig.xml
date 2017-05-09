@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T76.sch" path="xsl/NOGOV-UBL-T76.xsl" infoUrl="/ehf/rule/order-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T76.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T76.xsl" />
+        <rule identifier="OP-T76-R008" action="suppress" />
     </configuration>
 
     <configuration>

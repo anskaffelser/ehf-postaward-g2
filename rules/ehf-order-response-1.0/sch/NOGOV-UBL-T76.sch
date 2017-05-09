@@ -48,10 +48,15 @@
                  test="cac:Party/cbc:EndpointID"
                  flag="warning">[NOGOV-T76-R006]-A seller should have an EndpointID.</assert>
       </rule>
-      <rule context="//cac:TaxScheme">
+      <rule context="cac:TaxScheme">
          <assert id="NOGOV-T76-R008"
                  test="cbc:ID"
                  flag="fatal">[NOGOV-T76-R008]-Every tax scheme MUST be defined through an identifier.</assert>
+      </rule>
+      <rule context="cac:TaxCategory/cbc:ID">
+         <assert id="NOGOV-T76-R011"
+                 test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
+                 flag="fatal">[NOGOV-T76-R011]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
       <rule context="//cac:Delivery">
          <assert id="NOGOV-T76-R004"

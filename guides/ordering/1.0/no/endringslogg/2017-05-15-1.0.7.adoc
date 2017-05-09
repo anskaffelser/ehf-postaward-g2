@@ -10,7 +10,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/196[#196]
-| Erstatter OP-T01-R008 med link:{ruleurl-ord}NOGOV-T01-R022/[NOGOV-T01-R022] (**F**).
+| Erstatte OP-T01-R008 med link:{ruleurl-ord}NOGOV-T01-R022/[NOGOV-T01-R022] (**F**). Erstatte OP-T76-R008 med link:{ruleurl-res}NOGOV-T76-R011/[NOGOV-T76-R011] (**F**).
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
