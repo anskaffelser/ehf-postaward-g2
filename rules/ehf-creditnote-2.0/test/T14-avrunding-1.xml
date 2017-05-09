@@ -5,7 +5,7 @@
 
                 Errors:
                 None
-                
+
                 Warnings:
                 None
 -->
@@ -123,10 +123,10 @@
     	</cac:TaxCategory>
   </cac:AllowanceCharge>
   <cac:TaxTotal>
-  	<cbc:TaxAmount currencyID="NOK">3771.59</cbc:TaxAmount>
+  	<cbc:TaxAmount currencyID="NOK">3813.89</cbc:TaxAmount>
   	<cac:TaxSubtotal>
- 		 <cbc:TaxableAmount currencyID="NOK">10.58</cbc:TaxableAmount>
- 		 <cbc:TaxAmount currencyID="NOK">2.65</cbc:TaxAmount>
+ 		 <cbc:TaxableAmount currencyID="NOK">395.17</cbc:TaxableAmount>
+ 		 <cbc:TaxAmount currencyID="NOK">98.79</cbc:TaxAmount>
   		<cac:TaxCategory>
 		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
 				<cbc:Percent>25</cbc:Percent>
@@ -136,8 +136,8 @@
       		</cac:TaxCategory>
     	</cac:TaxSubtotal>
     	<cac:TaxSubtotal>
- 		 <cbc:TaxableAmount currencyID="NOK">26921</cbc:TaxableAmount>
- 		 <cbc:TaxAmount currencyID="NOK">3768.94</cbc:TaxAmount>
+ 		 <cbc:TaxableAmount currencyID="NOK">26536.41</cbc:TaxableAmount>
+ 		 <cbc:TaxAmount currencyID="NOK">3715.10</cbc:TaxAmount>
   		<cac:TaxCategory>
 		<cbc:ID schemeID="UNCL5305">H</cbc:ID>
 				<cbc:Percent>14</cbc:Percent>
@@ -150,14 +150,14 @@
   <cac:LegalMonetaryTotal>
   	<cbc:LineExtensionAmount currencyID="NOK">26921.00</cbc:LineExtensionAmount>
   	<cbc:TaxExclusiveAmount currencyID="NOK">26931.58</cbc:TaxExclusiveAmount>
-  	<cbc:TaxInclusiveAmount currencyID="NOK">30703.17</cbc:TaxInclusiveAmount>
+  	<cbc:TaxInclusiveAmount currencyID="NOK">30745.47</cbc:TaxInclusiveAmount>
   	<cbc:AllowanceTotalAmount currencyID="NOK">89.77</cbc:AllowanceTotalAmount>
   	<cbc:ChargeTotalAmount currencyID="NOK">100.35</cbc:ChargeTotalAmount>
 	<cbc:PrepaidAmount currencyID="NOK">0.00</cbc:PrepaidAmount>
   	<cbc:PayableRoundingAmount currencyID="NOK">0.00</cbc:PayableRoundingAmount>
-  	<cbc:PayableAmount currencyID="NOK">30703.17</cbc:PayableAmount>
+  	<cbc:PayableAmount currencyID="NOK">30745.47</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
-<cac:CreditNoteLine> 
+<cac:CreditNoteLine>
 <cbc:ID>1</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">1.00</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">128.2</cbc:LineExtensionAmount>
@@ -180,7 +180,7 @@
  <cbc:BaseQuantity>100</cbc:BaseQuantity>
  </cac:Price>
  </cac:CreditNoteLine>
-<cac:CreditNoteLine> 
+<cac:CreditNoteLine>
 <cbc:ID>2</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">2.00</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">256.39</cbc:LineExtensionAmount>
@@ -202,7 +202,7 @@
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
 </cac:CreditNoteLine>
-<cac:CreditNoteLine> 
+<cac:CreditNoteLine>
 <cbc:ID>3</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">3.00</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">384.59</cbc:LineExtensionAmount>
@@ -223,7 +223,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine>  
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>4</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">4.00</cbc:CreditedQuantity>
@@ -245,7 +245,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine>  
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>5</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">5.00</cbc:CreditedQuantity>
@@ -267,7 +267,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine>  
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>6</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">6</cbc:CreditedQuantity>
@@ -289,8 +289,8 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
-<cac:CreditNoteLine> 
+</cac:CreditNoteLine>
+<cac:CreditNoteLine>
 <cbc:ID>7</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">7</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">897.37</cbc:LineExtensionAmount>
@@ -311,7 +311,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine>  
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>8</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">8</cbc:CreditedQuantity>
@@ -334,7 +334,7 @@
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
 </cac:CreditNoteLine>
-<cac:CreditNoteLine>  
+<cac:CreditNoteLine>
 <cbc:ID>9</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">9</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">1153.76</cbc:LineExtensionAmount>
@@ -355,7 +355,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine>  
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>10</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">10</cbc:CreditedQuantity>
@@ -377,7 +377,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>11</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">11</cbc:CreditedQuantity>
@@ -399,7 +399,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>12</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">12</cbc:CreditedQuantity>
@@ -421,7 +421,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>13</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">13</cbc:CreditedQuantity>
@@ -443,7 +443,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>14</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">14</cbc:CreditedQuantity>
@@ -465,7 +465,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>15</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">15</cbc:CreditedQuantity>
@@ -487,7 +487,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>16</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">16</cbc:CreditedQuantity>
@@ -509,7 +509,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>17</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">17</cbc:CreditedQuantity>
@@ -531,7 +531,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>18</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">18</cbc:CreditedQuantity>
@@ -553,7 +553,7 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
 <cac:CreditNoteLine>
 <cbc:ID>19</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR" unitCodeListID="UNECERec20">19</cbc:CreditedQuantity>
@@ -597,6 +597,5 @@
  <cac:Price>
  <cbc:PriceAmount currencyID="NOK">128.195</cbc:PriceAmount>
  </cac:Price>
-</cac:CreditNoteLine> 
+</cac:CreditNoteLine>
  </CreditNote>
-

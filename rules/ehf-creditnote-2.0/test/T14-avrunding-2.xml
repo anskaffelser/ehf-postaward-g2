@@ -14,6 +14,9 @@
 				EUGEN-T14-R052 x 2
 				NOGOV-T14-R041
 
+				Warnings:
+				NONAT-T14-R029 x 2
+
 -->
 <CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
