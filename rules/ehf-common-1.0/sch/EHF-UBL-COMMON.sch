@@ -60,7 +60,7 @@
      </rule>
      <rule context="cac:*[ends-with(name(), 'TaxCategory')]/cbc:ID">
         <assert id="EHF-COMMON-R020"
-                test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
+                test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
                 flag="fatal">[EHF-COMMON-R020]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
      </rule>
      <rule context="cbc:*[ends-with(name(), 'Date')]">
