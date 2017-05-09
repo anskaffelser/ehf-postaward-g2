@@ -11,6 +11,7 @@
         <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" infoUrl="/ehf/rule/catalogue-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T19.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
+        <rule identifier="CL-T19-R004" action="suppress" />
     </configuration>
 
     <configuration>

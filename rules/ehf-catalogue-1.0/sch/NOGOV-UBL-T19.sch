@@ -73,6 +73,11 @@
                  test="cbc:ID"
                  flag="fatal">[NOGOV-T19-R011]-Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
+      <rule context="cac:TaxCategory/cbc:ID">
+         <assert id="NOGOV-T19-R019"
+                 test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
+                 flag="fatal">[NOGOV-T19-R019]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+      </rule>
       <rule context="cac:CatalogueLine">
          <assert id="NOGOV-T19-R003"
                  test="cbc:OrderableIndicator"

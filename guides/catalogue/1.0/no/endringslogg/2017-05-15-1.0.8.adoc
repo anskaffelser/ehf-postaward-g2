@@ -9,6 +9,10 @@
 | Oppdaterte validatorfiler for PEPPOL BIS fra OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/196[#196]
+| Erstatte CL-T19-R004 med link:{ruleurl-cat}NOGOV-T19-R019/[NOGOV-T19-R019] (**F**).
+| Validator
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Oppdatere lenker i 3.6.
 | Guide
