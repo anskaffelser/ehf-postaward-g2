@@ -1,3 +1,6 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
@@ -7,7 +10,11 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/209[#209]
-| Updating NONAT-T10-R026 and NONAT-T14-R024 to accept slack of 0.02. Removing NONAT-T10-R027 and NONAT-T14-R025.
+| Updating link:{ruleurl-inv}NONAT-T10-R026/[NONAT-T10-R026] (**F**) and link:{ruleurl-cre}NONAT-T14-R024/[NONAT-T14-R024] (**F**) to accept slack of 0.02. Removing NONAT-T10-R027 and NONAT-T14-R025.
+| Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/210[#210]
+| Adding rules link:{ruleurl-inv}NONAT-T10-R029/[NONAT-T10-R029] (**W**) og link:{ruleurl-cre}NONAT-T14-R029/[NONAT-T14-R029] (**W**) for validation of TaxableAmount in TaxSubtotal.
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/208[#208]
@@ -19,3 +26,5 @@
 | Guide
 
 |===
+
+WARNING: Validation rules expected to be updated to trigger error in next release: NONAT-T10-R029, NONAT-T14-R029.

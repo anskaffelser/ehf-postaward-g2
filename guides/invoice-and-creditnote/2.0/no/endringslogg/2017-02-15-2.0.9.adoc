@@ -1,8 +1,7 @@
-[cols="1,9,2", options="header"]
-
 :ruleurl-inv: /ehf/rule/invoice-2.0/
 :ruleurl-cre: /ehf/rule/creditnote-2.0/
 
+[cols="1,9,2", options="header"]
 |===
 | Sak | Beskrivelse | Type
 
