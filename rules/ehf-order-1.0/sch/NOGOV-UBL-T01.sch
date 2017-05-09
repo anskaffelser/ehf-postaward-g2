@@ -74,15 +74,20 @@
                  test="(cbc:ID !='')"
                  flag="fatal">[NOGOV-T01-R014]-Contract ID MUST be specified when referencing contracts.</assert>
       </rule>
-      <rule context="//cac:PartyTaxScheme">
+      <rule context="cac:PartyTaxScheme">
          <assert id="NOGOV-T01-R016"
                  test="(cbc:CompanyID !='')"
                  flag="fatal">[NOGOV-T01-R016]-VAT identifier MUST be specified when VAT information is present</assert>
       </rule>
-      <rule context="//cac:TaxScheme">
+      <rule context="cac:TaxScheme">
          <assert id="NOGOV-T01-R017"
                  test="cbc:ID"
                  flag="fatal">[NOGOV-T01-R017]-Every tax scheme MUST be defined through an identifier.</assert>
+      </rule>
+      <rule context="cac:TaxCategory/cbc:ID">
+         <assert id="NOGOV-T01-R022"
+                 test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
+                 flag="fatal">[NOGOV-T01-R022]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
       <rule context="//cac:Country">
          <assert id="NOGOV-T01-R015"

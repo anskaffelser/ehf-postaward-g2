@@ -9,6 +9,10 @@
 | Updated validation artifacts for PEPPOL BIS from OpenPEPPOL.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/196[#196]
+| Supressing OP-T01-R008 in favour of link:{ruleurl-ord}NOGOV-T01-R022/[NOGOV-T01-R022] (**F**).
+| Validator
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/203[#203]
 | Description of package level codes.
 | Guide
