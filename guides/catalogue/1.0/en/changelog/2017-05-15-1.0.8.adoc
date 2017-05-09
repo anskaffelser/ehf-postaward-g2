@@ -10,8 +10,12 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/196[#196]
-| Supressing CL-T19-R004 in favour of link:{ruleurl-ord}NOGOV-T01-R022/[NOGOV-T01-R022] (**F**).
+| Supressing CL-T19-R004 in favour of link:{ruleurl-cat}NOGOV-T19-R019/[NOGOV-T19-R019] (**F**).
 | Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/202[#202]
+| Adding section 6.12.1 about use of code list in attachments, and adding link:{ruleurl-cat}NOGOV-T19-R020/[NOGOV-T19-R020] (**F**) to validate use of the code list.
+| Validator and guide
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Updating links in 3.6.

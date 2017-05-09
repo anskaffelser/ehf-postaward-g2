@@ -21,3 +21,28 @@ Siden vedlegg vil kunne øke filstørrelsen på en katalogmelding vesentlig er d
   ...
 </cac:Item>
 ----
+
+
+== Bruk av kodeliste for vedlegg
+
+For økt kvalitet i bestillingssystemer er det nødvendig med angivelse av hvilken type innhold som er lagt med. For å gjøre dette anbefaler vi å benytte GS1 sin kodeliste link:http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:ReferencedFileTypeCode&release=5[ReferencedFileTypeCode version 5].
+
+[source]
+.Eksempel på bruk av ReferencedFileTypeCode på kataloglinje.
+----
+<cac:Item>
+  ...
+  <cac:ItemSpecificationDocumentReference>
+    <cbc:ID>LK8788</cbc:ID>
+    <cbc:DocumentTypeCode listID="urn:gs1:gdd:cl:ReferencedFileTypeCode">PRODUCT_IMAGE</cbc:DocumentTypeCode> <1>
+    <cbc:DocumentDescription>Product image</cbc:DocumentDescription>
+    <cac:Attachment>
+      <cac:ExternalReference>
+        <cbc:URI>http://img.trioving.net/Låskasser/LK8788_PRD_FPM_000.JPG</cbc:URI>
+      </cac:ExternalReference>
+    </cac:Attachment>
+  </cac:ItemSpecificationDocumentReference>
+  ...
+</cac:Item>
+----
+<1> Angivelse av type vedlegg.

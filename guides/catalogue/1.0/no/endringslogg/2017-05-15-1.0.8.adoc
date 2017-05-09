@@ -13,6 +13,11 @@
 | Erstatte CL-T19-R004 med link:{ruleurl-cat}NOGOV-T19-R019/[NOGOV-T19-R019] (**F**).
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/202[#202]
+| Legge til seksjon 6.12.1 om bruk av kodeliste for vedlegg, samt legge til regel link:{ruleurl-cat}NOGOV-T19-R020/[NOGOV-T19-R020] (**F**) for validering.
+| Validator og guide
+
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Oppdatere lenker i 3.6.
 | Guide

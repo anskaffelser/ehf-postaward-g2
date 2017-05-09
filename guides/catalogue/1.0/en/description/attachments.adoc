@@ -19,3 +19,28 @@ Attachments can be sent on line level in the Catalogue. This can be images or ad
   ...
 </cac:Item>
 ----
+
+
+== Use of code list for attachements
+
+In ordering system may additional information about attachements needed to increase quality. We recommend using the GS1 code list  link:http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:ReferencedFileTypeCode&release=5[ReferencedFileTypeCode version 5] for such use..
+
+[source]
+.Example of using ReferencedFileTypeCode on catalogue line.
+----
+<cac:Item>
+  ...
+  <cac:ItemSpecificationDocumentReference>
+    <cbc:ID>LK8788</cbc:ID>
+    <cbc:DocumentTypeCode listID="urn:gs1:gdd:cl:ReferencedFileTypeCode">PRODUCT_IMAGE</cbc:DocumentTypeCode> <1>
+    <cbc:DocumentDescription>Product image</cbc:DocumentDescription>
+    <cac:Attachment>
+      <cac:ExternalReference>
+        <cbc:URI>http://img.trioving.net/Låskasser/LK8788_PRD_FPM_000.JPG</cbc:URI>
+      </cac:ExternalReference>
+    </cac:Attachment>
+  </cac:ItemSpecificationDocumentReference>
+  ...
+</cac:Item>
+----
+<1> Code defining type of content.
