@@ -6,8 +6,21 @@ http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:Sterilis
 This is indicated in `cac:AdditionalItemProperty` in the EHF Catalogue, with value "STERILE" in element `cbc:Name`, and the correct code in `cbc:Value`
 To indicate that a product is not sterile, use the code "NO", see example below.
 
+
+If `cbc:ValueQualifier` contains the value gs1:SterilisationTypeCode, the code will be validated against the legal values in the codelist, and return an error if an invalid code is used. If element `cbc:Name`= STERILE but ´cbc:ValueQualifier` is not present, or does not contain the value gs1:SterilisationTypeCode, a warning will be raised if code is invalid according to the codelist.
+
 [source]
-.Example of sterile products
+.Example of sterile products with explicit codelist (recommended)
+----
+<cac:AdditionalItemProperty>
+ <cbc:Name>STERILE</cbc:Name>
+ <cbc:Value>ETHANOL</cbc:Value>
+ <cbc:ValueQualifier>gs1:SterilisationTypeCode</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Example of sterile products without explicit codelist
 ----
 <cac:AdditionalItemProperty>
   <cbc:Name>STERILE</cbc:Name>

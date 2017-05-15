@@ -6,8 +6,20 @@ http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:Sterilis
 Informasjonen angis i elementet `cac:AdditionalItemProperty` i EHF Katalog, der `cbc:Name` settes til "STERILE", og selve koden i `cbc:Value`.
 For å angi at et produkt ikke er sterilt, benyttes koden "NO", se eksempel under.
 
+ Dersom `cbc:ValueQualifier` innehar verdien gs1:SterilisationTypeCode, valideres koden mot denne kodelisten, og det gis en feilmelding ved bruk av ugyldig kode. Benyttes `cbc:Name`= STERILE uten ´cbc:ValueQualifier`  medfører det advarsel dersom koden ikke er gyldig i henhold til kodelisten.
+
 [source]
-.Eksempel på sterilt produkt
+.Eksempel på sterilt produkt med eksplisitt angivelse av kodeliste (anbefalt).
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>STERILE</cbc:Name>
+  <cbc:Value>ETHANOL</cbc:Value>
+  <cbc:ValueQualifier>gs1:SterilisationTypeCode</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Eksempel på sterilt produkt uten angivelse av kodeliste
 ----
 <cac:AdditionalItemProperty>
   <cbc:Name>STERILE</cbc:Name>
