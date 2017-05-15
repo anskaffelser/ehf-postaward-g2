@@ -22,7 +22,7 @@
 | Guide
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
-| Oppdatere lenker i 3.6 og 5.7.
+| Oppdatere lenker i 3.6, 5.7 og kodelister.
 | Guide
 
 |===

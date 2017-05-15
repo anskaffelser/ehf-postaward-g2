@@ -1,6 +1,7 @@
 [appendix]
-= Codelists [[appendix-codelists]]
+= Code Lists [[appendix-codelists]]
 
-To ensure consistency and quality of the code lists used in EHF, a decision has been made to move these to a website. This site contains all code lists used in all the different EHF guides, and you find it here:
+Current code lists for EHF:
 
-link:http://www.anskaffelser.no/temaer-elektronisk-handel/ehf-formater-innhold/kodelister[]
+* link:https://vefa.difi.no/ehf/codelist/[Overview of code lists]
+* link:ftp://ftp.cen.eu/public/CWAs/BII2/CWA16558/CWA16558-Annex-G-BII-CodeLists-V2_0_4.pdf[BII2 code lists]

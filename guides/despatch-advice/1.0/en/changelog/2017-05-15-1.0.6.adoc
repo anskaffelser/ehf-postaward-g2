@@ -7,7 +7,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
-| Updating links in 3.6.
+| Updating links in 3.6 and code lists.
 | Guide
 
 |===
