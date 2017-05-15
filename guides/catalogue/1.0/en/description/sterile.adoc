@@ -1,0 +1,25 @@
+= Sterile products
+
+To indicate if a product is sterile, we recommend the use of the code list SterilisationTypeCode:
+http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:SterilisationTypeCode&release=2
+
+This is indicated in `cac:AdditionalItemProperty` in the EHF Catalogue, with value "STERILE" in element `cbc:Name`, and the correct code in `cbc:Value`
+To indicate that a product is not sterile, use the code "NO", see example below.
+
+[source]
+.Example of sterile products
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>STERILE</cbc:Name>
+  <cbc:Value>ETHANOL</cbc:Value>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Example of not sterile products
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>STERILE</cbc:Name>
+  <cbc:Value>NO</cbc:Value>
+</cac:AdditionalItemProperty>
+----

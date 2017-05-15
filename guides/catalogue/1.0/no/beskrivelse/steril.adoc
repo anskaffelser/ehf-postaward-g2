@@ -1,0 +1,25 @@
+= Sterile produkter
+
+For å angi at ett produkt er sterilt, og hvordan det er sterilisert, anbefales at det kodelisten SterilisationTypeCode benyttes:
+http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:SterilisationTypeCode&release=2
+
+Informasjonen angis i elementet `cac:AdditionalItemProperty` i EHF Katalog, der `cbc:Name` settes til "STERILE", og selve koden i `cbc:Value`.
+For å angi at et produkt ikke er sterilt, benyttes koden "NO", se eksempel under.
+
+[source]
+.Eksempel på sterilt produkt
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>STERILE</cbc:Name>
+  <cbc:Value>ETHANOL</cbc:Value>
+</cac:AdditionalItemProperty>
+----
+
+[source]
+.Eksempel på ikke-sterilt produkt
+----
+<cac:AdditionalItemProperty>
+  <cbc:Name>STERILE</cbc:Name>
+  <cbc:Value>NO</cbc:Value>
+</cac:AdditionalItemProperty>
+----
