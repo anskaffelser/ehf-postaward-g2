@@ -17,6 +17,9 @@
 | Legge til seksjon 6.12.1 om bruk av kodeliste for vedlegg, samt legge til regel link:{ruleurl-cat}NOGOV-T19-R020/[NOGOV-T19-R020] (**F**) for validering.
 | Validator og guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/213[#213]
+| Legge til seksjon 6.20 angående sterile produkter. Ny regler link:{ruleurl-cat}NOGOV-T19-R021/[NOGOV-T19-R021] (**W**), link:{ruleurl-cat}NOGOV-T19-R022/[NOGOV-T19-R022] (**W**) og link:{ruleurl-cat}NOGOV-T19-R023/[NOGOV-T19-R023] (**F**)
+| Validator og guide
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Oppdatere lenker i 3.6 og kodelister.

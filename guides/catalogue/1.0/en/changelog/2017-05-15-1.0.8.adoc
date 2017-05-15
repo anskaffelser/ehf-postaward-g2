@@ -17,6 +17,10 @@
 | Adding section 6.12.1 about use of code list in attachments, and adding link:{ruleurl-cat}NOGOV-T19-R020/[NOGOV-T19-R020] (**F**) to validate use of the code list.
 | Validator and guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/213[#213]
+| Adding section 6.20 regarding sterile products. Adding rules link:{ruleurl-cat}NOGOV-T19-R021/[NOGOV-T19-R021] (**W**), link:{ruleurl-cat}NOGOV-T19-R022/[NOGOV-T19-R022] (**W**) and link:{ruleurl-cat}NOGOV-T19-R023/[NOGOV-T19-R023] (**F**)
+| Validator and guide
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/206[#206]
 | Updating links in 3.6 and code lists.
 | Guide
