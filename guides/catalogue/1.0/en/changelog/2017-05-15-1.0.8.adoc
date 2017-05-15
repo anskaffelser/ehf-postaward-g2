@@ -25,4 +25,8 @@
 | Updating links in 3.6 and code lists.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/214[#214]
+| Removing message table and structure table in favour of format structure.
+| Guide
+
 |===

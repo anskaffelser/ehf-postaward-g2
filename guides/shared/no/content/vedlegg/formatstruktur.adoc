@@ -1,0 +1,6 @@
+[appendix]
+= Formatstruktur [[vedlegg-formatstruktur]]
+
+Vedlagt er formatstruktur for aktuelle meldinger.
+
+.Formatstuktur

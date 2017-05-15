@@ -1,0 +1,6 @@
+[appendix]
+= Format structure [[appendix-format-strucstructure-table]]
+
+Attached is format structure providing a structured overview of the document types.
+
+.Format Structures

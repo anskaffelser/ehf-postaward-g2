@@ -3,17 +3,10 @@
 :leveloffset: +1
 
 
-// Structure Table
-include::../{shared-dir}/content/appendix/structure-table.adoc[]
-* link:files/ehf_catalogue_structure_table.pdf[Structure Table for Catalogue]
-* link:files/ehf_catalogue_response_structure_table.pdf[Structure Table for Catalogue Response]
-
-
-// Message Table
-include::../{shared-dir}/content/appendix/message-table.adoc[]
-* link:files/ehf_catalogue_message_table.pdf[Message Table for Catalogue]
-* link:files/ehf_catalogue_response_message_table.pdf[Message Table for Catalogue Response]
-
+// Format Structure
+include::../{shared-dir}/content/appendix/format-structure.adoc[]
+* link:/ehf/gefeg/catalogue/1.0/[Format Structure for Catalogue]
+* link:/ehf/gefeg/catalogueresponse/1.0/[Format Structure for Catalogue Response]
 
 // Codelist
 include::../{shared-dir}/content/appendix/codelist.adoc[]

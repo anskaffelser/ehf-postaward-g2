@@ -25,4 +25,8 @@
 | Oppdatere lenker i 3.6 og kodelister.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/214[#214]
+| Fjerne meldingstabll og strukturtabell til fordel for formatstruktur.
+| Guide
+
 |===
