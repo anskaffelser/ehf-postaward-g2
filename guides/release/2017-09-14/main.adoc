@@ -32,6 +32,11 @@ include::../../ordering/1.0/no/endringslogg/{release}-1.0.8.adoc[]
 include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.7.adoc[]
 
 
+=== EHF Common 1.0.0 [[no-common]]
+
+Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på engelsk].
+
+
 == English [[english]]
 
 
@@ -53,5 +58,11 @@ include::../../ordering/1.0/en/changelog/{release}-1.0.8.adoc[]
 === EHF Despatch Advice 1.0.7 [[despatch-advice]]
 
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.7.adoc[]
+
+
+=== EHF Common 1.0.0 [[common]]
+
+include::../../common/1.0/en/changelog/{release}-1.0.0.adoc[]
+
 
 include::{shared-dir}/no/message/piwik.adoc[]

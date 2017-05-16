@@ -1,0 +1,9 @@
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+// Schematron
+include::../{shared-dir}/content/appendix/schematron.adoc[]
+
+
+:leveloffset: -1
