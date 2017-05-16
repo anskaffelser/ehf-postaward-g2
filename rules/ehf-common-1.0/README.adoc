@@ -1,0 +1,3 @@
+= EHF Common 1.0
+
+EHF Common is a set of validation rules common to all EHF formats.
