@@ -12,12 +12,12 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
-			<a mimeCode="application/pdf" />
-			<a mimeCode="image/gif" />
-			<a mimeCode="image/tiff" />
-			<a mimeCode="image/jpeg" />
-			<a mimeCode="image/png" />
-			<a mimeCode="text/plain" />
+			<cbc:a mimeCode="application/pdf" />
+			<cbc:a mimeCode="image/gif" />
+			<cbc:a mimeCode="image/tiff" />
+			<cbc:a mimeCode="image/jpeg" />
+			<cbc:a mimeCode="image/png" />
+			<cbc:a mimeCode="text/plain" />
 
 		</CreditNote>
 	</test>
@@ -30,8 +30,8 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
-			<a mimeCode="application/json" />
-			<a mimeCode="text/json" />
+			<cbc:a mimeCode="application/json" />
+			<cbc:a mimeCode="text/json" />
 
 		</CreditNote>
 	</test>

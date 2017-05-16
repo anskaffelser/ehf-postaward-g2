@@ -46,7 +46,7 @@
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">[NONAT-T14-R016]-UBL version  must be 2.1</assert>
       </rule>
-      <rule context="//cac:AccountingSupplierParty/cac:Party">
+      <rule context="cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T14-R001"
                  test="(cac:PartyLegalEntity/cbc:CompanyID != '') and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"
                  flag="fatal">[NONAT-T14-R001]-PartyLegalEntity for AccountingSupplierParty MUST be provided according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 2"</assert>
@@ -57,27 +57,27 @@
                  test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode) and (//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO') or not((//cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO'))"
                  flag="fatal">[NONAT-T14-R003]-A supplier postal address in a credit note MUST contain at least city name, zip code and country code.</assert>
       </rule>
-      <rule context="//cac:AccountingCustomerParty/cac:Party">
+      <rule context="cac:AccountingCustomerParty/cac:Party">
          <assert id="NONAT-T14-R004"
                  test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode and (cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')) or not(cac:PostalAddress/cac:Country/cbc:IdentificationCode = 'NO')"
                  flag="fatal">[NONAT-T14-R004]-A customer postal address in a credit note MUST contain at least, city name, zip code and country code.</assert>
       </rule>
-      <rule context="//cac:PartyLegalEntity">
+      <rule context="cac:PartyLegalEntity">
          <assert id="NONAT-T14-R014"
                  test="(cbc:CompanyID)"
                  flag="fatal">[NONAT-T14-R014]-Company identifier MUST be specified when describing a company legal entity.</assert>
       </rule>
-      <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID//@schemeID">
+      <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID[@schemeID]">
          <assert id="NONAT-T14-R007"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
                  flag="warning">[NONAT-T14-R007]-Location identifiers SHOULD be GLN or GSRN</assert>
       </rule>
-      <rule context="cac:PayeeFinancialAccount/cbc:ID//@schemeID">
+      <rule context="cac:PayeeFinancialAccount/cbc:ID[@schemeID]">
          <assert id="NONAT-T14-R022"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
                  flag="fatal">[NONAT-T14-R022]-A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</assert>
       </rule>
-      <rule context="//cac:LegalMonetaryTotal">
+      <rule context="cac:LegalMonetaryTotal">
          <assert id="NONAT-T14-R020"
                  test="number(cbc:TaxInclusiveAmount) &gt;= 0"
                  flag="warning">[NONAT-T14-R020]-Tax inclusive amount in a credit note SHOULD NOT be negative</assert>
@@ -85,7 +85,7 @@
                  test="number(cbc:PayableAmount) &gt;= 0"
                  flag="warning">[NONAT-T14-R019]-Total payable amount in a credit note SHOULD NOT be negative</assert>
       </rule>
-      <rule context="//cac:AllowanceCharge">
+      <rule context="cac:AllowanceCharge">
          <assert id="NONAT-T14-R008"
                  test="(cbc:AllowanceChargeReason)"
                  flag="warning">[NONAT-T14-R008]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>

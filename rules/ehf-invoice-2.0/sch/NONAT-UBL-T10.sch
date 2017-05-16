@@ -1,5 +1,5 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
-  schemaVersion="iso" queryBinding="xslt2">
+        schemaVersion="iso" queryBinding="xslt2">
 
    <title>Sjekk mot norsk bokf.lov</title>
 
@@ -21,10 +21,10 @@
    </function>
 
    <pattern>
-      <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
-      <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+      <let name="isZ01" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z01'"/>
+      <let name="isZ02" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z02'"/>
 
-      <rule context="//cac:AccountingSupplierParty/cac:Party">
+      <rule context="cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T10-R001"
                  test="$isZ02 or (cac:PartyLegalEntity/cbc:CompanyID != '')"
                  flag="fatal">[NONAT-T10-R001]-The Norwegian legal registration ID for the supplier MUST be provided according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 2"</assert>
@@ -43,7 +43,7 @@
                  test="cac:TaxTotal"
                  flag="fatal">[NONAT-T10-R012]-An invoice MUST contain tax information</assert>
          <assert id="NONAT-T10-R002"
-                 test="//cac:PaymentMeans/cbc:PaymentDueDate"
+                 test="cac:PaymentMeans/cbc:PaymentDueDate"
                  flag="fatal">[NONAT-T10-R002]-Payment due date MUST be provided in the invoice according to "FOR 2004-12-01 nr 1558 - § 5-1-1. Point 5"</assert>
          <assert id="NONAT-T10-R013"
                  test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name != '')"
@@ -66,24 +66,24 @@
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">[NONAT-T10-R020]-UBL version  must be 2.1</assert>
       </rule>
-      <rule context="//cac:AccountingCustomerParty/cac:Party">
+      <rule context="cac:AccountingCustomerParty/cac:Party">
          <assert id="NONAT-T10-R007"
                  test="(cac:PostalAddress/cbc:CityName and cac:PostalAddress/cbc:PostalZone and cac:PostalAddress/cac:Country/cbc:IdentificationCode)"
                  flag="fatal">[NONAT-T10-R007]-A customer postal address in an invoice MUST contain at least city name, zip code and country code.</assert>
       </rule>
-      <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID//@schemeID">
+      <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID[@schemeID]">
          <assert id="NONAT-T10-R010"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
                  flag="warning">[NONAT-T10-R010]-Location identifiers SHOULD be GLN or GSRN</assert>
       </rule>
-      <rule context="//cac:PartyLegalEntity">
+      <rule context="cac:PartyLegalEntity">
          <assert id="NONAT-T10-R018"
                  test="(cbc:CompanyID != '')"
                  flag="fatal">[NONAT-T10-R018]-Company identifier MUST be specified when describing a company legal entity.</assert>
       </rule>
-      <rule context="cac:PayeeFinancialAccount/cbc:ID//@schemeID">
+      <rule context="cac:PayeeFinancialAccount/cbc:ID[@schemeID]">
          <assert id="NONAT-T10-R024"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
                  flag="fatal">[NONAT-T10-R024]-A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</assert>
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
@@ -96,7 +96,7 @@
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="warning">[NONAT-T10-R028]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
-      <rule context="//cac:TaxScheme">
+      <rule context="cac:TaxScheme">
          <assert id="NONAT-T10-R017"
                  test="cbc:ID"
                  flag="fatal">[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</assert>
@@ -106,7 +106,7 @@
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )"
                  flag="fatal">[NONAT-T10-R014]-Invoice tax schemes MUST be 'VAT'</assert>
       </rule>
-      <rule context="//cac:LegalMonetaryTotal">
+      <rule context="cac:LegalMonetaryTotal">
          <assert id="NONAT-T10-R023"
                  test="number(cbc:TaxInclusiveAmount) &gt;= 0"
                  flag="warning">[NONAT-T10-R023]-Tax inclusive amount in an invoice SHOULD NOT be negative</assert>
@@ -114,12 +114,12 @@
                  test="number(cbc:PayableAmount) &gt;= 0"
                  flag="warning">[NONAT-T10-R022]-Total payable amount in an invoice SHOULD NOT be negative</assert>
       </rule>
-      <rule context="//cac:AllowanceCharge">
+      <rule context="cac:AllowanceCharge">
          <assert id="NONAT-T10-R011"
                  test="(cbc:AllowanceChargeReason)"
                  flag="warning">[NONAT-T10-R011]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
       </rule>
-      <rule context="//cac:InvoiceLine">
+      <rule context="cac:InvoiceLine">
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
          <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
          <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then cac:Price/cbc:BaseQuantity else 1)"/>

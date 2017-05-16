@@ -12,7 +12,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2">
 
-			<AnyDate>2016-01-01</AnyDate>
+			<cbc:AnyDate>2016-01-01</cbc:AnyDate>
 
 		</OrderResponse>
 	</test>
@@ -25,8 +25,8 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2">
 
-			<AnyDate>2016-01-01Z</AnyDate>
-			<AnyDate>2016.01.01</AnyDate>
+			<cbc:AnyDate>2016-01-01Z</cbc:AnyDate>
+			<cbc:AnyDate>2016.01.01</cbc:AnyDate>
 
 		</OrderResponse>
 	</test>

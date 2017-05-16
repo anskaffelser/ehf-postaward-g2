@@ -25,42 +25,42 @@
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NOGOV-T16-R011]-A despatch advice MUST not contain empty elements.</assert>
       </rule>
-      <rule context="//cac:Country">
+      <rule context="cac:Country">
          <assert id="NOGOV-T16-R002"
                  test="(cbc:IdentificationCode !='')"
                  flag="fatal">[NOGOV-T16-R002]-Identification code MUST be specified when describing a country.</assert>
       </rule>
-      <rule context="//cac:DespatchSupplierParty">
+      <rule context="cac:DespatchSupplierParty">
          <assert id="NOGOV-T16-R003"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T16-R003]-If despatch supplier element is present, party must be specified</assert>
       </rule>
-      <rule context="//cac:DeliverCustomerParty">
+      <rule context="cac:DeliverCustomerParty">
          <assert id="NOGOV-T16-R004"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T16-R004]-If deliver customer element is present, party must be specified</assert>
       </rule>
-      <rule context="//cac:BuyerCustomerParty">
+      <rule context="cac:BuyerCustomerParty">
          <assert id="NOGOV-T16-R005"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T16-R005]-If buyer customer element is present, party must be specified</assert>
       </rule>
-      <rule context="//cac:OriginatorCustomerParty">
+      <rule context="cac:OriginatorCustomerParty">
          <assert id="NOGOV-T16-R006"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T16-R006]-If originator customer element is present, party must be specified</assert>
       </rule>
-      <rule context="//cac:CarrierParty/cac:Person">
+      <rule context="cac:CarrierParty/cac:Person">
          <assert id="NOGOV-T16-R007"
                  test="(cac:IdentityDocumentReference !='')"
                  flag="fatal">[NOGOV-T16-R007]-If carrier person element is present, identity must be specified</assert>
       </rule>
-      <rule context="//*[contains(name(),'Date')]">
+      <rule context="cbc:*[contains(name(),'Date')]">
          <assert id="NOGOV-T16-R008"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T16-R008]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
-      <rule context="//cac:Party/cbc:EndpointID">
+      <rule context="cac:Party/cbc:EndpointID">
          <assert id="NOGOV-T16-R009"
                  test="@schemeID = 'NO:ORGNR'"
                  flag="fatal">[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
@@ -68,7 +68,7 @@
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T16-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
-      <rule context="//cbc:ProfileID">
+      <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T16-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii30:ver2.0'"
                  flag="fatal">[EHFPROFILE-T16-R001]-A despatch advice must only be used in profile 30</assert>

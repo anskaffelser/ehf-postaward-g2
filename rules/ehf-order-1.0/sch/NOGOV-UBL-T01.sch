@@ -41,7 +41,7 @@
                  test="string-length(cac:Party/cac:Contact/cbc:ID) &gt;0"
                  flag="warning">[NOGOV-T01-R001]-Kundens referanse BØR fylles ut i henhold til norske krav -- Customer reference SHOULD have a value</assert>
       </rule>
-      <rule context="//*[contains(name(),'Date')]">
+      <rule context="cbc:*[contains(name(),'Date')]">
          <assert id="NOGOV-T01-R007"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T01-R007]-A date must be formatted YYYY-MM-DD.</assert>
@@ -89,37 +89,37 @@
                  test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
                  flag="fatal">[NOGOV-T01-R022]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
-      <rule context="//cac:Country">
+      <rule context="cac:Country">
          <assert id="NOGOV-T01-R015"
                  test="(cbc:IdentificationCode !='')"
                  flag="fatal">[NOGOV-T01-R015]-Identification code MUST be specified when describing a country.</assert>
       </rule>
-      <rule context="//cac:OriginatorCustomerParty">
+      <rule context="cac:OriginatorCustomerParty">
          <assert id="NOGOV-T01-R019"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T01-R019]-If originator element is present, party must be specified</assert>
       </rule>
-      <rule context="//cac:AccountingCustomerParty">
+      <rule context="cac:AccountingCustomerParty">
          <assert id="NOGOV-T01-R020"
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T01-R020]-If invoicee element is present, party must be specified</assert>
       </rule>
-      <rule context="@mimeCode">
+      <rule context="cbc:*[@mimeCode]">
          <assert id="NOGOV-T01-R021"
-                 test="(( . = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain' ))"
+                 test="(( @mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain' ))"
                  flag="warning">[NOGOV-T01-R021]-Attachment is not a recommended MIMEType.</assert>
       </rule>
-      <rule context="//cac:ClassifiedTaxCategory">
+      <rule context="cac:ClassifiedTaxCategory">
          <assert id="NOGOV-T01-R004"
                  test="(cbc:ID !='')"
                  flag="fatal">[NOGOV-T01-R004]-If classified tax category is present, VAT category code must be specified</assert>
       </rule>
-      <rule context="//cac:CommodityClassification">
+      <rule context="cac:CommodityClassification">
          <assert id="NOGOV-T01-R003"
                  test="(cbc:ItemClassificationCode !='')"
                  flag="fatal">[NOGOV-T01-R003]-If product classification element is present, classification code must be specified</assert>
       </rule>
-      <rule context="//cbc:ProfileID">
+      <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T01-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii28:ver2.0'"
                  flag="fatal">[EHFPROFILE-T01-R001]-An order must only be used in profile 28</assert>

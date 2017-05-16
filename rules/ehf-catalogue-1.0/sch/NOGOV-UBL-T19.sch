@@ -68,7 +68,7 @@
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T19-R017]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
-      <rule context="//cac:TaxScheme">
+      <rule context="cac:TaxScheme">
          <assert id="NOGOV-T19-R011"
                  test="cbc:ID"
                  flag="fatal">[NOGOV-T19-R011]-Every tax scheme MUST be defined through an identifier.</assert>
@@ -91,12 +91,12 @@
                  test="cbc:Name"
                  flag="fatal">[NOGOV-T19-R005]-A Catalogue item MUST have a name</assert>
       </rule>
-      <rule context="//*[contains(name(),'Date')]">
+      <rule context="cbc:*[contains(name(),'Date')]">
          <assert id="NOGOV-T19-R006"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T19-R006]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
-      <rule context="//cbc:ProfileID">
+      <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T19-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii01:ver2.0'"
                  flag="fatal">[EHFPROFILE-T19-R001]-A catalogue must only be used in profile 1</assert>

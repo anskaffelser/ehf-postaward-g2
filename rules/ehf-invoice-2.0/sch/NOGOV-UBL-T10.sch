@@ -1,5 +1,5 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
-  schemaVersion="iso" queryBinding="xslt2">
+        schemaVersion="iso" queryBinding="xslt2">
 
    <title>Sjekk mot norske nasjonale regler</title>
 
@@ -17,11 +17,11 @@
    </function>
 
    <pattern>
-      <let name="isZ01" value="//cbc:InvoiceTypeCode = 'Z01'"/>
-      <let name="isZ02" value="//cbc:InvoiceTypeCode = 'Z02'"/>
+      <let name="isZ01" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z01'"/>
+      <let name="isZ02" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z02'"/>
       <let name="isB2C" value="$isZ01 or //cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
 
-      <rule context="//cbc:ProfileID">
+      <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T10-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii04:ver2.0' or . = 'urn:www.cenbii.eu:profile:bii05:ver2.0' or . = 'urn:www.cenbii.eu:profile:biixy:ver2.0'"
                  flag="fatal">[EHFPROFILE-T10-R001]-An invoice transaction T10 must only be used in Profiles 4, 5 or xy.</assert>
@@ -36,7 +36,7 @@
                  test="$isZ02 or (cac:Contact/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R001]-A contact reference identifier SHOULD be provided for AccountingSupplierParty according to EHF.</assert>
       </rule>
-      <rule context="//cac:PaymentMeans">
+      <rule context="cac:PaymentMeans">
          <assert id="NOGOV-T10-R011"
                  test="(cac:PayeeFinancialAccount/cbc:ID != '')"
                  flag="fatal">[NOGOV-T10-R011]-PayeeFinancialAccount MUST be provided according EHF.</assert>
@@ -44,27 +44,27 @@
                  test="(cbc:PaymentID != '')"
                  flag="warning">[NOGOV-T10-R012]-Payment Identifier (KID number) SHOULD be used according to EHF.</assert>
       </rule>
-      <rule context="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']">
+      <rule context="cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']">
          <assert id="NOGOV-T10-R032"
                  test="(string(.) castable as xs:integer)"
                  flag="fatal">[NOGOV-T10-R032]-Only numbers are allowed as bank account number if scheme is BBAN.</assert>
       </rule>
-      <rule context="//cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN']">
+      <rule context="cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'IBAN']">
          <assert id="NOGOV-T10-R033"
                  test="(matches(., 'NO') = true()) and (substring(., 3) castable as xs:integer)"
                  flag="warning">[NOGOV-T10-R033]-IBAN number is not for a norwegain bank account</assert>
       </rule>
-      <rule context="//cac:OrderReference">
+      <rule context="cac:OrderReference">
          <assert id="NOGOV-T10-R013"
                  test="(child::cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R013]-An association to Order Reference SHOULD be provided according to EHF.</assert>
       </rule>
-      <rule context="//cac:Item">
+      <rule context="cac:Item">
          <assert id="NOGOV-T10-R002"
                  test="$isZ02 or (cac:SellersItemIdentification/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R002]-The sellers ID for the item SHOULD be provided according to EHF.</assert>
       </rule>
-      <rule context="//cac:InvoiceLine">
+      <rule context="cac:InvoiceLine">
          <assert id="NOGOV-T10-R003"
                  test="(cbc:AccountingCost)"
                  flag="warning">[NOGOV-T10-R003]-The buyer's accounting code applied to the Invoice Line SHOULD be provided according to EHF.</assert>
@@ -72,17 +72,17 @@
                  test="$isZ02 or (cac:OrderLineReference/cbc:LineID != '')"
                  flag="warning">[NOGOV-T10-R004]-An association to Order Line Reference SHOULD be provided according to EHF.</assert>
       </rule>
-      <rule context="//cac:InvoiceLine/cac:Item/cac:OriginCountry">
+      <rule context="cac:InvoiceLine/cac:Item/cac:OriginCountry">
          <assert id="NOGOV-T10-R022"
                  test="(cbc:IdentificationCode != '')"
                  flag="warning">[NOGOV-T10-R022]-Identification code MUST be specified when describing origin country.</assert>
       </rule>
-      <rule context="//cac:InvoiceLine/cac:Item/cac:ManufacturerParty">
+      <rule context="cac:InvoiceLine/cac:Item/cac:ManufacturerParty">
          <assert id="NOGOV-T10-R024"
                  test="(cac:PartyName/cbc:Name != '')"
                  flag="warning">[NOGOV-T10-R024]-Name MUST be specified when describing a manufacturer party.</assert>
       </rule>
-      <rule context="//cac:InvoiceLine/cac:Item/cac:CommodityClassification">
+      <rule context="cac:InvoiceLine/cac:Item/cac:CommodityClassification">
          <assert id="NOGOV-T10-R023"
                  test="(cbc:ItemClassificationCode != '')"
                  flag="warning">[NOGOV-T10-R023]-Item classification code MUST be specified when describing commodity classification.</assert>
@@ -107,12 +107,12 @@
                  test="(cac:PaymentMeans)"
                  flag="fatal">[NOGOV-T10-R019]-An invoice MUST have payment means information.</assert>
       </rule>
-      <rule context="//cac:PartyTaxScheme/cbc:CompanyID">
+      <rule context="cac:PartyTaxScheme/cbc:CompanyID">
          <assert id="NOGOV-T10-R030"
                  test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
                  flag="fatal">[NOGOV-T10-R030]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
       </rule>
-      <rule context="//cac:PartyLegalEntity/cbc:CompanyID">
+      <rule context="cac:PartyLegalEntity/cbc:CompanyID">
          <assert id="NOGOV-T10-R031"
                  test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T10-R031]-A valid Norwegian organization number for seller, buyer and payee MUST be nine numbers..</assert>
@@ -149,17 +149,17 @@
                  test="not(name(parent::node()) = 'cac:LegalMonetaryTotal') or string-length(substring-after(., '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T10-R037]-Document level amounts cannot have more than 2 decimals</assert>
       </rule>
-      <rule context="//*[contains(name(), 'Date')]">
+      <rule context="cbc:*[contains(name(), 'Date')]">
          <assert id="NOGOV-T10-R028"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T10-R028]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
-      <rule context="*/@mimeCode">
+      <rule context="cbc:*[@mimeCode]">
          <assert id="NOGOV-T10-R010"
-                 test="((. = 'application/pdf' or . = 'image/gif' or . = 'image/tiff' or . = 'image/jpeg' or . = 'image/png' or . = 'text/plain'))"
+                 test="((@mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain'))"
                  flag="warning">[NOGOV-T10-R010]-Attachment is not a recommended MIMEType.</assert>
       </rule>
-      <rule context="//cac:Party/cbc:EndpointID">
+      <rule context="cac:Party/cbc:EndpointID">
          <assert id="NOGOV-T10-R027"
                  test="@schemeID = 'NO:ORGNR'"
                  flag="fatal">[NOGOV-T10-R027]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
@@ -181,7 +181,7 @@
                  test="$isB2C or (cac:PartyLegalEntity/cbc:RegistrationName != '')"
                  flag="fatal">[NOGOV-T10-R015]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</assert>
       </rule>
-      <rule context="//cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
+      <rule context="cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
          <assert id="NOGOV-T10-R036"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T10-R036]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>

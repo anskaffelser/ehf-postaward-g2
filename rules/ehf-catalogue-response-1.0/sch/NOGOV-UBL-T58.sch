@@ -45,12 +45,12 @@
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T58-R006]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
       </rule>
-      <rule context="//*[contains(name(),'Date')]">
+      <rule context="cbc:*[contains(name(),'Date')]">
          <assert id="NOGOV-T58-R001"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T58-R001]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
-      <rule context="//cbc:ProfileID">
+      <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T58-R001"
                  test=". = 'urn:www.cenbii.eu:profile:bii01:ver2.0'"
                  flag="fatal">[EHFPROFILE-T58-R001]-A Catalogue response must only be used in profile 1</assert>

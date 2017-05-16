@@ -5,4 +5,8 @@
 |===
 | Sak | Beskrivelse | Type
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/215[#215]
+| Fikse kontekst for en del regler for å oppnå høyere kvalitet.
+| Validator
+
 |===

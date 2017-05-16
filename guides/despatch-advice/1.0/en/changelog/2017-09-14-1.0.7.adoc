@@ -2,4 +2,8 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/215[#215]
+| Fixing context for a lot of rules for higher quality.
+| Validator
+
 |===
