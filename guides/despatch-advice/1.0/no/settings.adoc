@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Pakkseddel
 
-:date-review: 25. april 2017
-:date-release: 15. mai 2017
-:date-mandatory: 15. mai 2017
+:date-review: 14. august 2017
+:date-release: 14. september 2017
+:date-mandatory: 14. september 2017

@@ -1,0 +1,8 @@
+:ruleurl-ord: /ehf/rule/order-1.0/
+:ruleurl-res: /ehf/rule/order-response-1.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+|===

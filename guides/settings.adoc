@@ -1,6 +1,6 @@
 //
-:status: final
-:release: 2017-05-15
+:status: dev
+:release: 2017-09-14
 
 // Translation
 ifdef::lang[]

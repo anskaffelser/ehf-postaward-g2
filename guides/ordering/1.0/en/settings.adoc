@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Ordering
 
-:date-review: 25. April 2017
-:date-release: 15. May 2017
-:date-mandatory: 15. May 2017
+:date-review: 14. August 2017
+:date-release: 14. September 2017
+:date-mandatory: 14. September 2017
