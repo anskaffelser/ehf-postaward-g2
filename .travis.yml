@@ -9,4 +9,4 @@ env:
   - PERFORM=rules-core
 
 script:
-  - sh .travis.$PERFORM.sh
+  - sh tools/travis/$PERFORM.sh
