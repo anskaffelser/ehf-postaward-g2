@@ -12,12 +12,12 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cbc:a mimeCode="application/pdf" />
-			<cbc:a mimeCode="image/gif" />
-			<cbc:a mimeCode="image/tiff" />
-			<cbc:a mimeCode="image/jpeg" />
-			<cbc:a mimeCode="image/png" />
-			<cbc:a mimeCode="text/plain" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/gif" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/tiff" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpeg" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/png" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain" />
 
 		</Invoice>
 	</test>
@@ -30,8 +30,8 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
 
-			<cbc:a mimeCode="application/json" />
-			<cbc:a mimeCode="text/json" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/json" />
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="text/json" />
 
 		</Invoice>
 	</test>

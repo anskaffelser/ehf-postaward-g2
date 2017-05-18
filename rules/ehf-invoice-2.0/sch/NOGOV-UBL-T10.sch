@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
@@ -154,7 +155,7 @@
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T10-R028]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
-      <rule context="cbc:*[@mimeCode]">
+      <rule context="cbc:EmbeddedDocumentBinaryObject [@mimeCode]">
          <assert id="NOGOV-T10-R010"
                  test="((@mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain'))"
                  flag="warning">[NOGOV-T10-R010]-Attachment is not a recommended MIMEType.</assert>

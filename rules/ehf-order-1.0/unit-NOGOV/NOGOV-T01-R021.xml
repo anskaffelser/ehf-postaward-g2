@@ -12,8 +12,8 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
-			<cbc:ID mimeCode="application/pdf"/>
-			<cbc:ID mimeCode="image/jpeg"/>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf"/>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpeg"/>
 
 		</Order>
 	</test>
@@ -26,8 +26,8 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
 
-			<cbc:ID mimeCode="application/pdf2"/>
-			<cbc:ID mimeCode="image/jpeg2"/>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf2"/>
+			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpeg2"/>
 
 		</Order>
 	</test>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
@@ -20,6 +21,7 @@
       R01X - Validation of Norwegian organization numbers
       R02X - Validation of tax
       R03X - Format validation
+      R1XX - Code lists
     -->
 
    <pattern>
@@ -67,6 +69,12 @@
         <assert id="EHF-COMMON-R030"
                 test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                 flag="fatal">[EHF-COMMON-R030]-A date must be formatted YYYY-MM-DD.</assert>
+     </rule>
+
+     <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
+        <assert id="EHF-COMMON-R100"
+                test="(( @mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain' ))"
+                flag="warning">[EHF-COMMON-R100]-Attachment is not a recommended MIMEType.</assert>
      </rule>
    </pattern>
 

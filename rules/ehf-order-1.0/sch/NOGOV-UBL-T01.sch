@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
@@ -104,7 +105,7 @@
                  test="(cac:Party !='')"
                  flag="fatal">[NOGOV-T01-R020]-If invoicee element is present, party must be specified</assert>
       </rule>
-      <rule context="cbc:*[@mimeCode]">
+      <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
          <assert id="NOGOV-T01-R021"
                  test="(( @mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain' ))"
                  flag="warning">[NOGOV-T01-R021]-Attachment is not a recommended MIMEType.</assert>
