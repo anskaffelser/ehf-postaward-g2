@@ -33,7 +33,7 @@
                  test="local-name(/*) = 'CreditNote' and (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))"
                  flag="fatal">[NONAT-T14-R021]-A creditnote transaction T14 in Profile other than xx MUST have an invoice or creditnote reference identifier.</assert>
          <assert id="NONAT-T14-R015"
-                 test="(cbc:UBLVersionID)"
+                 test="cbc:UBLVersionID"
                  flag="fatal">[NONAT-T14-R015]-A Credit Note MUST have a syntax identifier.</assert>
          <assert id="NONAT-T14-R018"
                  test="cac:TaxTotal"
@@ -44,7 +44,7 @@
       </rule>
       <rule context="cbc:UBLVersionID">
          <assert id="NONAT-T14-R016"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' 2.1 ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="normalize-space(.) = '2.1'"
                  flag="fatal">[NONAT-T14-R016]-UBL version  must be 2.1</assert>
       </rule>
       <rule context="cac:AccountingSupplierParty/cac:Party">
@@ -65,7 +65,7 @@
       </rule>
       <rule context="cac:PartyLegalEntity">
          <assert id="NONAT-T14-R014"
-                 test="(cbc:CompanyID)"
+                 test="cbc:CompanyID"
                  flag="fatal">[NONAT-T14-R014]-Company identifier MUST be specified when describing a company legal entity.</assert>
       </rule>
       <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID[@schemeID]">
@@ -88,7 +88,7 @@
       </rule>
       <rule context="cac:AllowanceCharge">
          <assert id="NONAT-T14-R008"
-                 test="(cbc:AllowanceChargeReason)"
+                 test="cbc:AllowanceChargeReason"
                  flag="warning">[NONAT-T14-R008]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
@@ -121,7 +121,7 @@
          <let name="quiet" value="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
 
          <assert id="NONAT-T14-R012"
-                 test="(cac:Item/cbc:Name)"
+                 test="cac:Item/cbc:Name"
                  flag="fatal">[NONAT-T14-R012]-Each credit note line MUST contain the product/service name</assert>
          <assert id="NONAT-T14-R011"
                  test="cac:Price/cbc:PriceAmount"

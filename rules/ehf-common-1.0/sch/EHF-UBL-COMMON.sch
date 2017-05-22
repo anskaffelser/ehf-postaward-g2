@@ -25,15 +25,23 @@
     -->
 
    <pattern>
-     <rule context="/">
+     <rule context="cbc:*">
         <assert id="EHF-COMMON-R001"
-                test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
+                test=". != ''"
                 flag="fatal">[EHF-COMMON-R001]-Document MUST not contain empty elements.</assert>
      </rule>
-     <rule context="/*">
+     <rule context="cac:*">
         <assert id="EHF-COMMON-R002"
-                test="cbc:UBLVersionID != ''"
-                flag="fatal">[EHF-COMMON-R002]-Document MUST have a syntax identifier.</assert>
+                test="count(*) != 0"
+                flag="fatal">[EHF-COMMON-R002]-Document MUST not contain empty elements. <value-of select="count(*)"/></assert>
+     </rule>
+   </pattern>
+
+   <pattern>
+     <rule context="/*">
+        <assert id="EHF-COMMON-R003"
+                test="cbc:UBLVersionID"
+                flag="fatal">[EHF-COMMON-R003]-Document MUST have a syntax identifier.</assert>
      </rule>
      <rule context="cbc:EndpointID[@schemeID = 'NO:ORGNR']">
         <assert id="EHF-COMMON-R010"

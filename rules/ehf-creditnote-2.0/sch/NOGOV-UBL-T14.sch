@@ -41,7 +41,7 @@
       </rule>
       <rule context="cac:AccountingSupplierParty/cac:Party">
          <assert id="NOGOV-T14-R001"
-                 test="(cac:Contact/cbc:ID != '')"
+                 test="cac:Contact/cbc:ID"
                  flag="warning">[NOGOV-T14-R001]-A contact reference identifier SHOULD be provided for AccountingSupplierParty according to EHF.</assert>
       </rule>
       <rule context="//*[contains(name(),'Amount') and not(contains(name(),'Transaction'))]">
@@ -54,24 +54,26 @@
       </rule>
       <rule context="cac:Item">
          <assert id="NOGOV-T14-R002"
-                 test="(cac:SellersItemIdentification/cbc:ID != '')"
+                 test="cac:SellersItemIdentification/cbc:ID"
                  flag="warning">[NOGOV-T14-R002]-The sellers ID for the item SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="cac:AccountingCustomerParty/cac:Party">
          <assert id="NOGOV-T14-R004"
-                 test="$isB2C or (cac:PartyLegalEntity/cbc:CompanyID != '')"
+                 test="$isB2C or cac:PartyLegalEntity/cbc:CompanyID"
                  flag="fatal">[NOGOV-T14-R004]-PartyLegalEntity for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T14-R008"
-                 test="$isB2C or (cac:PartyLegalEntity/cbc:RegistrationName != '')"
+                 test="$isB2C or cac:PartyLegalEntity/cbc:RegistrationName"
                  flag="fatal">[NOGOV-T14-R008]-Registration name for AccountingCustomerParty MUST be provided according to EHF.</assert>
          <assert id="NOGOV-T14-R006"
-                 test="(cac:PartyIdentification/cbc:ID != '')"
+                 test="cac:PartyIdentification/cbc:ID"
                  flag="warning">[NOGOV-T14-R006]-A customer number for AccountingCustomerParty SHOULD be provided according to EHF.</assert>
-         <assert id="NOGOV-T14-R007" test="(cac:Contact/cbc:ID != '')" flag="fatal">[NOGOV-T14-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
+         <assert id="NOGOV-T14-R007"
+                 test="cac:Contact/cbc:ID"
+                 flag="fatal">[NOGOV-T14-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxTotal">
          <assert id="NOGOV-T14-R018"
-                 test="(cac:TaxSubtotal)"
+                 test="cac:TaxSubtotal"
                  flag="fatal">[NOGOV-T14-R018]-A credit note MUST have Tax Subtotal specifications.</assert>
          <assert id="NOGOV-T14-R025"
                  test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
@@ -82,7 +84,7 @@
       </rule>
       <rule context="/ubl:CreditNote/cac:TaxRepresentativeParty">
          <assert id="NOGOV-T14-R017"
-                 test="(cac:PartyTaxScheme/cbc:CompanyID !='')"
+                 test="cac:PartyTaxScheme/cbc:CompanyID"
                  flag="fatal">[NOGOV-T14-R017]-Company identifier MUST be specified when describing a Tax Representative</assert>
       </rule>
       <rule context="cac:Party/cbc:EndpointID">
@@ -125,7 +127,7 @@
       </rule>
       <rule context="cac:CreditNoteLine/cac:Item/cac:CommodityClassification">
          <assert id="NOGOV-T14-R019"
-                 test="(cbc:ItemClassificationCode !='')"
+                 test="cbc:ItemClassificationCode"
                  flag="warning">[NOGOV-T14-R019]-Item classification code MUST be specified when describing commodity classification.</assert>
       </rule>
       <rule context="cac:PartyIdentification/cbc:ID[@schemeID='NO:ORGNR']">

@@ -19,7 +19,9 @@
 
    <pattern>
       <rule context="/ubl:ApplicationResponse">
-         <assert id="NOGOV-T58-R002" test="(cbc:UBLVersionID != '')" flag="fatal">[NOGOV-T58-R002]-A catalogue response MUST have a syntax identifier.</assert>
+         <assert id="NOGOV-T58-R002"
+                 test="cbc:UBLVersionID"
+                 flag="fatal">[NOGOV-T58-R002]-A catalogue response MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T58-R003"
                  test="cac:SenderParty/cbc:EndpointID"
                  flag="warning">[NOGOV-T58-R003]-A catalogue response should have sellers endpoint id.</assert>

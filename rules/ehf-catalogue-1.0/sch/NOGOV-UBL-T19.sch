@@ -26,7 +26,7 @@
                  test="not(cac:ValidityPeriod/cbc:EndDate) or current-date() &lt;= xs:date(cac:ValidityPeriod/cbc:EndDate)"
                  flag="fatal">[NOGOV-T19-R002]-A Catalogue must have a validity period enddate grater or equal to the current date</assert>
          <assert id="NOGOV-T19-R007"
-                 test="(cbc:UBLVersionID != '')"
+                 test="cbc:UBLVersionID"
                  flag="fatal">[NOGOV-T19-R007]-A catalogue MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T19-R008"
                  test="cac:ValidityPeriod"

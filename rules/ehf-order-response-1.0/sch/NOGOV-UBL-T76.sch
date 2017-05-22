@@ -20,7 +20,7 @@
    <pattern>
       <rule context="/ubl:OrderResponse">
          <assert id="NOGOV-T76-R007"
-                 test="(cbc:UBLVersionID != '')"
+                 test="cbc:UBLVersionID"
                  flag="fatal">[NOGOV-T76-R007]-An order response MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T76-R010"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
@@ -66,7 +66,7 @@
       </rule>
       <rule context="cac:Item/cac:AdditionalItemProperty">
          <assert id="NOGOV-T76-R009"
-                 test="(cbc:Value != '')"
+                 test="cbc:Value"
                  flag="fatal">[NOGOV-T76-R009]-Value must be filled if additional item property is present.</assert>
       </rule>
       <rule context="cbc:ProfileID">

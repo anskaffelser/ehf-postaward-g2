@@ -20,7 +20,7 @@
    <pattern>
       <rule context="/ubl:DespatchAdvice">
          <assert id="NOGOV-T16-R001"
-                 test="(cbc:UBLVersionID != '')"
+                 test="cbc:UBLVersionID"
                  flag="fatal">[NOGOV-T16-R001]-A despatch advice MUST have a syntax identifier.</assert>
          <assert id="NOGOV-T16-R011"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
@@ -28,32 +28,32 @@
       </rule>
       <rule context="cac:Country">
          <assert id="NOGOV-T16-R002"
-                 test="(cbc:IdentificationCode !='')"
+                 test="cbc:IdentificationCode"
                  flag="fatal">[NOGOV-T16-R002]-Identification code MUST be specified when describing a country.</assert>
       </rule>
       <rule context="cac:DespatchSupplierParty">
          <assert id="NOGOV-T16-R003"
-                 test="(cac:Party !='')"
+                 test="cac:Party"
                  flag="fatal">[NOGOV-T16-R003]-If despatch supplier element is present, party must be specified</assert>
       </rule>
       <rule context="cac:DeliverCustomerParty">
          <assert id="NOGOV-T16-R004"
-                 test="(cac:Party !='')"
+                 test="cac:Party"
                  flag="fatal">[NOGOV-T16-R004]-If deliver customer element is present, party must be specified</assert>
       </rule>
       <rule context="cac:BuyerCustomerParty">
          <assert id="NOGOV-T16-R005"
-                 test="(cac:Party !='')"
+                 test="cac:Party"
                  flag="fatal">[NOGOV-T16-R005]-If buyer customer element is present, party must be specified</assert>
       </rule>
       <rule context="cac:OriginatorCustomerParty">
          <assert id="NOGOV-T16-R006"
-                 test="(cac:Party !='')"
+                 test="cac:Party"
                  flag="fatal">[NOGOV-T16-R006]-If originator customer element is present, party must be specified</assert>
       </rule>
       <rule context="cac:CarrierParty/cac:Person">
          <assert id="NOGOV-T16-R007"
-                 test="(cac:IdentityDocumentReference !='')"
+                 test="cac:IdentityDocumentReference"
                  flag="fatal">[NOGOV-T16-R007]-If carrier person element is present, identity must be specified</assert>
       </rule>
       <rule context="cbc:*[contains(name(),'Date')]">

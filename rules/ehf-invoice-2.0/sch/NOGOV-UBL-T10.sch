@@ -29,7 +29,7 @@
       </rule>
       <rule context="cbc:InvoiceTypeCode">
         <assert id="NOGOV-T10-R042"
-                test="index-of(tokenize('380 393 384 Z01 Z02', '\s'), .)"
+                test="some $code in tokenize('380 393 384 Z01 Z02', '\s') satisfies $code = ."
                 flag="fatal">[NOGOV-T10-R042]-An Invoice MUST be coded with the InvoiceTypeCode code list UNCL D1001 BII2 subset</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:AccountingSupplierParty/cac:Party">
@@ -39,10 +39,10 @@
       </rule>
       <rule context="cac:PaymentMeans">
          <assert id="NOGOV-T10-R011"
-                 test="(cac:PayeeFinancialAccount/cbc:ID != '')"
+                 test="cac:PayeeFinancialAccount/cbc:ID"
                  flag="fatal">[NOGOV-T10-R011]-PayeeFinancialAccount MUST be provided according EHF.</assert>
          <assert id="NOGOV-T10-R012"
-                 test="(cbc:PaymentID != '')"
+                 test="cbc:PaymentID"
                  flag="warning">[NOGOV-T10-R012]-Payment Identifier (KID number) SHOULD be used according to EHF.</assert>
       </rule>
       <rule context="cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[attribute::schemeID = 'BBAN']">
@@ -57,7 +57,7 @@
       </rule>
       <rule context="cac:OrderReference">
          <assert id="NOGOV-T10-R013"
-                 test="(child::cbc:ID != '')"
+                 test="cbc:ID"
                  flag="warning">[NOGOV-T10-R013]-An association to Order Reference SHOULD be provided according to EHF.</assert>
       </rule>
       <rule context="cac:Item">
@@ -67,7 +67,7 @@
       </rule>
       <rule context="cac:InvoiceLine">
          <assert id="NOGOV-T10-R003"
-                 test="(cbc:AccountingCost)"
+                 test="cbc:AccountingCost"
                  flag="warning">[NOGOV-T10-R003]-The buyer's accounting code applied to the Invoice Line SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R004"
                  test="$isZ02 or (cac:OrderLineReference/cbc:LineID != '')"
@@ -75,17 +75,17 @@
       </rule>
       <rule context="cac:InvoiceLine/cac:Item/cac:OriginCountry">
          <assert id="NOGOV-T10-R022"
-                 test="(cbc:IdentificationCode != '')"
+                 test="cbc:IdentificationCode"
                  flag="warning">[NOGOV-T10-R022]-Identification code MUST be specified when describing origin country.</assert>
       </rule>
       <rule context="cac:InvoiceLine/cac:Item/cac:ManufacturerParty">
          <assert id="NOGOV-T10-R024"
-                 test="(cac:PartyName/cbc:Name != '')"
+                 test="cac:PartyName/cbc:Name"
                  flag="warning">[NOGOV-T10-R024]-Name MUST be specified when describing a manufacturer party.</assert>
       </rule>
       <rule context="cac:InvoiceLine/cac:Item/cac:CommodityClassification">
          <assert id="NOGOV-T10-R023"
-                 test="(cbc:ItemClassificationCode != '')"
+                 test="cbc:ItemClassificationCode"
                  flag="warning">[NOGOV-T10-R023]-Item classification code MUST be specified when describing commodity classification.</assert>
       </rule>
       <rule context="/ubl:Invoice">
@@ -102,10 +102,10 @@
                  test="$isZ02 or (cac:ContractDocumentReference/cbc:ID != '')"
                  flag="warning">[NOGOV-T10-R005]-ContractDocumentReference SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R016"
-                 test="(cbc:InvoiceTypeCode != '')"
+                 test="cbc:InvoiceTypeCode"
                  flag="fatal">[NOGOV-T10-R016]-An EHF invoice MUST have an invoice type code.</assert>
          <assert id="NOGOV-T10-R019"
-                 test="(cac:PaymentMeans)"
+                 test="cac:PaymentMeans"
                  flag="fatal">[NOGOV-T10-R019]-An invoice MUST have payment means information.</assert>
       </rule>
       <rule context="cac:PartyTaxScheme/cbc:CompanyID">
@@ -120,20 +120,20 @@
       </rule>
       <rule context="/ubl:Invoice/cac:PaymentTerms">
          <assert id="NOGOV-T10-R020"
-                 test="(cbc:Note != '')"
+                 test="cbc:Note"
                  flag="fatal">[NOGOV-T10-R020]-Note MUST be specified when describing Payment terms.</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:TaxRepresentativeParty">
          <assert id="NOGOV-T10-R017"
-                 test="(cac:PartyName/cbc:Name != '')"
+                 test="cac:PartyName/cbc:Name"
                  flag="fatal">[NOGOV-T10-R017]-Name MUST be specified when describing a Tax Representative</assert>
          <assert id="NOGOV-T10-R018"
-                 test="(cac:PartyTaxScheme/cbc:CompanyID != '')"
+                 test="cac:PartyTaxScheme/cbc:CompanyID"
                  flag="fatal">[NOGOV-T10-R018]-Company identifier MUST be specified when describing a Tax Representative</assert>
       </rule>
       <rule context="/ubl:Invoice/cac:TaxTotal">
          <assert id="NOGOV-T10-R021"
-                 test="(cac:TaxSubtotal)"
+                 test="cac:TaxSubtotal"
                  flag="fatal">[NOGOV-T10-R021]-An invoice MUST have Tax Subtotal specifications.</assert>
          <assert id="NOGOV-T10-R038"
                  test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
@@ -170,10 +170,10 @@
       </rule>
       <rule context="/ubl:Invoice/cac:AccountingCustomerParty/cac:Party">
          <assert id="NOGOV-T10-R006"
-                 test="(cac:PartyIdentification/cbc:ID != '')"
+                 test="cac:PartyIdentification/cbc:ID"
                  flag="warning">[NOGOV-T10-R006]-A customer number for AccountingCustomerParty SHOULD be provided according to EHF.</assert>
          <assert id="NOGOV-T10-R007"
-                 test="(cac:Contact/cbc:ID != '')"
+                 test="cac:Contact/cbc:ID"
                  flag="fatal">[NOGOV-T10-R007]-A contact reference identifier MUST be provided for AccountingCustomerParty according to EHF.</assert>
          <assert id="NOGOV-T10-R009"
                  test="$isB2C or (cac:PartyLegalEntity/cbc:CompanyID != '')"
