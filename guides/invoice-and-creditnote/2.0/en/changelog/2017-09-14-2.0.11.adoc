@@ -9,4 +9,8 @@
 | Fixing context for a lot of rules for higher quality.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/184[#184]
+| Changing rules link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R028] (**F**) and link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R028] (**F**) from **W**.
+| Validator
+
 |===

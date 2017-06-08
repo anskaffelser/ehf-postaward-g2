@@ -95,7 +95,7 @@
       <rule context="cac:ClassifiedTaxCategory/cbc:ID">
          <assert id="NONAT-T10-R028"
                  test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
-                 flag="warning">[NONAT-T10-R028]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+                 flag="fatal">[NONAT-T10-R028]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
       <rule context="cac:TaxScheme">
          <assert id="NONAT-T10-R017"

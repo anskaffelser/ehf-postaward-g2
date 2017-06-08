@@ -9,4 +9,8 @@
 | Fikse kontekst for en del regler for å oppnå høyere kvalitet.
 | Validator
 
+| link:https://github.com/difi/vefa-validator-conf/issues/184[#184]
+| Endre link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R028] (**F**) og link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R028] (**F**) fra **W**.
+| Validator
+
 |===

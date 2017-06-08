@@ -27,7 +27,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when non-allowed tax categories are used.</description>
-			<warning number="2">NONAT-T10-R028</warning>
+			<error number="2">NONAT-T10-R028</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
