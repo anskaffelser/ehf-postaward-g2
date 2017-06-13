@@ -8,6 +8,9 @@ Errors:
 NOGOV-T10-R041
 NONAT-T10-R028
 
+Warnings:
+NONAT-T10-R030
+
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
