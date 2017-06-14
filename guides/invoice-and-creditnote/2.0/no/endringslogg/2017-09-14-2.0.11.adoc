@@ -17,6 +17,10 @@
 | Endre link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R028] (**F**) og link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R028] (**F**) fra **W**.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/210[#210]
+| Endre link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R029] (**F**) og link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R029] (**F**) fra **W**.
+| Validator
+
 |===
 
 WARNING: Valideringsregler som er ventet å trigge feil i neste release: NONAT-T10-R030, NONAT-T10-R031, NONAT-T14-R030, NONAT-T10-R031.

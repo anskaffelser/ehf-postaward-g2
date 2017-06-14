@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-                Content:
-                This file contains a norwegian invoice, profile only
+        Content:
+        This file contains a norwegian invoice, profile only
 
-                Errors:
+        Errors:
 				NOGOV-T10-R030
 				NOGOV-T10-R007
 				NOGOV-T10-R032
@@ -13,20 +13,20 @@
 				NONAT-T10-R006
 				NONAT-T10-R007
 				NONAT-T10-R008
+        NONAT-T10-R029
 
-                Warnings:
-                EUGEN-T10-R039
-                EUGEN-T10-R047
-                NONAT-T10-R003
-                NONAT-T10-R004
-                NOGOV-T10-R005
-                NOGOV-T10-R001
-                NOGOV-T10-R006
-                NOGOV-T10-R002
-                NOGOV-T10-R003
-                NOGOV-T10-R004
-                NONAT-T10-R029
-                NONAT-T10-R030
+        Warnings:
+        EUGEN-T10-R039
+        EUGEN-T10-R047
+        NONAT-T10-R003
+        NONAT-T10-R004
+        NOGOV-T10-R005
+        NOGOV-T10-R001
+        NOGOV-T10-R006
+        NOGOV-T10-R002
+        NOGOV-T10-R003
+        NOGOV-T10-R004
+        NONAT-T10-R030
 
 -->
 <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:sdt="urn:oasis:names:specification:ubl:schema:xsd:SpecializedDatatypes-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

@@ -154,7 +154,7 @@
 
          <assert id="NONAT-T14-R029"
                  test="xs:decimal(cbc:TaxableAmount) = u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"
-                 flag="warning">[NONAT-T14-R029]-Taxable amount in a tax subtotal MUST be the sum of line extension amount of all credit note lines and allowances and charges on document level with the same tax category. <value-of select="u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"/></assert>
+                 flag="fatal">[NONAT-T14-R029]-Taxable amount in a tax subtotal MUST be the sum of line extension amount of all credit note lines and allowances and charges on document level with the same tax category. <value-of select="u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"/></assert>
       </rule>
    </pattern>
 </schema>
