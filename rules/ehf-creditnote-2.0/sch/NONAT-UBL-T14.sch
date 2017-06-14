@@ -21,7 +21,14 @@
      <value-of select="$exp + xs:decimal($slack) &gt;= $val and $exp - xs:decimal($slack) &lt;= $val"/>
    </function>
 
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:cat2str">
+     <param name="cat"/>
+     <value-of select="concat(normalize-space($cat/cbc:ID), '-', round(xs:decimal($cat/cbc:Percent) * 1000000))"/>
+   </function>
+
    <pattern>
+      <let name="taxCategories" value="for $cat in /ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return u:cat2str($cat)"/>
+
       <rule context="/ubl:CreditNote">
          <assert id="NONAT-T14-R023"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
@@ -87,9 +94,14 @@
                  flag="warning">[NONAT-T14-R019]-Total payable amount in a credit note SHOULD NOT be negative</assert>
       </rule>
       <rule context="cac:AllowanceCharge">
+         <let name="category" value="u:cat2str(cac:TaxCategory)"/>
+
          <assert id="NONAT-T14-R008"
                  test="cbc:AllowanceChargeReason"
                  flag="warning">[NONAT-T14-R008]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
+         <assert id="NONAT-T14-R031"
+                 test="not(cac:TaxCategory) or (some $cat in $taxCategories satisfies $cat = $category)"
+                 flag="warning">[NONAT-T14-R031]-Tax category for allowance and charge MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
          <assert id="NONAT-T14-R017"
@@ -119,6 +131,7 @@
          <let name="quantity" value="xs:decimal(cbc:CreditedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
          <let name="quiet" value="not(cbc:CreditedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
+         <let name="category" value="u:cat2str(cac:Item/cac:ClassifiedTaxCategory)"/>
 
          <assert id="NONAT-T14-R012"
                  test="cac:Item/cbc:Name"
@@ -129,6 +142,9 @@
          <assert id="NONAT-T14-R024"
                  test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
                  flag="fatal">[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
+         <assert id="NONAT-T14-R030"
+                 test="not(cac:Item/cac:ClassifiedTaxCategory) or (some $cat in $taxCategories satisfies $cat = $category)"
+                 flag="warning">[NONAT-T14-R030]-Tax category on line level MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:TaxSubtotal">
          <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>
