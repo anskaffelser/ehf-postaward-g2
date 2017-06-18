@@ -2,20 +2,28 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
-   <title>Sjekk mot norske regler </title>
+  <title>Sjekk mot norske regler </title>
 
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
-   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
-   <ns uri="utils" prefix="u"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
+  <ns uri="utils" prefix="u"/>
 
-   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
-     <param name="val"/>
-     <variable name="length" select="string-length($val) - 1"/>
-     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
-     <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
-     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
-   </function>
+  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
+    <param name="val"/>
+    <variable name="length" select="string-length($val) - 1"/>
+    <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+    <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
+    <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
+  </function>
+
+  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:gln">
+    <param name="val"/>
+    <variable name="length" select="string-length($val) - 1"/>
+    <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+    <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (1 + ((($i + 1) mod 2) * 2)))"/>
+    <value-of select="(10 - ($weightedSum mod 10)) = number(substring($val, $length + 1, 1))"/>
+  </function>
 
    <pattern>
       <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
@@ -147,6 +155,11 @@
          <assert id="NOGOV-T14-R027"
                  test="string-length(substring-after(cbc:Amount, '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T14-R027]-Allowance or charge amounts on document level cannot have more than 2 decimals</assert>
+      </rule>
+      <rule context="cbc:ID[@schemeID = 'GLN']">
+         <assert id="NOGOV-T14-R044"
+                 test="xs:boolean(u:gln(text()))"
+                 flag="warning">[NOGOV-T14-R044]-Invalid GLN number provided.</assert>
       </rule>
    </pattern>
 </schema>
