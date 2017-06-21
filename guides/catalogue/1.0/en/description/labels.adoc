@@ -2,7 +2,7 @@
 
 Public actors will have requirements related to the environment, ecologically produced food and fair trade. They will also demand that basic human rights are respected in the product production and trade.  To be able to highlight products that meet some of these criteria, the EHF Catalogue contains elements to document Environmental labeling and Social certificates. The labels are connected to the relevant product or service on line level enabling the Search engines to make them visible for the buyer during the purchasing process. Detailed information about the different labels can be found on the issuing party’s web-site which is referred to via an URI.
 
-Several labels can be connected to each product, but for practical reasons there is a limitation of 8 labels on the Electronic Procurement Platform (EPP).
+Several labels can be connected to each product.
 
 The following are used: http://www.anskaffelser.no/verktoy/codes-use-ehf-catalogue-labels-environmental-and-social-responsibility
 

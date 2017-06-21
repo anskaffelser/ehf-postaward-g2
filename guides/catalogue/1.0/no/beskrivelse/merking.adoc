@@ -2,7 +2,7 @@
 
 Offentlige virksomheter stiller krav til miljø, økologisk produsert mat og at grunnleggende menneskerettigheter blir respektert i produksjon og handel av varer (sosialt ansvar eller etisk handel). For å kunne synliggjøre varer som oppfyller noen av disse kriterier er felter i EHF katalogen definert som bærer av disse merker.  Merkene er knyttet inn mot hvert produkt/tjeneste på linjenivå.  Forskjellige innkjøpssystemers søkemotorer har dermed mulighet å gi kjøper informasjon om varen/tjenestens egenskaper via merkeordningen som kan danne grunnlag for en innkjøpsbeslutning. For mer utfyllende informasjon om merket er det definert et felt per merke til ekstern url-link som kan knyttes til informasjonsside eller produktdatablad for dypere informasjon om merkets krav.
 
-Feltene per produkt er dynamiske det vil si at man kan knytte så mange merker man ønsker til hver varelinje.  For å kunne få til en optimal visning har Ehandelsplattformen begrenset antall merker per produkt til 8.
+Feltene per produkt er dynamiske det vil si at man kan knytte så mange merker man ønsker til hver varelinje.
 
 Følgende koder er identifisert: http://www.anskaffelser.no/verktoy/koder-bruk-i-ehf-katalog-merkeordninger-miljo-og-samfunnsansvar
 
