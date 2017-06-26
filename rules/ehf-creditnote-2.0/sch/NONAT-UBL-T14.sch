@@ -14,7 +14,7 @@
      <value-of select="round($val * 100) div 100"/>
    </function>
 
-   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:slack">
+   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:slack" as="xs:boolean">
      <param name="exp"/>
      <param name="val"/>
      <param name="slack"/>
@@ -29,12 +29,12 @@
    <pattern>
       <let name="taxCategories" value="for $cat in /ubl:CreditNote/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return u:cat2str($cat)"/>
 
-      <rule context="/ubl:CreditNote">
+      <rule context="ubl:CreditNote">
          <assert id="NONAT-T14-R023"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NONAT-T14-R023]-A credit note MUST not contain empty elements.</assert>
          <assert id="NONAT-T14-R009"
-                 test="not(cac:PayeeParty) or (cac:PayeeParty/cac:PartyName/cbc:Name)"
+                 test="not(cac:PayeeParty) or cac:PayeeParty/cac:PartyName/cbc:Name"
                  flag="fatal">[NONAT-T14-R009]-If payee information is provided then the payee name MUST be specified.</assert>
          <assert id="NONAT-T14-R021"
                  test="local-name(/*) = 'CreditNote' and (((//cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID) or (//cac:BillingReference/cac:CreditNoteDocumentReference/cbc:ID)) or (//cbc:ProfileID = 'urn:www.cenbii.eu:profile:biixx:ver2.0'))"
@@ -46,13 +46,13 @@
                  test="cac:TaxTotal"
                  flag="fatal">[NONAT-T14-R018]-A Credit Note MUST contain tax information</assert>
          <assert id="NONAT-T14-R005"
-                 test="(cbc:IssueDate) and current-date() &gt;= cbc:IssueDate or (not(cbc:IssueDate))"
+                 test="not(cbc:IssueDate) or current-date() &gt;= cbc:IssueDate"
                  flag="warning">[NONAT-T14-R005]-Issue date of a creditnote should be today or earlier.</assert>
       </rule>
       <rule context="cbc:UBLVersionID">
          <assert id="NONAT-T14-R016"
                  test="normalize-space(.) = '2.1'"
-                 flag="fatal">[NONAT-T14-R016]-UBL version  must be 2.1</assert>
+                 flag="fatal">[NONAT-T14-R016]-UBL version must be 2.1</assert>
       </rule>
       <rule context="cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T14-R001"
@@ -77,12 +77,12 @@
       </rule>
       <rule context="cac:Delivery/cac:DeliveryLocation/cbc:ID[@schemeID]">
          <assert id="NONAT-T14-R007"
-                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' GLN GSRN ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
+                 test="some $v in tokenize('GLN GSRN', '\s') satisfies $v = @schemeID"
                  flag="warning">[NONAT-T14-R007]-Location identifiers SHOULD be GLN or GSRN</assert>
       </rule>
       <rule context="cac:PayeeFinancialAccount/cbc:ID[@schemeID]">
          <assert id="NONAT-T14-R022"
-                 test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
+                 test="some $v in tokenize('IBAN BBAN LOCAL', '\s') satisfies $v = @schemeID"
                  flag="fatal">[NONAT-T14-R022]-A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</assert>
       </rule>
       <rule context="cac:LegalMonetaryTotal">
@@ -105,25 +105,15 @@
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
          <assert id="NONAT-T14-R017"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="some $cat in tokenize('AA E H K R S Z', '\s') satisfies $cat = normalize-space(.)"
                  flag="fatal">[NONAT-T14-R017]-Credit Note tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
       <rule context="cac:ClassifiedTaxCategory/cbc:ID">
          <assert id="NONAT-T14-R028"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
+                 test="some $cat in tokenize('AA E H K R S Z', '\s') satisfies $cat = normalize-space(.)"
                  flag="fatal">[NONAT-T14-R028]-Credit Note tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
       </rule>
-      <rule context="cac:TaxScheme//cbc:ID">
-         <assert id="NONAT-T14-R010"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )"
-                 flag="fatal">[NONAT-T14-R010]-Credit Note tax schemes MUST be 'VAT'</assert>
-      </rule>
-      <rule context="//cac:TaxScheme">
-         <assert id="NONAT-T14-R013"
-                 test="cbc:ID"
-                 flag="fatal">[NONAT-T14-R013]-Every tax scheme MUST be defined through an identifier.</assert>
-      </rule>
-      <rule context="//cac:CreditNoteLine">
+      <rule context="cac:CreditNoteLine">
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
          <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
          <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then cac:Price/cbc:BaseQuantity else 1)"/>
@@ -140,7 +130,7 @@
                  test="cac:Price/cbc:PriceAmount"
                  flag="fatal">[NONAT-T14-R011]-Credit Note line MUST contain the item price</assert>
          <assert id="NONAT-T14-R024"
-                 test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
+                 test="$quiet or u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02)"
                  flag="fatal">[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
          <assert id="NONAT-T14-R030"
                  test="not(cac:Item/cac:ClassifiedTaxCategory/cbc:Percent) or (some $cat in $taxCategories satisfies $cat = $category)"
@@ -148,13 +138,27 @@
       </rule>
       <rule context="cac:TaxSubtotal">
          <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>
-         <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:CreditNote/cac:CreditNoteLine[cac:Item/cac:ClassifiedTaxCategory/cbc:ID/normalize-space(text()) = $category]/cbc:LineExtensionAmount))"/>
-         <let name="sumAllowance" value="xs:decimal(sum(/ubl:CreditNote/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'false']/cbc:Amount))"/>
-         <let name="sumCharge" value="xs:decimal(sum(/ubl:CreditNote/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'true']/cbc:Amount))"/>
+         <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:CreditNote/cac:CreditNoteLine[normalize-space(cac:Item/cac:ClassifiedTaxCategory/cbc:ID) = $category]/cbc:LineExtensionAmount))"/>
+         <let name="sumAllowance" value="xs:decimal(sum(/ubl:CreditNote/cac:AllowanceCharge[normalize-space(cac:TaxCategory/cbc:ID) = $category][cbc:ChargeIndicator = 'false']/cbc:Amount))"/>
+         <let name="sumCharge" value="xs:decimal(sum(/ubl:CreditNote/cac:AllowanceCharge[normalize-space(cac:TaxCategory/cbc:ID) = $category][cbc:ChargeIndicator = 'true']/cbc:Amount))"/>
 
          <assert id="NONAT-T14-R029"
                  test="xs:decimal(cbc:TaxableAmount) = u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"
-                 flag="fatal">[NONAT-T14-R029]-Taxable amount in a tax subtotal MUST be the sum of line extension amount of all credit note lines and allowances and charges on document level with the same tax category. <value-of select="u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"/></assert>
+                 flag="fatal">[NONAT-T14-R029]-Taxable amount in a tax subtotal MUST be the sum of line extension amount of all credit note lines and allowances and charges on document level with the same tax category.</assert>
       </rule>
+
+      <!-- TAXATION -->
+
+      <rule context="cac:TaxScheme/cbc:ID">
+         <assert id="NONAT-T14-R010"
+                 test="normalize-space(.) = 'VAT'"
+                 flag="fatal">[NONAT-T14-R010]-Credit Note tax schemes MUST be 'VAT'</assert>
+      </rule>
+      <rule context="cac:TaxScheme">
+         <assert id="NONAT-T14-R013"
+                 test="cbc:ID"
+                 flag="fatal">[NONAT-T14-R013]-Every tax scheme MUST be defined through an identifier.</assert>
+      </rule>
+
    </pattern>
 </schema>

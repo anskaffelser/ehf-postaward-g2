@@ -6,11 +6,11 @@
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/200[#200]
-| Adding rules link:{ruleurl-inv}NONAT-T10-R030/[NONAT-T10-R030] (**W**), link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031] (**W**), link:{ruleurl-inv}NONAT-T14-R030/[NONAT-T14-R030] (**W**) and link:{ruleurl-inv}NONAT-T14-R031/[NONAT-T14-R031] (**W**) for validation of tax categories.
+| Adding rules link:{ruleurl-inv}NONAT-T10-R030/[NONAT-T10-R031] (**W**), link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R032] (**W**), link:{ruleurl-inv}NONAT-T14-R030/[NONAT-T14-R031] (**W**) and link:{ruleurl-inv}NONAT-T14-R031/[NONAT-T14-R032] (**W**) for validation of tax categories.
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/215[#215]
-| Fixing context for a lot of rules for higher quality.
+| Fixing implementation of most rules for higher quality.
 | Validator
 
 | link:https://github.com/difi/vefa-validator-conf/issues/184[#184]
@@ -18,9 +18,9 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/210[#210]
-| Changing rules link:{ruleurl-inv}NONAT-T10-R028/[NONAT-T10-R029] (**F**) and link:{ruleurl-cre}NONAT-T14-R028/[NONAT-T14-R029] (**F**) from **W**.
+| Changing rules link:{ruleurl-inv}NONAT-T10-R029/[NONAT-T10-R029] (**F**) and link:{ruleurl-cre}NONAT-T14-R029/[NONAT-T14-R029] (**F**) from **W**.
 | Validator
 
 |===
 
-WARNING: Validation rules expected to be updated to trigger error in next release: NONAT-T10-R030, NONAT-T10-R031, NONAT-T14-R030, NONAT-T10-R031.
+WARNING: Validation rules expected to be updated to trigger error in next release: NONAT-T10-R031, NONAT-T10-R032, NONAT-T14-R031, NONAT-T10-R032.

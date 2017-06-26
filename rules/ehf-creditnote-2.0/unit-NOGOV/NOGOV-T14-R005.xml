@@ -12,7 +12,7 @@
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
-			<SomeAmount>100</SomeAmount>
+			<cbc:Amount>100</cbc:Amount>
 
 		</CreditNote>
 	</test>
@@ -27,7 +27,7 @@
 
 			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 
-			<SomeAmount currencyID="NOK">100</SomeAmount>
+			<cbc:TaxAmount currencyID="NOK">100</cbc:TaxAmount>
 
 		</CreditNote>
 	</test>
@@ -42,7 +42,7 @@
 
 			<cbc:DocumentCurrencyCode>NOK</cbc:DocumentCurrencyCode>
 
-			<SomeAmount currencyID="EUR">100</SomeAmount>
+			<cbc:TaxAmount currencyID="EUR">100</cbc:TaxAmount>
 
 		</CreditNote>
 	</test>
