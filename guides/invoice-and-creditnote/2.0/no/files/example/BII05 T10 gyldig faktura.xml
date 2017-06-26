@@ -88,7 +88,7 @@
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">3456789012091</cbc:ID>
+				<cbc:ID schemeID="GLN">3456789012098</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>The Buyercompany</cbc:Name>
@@ -163,7 +163,7 @@
 	<cac:Delivery>
 		<cbc:ActualDeliveryDate>2013-06-15</cbc:ActualDeliveryDate>
 		<cac:DeliveryLocation>
-			<cbc:ID schemeID="GLN">6754238987648</cbc:ID>
+			<cbc:ID schemeID="GLN">6754238987643</cbc:ID>
 		</cac:DeliveryLocation>
 	</cac:Delivery>
 	<cac:PaymentMeans>
