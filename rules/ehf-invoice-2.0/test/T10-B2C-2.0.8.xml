@@ -20,7 +20,7 @@ NOGOV-T10-R005
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">1238764941386</cbc:ID>
+				<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Salescompany ltd.</cbc:Name>
@@ -115,7 +115,7 @@ NOGOV-T10-R005
 	<cac:Delivery>
 		<cbc:ActualDeliveryDate>2013-06-15</cbc:ActualDeliveryDate>
 		<cac:DeliveryLocation>
-			<cbc:ID schemeID="GLN">6754238987648</cbc:ID>
+			<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 		</cac:DeliveryLocation>
 	</cac:Delivery>
 	<cac:PaymentMeans>
@@ -227,7 +227,7 @@ NOGOV-T10-R005
 				<cac:Delivery>
 			<cbc:ActualDeliveryDate>2013-06-15</cbc:ActualDeliveryDate>
 			<cac:DeliveryLocation>
-				<cbc:ID schemeID="GLN">6754238987643</cbc:ID>
+				<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 				<cac:Address>
 					<cbc:StreetName>Deliverystreet 2</cbc:StreetName>
 					<cbc:AdditionalStreetName>Side door</cbc:AdditionalStreetName>

@@ -34,7 +34,7 @@ EUGEN-T10-R039
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">3456789012091</cbc:ID>
+				<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Governmental organization</cbc:Name>

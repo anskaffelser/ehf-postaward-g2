@@ -29,7 +29,9 @@
    <pattern>
       <let name="isZ01" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z01'"/>
       <let name="isZ02" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z02'"/>
-      <let name="taxCategories" value="for $cat in /ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return u:cat2str($cat)"/>
+      <let name="taxCategoryPercents" value="for $cat in /ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return u:cat2str($cat)"/>
+      <let name="taxCategories" value="for $cat in /ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return normalize-space($cat/cbc:ID)"/>
+      <let name="clTaxCatetory" value="tokenize('AA E H K R S Z', '\s')"/>
 
       <rule context="cac:AccountingSupplierParty/cac:Party">
          <assert id="NONAT-T10-R001"
@@ -93,26 +95,6 @@
                  test="( ( not(contains(normalize-space(@schemeID),' ')) and contains( ' IBAN BBAN LOCAL ',concat(' ',normalize-space(@schemeID),' ') ) ) )"
                  flag="fatal">[NONAT-T10-R024]-A payee account identifier scheme MUST be either IBAN, BBAN or LOCAL</assert>
       </rule>
-      <rule context="cac:TaxCategory/cbc:ID">
-         <assert id="NONAT-T10-R021"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
-                 flag="fatal">[NONAT-T10-R021]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
-      </rule>
-      <rule context="cac:ClassifiedTaxCategory/cbc:ID">
-         <assert id="NONAT-T10-R028"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' AA E H K R S Z ',concat(' ',normalize-space(.),' ') ) ) )"
-                 flag="fatal">[NONAT-T10-R028]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
-      </rule>
-      <rule context="cac:TaxScheme">
-         <assert id="NONAT-T10-R017"
-                 test="cbc:ID"
-                 flag="fatal">[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</assert>
-      </rule>
-      <rule context="cac:TaxScheme/cbc:ID">
-         <assert id="NONAT-T10-R014"
-                 test="( ( not(contains(normalize-space(.),' ')) and contains( ' VAT ',concat(' ',normalize-space(.),' ') ) ) )"
-                 flag="fatal">[NONAT-T10-R014]-Invoice tax schemes MUST be 'VAT'</assert>
-      </rule>
       <rule context="cac:LegalMonetaryTotal">
          <assert id="NONAT-T10-R023"
                  test="number(cbc:TaxInclusiveAmount) &gt;= 0"
@@ -122,14 +104,9 @@
                  flag="warning">[NONAT-T10-R022]-Total payable amount in an invoice SHOULD NOT be negative</assert>
       </rule>
       <rule context="cac:AllowanceCharge">
-         <let name="category" value="u:cat2str(cac:TaxCategory)"/>
-
          <assert id="NONAT-T10-R011"
                  test="(cbc:AllowanceChargeReason)"
                  flag="warning">[NONAT-T10-R011]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
-         <assert id="NONAT-T10-R031"
-                 test="not(cac:TaxCategory) or (some $cat in $taxCategories satisfies $cat = $category)"
-                 flag="warning">[NONAT-T10-R031]-Tax category for allowance and charge MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:InvoiceLine">
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
@@ -139,7 +116,6 @@
          <let name="quantity" value="xs:decimal(cbc:InvoicedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
          <let name="quiet" value="not(cbc:InvoicedQuantity) or not(cac:Price/cbc:PriceAmount)"/>
-         <let name="category" value="u:cat2str(cac:Item/cac:ClassifiedTaxCategory)"/>
 
          <assert id="NONAT-T10-R016"
                  test="(cac:Item/cbc:Name)"
@@ -150,19 +126,48 @@
          <assert id="NONAT-T10-R026"
                  test="$quiet or xs:boolean(u:slack($lineExtensionAmount, u:twodec(u:twodec($pricePerUnit * $quantity) + u:twodec($sumCharge) - u:twodec($sumAllowance)), 0.02))"
                  flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level.</assert>
-         <assert id="NONAT-T10-R030"
-                 test="not(cac:Item/cac:ClassifiedTaxCategory) or (some $cat in $taxCategories satisfies $cat = $category)"
-                 flag="warning">[NONAT-T10-R030]-Tax category on line level MUST match provided tax categories on document level.</assert>
       </rule>
+
       <rule context="cac:TaxSubtotal">
          <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>
-         <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:Invoice/cac:InvoiceLine[cac:Item/cac:ClassifiedTaxCategory/cbc:ID/normalize-space(text()) = $category]/cbc:LineExtensionAmount))"/>
-         <let name="sumAllowance" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'false']/cbc:Amount))"/>
-         <let name="sumCharge" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[cac:TaxCategory/cbc:ID/normalize-space(text()) = $category][cbc:ChargeIndicator = 'true']/cbc:Amount))"/>
+         <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:Invoice/cac:InvoiceLine[normalize-space(cac:Item/cac:ClassifiedTaxCategory/cbc:ID) = $category]/cbc:LineExtensionAmount))"/>
+         <let name="sumAllowance" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[normalize-space(cac:TaxCategory/cbc:ID) = $category][cbc:ChargeIndicator = 'false']/cbc:Amount))"/>
+         <let name="sumCharge" value="xs:decimal(sum(/ubl:Invoice/cac:AllowanceCharge[normalize-space(cac:TaxCategory/cbc:ID) = $category][cbc:ChargeIndicator = 'true']/cbc:Amount))"/>
 
          <assert id="NONAT-T10-R029"
                  test="xs:decimal(cbc:TaxableAmount) = u:twodec($sumLineExtensionAmount - $sumAllowance + $sumCharge)"
                  flag="fatal">[NONAT-T10-R029]-Taxable amount in a tax subtotal MUST be the sum of line extension amount of all invoice lines and allowances and charges on document level with the same tax category.</assert>
       </rule>
+
+      <!-- TAXATION -->
+
+      <rule context="cac:TaxCategory/cbc:ID | cac:ClassifiedTaxCategory/cbc:ID">
+         <assert id="NONAT-T10-R030"
+                 test="some $cat in $clTaxCatetory satisfies $cat = normalize-space(.)"
+                 flag="fatal">[NONAT-T10-R021]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+      </rule>
+      <rule context="cac:AllowanceCharge/cac:TaxCategory[cbc:Percent] | cac:Item/cac:ClassifiedTaxCategory[cbc:Percent]">
+        <let name="category" value="u:cat2str(.)"/>
+
+        <assert id="NONAT-T10-R031"
+                test="some $cat in $taxCategoryPercents satisfies $cat = $category"
+                flag="warning">[NONAT-T10-R031]-Tax categories MUST match provided tax categories on document level.</assert>
+      </rule>
+      <rule context="cac:AllowanceCharge/cac:TaxCategory | cac:Item/cac:ClassifiedTaxCategory">
+        <assert id="NONAT-T10-R032"
+                test="some $cat in $taxCategoryPercents satisfies $cat = cbc:ID"
+                flag="warning">[NONAT-T10-R032]-Tax categories MUST match provided tax categories on document level.</assert>
+      </rule>
+      <rule context="cac:TaxScheme">
+         <assert id="NONAT-T10-R017"
+                 test="cbc:ID"
+                 flag="fatal">[NONAT-T10-R017]-Every tax scheme MUST be defined through an identifier.</assert>
+      </rule>
+      <rule context="cac:TaxScheme/cbc:ID">
+         <assert id="NONAT-T10-R014"
+                 test="normalize-space(.) = 'VAT'"
+                 flag="fatal">[NONAT-T10-R014]-Invoice tax schemes MUST be 'VAT'</assert>
+      </rule>
+
    </pattern>
 </schema>

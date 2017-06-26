@@ -11,12 +11,12 @@
                 CL-T10-R006
 				NONAT-T10-R014 3 times
 				NONAT-T10-R024
-				NONAT-T10-R021
+				NONAT-T10-R030
 				NOGOV-T10-R025 5 times
 				NONAT-T10-R029
 
 				Warnings:
-				NONAT-T10-R030
+				NONAT-T10-R031
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
