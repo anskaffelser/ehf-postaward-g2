@@ -26,67 +26,179 @@
 
   <pattern>
     <rule context="cbc:*">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R018 *F*
+        * Catalogue Response - NOGOV-T58-R009 *F*
+        * Despatch Advice - NOGOV-T16-R011 *F*
+        * Order - NOGOV-T01-R006 *F*
+        * Order Response - NOGOV-T76-R010 *F*
+      -->
       <assert id="EHF-COMMON-R001"
               test=". != ''"
-              flag="fatal">[EHF-COMMON-R001]-Document MUST not contain empty elements.</assert>
+              flag="fatal">Document MUST not contain empty elements.</assert>
     </rule>
     <rule context="cac:*">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R018 *F*
+        * Catalogue Response - NOGOV-T58-R009 *F*
+        * Despatch Advice - NOGOV-T16-R011 *F*
+        * Order - NOGOV-T01-R006 *F*
+        * Order Response - NOGOV-T76-R010 *F*
+      -->
       <assert id="EHF-COMMON-R002"
               test="count(*) != 0"
-              flag="fatal">[EHF-COMMON-R002]-Document MUST not contain empty elements.</assert>
+              flag="fatal">Document MUST not contain empty elements.</assert>
     </rule>
     <rule context="/*">
-    <assert id="EUGEN-T68-R003"
-            test="not(@*:schemaLocation)"
-            flag="fatal">Document MUST not contain schema location.</assert>
+      <!--
+        Adds validation:
+        * Catalogue
+        * Catalogue Response
+        * Despatch Advice
+        * Order
+        * Order Response
+      -->
+      <assert id="EUGEN-T68-R003"
+              test="not(@*:schemaLocation)"
+              flag="warning">Document SHOULD not contain schema location.</assert>
     </rule>
   </pattern>
 
   <pattern>
     <rule context="/*">
-      <assert id="EHF-COMMON-R003"
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R007 *F*
+        * Catalogue Response - NOGOV-T58-R002 *F*
+        * Despatch Advice - NOGOV-T16-R001 *F*
+        * Order - NOGOV-T01-R012 *F*
+        * Order Response - NOGOV-T76-R007 *F*
+      -->
+      <assert id="EHF-COMMON-R004"
               test="cbc:UBLVersionID"
-              flag="fatal">[EHF-COMMON-R003]-Document MUST have a syntax identifier.</assert>
+              flag="fatal">Document MUST have a syntax identifier.</assert>
     </rule>
     <rule context="cbc:EndpointID[@schemeID = 'NO:ORGNR']">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R015 *F*, NOGOV-T19-R017 *F*
+        * Catalogue Response - NOGOV-T58-R008 *F*
+        * Despatch Advice - NOGOV-T16-R010 *F*
+        * Order - NOGOV-T01-R009 *F*
+        * Order Response - NOGOV-T76-R002 *F*
+      -->
       <assert id="EHF-COMMON-R010"
               test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-              flag="fatal">[EHF-COMMON-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+              flag="fatal">MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
     </rule>
     <rule context="cbc:EndpointID">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R014 *F*, NOGOV-T19-R016 *F*
+        * Catalogue Response - NOGOV-T58-R007 *F*
+        * Despatch Advice - NOGOV-T16-R008 *F*
+        * Order - NOGOV-T01-R008 *F*
+        * Order Response - NOGOV-T76-R002 *F*
+      -->
       <assert id="EHF-COMMON-R014"
               test="false()"
-              flag="fatal">[EHF-COMMON-R014]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+              flag="fatal">An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
     </rule>
     <rule context="cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
+      <!--
+        Adds validation:
+        * Catalogue
+        * Catalogue Response
+        * Despatch Advice
+        * Order
+        * Order Response
+      -->
       <assert id="EHF-COMMON-R011"
               test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-              flag="fatal">[EHF-COMMON-R011]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
+              flag="fatal">When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
     </rule>
     <rule context="cbc:CompanyID[@schemeID = 'NO:VAT']">
+      <!--
+        Partly replaces:
+        * Order - NOGOV-T01-R011 *F*
+
+        Adds validation:
+        * Catalogue
+
+        Ignored:
+        * Catalogue Response
+        * Despatch Advice
+        * Order Response
+      -->
       <assert id="EHF-COMMON-R012"
               test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
-              flag="fatal">[NOGOV-T10-R030]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
+              flag="fatal">A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
     </rule>
     <rule context="cbc:CompanyID[@schemeID = 'NO:ORGNR']">
+      <!--
+        Partly replaces:
+        * Order - NOGOV-T01-R010 *F*
+
+        Adds validation:
+        * Catalogue
+
+        Ignored:
+        * Catalogue Response
+        * Despatch Advice
+        * Order Response
+      -->
       <assert id="EHF-COMMON-R013"
               test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-              flag="fatal">[EHF-COMMON-R013]-When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
+              flag="fatal">When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
     </rule>
     <rule context="cac:*[ends-with(name(), 'TaxCategory')]/cbc:ID">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R019 *F*
+
+        Adds validation:
+        * Order
+        * Order Response
+
+        Ignored:
+        * Catalogue Response
+        * Despatch Advice
+      -->
       <assert id="EHF-COMMON-R020"
               test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
-              flag="fatal">[EHF-COMMON-R020]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+              flag="fatal">Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
     </rule>
     <rule context="cbc:*[ends-with(name(), 'Date')]">
+      <!--
+        Replaces:
+        * Catalogue - NOGOV-T19-R006 *F*
+        * Catalogue Response - NOGOV-T58-R001 *F*
+        * Despatch Advice - NOGOV-T16-R008 *F*
+        * Order - NOGOV-T01-R007 *F*
+        * Order Response - NOGOV-T76-R001 *F*
+      -->
       <assert id="EHF-COMMON-R030"
               test="(string(.) castable as xs:date) and (string-length(.) = 10)"
-              flag="fatal">[EHF-COMMON-R030]-A date must be formatted YYYY-MM-DD.</assert>
+              flag="fatal">A date must be formatted YYYY-MM-DD.</assert>
     </rule>
+    <!--
+      Replaces:
+      * Order - NOGOV-T01-R021 *W*
+
+      Adds validation:
+      * Catalogue
+
+      Ignored:
+      * Catalogue Response
+      * Order Response
+      * Despatch Advice
+    -->
     <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
       <assert id="EHF-COMMON-R100"
               test="some $code in tokenize('application/pdf image/gif image/tiff image/jpeg image/png text/plain', '\s') satisfies $code = normalize-space(@mimeCode)"
-              flag="warning">[EHF-COMMON-R100]-Attachment is not a recommended MIMEType.</assert>
+              flag="warning">Attachment is not a recommended MIMEType.</assert>
     </rule>
   </pattern>
 

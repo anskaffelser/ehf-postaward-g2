@@ -19,9 +19,11 @@
 
    <pattern>
       <rule context="/ubl:DespatchAdvice">
+        <!-- Replaceable by EHF-COMMON-R004 -->
          <assert id="NOGOV-T16-R001"
                  test="cbc:UBLVersionID"
                  flag="fatal">[NOGOV-T16-R001]-A despatch advice MUST have a syntax identifier.</assert>
+         <!-- Replaceable by EHF-COMMON-R001, EHF-COMMON-R002 -->
          <assert id="NOGOV-T16-R011"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
                  flag="fatal">[NOGOV-T16-R011]-A despatch advice MUST not contain empty elements.</assert>
@@ -57,14 +59,17 @@
                  flag="fatal">[NOGOV-T16-R007]-If carrier person element is present, identity must be specified</assert>
       </rule>
       <rule context="cbc:*[contains(name(),'Date')]">
+        <!-- Replaceable by EHF-COMMON-R030 -->
          <assert id="NOGOV-T16-R008"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
                  flag="fatal">[NOGOV-T16-R008]-A date must be formatted YYYY-MM-DD.</assert>
       </rule>
       <rule context="cac:Party/cbc:EndpointID">
+        <!-- Replaceable by EHF-COMMON-R014 -->
          <assert id="NOGOV-T16-R009"
                  test="@schemeID = 'NO:ORGNR'"
                  flag="fatal">[NOGOV-T16-R009]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+         <!-- Replaceable by EHF-COMMON-R010 -->
          <assert id="NOGOV-T16-R010"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
                  flag="fatal">[NOGOV-T16-R010]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
