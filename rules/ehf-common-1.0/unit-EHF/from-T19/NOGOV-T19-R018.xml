@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t19-base-1.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T19-R018</scope>
+		<!-- <scope>NOGOV-T19-R018</scope> -->
+		<scope>EHF-COMMON-R001</scope>
+		<scope>EHF-COMMON-R002</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify elements with content throws no errors.</description>
-			<success>NOGOV-T19-R018</success>
+			<!-- <success>NOGOV-T19-R018</success> -->
+			<success>EHF-COMMON-R002</success>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -22,7 +25,9 @@
 	<test>
 		<assert>
 			<description>Verify elements without content throws errors.</description>
-			<error>NOGOV-T19-R018</error>
+			<!-- <error>NOGOV-T19-R018</error> -->
+			<error number="2">EHF-COMMON-R001</error>
+			<error number="2">EHF-COMMON-R002</error>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -30,8 +35,8 @@
 
 			<cbc:ActionCode></cbc:ActionCode>
 			<cbc:EndDate></cbc:EndDate>
-			<cbc:UBLVersionID></cbc:UBLVersionID>
-		  <cbc:VersionID></cbc:VersionID>
+			<cac:UBLVersionID></cac:UBLVersionID>
+		  <cac:VersionID></cac:VersionID>
 
 		</Catalogue>
 	</test>

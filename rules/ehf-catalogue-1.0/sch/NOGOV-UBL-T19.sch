@@ -27,9 +27,9 @@
                  flag="fatal">[NOGOV-T19-R002]-A Catalogue must have a validity period enddate grater or equal to the current date</assert>
 
          <!-- Replaceable by EHF-COMMON-R004. -->
-         <assert id="NOGOV-T19-R007"
+         <!-- <assert id="NOGOV-T19-R007"
                  test="cbc:UBLVersionID"
-                 flag="fatal">[NOGOV-T19-R007]-A catalogue MUST have a syntax identifier.</assert>
+                 flag="fatal">[NOGOV-T19-R007]-A catalogue MUST have a syntax identifier.</assert> -->
          <assert id="NOGOV-T19-R008"
                  test="cac:ValidityPeriod"
                  flag="fatal">[NOGOV-T19-R008]-A cataloge MUST have a validity period.</assert>
@@ -38,9 +38,9 @@
                  flag="warning">[NOGOV-T19-R012]-A catalogue should have a catalogue version.</assert>
 
          <!-- Replaceable by EHF-COMMON-R001 and EHF-COMMON-R002. -->
-         <assert id="NOGOV-T19-R018"
+         <!-- <assert id="NOGOV-T19-R018"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
-                 flag="fatal">[NOGOV-T19-R018]-A catalogue MUST not contain empty elements.</assert>
+                 flag="fatal">[NOGOV-T19-R018]-A catalogue MUST not contain empty elements.</assert> -->
       </rule>
       <rule context="/ubl:Catalogue/cac:ValidityPeriod">
          <assert id="NOGOV-T19-R009"
@@ -58,25 +58,25 @@
                  flag="warning">[NOGOV-T19-R013]-A catalogue should have an endpoint ID for seller.</assert>
       </rule>
       <rule context="cac:ProviderParty/cbc:EndpointID">
-         <!-- Replaceable by EHF-COMMON-R011 -->
-         <assert id="NOGOV-T19-R014"
+         <!-- Replaceable by EHF-COMMON-R014 -->
+         <!-- <assert id="NOGOV-T19-R014"
                  test="@schemeID = 'NO:ORGNR'"
-                 flag="fatal">[NOGOV-T19-R014]-An endpoint identifier scheme for provider MUST have the value 'NO:ORGNR'.</assert>
+                 flag="fatal">[NOGOV-T19-R014]-An endpoint identifier scheme for provider MUST have the value 'NO:ORGNR'.</assert> -->
 
          <!-- Replaceable by EHF-COMMON-R010 -->
-         <assert id="NOGOV-T19-R015"
+         <!-- <assert id="NOGOV-T19-R015"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T19-R015]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T19-R015]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert> -->
       </rule>
       <rule context="cac:ReceiverParty/cbc:EndpointID">
-         <!-- Replaceable by EHF-COMMON-R011 -->
-         <assert id="NOGOV-T19-R016"
+         <!-- Replaceable by EHF-COMMON-R014 -->
+         <!-- <assert id="NOGOV-T19-R016"
                  test="@schemeID = 'NO:ORGNR'"
-                 flag="fatal">[NOGOV-T19-R016]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</assert>
+                 flag="fatal">[NOGOV-T19-R016]-An endpoint identifier scheme for receiver MUST have the value 'NO:ORGNR'.</assert> -->
          <!-- Replaceable by EHF-COMMON-R010 -->
-         <assert id="NOGOV-T19-R017"
+         <!-- <assert id="NOGOV-T19-R017"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T19-R017]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T19-R017]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert> -->
       </rule>
       <rule context="cac:TaxScheme">
          <assert id="NOGOV-T19-R011"
@@ -85,9 +85,9 @@
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
          <!-- Replaceable by EHF-COMMON-R020 -->
-         <assert id="NOGOV-T19-R019"
+         <!-- <assert id="NOGOV-T19-R019"
                  test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
-                 flag="fatal">[NOGOV-T19-R019]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+                 flag="fatal">[NOGOV-T19-R019]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert> -->
       </rule>
       <rule context="cac:CatalogueLine">
          <assert id="NOGOV-T19-R003"
@@ -104,9 +104,9 @@
       </rule>
       <rule context="cbc:*[contains(name(),'Date')]">
          <!-- Replaceable by EHF-COMMON-R030 -->
-         <assert id="NOGOV-T19-R006"
+         <!-- <assert id="NOGOV-T19-R006"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
-                 flag="fatal">[NOGOV-T19-R006]-A date must be formatted YYYY-MM-DD.</assert>
+                 flag="fatal">[NOGOV-T19-R006]-A date must be formatted YYYY-MM-DD.</assert> -->
       </rule>
       <rule context="cbc:ProfileID">
          <assert id="EHFPROFILE-T19-R001"

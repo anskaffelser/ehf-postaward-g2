@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t19-base-1.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T19-R017</scope>
+		<!-- <scope>NOGOV-T19-R016</scope> -->
+		<scope>EHF-COMMON-R014</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify valid organization number on EndpointID throws no error.</description>
-			<success>NOGOV-T19-R017</success>
+			<description>Verify Norwegian schemeId on EndpointID throws no error.</description>
+			<!-- <success>NOGOV-T19-R016</success> -->
+			<success>EHF-COMMON-R014</success>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
 
 			<cac:ReceiverParty>
-				<cbc:EndpointID>987654325</cbc:EndpointID>
+				<cbc:EndpointID schemeID="NO:ORGNR"></cbc:EndpointID>
 			</cac:ReceiverParty>
 
 		</Catalogue>
 	</test>
 	<test>
 		<assert>
-			<description>Verify non-valid organization number on EndpointID throws error.</description>
-			<error number="4">NOGOV-T19-R017</error>
+			<description>Verify non-Norwegian schemeId on EndpointID throws error.</description>
+			<!-- <error>NOGOV-T19-R016</error> -->
+			<error>EHF-COMMON-R014</error>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2">
 
 			<cac:ReceiverParty>
-				<cbc:EndpointID>987654321</cbc:EndpointID>
-				<cbc:EndpointID>987 654 325</cbc:EndpointID>
-				<cbc:EndpointID>987.654.325</cbc:EndpointID>
-				<cbc:EndpointID>9876543250</cbc:EndpointID>
+				<cbc:EndpointID schemeID="GLN"></cbc:EndpointID>
 			</cac:ReceiverParty>
 
 		</Catalogue>

@@ -8,6 +8,7 @@
         <identifier>ehf-t19-base-1.0</identifier>
         <title>EHF Catalogue 1.0 (Base)</title>
         <inherit>ubl-catalogue-2.1</inherit>
+        <inherit>ehf-common-ubl-1.0</inherit>
         <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" infoUrl="/ehf/rule/catalogue-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T19.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
