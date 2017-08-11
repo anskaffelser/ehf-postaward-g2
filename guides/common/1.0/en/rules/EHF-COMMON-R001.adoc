@@ -1,0 +1,47 @@
+= EHF-COMMON-R001 [[EHF-COMMON-R001]]
+
+[cols="1,4"]
+.Description
+|===
+
+h| Context
+| ```cbc:*``` (Pattern 1)
+
+h| Rule
+| ```. != ''```
+
+h| Message
+| Document MUST not contain empty elements.
+
+h| Type
+| Error
+
+|===
+
+Elements in UBL used by EHF may be divided into two groups; those containing elements (```cac```) and those containing values (```cbc```). This rule verifies there are no elements for values being empty.
+
+Elements without content are expected to be removed as long as they are optional. Mandatory elements must contain a valid value.
+
+[source]
+.Examples expected to be invalid.
+----
+<cbc:ID></cbc:ID>
+<cbc:ID/>
+----
+
+[source]
+.Example expected to be valid.
+----
+<cbc:ID>3150jd</cbc:ID>
+----
+
+[cols="2,1,3", options="header"]
+.Document type matrix for EHF-COMMON-R001
+|===
+| Document type | Status | Comment
+| EHF Catalogue 1.x | Active |
+| EHF Catalogue Response 1.x | Active |
+| EHF Despatch Advice 1.x | Active |
+| EHF Order 1.x | Active |
+| EHF Order Response 1.x | Active |
+|===

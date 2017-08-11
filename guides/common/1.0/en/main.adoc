@@ -7,7 +7,7 @@ v{revision}
 :doctype: book
 :icons: font
 :toc: left
-:toclevels: 2
+:toclevels: 3
 :source-highlighter: coderay
 :source-language: xml
 :sectanchors:
@@ -28,13 +28,7 @@ include::introduction.adoc[]
 
 include::changelog/index.adoc[]
 
-include::{shared-dir}/content/ehf/index.adoc[]
-
-// include::definitions.adoc[]
-
-// include::principles/index.adoc[]
-
-// include::description/index.adoc[]
+include::rules/index.adoc[]
 
 // include::{shared-dir}/content/validation/index.adoc[]
 

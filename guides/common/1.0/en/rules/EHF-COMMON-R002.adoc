@@ -1,0 +1,49 @@
+= EHF-COMMON-R002 [[EHF-COMMON-R002]]
+
+[cols="1,4"]
+.Description
+|===
+
+h| Context
+| ```cac:*``` (Pattern 1)
+
+h| Rule
+| ```count(*) != 0```
+
+h| Message
+| Document MUST not contain empty elements.
+
+h| Type
+| Error
+
+|===
+
+Elements in UBL used by EHF may be divided into two groups; those containing elements (```cac```) and those containing values (```cbc```). This rule verifies there are no elements for child elements being empty.
+
+Elements without child elements are expected to be removed as long as they are optional. Mandatory elements must contain child elements according to the specification.
+
+[source]
+.Example expected to be invalid.
+----
+<cac:ExternalReference>
+</cac:ExternalReference>
+----
+
+[source]
+.Example expected to be valid.
+----
+<cac:ExternalReference>
+  <cbc:URI>https://vefa.difi.no/</cbc:URI>
+</cac:ExternalReference>
+----
+
+[cols="2,1,3", options="header"]
+.Document type matrix for EHF-COMMON-R002
+|===
+| Document type | Status | Comment
+| EHF Catalogue 1.x | Active |
+| EHF Catalogue Response 1.x | Active |
+| EHF Despatch Advice 1.x | Active |
+| EHF Order 1.x | Active |
+| EHF Order Response 1.x | Active |
+|===

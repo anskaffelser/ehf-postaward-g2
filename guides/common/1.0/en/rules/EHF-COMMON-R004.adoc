@@ -1,0 +1,68 @@
+= EHF-COMMON-R004 [[EHF-COMMON-R004]]
+
+[cols="1,4"]
+.Description
+|===
+
+h| Context
+| ```/*``` (Pattern 2)
+
+h| Rule
+| ```cbc:UBLVersionID```
+
+h| Message
+| Document MUST have a syntax identifier.
+
+h| Type
+| Error
+
+|===
+
+All UBL 2.x document types contains a ```UBLVersionID``` element as first element to help parsers to know which version of UBL was used by the document creater.
+This is important as newer minor versions of UBL 2.x may contain new elements, meaning a document instance created using UBL 2.1 may not be parseable using the UBL 2.0 schema.
+
+We have made ```UBLVersionID``` mandatory as we want to be a good citizen in the UBL community.
+
+[source]
+.Examples expected to be invalid.
+----
+<Catalogue ...>
+  <!-- Content not containing element "UBLVersionID" -->
+</Catalogue>
+----
+
+[source]
+.Example expected to be valid.
+----
+<Catalogue ...>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <!-- Content -->
+</Catalogue>
+----
+
+[cols="3,1", options="header"]
+.Valid values of ```UBLVersionID```.
+|===
+| EHF document type
+| UBL version
+
+| EHF Catalogue 1.x | 2.1
+| EHF Catalogue Response 1.x | 2.1
+| EHF Credit Note 2.x | 2.1
+| EHF Despatch Advice 1.x | 2.1
+| EHF Invoice 2.x | 2.1
+| EHF Order 1.x | 2.1
+| EHF Order Response 1.x | 2.1
+| EHF Reminder 1.x | 2.0
+|===
+
+[cols="2,1,3", options="header"]
+.Document type matrix for EHF-COMMON-R004
+|===
+| Document type | Status | Comment
+| EHF Catalogue 1.x | Active |
+| EHF Catalogue Response 1.x | Active |
+| EHF Despatch Advice 1.x | Active |
+| EHF Order 1.x | Active |
+| EHF Order Response 1.x | Active |
+|===

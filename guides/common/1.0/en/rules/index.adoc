@@ -1,0 +1,55 @@
+= Rules
+
+== R00X - Document in general [[EHF-COMMON-R00X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R001.adoc[]
+
+include::EHF-COMMON-R002.adoc[]
+
+include::EHF-COMMON-R003.adoc[]
+
+include::EHF-COMMON-R004.adoc[]
+
+:leveloffset: -2
+
+== R01X - Validation of Norwegian organization numbers [[EHF-COMMON-R01X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R010.adoc[]
+
+include::EHF-COMMON-R011.adoc[]
+
+include::EHF-COMMON-R012.adoc[]
+
+include::EHF-COMMON-R013.adoc[]
+
+include::EHF-COMMON-R014.adoc[]
+:leveloffset: -2
+
+
+== R02X - Validation of tax [[EHF-COMMON-R02X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R020.adoc[]
+
+:leveloffset: -2
+
+== R03X - Formating validation [[EHF-COMMON-R03X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R030.adoc[]
+
+:leveloffset: -2
+
+== R1XX - Code lists [[EHF-COMMON-R1XX]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R100.adoc[]
+
+:leveloffset: -2

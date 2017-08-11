@@ -1,4 +1,5 @@
 [cols="1,5,2",options="header"]
+.Valid VAT categories and rates
 !===
 | VAT category
 | Description
