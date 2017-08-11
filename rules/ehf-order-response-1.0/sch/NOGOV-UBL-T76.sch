@@ -20,29 +20,29 @@
    <pattern>
       <rule context="/ubl:OrderResponse">
          <!-- Replaceable by EHF-COMMON-R004 -->
-         <assert id="NOGOV-T76-R007"
+         <!-- <assert id="NOGOV-T76-R007"
                  test="cbc:UBLVersionID"
-                 flag="fatal">[NOGOV-T76-R007]-An order response MUST have a syntax identifier.</assert>
+                 flag="fatal">[NOGOV-T76-R007]-An order response MUST have a syntax identifier.</assert> -->
          <!-- Replaceable by EHF-COMMON-R001, EHF-COMMON-R002 -->
-         <assert id="NOGOV-T76-R010"
+         <!-- <assert id="NOGOV-T76-R010"
                  test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
-                 flag="fatal">[NOGOV-T76-R010]-An order response MUST not contain empty elements.</assert>
+                 flag="fatal">[NOGOV-T76-R010]-An order response MUST not contain empty elements.</assert> -->
       </rule>
       <rule context="cbc:*[contains(name(),'Date')]">
          <!-- Replaceable by EHF-COMMON-R030 -->
-         <assert id="NOGOV-T76-R001"
+         <!-- <assert id="NOGOV-T76-R001"
                  test="(string(.) castable as xs:date) and (string-length(.) = 10)"
-                 flag="fatal">[NOGOV-T76-R001]-A date must be formatted YYYY-MM-DD.</assert>
+                 flag="fatal">[NOGOV-T76-R001]-A date must be formatted YYYY-MM-DD.</assert> -->
       </rule>
       <rule context="cac:Party/cbc:EndpointID">
          <!-- Replaceable by EHF-COMMON-R014 -->
-         <assert id="NOGOV-T76-R002"
+         <!-- <assert id="NOGOV-T76-R002"
                  test="@schemeID = 'NO:ORGNR'"
-                 flag="fatal">[NOGOV-T76-R002]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
+                 flag="fatal">[NOGOV-T76-R002]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert> -->
          <!-- Replaceable by EHF-COMMON-R010 -->
-         <assert id="NOGOV-T76-R003"
+         <!-- <assert id="NOGOV-T76-R003"
                  test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T76-R003]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
+                 flag="fatal">[NOGOV-T76-R003]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert> -->
       </rule>
       <rule context="cac:BuyerCustomerParty">
          <assert id="NOGOV-T76-R005"
@@ -61,9 +61,9 @@
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
          <!-- Never run - replaceable by EHF-COMMON-R020 -->
-         <assert id="NOGOV-T76-R011"
+         <!-- <assert id="NOGOV-T76-R011"
                  test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
-                 flag="fatal">[NOGOV-T76-R011]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
+                 flag="fatal">[NOGOV-T76-R011]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert> -->
       </rule>
       <rule context="cac:Delivery">
          <assert id="NOGOV-T76-R004"

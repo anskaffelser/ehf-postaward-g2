@@ -22,7 +22,7 @@
 WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024
 
 
-=== Mapping of rules for EHF Common for EHF Catalogue
+=== Mapping of rules for EHF Common in EHF Catalogue
 
 [cols="3,8,3", options="header"]
 |===
@@ -91,7 +91,7 @@ WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T
 |===
 
 
-=== Mapping of rules for EHF Common for EHF Catalogue Response
+=== Mapping of rules for EHF Common in EHF Catalogue Response
 
 [cols="3,8,3", options="header"]
 |===

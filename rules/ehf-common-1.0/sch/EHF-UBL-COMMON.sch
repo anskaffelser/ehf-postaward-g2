@@ -87,7 +87,7 @@
         * Catalogue Response - NOGOV-T58-R006 *F*, NOGOV-T58-R008 *F*
         * Despatch Advice - NOGOV-T16-R010 *F*
         * Order - NOGOV-T01-R009 *F*
-        * Order Response - NOGOV-T76-R002 *F*
+        * Order Response - NOGOV-T76-R003 *F*
       -->
       <assert id="EHF-COMMON-R010"
               test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
@@ -157,10 +157,8 @@
       <!--
         Replaces:
         * Catalogue - NOGOV-T19-R019 *F*
-
-        Adds validation:
-        * Order
-        * Order Response
+        * Order - NOGOV-T01-R022 *F*
+        * Order Response - NOGOV-T76-R011 *F*
 
         Ignored:
         * Catalogue Response
