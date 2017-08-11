@@ -8,6 +8,8 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" prefix="ubl-application-response"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" prefix="ubl-catalogue"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2" prefix="ubl-despatch-advice"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" prefix="ubl-order-response"/>
   <ns uri="utils" prefix="u"/>
 
   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">

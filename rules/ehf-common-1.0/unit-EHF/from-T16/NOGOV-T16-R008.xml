@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t16-base-1.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T16-R009</scope>
+		<!-- <scope>NOGOV-T16-R008</scope> -->
+		<scope>EHF-COMMON-R030</scope>
 	</assert>
 	<test>
 		<assert>
-			<description>Verify Norwegian schemeId on EndpointID throws no error.</description>
-			<success>NOGOV-T16-R009</success>
+			<description>Verify correct format of date elements.</description>
+			<!-- <success>NOGOV-T16-R008</success> -->
+			<success>EHF-COMMON-R030</success>
 		</assert>
 		<DespatchAdvice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2">
 
-			<cac:Party>
-				<cbc:EndpointID schemeID="NO:ORGNR"/>
-			</cac:Party>
+			<cbc:AnyDate>2016-01-01</cbc:AnyDate>
 
 		</DespatchAdvice>
 	</test>
 	<test>
 		<assert>
-			<description>Verify non-Norwegian schemeId on EndpointID throws error.</description>
-			<error>NOGOV-T16-R009</error>
+			<description>Trigger error on incorrect format of date elements.</description>
+			<!-- <error number="2">NOGOV-T16-R008</error> -->
+			<error number="2">EHF-COMMON-R030</error>
 		</assert>
 		<DespatchAdvice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 			xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2">
 
-			<cac:Party>
-				<cbc:EndpointID schemeID="GLN"/>
-			</cac:Party>
+			<cbc:AnyDate>2016-01-01Z</cbc:AnyDate>
+			<cbc:AnyDate>2016.01.01</cbc:AnyDate>
 
 		</DespatchAdvice>
 	</test>
