@@ -6,6 +6,8 @@
 
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" prefix="ubl-application-response"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" prefix="ubl-catalogue"/>
   <ns uri="utils" prefix="u"/>
 
   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
@@ -51,6 +53,9 @@
               test="count(*) != 0"
               flag="fatal">Document MUST not contain empty elements.</assert>
     </rule>
+  </pattern>
+
+  <pattern>
     <rule context="/*">
       <!--
         Adds validation:
@@ -60,14 +65,9 @@
         * Order
         * Order Response
       -->
-      <assert id="EUGEN-T68-R003"
+      <assert id="EHF-COMMON-R003"
               test="not(@*:schemaLocation)"
               flag="warning">Document SHOULD not contain schema location.</assert>
-    </rule>
-  </pattern>
-
-  <pattern>
-    <rule context="/*">
       <!--
         Replaces:
         * Catalogue - NOGOV-T19-R007 *F*
@@ -84,7 +84,7 @@
       <!--
         Replaces:
         * Catalogue - NOGOV-T19-R015 *F*, NOGOV-T19-R017 *F*
-        * Catalogue Response - NOGOV-T58-R008 *F*
+        * Catalogue Response - NOGOV-T58-R006 *F*, NOGOV-T58-R008 *F*
         * Despatch Advice - NOGOV-T16-R010 *F*
         * Order - NOGOV-T01-R009 *F*
         * Order Response - NOGOV-T76-R002 *F*
@@ -97,7 +97,7 @@
       <!--
         Replaces:
         * Catalogue - NOGOV-T19-R014 *F*, NOGOV-T19-R016 *F*
-        * Catalogue Response - NOGOV-T58-R007 *F*
+        * Catalogue Response - NOGOV-T58-R007 *F*, NOGOV-T58-R005 *F*
         * Despatch Advice - NOGOV-T16-R008 *F*
         * Order - NOGOV-T01-R008 *F*
         * Order Response - NOGOV-T76-R002 *F*
@@ -119,7 +119,7 @@
               test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
               flag="fatal">When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
     </rule>
-    <rule context="cbc:CompanyID[@schemeID = 'NO:VAT']">
+    <rule context="cbc:CompanyID[@schemeID = 'NO:VAT'] | cac:PartyTaxScheme/cbc:CompanyID[not(@schemeID)]">
       <!--
         Partly replaces:
         * Order - NOGOV-T01-R011 *F*
@@ -136,7 +136,7 @@
               test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
               flag="fatal">A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
     </rule>
-    <rule context="cbc:CompanyID[@schemeID = 'NO:ORGNR']">
+    <rule context="cbc:CompanyID[@schemeID = 'NO:ORGNR'] | cac:PartyLegalEntity/cbc:CompanyID[not(@schemeID)]">
       <!--
         Partly replaces:
         * Order - NOGOV-T01-R010 *F*

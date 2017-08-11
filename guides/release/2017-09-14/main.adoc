@@ -9,58 +9,60 @@ include::../settings.adoc[]
 :sectanchors:
 :release: 2017-09-14
 
-== Norsk [[norsk]]
+:leveloffset: +1
+
+= Norsk [[norsk]]
 
 
-=== EHF Faktura og kreditnota 2.0.11 [[faktura-og-kreditnota]]
+== EHF Faktura og kreditnota 2.0.11 [[faktura-og-kreditnota]]
 
 include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.11.adoc[]
 
 
-=== EHF Katalog 1.0.9 [[katalog]]
+== EHF Katalog 1.0.9 [[katalog]]
 
 include::../../catalogue/1.0/no/endringslogg/{release}-1.0.9.adoc[]
 
 
-=== EHF Ordreprosess 1.0.8 [[ordreprosess]]
+== EHF Ordreprosess 1.0.8 [[ordreprosess]]
 
 include::../../ordering/1.0/no/endringslogg/{release}-1.0.8.adoc[]
 
 
-=== EHF Pakkseddel 1.0.7 [[pakkseddel]]
+== EHF Pakkseddel 1.0.7 [[pakkseddel]]
 
 include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.7.adoc[]
 
 
-=== EHF Common 1.0.0 [[no-common]]
+== EHF Common 1.0.0 [[no-common]]
 
 Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på engelsk].
 
 
-== English [[english]]
+= English [[english]]
 
 
-=== EHF Invoice and Creditnote 2.0.11 [[invoice-and-creditnote]]
+== EHF Invoice and Creditnote 2.0.11 [[invoice-and-creditnote]]
 
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.11.adoc[]
 
 
-=== EHF Catalogue 1.0.9 [[catalogue]]
+== EHF Catalogue 1.0.9 [[catalogue]]
 
 include::../../catalogue/1.0/en/changelog/{release}-1.0.9.adoc[]
 
 
-=== EHF Ordering 1.0.8 [[ordering]]
+== EHF Ordering 1.0.8 [[ordering]]
 
 include::../../ordering/1.0/en/changelog/{release}-1.0.8.adoc[]
 
 
-=== EHF Despatch Advice 1.0.7 [[despatch-advice]]
+== EHF Despatch Advice 1.0.7 [[despatch-advice]]
 
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.7.adoc[]
 
 
-=== EHF Common 1.0.0 [[common]]
+== EHF Common 1.0.0 [[common]]
 
 include::../../common/1.0/en/changelog/{release}-1.0.0.adoc[]
 

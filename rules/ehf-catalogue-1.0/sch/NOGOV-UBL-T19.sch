@@ -89,6 +89,11 @@
                  test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
                  flag="fatal">[NOGOV-T19-R019]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert> -->
       </rule>
+      <rule context="cac:PartyLegalEntity/cbc:CompanyID[@schemeID]">
+        <assert id="NOGOV-T19-R024"
+                test="@schemeID = 'NO:ORGNR'"
+                flag="warning">[NOGOV-T19-R024]-CompanyID for legal entity qualifier must have value 'NO:ORGNR' when provided.</assert>
+      </rule>
       <rule context="cac:CatalogueLine">
          <assert id="NOGOV-T19-R003"
                  test="cbc:OrderableIndicator"

@@ -2,4 +2,12 @@
 |===
 | Issue | Description | Type
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/222[#222]
+| Initial use of validation rules.
+| Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/222[#222]
+| Initial guide.
+| Guide
+
 |===

@@ -8,6 +8,7 @@
         <identifier>ehf-t58-base-1.0</identifier>
         <title>EHF Catalogue Response 1.0 (Base)</title>
         <inherit>ubl-applicationresponse-2.1</inherit>
+        <inherit>ehf-common-ubl-1.0</inherit>
         <file source="sch/NOGOV-UBL-T58.sch" path="xsl/NOGOV-UBL-T58.xsl" infoUrl="/ehf/rule/catalogue-response-1.0/{}/" />
         <file path="xsl/BIIRULES-UBL-T58.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T58.xsl" />
