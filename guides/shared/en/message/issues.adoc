@@ -1,4 +1,4 @@
 [NOTE]
-.Reporting bug
+.Reporting bugs
 Please use link:{link-issues}[Github Issues] to report bugs and lack of content when discovered.
 Users currently not registered on Github may create an account for free.

@@ -16,6 +16,9 @@ h| Message
 h| Type
 | Error
 
+h| Since
+| 1.0.0
+
 |===
 
 All UBL 2.x document types contains a ```UBLVersionID``` element as first element to help parsers to know which version of UBL was used by the document creater.
@@ -57,7 +60,7 @@ We have made ```UBLVersionID``` mandatory as we want to be a good citizen in the
 |===
 
 [cols="2,1,3", options="header"]
-.Document type matrix for EHF-COMMON-R004
+.Document type matrix
 |===
 | Document type | Status | Comment
 | EHF Catalogue 1.x | Active |

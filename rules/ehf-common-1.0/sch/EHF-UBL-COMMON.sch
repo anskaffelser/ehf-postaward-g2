@@ -12,7 +12,7 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" prefix="ubl-order-response"/>
   <ns uri="utils" prefix="u"/>
 
-  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
+  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11" as="xs:boolean">
     <param name="val"/>
     <variable name="length" select="string-length($val) - 1"/>
     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
@@ -92,7 +92,7 @@
         * Order Response - NOGOV-T76-R003 *F*
       -->
       <assert id="EHF-COMMON-R010"
-              test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+              test="matches(., '^[0-9]{9}$') and u:mod11(.)"
               flag="fatal">MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
     </rule>
     <rule context="cbc:EndpointID">
@@ -118,7 +118,7 @@
         * Order Response
       -->
       <assert id="EHF-COMMON-R011"
-              test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+              test="matches(., '^[0-9]{9}$') and u:mod11(.)"
               flag="fatal">When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
     </rule>
     <rule context="cbc:CompanyID[@schemeID = 'NO:VAT'] | cac:PartyTaxScheme/cbc:CompanyID[not(@schemeID)]">
@@ -135,7 +135,7 @@
         * Order Response
       -->
       <assert id="EHF-COMMON-R012"
-              test="(string-length(.) = 12) and (substring(., 1, 9) castable as xs:integer) and (substring(., 10, 12) = 'MVA') and xs:boolean(u:mod11(substring(., 1, 9)))"
+              test="matches(., '^[0-9]{9}MVA$') and u:mod11(substring(., 1, 9))"
               flag="fatal">A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
     </rule>
     <rule context="cbc:CompanyID[@schemeID = 'NO:ORGNR'] | cac:PartyLegalEntity/cbc:CompanyID[not(@schemeID)]">
@@ -152,7 +152,7 @@
         * Order Response
       -->
       <assert id="EHF-COMMON-R013"
-              test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
+              test="matches(., '^[0-9]{9}$') and u:mod11(.)"
               flag="fatal">When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed</assert>
     </rule>
     <rule context="cac:*[ends-with(name(), 'TaxCategory')]/cbc:ID">

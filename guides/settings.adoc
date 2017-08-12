@@ -11,8 +11,8 @@ endif::[]
 :rules-dir: /tmp/rules
 
 // Difi
-:link-github: https://github.com/difi/vefa-validator-conf
-:link-issues: https://github.com/difi/vefa-validator-conf/issues
+:link-github: https://github.com/difi/vefa-ehf-postaward
+:link-issues: https://github.com/difi/vefa-ehf-postaward/issues
 :link-portal: https://vefa.difi.no/
 
 :name-difi-en: Agency of Public Management and eGovernment
