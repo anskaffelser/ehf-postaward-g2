@@ -19,7 +19,7 @@ MIME typer anbefales:
 Størrelse:::
 5MB
 Beskrivelse av vedlegg:::
-Det anbefales å gi en god beskrivelse av hva slag vedlegg det gjelder. Kodelisten DocumentTypeCode anbefales brukt og beskrivelsen gjøres i feltet: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
+Det anbefales å gi en god beskrivelse av hva slag vedlegg det gjelder. Kodelisten DocumentTypeCode anbefales brukt og beskrivelsen gjøres i feltet: ```ubl:Order/`cac:AdditionalDocumentReference/cac:DocumentReference/cbc:DocumentType```. +
 Elementet benyttes kun til å gi en beskrivelse av vedleggets innhold eller type dokument/vedlegg.
 
 

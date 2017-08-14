@@ -19,7 +19,7 @@
 
 |===
 
-WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024
+WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024, EHF-COMMON-R011, EHF-COMMON-R012, EHF-COMMON-R013
 
 
 === Mapping of rules for EHF Common in EHF Catalogue

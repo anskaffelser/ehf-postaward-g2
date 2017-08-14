@@ -18,7 +18,7 @@ MIME types:
 Size::
 5MB
 Description of attachment::
-It is advised to supply a good description of each attachment and the element to use is: Invoice/Additional_DocumentReference/DocumentReference/DocumentType. +
+It is advised to supply a good description of each attachment and the element to use is: ```ubl:Order/`cac:AdditionalDocumentReference/cac:DocumentReference/cbc:DocumentType```. +
 Should only be used for description of the document content.
 
 [source]

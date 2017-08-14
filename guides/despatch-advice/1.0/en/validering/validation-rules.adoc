@@ -6,4 +6,5 @@
 |Message/Context/Test
 
 include::{rules-dir}/NOGOV-UBL-T16.sch.adoc[]
+include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
 |====

@@ -22,6 +22,19 @@ h| Since
 |===
 
 
+[source]
+.Example expected to be invalid.
+----
+<cbc:EndpointID schemeID="NO:ORGNR">999 999 999</cbc:EndpointID>
+----
+
+[source]
+.Example expected to be valid.
+----
+<cbc:EndpointID schemeID="NO:ORGNR">810418052</cbc:EndpointID>
+----
+
+
 [cols="2,1,3", options="header"]
 .Document type matrix
 |===

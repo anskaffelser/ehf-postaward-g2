@@ -19,6 +19,8 @@
 
 |===
 
+WARNING: Validation rules expected to be updated to trigger error in next release: EHF-COMMON-R011
+
 
 === Mapping of rules in EHF Common for EHF Order
 

@@ -13,6 +13,9 @@
         <file path="xsl/BIIRULES-UBL-T19.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
         <rule identifier="CL-T19-R004" action="suppress" />
+        <rule identifier="EHF-COMMON-R011" action="setWarning" />
+        <rule identifier="EHF-COMMON-R012" action="setWarning" />
+        <rule identifier="EHF-COMMON-R013" action="setWarning" />
     </configuration>
 
     <configuration>

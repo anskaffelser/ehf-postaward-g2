@@ -19,6 +19,8 @@
 
 |===
 
+WARNING: Valideringsregler som er ventet å trigge feil i neste release: EHF-COMMON-R011
+
 
 === Mapping of rules in EHF Common for EHF Order
 

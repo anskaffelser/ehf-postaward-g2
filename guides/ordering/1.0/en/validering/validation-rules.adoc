@@ -6,6 +6,7 @@
 |Message/Context/Test
 
 include::{rules-dir}/NOGOV-UBL-T01.sch.adoc[]
+include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
 |====
 
 = Norwegian Rules for Order Response
@@ -16,4 +17,5 @@ include::{rules-dir}/NOGOV-UBL-T01.sch.adoc[]
 |Message/Context/Test
 
 include::{rules-dir}/NOGOV-UBL-T76.sch.adoc[]
+include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
 |====

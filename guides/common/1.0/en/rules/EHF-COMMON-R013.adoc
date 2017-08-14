@@ -22,11 +22,28 @@ h| Since
 |===
 
 
+[source]
+.Example expected to be invalid.
+----
+<cac:PartyLegalEntity>
+  <cbc:CompanyID schemeID="NO:ORGNR">999 999 999</cbc:CompanyID>
+</cac:PartyLegalEntity>
+----
+
+[source]
+.Example expected to be valid.
+----
+<cac:PartyLegalEntity>
+  <cbc:CompanyID schemeID="NO:VAT">810418052</cbc:CompanyID>
+</cac:PartyLegalEntity>
+----
+
+
 [cols="2,1,3", options="header"]
 .Document type matrix
 |===
 | Document type | Status | Comment
-| EHF Catalogue 1.x | Active |
+| EHF Catalogue 1.x | Active | Triggers warning until release 2017-11-15.
 | EHF Catalogue Response 1.x | Ignored |
 | EHF Despatch Advice 1.x | Ignored |
 | EHF Order 1.x | Active |

@@ -13,6 +13,7 @@
         <file path="xsl/BIIRULES-UBL-T01.xsl" />
         <file path="xsl/OPENPEPPOL-UBL-T01.xsl" />
         <rule identifier="OP-T01-R008" action="suppress" />
+        <rule identifier="EHF-COMMON-R011" action="setWarning" />
     </configuration>
 
     <configuration>

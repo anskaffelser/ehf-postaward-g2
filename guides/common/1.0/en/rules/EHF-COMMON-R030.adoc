@@ -22,6 +22,19 @@ h| Since
 |===
 
 
+[source]
+.Example expected to be invalid.
+----
+<cbc:IssueDate>2017-01-01Z</cbc:IssueDate>
+----
+
+[source]
+.Example expected to be valid.
+----
+<cbc:IssueDate>2017-01-01</cbc:IssueDate>
+----
+
+
 [cols="2,1,3", options="header"]
 .Document type matrix
 |===

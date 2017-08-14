@@ -6,6 +6,7 @@
 |Melding/Kontekst/Test
 
 include::{rules-dir}/NOGOV-UBL-T19.sch.adoc[]
+include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
 |====
 
 = Norske valideringsregler for katalogbekreftelse
@@ -16,4 +17,5 @@ include::{rules-dir}/NOGOV-UBL-T19.sch.adoc[]
 |Melding/Kontekst/Test
 
 include::{rules-dir}/NOGOV-UBL-T58.sch.adoc[]
+include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
 |====
