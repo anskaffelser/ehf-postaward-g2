@@ -21,6 +21,10 @@
 | Endre link:{ruleurl-inv}NONAT-T10-R029/[NONAT-T10-R029] (**F**) og link:{ruleurl-cre}NONAT-T14-R029/[NONAT-T14-R029] (**F**) fra **W**.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/217[#217]
+| Legge til reglene link:{ruleurl-inv}NONAT-T10-R044/[NONAT-T10-R044] (**W**) og link:{ruleurl-cre}NONAT-T14-R044/[NONAT-T14-R044] (**W**) for validering av GLN-nummer.
+| Validator
+
 |===
 
 WARNING: Valideringsregler som er ventet å trigge feil i neste release: NONAT-T10-R031, NONAT-T10-R032, NONAT-T14-R031, NONAT-T10-R032.
