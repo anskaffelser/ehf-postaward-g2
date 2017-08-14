@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         schemaVersion="iso" queryBinding="xslt2">
 
    <title>Norwegian rules for EHF Order</title>
@@ -7,15 +7,6 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Order-2" prefix="ubl"/>
-   <ns uri="utils" prefix="u"/>
-
-   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11">
-     <param name="val"/>
-     <variable name="length" select="string-length($val) - 1"/>
-     <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
-     <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
-     <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
-   </function>
 
    <pattern>
       <rule context="/ubl:Order">
@@ -25,14 +16,6 @@
          <assert id="NOGOV-T01-R018"
                  test="cac:SellerSupplierParty/cac:Party"
                  flag="fatal">[NOGOV-T01-R018]-An order MUST contain seller information</assert>
-         <!-- Replaceable by EHF-COMMON-R004 -->
-         <!-- <assert id="NOGOV-T01-R012"
-                 test="cbc:UBLVersionID"
-                 flag="fatal">[NOGOV-T01-R012]-An order MUST have a syntax identifier.</assert> -->
-         <!-- Replaceable by EHF-COMMON-R001, EHF-COMMON-002 -->
-         <!-- <assert id="NOGOV-T01-R006"
-                 test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
-                 flag="fatal">[NOGOV-T01-R006]-An order MUST not contain empty elements.</assert> -->
       </rule>
       <rule context="cac:LineItem">
          <assert id="NOGOV-T01-R005"
@@ -44,43 +27,15 @@
                  test="string-length(cac:Party/cac:Contact/cbc:ID) &gt;0"
                  flag="warning">[NOGOV-T01-R001]-Kundens referanse BØR fylles ut i henhold til norske krav -- Customer reference SHOULD have a value</assert>
       </rule>
-      <rule context="cbc:*[contains(name(),'Date')]">
-         <!-- Replaceable by EHF-COMMON-R030 -->
-         <!-- <assert id="NOGOV-T01-R007"
-                 test="(string(.) castable as xs:date) and (string-length(.) = 10)"
-                 flag="fatal">[NOGOV-T01-R007]-A date must be formatted YYYY-MM-DD.</assert> -->
-      </rule>
       <rule context="cac:PartyLegalEntity/cbc:CompanyID[@schemeID]">
         <assert id="NOGOV-T01-R023"
                 test="@schemeID = 'NO:ORGNR'"
                 flag="warning">[NOGOV-T01-R023]-CompanyID for legal entity qualifier must have value 'NO:ORGNR' when provided.</assert>
       </rule>
-      <rule context="cac:PartyLegalEntity/cbc:CompanyID">
-         <!-- Partly replaceable by EHF-COMMON-R013 -->
-         <!-- <assert id="NOGOV-T01-R010"
-                 test="(string-length(.) = 9) and (string(.) castable as xs:integer) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T01-R010]-A valid Norwegian organization number MUST be nine numbers.</assert> -->
-      </rule>
       <rule context="cac:PartyTaxScheme/cbc:CompanyID[@schemeID]">
         <assert id="NOGOV-T01-R024"
                 test="@schemeID = 'NO:VAT'"
                 flag="warning">[NOGOV-T01-R024]-CompanyID for tax scheme qualifier must have value 'NO:VAT' when provided.</assert>
-      </rule>
-      <rule context="cac:PartyTaxScheme/cbc:CompanyID">
-         <!-- Partly replaceable by EHF-COMMON-R012 -->
-         <!-- <assert id="NOGOV-T01-R011"
-                 test="(string-length(.) = 12) and (substring(.,1,9) castable as xs:integer) and xs:boolean(u:mod11(substring(., 1, 9))) and (substring(.,10,12)='MVA')"
-                 flag="fatal">[NOGOV-T01-R011]-A VAT number MUST be a valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert> -->
-      </rule>
-      <rule context="cac:Party/cbc:EndpointID">
-         <!-- Replaceable by EHF-COMMON-R014 -->
-         <!-- <assert id="NOGOV-T01-R008"
-                 test="@schemeID = 'NO:ORGNR'"
-                 flag="fatal">[NOGOV-T01-R008]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert> -->
-         <!-- Replaceable by EHF-COMMON-R010 -->
-         <!-- <assert id="NOGOV-T01-R009"
-                 test="(string(.) castable as xs:integer) and (string-length(.) = 9) and xs:boolean(u:mod11(.))"
-                 flag="fatal">[NOGOV-T01-R009]-MUST be a valid Norwegian organization number. Only numerical value allowed</assert> -->
       </rule>
       <rule context="cac:Attachment/cac:ExternalReference">
          <assert id="NOGOV-T01-R013"
@@ -102,12 +57,6 @@
                  test="cbc:ID"
                  flag="fatal">[NOGOV-T01-R017]-Every tax scheme MUST be defined through an identifier.</assert>
       </rule>
-      <rule context="cac:TaxCategory/cbc:ID">
-         <!-- Never run - replaceable by EHF-COMMON-R020 -->
-         <!-- <assert id="NOGOV-T01-R022"
-                 test="some $code in tokenize('AA E H K R S Z', '\s') satisfies $code = normalize-space(.)"
-                 flag="fatal">[NOGOV-T01-R022]-Tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert> -->
-      </rule>
       <rule context="cac:Country">
          <assert id="NOGOV-T01-R015"
                  test="cbc:IdentificationCode"
@@ -122,12 +71,6 @@
          <assert id="NOGOV-T01-R020"
                  test="cac:Party"
                  flag="fatal">[NOGOV-T01-R020]-If invoicee element is present, party must be specified</assert>
-      </rule>
-      <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
-         <!-- Replaceable by EHF-COMMON-R100 -->
-         <!-- <assert id="NOGOV-T01-R021"
-                 test="@mimeCode = 'application/pdf' or @mimeCode = 'image/gif' or @mimeCode = 'image/tiff' or @mimeCode = 'image/jpeg' or @mimeCode = 'image/png' or @mimeCode = 'text/plain'"
-                 flag="warning">[NOGOV-T01-R021]-Attachment is not a recommended MIMEType.</assert> -->
       </rule>
       <rule context="cac:ClassifiedTaxCategory">
          <assert id="NOGOV-T01-R004"

@@ -16,7 +16,7 @@
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">7080000123456</cbc:ID>
+				<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Medical</cbc:Name>
@@ -32,7 +32,7 @@
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">7080000985134</cbc:ID>
+				<cbc:ID schemeID="GLN">6291041500213</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Helseforetak</cbc:Name>
