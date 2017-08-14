@@ -1,0 +1,13 @@
+= Mengdevariabel vare
+
+For å angi at en vare er såkalt mengdevariabel (F.eks at man bestiller en vare i stk., men blir fakturert i kilo, der en stk. kan være av variabel vekt), anbefales det å sette enhetskoden for pakningskvantum/innhold til kode 31 (catch weight)  i henhold til UN Recommondation 20.
+
+[source]
+.Eksempel på utfylling i EHF katalog.
+----
+<cac:CatalogueLine>
+  <cbc:ID>8</cbc:ID>
+  <cbc:OrderableUnit>EA</cbc:OrderableUnit>
+  <cbc:ContentUnitQuantity unitCode="31" unitCodeListID="UNECERec20">10</cbc:ContentUnitQuantity>
+  ...
+----

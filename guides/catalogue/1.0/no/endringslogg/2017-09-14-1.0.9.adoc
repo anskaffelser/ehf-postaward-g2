@@ -21,6 +21,10 @@
 | Legge til manglende anbefalinger for vedleggsformat.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/224[#224]
+| Flyttet 6.6.1 til 6.7 i norsk utgave for å få konsistens mellom språkene.
+| Guide
+
 |===
 
 WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024, EHF-COMMON-R011, EHF-COMMON-R012, EHF-COMMON-R013

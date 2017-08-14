@@ -19,6 +19,8 @@ include::nokkelord.adoc[]
 
 include::kvantum-og-bestillingsmengder.adoc[]
 
+include::mengdevariabel-vare.adoc[]
+
 include::priser.adoc[]
 
 include::relaterte-produkter.adoc[]

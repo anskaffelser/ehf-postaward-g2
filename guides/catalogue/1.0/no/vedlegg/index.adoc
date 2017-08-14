@@ -3,7 +3,7 @@
 :leveloffset: +1
 
 // Formatstruktur
-include::../{shared-dir}/content/appendix/formatstruktur.adoc[]
+include::../{shared-dir}/content/vedlegg/formatstruktur.adoc[]
 * link:/ehf/gefeg/catalogue/1.0/[Formatstruktur for katalog]
 * link:/ehf/gefeg/catalogueresponse/1.0/[Formatstruktur for katalogbekreftelse]
 
