@@ -12,6 +12,14 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" prefix="ubl-order-response"/>
   <ns uri="utils" prefix="u"/>
 
+  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:gln" as="xs:boolean">
+    <param name="val"/>
+    <variable name="length" select="string-length($val) - 1"/>
+    <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
+    <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (1 + ((($i + 1) mod 2) * 2)))"/>
+    <value-of select="10 - ($weightedSum mod 10) = number(substring($val, $length + 1, 1))"/>
+  </function>
+
   <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11" as="xs:boolean">
     <param name="val"/>
     <variable name="length" select="string-length($val) - 1"/>
@@ -25,6 +33,7 @@
     R01X - Validation of Norwegian organization numbers
     R02X - Validation of tax
     R03X - Formating validation
+    R04X - Validation of other identifiers
     R1XX - Code lists
   -->
 
@@ -182,6 +191,11 @@
       <assert id="EHF-COMMON-R030"
               test="(string(.) castable as xs:date) and (string-length(.) = 10)"
               flag="fatal">A date must be formatted YYYY-MM-DD.</assert>
+    </rule>
+    <rule context="cbc:ID[@schemeID = 'GLN']">
+       <assert id="EHF-COMMON-R040"
+               test="matches(., '^[0-9]+$') and u:gln(.)"
+               flag="warning">Invalid GLN number provided.</assert>
     </rule>
     <!--
       Replaces:

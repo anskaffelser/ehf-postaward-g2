@@ -78,6 +78,12 @@ WARNING: Valideringsregler som er ventet å trigge feil i neste release: EHF-COM
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T16-R008 (*F*)
 
+3+h| Validation of other identifiers
+
+| EHF-COMMON-R040 (*W*)
+| Invalid GLN number provided.
+| _New rule_
+
 3+h| Code lists
 
 | EHF-COMMON-R100 (*W*)

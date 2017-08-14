@@ -46,6 +46,14 @@ include::EHF-COMMON-R030.adoc[]
 
 :leveloffset: -2
 
+== R04X - Validation of other identifiers [[EHF-COMMON-R04X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R040.adoc[]
+
+:leveloffset: -2
+
 == R1XX - Code lists [[EHF-COMMON-R1XX]]
 
 :leveloffset: +2

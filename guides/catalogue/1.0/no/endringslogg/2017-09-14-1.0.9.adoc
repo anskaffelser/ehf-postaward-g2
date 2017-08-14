@@ -90,6 +90,12 @@ WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T19-R006 (*F*)
 
+3+h| Validation of other identifiers
+
+| EHF-COMMON-R040 (*W*)
+| Invalid GLN number provided.
+| _Ignored_
+
 3+h| Code lists
 
 | EHF-COMMON-R100 (*W*)
@@ -158,6 +164,12 @@ WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T
 | EHF-COMMON-R030 (*F*)
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T58-R001 (*F*)
+
+3+h| Validation of other identifiers
+
+| EHF-COMMON-R040 (*W*)
+| Invalid GLN number provided.
+| _Ignored_
 
 3+h| Code lists
 

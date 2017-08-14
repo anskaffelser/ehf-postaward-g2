@@ -86,6 +86,12 @@ WARNING: Validation rules expected to be updated to trigger error in next releas
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T19-R006 (*F*)
 
+3+h| Validation of other identifiers
+
+| EHF-COMMON-R040 (*W*)
+| Invalid GLN number provided.
+| _Ignored_
+
 3+h| Code lists
 
 | EHF-COMMON-R100 (*W*)
@@ -154,6 +160,12 @@ WARNING: Validation rules expected to be updated to trigger error in next releas
 | EHF-COMMON-R030 (*F*)
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T58-R001 (*F*)
+
+3+h| Validation of other identifiers
+
+| EHF-COMMON-R040 (*W*)
+| Invalid GLN number provided.
+| _Ignored_
 
 3+h| Code lists
 
