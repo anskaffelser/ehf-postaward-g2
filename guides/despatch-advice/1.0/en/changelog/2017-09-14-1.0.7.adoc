@@ -1,3 +1,7 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
 [cols="1,9,2", options="header"]
 |===
 | Issue | Description | Type
@@ -12,7 +16,7 @@
 
 |===
 
-WARNING: Validation rules expected to be updated to trigger error in next release: EHF-COMMON-R011
+WARNING: Validation rules expected to be updated to trigger error in next release: link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011]
 
 
 === Mapping of rules for EHF Common in EHF Despatch Advice
@@ -25,65 +29,65 @@ WARNING: Validation rules expected to be updated to trigger error in next releas
 
 3+h| Document in general
 
-| EHF-COMMON-R001 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R001[EHF-COMMON-R001] (*F*)
 | Document MUST not contain empty elements.
 | NOGOV-T16-R011 (*F*)
 
-| EHF-COMMON-R002 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R002[EHF-COMMON-R002] (*F*)
 | Document MUST not contain empty elements.
 | NOGOV-T16-R011 (*F*)
 
-| EHF-COMMON-R003 (*W*)
+| link:{ruleurl-common}EHF-COMMON-R003[EHF-COMMON-R003] (*W*)
 | Document SHOULD not contain schema location.
 | _New rule_
 
-| EHF-COMMON-R004 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R004[EHF-COMMON-R004] (*F*)
 | Document MUST have a syntax identifier.
 | NOGOV-T16-R001 (*F*)
 
 3+h| Validation of Norwegian organization numbers
 
-| EHF-COMMON-R010 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R010[EHF-COMMON-R010] (*F*)
 | MUST be a valid Norwegian organization number. Only numerical value allowed
 | NOGOV-T16-R010 (*F*)
 
-| EHF-COMMON-R011 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (*F*)
 | When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
 | _New rule_
 
-| EHF-COMMON-R012 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (*F*)
 | A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.
 | _Ignored_
 
-| EHF-COMMON-R013 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (*F*)
 | When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
 | _Ignored_
 
-| EHF-COMMON-R014 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R014[EHF-COMMON-R014] (*F*)
 | An endpoint identifier scheme MUST have the value 'NO:ORGNR'.
 | NOGOV-T16-R009 (*F*)
 
 3+h| Validation of tax
 
-| EHF-COMMON-R020 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R020[EHF-COMMON-R020] (*F*)
 | Tax categories MUST be one of the follwoing codes:  AA E H K R S Z
 | _Ignored_
 
 3+h| Formating validation
 
-| EHF-COMMON-R030 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R030[EHF-COMMON-R030] (*F*)
 | A date must be formatted YYYY-MM-DD.
 | NOGOV-T16-R008 (*F*)
 
 3+h| Validation of other identifiers
 
-| EHF-COMMON-R040 (*W*)
+| link:{ruleurl-common}EHF-COMMON-R040[EHF-COMMON-R040] (*W*)
 | Invalid GLN number provided.
 | _New rule_
 
 3+h| Code lists
 
-| EHF-COMMON-R100 (*W*)
+| link:{ruleurl-common}EHF-COMMON-R100[EHF-COMMON-R100] (*W*)
 | Attachment is not a recommended MIMEType.
 | _Ignored_
 
