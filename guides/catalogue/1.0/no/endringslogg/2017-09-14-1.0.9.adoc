@@ -17,6 +17,10 @@
 | Legge til regelen link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024] (**W**) for å understøtte implisitt funksjonalitet.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/223[#223]
+| Legge til manglende anbefalinger for vedleggsformat.
+| Guide
+
 |===
 
 WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024, EHF-COMMON-R011, EHF-COMMON-R012, EHF-COMMON-R013

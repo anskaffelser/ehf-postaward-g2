@@ -44,3 +44,24 @@ In ordering system may additional information about attachements needed to incre
 </cac:Item>
 ----
 <1> Code defining type of content.
+
+
+== Formats
+
+Non-XML documents can be sent as attachments to the EHF Order. This could be drawings or timesheets or other documents relevant for the order. The attachment can either be sent as a binary objetc embedded in the message or as a URI to an external address as a link.
+It is recommended to send attachments as embedded, binary objects and not as external references.
+
+Additional recommendations:
+
+Coding::
+Base64
+Document format::
+MIME types:
+* Pdf – application / pdf
+* TXT – text / txt
+* GIF – image / gif
+* TIFF – image / tiff
+* JPEG, JPG – image / jpeg
+* PNG – image / png
+Size::
+5MB
