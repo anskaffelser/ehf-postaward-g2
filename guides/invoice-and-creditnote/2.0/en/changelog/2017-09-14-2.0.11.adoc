@@ -6,7 +6,7 @@
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/200[#200]
-| Adding rules link:{ruleurl-inv}NONAT-T10-R030/[NONAT-T10-R031] (**W**), link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R032] (**W**), link:{ruleurl-inv}NONAT-T14-R030/[NONAT-T14-R031] (**W**) and link:{ruleurl-inv}NONAT-T14-R031/[NONAT-T14-R032] (**W**) for validation of tax categories.
+| Adding rules link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031] (**W**), link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032] (**W**), link:{ruleurl-inv}NONAT-T14-R031/[NONAT-T14-R031] (**W**) and link:{ruleurl-inv}NONAT-T14-R032/[NONAT-T14-R032] (**W**) for validation of tax categories.
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/215[#215]
