@@ -27,4 +27,8 @@
 
 |===
 
-WARNING: Valideringsregler som er ventet å trigge feil i neste release: NONAT-T10-R031, NONAT-T10-R032, NONAT-T14-R031, NONAT-T10-R032.
+WARNING: Valideringsregler som er ventet å trigge feil i neste release:
+link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031],
+link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032],
+link:{ruleurl-cre}NONAT-T14-R030/[NONAT-T14-R030],
+link:{ruleurl-cre}NONAT-T14-R031/[NONAT-T14-R031]

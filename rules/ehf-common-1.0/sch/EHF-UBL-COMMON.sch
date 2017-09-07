@@ -9,6 +9,7 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" prefix="ubl-application-response"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" prefix="ubl-catalogue"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2" prefix="ubl-despatch-advice"/>
+  <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Order-2" prefix="ubl-order"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" prefix="ubl-order-response"/>
   <ns uri="utils" prefix="u"/>
 

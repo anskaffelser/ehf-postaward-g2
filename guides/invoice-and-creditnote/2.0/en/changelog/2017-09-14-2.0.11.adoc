@@ -27,4 +27,8 @@
 
 |===
 
-WARNING: Validation rules expected to be updated to trigger error in next release: NONAT-T10-R031, NONAT-T10-R032, NONAT-T14-R031, NONAT-T10-R032.
+WARNING: Validation rules expected to be updated to trigger error in next release:
+link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031],
+link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032],
+link:{ruleurl-cre}NONAT-T14-R030/[NONAT-T14-R030],
+link:{ruleurl-cre}NONAT-T14-R031/[NONAT-T14-R031]

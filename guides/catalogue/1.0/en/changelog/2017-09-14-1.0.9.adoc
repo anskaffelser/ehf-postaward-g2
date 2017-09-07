@@ -24,7 +24,11 @@
 
 |===
 
-WARNING: Validation rules expected to be updated to trigger error in next release: NOGOV-T19-R024, link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011], link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012], link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013]
+WARNING: Validation rules expected to be updated to trigger error in next release:
+link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024],
+link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011],
+link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012],
+link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013]
 
 
 === Mapping of rules for EHF Common in EHF Catalogue
@@ -124,7 +128,7 @@ WARNING: Validation rules expected to be updated to trigger error in next releas
 | Document SHOULD not contain schema location.
 | _New rule_
 
-| link:{ruleurl-common}EHF-COMMON-R004[EHF-COMMON-R004 (*F*)
+| link:{ruleurl-common}EHF-COMMON-R004[EHF-COMMON-R004] (*F*)
 | Document MUST have a syntax identifier.
 | NOGOV-T58-R002 (*F*)
 

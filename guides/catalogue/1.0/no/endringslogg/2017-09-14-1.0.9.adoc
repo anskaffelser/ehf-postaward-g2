@@ -28,7 +28,11 @@
 
 |===
 
-WARNING: Valideringsregler som er ventet å trigge feil i neste release: NOGOV-T19-R024, link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011], link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012], link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013]
+WARNING: Valideringsregler som er ventet å trigge feil i neste release:
+link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024],
+link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011],
+link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012],
+link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013]
 
 
 === Mapping of rules for EHF Common in EHF Catalogue
