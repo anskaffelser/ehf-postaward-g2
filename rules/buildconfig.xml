@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
-    <package url="http://vefa.difi.no/ehf/standard/ehf-catalogue-1.0.9/">EHF Catalogue 1.0.9</package>
-    <package url="http://vefa.difi.no/ehf/standard/ehf-despatch-advice-1.0.7/">EHF Despatch Advice 1.0.7</package>
-    <package url="http://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.11/">EHF Invoice and Creditnote 2.0.11</package>
-    <package url="http://vefa.difi.no/ehf/standard/ehf-ordering-1.0.8/">EHF Ordering 1.0.8</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-catalogue-1.0.10/">EHF Catalogue 1.0.10</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-despatch-advice-1.0.8/">EHF Despatch Advice 1.0.8</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.12/">EHF Invoice and Creditnote 2.0.12</package>
+    <package url="http://vefa.difi.no/ehf/standard/ehf-ordering-1.0.9/">EHF Ordering 1.0.9</package>
     <package url="http://vefa.difi.no/ehf/standard/ehf-reminder-1.1.0/">EHF Reminder 1.1.0</package>
 
 </buildConfigurations>
