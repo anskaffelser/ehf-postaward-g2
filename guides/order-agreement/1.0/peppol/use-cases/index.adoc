@@ -1,0 +1,18 @@
+
+= Process and typical use cases
+
+The order agreement BIS includes the sending of information on agreed products/services from a Seller to a Buyer.
+
+
+:leveloffset: +1
+
+include::process-flow.adoc[]
+include::business-process-diagram.adoc[]
+include::use-case1.adoc[]
+include::use-case2.adoc[]
+include::use-case3.adoc[]
+include::use-case4.adoc[]
+include::use-case5.adoc[]
+
+
+:leveloffset: -1

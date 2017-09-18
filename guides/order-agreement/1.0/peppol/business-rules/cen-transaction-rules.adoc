@@ -1,0 +1,27 @@
+
+= CENBII transaction business rules
+
+The following rules apply to the order agreement transaction as it is used in the Order agreement BIS.
+
+[cols="2,7,2,1", options="header"]
+|===
+ | Rule ID | Rule | Req ID | Error level
+ | BII3-T110-R001 | An Order agreement MUST have a customization identifier. | tir110-009 | fatal
+ | BII3-T110-R002 | An Order agreement MUST have a BIS identifier. | tir110-008 | fatal
+ | BII3-T110-R003 | An Order agreement MUST contain the date of issue. | tir110-002 | fatal
+ | BII3-T110-R005 | An Order agreement MUST contain the Order agreement identifier. | tir110-001 | fatal
+ | BII3-T110-R006 | An Order agreement MUST specify the buying party. | tir110-010/011 | fatal
+ | BII3-T110-R007 | An Order agreement MUST specify the selling party. | tir110-013/014 | fatal
+ | BII3-T110-R008 | An Order agreement MUST have at least one Order agreement line. |  | fatal
+ | BII3-T110-R009 | An Order agreement line MUST contain a unique line identifier. | tir110-022 | fatal
+ | BII3-T110-R011 | Prices of items MUST not be negative. | tir110-109 | fatal
+ | BII3-T110-R012 | An item in an Order agreement line MUST be identifiable by either "item sellers identifier" or "item standard identifier". | tir110-033/034 | fatal
+ | BII3-T110-R015 | An Order agreement line MUST specify line VAT information. |  | fatal
+ | BII3-T110-R018 | A seller MUST contain the seller identifier  | tir110-014 | fatal
+ | BII3-T110-R019a | A seller name MUST be at most one | tir110-013 | fatal
+ | BII3-T110-R019b | A seller id MUST be at most one | tir110-014 | fatal
+ | BII3-T110-R019c | A buyer name MUST be at most one | tir110-010 | fatal
+ | BII3-T110-R019d | A buyer id MUST be at most one | tir110-011 | fatal
+ | BII3-T110-R020 | A buyer MUST contain the buyer identifier  |  | fatal
+ | BII3-T110-R021 | An Order agreement line MUST contain a quantity and it should not be 0 | tir110-093 | fatal
+|===

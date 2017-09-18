@@ -1,0 +1,25 @@
+
+=	Item labelling
+
+
+Information about the items environmental, social, ethical and quality type of labelling. The UBL structure used for item labeling requires certain elements in addition to those used by this BIS. To fulfill the UBL requirements these are included with the dummy value NA.
+
+[source,xml,indent=0]
+.Example:
+----
+<cac:Certificate>
+	<cbc:ID>EU Ecolabel</cbc:ID>
+	<cbc:CertificateTypeCode>NA</cbc:CertificateTypeCode>
+	<cbc:CertificateType>Environmental</cbc:CertificateType>
+	<cbc:Remarks>Item label value</cbc:Remarks>
+	<cac:IssuerParty>
+		<cac:PartyName>
+			<cbc:Name>NA</cbc:Name>
+		</cac:PartyName>
+	</cac:IssuerParty>
+	<cac:DocumentReference>
+		<cbc:ID>Item label reference</cbc:ID>
+	</cac:DocumentReference>
+</cac:Certificate>
+
+----

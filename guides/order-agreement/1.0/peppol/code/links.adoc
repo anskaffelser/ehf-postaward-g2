@@ -1,0 +1,37 @@
+
+== Links to code lists
+
+UNCL5305 SUBSET - CEN BII3 subsets
+Subset values are:
+[horizontal]
+ Code:: Value
+ AE:: VAT Reverse Charge
+ E:: Exempt from tax
+ S:: Standard rate
+ Z:: Zero rated goods
+ H:: Higher Rate,  can be used to identify a  rate above the standard rate.
+ AA:: Lower Rate, can be used to identify a rate below the standard rate.
+
+ISO 4217
+http://www.currency-iso.org/en/home/tables/table-a1.html
+
+IANA
+http://www.iana.org/assignments/media-types
+
+ISO 3166-1 alpha2:
+http://www.iso.org/iso/home/standards/country_codes.htm
+
+UN/ECE Rec 20:
+http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html
+
+
+COMMODITY_SCHEME_ID – CENBII
+[horizontal]
+Code:: Value
+CV:: Customs Article Number
+GN:: National Product Group Code
+HS:: Harmonised System
+CPV:: Common Procurement Vocabulary
+UNSPSC:: UNSPSC
+eCLASS:: eCLASS
+GPC:: GS1 Global Product Classification

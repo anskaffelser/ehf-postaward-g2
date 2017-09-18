@@ -1,0 +1,88 @@
+=	PEPPOL Identifiers
+
+PEPPOL has defined a “Policy for Using Identifiers” [PEPPOL_Transp] that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the PEPPOL environment. The policies that apply to this BIS are the following:
+
+==	Party Identifiers
+
+The “schemeID” attribute must be populated in all instances of the “ID” element when used within a “PartyIdentification”-container and in all instances of the “EndpointID” element when used within a “Party”-container.
+
+[source,xml,indent=0]
+.Examples of usage in PartyIdentification:
+----
+<cac:PartyIdentification>
+	<cbc:ID schemeID="GLN">5790000435968</cbc:ID>
+</cac:PartyIdentification>
+----
+
+The following examples denote that the Issuing Agency is DK:CVR in the PEPPOL set of Issuing Agency Codes. This means that the party has the Danish CVR identifier DK87654321.
+
+[source,xml,indent=0]
+.Examples of usage in PartyIdentification and Endpoint ID:
+----
+<cbc:EndpointID schemeID="DK:CVR">DK87654321</cbc:EndpointID>
+
+<cac:PartyIdentification>
+	<cbc:ID schemeID="DK:CVR">DK87654321</cbc:ID>
+</cac:PartyIdentification>
+----
+
+==	Version ID
+
+This BIS is using the UBL 2.1 syntax [UBL_OrderResponse]. The namespace of the XML-message does only communicate the major version number. Since it is important for the receiver to also know what minor version of the syntax that is used, the element UBLVersionID must be stated with the value 2.1:
+
+[source,xml,indent=0]
+----
+<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+----
+
+== Profile ID
+
+The ProfileID identifies the process that the business document is part of. PEPPOL BIS uses the identification system according to BII:
+
+The following process identifier is used for ―BII42 – Order Agreement:
+
+ProfileID: urn:www.cenbii.eu:profile:bii42:ver1.0
+
+[source,xml,indent=0]
+.Example of usage:
+----
+<cbc:ProfileID> urn:www.cenbii.eu:profile:bii42:ver1.0</cbc:ProfileID>
+----
+
+==	Customization ID
+
+The PEPPOL CustomizationID identifies the specification of content and rules that apply to the transaction.
+This BIS has required some minor additions and changes to the CEN BII transaction. Following the CENBII methodology any extension must be communicated by adding an extension ID onto the Customization ID [CENBII]. The full syntax is:
+
+[source,xml,indent=0]
+----
+ <transactionId>:(restrictive|extended|partly):<extensionId>[(restrictive|extended|partly):<extensionId>]
+----
+
+
+Where:
+
+ * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns110:ver1.0
+
+ *  Peppol extension ID is: urn:www.peppol.eu:bis:peppol42a:ver1.0
+
+
+By combining these according to the identifier syntax the CustomizationID to use in PEPPOL is:
+----
+urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0
+----
+
+[source,xml,indent=0]
+.Example of usage:
+----
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0</cbc:CustomizationID>
+----
+
+For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
+
+== Namespaces
+
+The target namespace for the mapping of Order Agreement onto UBL is UBL 2.1 OrderResponse [UBL_OrderResponse] is:
+----
+urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2
+----

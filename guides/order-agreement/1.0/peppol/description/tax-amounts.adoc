@@ -1,0 +1,42 @@
+
+= Tax amounts
+
+It is possible to state the tax total of the order agreement, on the header level and also on line level.
+
+
+[source,xml,indent=0]
+.Header level:
+----
+<cac:TaxTotal>
+	<cbc:TaxAmount currencyID="EUR">1236</cbc:TaxAmount>
+	<cac:TaxSubtotal>
+		<cbc:TaxableAmount currencyID="EUR">1000</cbc:TaxableAmount>
+		<cbc:TaxAmount currencyID="EUR">236</cbc:TaxAmount>
+		<cac:TaxCategory>
+			<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+			<cbc:Percent>23.6</cbc:Percent>
+			<cac:TaxScheme>
+				<cbc:ID schemeID="UNCL5153">VAT</cbc:ID>
+			</cac:TaxScheme>
+		</cac:TaxCategory>
+	</cac:TaxSubtotal>
+</cac:TaxTotal>
+----
+
+[source,xml,indent=0]
+.Line level:
+----
+<cac:LineItem>
+	<cbc:ID>1</cbc:ID>
+	<cbc:Note>Line note</cbc:Note>
+	<cbc:Quantity unitCode="C62">12</cbc:Quantity>
+	<cbc:LineExtensionAmount currencyID="EUR">1000</cbc:LineExtensionAmount>
+	<cbc:TotalTaxAmount currencyID="EUR">236</cbc:TotalTaxAmount>
+	…
+	<cac:ClassifiedTaxCategory>
+		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+		<cbc:Percent>23.6</cbc:Percent>
+		<cac:TaxScheme>
+			<cbc:ID schemeID="UNCL5153">VAT</cbc:ID>
+		</cac:TaxScheme>
+----

@@ -1,0 +1,10 @@
+
+= Message transport
+
+The transactions defined in this BIS need to be transferred from the sending party to the receiving party through an agreed transport network and protocol. The PEPPOL BIS is specified indepent of a transport network but it is designed with the requirement of the PEPPOL network in mind and does not specifically support other transport network that may be used.
+
+== The PEPPOL network
+
+The PEPPOL transport network is a four corner transport network that allows senders end receivers to exchange message from one service provider to another by using a single identifier for the parties.
+
+Details about the PEPPOL network can be found at {link-peppol-transp}[PEPPOL_Transp]

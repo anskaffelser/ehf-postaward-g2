@@ -1,0 +1,15 @@
+
+=	Transaction business requirements
+
+Based on the goals and scope of the BII profile on which this BIS is based the following set of High level requirements are found. Each requirement is connected to a goal.
+
+
+:leveloffset: +1
+
+include::business-requirements.adoc[]
+include::transaction-requirements.adoc[]
+include::transaction-information-requirements.adoc[]
+include::specific.adoc[]
+
+
+:leveloffset: -1

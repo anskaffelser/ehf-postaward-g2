@@ -1,0 +1,15 @@
+
+= Process flow
+
+The order agreement process flow can be described as follows:
+
+Start position.
+
+. A Buyer makes a purchase of goods or services from the Seller.
+.	A Seller reports one or more accumulated purchases made under a framework agreement to the Buyer.
+
+End positions.
+
+.	A purchase has been recorded in the Buyer´s purchasing system. The seller proceeds to invoice accordingly.
+
+An Order Agreement may refer to a framework agreement for its terms and conditions; otherwise the Buyer’s terms and conditions apply.
