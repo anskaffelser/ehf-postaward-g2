@@ -3,7 +3,7 @@
 
 The following rules apply to the order agreement transaction as it is used in the Order agreement BIS.
 
-[cols="2,7,2,1", options="header"]
+[cols="2,6,2,2", options="header"]
 |===
  | Rule ID | Rule | Req ID | Error level
  | BII3-T110-R001 | An Order agreement MUST have a customization identifier. | tir110-009 | fatal

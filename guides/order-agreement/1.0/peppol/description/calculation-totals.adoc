@@ -47,35 +47,16 @@ Formulas for the calculations of totals are as follows:
 |{set:cellbgcolor:#FFFFFF} Sum of line amounts | + | 1436.50	| LineExtensionAmount
 | Allowance on document level | - | 100.00 | Allowances(Total)
 | Charges on document level | + | &#160; 200.00 | Charges(Total)
-| Total amount without VAT | = | 1536.50 | TaxExclusiveAmount
-|  |  |  |
+| [underline]#Total amount without VAT# | = | [underline]#1536.50# | [underline]#TaxExclusiveAmount#
+|  |  | |
 | VAT total amount | + |  384.13 | TaxAmount
 |  |  |  |
 | Rounding of Order total | + |0.37| PayableRoundingAmount
-| Total with VAT (value of purchase) | = | 1921.00 | TaxInclusiveAmount
+| [underline]#Total with VAT (value of purchase)# | = | [underline]#1921.00# | [underline]#TaxInclusiveAmount#
 | Paid amounts | - | 1000.00  | PrepaidAmount
-| Amount expected to be paid | = | 921.00 | Payable amount
-
+| [underline]#Amount expected to be paid# | = | [underline]#921.00# | [underline]#Payable amount#
 |===
-////
 
-[pass]
-====
-Business term		                 Sample amounts	  Element
-
-Sum of line amounts	                +		1436.50	  LineExtensionAmount
-Allowance on document level	        -		 100.00	  Allowances(Total)
-Charges on document level	          +	 	 200.00 	Charges(Total)
-Total amount without VAT	          =		1536.50	  TaxExclusiveAmount
-
-VAT total amount	                  +		 384.13	  TaxAmount
-
-Rounding of Order total	            +	 	 0.37   PayableRoundingAmount
-Total with VAT (value of purchase)	=		1921.00	  TaxInclusiveAmount
-Paid amounts	                      -	 	1000.00 	PrepaidAmount
-Amount expected to be paid	        =	   921.00	  Payable amount
-====
-////
 
 [source,xml,indent=0]
 .The above example is presented in the order agreement in the following way:

@@ -3,16 +3,21 @@
 
 Following rules have been defined by OpenPeppol in addition to the rules adopted from the BII specifications. These rules apply in all implementations that follow this PEPPOL BIS.
 
-[cols="3,3,3,3", options="header"]
+[cols="2,6,2,2", options="header"]
 |===
 |  Rule ID | Rule | Req ID | Error level
-| EUGEN-T110-R001 | An endpoint identifier MUST have a scheme identifier attribute | tir110-015 + tir110-012 | fatal
-| EUGEN-T110-R002 | A party identifier MUST have a scheme identifier attribute | tir110-014 + tir110-013 | fatal
+| EUGEN-T110-R001 | An endpoint identifier MUST have a scheme identifier attribute | tir110-015 +
+tir110-012 | fatal
+| EUGEN-T110-R002 | A party identifier MUST have a scheme identifier attribute | tir110-014 +
+tir110-013 | fatal
 | EUGEN-T110-R003 | A document currency code MUST have a list identifier attribute "ISO4217" | tir110-007 | fatal
-| EUGEN-T110-R004 | A country identification code MUST have a list identifier attribute "ISO3166-1:Alpha2" | tir110-062 + tir110-056 + tir110-077 | fatal
+| EUGEN-T110-R004 | A country identification code MUST have a list identifier attribute "ISO3166-1:Alpha2" | tir110-062 +
+tir110-056 +
+tir110-077 | fatal
 | EUGEN-T110-R005 | A unit code attribute MUST have a unit code list identifier attribute "UNECERec20" | tir110-093 | fatal
-| EUGEN-T110-R006 | A tax category identifier MUST have a scheme identifier attribute "UNCL5305" | OP-110-005 + tir110-106 | fatal
-| EUGEN-T110-R007 | CustomizationID must be:  urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0 | tir110-009 | fatal
+| EUGEN-T110-R006 | A tax category identifier MUST have a scheme identifier attribute "UNCL5305" | OP-110-005 +
+tir110-106 | fatal
+| EUGEN-T110-R007 | CustomizationID must be:  urn:www.cenbii.eu:transaction:biitrns110:ver1.0: extended:urn:www.peppol.eu:bis:peppol42a:ver1.0 | tir110-009 | fatal
 | EUGEN-T110-R008 | ProfileID must be: urn:www.cenbii.eu:profile:bii42:ver1.0 | tir110-008 | fatal
 | EUGEN-T110-R009 | Sellers endpoint id must exist | tir110-015 | fatal
 | EUGEN-T110-R010 | Buyers endpoint id must exist | tir110-012 | fatal

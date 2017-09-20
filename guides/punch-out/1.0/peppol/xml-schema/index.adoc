@@ -1,0 +1,6 @@
+
+= XML Schema Guideline and information content of the Shopping Cart  message.
+
+==	Structure of transaction 77 Shopping Cart
+
+<<Punch out schema>>
