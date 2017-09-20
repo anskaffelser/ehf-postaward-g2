@@ -1,0 +1,110 @@
+
+
+= Configured products
+
+
+The seller may define a configured product in a shopping cart and then list the individual items that are part of the configured product in a structured way as described in this clause. The seller may also describe a configured product in an unstructured way as item description. The items that are part of a configured product reference the Sellers Item number for the configured product that it is part of. No reference is made from the configured product to the item.
+
+A shopping cart line that is part of a configured product can not be ordered individually. If configured products are part of a shopping cart that has complete cart indicator as true then a full ordering of the cart means purchase of its configured products only but not additionally the individual items that are part of them. These items can be offered individually with additional lines in the cart where the item is not statet as "part of" the configured product. If information for individual items conflict with the information given for the configured items the configured item supersedes. An example of an item that is part of a configured product.
+
+[source,xml]
+----
+<cac:AdditionalItemProperty>
+	<cbc:Name>PartOf</cbc:Name>
+	<cbc:Value>PC01</cbc:Value>
+</cac:AdditionalItemProperty>
+----
+
+
+Example: Item ConfXX02 is configured by 1 of  item 12345 and 2 of item 6789. The order will be ONLY on Item ConfXX02.
+
+Catalogue line 1 – the configured product
+[source,xml]
+----
+<cac:CatalogueLine>
+	<cbc:ID>1</cbc:ID>
+....
+	<cac:RequiredItemLocationQuantity>
+		<cac:Price>
+			<PriceAmount currencyID="EUR">1000.00</cbc:PriceAmount>
+		</cac:Price>
+		<cac:DeliveryUnit>
+			<cbc:BatchQuantity unitCode="C62">1</cbc:BatchQuantity>
+		</cac:DeliveryUnit>
+	</cac:RequiredItemLocationQuantity>
+
+	<cac:Item>
+....
+		<cac:SellersItemIdentification>
+			<cbc:ID>ConfXX02</cbc:ID>
+		</cac:SellersItemIdentification>
+
+	</cac:Item>
+
+</cac:CatalogueLine>
+----
+
+
+Catalogue line 2 – an item that is part of the configured product.
+[source,xml]
+----
+<cac:CatalogueLine>
+	<cbc:ID>2</cbc:ID>
+....
+	<cac:RequiredItemLocationQuantity>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">1100.00</cbc:PriceAmount>
+		</cac:Price>
+		<cac:DeliveryUnit>
+			<cbc:BatchQuantity unitCode="C62">1</cbc:BatchQuantity>
+		</cac:DeliveryUnit>
+	</cac:RequiredItemLocationQuantity>
+
+	<cac:Item>
+....
+		<cac:SellersItemIdentification>
+			<cbc:ID>12345</cbc:ID>
+		</cac:SellersItemIdentification>
+		<cac:AdditionalItemProperty>
+			<cbc:Name>PartOf</cbc:Name>
+			<cbc:Value>ConfXX02</cbc:Value>
+		</cac:AdditionalItemProperty>
+
+	</cac:Item>
+
+</cac:CatalogueLine>
+
+----
+
+Catalogue line 3 – another item, two of which are part of the configured product.
+[source,xml]
+----
+<cac:CatalogueLine>
+	<cbc:ID>3</cbc:ID>
+....
+	<cac:RequiredItemLocationQuantity>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">20.00</cbc:PriceAmount>
+		</cac:Price>
+		<cac:DeliveryUnit>
+			<cbc:BatchQuantity unitCode="C62">2</cbc:BatchQuantity>
+		</cac:DeliveryUnit>
+	</cac:RequiredItemLocationQuantity>
+....
+	<cac:Item>
+
+		<cac:SellersItemIdentification>
+			<cbc:ID>6789</cbc:ID>
+		</cac:SellersItemIdentification>
+		<cac:AdditionalItemProperty>
+			<cbc:Name>INST01</cbc:Name>
+			<cbc:Value>PC01</cbc:Value>
+		</cac:AdditionalItemProperty>
+
+	</cac:Item>
+
+</cac:CatalogueLine>
+
+----
+
+Note that the sum of the price multiplied by quantity of the items containted in the configured item does not have to equal the price of the configured product. The price of the containted items may show the pr. unit price but the configured price may include a price reduction.

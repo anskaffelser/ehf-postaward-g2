@@ -1,0 +1,32 @@
+
+=	Description of selected parts of the shopping cart message
+
+
+A shopping cart message must at minimum contain the following information:
+
+* The cart identifier.
+*	The date and time when the shopping cart message was created.
+*	Identifier of the business process that it belongs to.
+*	Identifier of the message specification that applies to the shopping cart message.
+* The name of the party that provides the cart message, i.e. the seller.
+* The name of the party that receives the cart message, i.e. the buyer.
+* One or more message lines each of which contains at minimum the following:
+
+..	A line identifier.
+..	The line quantity.
+..	The name of the item.
+..	The price of the item.
+..	The VAT category and percentage rate for the item.
+
+In addition to the mandatory information the shopping cart may optionally contain additional information details. The following sections detail how different parts of the shopping cart message are used.
+
+
+
+:leveloffset: +1
+
+include::shopping-cart.adoc[]
+
+include::shopping-cart-line.adoc[]
+
+
+:leveloffset: -1

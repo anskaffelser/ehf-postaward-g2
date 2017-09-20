@@ -1,0 +1,14 @@
+
+=	Business Rules
+
+
+:leveloffset: +1
+
+include::business-rules.adoc[]
+include::peppol-business-rules.adoc[]
+
+include::bii-transaction-rules.adoc[]
+include::peppol-transaction-business-rules.adoc[]
+include::codelists-business-rules.adoc[]
+
+:leveloffset: -1
