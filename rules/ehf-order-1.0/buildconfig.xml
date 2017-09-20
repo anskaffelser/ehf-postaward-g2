@@ -10,8 +10,12 @@
         <inherit>ubl-order-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
         <file source="sch/NOGOV-UBL-T01.sch" path="xsl/NOGOV-UBL-T01.xsl" infoUrl="/ehf/rule/order-1.0/{}/" />
-        <file path="xsl/BIIRULES-UBL-T01.xsl" />
-        <file path="xsl/OPENPEPPOL-UBL-T01.xsl" />
+        <file
+          source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/BII RULES/BIIRULES-UBL-T01.sch"
+          path="xsl/BIIRULES-UBL-T01.xsl" />
+        <file
+          source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T01.sch"
+          path="xsl/OPENPEPPOL-UBL-T01.xsl" />
         <rule identifier="OP-T01-R008" action="suppress" />
         <rule identifier="EHF-COMMON-R011" action="setWarning" />
     </configuration>

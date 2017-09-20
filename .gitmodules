@@ -1,0 +1,4 @@
+[submodule "sources/peppol-bis"]
+	path = sources/peppol-bis
+	url = https://github.com/OpenPEPPOL/peppol-bis.git
+	shallow = true

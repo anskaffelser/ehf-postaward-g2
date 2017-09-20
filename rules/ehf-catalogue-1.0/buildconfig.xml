@@ -9,9 +9,13 @@
         <title>EHF Catalogue 1.0 (Base)</title>
         <inherit>ubl-catalogue-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
+        <file
+          source="../../sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/BII RULES/BIIRULES-UBL-T19.sch"
+          path="xsl/BIIRULES-UBL-T19.xsl" />
+        <file
+          source="../../sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T19.sch"
+          path="xsl/OPENPEPPOL-UBL-T19.xsl" />
         <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" infoUrl="/ehf/rule/catalogue-1.0/{}/" />
-        <file path="xsl/BIIRULES-UBL-T19.xsl" />
-        <file path="xsl/OPENPEPPOL-UBL-T19.xsl" />
         <rule identifier="CL-T19-R004" action="suppress" />
         <rule identifier="EHF-COMMON-R011" action="setWarning" />
         <rule identifier="EHF-COMMON-R012" action="setWarning" />
