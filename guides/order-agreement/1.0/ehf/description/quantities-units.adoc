@@ -1,0 +1,25 @@
+
+=	Quantities and units
+
+Various Quantities and Units can be stated in the EHF Order Agreement. These are both related to the ordering process and the logistics process.
+
+The table below lists quantities and units in the format. To all quantities there must be a  valid Unit of measure according to the Code list.
+
+[cols="4,8", options="header"]
+|===
+| Element name / (Tag name) |	Description
+| Price Quantity /(BaseQuantity)	| Quantity related to Price.
+| Order Quantity /(Quantity) | Quantity that is ordered, e.g. number of pieces or volume in litre.
+|===
+
+[source, xml, indent=0]
+.Example of an order agreement line with a quantity of 120 pieces (cbc:Quantity) and price is given per items. When calculating the line amount the price is applied pr 12 pieces, that is 120/12x50 = NOK 500
+----
+<cbc:ID>1</cbc:ID>
+<cbc:Note>Line note</cbc:Note>
+<cbc:Quantity unitCode="C62">120</cbc:Quantity>
+<cac:Price>
+	<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
+	<cbc:BaseQuantity unitCode="C62">12</cbc:BaseQuantity>
+</cac:Price>
+----

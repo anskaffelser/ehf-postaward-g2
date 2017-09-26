@@ -1,0 +1,22 @@
+
+= Allowances and charges
+
+[source,xml,indent=0]
+.This example shows a charge related to packing costs:
+----
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReason>Discount</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="NOK">100</cbc:Amount>
+</cac:AllowanceCharge>
+----
+
+[source,xml,indent=0]
+.This example shows an allowance related to a  discount on the order:
+----
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReason>Packing cost</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="NOK">200</cbc:Amount>
+</cac:AllowanceCharge>
+----

@@ -1,0 +1,18 @@
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Example files
+include::use-case.adoc[]
+
+// Example files
+include::examples-files.adoc[]
+
+* link:files/example/EHF-OA-complete.xml[Order agreement]
+
+* link:files/example/EHF-42T110-case1.xml[Use case 1]
+
+
+
+:leveloffset: -1

@@ -1,0 +1,16 @@
+
+[appendix]
+= Use case [[appendix-use-case-files]]
+
+Use case files are provided to help implementers. This implementation guide contains these files:
+
+The order agreement {docutype} includes the sending of information on agreed products/services from a Seller to a Buyer.
+
+
+
+
+include::use-case1.adoc[]
+include::use-case2.adoc[]
+include::use-case3.adoc[]
+include::use-case4.adoc[]
+include::use-case5.adoc[]

@@ -1,5 +1,5 @@
 
-== Codelists for identifier schemes
+= Codelists for identifier schemes
 
 Table of the code lists used to constrain the values of schemeID for identifiers in the order agreement transaction:
 

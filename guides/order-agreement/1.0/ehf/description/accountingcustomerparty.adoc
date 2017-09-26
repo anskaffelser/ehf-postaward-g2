@@ -1,0 +1,20 @@
+
+==	AccountingCustomerParty (Invoicee)
+
+The invoicee is the legal person or organization acting on behalf of the customer and who receives the invoice for the order. The invoicee information is optional in the EHF Order Agreement message.
+
+[source]
+.Example
+----
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="NO:ORGNR">987654321</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>AS Innkjøper</cbc:Name>
+    </cac:PartyName>
+  </cac:Party>
+</cac:AccountingCustomerParty>
+
+----

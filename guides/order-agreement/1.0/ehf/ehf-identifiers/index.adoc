@@ -1,0 +1,12 @@
+
+= Electronic Commerce Format (EHF)
+
+:leveloffset: +1
+
+include::ehf-general.adoc[]
+
+include::transport-identifiers.adoc[]
+
+
+
+:leveloffset: -1
