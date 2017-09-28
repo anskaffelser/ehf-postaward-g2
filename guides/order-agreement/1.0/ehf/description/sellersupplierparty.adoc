@@ -3,9 +3,13 @@
 
 The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the buyer. The seller is mandatory in the EHF Order Agreement message.
 
-.Example
 [source,xml,indent=0]
+.Example
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=SellerSupplierParty]
+----
+////
+
 <cac:SellerSupplierParty>
 	<cac:Party>
 		<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
@@ -33,4 +37,4 @@ The seller is the legal person or organization acting on behalf of the supplier 
 		</cac:Contact>
 	</cac:Party>
 </cac:SellerSupplierParty>
-----
+////

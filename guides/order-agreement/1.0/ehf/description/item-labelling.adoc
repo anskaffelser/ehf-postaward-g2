@@ -7,6 +7,9 @@ Information about the items environmental, social, ethical and quality type of l
 [source,xml,indent=0]
 .Example:
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=Certificate]
+----
+////
 <cac:Certificate>
 	<cbc:ID>EU Ecolabel</cbc:ID>
 	<cbc:CertificateTypeCode>NA</cbc:CertificateTypeCode>
@@ -22,4 +25,4 @@ Information about the items environmental, social, ethical and quality type of l
 	</cac:DocumentReference>
 </cac:Certificate>
 
-----
+////

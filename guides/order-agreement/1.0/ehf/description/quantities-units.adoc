@@ -13,8 +13,13 @@ The table below lists quantities and units in the format. To all quantities ther
 |===
 
 [source, xml, indent=0]
-.Example of an order agreement line with a quantity of 120 pieces (cbc:Quantity) and price is given per items. When calculating the line amount the price is applied pr 12 pieces, that is 120/12x50 = NOK 500
+.Example of an order agreement line with a quantity of 10 pieces (cbc:Quantity) and price is given per items. When calculating the line amount the price is applied pr 10 pieces, that is 10x10x10 = NOK 1000
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=QuantUnits]
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=Price]
+----
+
+////
 <cbc:ID>1</cbc:ID>
 <cbc:Note>Line note</cbc:Note>
 <cbc:Quantity unitCode="C62">120</cbc:Quantity>
@@ -22,4 +27,4 @@ The table below lists quantities and units in the format. To all quantities ther
 	<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
 	<cbc:BaseQuantity unitCode="C62">12</cbc:BaseQuantity>
 </cac:Price>
-----
+////

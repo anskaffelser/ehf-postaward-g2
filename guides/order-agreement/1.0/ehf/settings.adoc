@@ -12,6 +12,7 @@ include::../../../settings.adoc[]
 :title-logo-image: {shared-dir}/images/logo.jpg
 :shared-dir: ../../../shared/{lang}
 :docutype: EHF
+:xml-doc-dir: files/example/
 
 // External
 

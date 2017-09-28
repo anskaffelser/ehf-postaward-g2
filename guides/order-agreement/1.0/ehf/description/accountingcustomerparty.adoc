@@ -3,9 +3,12 @@
 
 The invoicee is the legal person or organization acting on behalf of the customer and who receives the invoice for the order. The invoicee information is optional in the EHF Order Agreement message.
 
-[source]
+[source,xml,indent=0]
 .Example
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=AccountingCustomerParty]
+----
+////
 <cac:AccountingCustomerParty>
   <cac:Party>
     <cac:PartyIdentification>
@@ -16,5 +19,4 @@ The invoicee is the legal person or organization acting on behalf of the custome
     </cac:PartyName>
   </cac:Party>
 </cac:AccountingCustomerParty>
-
-----
+////

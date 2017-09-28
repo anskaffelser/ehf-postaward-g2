@@ -7,6 +7,9 @@ It is possible to state the tax total of the order agreement, on the header leve
 [source,xml,indent=0]
 .Header level:
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=TaxTot]
+----
+////
 <cac:TaxTotal>
 	<cbc:TaxAmount currencyID="NOK">1236</cbc:TaxAmount>
 	<cac:TaxSubtotal>
@@ -21,11 +24,14 @@ It is possible to state the tax total of the order agreement, on the header leve
 		</cac:TaxCategory>
 	</cac:TaxSubtotal>
 </cac:TaxTotal>
-----
+////
 
 [source,xml,indent=0]
 .Line level:
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=TaxLine]
+----
+////
 <cac:LineItem>
 	<cbc:ID>1</cbc:ID>
 	<cbc:Note>Line note</cbc:Note>
@@ -39,4 +45,4 @@ It is possible to state the tax total of the order agreement, on the header leve
 		<cac:TaxScheme>
 			<cbc:ID schemeID="UNCL5153">VAT</cbc:ID>
 		</cac:TaxScheme>
-----
+////

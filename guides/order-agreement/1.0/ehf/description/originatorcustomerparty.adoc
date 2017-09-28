@@ -6,6 +6,9 @@ The unit initiating the order.  Most often the end user.  The originator  inform
 [source,xml,indent=0]
 .Example
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=OriginatorCustomerParty]
+----
+////
 <cac:OriginatorCustomerParty>
   <cac:Party>
     <cac:PartyIdentification>
@@ -16,5 +19,4 @@ The unit initiating the order.  Most often the end user.  The originator  inform
     </cac:PartyName>
   </cac:Party>
 </cac:OriginatorCustomerParty>
-
-----
+////

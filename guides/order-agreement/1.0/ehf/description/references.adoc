@@ -5,24 +5,33 @@ When sending the order agreement transaction the seller may include a reference 
 
 [source,xml,indent=0]
 ----
-<cbc:CustomerReference>Buyer reference id tir110-044</cbc:CustomerReference>
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=CustomerReference]
 ----
-
+////
+<cbc:CustomerReference>Buyer reference id tir110-044</cbc:CustomerReference>
+////
 The order agreement may refrence a previous order agreement. This may be relevant, as example, when the buyer has changed a previous order.
 
 [source,xml,indent=0]
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=OrderReference]
+----
+////
 <cac:OrderReference>
 	<cbc:ID>Order id tir110-042</cbc:ID>
 </cac:OrderReference>
-----
+////
 
 The order agreement may reference a contract that applies to the purchase.
 
 [source,xml,indent=0]
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=Contract]
+----
+
+////
 <cac:Contract>
 	<cbc:ID>contract id tir110-049</cbc:ID>
 	<cbc:ContractType>Framwork agreement tir110-050</cbc:ContractType>
 </cac:Contract>
-----
+////

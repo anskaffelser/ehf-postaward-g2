@@ -8,8 +8,11 @@ The Product name is often sent in the order agreement from the buyer to the sell
 [source,xml,indent=0]
 .Example in an EHF Order Agreement message:
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=ItemDescName]
+----
+////
 <cac:Item>
   <cbc:Description>Description of the item</cbc:Description>
   <cbc:Name>Item name</cbc:Name>
 </cac:Item>
-----
+////

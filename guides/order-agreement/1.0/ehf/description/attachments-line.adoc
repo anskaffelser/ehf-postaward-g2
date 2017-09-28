@@ -4,9 +4,12 @@
 Non-XML documents can be sent as attachments to the EHF Order Agreement on line level. This could comprise item specifications, timesheets or other documents relevant for the particluar line in the order agreement. See the above information regarding attachments.
 
 
-[source,xml]
+[source,xml,indent=0]
 .Example:  Attachment as an embedded, binary object in an EHF Order Agreement message on line level.
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=ItemSpecificationDocumentReference1]
+----
+////
 <cac:ItemSpecificationDocumentReference>
   <cbc:ID>doc id</cbc:ID>
   <cbc:DocumentType>Item specs</cbc:DocumentType>
@@ -17,8 +20,9 @@ Non-XML documents can be sent as attachments to the EHF Order Agreement on line 
   </cac:ExternalReference>
   </cac:Attachment>
 </cac:ItemSpecificationDocumentReference>
-----
+////
 
+//Må ha annen xml fil for å tagge dette:
 [source,xml]
 .Example: Link to a downloadable ticket.
 ----

@@ -16,7 +16,7 @@ The following elements show the anticipated monetary totals for an order agreeme
 |===
 
 
-Amounts MUST be given to a precision of two decimals except for Price where maximum number of decimals are four.
+Amounts MUST be given to a precision of maximum two decimals except for Price where maximum number of decimals are four.
 
 Expected total payable amount MUST NOT be negative.
 Expected total sum of line amounts  MUST NOT be negative.
@@ -27,9 +27,9 @@ Formulas for the calculations of totals are as follows:
 [cols="5,7", options="header"]
 |===
  | Element: | Formula:
- | <cbc:LineExtensionAmount> | ∑ LineExtensionAmount (at line level)
- | <cbc:ChargeTotalAmount> | ∑ Charge Amount (where ChargeIndicator = ”true”)
- | <cbc:AllowanceTotalAmount> | ∑ Allowance Amount (where ChargeIndicator = ”false”)
+ | <cbc:LineExtensionAmount> | Sum of LineExtensionAmount (at line level)
+ | <cbc:ChargeTotalAmount> | Sum of Charge Amount (where ChargeIndicator = ”true”)
+ | <cbc:AllowanceTotalAmount> | Sum of Allowance Amount (where ChargeIndicator = ”false”)
  | <cbc:TaxExclusiveAmount> | LineExtensionAmount
 – AllowanceTotalAmount
 + ChargeTotalAmount
@@ -44,23 +44,26 @@ Formulas for the calculations of totals are as follows:
 [cols="<,^,>,<", grid="none" row="none" ,frame="topbot",options="header"]
 |===
 | Business term | Sample | Amounts | Elements
-|{set:cellbgcolor:#FFFFFF} Sum of line amounts | + | 1436.50	| LineExtensionAmount
-| Allowance on document level | - | 100.00 | Allowances(Total)
-| Charges on document level | + | &#160; 200.00 | Charges(Total)
-| [underline]#Total amount without VAT# | = | [underline]#1536.50# | [underline]#TaxExclusiveAmount#
+|{set:cellbgcolor:#FFFFFF} Sum of line amounts | + | 1000.00 | `LineExtensionAmount`
+| Allowance on document level | - | 100.00 | `AllowanceTotalAmount`
+| Charges on document level | + | &#160; 199.95 | `ChargeTotalAmount`
+| [underline]#Total amount without VAT# | = | [underline]#1099.95# | [underline]#`TaxExclusiveAmount`#
 |  |  | |
-| VAT total amount | + |  384.13 | TaxAmount
+| VAT total amount | + |  250.00 | Tax amount
 |  |  |  |
-| Rounding of Order total | + |0.37| PayableRoundingAmount
-| [underline]#Total with VAT (value of purchase)# | = | [underline]#1921.00# | [underline]#TaxInclusiveAmount#
-| Paid amounts | - | 1000.00  | PrepaidAmount
-| [underline]#Amount expected to be paid# | = | [underline]#921.00# | [underline]#Payable amount#
+| Rounding of Order total | + |0.05| `PayableRoundingAmount`
+| [underline]#Total with VAT (value of purchase)# | = | [underline]#1350.00# | [underline]#`TaxInclusiveAmount`#
+| Paid amounts | - | 100.00  | `PrepaidAmount`
+| [underline]#Amount expected to be paid# | = | [underline]#1250.00# | [underline]#`PayableAmount`#
 |===
 
 
 [source,xml,indent=0]
 .The above example is presented in the order agreement in the following way:
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=LegalMonetaryTotal]
+----
+////
 <cac:LegalMonetaryTotal>
 	<cbc:LineExtensionAmount currencyID="NOK">1436.50</cbc:LineExtensionAmount>
 	<cbc:TaxExclusiveAmount currencyID="NOK">1536.50</cbc:TaxExclusiveAmount>
@@ -71,7 +74,7 @@ Formulas for the calculations of totals are as follows:
 	<cbc:PayableRoundingAmount currencyID="NOK">0.37</cbc:PayableRoundingAmount>
 	<cbc:PayableAmount currencyID="NOK">921.00</cbc:PayableAmount>
 </cac:LegalMonetaryTotal>
-----
+////
 
 == Element for rounding amount, the PayableRoundingAmount
 

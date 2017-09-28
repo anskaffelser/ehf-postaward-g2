@@ -24,6 +24,9 @@ NB: Attachments should be used for additional information and not as order copie
 [source,xml,indent=0]
 .Example of attachment as an embedded, binary object in an EHF Order Agreement message.
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=AdditionalDocumentReference]
+----
+////
 <cac:AdditionalDocumentReference>
   <cbc:ID>Document idtir110-045</cbc:ID>
   <cbc:DocumentType>Document description</cbc:DocumentType>
@@ -34,4 +37,4 @@ NB: Attachments should be used for additional information and not as order copie
     </cac:ExternalReference>
   </cac:Attachment>
 </cac:AdditionalDocumentReference>
-----
+////

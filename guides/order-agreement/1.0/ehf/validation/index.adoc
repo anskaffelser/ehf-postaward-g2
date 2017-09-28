@@ -12,9 +12,7 @@ include::validation-principles.adoc[]
 
 include::dynamic-validation.adoc[]
 
-
-= Validation Rules
-
+include::validation-rules.adoc[]
 
 include::validation-service.adoc[]
 

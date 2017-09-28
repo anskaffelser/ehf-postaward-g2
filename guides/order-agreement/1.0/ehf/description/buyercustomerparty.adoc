@@ -3,9 +3,12 @@
 
 The buyer is the legal person or organization acting on behalf of the customer and who buys or purchases the goods or services.  The buyer is mandatory in the EHF Order Agreement message.
 
-[source,xml]
+[source,xml,indent=0]
 .Example
 ----
+include::../{xml-doc-dir}ehf-oa-full.xml[tags=BuyerCustomerParty]
+----
+////
 <cac:BuyerCustomerParty>
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
@@ -33,5 +36,4 @@ The buyer is the legal person or organization acting on behalf of the customer a
 				<cbc:ElectronicMail>kari@innkjoper.no</cbc:ElectronicMail>
 			</cac:DeliveryContact>
 	</cac:BuyerCustomerParty>
-
-----
+////
