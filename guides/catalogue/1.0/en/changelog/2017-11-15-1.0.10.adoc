@@ -7,7 +7,7 @@
 | Issue | Description | Type
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/230[#230]
-| Updating rules link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031] (**F**), link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032] (**F**), link:{ruleurl-cre}NONAT-T14-R030/[NONAT-T14-R030] (**F**) and link:{ruleurl-cre}NONAT-T14-R031/[NONAT-T14-R031] (**F**) from warning to error.
+| Updating rules link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024] (**F**), link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**), link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (**F**) and link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (**F**) from warning to error.
 | Validator
 
 |===
