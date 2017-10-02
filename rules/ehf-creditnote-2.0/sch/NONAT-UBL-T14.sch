@@ -101,7 +101,7 @@
                  flag="warning">[NONAT-T14-R008]-AllowanceChargeReason text SHOULD be specified for all allowances and charges</assert>
          <assert id="NONAT-T14-R031"
                  test="not(cac:TaxCategory/cbc:Percent) or (some $cat in $taxCategories satisfies $cat = $category)"
-                 flag="warning">[NONAT-T14-R031]-Tax category for allowance and charge MUST match provided tax categories on document level.</assert>
+                 flag="fatal">[NONAT-T14-R031]-Tax category for allowance and charge MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:TaxCategory/cbc:ID">
          <assert id="NONAT-T14-R017"
@@ -134,7 +134,7 @@
                  flag="fatal">[NONAT-T14-R024]-Credit note line amount MUST be equal to the price amount multiplied by the quantity, plus charges minus allowances at the line level.</assert>
          <assert id="NONAT-T14-R030"
                  test="not(cac:Item/cac:ClassifiedTaxCategory/cbc:Percent) or (some $cat in $taxCategories satisfies $cat = $category)"
-                 flag="warning">[NONAT-T14-R030]-Tax category on line level MUST match provided tax categories on document level.</assert>
+                 flag="fatal">[NONAT-T14-R030]-Tax category on line level MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:TaxSubtotal">
          <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>

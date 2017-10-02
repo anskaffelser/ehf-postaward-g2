@@ -150,12 +150,12 @@
 
         <assert id="NONAT-T10-R031"
                 test="some $cat in $taxCategoryPercents satisfies $cat = $category"
-                flag="warning">[NONAT-T10-R031]-Tax categories MUST match provided tax categories on document level.</assert>
+                flag="fatal">[NONAT-T10-R031]-Tax categories MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:AllowanceCharge/cac:TaxCategory | cac:Item/cac:ClassifiedTaxCategory">
         <assert id="NONAT-T10-R032"
                 test="some $cat in $taxCategories satisfies $cat = cbc:ID"
-                flag="warning">[NONAT-T10-R032]-Tax categories MUST match provided tax categories on document level.</assert>
+                flag="fatal">[NONAT-T10-R032]-Tax categories MUST match provided tax categories on document level.</assert>
       </rule>
       <rule context="cac:TaxScheme">
          <assert id="NONAT-T10-R017"

@@ -92,7 +92,7 @@
 	<test>
 		<assert>
 			<description>Trigger warning when taxable category is incorrect.</description>
-			<warning>NONAT-T14-R030</warning>
+			<error>NONAT-T14-R030</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

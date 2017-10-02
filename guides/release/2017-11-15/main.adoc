@@ -16,7 +16,7 @@ include::../settings.adoc[]
 
 == EHF Faktura og kreditnota 2.0.12 [[faktura-og-kreditnota]]
 
-// include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.12.adoc[]
+include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.12.adoc[]
 
 
 == EHF Katalog 1.0.10 [[katalog]]
@@ -44,7 +44,7 @@ include::../settings.adoc[]
 
 == EHF Invoice and Creditnote 2.0.12 [[invoice-and-creditnote]]
 
-// include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.12.adoc[]
+include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.12.adoc[]
 
 
 == EHF Catalogue 1.0.10 [[catalogue]]
