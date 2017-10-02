@@ -36,7 +36,7 @@
 	<test>
 		<assert>
 			<description>Trigger warning on invalid qualifier.</description>
-			<warning>NOGOV-T19-R024</warning>
+			<error>NOGOV-T19-R024</error>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

@@ -1,0 +1,13 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/230[#230]
+| Oppdatere reglene link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024] (**F**), link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**), link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (**F**) og link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (**F**) til å trigge feil.
+| Validator
+
+|===

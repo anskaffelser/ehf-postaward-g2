@@ -46,7 +46,7 @@
       <rule context="cac:PartyLegalEntity/cbc:CompanyID[@schemeID]">
         <assert id="NOGOV-T19-R024"
                 test="@schemeID = 'NO:ORGNR'"
-                flag="warning">[NOGOV-T19-R024]-CompanyID for legal entity qualifier must have value 'NO:ORGNR' when provided.</assert>
+                flag="fatal">[NOGOV-T19-R024]-CompanyID for legal entity qualifier must have value 'NO:ORGNR' when provided.</assert>
       </rule>
       <rule context="cac:CatalogueLine">
          <assert id="NOGOV-T19-R003"

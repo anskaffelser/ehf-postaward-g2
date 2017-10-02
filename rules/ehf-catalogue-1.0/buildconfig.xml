@@ -17,9 +17,6 @@
           path="xsl/OPENPEPPOL-UBL-T19.xsl" />
         <file source="sch/NOGOV-UBL-T19.sch" path="xsl/NOGOV-UBL-T19.xsl" infoUrl="/ehf/rule/catalogue-1.0/{}/" />
         <rule identifier="CL-T19-R004" action="suppress" />
-        <rule identifier="EHF-COMMON-R011" action="setWarning" />
-        <rule identifier="EHF-COMMON-R012" action="setWarning" />
-        <rule identifier="EHF-COMMON-R013" action="setWarning" />
     </configuration>
 
     <configuration>
