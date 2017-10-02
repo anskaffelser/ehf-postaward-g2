@@ -31,7 +31,7 @@ include::../../ordering/1.0/no/endringslogg/{release}-1.0.9.adoc[]
 
 == EHF Pakkseddel 1.0.8 [[pakkseddel]]
 
-// include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.8.adoc[]
+include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.8.adoc[]
 
 
 // == EHF Common 1.0.0 [[no-common]]
@@ -59,7 +59,7 @@ include::../../ordering/1.0/en/changelog/{release}-1.0.9.adoc[]
 
 == EHF Despatch Advice 1.0.8 [[despatch-advice]]
 
-// include::../../despatch-advice/1.0/en/changelog/{release}-1.0.8.adoc[]
+include::../../despatch-advice/1.0/en/changelog/{release}-1.0.8.adoc[]
 
 
 // == EHF Common 1.0.0 [[common]]
