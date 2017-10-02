@@ -17,7 +17,6 @@
           source="../../sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T76.sch"
           path="xsl/OPENPEPPOL-UBL-T76.xsl" />
         <rule identifier="OP-T76-R008" action="suppress" />
-        <rule identifier="EHF-COMMON-R011" action="setWarning" />
     </configuration>
 
     <configuration>

@@ -1,0 +1,13 @@
+:ruleurl-ord: /ehf/rule/order-1.0/
+:ruleurl-res: /ehf/rule/order-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/230[#230]
+| Oppdatere reglene link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**) til å trigge feil.
+| Validator
+
+|===

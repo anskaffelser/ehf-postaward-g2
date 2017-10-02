@@ -16,7 +16,6 @@
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T58.sch"
           path="xsl/OPENPEPPOL-UBL-T58.xsl" />
-        <rule identifier="EHF-COMMON-R011" action="setWarning" />
     </configuration>
 
     <configuration>
