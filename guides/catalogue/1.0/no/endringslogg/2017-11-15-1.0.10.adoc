@@ -10,4 +10,8 @@
 | Oppdatere reglene link:{ruleurl-cat}NOGOV-T19-R024/[NOGOV-T19-R024] (**F**), link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**), link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (**F**) og link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (**F**) til å trigge feil.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#234]
+| Skjule regelen link:{ruleurl-cat}NOGOV-T19-R024/[BII2-T19-R021] (**W**) i validatoren.
+| Validator
+
 |===
