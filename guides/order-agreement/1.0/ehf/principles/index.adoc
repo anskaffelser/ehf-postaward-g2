@@ -9,7 +9,7 @@ The order agreement profile describes processes where the buyer, after purchasin
 :leveloffset: +1
 
 include::prerequisites.adoc[]
-include::scope.adoc[]
+//include::scope.adoc[]
 include::parties.adoc[]
 include::benefits.adoc[]
 include::business-process-diagram.adoc[]

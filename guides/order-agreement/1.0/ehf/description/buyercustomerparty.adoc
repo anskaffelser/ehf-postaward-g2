@@ -6,7 +6,7 @@ The buyer is the legal person or organization acting on behalf of the customer a
 [source,xml,indent=0]
 .Example
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=BuyerCustomerParty]
+include::../{xml-doc-fil}[tags=BuyerCustomerParty]
 ----
 ////
 <cac:BuyerCustomerParty>

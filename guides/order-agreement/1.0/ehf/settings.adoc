@@ -1,6 +1,6 @@
 :lang: en
 
-include::../../../settings.adoc[]
+include::../settings.adoc[]
 
 :doctitle:  EHF Order Agreement
 :description: This document describes the data formats used when trading partners exchange order agreement electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “Agency of Public Management and eGovernment” (Difi) within the standardization of electronic trade processes.
@@ -10,9 +10,11 @@ include::../../../settings.adoc[]
 :date-mandatory: dd. MM yyyy
 :name-op-en: Agency of Public Management and eGovernment
 :title-logo-image: {shared-dir}/images/logo.jpg
-:shared-dir: ../../../shared/{lang}
+//:shared-dir: ../../../shared/{lang}
 :docutype: EHF
 :xml-doc-dir: files/example/
+:xml-doc-fil: files/ehf-oa-docfile.xml
+//ehf-oa-full.xml
 
 // External
 

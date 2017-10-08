@@ -13,7 +13,7 @@ The delivery information is optional in the EHF Order Agreement message.
 [source,xml,indent=0]
 .Example
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=Delivery]
+include::../{xml-doc-fil}[tags=Delivery]
 ----
 ////
 <cac:Delivery>

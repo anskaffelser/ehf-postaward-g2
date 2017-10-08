@@ -17,3 +17,11 @@ More specifically it is addressed towards the following roles:
 *     ICT Architects
 *     ICT Developers
 *     Business Experts
+
+:leveloffset: +1
+
+include::principles/scope.adoc[]
+
+
+
+:leveloffset: -1

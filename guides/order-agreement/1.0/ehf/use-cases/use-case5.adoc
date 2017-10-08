@@ -1,21 +1,21 @@
 
 
-= Use case 5 – Framework contract
+= Use case 2 – Framework contract
 
 The buyer has made a framework agreement with the seller for services such as maintenance or consulting. The framework agreement sets limits and terms within which the seller may provide services without individual orders from the buyer.
 
 [cols="2,10", options="header"]
 |===
-|Use Case number| 5
+|Use Case number| 2
 | Use Case Name |Maintainance based on framework contract
 
 | Use Case Description |
 A seller who has a framework agreement that contracts him for certain services, items or consulting may react to events as contracted and at the end of a period send an order agreement listing the services that were carried out. +
 
 Examples include: +
--	A maintenance services that monitors a building and, for example, fixes windows, doors and other things that need maintenance as identified.
--	A computer service provider monitors systems and reacts immediately to incidents such as system down time or errors.
--	An accounting services contracted by the buyer handles various filings and reports as required.
+-	A maintenance services that monitors a building and, for example, fixes windows, doors and other things that need maintenance as identified. +
+-	A computer service provider monitors systems and reacts immediately to incidents such as system down time or errors. +
+-	An accounting services contracted by the buyer handles various filings and reports as required. +
 -	A seller of supplies has been contracted to monitor the stock levels for certain items and restock as needed to maintain the agreed levels. +
 
 
@@ -33,6 +33,6 @@ The seller proceeds to invoice immediately unless otherwise directed by the fram
 The buyer may have internal processes that verify these kind of order agreements differently than those initiated by himself.
 
 | Result | The buyer has registered a purchase order in his system that allow him to do order to invoice matching when the invoice is received.
-| XML example file | See Appendix A for a sample file illustrating Use Case 5.
+| XML example file | See Appendix A for a sample file illustrating Use Case 2.
 
 |===

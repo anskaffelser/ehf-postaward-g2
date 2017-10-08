@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OrderResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2 C:\Users\Notandi\Documents\Upplýsingar\Standards\UBL\UBL-2.1\xsdrt\maindoc\UBL-OrderResponse-2.1.xsd">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
-	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0</cbc:CustomizationID>
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0</cbc:CustomizationID>	
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii42:ver1.0</cbc:ProfileID>
 	<cbc:ID>id123 tir110-001</cbc:ID>
 	<cbc:IssueDate>2016-08-16</cbc:IssueDate>
@@ -102,14 +102,14 @@
 	</cac:AccountingCustomerParty>
 	<cac:Delivery>
 		<cac:PromisedDeliveryPeriod>
-			<cbc:StartDate>2016-08-20</cbc:StartDate>
+			<cbc:StartDate>2017-10-15</cbc:StartDate>
 			<cbc:StartTime>12:00:00</cbc:StartTime>
-			<cbc:EndDate>2016-08-30</cbc:EndDate>
+			<cbc:EndDate>2017-11-15</cbc:EndDate>
 			<cbc:EndTime>18:00:00</cbc:EndTime>
 		</cac:PromisedDeliveryPeriod>
 		<cac:DeliveryParty>
 			<cac:PartyIdentification>
-				<cbc:ID>id</cbc:ID>
+				<cbc:ID schemeID="NO:ORGNR">98765432</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>Delivery party name</cbc:Name>
@@ -136,21 +136,21 @@
 	<cac:AllowanceCharge>
 		<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
 		<cbc:AllowanceChargeReason>Discount</cbc:AllowanceChargeReason>
-		<cbc:Amount currencyID="NOK">100</cbc:Amount>
+		<cbc:Amount currencyID="NOK">100.00</cbc:Amount>
 	</cac:AllowanceCharge>
 	<cac:AllowanceCharge>
 		<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 		<cbc:AllowanceChargeReason>Packing cost</cbc:AllowanceChargeReason>
-		<cbc:Amount currencyID="NOK">200</cbc:Amount>
+		<cbc:Amount currencyID="NOK">199.95</cbc:Amount>
 	</cac:AllowanceCharge>
 	<cac:TaxTotal>
-		<cbc:TaxAmount currencyID="NOK">1236</cbc:TaxAmount>
+		<cbc:TaxAmount currencyID="NOK">250.00</cbc:TaxAmount>
 		<cac:TaxSubtotal>
-			<cbc:TaxableAmount currencyID="NOK">1000</cbc:TaxableAmount>
-			<cbc:TaxAmount currencyID="NOK">236</cbc:TaxAmount>
+			<cbc:TaxableAmount currencyID="NOK">1000.00</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="NOK">250.00</cbc:TaxAmount>
 			<cac:TaxCategory>
 				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-				<cbc:Percent>23.6</cbc:Percent>
+				<cbc:Percent>25</cbc:Percent>
 				<cbc:TaxExemptionReason>No reason</cbc:TaxExemptionReason>
 				<cac:TaxScheme>
 					<cbc:ID schemeID="UNCL5305">VAT</cbc:ID>
@@ -159,23 +159,24 @@
 		</cac:TaxSubtotal>
 	</cac:TaxTotal>
 	<cac:LegalMonetaryTotal>
-		<cbc:LineExtensionAmount currencyID="NOK">1000</cbc:LineExtensionAmount>
-		<cbc:TaxExclusiveAmount currencyID="NOK">1000</cbc:TaxExclusiveAmount>
-		<cbc:TaxInclusiveAmount currencyID="NOK">1236</cbc:TaxInclusiveAmount>
+		<cbc:LineExtensionAmount currencyID="NOK">1000.00</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="NOK">1099.95</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="NOK">1350</cbc:TaxInclusiveAmount>
 		<cbc:AllowanceTotalAmount currencyID="NOK">100</cbc:AllowanceTotalAmount>
-		<cbc:ChargeTotalAmount currencyID="NOK">200</cbc:ChargeTotalAmount>
-		<cbc:PayableRoundingAmount currencyID="NOK">0</cbc:PayableRoundingAmount>
-		<cbc:PayableAmount currencyID="NOK">1236</cbc:PayableAmount>
+		<cbc:ChargeTotalAmount currencyID="NOK">199.95</cbc:ChargeTotalAmount>
+		<cbc:PrepaidAmount currencyID="NOK">100</cbc:PrepaidAmount>
+		<cbc:PayableRoundingAmount currencyID="NOK">0.05</cbc:PayableRoundingAmount>
+		<cbc:PayableAmount currencyID="NOK">1350.00</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
 	<cac:OrderLine>
 		<cac:LineItem>
 			<cbc:ID>1</cbc:ID>
 			<cbc:Note>Line note</cbc:Note>
-			<cbc:Quantity unitCode="C62">12</cbc:Quantity>
-			<cbc:LineExtensionAmount currencyID="NOK">1000</cbc:LineExtensionAmount>
-			<cbc:TotalTaxAmount currencyID="NOK">236</cbc:TotalTaxAmount>
+			<cbc:Quantity unitCode="C62" unitCodeListID="UNECERec20">10</cbc:Quantity>
+			<cbc:LineExtensionAmount currencyID="NOK">1000.00</cbc:LineExtensionAmount>
+			<cbc:TotalTaxAmount currencyID="NOK">250.00</cbc:TotalTaxAmount>
 			<cac:Delivery>
-				<cbc:Quantity unitCode="NOK">12</cbc:Quantity>
+				<cbc:Quantity unitCode="C62" unitCodeListID="UNECERec20">10</cbc:Quantity>
 				<cac:PromisedDeliveryPeriod>
 					<cbc:StartDate>2016-08-20</cbc:StartDate>
 					<cbc:StartTime>12:00:00</cbc:StartTime>
@@ -184,8 +185,8 @@
 				</cac:PromisedDeliveryPeriod>
 			</cac:Delivery>
 			<cac:Price>
-				<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
-				<cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>
+				<cbc:PriceAmount currencyID="NOK">10</cbc:PriceAmount>
+				<cbc:BaseQuantity unitCode="C62" unitCodeListID="UNECERec20">10</cbc:BaseQuantity>
 			</cac:Price>
 			<cac:Item>
 				<cbc:Description>Description of the item</cbc:Description>
@@ -194,7 +195,7 @@
 					<cbc:ID>123</cbc:ID>
 				</cac:SellersItemIdentification>
 				<cac:StandardItemIdentification>
-					<cbc:ID schemeID="GTIN">321</cbc:ID>
+					<cbc:ID schemeID="GTIN">1234567890124</cbc:ID>
 				</cac:StandardItemIdentification>
 				<cac:ItemSpecificationDocumentReference>
 					<cbc:ID>doc id</cbc:ID>
@@ -207,24 +208,38 @@
 					</cac:Attachment>
 				</cac:ItemSpecificationDocumentReference>
 				<cac:CommodityClassification>
-					<cbc:ItemClassificationCode>3156</cbc:ItemClassificationCode>
+					<cbc:ItemClassificationCode listID="UNSPSC">3156</cbc:ItemClassificationCode>
 				</cac:CommodityClassification>
 				<cac:TransactionConditions>
-					<cbc:ActionCode>Action code</cbc:ActionCode>
+					<cbc:ActionCode>CT</cbc:ActionCode>
 				</cac:TransactionConditions>
 				<cac:ClassifiedTaxCategory>
-					<cbc:ID schemeID="BII2">S</cbc:ID>
-					<cbc:Percent>23.6</cbc:Percent>
+					<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+					<cbc:Percent>25</cbc:Percent>
 					<cac:TaxScheme>
-						<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+						<cbc:ID>VAT</cbc:ID>
 					</cac:TaxScheme>
 				</cac:ClassifiedTaxCategory>
 				<cac:AdditionalItemProperty>
 					<cbc:Name>Property name</cbc:Name>
 					<cbc:NameCode>NameCode</cbc:NameCode>
 					<cbc:Value>Property value</cbc:Value>
-					<cbc:ValueQuantity unitCode="C62">1</cbc:ValueQuantity>
+					<cbc:ValueQuantity unitCode="C62" unitCodeListID="UNECERec20">1</cbc:ValueQuantity>
 				</cac:AdditionalItemProperty>
+				<cac:Certificate>
+					<cbc:ID>EU Ecolabel</cbc:ID>
+					<cbc:CertificateTypeCode>NA</cbc:CertificateTypeCode>
+					<cbc:CertificateType>Environmental</cbc:CertificateType>
+					<cbc:Remarks>Item label value</cbc:Remarks>
+					<cac:IssuerParty>
+						<cac:PartyName>
+							<cbc:Name>NA</cbc:Name>
+						</cac:PartyName>
+					</cac:IssuerParty>
+					<cac:DocumentReference>
+						<cbc:ID>Item label reference</cbc:ID>
+					</cac:DocumentReference>
+				</cac:Certificate>
 			</cac:Item>
 		</cac:LineItem>
 	</cac:OrderLine>

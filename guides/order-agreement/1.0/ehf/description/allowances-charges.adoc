@@ -4,7 +4,7 @@
 [source,xml,indent=0]
 .This example shows a charge related to packing costs:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=AllowanceCharge2]
+include::../{xml-doc-fil}[tags=AllowanceCharge2]
 ----
 ////
 <cac:AllowanceCharge>
@@ -17,7 +17,7 @@ include::../{xml-doc-dir}ehf-oa-full.xml[tags=AllowanceCharge2]
 [source,xml,indent=0]
 .This example shows an allowance related to a  discount on the order:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=AllowanceCharge1]
+include::../{xml-doc-fil}[tags=AllowanceCharge1]
 ----
 
 ////

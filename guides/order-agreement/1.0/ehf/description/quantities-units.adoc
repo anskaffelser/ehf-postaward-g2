@@ -15,8 +15,8 @@ The table below lists quantities and units in the format. To all quantities ther
 [source, xml, indent=0]
 .Example of an order agreement line with a quantity of 10 pieces (cbc:Quantity) and price is given per items. When calculating the line amount the price is applied pr 10 pieces, that is 10x10x10 = NOK 1000
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=QuantUnits]
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=Price]
+include::../{xml-doc-fil}[tags=QuantUnits]
+include::../{xml-doc-fil}[tags=Price]
 ----
 
 ////

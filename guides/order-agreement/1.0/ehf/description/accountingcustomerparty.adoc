@@ -6,7 +6,7 @@ The invoicee is the legal person or organization acting on behalf of the custome
 [source,xml,indent=0]
 .Example
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=AccountingCustomerParty]
+include::../{xml-doc-fil}[tags=AccountingCustomerParty]
 ----
 ////
 <cac:AccountingCustomerParty>

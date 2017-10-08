@@ -5,7 +5,11 @@
 
 include::ehf-general.adoc[]
 
-include::transport-identifiers.adoc[]
+include::../{shared-dir}/content/ehf/collaboration-agreements.adoc[]
+
+include::../{shared-dir}/content/ehf/versioning.adoc[]
+
+//include::transport-identifiers.adoc[] moved to after use cases include::message-transport-identifiers/index.adoc[]
 
 
 

@@ -33,12 +33,22 @@ h| Source codelist
 |===
 .1+h| Structured content
 | application/xml
+
 .1+h| Documents
 | application/pdf
-.3+h| Images
+
+.4+h| Images
 | image/png
 | image/jpeg
 | image/tiff
+| image/gif
+
+
+.4+h| Drawings
+| application/acad
+| application/autocad_dwg
+| application/dwg
+| drawing/dwg
 |===
 
 
@@ -49,8 +59,7 @@ h| Source codelist
 h| Qualifier
 | `ISO3166-1:Alpha2` (listID)
 h| Document location
-| `cac:Country/cbc:IdentificationCode` +
-`cac:OriginCountry/cbc:IdentificationCode` +
+| `cac:Country/cbc:IdentificationCode`
 h| Source codelist
 | link:http://www.iso.org/iso/home/standards/country_codes.htm[ISO 3166-1]
 |===
@@ -66,21 +75,9 @@ h| Qualifier
 h| Document location
 | `cbc:*/@unitCode`
 h| Source codelist
-| link:http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html[UN/ECE Recommendation 20, Revision 12 (2016)]
+| link:http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html[UN/ECE Recommendation 20, Revision 8 (2012)]
 |===
 
-
-== Currency identifier
-
-[cols="1,4"]
-|===
-h| Qualifier
-| _None_
-h| Document location
-| `cbc:*/@currencyID`
-h| Source codelist
-| link:https://www.iso.org/iso-4217-currency-codes.html[ISO 4217:2015]
-|===
 
 
 == Item VAT category code
@@ -119,4 +116,30 @@ h| Source codelist
 
 | AA
 | Lower rate
+|===
+
+
+== Commodity code
+
+[cols="1,4", options="header"]
+|===
+h| Qualifier
+| See list in table below
+h| Document location
+| `cbc:CommodityCode/@listID`
+h| Source codelist
+| COMMODITY SCHEME ID – CENBII
+|===
+
+[cols="1,4", options="header"]
+.Commodity codes – CENBII
+|===
+| Code | Description
+| CV | Customs Article Number
+| GN | National Product Group Code
+| HS | Harmonised System
+| CPV | Common Procurement Vocabulary
+| UNSPSC | UNSPSC
+| eCLASS | eCLASS
+| GPC | GS1 Global Product Classification
 |===

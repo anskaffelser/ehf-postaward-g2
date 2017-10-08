@@ -6,7 +6,7 @@ If the purchased item is offered in accordance to an existing contract, this sho
 [source,xml,indent=0]
 .Example:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=TransactionConditions]
+include::../{xml-doc-fil}[tags=TransactionConditions]
 ----
 
 ////

@@ -8,7 +8,7 @@ Prices includes allowances and/or charges but exclude VAT amounts
 [source,xml,indent=0]
 .Example of price information in an Order Agreement message:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=Price]
+include::../{xml-doc-fil}[tags=Price]
 ----
 
 ////

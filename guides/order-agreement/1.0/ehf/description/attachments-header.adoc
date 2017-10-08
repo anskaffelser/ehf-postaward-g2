@@ -3,28 +3,13 @@
 
 Non-XML documents can be sent as attachments to the EHF Order Agreement. This could be timesheets or other documents relevant for the order agreement. The attachment can either be sent as a binary object encoded in Base64  embedded in the message or as a URI to an external address as a link.
 
-It is recommended to send attachments as embedded, binary objects and not as external references.
+It is recommended to send attachments as embedded, binary objects and not as external references. See <<Mime code of attached document, code list>> for more details about attachment types.
 
-[cols="3,9", options="header"]
-|===
-| Element |	Description
-| Coding	| Base64
-|Document format	| The following MIME types are recommended: +
-   Pdf – application / pdf +
-   TXT – text / plain +
-   GIF – image / gif +
-    Jpeg –image +
-    PNG -image +
-Other MIME types may be used, subject to agreement.
-| Size | Recommended maximum message size is 100MB including attachments.
-| Description | It is recommended to use element cac:AdditionalDocumentReference/cbc:DocumentType to send a short description of the content of the attachment. +
-NB: Attachments should be used for additional information and not as order copies.
-|===
 
 [source,xml,indent=0]
 .Example of attachment as an embedded, binary object in an EHF Order Agreement message.
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=AdditionalDocumentReference]
+include::../{xml-doc-fil}[tags=AdditionalDocumentReference]
 ----
 ////
 <cac:AdditionalDocumentReference>

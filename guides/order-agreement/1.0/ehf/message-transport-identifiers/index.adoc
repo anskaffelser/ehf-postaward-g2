@@ -12,7 +12,7 @@ The “schemeID” attribute must be populated in all instances of the “ID” 
 [source,xml,indent=0]
 .Examples of usage in PartyIdentification:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=PartyIdentification]
+include::../{xml-doc-fil}[tags=PartyIdentification]
 ----
 ////
 <cac:PartyIdentification>
@@ -28,7 +28,7 @@ This {docutype} is using the UBL 2.1 syntax {link-ubl-orderresponse}[UBL_OrderRe
 
 [source,xml,indent=0]
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=UBLVersionID]
+include::../{xml-doc-fil}[tags=UBLVersionID]
 ----
 ////
 <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
@@ -38,14 +38,14 @@ include::../{xml-doc-dir}ehf-oa-full.xml[tags=UBLVersionID]
 
 The ProfileID identifies the process that the business document is part of. {docutype} uses the identification system according to BII:
 
-The following process identifier is used for ―BII42 – Order Agreement:
+The following process identifier is used for Order Agreement:
 
 ProfileID: urn:www.cenbii.eu:profile:bii42:ver1.0
 
 [source,xml,indent=0]
 .Example of usage:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=ProfileID]
+include::../{xml-doc-fil}[tags=ProfileID]
 ----
 ////
 <cbc:ProfileID>urn:www.cenbii.eu:profile:bii42:ver1.0</cbc:ProfileID>
@@ -79,7 +79,7 @@ urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:p
 [source,xml,indent=0]
 .Example of usage:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=CustomizationID]
+include::../{xml-doc-fil}[tags=CustomizationID]
 ----
 
 ////

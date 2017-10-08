@@ -61,7 +61,7 @@ Formulas for the calculations of totals are as follows:
 [source,xml,indent=0]
 .The above example is presented in the order agreement in the following way:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=LegalMonetaryTotal]
+include::../{xml-doc-fil}[tags=LegalMonetaryTotal]
 ----
 ////
 <cac:LegalMonetaryTotal>

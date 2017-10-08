@@ -1,3 +1,4 @@
+
 include::settings.adoc[]
 
 = {doctitle}
@@ -37,18 +38,18 @@ include::ehf-identifiers/index.adoc[]
 
 include::principles/index.adoc[]
 
+include::use-cases/index.adoc[]
+
+include::message-transport-identifiers/index.adoc[]
+
 include::description/index.adoc[]
-
-include::validation/index.adoc[]
-
-
-//include::use-cases/index.adoc[]
-
 
 include::codes/index.adoc[]
 
+include::{shared-dir}/content/validation/index.adoc[]
 
-include::xml-schema/index.adoc[]
+//include::../../../../{cwd}/validering/validation-rules.adoc[]
+
 
 include::appendix/index.adoc[]
 

@@ -11,7 +11,7 @@ The order agreement requires that an item has an identifier. This can be either 
 [source,xml,indent=0]
 .Example of an EHF Order Agreement item  using both Sellers ID and Standard ID (GTIN):
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=ProdId]
+include::../{xml-doc-fil}[tags=ProdId]
 ----
 ////
 <cac:Item>

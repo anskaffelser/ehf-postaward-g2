@@ -3,8 +3,15 @@
 :leveloffset: +1
 
 
-// Example files
-include::use-case.adoc[]
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/oa-structure-table.pdf[Structure Table for Order Agreement]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/oa-message-table.pdf[Message Table for Order Agreement]
+
 
 // Example files
 include::examples-files.adoc[]

@@ -7,7 +7,7 @@ Information about the items environmental, social, ethical and quality type of l
 [source,xml,indent=0]
 .Example:
 ----
-include::../{xml-doc-dir}ehf-oa-full.xml[tags=Certificate]
+include::../{xml-doc-fil}[tags=Certificate]
 ----
 ////
 <cac:Certificate>

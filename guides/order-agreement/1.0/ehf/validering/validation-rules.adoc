@@ -1,12 +1,9 @@
+
 = Norwegian Rules for Order Agreement
 
 [cols="1,4", options="header"]
-|====
+|===
 |Rule
 |Message/Context/Test
-
 include::{rules-dir}/NOGOV-UBL-T110.sch.adoc[]
-include::{rules-dir}/NONAT-UBL-T110.sch.adoc[]
-|====
-
-
+|===

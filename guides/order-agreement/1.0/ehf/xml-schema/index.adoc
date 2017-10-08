@@ -1,6 +1,0 @@
-
-= XML Schema Guideline and information content of the Order Response message for the function of Order Agreement
-
-==	Structure
-
-<<OrderResponse schema>>
