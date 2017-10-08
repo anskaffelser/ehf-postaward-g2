@@ -1,0 +1,10 @@
+
+=	Business process diagram
+
+==	 Process diagram
+
+The diagrams are expressed in the BPMN notation.
+
+The following diagram shows the choreography of the business process implemented by the {docutype}.
+
+image::bpmn.png[align="center", width=800]

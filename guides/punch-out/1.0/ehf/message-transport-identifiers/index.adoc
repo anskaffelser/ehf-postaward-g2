@@ -1,0 +1,133 @@
+= Message transport and identifiers
+
+EHF has defined a {link-peppol-transp}[“Policy for Using Identifiers”] that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the EHF environment. The policies that apply to this EHF are the following:
+
+==	Party Identifiers
+
+The “schemeID” attribute must be populated in all instances of the “ID” element when used within a “PartyIdentification”-container and in all instances of the “EndpointID” element when used within a “Party”-container.
+
+[source,xml,indent=0]
+.Examples of usage in PartyIdentification:
+----
+include::../{xml-doc-fil}[tags=PartyIdentification]
+----
+////
+<cac:PartyIdentification>
+	<cbc:ID schemeID="NO:ORGNR">984297793</cbc:ID>
+</cac:PartyIdentification>
+
+////
+
+
+==	Version ID
+
+This {docutype} is using the UBL 2.1 syntax {link-ubl-catalogue}[UBL_Catalogue]. The namespace of the XML-message does only communicate the major version number. Since it is important for the receiver to also know what minor version of the syntax that is used, the element UBLVersionID must be stated with the value *2.1*:
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=UBLVersionID]
+----
+
+== Profile ID
+
+The ProfileID identifies the process that the business document is part of. {docutype} uses the identification system according to BII:
+
+The following process identifier is used for Punch Out:
+
+ProfileID: urn:www.cenbii.eu:profile:bii18:ver1.0
+
+[source,xml,indent=0]
+.Example of usage:
+----
+include::../{xml-doc-fil}[tags=ProfileID]
+----
+
+//<cbc:ProfileID>urn:www.cenbii.eu:profile:bii18:ver1.0</cbc:ProfileID>
+
+
+==	Customization ID
+
+The {docutype} Customization ID identifies the specification of content and rules that apply to the transaction.
+This {docutype}  has required some minor additions and changes to the CEN BII transaction. Following the CENBII methodology any extension must be communicated by adding an extension ID onto the Customization ID {link-cenbii}[CENBII]. The full syntax is:
+
+
+[source,xml,indent=0]
+----
+
+<transactionId>:(restrictive|extended|partly):<extensionId>[(restrictive|extended|partly):<extensionId>]
+
+----
+
+
+Where:
+
+ * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns077:ver2.0
+
+ * Peppol extension ID is:   www.peppol.eu:bis:peppol18a:ver1.0
+
+ * EHF extension ID is <<Erlend>>
+
+
+By combining these according to the identifier syntax the CustomizationID to use in {docutype} is:
+
+----
+ urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0
+----
+
+[source,xml,indent=0]
+.Example of usage:
+----
+include::../{xml-doc-fil}[tags=CustomizationID]
+----
+//<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0</cbc:CustomizationID>
+
+
+For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
+
+== Namespaces
+
+The shopping cart datamodel is in this Punch Out bound to the UBL version 2.1 of the Catalogue document type {link-ubl-catalogue}[UBL_Catalogue]. The target namespace for the UBL-Catalogue-2.1 is:
+
+----
+urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2
+----
+
+
+== Message transport
+
+The transactions defined in this {docutype} need to be transferred from the sending party to the receiving party through an agreed transport network and protocol. The {docutype} is specified independent of a transport network but it is designed with the requirement of the PEPPOL network in mind and does not specifically support other transport network that may be used.
+
+=== The EHF network
+
+This EHF is based on PEPPOL transport network that is a four corner transport network that allows senders end receivers to exchange message from one service provider to another by using a single identifier for the parties.
+
+Details about the PEPPOL network can be found at {link-peppol-transp}[PEPPOL]
+
+The combination of the ELMA registration and the implementation guides referred to in that context eliminates the need for any formal collaboration agreement between the sender and the receiver. The ELMA registration verifies that an actor has declared the ability and the commitment to receive business documents composed according to the specific implementation guide, and any party is free to send the business document to this actor.
+
+===	Synchronous message transfer
+
+
+It is recognized that the use of Punch Out often requires synchronous methods for retrieving that data directly from the sellers shopping cart into the buyers purchasing system. Several methods are available including the following:
+
+* Direct database connections with HTTP using database interface specifications.
+* File download using Wget, HTTP, FTP or similar technology.
+
+The following clauses only briefly introduce these transfer mechanism. Analysis of what is the most suitable methods and technical specification are not in scope for this {docutype} and are not provided by Difi.
+
+=== Direct HTTP database connections
+
+Direct database connection using HTTP are common when retrieving shopping carts. Most commonly these methods retrieve the data directly from the catalogue in structured format using input names as field identifiers. In order to read the data correctly into the buyer's database its structure must be clearly defined.
+
+This {docutype} provides a detailed structure of the shopping cart data, using UBL XML and detailed semantic specifications and rules. Such an XML message can be retrieved as payload with an HTTP connection. Once that XML file has been retrieved and saved it can be processes in the same way as an XML file that has been delivered, e.g., through the PEPPOL network.
+
+A profile for such a message transfer is specified in the document {link-peppol-login-transmission}["PEPPOL synchronous message transfer protocol"] provided by OpenPEPPOL and may be used to transfer Punch Out messages.
+
+
+=== Internet file transfer
+
+Since the data of the shopping cart generated by using this Punch Out is captured into a single structured XML file, it lends itself to normal file transfer over the Internet. Such a file transfer can be done with several methods including.
+
+
+* File Transfer Protocol (FTP).
+* Wget over FTP or HTTP.

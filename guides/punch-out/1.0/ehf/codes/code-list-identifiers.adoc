@@ -1,0 +1,15 @@
+
+= Codelists for identifier schemes
+
+Table of the code lists used to constrain the values of schemeID for identifiers in the Punch Out transaction:
+
+[cols="3,3,4,2", options="header"]
+
+|===
+| Business Term | Allowed SchemeID | Applicable Xpath | Note
+| Party Identifier | See <<Party Identifiers>>| cbc:EndpointID/@schemeID +
+cac:PartyIdentification/cbc:ID/@schemeID | Mandatory +
+Mandatory
+| Business process type identifier | See <<Profile ID>> | cbc:ProfileID | Mandatory
+| Specification identification | See <<Customization ID>> | cbc:CustomizationID | Mandatory
+|===

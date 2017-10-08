@@ -1,0 +1,9 @@
+
+= Process flow
+
+The Punch Out process flow can be described as follows:
+
+The Buyer is “re-directed” from his procurement system to the seller’s Punch Out enabled website. The buyer searches the website.
+
+At the website the buyer search and select articles which are added to a shopping cart.
+When the buyer checks out of the website, a transaction (Punch Out) with item information of the selected item is sent to the buyer’s procurement system.

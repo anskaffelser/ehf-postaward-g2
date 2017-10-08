@@ -1,0 +1,200 @@
+
+=	Item information
+
+==	Product identification
+
+Which identifier to use depends on what is known at the time of ordering or what is commonly used in the relevant business sector.
+
+Each  cart line MUST have an item name and an identifier. Product identification must be done using one or both of the identifiers described below:
+
+*	Sellers ID
+*	Standard ID, e.g. the {link-gs1-gtin}[GS1] Global Trade Item Number (GTIN) used by the seller [GS1]
+
+Manufacturers item identification can not be used alone to identify a product. The Product name must be sent in tag Item/Name on line level.
+
+Example of an {docutype} Shopping Cart item  using both Sellers ID, Manufacturers ID  and Standard ID (GTIN):
+
+[source,xml,indent=0]
+.Item:
+----
+include::../{xml-doc-fil}[tags=ProductIdentification]
+----
+
+////
+<cac:Item>
+....
+	<cac:SellersItemIdentification>
+		<cbc:ID>PC01</cbc:ID>
+	</cac:SellersItemIdentification>
+	<cac:ManufacturersItemIdentification>
+		<cbc:ID>PC01349087993</cbc:ID>
+	</cac:ManufacturersItemIdentification>
+	<cac:StandardItemIdentification>
+		<cbc:ID schemeID="GTIN">1234567890123</ID>
+	</cac:StandardItemIdentification>
+....
+</cac:Item>
+
+////
+
+
+The name of the manufacturing party may also be given as follows:
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ManufacturerParty]
+----
+////
+<cac:ManufacturerParty>
+	<cac:PartyName>
+		<Name>The PC Manufacturing Party</cbc:Name>
+	</cac:PartyName>
+</cac:ManufacturerParty>
+////
+
+
+==	Item name and description
+
+
+Description of a product can be sent in Item/Description.
+
+The Product name is sent in the shopping cart from buyer to seller.
+Example in an {docutype} Shopping Cart message:
+
+The Name is preferably short so that it is suitable for use in a order or invoice line or as a heading. A description allows for longer text that describes the item in detail.
+
+[source,xml,indent=0]
+.Item:
+----
+include::../{xml-doc-fil}[tags=DescriptionName]
+----
+////
+<cac:Item>
+	<cbc:Description>One Personal Computer package with a monitor and setup service</cbc:Description>
+	<cbc:Name>PC omputer package</cbc:Name>
+	....
+</cac:Item>
+
+////
+
+==	Item properties
+
+A shopping cart line may state if the item described in the line is a service by stating the item property ServiceIndicator as true. The line may also indentify that the item is not a service with the value false. There is no default value so if the ServiceIndicator is not given the item may be either a service or not. An item that is a service is identified as follows:
+
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=AdditionalItemProperty3]
+----
+////
+<cac:AdditionalItemProperty>
+	<cbc:Name>ServiceIndicator</cbc:Name>
+	<cbc:Value>true</cbc:Value>
+</cac:AdditionalItemProperty>
+
+////
+
+
+A shopping cart line may give a list of various attibutes of an item such as size, color  and so on for an item.  For each property the property name and value must be given. Additionally the seller may give a property classification code to support automation in comparison of attribute and if the attribute value can be quantified it may be restated with the Unit of measure as an attribute. As example an items property may be that it has 16 GB of RAM memory.
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=AdditionalItemProperty1-2]
+----
+////
+<cac:AdditionalItemProperty>
+	<cbc:Name>RAM memory</cbc:Name>
+	<cbc:NameCode>Item property classification code</cbc:NameCode>
+	<cbc:Value>16 GB</cbc:Value>
+	<cbc:ValueQualifier unitCode="AD">17179869184</cbc:ValueQualifier>
+</cac:AdditionalItemProperty>
+
+////
+
+
+==	Item classification and labelling
+A shopping cart line may give information about the items
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=CommodityClassification]
+----
+////
+<cac:CommodityClassification>
+	<cbc:ItemClassificationCode listID="UNSPSC">20101601</cbc:ItemClassificationCode>
+</cac:CommodityClassification>
+
+////
+
+A shopping cart line may give information about labels and certifications that apply to the item. Examples of such are environmental, health, social, quality, cultural and so fort. For each label the name of the label must be given and the certificate of the label as well.  If a label has no levels it is recommended  to set the  type as active. Due to {link-ubl-catalogue}[UBL] syntax requirements the tags CertificateTypeCode and IssuerParty must also be included when the certificate class is used. These elements are not required by this {docutype} but in order to comply with the syntax requirement it is recommended to fill in the elements with the word "NA". As example
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=Certificate]
+----
+////
+<cac:Certificate>
+	<cbc:ID>EU Ecolabel</cbc:ID>
+	<cbc:CertificateTypeCode>NA</cbc:CertificateTypeCode>
+	<cbc:CertificateType>active</cbc:CertificateType>
+	<cac:IssuerParty>
+		<cac:PartyName>
+			<cbc:Name>NA</cbc:Name>
+		</cac:PartyName>
+	</cac:IssuerParty>
+</cac:Certificate>
+
+////
+
+==	Tax information
+For correctly handling taxes for the item the line must state the items VAT category and percentage rate as follows where the standard rate of VAT is 25 percent:
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ClassifiedTaxCategory]
+----
+////
+<cac:ClassifiedTaxCategory>
+	<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+	<cbc:Percent>25</cbc:Percent>
+	<cac:TaxScheme>
+		<cbc:ID schemeID="UNCL5153">VAT</cbc:ID>
+	</cac:TaxScheme>
+</cac:ClassifiedTaxCategory>
+
+////
+
+ Additionally the item country of origin may be given as follows:
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=OriginCountry]
+----
+////
+<cac:OriginCountry>
+	<cbc:IdentificationCode listID="ISO3166-1:Alpha2">CH</cbc:IdentificationCode>
+</cac:OriginCountry>
+
+////
+
+== Prices and quantities
+
+Each line in the Shopping Cart must  show the number of items that have been selected by the buyer. For each item there must be a price. The price must be given for the same units as the quantity but the number of units that the price is based on may be different than the quantity.
+
+As example. A buyer may select 360 pieces of an item where the price is €24 for each dozen (12 pieces). In this case the item unit is pieces, and the price for each piece is €24/12 or €2 for each item. Base quantity is optional, with default value 1; when some other base quantity applies it must be stated.
+
+In the shopping cart message this information would be given as follows:
+
+[source,xml]
+----
+<cac:RequiredItemLocationQuantity>
+	<cac:Price>
+		<PriceAmount currencyID="EUR">24.00</PriceAmount>
+		<BaseQuantity unitCode="C62" >12</BaseQuantity>
+	</cac:Price>
+	<cac:DeliveryUnit>
+		<BatchQuantity unitCode="C62">360</BatchQuantity>
+	</cac:DeliveryUnit>
+</cac:RequiredItemLocationQuantity>
+
+----

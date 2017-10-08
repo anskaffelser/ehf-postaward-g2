@@ -1,0 +1,27 @@
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/po-structure-table.pdf[Structure Table for Punch Out]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/po-message-table.pdf[Message Table for Punch Out]
+
+
+// Example files
+include::examples.adoc[]
+
+* link:files/examples/ehf-po-full.xml[Punch Out]
+
+* link:files/examples/PEPPOLBis18T77-case1and2.xml[Use case 1 and 2]
+
+* link:files/examples/PEPPOLBis18T77-case4.xml[Use case 4]
+
+
+
+:leveloffset: -1

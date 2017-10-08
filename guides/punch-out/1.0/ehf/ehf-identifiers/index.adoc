@@ -1,0 +1,16 @@
+
+= Electronic Commerce Format (EHF)
+
+:leveloffset: +1
+
+include::ehf-general.adoc[]
+
+include::../{shared-dir}/content/ehf/collaboration-agreements.adoc[]
+
+include::../{shared-dir}/content/ehf/versioning.adoc[]
+
+// include::transport-identifiers.adoc[] lagd som eget kapittel etter use cases, message-transport-identfiers/index.adoc.
+
+
+
+:leveloffset: -1

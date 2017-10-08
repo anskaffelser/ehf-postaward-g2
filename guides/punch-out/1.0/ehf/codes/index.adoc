@@ -1,0 +1,11 @@
+[[codelist]]
+= Code lists
+
+:leveloffset: +1
+
+include::elements.adoc[]
+
+include::code-list-identifiers.adoc[]
+
+
+:leveloffset: -1

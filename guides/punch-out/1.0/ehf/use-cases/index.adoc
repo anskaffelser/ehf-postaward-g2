@@ -1,0 +1,20 @@
+
+= Use cases
+
+The Punch Out includes the sending of Shopping cart information from a Seller to a Buyer.
+
+
+:leveloffset: +1
+
+//include::process-flow.adoc[]
+
+//include::business-process-diagram.adoc[]
+
+include::use-case1.adoc[]
+
+include::use-case2.adoc[]
+
+include::use-case3.adoc[]
+
+
+:leveloffset: -1
