@@ -9,9 +9,17 @@
 | Updating rules link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031] (**F**), link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032] (**F**), link:{ruleurl-cre}NONAT-T14-R030/[NONAT-T14-R030] (**F**) and link:{ruleurl-cre}NONAT-T14-R031/[NONAT-T14-R031] (**F**) from warning to error.
 | Validator
 
-| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#229]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#234]
 | For easier maintenance and better transparency use PEPPOL BIS Schematron source in favour of copying generated XSLTs into this project.
 | Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/238[#238]
+| Replacing rules with rules in EHF Common.
+| Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/233[#233]
+| Updated chapter on validation to reflect use of EHF Common.
+| Guide
 
 |===
 

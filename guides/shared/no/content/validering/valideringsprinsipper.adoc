@@ -10,10 +10,8 @@ Nivåer i valideringsprosessen:
   * Lovlige koder for valuta, land, avgifter etc.
   * Logiske sammenhenger mellom informasjonselementer som at startdato må komme før sluttdato, subtotaler må summeres til korrekt totalsum, test på at faktorer som skal multipliseres får korrekt produkt etc.
 .	Validering mot PEPPOL (EU) regelverk
-.	Validering mot norsk bokføringslov,  for eksempel:
+. Validering mot EHF Common som inneholder regler felles for alle dokumenttyper som inngår i EHF.
+.	Validering mot EHF regler og norsk lovverk, for eksempel:
   * Organisasjonsnummer må fylles ut for selger.
-.	Validering mot norske offentlige krav, for eksempel:
   * Deres referanse må være utfylt.
   * Adresse, postnr og sted må være utfylt for kjøper.
-
-Validering for nivå 6 og 7 er det opp til bransjer og bedrifter å etablere ved behov.

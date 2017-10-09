@@ -14,4 +14,8 @@
 | Benytte PEPPOL BIS sin Schematron som kilde i prosjetet for å forenkle vedlikehold og økt transparens.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/233[#233]
+| Oppdatert kapittel om validering så det reflerterer bruk av EHF Common.
+| Guide
+
 |===

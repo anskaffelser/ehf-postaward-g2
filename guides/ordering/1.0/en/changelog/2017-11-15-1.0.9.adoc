@@ -14,4 +14,8 @@
 | For easier maintenance and better transparency use PEPPOL BIS Schematron source in favour of copying generated XSLTs into this project.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/233[#233]
+| Updated chapter on validation to reflect use of EHF Common.
+| Guide
+
 |===
