@@ -80,8 +80,8 @@
 				<cbc:ItemClassificationCode listID="UNSPSC">43211508</cbc:ItemClassificationCode>
 			</cac:CommodityClassification>
 			<cac:ClassifiedTaxCategory>
-				<cbc:ID schemeID="UNCL5305 SUBSET">S</cbc:ID>
-				<cbc:Percent>18</cbc:Percent>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
 				<cac:TaxScheme>
 					<cbc:ID schemeID="UNCL5103">VAT</cbc:ID>
 				</cac:TaxScheme>

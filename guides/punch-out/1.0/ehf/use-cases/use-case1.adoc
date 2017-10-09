@@ -15,6 +15,6 @@ This use case describes when a buyer uses the Punch out to retrieve item informa
 
   Seller’s website logs out the buyer, and the buyer is redirected back to the procurement system. The buyer then follows the normal order approval procedure, and places an order based on the items in the cart.
  | Result | The buyer has received information about the items that he selected into his cart in a message that is structured like a catalogue that can be imported into his purchasing system and used as basis for an order.
- | XML example file | See Appendix A for a sample file illustrating Use Case 1.
+ | XML example file | See link:files/examples/ehf-po-case1-2.xml[Use Case 1.]
 
 |===

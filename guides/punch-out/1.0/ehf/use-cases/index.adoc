@@ -12,7 +12,7 @@ The Punch Out includes the sending of Shopping cart information from a Seller to
 
 include::use-case1.adoc[]
 
-include::use-case2.adoc[]
+//include::use-case2.adoc[]
 
 include::use-case3.adoc[]
 

@@ -23,12 +23,12 @@ Examples of supplier roles: seller, consignor, creditor, economic operator.
 | Buyer +
 (ReceiverParty)  | The buyer is the legal person or organization acting on behalf of the customer and who buys or purchases the goods or services.
 
-In the Punch Out BIS the buyer accesses the punch out system, selects the items and quantities he wants and completes the action by punching-out
+In the Punch Out  the buyer accesses the punch out system, selects the items and quantities he wants and completes the action by punching-out
 
 | Seller +
 (ProviderParty) | 	The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the customer.
 
-In the Punch Out BIS the seller provides the punch out system into which the buyer logs on. The seller is responsible for providing up-to-date information on items and other relevant information in the punch out system.
+In the Punch Out  the seller provides the punch out system into which the buyer logs on. The seller is responsible for providing up-to-date information on items and other relevant information in the punch out system.
 
 |===
 

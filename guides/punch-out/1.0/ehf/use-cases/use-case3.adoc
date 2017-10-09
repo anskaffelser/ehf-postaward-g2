@@ -19,6 +19,6 @@ This use case describes a process where a buyer uses a punch out system to confi
  The buyer then use the functionality in the seller’s website to select and configure a PC. When the buyer checks out of the website the item information of the configured item is automatically sent to the buyer’s procurement system. The procurement system automatically logout of the seller’s website, and the buyer is redirected back to the procurement system. From the procurement system, the buyer follows the normal ordering procedures when ordering the PC, using the identifier of the configured item as a reference for the seller.
 
  | Result | The buyer has retrieved information about a configured item.
- | XML example file |	See Appendix A for a sample file illustrating Use Case 4. <<må se på>>
+ | XML example file |	See link:files/examples/ehf-po-case1-2.xml[Use Case 2.]
 
 |===
