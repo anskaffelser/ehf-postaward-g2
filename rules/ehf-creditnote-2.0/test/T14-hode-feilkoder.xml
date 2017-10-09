@@ -3,7 +3,7 @@
 		Content:
 		This file contains a norwegian creditnote, profile invoice and creditnote
 
-		Errors:                
+		Errors:
 		CL-T14-R003 11 times
 		CL-T14-R004 4 times
 		CL-T14-R002
@@ -13,9 +13,9 @@
 		EUGEN-T14-R027 4 times
 		EUGEN-T14-R026
 		NOGOV-T14-R005 2 times
-		
+
 		Warnings:
-		None
+		EHF-COMMON-R003
 -->
 <CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"  xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
@@ -129,7 +129,7 @@
   	<cbc:PayableRoundingAmount currencyID="NRK">0.00</cbc:PayableRoundingAmount>
   	<cbc:PayableAmount currencyID="NRK">125.00</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
-<cac:CreditNoteLine> 
+<cac:CreditNoteLine>
 <cbc:ID>1</cbc:ID>
 <cbc:CreditedQuantity unitCode="NAR">1.00</cbc:CreditedQuantity>
 <cbc:LineExtensionAmount currencyID="NOK">100.00</cbc:LineExtensionAmount>
@@ -152,4 +152,3 @@
  </cac:Price>
  </cac:CreditNoteLine>
  </CreditNote>
-

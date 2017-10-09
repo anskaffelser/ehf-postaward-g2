@@ -4,12 +4,13 @@
                 This file contains a norwegian creditnote, profile invoice and creditnote
 
                 Errors:
+								EHF-COMMON-R001 x 3
+								EHF-COMMON-R002 x 2
                 EUGEN-T14-R024
                 NONAT-T14-R021
 				NONAT-T14-R001
                 NONAT-T14-R006
                 NONAT-T14-R014 2 times
-                NONAT-T14-R023
                 NOGOV-T14-R003
 				NOGOV-T14-R004
 				NOGOV-T14-R008

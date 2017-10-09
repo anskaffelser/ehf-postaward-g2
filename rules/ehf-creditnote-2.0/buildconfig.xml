@@ -10,6 +10,7 @@
         <identifier>ehf-t14-base-2.0</identifier>
         <title>EHF Creditnote 2.0 (Base)</title>
         <inherit>ubl-creditnote-2.1</inherit>
+        <inherit>ehf-common-ubl-1.0</inherit>
         <inherit>ehf-t14-stylesheet-2.0</inherit>
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/BII RULES/BIIRULES-UBL-T14.sch"

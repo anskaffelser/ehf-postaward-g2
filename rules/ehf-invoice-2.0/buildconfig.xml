@@ -12,6 +12,7 @@
         <identifier>ehf-t10-base-2.0</identifier>
         <title>EHF Invoice 2.0 (Base)</title>
         <inherit>ubl-invoice-2.1</inherit>
+        <inherit>ehf-common-ubl-1.0</inherit>
         <inherit>ehf-t10-stylesheet-2.0</inherit>
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch"

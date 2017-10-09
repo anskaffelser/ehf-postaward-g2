@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NONAT-T10-R025</scope>
+		<scope>EHF-COMMON-R001</scope>
+		<scope>EHF-COMMON-R002</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>No errors when no empty elements are present.</description>
-			<success>NONAT-T10-R025</success>
+			<success>EHF-COMMON-R001</success>
+			<success>EHF-COMMON-R002</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -33,7 +35,8 @@
 	<test>
 		<assert>
 			<description>Trigger error when empty elements are present.</description>
-			<error>NONAT-T10-R025</error>
+			<error number="2">EHF-COMMON-R001</error>
+			<error number="2">EHF-COMMON-R002</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -41,16 +44,11 @@
 
 			<cac:AccountingSupplierParty>
 				<cac:Party>
-					<cac:PartyLegalEntity>
-						<cbc:CompanyID></cbc:CompanyID>
-						<cbc:RegistrationName></cbc:RegistrationName>
-					</cac:PartyLegalEntity>
+					<cac:PartyLegalEntity></cac:PartyLegalEntity>
 					<cac:PostalAddress>
 						<cbc:CityName></cbc:CityName>
 						<cbc:PostalZone></cbc:PostalZone>
-						<cac:Country>
-							<cbc:IdentificationCode></cbc:IdentificationCode>
-						</cac:Country>
+						<cac:Country></cac:Country>
 					</cac:PostalAddress>
 				</cac:Party>
 			</cac:AccountingSupplierParty>
@@ -60,7 +58,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when empty elements are present.</description>
-			<error>NONAT-T10-R025</error>
+			<error>EHF-COMMON-R001</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -73,7 +71,7 @@
 	<test>
 		<assert>
 			<description>Don't trigger error when element contains space.</description>
-			<success>NONAT-T10-R025</success>
+			<success>EHF-COMMON-R001</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -86,7 +84,7 @@
 	<test>
 		<assert>
 			<description>Don't trigger error when element contains tab.</description>
-			<success>NONAT-T10-R025</success>
+			<success>EHF-COMMON-R001</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

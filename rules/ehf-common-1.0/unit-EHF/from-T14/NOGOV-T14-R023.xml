@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t14-base-2.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T14-R023</scope>
+		<scope>EHF-COMMON-R011</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify organization number of party identification when so is declared.</description>
-			<success number="2">NOGOV-T14-R023</success>
+			<success number="2">EHF-COMMON-R011</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -22,7 +22,7 @@
 	<test>
 		<assert>
 			<description>Verify organization number of party identification when so is declared.</description>
-			<error number="3">NOGOV-T14-R023</error>
+			<error number="3">EHF-COMMON-R011</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

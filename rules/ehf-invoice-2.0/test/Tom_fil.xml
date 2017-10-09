@@ -4,11 +4,12 @@
         This file contains a norwegian invoice, profile only
 
         Errors:
-				NOGOV-T10-R030
+        EHF-COMMON-R001 x 10
+        EHF-COMMON-R002
+        EHF-COMMON-R012
 				NOGOV-T10-R007
 				NOGOV-T10-R032
 				NOGOV-T10-R020
-				NONAT-T10-R025
 				NONAT-T10-R001
 				NONAT-T10-R006
 				NONAT-T10-R007

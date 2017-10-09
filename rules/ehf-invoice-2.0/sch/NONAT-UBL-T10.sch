@@ -33,9 +33,6 @@
       <let name="taxCategories" value="for $cat in /ubl:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory return normalize-space($cat/cbc:ID)"/>
 
       <rule context="ubl:Invoice">
-         <assert id="NONAT-T10-R025"
-                 test="not(count(//*[not(node()[not(self::comment())])]) &gt; 0)"
-                 flag="fatal">[NONAT-T10-R025]-An invoice MUST not contain empty elements.</assert>
          <assert id="NONAT-T10-R012"
                  test="cac:TaxTotal"
                  flag="fatal">[NONAT-T10-R012]-An invoice MUST contain tax information</assert>
@@ -45,9 +42,6 @@
          <assert id="NONAT-T10-R013"
                  test="not(cac:PayeeParty) or cac:PayeeParty/cac:PartyName/cbc:Name"
                  flag="fatal">[NONAT-T10-R013]-If payee information is provided then the payee name MUST be specified.</assert>
-         <assert id="NONAT-T10-R019"
-                 test="cbc:UBLVersionID"
-                 flag="fatal">[NONAT-T10-R019]-An invoice MUST have a syntax identifier.</assert>
          <assert id="NONAT-T10-R009"
                  test="not(cbc:IssueDate) or current-date() &gt;= cbc:IssueDate"
                  flag="warning">[NONAT-T10-R009]-Issue date of an invoice should be today or earlier.</assert>
@@ -140,11 +134,6 @@
 
       <!-- TAXATION -->
 
-      <rule context="cac:TaxCategory/cbc:ID | cac:ClassifiedTaxCategory/cbc:ID">
-         <assert id="NONAT-T10-R030"
-                 test="some $cat in tokenize('AA E H K R S Z', '\s') satisfies $cat = normalize-space(.)"
-                 flag="fatal">[NONAT-T10-R021]-Invoice tax categories MUST be one of the follwoing codes:  AA E H K R S Z</assert>
-      </rule>
       <rule context="cac:AllowanceCharge/cac:TaxCategory[cbc:Percent] | cac:Item/cac:ClassifiedTaxCategory[cbc:Percent]">
         <let name="category" value="u:cat2str(.)"/>
 

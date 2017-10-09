@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T10-R010</scope>
+		<scope>EHF-COMMON-R100</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify only allowed mime types are provided.</description>
-			<success>NOGOV-T10-R010</success>
+			<success>EHF-COMMON-R100</success>
 		</assert>
-		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" />
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/gif" />
@@ -19,20 +19,20 @@
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="image/png" />
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="text/plain" />
 
-		</Invoice>
+		</CreditNote>
 	</test>
 	<test>
 		<assert>
 			<description>Trigger warning when mime types not allowed are provided.</description>
-			<warning number="2">NOGOV-T10-R010</warning>
+			<warning number="2">EHF-COMMON-R100</warning>
 		</assert>
-		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
 
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="application/json" />
 			<cbc:EmbeddedDocumentBinaryObject mimeCode="text/json" />
 
-		</Invoice>
+		</CreditNote>
 	</test>
 </testSet>

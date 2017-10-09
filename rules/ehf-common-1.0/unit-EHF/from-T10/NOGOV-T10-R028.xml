@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t10-base-2.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NOGOV-T10-R028</scope>
+		<scope>EHF-COMMON-R030</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify date elements are correctly formated.</description>
-			<success>NOGOV-T10-R028</success>
+			<success>EHF-COMMON-R030</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -26,7 +26,7 @@
 	<test>
 		<assert>
 			<description>Trigger error when date elements are not correctly formated.</description>
-			<error number="10">NOGOV-T10-R028</error>
+			<error number="10">EHF-COMMON-R030</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

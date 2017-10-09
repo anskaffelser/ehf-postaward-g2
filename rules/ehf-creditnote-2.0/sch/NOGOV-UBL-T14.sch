@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:u="utils"
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         schemaVersion="iso" queryBinding="xslt2">
 
   <title>Sjekk mot norske regler </title>
@@ -7,23 +7,6 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2" prefix="ubl"/>
-  <ns uri="utils" prefix="u"/>
-
-  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:mod11" as="xs:boolean">
-    <param name="val"/>
-    <variable name="length" select="string-length($val) - 1"/>
-    <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
-    <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
-    <value-of select="number($val) &gt; 0 and (11 - ($weightedSum mod 11)) mod 11 = number(substring($val, $length + 1, 1))"/>
-  </function>
-
-  <function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:gln" as="xs:boolean">
-    <param name="val"/>
-    <variable name="length" select="string-length($val) - 1"/>
-    <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length + 1)) return $i - 48)"/>
-    <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (1 + ((($i + 1) mod 2) * 2)))"/>
-    <value-of select="10 - ($weightedSum mod 10) = number(substring($val, $length + 1, 1))"/>
-  </function>
 
    <pattern>
       <let name="isB2C" value="//cac:AdditionalDocumentReference/cbc:DocumentType = 'elektroniskB2Cfaktura'"/>
@@ -91,42 +74,12 @@
                  flag="fatal">[NOGOV-T14-R025]-Total tax amount cannot have more than 2 decimals</assert>
          <assert id="NOGOV-T14-R041"
                  test="count(distinct-values(cac:TaxSubtotal/cac:TaxCategory/cbc:ID/normalize-space(text()))) = count(cac:TaxSubtotal)"
-                 flag="fatal">[NOGOV-T14-R041]-Multiple tax subtotals per tax category is not allowed.</assert>
+                 flag="fatal">[NOGOV-T14-R041]-Multiple tax subtotals per tax category code is not allowed.</assert>
       </rule>
       <rule context="cac:TaxRepresentativeParty">
          <assert id="NOGOV-T14-R017"
                  test="cac:PartyTaxScheme/cbc:CompanyID"
                  flag="fatal">[NOGOV-T14-R017]-Company identifier MUST be specified when describing a Tax Representative</assert>
-      </rule>
-      <rule context="cac:Party/cbc:EndpointID">
-         <assert id="NOGOV-T14-R010"
-                 test="@schemeID = 'NO:ORGNR'"
-                 flag="fatal">[NOGOV-T14-R010]-An endpoint identifier scheme MUST have the value 'NO:ORGNR'.</assert>
-         <assert id="NOGOV-T14-R009"
-                 test="matches(., '^[0-9]{9}$') and u:mod11(.)"
-                 flag="fatal">[NOGOV-T14-R009]-Endpoint ID MUST be a valid Norwegian organization number. Only numerical value allowed</assert>
-      </rule>
-      <rule context="cac:PartyLegalEntity/cbc:CompanyID">
-         <assert id="NOGOV-T14-R014"
-                 test="matches(., '^[0-9]{9}$') and u:mod11(.)"
-                 flag="fatal">[NOGOV-T14-R014]-A valid Norwegian organization number for seller, buyer and payee MUST be nine numbers..</assert>
-      </rule>
-      <rule context="cac:PartyTaxScheme/cbc:CompanyID">
-         <assert id="NOGOV-T14-R013"
-                 test="matches(., '^[0-9]{9}MVA$') and u:mod11(substring(., 1, 9))"
-                 flag="fatal">[NOGOV-T14-R013]-A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.</assert>
-      </rule>
-      <rule context="cbc:IssueDate | cbc:TaxPointDate | cbc:StartDate | cbc:EndDate | cbc:ActualDeliveryDate | cbc:PaymentDueDate | cbc:Date">
-         <!-- cbc:*[contains(name(),'Date')] -->
-
-         <assert id="NOGOV-T14-R011"
-                 test="(text() castable as xs:date) and (string-length(.) = 10)"
-                 flag="fatal">[NOGOV-T14-R011]-A date must be formatted YYYY-MM-DD.</assert>
-      </rule>
-      <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
-         <assert id="NOGOV-T14-R020"
-                 test="some $c in tokenize('application/pdf image/gif image/tiff image/jpeg image/png text/plain', '\s') satisfies $c = @mimeCode"
-                 flag="warning">[NOGOV-T14-R020]-Attachment is not a recommended MIMEType.</assert>
       </rule>
       <rule context="cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID[@schemeID = 'BBAN']">
          <assert id="NOGOV-T14-R015"
@@ -143,11 +96,6 @@
                  test="cbc:ItemClassificationCode"
                  flag="warning">[NOGOV-T14-R019]-Item classification code MUST be specified when describing commodity classification.</assert>
       </rule>
-      <rule context="cac:PartyIdentification/cbc:ID[@schemeID = 'NO:ORGNR']">
-         <assert id="NOGOV-T14-R023"
-                 test="matches(., '^[0-9]{9}$')"
-                 flag="fatal">[NOGOV-T14-R023]-When scheme is NO:ORGNR, a Norwegian organizational number must be used. Only numerical value allowed</assert>
-      </rule>
       <rule context="cac:TaxSubtotal">
          <assert id="NOGOV-T14-R026"
                  test="string-length(substring-after(cbc:TaxableAmount, '.')) &lt;= 2"
@@ -160,11 +108,6 @@
          <assert id="NOGOV-T14-R027"
                  test="string-length(substring-after(cbc:Amount, '.')) &lt;= 2"
                  flag="fatal">[NOGOV-T14-R027]-Allowance or charge amounts on document level cannot have more than 2 decimals</assert>
-      </rule>
-      <rule context="cbc:ID[@schemeID = 'GLN']">
-         <assert id="NOGOV-T14-R044"
-                 test="u:gln(.)"
-                 flag="warning">[NOGOV-T14-R044]-Invalid GLN number provided.</assert>
       </rule>
    </pattern>
 </schema>

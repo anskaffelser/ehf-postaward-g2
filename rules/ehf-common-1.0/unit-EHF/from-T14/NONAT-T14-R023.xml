@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-t14-base-2.0">
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
 	<assert>
-		<scope>NONAT-T14-R023</scope>
+		<scope>EHF-COMMON-R001</scope>
+		<scope>EHF-COMMON-R002</scope>
 	</assert>
 	<test>
 		<assert>
 			<description>Verify elements with content throws no errors.</description>
-			<success>NONAT-T14-R023</success>
+			<success>EHF-COMMON-R001</success>
+			<success>EHF-COMMON-R002</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -22,7 +24,8 @@
 	<test>
 		<assert>
 			<description>Verify elements without content throws errors.</description>
-			<error>NONAT-T14-R023</error>
+			<error number="4">EHF-COMMON-R001</error>
+			<success>EHF-COMMON-R002</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

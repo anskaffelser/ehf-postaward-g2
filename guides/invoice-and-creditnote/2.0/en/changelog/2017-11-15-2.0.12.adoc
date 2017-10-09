@@ -14,3 +14,153 @@
 | Validator
 
 |===
+
+
+=== Mapping of rules for EHF Common in EHF Invoice
+
+[cols="3,8,3", options="header"]
+|===
+| New rule
+| Description
+| Old rule
+
+3+h| Document in general
+
+| link:{ruleurl-common}EHF-COMMON-R001[EHF-COMMON-R001] (*F*)
+| Document MUST not contain empty elements.
+| NONAT-T10-R025 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R002[EHF-COMMON-R002] (*F*)
+| Document MUST not contain empty elements.
+| NONAT-T10-R025 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R003[EHF-COMMON-R003] (*W*)
+| Document SHOULD not contain schema location.
+| _New rule_
+
+| link:{ruleurl-common}EHF-COMMON-R004[EHF-COMMON-R004] (*F*)
+| Document MUST have a syntax identifier.
+| NONAT-T10-R019 (*F*)
+
+3+h| Validation of Norwegian organization numbers
+
+| link:{ruleurl-common}EHF-COMMON-R010[EHF-COMMON-R010] (*F*)
+| MUST be a valid Norwegian organization number. Only numerical value allowed
+| NOGOV-T10-R026 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (*F*)
+| When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
+| NOGOV-T10-R036 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (*F*)
+| A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.
+| NOGOV-T10-R030 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (*F*)
+| When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
+| NOGOV-T10-R031 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R014[EHF-COMMON-R014] (*F*)
+| An endpoint identifier scheme MUST have the value 'NO:ORGNR'.
+| NOGOV-T10-R027 (*F*)
+
+3+h| Validation of tax
+
+| link:{ruleurl-common}EHF-COMMON-R020[EHF-COMMON-R020] (*F*)
+| Tax categories MUST be one of the follwoing codes:  AA E H K R S Z
+| NONAT-T10-R030 (*F*)
+
+3+h| Formating validation
+
+| link:{ruleurl-common}EHF-COMMON-R030[EHF-COMMON-R030] (*F*)
+| A date must be formatted YYYY-MM-DD.
+| NOGOV-T10-R028 (*F*)
+
+3+h| Validation of other identifiers
+
+| link:{ruleurl-common}EHF-COMMON-R040[EHF-COMMON-R040] (*W*)
+| Invalid GLN number provided.
+| NOGOV-T10-R044 (*W*)
+
+3+h| Code lists
+
+| link:{ruleurl-common}EHF-COMMON-R100[EHF-COMMON-R100] (*W*)
+| Attachment is not a recommended MIMEType.
+| NOGOV-T10-R010 (*W*)
+
+|===
+
+
+=== Mapping of rules for EHF Common in EHF Credit Note
+
+[cols="3,8,3", options="header"]
+|===
+| New rule
+| Description
+| Old rule
+
+3+h| Document in general
+
+| link:{ruleurl-common}EHF-COMMON-R001[EHF-COMMON-R001] (*F*)
+| Document MUST not contain empty elements.
+| NONAT-T14-R023 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R002[EHF-COMMON-R002] (*F*)
+| Document MUST not contain empty elements.
+| NONAT-T14-R023 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R003[EHF-COMMON-R003] (*W*)
+| Document SHOULD not contain schema location.
+| _New rule_
+
+| link:{ruleurl-common}EHF-COMMON-R004[EHF-COMMON-R004] (*F*)
+| Document MUST have a syntax identifier.
+| NONAT-T14-R015 (*F*)
+
+3+h| Validation of Norwegian organization numbers
+
+| link:{ruleurl-common}EHF-COMMON-R010[EHF-COMMON-R010] (*F*)
+| MUST be a valid Norwegian organization number. Only numerical value allowed
+| NOGOV-T14-R009 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (*F*)
+| When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
+| NOGOV-T14-R023 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R012[EHF-COMMON-R012] (*F*)
+| A VAT number MUST be valid Norwegian organization number (nine numbers) followed by the letters MVA.
+| NOGOV-T14-R013 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R013[EHF-COMMON-R013] (*F*)
+| When scheme is NO:ORGNR, a valid Norwegian organization number must be used. Only numerical value allowed
+| NOGOV-T14-R014 (*F*)
+
+| link:{ruleurl-common}EHF-COMMON-R014[EHF-COMMON-R014] (*F*)
+| An endpoint identifier scheme MUST have the value 'NO:ORGNR'.
+| NOGOV-T14-R010 (*F*)
+
+3+h| Validation of tax
+
+| link:{ruleurl-common}EHF-COMMON-R020[EHF-COMMON-R020] (*F*)
+| Tax categories MUST be one of the follwoing codes:  AA E H K R S Z
+| NONAT-T14-R017 (*F*), NONAT-T14-R028 (*F*)
+
+3+h| Formating validation
+
+| link:{ruleurl-common}EHF-COMMON-R030[EHF-COMMON-R030] (*F*)
+| A date must be formatted YYYY-MM-DD.
+| NOGOV-T14-R011 (*F*)
+
+3+h| Validation of other identifiers
+
+| link:{ruleurl-common}EHF-COMMON-R040[EHF-COMMON-R040] (*W*)
+| Invalid GLN number provided.
+| NOGOV-T14-R044 (*W*)
+
+3+h| Code lists
+
+| link:{ruleurl-common}EHF-COMMON-R100[EHF-COMMON-R100] (*W*)
+| Attachment is not a recommended MIMEType.
+| NOGOV-T14-R020 (*W*)
+
+|===

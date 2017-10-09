@@ -44,7 +44,9 @@ Elements without content are expected to be removed as long as they are optional
 | Document type | Status | Comment
 | EHF Catalogue 1.x | Active |
 | EHF Catalogue Response 1.x | Active |
+| EHF Credit Note 2.x | Active |
 | EHF Despatch Advice 1.x | Active |
+| EHF Invoice 2.x | Active |
 | EHF Order 1.x | Active |
 | EHF Order Response 1.x | Active |
 |===
