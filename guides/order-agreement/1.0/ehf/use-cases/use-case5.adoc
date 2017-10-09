@@ -33,6 +33,6 @@ The seller proceeds to invoice immediately unless otherwise directed by the fram
 The buyer may have internal processes that verify these kind of order agreements differently than those initiated by himself.
 
 | Result | The buyer has registered a purchase order in his system that allow him to do order to invoice matching when the invoice is received.
-| XML example file | See Appendix A for a sample file illustrating Use Case 2.
+| XML example file | See link:files/example/ehf-oa-case-2.xml[Use case 2]
 
 |===
