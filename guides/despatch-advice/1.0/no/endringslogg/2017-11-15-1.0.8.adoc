@@ -10,4 +10,8 @@
 | Oppdatere regel link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**) til å trigge feil.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#229]
+| Benytte PEPPOL BIS sin Schematron som kilde i prosjetet for å forenkle vedlikehold og økt transparens.
+| Validator
+
 |===
