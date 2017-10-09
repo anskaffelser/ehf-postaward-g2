@@ -9,7 +9,7 @@
 | Oppdatere reglene link:{ruleurl-inv}NONAT-T10-R031/[NONAT-T10-R031] (**F**), link:{ruleurl-inv}NONAT-T10-R032/[NONAT-T10-R032] (**F**), link:{ruleurl-cre}NONAT-T14-R030/[NONAT-T14-R030] (**F**) og link:{ruleurl-cre}NONAT-T14-R031/[NONAT-T14-R031] (**F**) til å trigge feil.
 | Validator
 
-| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#234]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/229[#229]
 | Benytte PEPPOL BIS sin Schematron som kilde i prosjetet for å forenkle vedlikehold og økt transparens.
 | Validator
 

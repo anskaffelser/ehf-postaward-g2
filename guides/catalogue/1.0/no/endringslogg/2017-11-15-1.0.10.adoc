@@ -14,7 +14,7 @@
 | Skjule regelen BII2-T19-R021 (**W**) i validator.
 | Validator
 
-| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#229]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/229[#229]
 | Benytte PEPPOL BIS sin Schematron som kilde i prosjetet for å forenkle vedlikehold og økt transparens.
 | Validator
 

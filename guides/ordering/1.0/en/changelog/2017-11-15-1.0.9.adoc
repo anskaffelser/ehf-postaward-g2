@@ -10,7 +10,7 @@
 | Updating rule link:{ruleurl-common}EHF-COMMON-R011[EHF-COMMON-R011] (**F**) from warning to error.
 | Validator
 
-| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#229]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/229[#229]
 | For easier maintenance and better transparency use PEPPOL BIS Schematron source in favour of copying generated XSLTs into this project.
 | Validator
 

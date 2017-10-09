@@ -14,7 +14,7 @@
 | Supressing rule BII2-T19-R021 (**W**) in validator.
 | Validator
 
-| link:https://github.com/difi/vefa-ehf-postaward/issues/234[#229]
+| link:https://github.com/difi/vefa-ehf-postaward/issues/229[#229]
 | For easier maintenance and better transparency use PEPPOL BIS Schematron source in favour of copying generated XSLTs into this project.
 | Validator
 
