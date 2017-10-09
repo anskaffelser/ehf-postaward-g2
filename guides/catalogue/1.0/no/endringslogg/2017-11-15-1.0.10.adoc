@@ -11,7 +11,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/234[#234]
-| Skjule regelen link:{ruleurl-cat}NOGOV-T19-R024/[BII2-T19-R021] (**W**) i validatoren.
+| Skjule regelen BII2-T19-R021 (**W**) i validator.
 | Validator
 
 |===

@@ -11,7 +11,7 @@
 | Validator
 
 | link:https://github.com/difi/vefa-ehf-postaward/issues/234[#234]
-| Supressing rule link:{ruleurl-cat}NOGOV-T19-R024/[BII2-T19-R021] (**W**) in validator.
+| Supressing rule BII2-T19-R021 (**W**) in validator.
 | Validator
 
 |===
