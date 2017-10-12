@@ -14,7 +14,7 @@ v{revision}
 :sectanchors:
 :sectnums:
 :imagesdir: images/
-:title-logo-image: {imagesdir}/peppol.png
+:title-logo-image: {imagesdir}/difi-logo.png
 
 
 :date-review: 15. October 2017
@@ -47,9 +47,6 @@ include::description/index.adoc[]
 include::codes/index.adoc[]
 
 include::{shared-dir}/content/validation/index.adoc[]
-
-//include::../../../../{cwd}/validering/validation-rules.adoc[]
-
 
 include::appendix/index.adoc[]
 

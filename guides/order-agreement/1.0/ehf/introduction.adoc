@@ -23,5 +23,4 @@ More specifically it is addressed towards the following roles:
 include::principles/scope.adoc[]
 
 
-
 :leveloffset: -1
