@@ -21,6 +21,10 @@
 | Updated chapter on validation to reflect use of EHF Common.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/239[#239]
+| Clarify use of "NA" as order reference and "Your ref".
+| Guide
+
 |===
 
 

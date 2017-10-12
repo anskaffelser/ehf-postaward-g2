@@ -15,3 +15,7 @@ Dersom ordrenummer er angitt på hodenivå forutsettes det at fakturaen kun er b
 Dersom fakturaen omfatter flere ordre, oppgis ordrereferanse kun på linjenivå. Ordrereferansen på Iflinjenivå må da referere både til selve ordren og de aktuelle ordrelinjene. Syntaksen for hvordan dette angis bør avtales av partene, men det anbefales slik: ordrenummer##ordrelinjenummer.
 
 Ved behov for andre typer av referanser enn ordre-/bestillingsnummer og kontraktsnummer (se punkt 6.8), skal andre dokumentreferanser benyttes, se punkt 6.11.
+
+Når ordrenummer ikke er gitt skal Order Reference-elementet fjernes helt for å tydelig kommunisere at ingen ordrenummer var oppgitt. Når verdien "NA" brukes som ordrerefereanse er dette å anse som et reelt ordrenummer.
+
+IMPORTANT: Bruk av "NA" for "Not Applicable" er ikke mulig da "NA" vil da behandles som om det er et reelt ordrenummer.

@@ -21,6 +21,10 @@
 | Oppdatert kapittel om validering så det reflerterer bruk av EHF Common.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/239[#239]
+| Tydeliggjøre bruk av "NA" på ordrenummer og "Deres referanse."
+| Guide
+
 |===
 
 

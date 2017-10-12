@@ -2,4 +2,6 @@
 
 **Deres referanse** er obligatorisk kjøperreferanse. Skal inneholde referanse til bestiller, for eksempel bestillers navn, ansattnummer eller annen kode som identifiserer bestiller, eller en identifikator for avdeling/gruppe. Hos mange statlige mottakere vil identifikatoren være  en kombinasjon av tall og bokstaver, f.eks.  3150okr som angir en bestemt person. Deres referanse vil styre behandlingen av fakturaen  i et evt.  arbeidsflytsystem hos mottaker, og det er derfor viktig at utsteder benytter korrekt verdi i henhold til krav fra kjøper. Dersom denne informasjonen ikke er relevant for fakturaen anbefales det at verdien «NA» (Not Applicable) benyttes i elementet, dette bør avklares med fakturamottaker. Deres ref angis i elementet ```AccountingCustomerParty/Party/Contact/ID```.
 
+IMPORTANT: "Deres referanse" skal settes til "NA" kun i de tilfeller hvor slik referanse ikke er oppgitt av kjøper. Når referanse er oppgitt av kjøper må rett felt fylles ut med oppgitt referanse.
+
 **Vår referanse** er referansen for utsteder av EHF Fakturaen.  Bør oppgis og være navn/referanse/identifikator til person hos leverandør som kan besvare evt. spørsmål om fakturaen. Angis i elementet ```AccountingSupplierParty/Party/Contact/ID```.
