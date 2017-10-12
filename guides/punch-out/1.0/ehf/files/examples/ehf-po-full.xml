@@ -67,7 +67,7 @@
 				<cbc:ID schemeID="GTIN">1234567890123</cbc:ID>
 			</cac:StandardItemIdentification>
 			<cac:ItemSpecificationDocumentReference>
-				<cbc:ID>PC01image.pdf</cbc:ID>
+				<cbc:ID>PC01image.jpeg</cbc:ID>
 				<cbc:DocumentTypeCode>main_image</cbc:DocumentTypeCode>
 				<cbc:DocumentType>Picture of the computer</cbc:DocumentType>
 				<cac:Attachment>
