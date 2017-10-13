@@ -120,15 +120,15 @@
 	<cac:OrderLine>
 		<cac:LineItem>
 			<cbc:ID>1</cbc:ID>
-			<cbc:Quantity unitCode="C62">1</cbc:Quantity>
+			<cbc:Quantity unitCode="C62" unitCodeListID="UNECERec20">1</cbc:Quantity>
 			<cbc:LineExtensionAmount currencyID="NOK">1000</cbc:LineExtensionAmount>
 			<cbc:TotalTaxAmount currencyID="NOK">0</cbc:TotalTaxAmount>
 			<cac:Delivery>
-				<cbc:Quantity unitCode="NOK">1</cbc:Quantity>
+				<cbc:Quantity unitCode="C62" unitCodeListID="UNECERec20">1</cbc:Quantity>
 			</cac:Delivery>
 			<cac:Price>
 				<cbc:PriceAmount currencyID="NOK">1000</cbc:PriceAmount>
-				<cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>
+				<cbc:BaseQuantity unitCode="C62" unitCodeListID="UNECERec20">1</cbc:BaseQuantity>
 			</cac:Price>
 			<cac:Item>
 				<cbc:Description>Flight ticket for travel</cbc:Description>

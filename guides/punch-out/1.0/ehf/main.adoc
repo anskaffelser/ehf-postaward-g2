@@ -37,9 +37,9 @@ include::principles/index.adoc[]
 
 include::use-cases/index.adoc[]
 
-include::message-transport-identifiers/index.adoc[]
-
 include::description-shopping-cart/index.adoc[]
+
+include::message-transport-identifiers/index.adoc[]
 
 include::codes/index.adoc[]
 

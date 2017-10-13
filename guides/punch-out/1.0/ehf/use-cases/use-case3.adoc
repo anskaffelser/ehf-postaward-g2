@@ -1,12 +1,12 @@
 
-=	Use case 3 – User configures product/services
+=	Use case 2 – User configures product/services
 
 This use case describes a process where a buyer uses a punch out system to configure a product by selecting several components and features from a catalogue.
 
 
 [cols="2,10", options="header"]
 |===
- | Use Case number | 3
+ | Use Case number | 2
  | Use Case Name | User configures product/services
  | Use Case Description | The buyer uses the functionality in the sellers website to configure a product or a service.
  | Parties involved |	Buyer +

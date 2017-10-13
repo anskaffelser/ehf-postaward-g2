@@ -182,7 +182,6 @@
 			<cac:TaxCategory>
 				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
 				<cbc:Percent>25</cbc:Percent>
-				<cbc:TaxExemptionReason>No reason</cbc:TaxExemptionReason>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
@@ -199,7 +198,7 @@
 		<cbc:ChargeTotalAmount currencyID="NOK">199.95</cbc:ChargeTotalAmount>
 		<cbc:PrepaidAmount currencyID="NOK">100</cbc:PrepaidAmount>
 		<cbc:PayableRoundingAmount currencyID="NOK">0.05</cbc:PayableRoundingAmount>
-		<cbc:PayableAmount currencyID="NOK">1350.00</cbc:PayableAmount>
+		<cbc:PayableAmount currencyID="NOK">1250.00</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
 	<!-- end::LegalMonetaryTotal[] -->
 	<cac:OrderLine>
