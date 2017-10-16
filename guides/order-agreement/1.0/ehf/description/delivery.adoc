@@ -1,7 +1,7 @@
 
 =  Delivery
 
-Delivery gives information on when and where the goods and services are deleivered. +
+Delivery gives information on when and where the goods and services are delivered. +
 
 Delivery special terms may be used to inform how the goods or service is delivered. E.g. +
 
