@@ -17,7 +17,7 @@ A shopping cart message must at minimum contain the following information:
 ..	The price of the item.
 ..	The VAT category and percentage rate for the item.
 
-In addition to the mandatory information the shopping cart may optionally contain additional information details. The following sections detail how different parts of the shopping cart message are used.
+In addition to the mandatory information the shopping cart may optionally contain additional information details. The following sections detail show different parts of the shopping cart message are used.
 
 
 

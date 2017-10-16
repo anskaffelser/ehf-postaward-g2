@@ -20,7 +20,7 @@ include::../{xml-doc-fil}[tags=IdDate]
 <cbc:IssueTime>09:00:00</cbc:IssueTime>
 
 ////
-
+////
 The shopping cart also includes two identifiers that identify the process that the shopping cart is used in.  The specification that define how the shopping cart message is structured and how its information shall be processed is stated with the customization ID. This ID is always the same for all shopping cart messages that comply to this version of {docutype} Punch Out. Each shopping cart messaga must comply to the specification referenced .
 
 
@@ -40,7 +40,7 @@ include::../{xml-doc-fil}[tags=ProfileID]
 //<cbc:ProfileID>urn:www.cenbii.eu:profile:bii18:ver1.0</cbc:ProfileID>
 
 Rule: ProfileID = urn:www.cenbii.eu:profile:bii18:ver1.0
-
+////
 
 == Sellers conditions
 

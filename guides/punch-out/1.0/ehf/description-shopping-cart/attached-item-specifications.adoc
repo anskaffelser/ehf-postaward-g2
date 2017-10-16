@@ -7,21 +7,7 @@ One of these attachments can be identified specifically as being the main image 
 
 It is recommended to send attachments as embedded, binary objects and not as external references.
 
-[cols="3,9", options="header"]
-|===
-| Element |	Description
-| Coding	| Base64
-|Document format	| The following MIME types are recommended: +
-   Pdf – application / pdf +
-   TXT – text / plain +
-   GIF – image / gif +
-   JPEG –image +
-   PNG -image +
-Other MIME types may be used, subject to agreement.
-| Size | Recommended maximum message size is 100MB including attachments.
-| Description | It is recommended to use element cac:AdditionalDocumentReference/cbc:DocumentType to send a short description of the content of the attachment. +
-NB: Attachments should be used for additional information and not as order copies.
-|===
+See <<Code lists for coded elements>> .
 
 Example of attachment as an embedded, binary object in an {docutype} Shopping Cart.
 
