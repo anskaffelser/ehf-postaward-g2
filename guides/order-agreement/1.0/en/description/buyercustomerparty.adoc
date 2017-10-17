@@ -1,4 +1,3 @@
-
 ==	BuyerCustomerParty (Buyer)
 
 The buyer is the legal person or organization acting on behalf of the customer and who buys or purchases the goods or services.  The buyer is mandatory in the EHF Order Agreement message.

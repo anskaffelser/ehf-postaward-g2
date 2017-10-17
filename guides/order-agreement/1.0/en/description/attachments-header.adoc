@@ -1,4 +1,3 @@
-
 =	Attachments on header level
 
 Non-XML documents can be sent as attachments to the EHF Order Agreement. This could be timesheets or other documents relevant for the order agreement. The attachment can either be sent as a binary object encoded in Base64  embedded in the message or as a URI to an external address as a link.

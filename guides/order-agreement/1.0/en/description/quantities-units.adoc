@@ -1,4 +1,3 @@
-
 =	Quantities and units
 
 Various Quantities and Units can be stated in the EHF Order Agreement. These are both related to the ordering process and the logistics process.

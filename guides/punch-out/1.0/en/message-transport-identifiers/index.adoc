@@ -2,6 +2,7 @@
 
 EHF has defined a {link-peppol-transp}[“Policy for Using Identifiers”] that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the EHF environment. The policies that apply to this EHF are the following:
 
+
 ==	Party Identifiers
 
 The “schemeID” attribute must be populated in all instances of the “ID” element when used within a “PartyIdentification”-container and in all instances of the “EndpointID” element when used within a “Party”-container.
@@ -27,6 +28,7 @@ This {docutype} is using the UBL 2.1 syntax {link-ubl-catalogue}[UBL_Catalogue].
 ----
 include::../{xml-doc-fil}[tags=UBLVersionID]
 ----
+
 
 == Profile ID
 
@@ -61,17 +63,17 @@ This {docutype}  has required some minor additions and changes to the CEN BII tr
 
 Where:
 
- * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns077:ver2.0
+ * CENBII Transaction ID is: `urn:www.cenbii.eu:transaction:biitrns077:ver2.0`
 
- * Peppol extension ID is:   www.peppol.eu:bis:peppol18a:ver1.0
+ * Peppol extension ID is: `urn:www.peppol.eu:bis:peppol18a:ver1.0`
 
- * EHF extension ID is <<Erlend>>
+ * EHF extension ID is: `urn:fdc:difi.no:2017:ehf:spec:1.0`
 
 
 By combining these according to the identifier syntax the CustomizationID to use in {docutype} is:
 
 ----
- urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0
+ urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extends:urn:fdc:difi.no:2017:ehf:spec:1.0
 ----
 
 [source,xml,indent=0]
@@ -79,10 +81,11 @@ By combining these according to the identifier syntax the CustomizationID to use
 ----
 include::../{xml-doc-fil}[tags=CustomizationID]
 ----
-//<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0</cbc:CustomizationID>
+//<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extends:urn:fdc:difi.no:2017:ehf:spec:1.0</cbc:CustomizationID>
 
 
 For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
+
 
 == Namespaces
 
@@ -97,7 +100,8 @@ urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2
 
 The transactions defined in this {docutype} need to be transferred from the sending party to the receiving party through an agreed transport network and protocol. The {docutype} is specified independent of a transport network but it is designed with the requirement of the PEPPOL network in mind and does not specifically support other transport network that may be used.
 
-=== The EHF network
+
+=== The PEPPOL network
 
 This EHF is based on PEPPOL transport network that is a four corner transport network that allows senders end receivers to exchange message from one service provider to another by using a single identifier for the parties.
 
@@ -105,8 +109,8 @@ Details about the PEPPOL network can be found at {link-peppol-transp}[PEPPOL]
 
 The combination of the ELMA registration and the implementation guides referred to in that context eliminates the need for any formal collaboration agreement between the sender and the receiver. The ELMA registration verifies that an actor has declared the ability and the commitment to receive business documents composed according to the specific implementation guide, and any party is free to send the business document to this actor.
 
-===	Synchronous message transfer
 
+===	Synchronous message transfer
 
 It is recognized that the use of Punch Out often requires synchronous methods for retrieving that data directly from the sellers shopping cart into the buyers purchasing system. Several methods are available including the following:
 
@@ -114,6 +118,7 @@ It is recognized that the use of Punch Out often requires synchronous methods fo
 * File download using Wget, HTTP, FTP or similar technology.
 
 The following clauses only briefly introduce these transfer mechanism. Analysis of what is the most suitable methods and technical specification are not in scope for this {docutype} and are not provided by Difi.
+
 
 === Direct HTTP database connections
 

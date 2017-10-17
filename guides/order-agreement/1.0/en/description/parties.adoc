@@ -1,4 +1,3 @@
-
 =	Parties/roles
 
 The following parties/roles may be specified in the message:

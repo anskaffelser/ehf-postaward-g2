@@ -1,4 +1,3 @@
-
 = Contracted item
 
 If the purchased item is offered in accordance to an existing contract, this should be indicated in the order agreement message.

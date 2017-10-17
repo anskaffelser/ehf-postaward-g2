@@ -1,4 +1,3 @@
-
 =  Delivery
 
 Delivery gives information on when and where the goods and services are delivered. +

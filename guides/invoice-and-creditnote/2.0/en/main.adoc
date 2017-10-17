@@ -3,7 +3,7 @@ include::settings.adoc[]
 = {doctitle}
 {name-difi-en}
 v{revision}
-:description: This document describes the data formats used when trading partners exchange invoice information electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “{name-difi-en}” (Difi) within the standardization of electronic trade processes.
+:description: This document describes the data formats used when trading partners exchange invoice information electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian "{name-difi-en}"" (Difi) within the standardization of electronic trade processes.
 :doctype: book
 :icons: font
 :toc: left

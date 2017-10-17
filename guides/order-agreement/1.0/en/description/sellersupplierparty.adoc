@@ -1,4 +1,3 @@
-
 ==  SellerSupplierParty
 
 The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the buyer. The seller is mandatory in the EHF Order Agreement message.

@@ -3,7 +3,7 @@
 EHF has defined a {link-peppol-transp}[“Policy for Using Identifiers”] that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the EHF environment. The policies that apply to this EHF are the following:
 
 
-==	Party Identifiers
+== Party Identifiers
 
 The “schemeID” attribute must be populated in all instances of the “ID” element when used within a “PartyIdentification”-container and in all instances of the “EndpointID” element when used within a “Party”-container.
 
@@ -19,8 +19,7 @@ include::../{xml-doc-fil}[tags=PartyIdentification]
 ////
 
 
-
-==	Version ID
+== Version ID
 
 This {docutype} is using the UBL 2.1 syntax {link-ubl-orderresponse}[UBL_OrderResponse]. The namespace of the XML-message does only communicate the major version number. Since it is important for the receiver to also know what minor version of the syntax that is used, the element UBLVersionID must be stated with the value 2.1:
 
@@ -32,8 +31,9 @@ include::../{xml-doc-fil}[tags=UBLVersionID]
 <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
 ////
 
-== Profile ID
 
+
+== Profile ID
 The ProfileID identifies the process that the business document is part of. {docutype} uses the identification system according to BII:
 
 The following process identifier is used for Order Agreement:
@@ -49,7 +49,7 @@ include::../{xml-doc-fil}[tags=ProfileID]
 <cbc:ProfileID>urn:www.cenbii.eu:profile:bii42:ver1.0</cbc:ProfileID>
 ////
 
-==	Customization ID
+== Customization ID
 
 The {docutype} CustomizationID identifies the specification of content and rules that apply to the transaction.
 This {docutype} has required some minor additions and changes to the PEPPOL transaction. Following the CENBII methodology any extension must be communicated by adding an extension ID onto the Customization ID {link-cenbii}[CENBII]. The full syntax is:
@@ -62,16 +62,16 @@ This {docutype} has required some minor additions and changes to the PEPPOL tran
 
 Where:
 
- * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns110:ver1.0
-
- * Peppol extension ID is: urn:www.peppol.eu:bis:peppol42a:ver1.0
-
- * EHF extension ID is urn:fdc:difi.no:2017:ehf:spec:1.0
+* CENBII Transaction ID is: `urn:www.cenbii.eu:transaction:biitrns110:ver1.0`
+* Peppol extension ID is: `urn:www.peppol.eu:bis:peppol42a:ver1.0`
+* EHF extension ID is: `urn:fdc:difi.no:2017:ehf:spec:1.0`
 
 
-By combining these according to the identifier syntax the CustomizationID to use in EHF is:
+By combining these according to the identifier syntax the CustomizationID to use in EHF is (without spaces):
 ----
-urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0
+urn:www.cenbii.eu:transaction:biitrns110:ver1.0
+:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0
+:extended:urn:fdc:difi.no:2017:ehf:spec:1.0
 ----
 
 [source,xml,indent=0]
@@ -79,8 +79,6 @@ urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:p
 ----
 include::../{xml-doc-fil}[tags=CustomizationID]
 ----
-
-<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</cbc:CustomizationID>
 
 For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
 
@@ -96,7 +94,8 @@ urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2
 
 The transactions defined in this {docutype} need to be transferred from the sending party to the receiving party through an agreed transport network and protocol. The {docutype} is specified independent of a transport network but it is designed with the requirement of the PEPPOL network in mind and does not specifically support other transport network that may be used.
 
-=== The EHF network
+
+=== The PEPPOL network
 
 This EHF is based on PEPPOL transport network that is a four corner transport network that allows senders end receivers to exchange message from one service provider to another by using a single identifier for the parties.
 

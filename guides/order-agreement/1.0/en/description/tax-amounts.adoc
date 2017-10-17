@@ -1,4 +1,3 @@
-
 = Tax amounts
 
 It is possible to state the tax total of the order agreement, on the header level and also on line level.

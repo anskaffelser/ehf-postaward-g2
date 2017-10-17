@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2 C:\Users\Notandi\Documents\Uppl�singar\Standards\UBL\UBL-2.1\xsd\maindoc\UBL-Catalogue-2.1.xsd">
+  <!-- tag::UBLVersionID[] -->
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <!-- end::UBLVersionID[] -->
+  <!-- tag::CustomizationID[] -->
+  <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0</cbc:CustomizationID>
+  <!-- end::CustomizationID[] -->
+  <!-- tag::ProfileID[] -->
+  <cbc:ProfileID>urn:www.cenbii.eu:profile:bii18:ver1.0</cbc:ProfileID>
+  <!-- end::ProfileID[] -->
+  <!-- tag::IdDate[] -->
+  <cbc:ID>1387</cbc:ID>
+  <!-- end::IdDate[] -->
+  <!-- tag::ActionCode[] -->
+  <cbc:ActionCode>true</cbc:ActionCode>
+  <!-- end::ActionCode[] -->
+  <!-- tag::IdDate[] -->
+  <cbc:IssueDate>2017-09-15</cbc:IssueDate>
+  <cbc:IssueTime>09:00:00</cbc:IssueTime>
+  <!-- end::IdDate[] -->
+  <!-- tag::ValidityPeriod[] -->
+  <cac:ValidityPeriod>
+    <cbc:EndDate>2017-12-31</cbc:EndDate>
+    <cbc:EndTime>18:00:00</cbc:EndTime>
+  </cac:ValidityPeriod>
+  <!-- end::ValidityPeriod[] -->
+  <!-- tag::ReferencedContract[] -->
+  <cac:ReferencedContract>
+    <cbc:ID>CRT1387</cbc:ID>
+  </cac:ReferencedContract>
+  <!-- end::ReferencedContract[] -->
+  <!-- tag::ProviderParty[] -->
+  <cac:ProviderParty>
+    <cbc:EndpointID schemeID="NO:ORGNR">965678996</cbc:EndpointID>
+    <!-- tag::PartyIdentification[] -->
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="NO:ORGNR">965678996</cbc:ID>
+    </cac:PartyIdentification>
+    <!-- end::PartyIdentification[] -->
+    <cac:PartyName>
+      <cbc:Name>Seller AS</cbc:Name>
+    </cac:PartyName>
+  </cac:ProviderParty>
+  <!-- end::ProviderParty[] -->
+  <!-- tag::ReceiverParty[] -->
+  <cac:ReceiverParty>
+    <cbc:EndpointID schemeID="NO:ORGNR">984661185</cbc:EndpointID>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="NO:ORGNR">984661185</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyIdentification>
+      <cbc:ID schemeID="ZZZ">SELLERASSIGNEDID</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>Buyer AS</cbc:Name>
+    </cac:PartyName>
+    <cac:Contact>
+      <cbc:ID>Buyers ref no</cbc:ID>
+    </cac:Contact>
+  </cac:ReceiverParty>
+  <!-- end::ReceiverParty[] -->
+  <!-- tag::CatLineID[] -->
+  <!-- tag::ConfProd1[] -->
+  <cac:CatalogueLine>
+    <cbc:ID>1</cbc:ID>
+    <!-- end::ConfProd1[] -->
+    <!-- end::CatLineID[] -->
+    <cbc:ContractSubdivision>CRT1387</cbc:ContractSubdivision>
+    <!-- tag::AvailLeadTime[] -->
+    <cac:LineValidityPeriod>
+      <cbc:StartDate>2017-11-15</cbc:StartDate>
+    </cac:LineValidityPeriod>
+    <!-- end::AvailLeadTime[] -->
+    <!-- tag::ConfProd1[] -->
+    <cac:RequiredItemLocationQuantity>
+      <!-- end::ConfProd1[] -->
+      <!-- tag::LeadTime[] -->
+      <cbc:LeadTimeMeasure unitCode="DAY">10</cbc:LeadTimeMeasure>
+      <!-- end::LeadTime[] -->
+      <!-- tag::ConfProd1[] -->
+      <cac:Price>
+        <cbc:PriceAmount currencyID="NOK">1000.00</cbc:PriceAmount>
+        <!-- end::ConfProd1[] -->
+        <cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>
+        <!-- tag::ConfProd1[] -->
+      </cac:Price>
+      <cac:DeliveryUnit>
+        <cbc:BatchQuantity unitCode="C62">1</cbc:BatchQuantity>
+      </cac:DeliveryUnit>
+    </cac:RequiredItemLocationQuantity>
+    <cac:Item>
+      <!-- end::ConfProd1[] -->
+      <!-- tag::DescriptionName[] -->
+      <cbc:Description>One Personal Computer package with a monitor and setup service</cbc:Description>
+      <cbc:Name>PC computer package</cbc:Name>
+      <!-- end::DescriptionName[] -->
+      <!-- tag::ConfProd1[] -->
+      <!-- tag::ProductIdentification[] -->
+      <cac:SellersItemIdentification>
+        <cbc:ID>PC01</cbc:ID>
+      </cac:SellersItemIdentification>
+      <!-- end::ConfProd1[] -->
+      <cac:ManufacturersItemIdentification>
+        <cbc:ID>PC01349087993</cbc:ID>
+      </cac:ManufacturersItemIdentification>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="GTIN">1234567890123</cbc:ID>
+      </cac:StandardItemIdentification>
+      <!-- end::ProductIdentification[] -->
+      <!-- tag::ItemSpecificationDocumentReference1[] -->
+      <cac:ItemSpecificationDocumentReference>
+        <cbc:ID>PC01specs</cbc:ID>
+        <cbc:DocumentType>Picture of the computer</cbc:DocumentType>
+        <cac:Attachment>
+          <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">UjNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+        </cac:Attachment>
+      </cac:ItemSpecificationDocumentReference>
+      <!-- end::ItemSpecificationDocumentReference1[] -->
+      <!-- tag::ItemSpecificationDocumentReference2[] -->
+      <cac:ItemSpecificationDocumentReference>
+        <cbc:ID>PC01image</cbc:ID>
+        <cbc:DocumentTypeCode>MAINIMAGE</cbc:DocumentTypeCode>
+        <cbc:DocumentType>Picture of the computer</cbc:DocumentType>
+        <cac:Attachment>
+          <cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpeg">UjNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+        </cac:Attachment>
+      </cac:ItemSpecificationDocumentReference>
+      <!-- end::ItemSpecificationDocumentReference2[] -->
+      <!-- tag::OriginCountry[] -->
+      <cac:OriginCountry>
+        <cbc:IdentificationCode listID="ISO3166-1:Alpha2">CH</cbc:IdentificationCode>
+      </cac:OriginCountry>
+      <!-- end::OriginCountry[] -->
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="UNSPSC">43211508</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID schemeID="UNCL5305 SUBSET">S</cbc:ID>
+        <cbc:Percent>25</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+      <cac:AdditionalItemProperty>
+        <cbc:Name>ServiceIndicator</cbc:Name>
+        <cbc:Value>false</cbc:Value>
+      </cac:AdditionalItemProperty>
+      <!-- tag::AdditionalItemProperty1-2[] -->
+      <cac:AdditionalItemProperty>
+        <cbc:Name>RAM memory</cbc:Name>
+        <cbc:NameCode>Item property classification code</cbc:NameCode>
+        <cbc:Value>16 GB</cbc:Value>
+        <cbc:ValueQuantity unitCode="AD">16000000</cbc:ValueQuantity>
+      </cac:AdditionalItemProperty>
+      <!-- end::AdditionalItemProperty1-2[] -->
+      <!-- tag::ManufacturerParty[] -->
+      <cac:ManufacturerParty>
+        <cac:PartyName>
+          <cbc:Name>The PC Manufacturing Party</cbc:Name>
+        </cac:PartyName>
+      </cac:ManufacturerParty>
+      <!-- end::ManufacturerParty[] -->
+      <!-- tag::Certificate[] -->
+      <cac:Certificate>
+        <cbc:ID>EU Ecolabel</cbc:ID>
+        <cbc:CertificateTypeCode>NA</cbc:CertificateTypeCode>
+        <cbc:CertificateType>active</cbc:CertificateType>
+        <cac:IssuerParty>
+          <cac:PartyName>
+            <cbc:Name>NA</cbc:Name>
+          </cac:PartyName>
+        </cac:IssuerParty>
+      </cac:Certificate>
+      <!-- end::Certificate[] -->
+      <!-- tag::ConfProd1[] -->
+    </cac:Item>
+  </cac:CatalogueLine>
+  <!-- end::ConfProd1[] -->
+  <!-- tag::ConfProd2[] -->
+  <cac:CatalogueLine>
+    <cbc:ID>2</cbc:ID>
+    <cac:RequiredItemLocationQuantity>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="NOK">11000.00</cbc:PriceAmount>
+        <!-- end::ConfProd2[] -->
+        <cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>
+        <!-- tag::ConfProd2[] -->
+      </cac:Price>
+      <cac:DeliveryUnit>
+        <cbc:BatchQuantity unitCode="C62">1</cbc:BatchQuantity>
+      </cac:DeliveryUnit>
+    </cac:RequiredItemLocationQuantity>
+    <cac:Item>
+      <!-- end::ConfProd2[] -->
+      <cbc:Description>21 inch monitor.</cbc:Description>
+      <cbc:Name>Monitor</cbc:Name>
+      <!-- tag::ConfProd2[] -->
+      <cac:SellersItemIdentification>
+        <cbc:ID>MNTR01</cbc:ID>
+      </cac:SellersItemIdentification>
+      <!-- end::ConfProd2[] -->
+      <cac:ManufacturersItemIdentification>
+        <cbc:ID>MNTR01349087993</cbc:ID>
+      </cac:ManufacturersItemIdentification>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="GTIN">1234567890124</cbc:ID>
+      </cac:StandardItemIdentification>
+      <!-- tag::CommodityClassification[] -->
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="UNSPSC">20101601</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+      <!-- end::CommodityClassification[] -->
+      <!-- tag::ClassifiedTaxCategory[] -->
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+        <cbc:Percent>25</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+      <!-- end::ClassifiedTaxCategory[] -->
+      <!-- tag::AdditionalItemProperty[] -->
+      <!-- tag::ConfProd2[] -->
+      <cac:AdditionalItemProperty>
+        <cbc:Name>PartOf</cbc:Name>
+        <cbc:Value>PC01</cbc:Value>
+      </cac:AdditionalItemProperty>
+      <!-- end::AdditionalItemProperty[] -->
+    </cac:Item>
+  </cac:CatalogueLine>
+  <!-- end::ConfProd2[] -->
+  <!-- tag::ConfProd3[] -->
+  <cac:CatalogueLine>
+    <cbc:ID>3</cbc:ID>
+    <!-- end::ConfProd3[] -->
+    <!-- tag::ContractSubdivision[] -->
+    <cbc:ContractSubdivision>CRT1387</cbc:ContractSubdivision>
+    <!-- end::ContractSubdivision[] -->
+    <!-- tag::ConfProd3[] -->
+    <cac:RequiredItemLocationQuantity>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="NOK">200.00</cbc:PriceAmount>
+      </cac:Price>
+      <cac:DeliveryUnit>
+        <cbc:BatchQuantity unitCode="HUR">2</cbc:BatchQuantity>
+      </cac:DeliveryUnit>
+    </cac:RequiredItemLocationQuantity>
+    <cac:Item>
+      <!-- end::ConfProd3[] -->
+      <cbc:Description>Linux installation service.</cbc:Description>
+      <cbc:Name>Installation service</cbc:Name>
+      <!-- tag::ConfProd3[] -->
+      <cac:SellersItemIdentification>
+        <cbc:ID>INST01</cbc:ID>
+      </cac:SellersItemIdentification>
+      <!-- end::ConfProd3[] -->
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID schemeID="UNCL5305">AA</cbc:ID>
+        <cbc:Percent>25</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+      <!-- tag::ConfProd3[] -->
+      <cac:AdditionalItemProperty>
+        <cbc:Name>PartOf</cbc:Name>
+        <cbc:Value>PC01</cbc:Value>
+      </cac:AdditionalItemProperty>
+      <!-- end::ConfProd3[] -->
+      <!-- tag::AdditionalItemProperty3[] -->
+      <cac:AdditionalItemProperty>
+        <cbc:Name>ServiceIndicator</cbc:Name>
+        <cbc:Value>true</cbc:Value>
+      </cac:AdditionalItemProperty>
+      <!-- end::AdditionalItemProperty3[] -->
+      <!-- tag::ConfProd3[] -->
+    </cac:Item>
+  </cac:CatalogueLine>
+  <!-- end::ConfProd3[] -->
+</Catalogue>

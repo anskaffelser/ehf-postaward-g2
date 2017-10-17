@@ -1,5 +1,5 @@
+= Scope
 
-=	Scope
 The intended scope for this {docutype} includes business-to-government (B2G) and business-to-business (B2B) relationships. Although the {docutype} is a basis for an EDI agreement between two parties, it does not address all business level details of such an agreement/contract.
 
 The order agreement represents the combined information of an order and an order confirmation, i.e. it represents an agreement entered upon by seller and buyer. The transaction, specified in this {docutype} is intended to be exchanged between the seller’s order management system and the of buyer’s purchasing system so that their respective systems get syncronised with regard to the information on the purchase.

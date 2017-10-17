@@ -2,7 +2,7 @@
 include::settings.adoc[]
 
 = {doctitle}
-{name-op-en}
+{name-difi-en}
 v{revision}
 :doctype: book
 :icons: font
@@ -15,17 +15,15 @@ v{revision}
 :imagesdir: images/
 :title-logo-image: {imagesdir}/difi-logo.png
 
-
-:date-review: 15. October 2017
-:date-release: xx. November xxxx
-:date-mandatory: xx. January xxxx
-
 {description}
 
+include::{shared-dir}/message/status-{status}.adoc[]
 
-:leveloffset: +1
+include::{shared-dir}/message/download.adoc[]
 
 include::{shared-dir}/message/issues.adoc[]
+
+:leveloffset: +1
 
 include::introduction.adoc[]
 

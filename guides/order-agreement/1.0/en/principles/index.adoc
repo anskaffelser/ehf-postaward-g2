@@ -1,5 +1,5 @@
+= Principles and prerequisites
 
-=	Principles and prerequisites
 This chapter describes the principles and assumptions that underlie the use of EHF Order Agreement. It is based on the CENBII 42 Order Agreement.
 
 This profile identifies, explains and justifies the business requirements for the Order agreement process. It provides syntax bindings to OASIS UBL 2.1. It also includes a syntax implementation guide.
@@ -8,14 +8,16 @@ Use of EHF Order agreement differs from an EHF Order/confirmation process. In EH
 
 The EHF order agreement profile describes processes where the buyer, after purchasing items/services, receives a message with information documenting the purchase.
 
-
 :leveloffset: +1
 
 include::prerequisites.adoc[]
-//include::scope.adoc[]
-include::parties.adoc[]
-include::benefits.adoc[]
-include::business-process-diagram.adoc[]
 
+//include::scope.adoc[]
+
+include::parties.adoc[]
+
+include::benefits.adoc[]
+
+include::business-process-diagram.adoc[]
 
 :leveloffset: -1

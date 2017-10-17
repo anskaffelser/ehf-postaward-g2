@@ -1,10 +1,9 @@
 include::../../settings.adoc[]
 
 :minor: 1.0
-:revision: 1.0.00
+:revision: 1.0.0
 :release: {release}
 :status: {status}
 
 :shared-dir: ../../../shared/{lang}
-:cwd: order-agreement/1.0/ehf
-//:cwd: order-agreement/1.0/{lang}
+:cwd: order-agreement/1.0/{lang}

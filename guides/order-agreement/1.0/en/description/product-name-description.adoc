@@ -1,4 +1,3 @@
-
 = Product name and description
 
 The Product name must be sent in tag Item/Name on line level. Description of a product can be sent in Item/Description.

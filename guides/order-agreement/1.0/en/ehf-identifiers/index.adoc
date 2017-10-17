@@ -2,14 +2,16 @@
 
 :leveloffset: +1
 
-include::ehf-general.adoc[]
+include::../{shared-dir}/content/ehf/about.adoc[]
+
+include::../{shared-dir}/content/ehf/information-consistency.adoc[]
+
+include::../{shared-dir}/content/ehf/empty-elements.adoc[]
 
 include::../{shared-dir}/content/ehf/collaboration-agreements.adoc[]
 
 include::../{shared-dir}/content/ehf/versioning.adoc[]
 
 //include::transport-identifiers.adoc[] moved to after use cases include::message-transport-identifiers/index.adoc[]
-
-
 
 :leveloffset: -1

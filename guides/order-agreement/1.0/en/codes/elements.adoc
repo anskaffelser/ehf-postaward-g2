@@ -1,5 +1,4 @@
-[[element-codes]]
-= Code lists for coded elements
+= Code lists for coded elements [[element-codes]]
 
 
 == Currency Code
@@ -7,9 +6,9 @@
 [cols="1,4"]
 |===
 h| Qualifier
-| None
+| _None_
 h| Document location
-| cbc:*/@currencyID
+| `cbc:*/@currencyID`
 h| Source codelist
 | link:https://www.iso.org/iso-4217-currency-codes.html[ISO 4217:2015]
 |===
@@ -85,7 +84,7 @@ h| Source codelist
 [cols="1,4"]
 |===
 h| Qualifier
-| UNCL5305 (schemeID)
+| `UNCL5305` (schemeID)
 h| Document location
 | `cac:ClassifiedTaxCategory/cbc:ID`
 h| Source codelist
@@ -124,7 +123,7 @@ h| Source codelist
 [cols="1,4", options="header"]
 |===
 h| Qualifier
-| See list in table below
+| _None_
 h| Document location
 | `cbc:CommodityCode/@listID`
 h| Source codelist

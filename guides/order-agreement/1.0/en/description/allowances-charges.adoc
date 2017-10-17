@@ -1,4 +1,3 @@
-
 = Allowances and charges
 
 [source,xml,indent=0]
