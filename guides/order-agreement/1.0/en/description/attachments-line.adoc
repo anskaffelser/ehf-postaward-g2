@@ -1,4 +1,3 @@
-
 = Attachments and document references on line level
 
 Non-XML documents can be sent as attachments to the EHF Order Agreement on line level. This could comprise item specifications, timesheets or other documents relevant for the particluar line in the order agreement. See the above information regarding attachments.

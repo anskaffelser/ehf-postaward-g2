@@ -62,11 +62,11 @@ This {docutype} has required some minor additions and changes to the PEPPOL tran
 
 Where:
 
- * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns110:ver1.0
+ * CENBII Transaction ID is: `urn:www.cenbii.eu:transaction:biitrns110:ver1.0`
 
- * Peppol extension ID is: urn:www.peppol.eu:bis:peppol42a:ver1.0
+ * Peppol extension ID is: `urn:www.peppol.eu:bis:peppol42a:ver1.0`
 
- * EHF extension ID is urn:fdc:difi.no:2017:ehf:spec:1.0
+ * EHF extension ID is: `urn:fdc:difi.no:2017:ehf:spec:1.0`
 
 
 By combining these according to the identifier syntax the CustomizationID to use in EHF is:

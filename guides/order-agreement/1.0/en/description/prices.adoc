@@ -1,4 +1,3 @@
-
 = Prices
 
 Prices must be exchanged in the Order Agreement transaction. The price may be 0 (zero)

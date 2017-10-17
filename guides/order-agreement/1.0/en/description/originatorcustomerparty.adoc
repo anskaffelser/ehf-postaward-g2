@@ -1,4 +1,3 @@
-
 ==  OriginatorCustomerParty (Originator)
 
 The unit initiating the order.  Most often the end user.  The originator  information is optional in the EHF Order Agreement message.

@@ -1,4 +1,3 @@
-
 = References
 
 When sending the order agreement transaction the seller may include a reference that the buyers gave to him during the purchase. This reference can be of different nature and since it originates from the buyer it is understood by him.

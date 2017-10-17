@@ -2,13 +2,8 @@
 
 include::../settings.adoc[]
 
-:doctitle:  EHF Punch Out
+:doctitle: EHF Punch Out
 :description: This document describes the data formats used when trading partners exchange Punch Out electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “Agency of Public Management and eGovernment” (Difi) within the standardization of electronic trade processes.
-:revision: First draft
-:date-review: dd. MM yyyy
-:date-release: dd. MM yyyy
-:date-mandatory: dd. MM yyyy
-:name-op-en: Agency of Public Management and eGovernment
 :title-logo-image: {shared-dir}/images/logo.jpg
 //:shared-dir: ../../../shared/{lang}
 :docutype: EHF

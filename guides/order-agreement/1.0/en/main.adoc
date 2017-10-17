@@ -1,7 +1,7 @@
 include::settings.adoc[]
 
 = {doctitle}
-{name-op-en}
+{name-difi-en}
 v{revision}
 :description: This document describes the data formats used when trading partners exchange order agreement electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “Agency of Public Management and eGovernment” (Difi) within the standardization of electronic trade processes.
 :doctype: book
@@ -37,13 +37,12 @@ include::use-cases/index.adoc[]
 
 include::description/index.adoc[]
 
-include::message-transport-identifiers/index.adoc[]
-
 include::codes/index.adoc[]
+
+include::message-transport-identifiers/index.adoc[]
 
 include::{shared-dir}/content/validation/index.adoc[]
 
 include::appendix/index.adoc[]
-
 
 :leveloffset: -1

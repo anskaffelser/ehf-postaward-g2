@@ -61,17 +61,17 @@ This {docutype}  has required some minor additions and changes to the CEN BII tr
 
 Where:
 
- * CENBII Transaction ID is: urn:www.cenbii.eu:transaction:biitrns077:ver2.0
+ * CENBII Transaction ID is: `urn:www.cenbii.eu:transaction:biitrns077:ver2.0`
 
- * Peppol extension ID is:   www.peppol.eu:bis:peppol18a:ver1.0
+ * Peppol extension ID is: `urn:www.peppol.eu:bis:peppol18a:ver1.0`
 
- * EHF extension ID is <<Erlend>>
+ * EHF extension ID is: `urn:fdc:difi.no:2017:ehf:spec:1.0`
 
 
 By combining these according to the identifier syntax the CustomizationID to use in {docutype} is:
 
 ----
- urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0
+ urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extends:urn:fdc:difi.no:2017:ehf:spec:1.0
 ----
 
 [source,xml,indent=0]

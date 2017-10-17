@@ -1,4 +1,3 @@
-
 = Calculation of totals (LegalMonetaryTotal)
 
 The following elements show the anticipated monetary totals for an order agreement:
