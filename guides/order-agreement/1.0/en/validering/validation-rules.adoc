@@ -4,5 +4,5 @@
 |===
 |Rule
 |Message/Context/Test
-include::{rules-dir}/NOGOV-UBL-T110.sch.adoc[]
+include::{rules-dir}/EHF-UBL-T110.sch.adoc[]
 |===

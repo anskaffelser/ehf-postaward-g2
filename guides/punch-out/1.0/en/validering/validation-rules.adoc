@@ -1,9 +1,8 @@
-
 = Norwegian Rules for Punch Out
 
 [cols="1,4", options="header"]
 |===
 |Rule
 |Message/Context/Test
-include::{rules-dir}/NONAT-UBL-T77.sch.adoc[]
+include::{rules-dir}/EHF-UBL-T77.sch.adoc[]
 |===

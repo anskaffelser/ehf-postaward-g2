@@ -12,5 +12,7 @@ Please use [VEFA portal](https://vefa.difi.no/) for easy access to EHF resources
 * [EHF Catalogue 1.0.10](https://vefa.difi.no/ehf/standard/ehf-catalogue-1.0.10/)
 * [EHF Despatch Advice 1.0.8](https://vefa.difi.no/ehf/standard/ehf-despatch-advice-1.0.8/)
 * [EHF Invoice and Creditnote 2.0.12](https://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.12/)
+* [EHF Order Agreement 1.0.0](https://vefa.difi.no/ehf/standard/ehf-order-agreement-1.0.0/)
 * [EHF Ordering 1.0.9](https://vefa.difi.no/ehf/standard/ehf-ordering-1.0.9/)
+* [EHF Punch Out 1.0.0](https://vefa.difi.no/ehf/standard/ehf-punch-out-1.0.0/)
 * [EHF Reminder 1.1.0](https://vefa.difi.no/ehf/standard/ehf-reminder-1.1.0/)

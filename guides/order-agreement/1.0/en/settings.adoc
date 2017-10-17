@@ -8,13 +8,8 @@ include::../settings.adoc[]
 :date-release: 15. November 2017
 :date-mandatory: 15. November 2017
 
-
-
-
-// :name-op-en: Agency of Public Management and eGovernment
-// :title-logo-image: {shared-dir}/images/logo.jpg
 :docutype: EHF
-:xml-doc-dir: files/example/
+:xml-doc-dir: files/example
 :xml-doc-fil: files/ehf-oa-docfile.xml
 
 

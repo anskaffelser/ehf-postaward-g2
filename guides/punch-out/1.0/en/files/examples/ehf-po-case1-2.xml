@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2 C:\Users\Notandi\Documents\Upplýsingar\Standards\UBL\UBL-2.1\xsd\maindoc\UBL-Catalogue-2.1.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalogue xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
-	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0</cbc:CustomizationID>
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</cbc:CustomizationID>
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii18:ver1.0</cbc:ProfileID>
 	<cbc:ID>1387</cbc:ID>
 	<cbc:ActionCode>false</cbc:ActionCode>

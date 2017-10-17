@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+  <!-- <testfolder>unit-EUGEN</testfolder>
+  <testfolder>unit-NOGOV</testfolder> -->
+
+  <configuration>
+    <identifier>ehf-t77-base-1.0</identifier>
+    <title>EHF Punch Out 1.0 (Base)</title>
+    <inherit>ubl-catalogue-2.1</inherit>
+    <inherit>ehf-common-ubl-1.0</inherit>
+    <file source="sch/EHF-UBL-T77.sch" path="xsl/EHF-UBL-T77.xsl" infoUrl="/ehf/rule/punch-out-1.0/{}/" />
+    <file
+      source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/BII RULES/BIIRULES-UBL-T77.sch"
+      path="xsl/BIIRULES-UBL-T77.xsl" />
+    <file
+      source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T77.sch"
+      path="xsl/OPENPEPPOL-UBL-T77.xsl" />
+  </configuration>
+
+  <configuration>
+    <identifier>ehf-t77-18-1.0</identifier>
+    <title>EHF Punch Out 1.0 (Profile 18)</title>
+    <profileId>urn:www.cenbii.eu:profile:bii18:ver1.0</profileId>
+    <customizationId>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</customizationId>
+    <inherit>ehf-t177-base-1.0</inherit>
+  </configuration>
+
+</buildConfigurations>
