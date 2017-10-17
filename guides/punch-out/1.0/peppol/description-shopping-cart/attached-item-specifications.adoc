@@ -1,0 +1,54 @@
+
+=	Attached Item Specifications
+
+Non-XML documents can be sent as attachments to the PEPPOL BIS Shopping Cart to further specify the item. This could be pictures, drawings or timesheets or other documents relevant for the order. The attachment can either be sent as a binary object encoded in Base64  embedded in the message or as a URI to an external address as a link.
+
+One of these attachments can be identified specifically as being the main image for the item. Identifying it specifically allows automated retrieval of the image into the image location in the receiving system.
+
+It is recommended to send attachments as embedded, binary objects and not as external references.
+
+[cols="3,9", options="header"]
+|===
+| Element |	Description
+| Coding	| Base64
+|Document format	| The following MIME types are recommended: +
+   Pdf – application / pdf +
+   TXT – text / plain +
+   GIF – image / gif +
+   JPEG –image +
+   PNG -image +
+Other MIME types may be used, subject to agreement.
+| Size | Recommended maximum message size is 100MB including attachments.
+| Description | It is recommended to use element cac:AdditionalDocumentReference/cbc:DocumentType to send a short description of the content of the attachment. +
+NB: Attachments should be used for additional information and not as order copies.
+|===
+
+Example of attachment as an embedded, binary object in an PEPPOL BIS Shopping Cart.
+
+[source,xml]
+----
+
+<cac:ItemSpecificationDocumentReference>
+	<cbc:ID>PC01specs</cbc:ID>
+	<cbc:DocumentType>PC detailed specifications</cbc:DocumentType>
+	<cac:Attachment>
+		<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf"> UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+	</cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+
+----
+
+When sending an object that is the main image for the item the following example applies. The DocumentTypeCode main_image identifies that this is the main image for the item.
+
+[source,xml]
+----
+<cac:ItemSpecificationDocumentReference>
+	<cbc:ID>PC01image</cbc:ID>
+	<cbc:DocumentTypeCode>MAINIMAGE</cbc:DocumentTypeCode>
+	<cbc:DocumentType>Picture of the computer</cbc:DocumentType>
+	<cac:Attachment>
+		<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpg"> UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+	</cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+
+----

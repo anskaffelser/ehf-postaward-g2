@@ -1,0 +1,11 @@
+
+=	Punch Out business rules
+
+[cols="3,9", options="header"]
+|===
+| RuleID | Rule
+| BII3-P18-R001 | The shopping cart transaction includes only items added to cart by the buyer.
+| BII3-P18-R002 | The method of exchanging the transaction must enable the buyer to ensure it's authentic.
+| BII3-P18-R003 | Seller is obligated to supply the items according to the terms and quantity stated in the shopping cart transaction.
+
+|===

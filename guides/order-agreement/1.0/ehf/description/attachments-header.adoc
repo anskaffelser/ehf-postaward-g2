@@ -1,0 +1,25 @@
+
+=	Attachments on header level
+
+Non-XML documents can be sent as attachments to the EHF Order Agreement. This could be timesheets or other documents relevant for the order agreement. The attachment can either be sent as a binary object encoded in Base64  embedded in the message or as a URI to an external address as a link.
+
+It is recommended to send attachments as embedded, binary objects and not as external references. See <<Mime code of attached document, code list>> for more details about attachment types.
+
+
+[source,xml,indent=0]
+.Example of attachment as an embedded, binary object in an EHF Order Agreement message.
+----
+include::../{xml-doc-fil}[tags=AdditionalDocumentReference]
+----
+////
+<cac:AdditionalDocumentReference>
+  <cbc:ID>Document idtir110-045</cbc:ID>
+  <cbc:DocumentType>Document description</cbc:DocumentType>
+  <cac:Attachment>
+    <cbc:EmbeddedDocumentBinaryObject filename="file.pdf" mimeCode="application/pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+    <cac:ExternalReference>
+      <cbc:URI>https://joinup.ec.europa.eu/svn/peppol/PostAward/Ordering28A/20160310%20-%20PEPPOL_BIS_28a-101.pdf</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:AdditionalDocumentReference>
+////

@@ -1,0 +1,138 @@
+[[element-codes]]
+= Code lists for coded elements
+
+
+== Currency Code
+
+[cols="1,4"]
+|===
+h| Qualifier
+| None
+h| Document location
+| cbc:*/@currencyID
+h| Source codelist
+| link:https://www.iso.org/iso-4217-currency-codes.html[ISO 4217:2015]
+|===
+
+
+== Mime code of attached document
+
+[cols="1,4"]
+|===
+h| Qualifier
+| _None_
+h| Document location
+| `cbc:EmbeddedDocumentBinaryObject/@mimeCode`
+h| Source codelist
+|
+  Subset of link:http://www.iana.org/assignments/media-types[IANA].
+|===
+
+[cols="1,4"]
+.Code list
+|===
+.1+h| Structured content
+| application/xml
+
+.1+h| Documents
+| application/pdf
+
+.4+h| Images
+| image/png
+| image/jpeg
+| image/tiff
+| image/gif
+
+|===
+
+
+== Country code
+
+[cols="1,4"]
+|===
+h| Qualifier
+| `ISO3166-1:Alpha2` (listID)
+h| Document location
+| `cac:OriginCountry/cbc:IdentificationCode`
+h| Source codelist
+| link:http://www.iso.org/iso/home/standards/country_codes.htm[ISO 3166-1]
+|===
+
+
+
+== Unit of measure
+
+[cols="1,4"]
+|===
+h| Qualifier
+| _None_
+h| Document location
+| `cbc:*/@unitCode`
+h| Source codelist
+| link:http://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/list-of-trade-facilitation-recommendations-n-16-to-20.html[UN/ECE Recommendation 20, Revision 8 (2012)]
+|===
+
+
+
+== Item VAT category code
+
+[cols="1,4"]
+|===
+h| Qualifier
+| UNCL5305 (schemeID)
+h| Document location
+| `cac:ClassifiedTaxCategory/cbc:ID`
+h| Source codelist
+| Subset of link:https://www.unece.org/fileadmin/DAM/trade/untdid/d17a/tred/tred5305.htm[UN/CEFACT code list 5305]
+|===
+
+
+[cols="1,4", options="header"]
+.Code list
+|===
+| Code
+| Description
+
+| AE
+| Vat Reverse Charge
+
+| E
+| Exempt from Tax
+
+| S
+| Standard rate
+
+| Z
+| Zero rated goods
+
+| H
+| Higher rate
+
+| AA
+| Lower rate
+|===
+
+== Commodity code
+
+[cols="1,4", options="header"]
+|===
+h| Qualifier
+| See list in table below
+h| Document location
+| `cbc:CommodityCode/@listID`
+h| Source codelist
+| COMMODITY SCHEME ID – CENBII
+|===
+
+[cols="1,4", options="header"]
+.Commodity codes – CENBII
+|===
+| Code | Description
+| CV | Customs Article Number
+| GN | National Product Group Code
+| HS | Harmonised System
+| CPV | Common Procurement Vocabulary
+| UNSPSC | UNSPSC
+| eCLASS | eCLASS
+| GPC | GS1 Global Product Classification
+|===

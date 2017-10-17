@@ -1,0 +1,15 @@
+
+= Product name and description
+
+The Product name must be sent in tag Item/Name on line level. Description of a product can be sent in Item/Description.
+
+The Product name is often sent in the order agreement from the buyer to the seller.
+
+[source,xml,indent=0]
+.Example in an PEPPOL BIS Order Agreement message:
+----
+<cac:Item>
+  <cbc:Description>Description of the item</cbc:Description>
+  <cbc:Name>Item name</cbc:Name>
+</cac:Item>
+----

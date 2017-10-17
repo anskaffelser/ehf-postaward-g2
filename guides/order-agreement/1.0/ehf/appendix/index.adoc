@@ -1,0 +1,25 @@
+= Appendix [[appendix]]
+
+:leveloffset: +1
+
+
+// Structure Table
+include::../{shared-dir}/content/appendix/structure-table.adoc[]
+* link:files/oa-structure-table.pdf[Structure Table for Order Agreement]
+
+
+// Message Table
+include::../{shared-dir}/content/appendix/message-table.adoc[]
+* link:files/oa-message-table.pdf[Message Table for Order Agreement]
+
+
+// Example files
+include::examples-files.adoc[]
+
+* link:files/example/EHF-OA-complete.xml[Order agreement]
+
+//* link:files/example/ehf-oa-case1.xml[Use case 1]
+
+
+
+:leveloffset: -1

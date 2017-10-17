@@ -1,0 +1,52 @@
+
+=  Delivery
+
+Delivery gives information on when and where the goods and services are delivered. +
+
+Delivery special terms may be used to inform how the goods or service is delivered. E.g. +
+
+*	A ticket may be delivered as a pdf in mail -  “Mail”. +
+*	Goods may have been collected at the store – “Customer pick up“
+
+The delivery information is optional in the EHF Order Agreement message.
+
+[source,xml,indent=0]
+.Example
+----
+include::../{xml-doc-fil}[tags=Delivery]
+----
+////
+<cac:Delivery>
+	<cac:PromisedDeliveryPeriod>
+		<cbc:StartDate>2016-08-20</cbc:StartDate>
+		<cbc:StartTime>12:00:00</cbc:StartTime>
+		<cbc:EndDate>2016-08-30</cbc:EndDate>
+		<cbc:EndTime>18:00:00</cbc:EndTime>
+	</cac:PromisedDeliveryPeriod>
+	<cac:DeliveryParty>
+		<cac:PartyIdentification>
+			<cbc:ID schemeID="idscheme">id</cbc:ID>
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>Delivery party name</cbc:Name>
+		</cac:PartyName>
+	</cac:DeliveryParty>
+	<cac:DeliveryTerms>
+		<cbc:ID>id</cbc:ID>
+		<cbc:SpecialTerms>special terms</cbc:SpecialTerms>
+		<cac:DeliveryLocation>
+			<cbc:ID>id</cbc:ID>
+			<cac:Address>
+				<cbc:StreetName>Storgata 34</cbc:StreetName>
+				<cbc:AdditionalStreetName>rom 123</cbc:AdditionalStreetName>
+				<cbc:CityName>Storevik</cbc:CityName>
+				<cbc:PostalZone>1234</cbc:PostalZone>
+				<cbc:CountrySubentity>Region A</cbc:CountrySubentity>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+	</cac:DeliveryTerms>
+</cac:Delivery>
+////

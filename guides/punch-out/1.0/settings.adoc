@@ -1,0 +1,10 @@
+include::../../settings.adoc[]
+
+:minor: 1.0
+:revision: 1.0.00
+:release: {release}
+:status: {status}
+
+:shared-dir: ../../../shared/{lang}
+:cwd: punch-out/1.0/ehf
+//:cwd: order-agreement/1.0/{lang}

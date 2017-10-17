@@ -1,0 +1,10 @@
+
+=	Business process diagram
+
+==	Legend for BPMN diagrams
+
+The diagrams are expressed in the BPMN notation. The diagram below serves as an explanation for the diagrams used in the process descriptions.
+
+The following diagram shows the choreography of the business process implemented by the BIS.
+
+image::bpmn.png[align="center", width=800]

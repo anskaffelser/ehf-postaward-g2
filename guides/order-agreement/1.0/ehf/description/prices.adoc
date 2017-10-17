@@ -1,0 +1,19 @@
+
+= Prices
+
+Prices must be exchanged in the Order Agreement transaction. The price may be 0 (zero)
+Price sent is related to the articles or services within this order agreement
+Prices includes allowances and/or charges but exclude VAT amounts
+
+[source,xml,indent=0]
+.Example of price information in an Order Agreement message:
+----
+include::../{xml-doc-fil}[tags=Price]
+----
+
+////
+<cac:Price>
+	<cbc:PriceAmount currencyID="NOK">50</cbc:PriceAmount>
+	<cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>
+</cac:Price>
+////

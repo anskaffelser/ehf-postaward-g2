@@ -1,0 +1,48 @@
+
+=	Attached Item Specifications
+
+Non-XML documents can be sent as attachments to the {docutype} Shopping Cart to further specify the item. This could be pictures, drawings or timesheets or other documents relevant for the order. The attachment can either be sent as a binary object encoded in Base64  embedded in the message or as a URI to an external address as a link.
+
+One of these attachments can be identified specifically as being the main image for the item. Identifying it specifically allows automated retrieval of the image into the image location in the receiving system.
+
+It is recommended to send attachments as embedded, binary objects and not as external references.
+
+See <<Code lists for coded elements>> .
+
+Example of attachment as an embedded, binary object in an {docutype} Shopping Cart.
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ItemSpecificationDocumentReference1]
+----
+////
+<cac:ItemSpecificationDocumentReference>
+	<cbc:ID>PC01specs</cbc:ID>
+	<cbc:DocumentType>PC detailed specifications</cbc:DocumentType>
+	<cac:Attachment>
+		<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf"> UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+	</cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+
+////
+
+When sending an object that is the main image for the item the following example applies. The DocumentTypeCode MAINIMAGE identifies that this is the main image for the item.
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ItemSpecificationDocumentReference2]
+----
+////
+
+[source,xml]
+----
+<cac:ItemSpecificationDocumentReference>
+	<cbc:ID>PC01image</cbc:ID>
+	<cbc:DocumentTypeCode>MAINIMAGE</cbc:DocumentTypeCode>
+	<cbc:DocumentType>Picture of the computer</cbc:DocumentType>
+	<cac:Attachment>
+		<cbc:EmbeddedDocumentBinaryObject mimeCode="image/jpg"> UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+	</cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+
+----
+////

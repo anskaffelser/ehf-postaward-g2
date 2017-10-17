@@ -1,0 +1,13 @@
+
+= Electronic Commerce Format (EHF)
+
+:leveloffset: +1
+
+include::ehf-general.adoc[]
+
+include::../{shared-dir}/content/ehf/collaboration-agreements.adoc[]
+
+include::../{shared-dir}/content/ehf/versioning.adoc[]
+
+
+:leveloffset: -1

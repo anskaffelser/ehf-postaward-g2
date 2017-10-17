@@ -1,0 +1,34 @@
+
+= Attachments and document references on line level
+
+Non-XML documents can be sent as attachments to the PEPPOL BIS Order Agreement on line level. This could comprise item specifications, timesheets or other documents relevant for the particluar line in the order agreement. See the above information regarding attachments.
+
+
+[source,xml]
+.Example:  Attachment as an embedded, binary object in an PEPPOL BIS Order Agreement message on line level.
+----
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>doc id</cbc:ID>
+  <cbc:DocumentType>Item specs</cbc:DocumentType>
+  <cac:Attachment>
+  <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="specs.pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+  <cac:ExternalReference>
+  <cbc:URI>https://joinup.ec.europa.eu/svn/peppol/PostAward/Ordering28A/20160310%20-%20PEPPOL_BIS_28a-101.pdf</cbc:URI>
+  </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+----
+
+[source,xml]
+.Example: Link to a downloadable ticket.
+----
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>Ticket id</cbc:ID>
+  <cbc:DocumentType>A ticket for ...</cbc:DocumentType>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>https://ticketseller.eu/ticket.pdf</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+----

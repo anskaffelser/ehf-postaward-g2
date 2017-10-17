@@ -1,0 +1,28 @@
+
+= Code lists for coded elements
+
+[cols="3,2,3,4", options="header"]
+|===
+| Business Term	| Allowed SchemeID | Applicable Xpath |	Note
+| Currency Code	| ISO4217	| cac:AllowanceCharge/cbc:Amount/@currencyID +
+cbc:TaxAmount/@currencyID +
+cbc:TaxableAmount/@currencyID +
+cbc:LineExtensionAmount/@currencyID +
+cbc:TaxExclusiveAmount/@currencyID +
+cbc:TaxInclusiveAmount/@currencyID +
+cbc:AllowanceTotalAmount/@currencyID +
+cbc:ChargeTotalAmount/@currencyID +
+cbc:PayableRoundingAmount/@currencyID +
+cbc:PayableAmount/@currencyID +
+cac:LineItem/cbc:LineExtensionAmount/@currencyID +
+cbc:TotalTaxAmount/@currencyID +
+cbc:PriceAmount/@currencyID | See link to codelist below.
+| MIME Media Type Code	| MIME	| cbc:EmbeddedDocumentBinaryObject/@mimeCode	| See link to codelist below.
+| Country code	| ISO3166-1:Alpha2	| cac:Country/cbc:IdentificationCode/@listID |	See link to codelist below.
+| Unit Of Measure	| UNECERec20  	| cbc:ValueQuantity/@unitCode +
+cbc:BaseQuantity/@unitCode +
+cbc:Quantity/@unitCode	|  See link to codelist below.
+| Item VAT category code	| UNCL5305 SUBSET	| cac:TaxCategory/cbc:ID/@schemeID +
+cac:ClassifiedTaxCategory/cbc:ID/@schemeID	| Subset values are given below.
+| Commodity code	| See CENBII COMMODITY_SCHEME_ID	| cbc:CommodityCode/@listID	| Note: The CENBII Codelist used for Commodity Scheme Identifier contains commonly used classification systems as listed below. It may be extended with other values.
+|===

@@ -1,0 +1,85 @@
+
+= Calculation of totals (LegalMonetaryTotal)
+
+The following elements show the anticipated monetary totals for an order agreement:
+[cols="5,7", options="header"]
+|===
+| Element: | Description:
+| <cbc:LineExtensionAmount> | Sum of line amounts
+| <cbc:AllowanceTotalAmount> | Allowances on document level
+| <cbc:ChargeTotalAmount> | Charges on document level
+| <cbc:TaxExclusiveAmount> | Order total amount without VAT
+| <cbc:TaxInclusiveAmount> | Order total amount included VAT
+| <cbc:PrepaidAmount> | Any amounts that have been paid a-priory
+| <cbc:PayableRoundingAmount> | Rounding of Order total
+| <cbc:PayableAmount> | The amount that is expected to be paid
+|===
+
+
+Amounts MUST be given to a precision of maximum two decimals except for Price where maximum number of decimals are four.
+
+Expected total payable amount MUST NOT be negative.
+Expected total sum of line amounts  MUST NOT be negative.
+
+Note that the LegalMonetaryTotals class  is optional.  The legal monetary total class in the order agreement is equal to the anticipated monetary total in the order transaction. If the class is included in the message, the  only mandatory elements are the LineExtensionAmount and the PayableAmount elements.  All other elements are optional.  When optional elements are used, the content MUST be according to the rules below.
+
+Formulas for the calculations of totals are as follows:
+[cols="5,7", options="header"]
+|===
+ | Element: | Formula:
+ | <cbc:LineExtensionAmount> | Sum of LineExtensionAmount (at line level)
+ | <cbc:ChargeTotalAmount> | Sum of Charge Amount (where ChargeIndicator = ”true”)
+ | <cbc:AllowanceTotalAmount> | Sum of Allowance Amount (where ChargeIndicator = ”false”)
+ | <cbc:TaxExclusiveAmount> | LineExtensionAmount
+– AllowanceTotalAmount
++ ChargeTotalAmount
+ | <cbc:TaxInclusiveAmount> | TaxExclusiveAmount
++  TaxTotal /TaxAmount
++  PayableRoundingAmount
+ | <cbc:PayableAmount> | TaxInclusiveAmount –  PrepaidAmount
+|===
+
+==	Example of calculations:
+
+[cols="<,^,>,<", grid="none" row="none" ,frame="topbot",options="header"]
+|===
+| Business term | Sample | Amounts | Elements
+|{set:cellbgcolor:#FFFFFF} Sum of line amounts | + | 1000.00 | `LineExtensionAmount`
+| Allowance on document level | - | 100.00 | `AllowanceTotalAmount`
+| Charges on document level | + | &#160; 199.95 | `ChargeTotalAmount`
+| [underline]#Total amount without VAT# | = | [underline]#1099.95# | [underline]#`TaxExclusiveAmount`#
+|  |  | |
+| VAT total amount | + |  250.00 | Tax amount
+|  |  |  |
+| Rounding of Order total | + |0.05| `PayableRoundingAmount`
+| [underline]#Total with VAT (value of purchase)# | = | [underline]#1350.00# | [underline]#`TaxInclusiveAmount`#
+| Paid amounts | - | 100.00  | `PrepaidAmount`
+| [underline]#Amount expected to be paid# | = | [underline]#1250.00# | [underline]#`PayableAmount`#
+|===
+
+
+[source,xml,indent=0]
+.The above example is presented in the order agreement in the following way:
+----
+include::../{xml-doc-fil}[tags=LegalMonetaryTotal]
+----
+////
+<cac:LegalMonetaryTotal>
+	<cbc:LineExtensionAmount currencyID="NOK">1436.50</cbc:LineExtensionAmount>
+	<cbc:TaxExclusiveAmount currencyID="NOK">1536.50</cbc:TaxExclusiveAmount>
+	<cbc:TaxInclusiveAmount currencyID="NOK">1921</cbc:TaxInclusiveAmount>
+	<cbc:AllowanceTotalAmount currencyID="NOK">100</cbc:AllowanceTotalAmount>
+	<cbc:ChargeTotalAmount currencyID="NOK">200</cbc:ChargeTotalAmount>
+	<cbc:PrepaidAmount currencyID="NOK">1000</cbc:PrepaidAmount>
+	<cbc:PayableRoundingAmount currencyID="NOK">0.37</cbc:PayableRoundingAmount>
+	<cbc:PayableAmount currencyID="NOK">921.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+////
+
+== Element for rounding amount, the PayableRoundingAmount
+
+It is possible to round the expected payable amount.  The rule for this is according to the standard rule regarding rounding, i.e. greater than or equal to 0.5 is rounded up, all other values are rounded down.
+
+The element LegalMonetaryTotal/PayableRoundingAmount is used for this purpose and is specified on the header level. This value must be added to the value in LegalMonetaryTotal/TaxInclusiveAmount.
+
+Example:  Amount  999.81 rounded to  1000.  PayableRounding Amount = 0.19

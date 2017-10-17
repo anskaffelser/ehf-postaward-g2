@@ -1,0 +1,16 @@
+:lang: en
+
+include::../../../settings.adoc[]
+
+:doctitle:  PEPPOL BIS Punch Out
+:description: image:peppol.png[float="right", width=100%] The PEPPOL Business Interoperablity Specification, “BIS” from here on after, has been developed by the OpenPEPPOL AISBL Post Award Coordinating Community and is published as part of the PEPPOL specifications
+:revision: First draft
+:date-review: dd. MM yyyy
+:date-release: dd. MM yyyy
+:date-mandatory: dd. MM yyyy
+:name-op-en: OpenPEPPOL AISBL, Post-Award Coordinating Community
+
+// External
+
+:link-peppol-transp: http://peppol.eu/transport-infrastructure-specifications/
+:link-peppol-transpdifi: https://vefa.difi.no/peppol/

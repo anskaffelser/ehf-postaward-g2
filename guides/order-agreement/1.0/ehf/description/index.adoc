@@ -1,0 +1,46 @@
+
+= Description of selected parts of the order agreement message
+
+Following clauses describe the use of individual sections of the order agreement transaction.
+
+:leveloffset: +1
+
+include::parties.adoc[]
+
+include::sellersupplierparty.adoc[]
+
+include::buyercustomerparty.adoc[]
+
+include::originatorcustomerparty.adoc[]
+
+include::accountingcustomerparty.adoc[]
+
+include::delivery.adoc[]
+
+include::references.adoc[]
+
+include::attachments-header.adoc[]
+
+include::attachments-line.adoc[]
+
+include::product-identification.adoc[]
+
+include::product-name-description.adoc[]
+
+include::item-labelling.adoc[]
+
+include::contracted-item.adoc[]
+
+include::quantities-units.adoc[]
+
+include::prices.adoc[]
+
+include::allowances-charges.adoc[]
+
+include::calculation-totals.adoc[]
+
+include::tax-amounts.adoc[]
+
+
+
+:leveloffset: -1

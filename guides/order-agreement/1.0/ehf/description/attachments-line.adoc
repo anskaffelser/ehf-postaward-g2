@@ -1,0 +1,38 @@
+
+= Attachments and document references on line level
+
+Non-XML documents can be sent as attachments to the EHF Order Agreement on line level. This could comprise item specifications, timesheets or other documents relevant for the particluar line in the order agreement. See the above information regarding attachments.
+
+
+[source,xml,indent=0]
+.Example:  Attachment as an embedded, binary object in an EHF Order Agreement message on line level.
+----
+include::../{xml-doc-fil}[tags=ItemSpecificationDocumentReference1]
+----
+////
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>doc id</cbc:ID>
+  <cbc:DocumentType>Item specs</cbc:DocumentType>
+  <cac:Attachment>
+  <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="specs.pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+  <cac:ExternalReference>
+  <cbc:URI>https://joinup.ec.europa.eu/svn/peppol/PostAward/Ordering28A/20160310%20-%20PEPPOL_BIS_28a-101.pdf</cbc:URI>
+  </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+////
+
+//Må ha annen xml fil for å tagge dette:
+[source,xml]
+.Example: Link to a downloadable ticket.
+----
+<cac:ItemSpecificationDocumentReference>
+  <cbc:ID>Ticket id</cbc:ID>
+  <cbc:DocumentType>A ticket for ...</cbc:DocumentType>
+  <cac:Attachment>
+    <cac:ExternalReference>
+      <cbc:URI>https://ticketseller.eu/ticket.pdf</cbc:URI>
+    </cac:ExternalReference>
+  </cac:Attachment>
+</cac:ItemSpecificationDocumentReference>
+----

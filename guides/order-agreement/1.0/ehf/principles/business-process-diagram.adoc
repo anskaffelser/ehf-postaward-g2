@@ -1,0 +1,49 @@
+
+= Process flow
+
+The order agreement process flow can be described as follows:
+
+Start position.
+
+. A Buyer makes a purchase of goods or services from the Seller.
+.	A Seller reports one or more accumulated purchases made under a framework agreement to the Buyer.
+
+End positions.
+
+.	A purchase has been recorded in the Buyer´s purchasing system. The seller proceeds to invoice accordingly.
+
+An Order Agreement may refer to a framework agreement for its terms and conditions; otherwise the Buyer’s terms and conditions apply.
+
+==	Process diagram
+////
+The diagrams are expressed in the BPMN notation. The diagram below serves as an explanation for the diagrams used in the process descriptions.
+
+image::bpmn.png[align="center", width=800]
+
+////
+The following diagram shows the choreography of the business process implemented by the {docutype}.
+
+//image::order_agreement_process1.png[align="center", width=800]
+
+image::order_agreement_process.png[align="center", width=800]
+
+[cols="3,9", options="header"]
+
+|===
+| Categories | Description and Values
+
+| Description | The buyer doesn’t use the purchasing system to create an order. It’s done outside of this system.
+
+The seller creates an order in his ordering system based on requirements from the buyer and, after agreeing/committing to it, sends a copy of the order as an Order agreement to the buyer.
+
+| Pre-conditions | The seller’s ordering system must be able to send Order agreement transactions.
+
+The buyer’s purchasing system must be able to receive Order agreement transactions.
+
+The content of the order is agreed through use of web shop, phone, email, physical visit to shop or other means.
+
+| Post-conditions | The buyer has received an order agreement that is recorded in the purchasing system.
+
+| Legal Implications | By providing an Order agreement transaction the Seller commits himself the, quantities, prices and terms stated in the Order agreement transaction.
+
+|===

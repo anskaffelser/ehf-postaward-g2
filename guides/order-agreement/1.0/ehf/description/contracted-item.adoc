@@ -1,0 +1,16 @@
+
+= Contracted item
+
+If the purchased item is offered in accordance to an existing contract, this should be indicated in the order agreement message.
+
+[source,xml,indent=0]
+.Example:
+----
+include::../{xml-doc-fil}[tags=TransactionConditions]
+----
+
+////
+<cac:TransactionConditions>
+	<cbc:ActionCode>CT</cbc:ActionCode>
+</cac:TransactionConditions>
+////

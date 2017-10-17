@@ -1,0 +1,136 @@
+
+=	 The Shopping Cart
+
+
+==	Identification and dates
+
+In the beginning of the shopping cart message there is information that identifies the shopping cart itself which allows for managing it in a processing flow as well as referencing it from other documents and processes.  This is given by an identifier as well as the date and time when the shopping cart message is created. This would normally be the time when the buyer punches out from the sellers web store. +
+
+The identifier is created by the seller and may be of any format. The date and time must not be in the future.
+
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=IdDate]
+----
+
+////
+<cbc:ID>1387</cbc:ID>
+<cbc:IssueDate>2016-08-01</cbc:IssueDate>
+<cbc:IssueTime>09:00:00</cbc:IssueTime>
+
+////
+////
+The shopping cart also includes two identifiers that identify the process that the shopping cart is used in.  The specification that define how the shopping cart message is structured and how its information shall be processed is stated with the customization ID. This ID is always the same for all shopping cart messages that comply to this version of {docutype} Punch Out. Each shopping cart messaga must comply to the specification referenced .
+
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=CustomizationID]
+----
+//<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended: www.peppol.eu:bis:peppol18a:ver1.0</cbc:CustomizationID>
+
+
+The process it self is the Punch Out process as defined in this {docutype} specification. This given in the message as follows and is always the same for all message instances that comply to this version of {docutype} Punch Out
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ProfileID]
+----
+//<cbc:ProfileID>urn:www.cenbii.eu:profile:bii18:ver1.0</cbc:ProfileID>
+
+Rule: ProfileID = urn:www.cenbii.eu:profile:bii18:ver1.0
+////
+
+== Sellers conditions
+
+The shopping cart allows the seller to set conditions on how the buyer may order.
+
+The seller may set a limit of the validity time for the information in the shopping cart.  A shopping cart is valid from the time it is issued until the time stated in the validity period. That time may not be before the time when the cart is issued. If only validity end date is given the cart is valid until end of that day in the sellers time zone. The seller may also set validity time for individual lines.  Validity end time is given as follows.
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ValidityPeriod]
+----
+////
+<cac:ValidityPeriod>
+	<cbc:EndDate>2016-08-31</cbc:EndDate>
+	<cbc:EndTime>18:00:00</cbc:EndTime>
+</cac:ValidityPeriod>
+////
+
+
+The seller may set the condition that the offer made in the shopping cart is only valid if all item in the cart are ordered. That is the buyer may not select only certain items or change the quantities of the items listed in the cart. This is given by the complete cart indicator. If the value of the indicator is "true" the buyer must either order all or none of the cart.  The default value of the indicator is "false" meaning that if the element is not included in the message the buyer may order part of the cart. Following is an example.
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ActionCode]
+----
+////
+<cbc:ActionCode>true</cbc:ActionCode>
+////
+
+The seller may reference a contract that governs the offer made in the shopping cart. The terms and conditions of a referenced contract supersedes the information given in individual shopping carts. Following is an example:
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ReferencedContract]
+----
+////
+<cac:ReferencedContract>
+	<cbc:ID>CRT1387</cbc:ID>
+</cac:ReferencedContract>
+////
+
+
+==	Parties
+
+The following parties/roles may be specified in the message:
+
+===  Seller
+The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the buyer. The seller is given as the Provider Party in {link-ubl-catalogue}[UBL] and is mandatory in the {docutype} Shopping Cart message. The seller must be identified with a name but may additionally be identified with an identifier.
+
+The end point identifier is the {docutype} network address and the schemeID identifies the governance of the identifier used, in line with {docutype} specifications on the use of identifiers.
+
+[source,xml,indent=0]
+----
+include::../{xml-doc-fil}[tags=ProviderParty]
+----
+////
+
+<cac:ProviderParty>
+	<cbc:EndpointID schemeID="NO:ORGNR">965678996</cbc:EndpointID>
+	<cac:PartyIdentification>
+		<cbc:ID schemeID="GLN">5790000435951</cbc:ID>
+	</cac:PartyIdentification>
+	<cac:PartyName>
+		<cbc:Name>ABC Supplier Ltd.</cbc:Name>
+	</cac:PartyName>
+</cac:ProviderParty>
+
+////
+
+=== Buyer
+The buyer is the legal person or organization acting on behalf of the customer who buys or purchases the goods or services.  The buyer is given as the ReceiverParty in {link-ubl-catalogue}[UBL] and is mandatory in the {docutype} Shopping cart message.
+
+The endpoint identifier is the {docutype} network address and the schemeID identifies the governance of the identifier used, in line with {docutype} specifications on the use of identifiers. The buyer must be identified with his name but may additionally be identified with the sellers customer identifier and/or a registered identifier.
+
+[source,xml,indent=0]
+.Example
+----
+include::../{xml-doc-fil}[tags=ReceiverParty]
+----
+////
+<cac:ReceiverParty>
+	<cbc:EndpointID schemeID="NO:ORGNR">984661185</cbc:EndpointID>
+	<cac:PartyIdentification>
+		<cbc:ID schemeID="GLN">5790000435944</cbc:ID>
+	</cac:PartyIdentification>
+	<cac:PartyIdentification>
+		<cbc:ID schemeID="ZZZ">SELLERASSIGNEDID</cbc:ID>
+	</cac:PartyIdentification>
+	<cac:PartyName>
+		<cbc:Name>DEF Customer Ltd.</cbc:Name>
+	</cac:PartyName>
+</cac:ReceiverParty>
+////
