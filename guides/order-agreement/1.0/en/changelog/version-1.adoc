@@ -3,8 +3,8 @@
 :sectnums!:
 
 
-== Version 1.0.0 (2017-11-16) [[changelog-1.0.0]]
+== Version 1.0.0 (2017-11-15) [[changelog-1.0.0]]
 
-include::2017-11-16-1.0.0.adoc[]
+include::2017-11-15-1.0.0.adoc[]
 
 :sectnums:

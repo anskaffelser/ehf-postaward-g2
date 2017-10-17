@@ -57,6 +57,16 @@ include::../../catalogue/1.0/en/changelog/{release}-1.0.10.adoc[]
 include::../../ordering/1.0/en/changelog/{release}-1.0.9.adoc[]
 
 
+== EHF Order Agreement 1.0.0 [[ordering]]
+
+include::../../order-agreement/1.0/en/changelog/{release}-1.0.0.adoc[]
+
+
+== EHF Punch Out 1.0.0 [[ordering]]
+
+include::../../punch-out/1.0/en/changelog/{release}-1.0.0.adoc[]
+
+
 == EHF Despatch Advice 1.0.8 [[despatch-advice]]
 
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.8.adoc[]
