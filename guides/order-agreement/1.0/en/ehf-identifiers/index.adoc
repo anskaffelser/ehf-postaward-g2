@@ -1,4 +1,3 @@
-
 = Electronic Commerce Format (EHF)
 
 :leveloffset: +1

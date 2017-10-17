@@ -1,10 +1,9 @@
-
 include::settings.adoc[]
 
 = {doctitle}
 {name-op-en}
 v{revision}
-//:description: The PEPPOL Business Interoperablity Specification, “BIS” from here on after, has been developed by the OpenPEPPOL AISBL Post Award Coordinating Community and is published as part of the PEPPOL specifications
+:description: This document describes the data formats used when trading partners exchange order agreement electronically (Norwegian: Elektronisk Handelsformat; EHF). It is prepared as part of the initiative taken by the Norwegian “Agency of Public Management and eGovernment” (Difi) within the standardization of electronic trade processes.
 :doctype: book
 :icons: font
 :toc: left
@@ -16,19 +15,15 @@ v{revision}
 :imagesdir: images/
 :title-logo-image: {imagesdir}/difi-logo.png
 
-
-:date-review: 15. October 2017
-:date-release: xx. November xxxx
-:date-mandatory: xx. January xxxx
-
 {description}
 
+include::{shared-dir}/message/status-{status}.adoc[]
 
-
-:leveloffset: +1
-
+include::{shared-dir}/message/download.adoc[]
 
 include::{shared-dir}/message/issues.adoc[]
+
+:leveloffset: +1
 
 include::introduction.adoc[]
 

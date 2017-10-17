@@ -1,4 +1,3 @@
-
 = Norwegian Rules for Order Agreement
 
 [cols="1,4", options="header"]

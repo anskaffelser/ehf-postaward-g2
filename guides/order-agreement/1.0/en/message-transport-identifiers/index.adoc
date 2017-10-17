@@ -1,5 +1,3 @@
-
-
 = Message transport and identifiers
 
 EHF has defined a {link-peppol-transp}[“Policy for Using Identifiers”] that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the EHF environment. The policies that apply to this EHF are the following:
@@ -68,12 +66,12 @@ Where:
 
  * Peppol extension ID is: urn:www.peppol.eu:bis:peppol42a:ver1.0
 
- * EHF extension ID is <<Erlend>>
+ * EHF extension ID is urn:fdc:difi.no:2017:ehf:spec:1.0
 
 
 By combining these according to the identifier syntax the CustomizationID to use in EHF is:
 ----
-urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0
+urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0
 ----
 
 [source,xml,indent=0]
@@ -82,9 +80,7 @@ urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:p
 include::../{xml-doc-fil}[tags=CustomizationID]
 ----
 
-////
-<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0</cbc:CustomizationID>
-////
+<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</cbc:CustomizationID>
 
 For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
 

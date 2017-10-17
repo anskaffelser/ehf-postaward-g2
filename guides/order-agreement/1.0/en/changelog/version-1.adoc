@@ -1,0 +1,10 @@
+= Version 1.x [[changelog-1.x]]
+
+:sectnums!:
+
+
+== Version 1.0.0 (2017-11-16) [[changelog-1.0.0]]
+
+include::2017-11-16-1.0.0.adoc[]
+
+:sectnums:

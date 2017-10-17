@@ -1,7 +1,4 @@
-
-//[appendix]
 = Use cases
-//[[appendix-use-case-files]]
 
 Use case files are provided to help implementers. This implementation guide contains these files:
 
