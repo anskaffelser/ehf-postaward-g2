@@ -21,11 +21,11 @@ Examples include::
 * A seller of supplies has been contracted to monitor the stock levels for certain items and restock as needed to maintain the agreed levels.
 
 Flow::
-The seller of the services or items reacts to events as defined in the contract and carries out the service or delivers the items as contracted. +
+The seller of the services or items reacts to events as defined in the contract and carries out the service or delivers the items as contracted.
 +
-Periodically, for example monthly, the seller lists all services and items that have been provided during the period. This is listed with order agreement lines and the total of the order agreement represents the total value of the services and items provided during the period which will be invoice by the seller. The seller sends the order agreement to the buyer who records it in his system. +
+Periodically, for example monthly, the seller lists all services and items that have been provided during the period. This is listed with order agreement lines and the total of the order agreement represents the total value of the services and items provided during the period which will be invoice by the seller. The seller sends the order agreement to the buyer who records it in his system.
 +
-The seller proceeds to invoice immediately unless otherwise directed by the framework agreement. +
+The seller proceeds to invoice immediately unless otherwise directed by the framework agreement.
 +
 The buyer may have internal processes that verify these kind of order agreements differently than those initiated by himself.
 

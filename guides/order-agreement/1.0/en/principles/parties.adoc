@@ -1,4 +1,3 @@
-
 = Parties and roles
 
 The table below gives the definitions of the parties and roles of the ordering process.
@@ -15,10 +14,10 @@ Examples of supplier roles: seller, consignor, creditor, economic operator.
 [cols="2,10", options="header"]
 |===
 | Role/actor | Description
-| Buyer | (BuyerCustomerParty) 	The buyer is the legal person or organization acting on behalf of the customer and who buys or purchases the goods or services.
-| Seller | (SellerSupplierParty)	The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the customer.
+| Buyer | (BuyerCustomerParty) The buyer is the legal person or organization acting on behalf of the customer and who buys or purchases the goods or services.
+| Seller | (SellerSupplierParty) The seller is the legal person or organization acting on behalf of the supplier and who sells goods or services to the customer.
 |===
 
 The following diagram links the business processes to the roles performed by the Business Partners.
 
-image::relations.png[align="center", width=800]
+image::images/relations.png[align="center", width=800]

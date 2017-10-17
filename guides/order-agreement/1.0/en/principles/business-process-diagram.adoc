@@ -6,26 +6,26 @@ The order agreement process flow can be described as follows:
 Start position.
 
 . A Buyer makes a purchase of goods or services from the Seller.
-.	A Seller reports one or more accumulated purchases made under a framework agreement to the Buyer.
+. A Seller reports one or more accumulated purchases made under a framework agreement to the Buyer.
 
 End positions.
 
-.	A purchase has been recorded in the Buyer´s purchasing system. The seller proceeds to invoice accordingly.
+. A purchase has been recorded in the Buyer´s purchasing system. The seller proceeds to invoice accordingly.
 
 An Order Agreement may refer to a framework agreement for its terms and conditions; otherwise the Buyer’s terms and conditions apply.
 
-==	Process diagram
+== Process diagram
 ////
 The diagrams are expressed in the BPMN notation. The diagram below serves as an explanation for the diagrams used in the process descriptions.
 
-image::bpmn.png[align="center", width=800]
+image::images/bpmn.png[align="center", width=800]
 
 ////
 The following diagram shows the choreography of the business process implemented by the {docutype}.
 
 //image::order_agreement_process1.png[align="center", width=800]
 
-image::order_agreement_process.png[align="center", width=800]
+image::images/order_agreement_process.png[align="center", width=800]
 
 [cols="3,9", options="header"]
 

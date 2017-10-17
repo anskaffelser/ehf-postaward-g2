@@ -1,6 +1,6 @@
+= Prerequisites
 
-=	Prerequisites
 The following are prerequisites for this {docutype}:
 
-.	A buyer has purchased goods or services from the seller by any means.
-.	The seller has to be registered in the buyer system with information as contact information and identifiers used for other {docutype} transaction e.g. {docutype} order and invoice (Organization number…)
+. A buyer has purchased goods or services from the seller by any means.
+. The seller has to be registered in the buyer system with information as contact information and identifiers used for other {docutype} transaction e.g. {docutype} order and invoice (Organization number…)

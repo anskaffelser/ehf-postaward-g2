@@ -7,20 +7,19 @@ include::{shared-dir}/content/introduction/background-and-objective.adoc[]
 == Audience
 The audience for this document is organizations wishing to be EHF enabled for exchanging electronic orders, and/or their ICT-suppliers. These organizations may be:
 
-*      Service providers
-*      Contracting Authorities
-*      Economic Operators
-*      Software Developers
+* Service providers
+* Contracting Authorities
+* Economic Operators
+* Software Developers
 
 More specifically it is addressed towards the following roles:
 
-*     ICT Architects
-*     ICT Developers
-*     Business Experts
+* ICT Architects
+* ICT Developers
+* Business Experts
 
 :leveloffset: +1
 
 include::principles/scope.adoc[]
-
 
 :leveloffset: -1

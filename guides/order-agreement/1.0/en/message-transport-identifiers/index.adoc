@@ -67,9 +67,11 @@ Where:
 * EHF extension ID is: `urn:fdc:difi.no:2017:ehf:spec:1.0`
 
 
-By combining these according to the identifier syntax the CustomizationID to use in EHF is:
+By combining these according to the identifier syntax the CustomizationID to use in EHF is (without spaces):
 ----
-urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0
+urn:www.cenbii.eu:transaction:biitrns110:ver1.0
+:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0
+:extended:urn:fdc:difi.no:2017:ehf:spec:1.0
 ----
 
 [source,xml,indent=0]
@@ -77,8 +79,6 @@ urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:p
 ----
 include::../{xml-doc-fil}[tags=CustomizationID]
 ----
-
-<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</cbc:CustomizationID>
 
 For implementers: Please note that CustomizationID element in the document instance MUST correspond to the Customization ID of the SMP Document Identifier.
 
@@ -93,6 +93,7 @@ urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2
 == Message transport
 
 The transactions defined in this {docutype} need to be transferred from the sending party to the receiving party through an agreed transport network and protocol. The {docutype} is specified independent of a transport network but it is designed with the requirement of the PEPPOL network in mind and does not specifically support other transport network that may be used.
+
 
 === The PEPPOL network
 

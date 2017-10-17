@@ -12,11 +12,11 @@ The seller has a website that allows the buyer to select and order items.
 The buyer has an account with the seller with necessary details to send him an order agreement.
 
 Flow::
-The buyer is working in the in-house purchasing system, selects a seller that has a web shop, and clicks to see that seller’s products. +
+The buyer is working in the in-house purchasing system, selects a seller that has a web shop, and clicks to see that seller’s products.
 +
-The buyer searches the website for items needed, and choose to add some to the order agreement. It is clearly visible which items are contracted. After selecting all required items, the buyer then chooses to buy the selected items. When the ordering is finalized in the web shop, the buyer ends the web shop session. The purchase is recorded in the seller’s system. +
+The buyer searches the website for items needed, and choose to add some to the order agreement. It is clearly visible which items are contracted. After selecting all required items, the buyer then chooses to buy the selected items. When the ordering is finalized in the web shop, the buyer ends the web shop session. The purchase is recorded in the seller’s system.
 +
-An order agreement transaction with item information of the purchased items is sent from the seller to the. The order agreement is recorded in the buyer’s purchasing system. +
+An order agreement transaction with item information of the purchased items is sent from the seller to the. The order agreement is recorded in the buyer’s purchasing system.
 +
 After the delivery of the goods the seller sends an invoice which matches the order and the delivery, but this is outside of this {docutype}.
 

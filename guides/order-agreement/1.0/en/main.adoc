@@ -12,8 +12,8 @@ v{revision}
 :source-language: xml
 :sectanchors:
 :sectnums:
-:imagesdir: images/
-:title-logo-image: {imagesdir}/difi-logo.png
+// :imagesdir: images/
+:title-logo-image: {shared-dir}/images/logo.jpg
 
 {description}
 
