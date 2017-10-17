@@ -18,7 +18,7 @@
 		<cac:Attachment>
 			<cbc:EmbeddedDocumentBinaryObject filename="file.pdf" mimeCode="application/pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
 			<cac:ExternalReference>
-				<cbc:URI>https://joinup.ec.europa.eu/svn/peppol/PostAward/Ordering28A/20160310%20-%20PEPPOL_BIS_28a-101.pdf</cbc:URI>
+				<cbc:URI>https://vefa.difi.no/EHF/2017EHF-OA.pdf</cbc:URI>
 			</cac:ExternalReference>
 		</cac:Attachment>
 	</cac:AdditionalDocumentReference>
@@ -203,7 +203,7 @@
 					<cac:Attachment>
 						<cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" filename="specs.pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
 						<cac:ExternalReference>
-							<cbc:URI>https://joinup.ec.europa.eu/svn/peppol/PostAward/Ordering28A/20160310%20-%20PEPPOL_BIS_28a-101.pdf</cbc:URI>
+							<cbc:URI>https://vefa.difi.no/EHF/2017EHF-OA.pdf</cbc:URI>
 						</cac:ExternalReference>
 					</cac:Attachment>
 				</cac:ItemSpecificationDocumentReference>

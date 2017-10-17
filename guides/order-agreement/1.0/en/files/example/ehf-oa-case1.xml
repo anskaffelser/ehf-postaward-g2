@@ -97,7 +97,7 @@
 		</cac:DeliveryTerms>
 	</cac:Delivery>
 	<cac:TaxTotal>
-		<cbc:TaxAmount currencyID="NOK">1000</cbc:TaxAmount>
+		<cbc:TaxAmount currencyID="NOK">250</cbc:TaxAmount>
 		<cac:TaxSubtotal>
 			<cbc:TaxableAmount currencyID="NOK">1000</cbc:TaxableAmount>
 			<cbc:TaxAmount currencyID="NOK">250</cbc:TaxAmount>
