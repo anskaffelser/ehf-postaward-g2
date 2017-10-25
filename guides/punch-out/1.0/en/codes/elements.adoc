@@ -133,7 +133,7 @@ h| Source codelist
 | GN | National Product Group Code
 | HS | Harmonised System
 | CPV | Common Procurement Vocabulary
-| UNSPSC | UNSPSC
+| UNSPSC | link:http://www.gs1.no/support/standardbibliotek/dele/unspsc[UNSPSC]
 | eCLASS | eCLASS
 | GPC | GS1 Global Product Classification
 |===
