@@ -1,5 +1,5 @@
-
 =	Item information
+
 
 ==	Product identification
 
@@ -55,7 +55,6 @@ include::../{xml-doc-fil}[tags=ManufacturerParty]
 
 ==	Item name and description
 
-
 Description of a product can be sent in Item/Description.
 
 The Product name is sent in the shopping cart from buyer to seller.
@@ -77,6 +76,7 @@ include::../{xml-doc-fil}[tags=DescriptionName]
 
 ////
 
+
 ==	Item properties
 
 A shopping cart line may state if the item described in the line is a service by stating the item property ServiceIndicator as true. The line may also indentify that the item is not a service with the value false. There is no default value so if the ServiceIndicator is not given the item may be either a service or not. An item that is a service is identified as follows:
@@ -93,7 +93,6 @@ include::../{xml-doc-fil}[tags=AdditionalItemProperty3]
 </cac:AdditionalItemProperty>
 
 ////
-
 
 A shopping cart line may give a list of various attibutes of an item such as size, color  and so on for an item.  For each property the property name and value must be given. Additionally the seller may give a property classification code to support automation in comparison of attribute and if the attribute value can be quantified it may be restated with the Unit of measure as an attribute. As example an items property may be that it has 16 GB of RAM memory.
 
@@ -113,6 +112,7 @@ include::../{xml-doc-fil}[tags=AdditionalItemProperty1-2]
 
 
 ==	Item classification and labelling
+
 A shopping cart line may give information about the items
 
 [source,xml,indent=0]
@@ -146,7 +146,9 @@ include::../{xml-doc-fil}[tags=Certificate]
 
 ////
 
+
 ==	Tax information
+
 For correctly handling taxes for the item the line must state the items VAT category and percentage rate as follows where the standard rate of VAT is 25 percent:
 
 [source,xml,indent=0]
@@ -176,6 +178,7 @@ include::../{xml-doc-fil}[tags=OriginCountry]
 </cac:OriginCountry>
 
 ////
+
 
 == Prices and quantities
 

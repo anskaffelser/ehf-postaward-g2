@@ -1,10 +1,6 @@
-
-
 =	Availability dates and lead time
 
 A shopping cart line may state the item availability date which is first day before the end of which the particular item can and will be shipped from the seller. If availability date is before the cart issue date then the item is immediately available. The availability of all items in the cart ends when the validity period of the cart ends. Availability date for an item is given as follows.
-
-
 
 [source,xml,indent=0]
 .CatalogueLine:

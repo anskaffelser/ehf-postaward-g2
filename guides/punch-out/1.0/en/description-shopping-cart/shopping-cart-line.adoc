@@ -1,4 +1,3 @@
-
 = The shopping cart line
 
 Each shopping cart line must have an id to support processing and referencing of individual lines. The ID is created by the seller and may be of any structure but a line id must be unique within the shopping cart message. Example of a series of line identifiers is 1, 2, 3, 4, 5 ... or any other structure. The lines do not need to be ordered in the message.  An example of a line identifier is below:
@@ -14,7 +13,6 @@ include::../{xml-doc-fil}[tags=CatLineID]
 
 :leveloffset: +1
 
-
 include::configured-products.adoc[]
 
 include::availability.adoc[]
@@ -24,6 +22,5 @@ include::contract-referance.adoc[]
 include::item-information.adoc[]
 
 include::attached-item-specifications.adoc[]
-
 
 :leveloffset: -1

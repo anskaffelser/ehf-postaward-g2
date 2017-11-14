@@ -1,4 +1,3 @@
-
 =	Description of selected parts of the shopping cart message
 
 A shopping cart message must at minimum contain the following information:
@@ -26,6 +25,5 @@ In addition to the mandatory information the shopping cart may optionally contai
 include::shopping-cart.adoc[]
 
 include::shopping-cart-line.adoc[]
-
 
 :leveloffset: -1

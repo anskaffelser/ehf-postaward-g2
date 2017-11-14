@@ -1,4 +1,3 @@
-
 =	Principles and prerequisites
 
 This chapter describes the principles and assumptions that underlie the use of {docutype} Punch out. It is based on the CENBII 18 Punch out.

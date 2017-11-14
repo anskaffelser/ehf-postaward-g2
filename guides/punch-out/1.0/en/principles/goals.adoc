@@ -1,4 +1,3 @@
-
 = Goals and Objectives
 
 The following main business goals  to be gained by implementing a BII Punch out profile are the following and apply to this BIS.

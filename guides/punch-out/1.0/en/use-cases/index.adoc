@@ -1,4 +1,3 @@
-
 = Use cases
 
 The Punch Out includes the sending of Shopping cart information from a Seller to a Buyer.
@@ -15,6 +14,5 @@ include::use-case1.adoc[]
 //include::use-case2.adoc[]
 
 include::use-case3.adoc[]
-
 
 :leveloffset: -1

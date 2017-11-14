@@ -1,4 +1,3 @@
-
 =	Benefits
 
 Based on success with automation of invoicing there is a growing interest in automation of ordering.  This approach has two dimensions: Support further automation of invoicing and using structured catalogues as basis for ordering.  The Punch Out process is a sourcing process that preceeds and supports the ordering. It enables the buyer to retrieve information from the seller and use that information to place an order that can then be used in an order-to-invoice matching process. The Punch Out is a specific type of a sourcing process that supports the growing use of purchasing web portals offered by sellers. Implementing this {docutype} is an important step for many companies and government agencies towards full procurement automation.

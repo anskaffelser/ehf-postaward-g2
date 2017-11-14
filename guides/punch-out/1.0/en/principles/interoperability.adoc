@@ -1,4 +1,3 @@
-
 = Interoperability
 
 This PEPPOL BIS structure is based on the European Interoperability Framework 2.0 [EIF]. PEPPOL BIS applies the Framework as follows:

@@ -1,7 +1,4 @@
-
-
 = Configured products
-
 
 The seller may define a configured product in a shopping cart and then list the individual items that are part of the configured product in a structured way as described in this clause. The seller may also describe a configured product in an unstructured way as item description. The items that are part of a configured product reference the Sellers Item number for the configured product that it is part of. No reference is made from the configured product to the item.
 

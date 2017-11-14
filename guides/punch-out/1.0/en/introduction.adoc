@@ -1,4 +1,3 @@
-
 = Introduction
 
 include::{shared-dir}/content/introduction/background-and-objective.adoc[]
@@ -21,7 +20,5 @@ More specifically it is addressed towards the following roles:
 :leveloffset: +1
 
 include::principles/scope.adoc[]
-
-
 
 :leveloffset: -1

@@ -2,6 +2,8 @@
 
 The buyer has made a framework agreement with the seller for services such as maintenance or consulting. The framework agreement sets limits and terms within which the seller may provide services without individual orders from the buyer.
 
+****
+
 Description::
 A seller who has a framework agreement that contracts him for certain services, items or consulting may react to events as contracted and at the end of a period send an order agreement listing the services that were carried out. +
 +
@@ -34,3 +36,5 @@ The buyer has registered a purchase order in his system that allow him to do ord
 
 Example file::
 See link:files/example/ehf-oa-case-2.xml[Use case 2]
+
+****

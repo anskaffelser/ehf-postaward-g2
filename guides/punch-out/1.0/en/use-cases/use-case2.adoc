@@ -1,8 +1,6 @@
-
 = 	Use case 2 – User cancels session
 
 This use case describe when, after having selected items into a shopping cart, the buyer cancels.
-
 
 [cols="2,10", options="header"]
 |===

@@ -2,6 +2,8 @@
 
 This use case describes the process where a customer/buyer orders tickets.
 
+****
+
 Description::
 The buyer uses a website to buy tickets, such as for airfare or events.
 
@@ -27,3 +29,5 @@ The buyer and the seller have reached an agreement. An order has been placed for
 
 Example file::
 See link:files/example/ehf-oa-case1.xml[Use case 1]
+
+****

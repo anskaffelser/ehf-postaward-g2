@@ -1,4 +1,3 @@
-
 = Process flow
 
 The Punch Out process flow can be described as follows:

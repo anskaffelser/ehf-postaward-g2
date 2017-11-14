@@ -1,6 +1,3 @@
-
-
-
 include::../{shared-dir}/content/ehf/about.adoc[]
 
 include::../{shared-dir}/content/ehf/information-consistency.adoc[]
