@@ -22,4 +22,8 @@
 | Oppdatert kapittel om validering så det reflerterer bruk av EHF Common.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/245[#245]
+| Legge til informasjon om nye MVA-kategorier tilgjengelig i neste release.
+| Guide
+
 |===

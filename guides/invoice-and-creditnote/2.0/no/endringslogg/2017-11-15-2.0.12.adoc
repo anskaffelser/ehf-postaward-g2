@@ -25,6 +25,10 @@
 | Tydeliggjøre bruk av "NA" på ordrenummer og "Deres referanse."
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/245[#245]
+| Legge til informasjon om nye MVA-kategorier tilgjengelig i neste release.
+| Guide
+
 |===
 
 

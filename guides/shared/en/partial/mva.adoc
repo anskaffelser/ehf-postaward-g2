@@ -1,15 +1,28 @@
 [cols="1,5,2",options="header"]
 .Valid VAT categories and rates
-!===
+|===
 | VAT category
 | Description
 | Rate as of January 1, 2016
 
-s| S | Outgoing VAT, ordinary rate | 25%
-s| H | Outgoing VAT, reduced rate – food & beverage | 15%
-s| R | Outgoing VAT, reduced rate  – raw fish | 11,11%
-s| AA | Outgoing VAT, low rate | 10%
+s| S | Output VAT, regular rate | 25%
+s| H | Output VAT, reduced rate, middle | 15%
+s| R | Output VAT, reduced rate, raw fish | 11,11%
+s| AA | Output VAT, reduced rate, low | 10%
 s| E | VAT excempt | 0%
-s| Z | VAT excempt (Goods and services not included in the VAT regulations) | None (0%)
-s| K | Emission allowances for private or public businesses  – buyer calculates VAT | None (0%)
-!===
+s| Z | VAT excempt (Goods and services not included in the VAT regulations) | 0%
+s| K | Emission allowances for private or public businesses  – buyer calculates VAT | 0%
+|===
+
+
+As of February 15th 2018 must the following categories be used for a subset of the uses of category "E" today.
+
+[cols="1,5,2",options="header"]
+|===
+| VAT category
+| Description
+| Rate as of January 1, 2016
+
+s| AE | Reversed VAT | 0%
+s| G | Export of goods and services | 0%
+|===

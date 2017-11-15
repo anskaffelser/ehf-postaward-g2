@@ -25,6 +25,10 @@
 | Clarify use of "NA" as order reference and "Your ref".
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/245[#245]
+| Adding information related to new tax categories valid as of next release.
+| Guide
+
 |===
 
 

@@ -6,4 +6,8 @@
 | Using EHF Common for EHF Invoice and Credit Note.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/245[#245]
+| Adding information related to new tax categories valid as of next release.
+| Guide
+
 |===

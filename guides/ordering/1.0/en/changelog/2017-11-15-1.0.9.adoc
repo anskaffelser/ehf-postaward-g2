@@ -18,4 +18,8 @@
 | Updated chapter on validation to reflect use of EHF Common.
 | Guide
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/245[#245]
+| Adding information related to new tax categories valid as of next release.
+| Guide
+
 |===
