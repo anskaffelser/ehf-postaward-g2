@@ -8,10 +8,10 @@ for
 $x in //iso:pattern/iso:rule/iso:assert
 
 let $RuleId := string($x/@id)
-let $rule := string($x/../@context)
+let $rule := replace(normalize-space(string($x/../@context)), '\|', '\\|')
 let $flag := string($x/@flag)
 let $assert := string($x/@test)
-let $tekst := $x/text()
+let $tekst := normalize-space($x/text())
 
 return
 
