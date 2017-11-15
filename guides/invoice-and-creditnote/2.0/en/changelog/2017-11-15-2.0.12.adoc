@@ -17,6 +17,10 @@
 | Replacing rules with rules in EHF Common.
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/244[#244]
+| Adding rules link:{ruleurl-inv}NONAT-T10-R033/[NONAT-T10-R033] (**W**) and link:{ruleurl-cre}NONAT-T14-R033/[NONAT-T14-R033] (**W**).
+| Validator
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/233[#233]
 | Updated chapter on validation to reflect use of EHF Common.
 | Guide
@@ -30,6 +34,10 @@
 | Guide
 
 |===
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+link:{ruleurl-inv}NONAT-T10-R033/[NONAT-T10-R033],
+link:{ruleurl-cre}NONAT-T14-R033/[NONAT-T14-R033]
 
 
 === Mapping of rules for EHF Common in EHF Invoice

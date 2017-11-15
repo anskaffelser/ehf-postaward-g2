@@ -120,6 +120,13 @@
                  test="not(cac:Item/cac:ClassifiedTaxCategory/cbc:Percent) or (some $cat in $taxCategories satisfies $cat = $category)"
                  flag="fatal">[NONAT-T14-R030]-Tax category on line level MUST match provided tax categories on document level.</assert>
       </rule>
+
+      <rule context="cac:Price/cbc:BaseQuantity">
+        <assert id="NONAT-T14-R033"
+                test="xs:decimal(.) &gt; 0"
+                flag="warning">[NONAT-T10-R031]-Base quantity must be a positive value higher than zero.</assert>
+      </rule>
+
       <rule context="cac:TaxSubtotal">
          <let name="category" value="cac:TaxCategory/cbc:ID/normalize-space(text())"/>
          <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:CreditNote/cac:CreditNoteLine[normalize-space(cac:Item/cac:ClassifiedTaxCategory/cbc:ID) = $category]/cbc:LineExtensionAmount))"/>

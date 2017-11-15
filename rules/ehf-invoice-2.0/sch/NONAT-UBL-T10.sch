@@ -121,6 +121,12 @@
                  flag="fatal">[NONAT-T10-R026]-Invoice line amount MUST be equal to the price amount multiplied by the quantity plus charges minus allowances at line level.</assert>
       </rule>
 
+      <rule context="cac:Price/cbc:BaseQuantity">
+        <assert id="NONAT-T10-R033"
+                test="xs:decimal(.) &gt; 0"
+                flag="warning">[NONAT-T10-R031]-Base quantity must be a positive value higher than zero.</assert>
+      </rule>
+
       <rule context="cac:TaxSubtotal">
          <let name="category" value="normalize-space(cac:TaxCategory/cbc:ID)"/>
          <let name="sumLineExtensionAmount" value="xs:decimal(sum(/ubl:Invoice/cac:InvoiceLine[normalize-space(cac:Item/cac:ClassifiedTaxCategory/cbc:ID) = $category]/cbc:LineExtensionAmount))"/>
