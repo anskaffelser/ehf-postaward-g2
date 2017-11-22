@@ -175,7 +175,7 @@
 				</cac:PromisedDeliveryPeriod>
 			</cac:Delivery>
 			<cac:Price>
-				<cbc:PriceAmount currencyID="NOK">10</cbc:PriceAmount>
+				<cbc:PriceAmount currencyID="NOK">600</cbc:PriceAmount>
 				<cbc:BaseQuantity unitCode="C62" unitCodeListID="UNECERec20">1</cbc:BaseQuantity>
 			</cac:Price>
 			<cac:Item>
