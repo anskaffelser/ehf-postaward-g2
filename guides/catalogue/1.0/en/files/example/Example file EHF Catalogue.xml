@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Catalogue xmlns:sdt="urn:oasis:names:specification:ubl:schema:xsd:SpecializedDatatypes-2"
-	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-	xmlns:a="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2"
-	xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2"
-	xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2">
+<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+		   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+		   xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" >
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
 	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns019:ver2.0:extended:urn:www.peppol.eu:bis:peppol1a:ver2.0:extended:urn:www.difi.no:ehf:katalog:ver1.0</cbc:CustomizationID>
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii01:ver2.0</cbc:ProfileID>
@@ -15,8 +10,8 @@
 	<cbc:IssueDate>2013-09-23</cbc:IssueDate>
 	<cbc:VersionID>v1.0</cbc:VersionID>
 	<cac:ValidityPeriod>
-		<cbc:StartDate>2017-01-01</cbc:StartDate>
-		<cbc:EndDate>2018-01-01</cbc:EndDate>
+		<cbc:StartDate>2018-01-01</cbc:StartDate>
+		<cbc:EndDate>2019-01-01</cbc:EndDate>
 	</cac:ValidityPeriod>
 	<cac:ReferencedContract>
 		<cbc:ID>123123</cbc:ID>
@@ -41,7 +36,7 @@
 		</cac:PartyName>
 	</cac:ReceiverParty>
 	<cac:SellerSupplierParty>
-		
+
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">987654325</cbc:EndpointID>
 			<cac:PartyIdentification>
@@ -138,7 +133,7 @@
 					</cac:PartyName>
 				</cac:IssuerParty>
 				<cac:DocumentReference>
-					<cbc:ID>http://www.svanemerket.no/</cbc:ID>				
+					<cbc:ID>http://www.svanemerket.no/</cbc:ID>
 				</cac:DocumentReference>
 			</cac:Certificate>
 		</cac:Item>
@@ -157,8 +152,8 @@
 			>1</cbc:MaximumOrderQuantity>
 		<cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
 		<cac:LineValidityPeriod>
-			<cbc:StartDate>2017-10-01</cbc:StartDate>
-			<cbc:EndDate>2017-12-01</cbc:EndDate>
+			<cbc:StartDate>2018-10-01</cbc:StartDate>
+			<cbc:EndDate>2018-12-01</cbc:EndDate>
 		</cac:LineValidityPeriod>
 		<cac:RequiredItemLocationQuantity>
 			<cbc:LeadTimeMeasure unitCode="DAY">13</cbc:LeadTimeMeasure>
@@ -167,7 +162,7 @@
 			</cac:Price>
 		</cac:RequiredItemLocationQuantity>
 		<cac:Item>
-			
+
 			<cbc:PackQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:PackQuantity>
 			<cbc:Name>LÅSKASSE LK1362/28 R STOLPE25</cbc:Name>
 			<cac:SellersItemIdentification>
