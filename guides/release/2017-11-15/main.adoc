@@ -44,7 +44,7 @@ Denne er tilgjengelig kun på engelsk. Vennlist se link:#punch-out[oversikten p�
 include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.8.adoc[]
 
 
-== EHF Common 1.0.0 [[no-common]]
+== EHF Common 1.0.1 [[no-common]]
 
 Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på engelsk].
 
