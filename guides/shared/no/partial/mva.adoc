@@ -11,17 +11,6 @@ s| AA | Utgående merverdiavgift, redusert sats – lav sats | 10%
 s| E | Innenlands omsetning og uttak fritatt for merverdiavgift | 0%
 s| Z | Unntatt fra merverdiavgiftsloven (utenfor merverdiavgiftsloven) | Ingen (0%)
 s| K | Klimakvoter til næringsdrivende eller offentlig virksomhet – kjøper beregner MVA | Ingen (0%)
-|===
-
-
-Fra 15. februar 2018 skal følgende nye koder benyttes i stedet for kategori "E"
-
-[cols="1,5,2",options="header"]
-|===
-| MVA kategori
-| Beskrivelse
-| Sats pr. 1. januar 2017
-
 s| AE | Innenlands omsetning med omvendt avgiftsplikt | 0%
 s| G | Utførsel av varer og tjenester | 0%
 |===
