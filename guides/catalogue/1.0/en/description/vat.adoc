@@ -10,7 +10,7 @@ include::../{shared-dir}/partial/mva.adoc[]
 .Example
 ----
 <cac:ClassifiedTaxCategory>
-  <cbc:ID schemeID="UNECE5305">S</cbc:ID>
+  <cbc:ID schemeID="UNCL5305">S</cbc:ID>
   <cac:TaxScheme>
     <cbc:ID>VAT</cbc:ID>
   </cac:TaxScheme>
