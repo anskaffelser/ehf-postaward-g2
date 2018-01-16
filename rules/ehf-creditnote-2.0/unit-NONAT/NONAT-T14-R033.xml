@@ -34,7 +34,7 @@
 	</test>
 	<test>
 		<assert>
-			<warning>NONAT-T14-R033</warning>
+			<error>NONAT-T14-R033</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -48,7 +48,7 @@
 	</test>
 	<test>
 		<assert>
-			<warning>NONAT-T14-R033</warning>
+			<error>NONAT-T14-R033</error>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

@@ -124,7 +124,7 @@
       <rule context="cac:Price/cbc:BaseQuantity">
         <assert id="NONAT-T14-R033"
                 test="xs:decimal(.) &gt; 0"
-                flag="warning">[NONAT-T10-R031]-Base quantity must be a positive value higher than zero.</assert>
+                flag="fatal">[NONAT-T10-R033]-Base quantity must be a positive value higher than zero.</assert>
       </rule>
 
       <rule context="cac:TaxSubtotal">

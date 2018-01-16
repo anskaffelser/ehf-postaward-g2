@@ -7,3 +7,4 @@ target
 *.pdf
 *.epub
 tmp*
+.idea

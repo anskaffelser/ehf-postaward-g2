@@ -1,0 +1,12 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/244[#244]
+| Endre reglene link:{ruleurl-inv}NONAT-T10-R033/[NONAT-T10-R033] (**E**) og link:{ruleurl-cre}NONAT-T14-R033/[NONAT-T14-R033] (**E**) så de trigger error.
+| Validator
+
+|===
