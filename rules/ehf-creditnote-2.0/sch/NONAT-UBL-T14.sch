@@ -101,6 +101,7 @@
          <let name="sumCharge" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='true']/cbc:Amount)" />
          <let name="sumAllowance" value="sum(cac:AllowanceCharge[child::cbc:ChargeIndicator='false']/cbc:Amount)"/>
          <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then cac:Price/cbc:BaseQuantity else 1)"/>
+         <let name="baseQuantity" value="xs:decimal(if (cac:Price/cbc:BaseQuantity) then (if (cac:Price/cbc:BaseQuantity &lt;= 0) then (1) else (cac:Price/cbc:BaseQuantity)) else 1)"/>
          <let name="pricePerUnit" value="xs:decimal(cac:Price/cbc:PriceAmount) div $baseQuantity"/>
          <let name="quantity" value="xs:decimal(cbc:CreditedQuantity)"/>
          <let name="lineExtensionAmount" value="number(cbc:LineExtensionAmount)"/>
