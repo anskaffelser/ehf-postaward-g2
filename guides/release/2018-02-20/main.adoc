@@ -52,7 +52,7 @@ Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på e
 = English [[english]]
 
 
-== EHF Invoice and Creditnote 2.0.12 [[invoice-and-creditnote]]
+== EHF Invoice and Creditnote 2.0.13 [[invoice-and-creditnote]]
 
 include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.13.adoc[]
 

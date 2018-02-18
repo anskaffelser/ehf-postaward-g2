@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Katalog
 
-:date-review: 16. oktober 2017
-:date-release: 15. november 2017
-:date-mandatory: 15. november 2017
+:date-review: 19. januar 2018
+:date-release: 20. februar 2018
+:date-mandatory: 20. februar 2018
