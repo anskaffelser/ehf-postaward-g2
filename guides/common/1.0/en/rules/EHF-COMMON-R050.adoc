@@ -1,0 +1,36 @@
+= EHF-COMMON-R050 [[EHF-COMMON-R050]]
+
+[cols="1,4"]
+.Description
+|===
+
+h| Context
+| ```cbc:Note[2]``` (Pattern 2)
+
+h| Rule
+| ```false()```
+
+h| Message
+| Only one note element is allowed.
+
+h| Type
+| Warning
+
+h| Since
+| 1.0.2
+
+|===
+
+
+[cols="2,1,3", options="header"]
+.Document type matrix
+|===
+| Document type | Status | Comment
+| EHF Catalogue 1.x | Active |
+| EHF Catalogue Response 1.x | Active |
+| EHF Credit Note 2.x | Active |
+| EHF Despatch Advice 1.x | Active |
+| EHF Invoice 2.x | Active |
+| EHF Order 1.x | Active |
+| EHF Order Response 1.x | Active |
+|===

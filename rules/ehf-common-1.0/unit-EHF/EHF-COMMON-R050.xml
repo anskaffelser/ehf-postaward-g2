@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSet xmlns="http://difi.no/xsd/vefa/validator/1.0" configuration="ehf-common-ubl-1.0">
+	<assert>
+		<description>Verify amount of Note elements.</description>
+		<scope>EHF-COMMON-R050</scope>
+	</assert>
+	<test>
+		<assert>
+			<success>EHF-COMMON-R050</success>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cbc:Note/>
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<success>EHF-COMMON-R050</success>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<!-- <Note/> -->
+
+		</Invoice>
+	</test>
+	<test>
+		<assert>
+			<warning>EHF-COMMON-R050</warning>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+			xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cbc:Note/>
+			<cbc:Note/>
+
+		</Invoice>
+	</test>
+</testSet>

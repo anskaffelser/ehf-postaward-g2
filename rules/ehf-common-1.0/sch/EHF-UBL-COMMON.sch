@@ -91,6 +91,11 @@
                test="matches(., '^[0-9]+$') and u:gln(.)"
                flag="warning">Invalid GLN number provided.</assert>
     </rule>
+    <rule context="cbc:Note[2]">
+      <assert id="EHF-COMMON-R050"
+              test="false()"
+              flag="warning">Only one note element is allowed.</assert>
+    </rule>
     <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
       <assert id="EHF-COMMON-R100"
               test="some $code in tokenize('application/pdf image/gif image/tiff image/jpeg image/png text/plain', '\s') satisfies $code = normalize-space(@mimeCode)"

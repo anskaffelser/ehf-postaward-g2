@@ -6,4 +6,12 @@
 | Adding tax categories "AE" and "G".
 | Validator
 
+| link:https://github.com/difi/vefa-ehf-postaward/issues/262[#262]
+| Adding rule to trigger upon multiple Note elements.
+| Validator
+
 |===
+
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+EHF-COMMON-R050
