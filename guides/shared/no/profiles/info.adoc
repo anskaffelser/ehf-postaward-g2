@@ -1,6 +1,6 @@
 = Profiler og meldinger [[profiler]]
 
-Alle meldinger har ProfileID og CustomizationID. ProfileID identifiserer forretningsprosessen meldingen er en del, CustomizationID identifiserer hvilken dokumenttype meldingen er og hvilke regler meldingen etterlever.
+Alle meldinger har ProfileID og CustomizationID. ProfileID identifiserer forretningsprosessen meldingen er en del av, CustomizationID identifiserer hvilken dokumenttype meldingen er og hvilke regler meldingen etterlever.
 
 Profiler er knyttet til en forretningsprosess og en eller flere dokumenttyper. Gyldige instansdokumenter må ha både ProfileID og CustomizationID fra samme profil.
 
