@@ -1,6 +1,6 @@
 = Product Classification
 
-A product must be classified according to UNSPSC being the mandatory public classification schemes. Products can also be classified according to regulatory schemes or classification schemes used in certain business sectors.  The type of classification shall be stated in the attribute listID.
+A product must be classified according to UNSPSC being the mandatory public classification schemes. Products can also be classified according to regulatory schemes or classification schemes used in certain business sectors. The type of classification shall be stated in the attribute listID.
 
 Classification must be according to a relevant product classification scheme. UNSPSC is mandatory for all public purchases and must be stated for all products.
 
