@@ -6,6 +6,10 @@
 |===
 | Sak | Beskrivelse | Type
 
+|
+| Oppdaterte regler for PEPPOL BIS.
+| Validator
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/267[#267]
 | Legge til et manglende ord i "Profiler og meldinger"-seksjonen.
 | Guide

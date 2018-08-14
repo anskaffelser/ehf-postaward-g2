@@ -6,6 +6,10 @@
 |===
 | Issue | Description | Type
 
+|
+| Updated rules for PEPPOL BIS.
+| Validator
+
 | link:https://github.com/difi/vefa-ehf-postaward/issues/267[#267]
 | Adding a missing word in "Profiler og meldinger" section (Norwegian edition only).
 | Guide

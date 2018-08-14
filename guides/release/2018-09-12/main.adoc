@@ -29,9 +29,9 @@ include::../../catalogue/1.0/no/endringslogg/{release}-1.0.12.adoc[]
 include::../../ordering/1.0/no/endringslogg/{release}-1.0.10.adoc[]
 
 
-// == EHF Ordreforslag 1.0.0 [[ordreforslag]]
+== EHF Ordreforslag 1.0.1 [[ordreforslag]]
 
-// Denne er tilgjengelig kun på engelsk. Vennlist se link:#order-agreement[oversikten på engelsk].
+Denne er tilgjengelig kun på engelsk. Vennlist se link:#order-agreement[oversikten på engelsk].
 
 
 // == EHF Punch Out 1.0.0 [[no-punch-out]]
@@ -67,9 +67,9 @@ include::../../catalogue/1.0/en/changelog/{release}-1.0.12.adoc[]
 include::../../ordering/1.0/en/changelog/{release}-1.0.10.adoc[]
 
 
-// == EHF Order Agreement 1.0.0 [[order-agreement]]
+== EHF Order Agreement 1.0.1 [[order-agreement]]
 
-// include::../../order-agreement/1.0/en/changelog/{release}-1.0.0.adoc[]
+include::../../order-agreement/1.0/en/changelog/{release}-1.0.1.adoc[]
 
 
 // == EHF Punch Out 1.0.0 [[punch-out]]
