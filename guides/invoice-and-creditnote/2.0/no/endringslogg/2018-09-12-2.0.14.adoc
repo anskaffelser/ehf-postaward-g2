@@ -1,0 +1,12 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/267[#267]
+| Legge til et manglende ord i "Profiler og meldinger"-seksjonen.
+| Guide
+
+|===

@@ -2,6 +2,16 @@
 
 :sectnums!:
 
+== Version 1.0.12 (2018-09-12) [[changelog-1.0.12]]
+
+include::2018-09-12-1.0.12.adoc[]
+
+
+== Version 1.0.11 (2018-02-20) [[changelog-1.0.11]]
+
+include::2018-02-20-1.0.11.adoc[]
+
+
 == Version 1.0.10 (2017-11-15) [[changelog-1.0.10]]
 
 include::2017-11-15-1.0.10.adoc[]
