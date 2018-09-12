@@ -1,6 +1,6 @@
 include::../../settings.adoc[]
 
-:shared-dir: ../../shared
+:shared-dir: ../../shared/en
 :lang: en
 :doctitle: EHF Billing 3.0
 
