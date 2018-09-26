@@ -499,7 +499,7 @@
                     <Value type="EXAMPLE">123456789</Value>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Party identification</Name>
 
@@ -642,7 +642,7 @@
                     <Value type="EXAMPLE">999888777</Value>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Party identification</Name>
 
@@ -1251,7 +1251,7 @@
                     <Value type="EXAMPLE">12 stk</Value>
                 </Element>
                 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cbc:Name</Term>
                     <Name>Item name</Name>
                     <Description>A short name for an item. Item name should be a unique name that clearly identifies the product.</Description>

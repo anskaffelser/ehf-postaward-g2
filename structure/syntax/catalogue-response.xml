@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>Catalogue</Term>
+    <Name>Post-Award Catalogue</Name>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+        <Term>ubl:ApplicationResponse</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
+            <Reference type="RULE">BII2-T58-R002</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns058:ver2.0:#urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
+            <Reference type="RULE">BII2-T58-R001</Reference>
+            <Reference type="RULE">EHFPROFILE-T58-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii01:ver2.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Response identifier</Name>
+            <Description>An transaction instance must contain an identifier. The identifier enables positive referencing the
+                document instance for various purposes including referencing between transactions that are part of the same process.
+            </Description>
+            <Reference type="RULE">BII2-T58-R004</Reference>
+            <Value type="EXAMPLE">1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Response issue date</Name>
+            <Description>The date on which the transaction instance was issued.</Description>
+            <Reference type="RULE">BII2-T58-R003</Reference>
+            <Value type="EXAMPLE">2013-05-10</Value>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Response issue data</Name>
+            <Description>The time at which the transaction instance was issued.</Description>
+        </Element>
+        
+        <Element cardinality="0..n">
+            <Term>cbc:Note</Term>
+            <Name>Response textual notes</Name>
+            <Description>Used to make any comments or instructions relevant to the response, including the date that the reported decision becomes effective.</Description>
+
+            <Attribute>
+                <Term>languageID</Term>
+            </Attribute>
+        </Element>
+
+        <Element>
+            <Term>cac:SenderParty</Term>
+            <Name>Sender party</Name>
+            <Description>Information about message sender</Description>
+            <Reference type="RULE">BII2-T58-R005</Reference>
+
+            <Element cardinality="0..1">
+                <Term>cbc:EndpointID</Term>
+                <Name>Electronic address</Name>
+                <Description>A response may contain the party electronic address. The address can be of any format and the format should be identified in the message.</Description>
+                <Reference type="RULE">NOGOV-T58-R006</Reference>
+                <Reference type="RULE">NOGOV-T58-R003</Reference>
+
+                <Attribute>
+                    <Term>schemeID</Term>
+                    <Reference type="RULE">NOGOV-T58-R005</Reference>
+                    <Reference type="RULE">EUGEN-T58-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyIdentification</Term>
+                <Name>Party identification</Name>
+                <Description>Information about Party ID</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Party identifier</Name>
+                    <Description>It should be possible to specify the identifier or identifiers for the party.</Description>
+                    <Reference type="RULE">BII2-T58-R008</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Reference type="RULE">EUGEN-T58-R002</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">923654321</Value>
+
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyName</Term>
+                <Name>Party name</Name>
+                <Description>Information about party name.</Description>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Party name</Name>
+                    <Description>The name of the party sending the response.</Description>
+                    <Reference type="RULE">BII2-T58-R008</Reference>
+                    <Value type="EXAMPLE">Buyer</Value>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:ReceiverParty</Term>
+            <Name>Receiver party</Name>
+            <Description>Information about message receiver.</Description>
+            <Reference type="RULE">BII2-T58-R006</Reference>
+
+            <Element cardinality="0..1">
+                <Term>cbc:EndpointID</Term>
+                <Name>Electronic address</Name>
+                <Description>A response may contain the party electronic address. The address can be of any format and the format should be identified in the message.</Description>
+                <Reference type="RULE">NOGOV-T58-R008</Reference>
+                <Reference type="RULE">NOGOV-T58-R004</Reference>
+
+                <Attribute>
+                    <Term>schemeID</Term>
+                    <Reference type="RULE">NOGOV-T58-R007</Reference>
+                    <Reference type="RULE">EUGEN-T58-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyIdentification</Term>
+                <Name>Party identification</Name>
+                <Description>Information about Party ID</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Party identifier</Name>
+                    <Description>It should be possible to specify the identifier or identifiers for the party.</Description>
+                    <Reference type="RULE">BII2-T58-R007</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Reference type="RULE">EUGEN-T58-R002</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">123456789</Value>
+
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyName</Term>
+                <Name>Party name</Name>
+                <Description>Information about party name.</Description>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Party name</Name>
+                    <Description>The name of the party sending the response.</Description>
+                    <Reference type="RULE">BII2-T58-R007</Reference>
+                    <Value type="EXAMPLE">Supplier</Value>
+                </Element>
+            </Element>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cac:DocumentResponse</Term>
+            <Name>Document response</Name>
+            <Description>Information about the reason code</Description>
+            
+            <Element>
+                <Term>cac:Response</Term>
+                <Name>Response</Name>
+                <Description>Response information</Description>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:ResponseCode</Term>
+                    <Name>Coded decision</Name>
+                    <Description>A code for the description of the response to the transaction document.
+                        AP= Accepted, RE = Rejected, UN/Cefact 4343 Response type code</Description>
+                    <Reference type="RULE">BII2-T58-R009</Reference>
+
+                    <Attribute>
+                        <Term>listID</Term>
+                        <Reference type="RULE">EUGEN-T58-R003</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">AP</Value>
+                </Element>
+            </Element>
+
+            <Element>
+                <Term>cac:DocumentReference</Term>
+                <Name>Document reference</Name>
+                <Description>Document reference information.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Document identifier</Name>
+                    <Description>Identifies the document being referred to</Description>
+                    <Value type="EXAMPLE">Catalogue-01</Value>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:VersionID</Term>
+                    <Name>Document version</Name>
+                    <Description>The version of the document that has been identified with the document identifier.</Description>
+                    <Value type="EXAMPLE">1</Value>
+                </Element>
+            </Element>
+        </Element>
+    </Document>
+
+</Syntax>
