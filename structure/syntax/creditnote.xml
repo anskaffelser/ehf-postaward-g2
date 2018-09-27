@@ -227,6 +227,597 @@
                 </Attribute>
                 <Value type="EXAMPLE">5</Value>
             </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentType</Term>
+                <Name>Document type</Name>
+                <Description>The short description of what is reference such as contract type, document type , meter etc.
+                    A credit note may contain the type of contract that is referred to (such as framework agreement).</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AdditionalDocumentReference</Term>
+            <Name>Additional document reference</Name>
+            <Description>Reference to additional documents.</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Document identifier</Name>
+                <Description>An identifier for the referenced document.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentType</Term>
+                <Name>Description</Name>
+                <Description>A short description of the document type.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Attachment</Term>
+                <Name>Attachment</Name>
+                <Description>Reference to attached document, externally referred to, referred to in the MIME location or embedded.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EmbeddedDocumentBinaryObject</Term>
+                    <Name>Embedded binary object</Name>
+                    <Description>	The attached document embeded as binary object.
+                        A credit note may contain an attached electronic document as an encoded object in the credit note in order
+                        to provide supporting documents such as timesheets, usages reports etc. The seller can only expect the receiver to process attachments according to rule.</Description>
+                    
+                    <Attribute>
+                        <Term>mimeCode</Term>
+                        <Description>Type of attachment.</Description>
+                        <Reference type="RULE">CL-T14-R008</Reference>
+                        <Reference type="RULE">NOGOV-T14-R020</Reference>
+
+                        <Value type="EXAMPLE">application/pdf</Value>
+                    </Attribute>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cac:ExternalReference</Term>
+                    <Name>External reference</Name>
+                    <Description>An attached document</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:URI</Term>
+                        <Name>External reference</Name>
+                        <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingSupplierParty</Term>
+            <Name>Accounting supplier party</Name>
+            <Description>Organisation or person responsible som delivering the goods and services.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+                <Description>An association to party.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Electronic address ID</Name>
+                    <Description>A credit note may contain the sellers electronic address. The address can be of any format and the format should be identified in the message.</Description>
+                    <Reference type="RULE">NOGOV-T14-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of the issuing agency of the EndpointID</Description>
+                        <Reference type="RULE">OP-T14-R002</Reference>
+                        <Reference type="RULE">EUGEN-T14-R023</Reference>
+                        <Reference type="RULE">NOGOV-T14-R010</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">123456789</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+                    <Description>An association to Party Identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>A credit note may contain a registered identifier for the seller. Information referenced by the
+                            identifier is not considered part of the message (i.e. the buyer is not required to look up the identifier in the relevant registry and process additional information).</Description>
+                        <Reference type="RULE">BII2-T14-R006</Reference>
+
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Identification of the issuing agency of the party identification.</Description>
+                            <Reference type="RULE">OP-T14-R003</Reference>
+                            <Reference type="RULE">EUGEN-T14-R024</Reference>
+                            <Value type="EXAMPLE">ZZZ</Value>
+                        </Attribute>
+
+                        <Value type="EXAMPLE">6546546</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Name of supplier</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description>A credit note must contain the name of the seller.</Description>
+                        <Reference type="RULE">EUGEN-T14-R035</Reference>
+                        <Reference type="RULE">BII2-T14-R006</Reference>
+                        <Value type="EXAMPLE">Supplier Inc.</Value>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Reference type="RULE">EUGEN-T14-R037</Reference>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number. A credit note must contain the seller’s street name and number or P.O.box.</Description>
+                        <Value type="EXAMPLE">Bond street 34</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building. A credit note may contain an additional address line for seller address.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code. A credit note must contain the seller’s city.</Description>
+                        <Reference type="RULE">NONAT-T14-R003</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.
+                            A credit note may contain the seller’s post code.</Description>
+                        <Reference type="RULE">NONAT-T14-R003</Reference>
+                        <Value type="EXAMPLE">5010</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                            of country sub divisions are commonly used. A credit note may contain that information.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.
+                                The seller’s address country must be contained in a credit note in the form of a two letter code (ISO 3166-1 alpha-2).</Description>
+                            <Reference type="RULE">CL-T14-R004</Reference>
+                            <Reference type="RULE">NONAT-T14-R003</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T14-R027</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cac:PartyTaxScheme</Term>
+                    <Name>Party tax scheme</Name>
+                    <Description>Tax scheme for the supplier.</Description>
+
+                    <Element>
+                        <Term>CompanyID</Term>
+                        <Name>VAT registration number</Name>
+                        <Description>	When the credit note is a VAT credit note it must state the sellers VAT registration number and tax scheme.
+                            The supplier's VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA. Mandatory if the supplier is taxable.</Description>
+                        <Reference type="RULE">EUGEN-T14-R041</Reference>
+                        <Reference type="RULE">NOGOV-T14-R013</Reference>
+                        <Reference type="RULE">NOGOV-T14-R003</Reference>
+                        <Value type="EXAMPLE">987654321MVA</Value>
+                    </Element>
+                    
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+                        
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>Code for TaxScheme.  VAT is the only legal value</Description>
+                            <Reference type="RULE">NONAT-T14-R010</Reference>
+                            <Reference type="RULE">NONAT-T14-R013</Reference>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Party legal entity</Name>
+                    <Description>Association to Party Legal Entity</Description>
+                    <Reference type="RULE">EUGEN-T14-R039</Reference>
+                    <Reference type="RULE">NONAT-T14-R001</Reference>
+                    
+                    <Element>
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Registration name</Name>
+                        <Description>The name under which the seller is legally registered.</Description>
+                        <Reference type="RULE">NONAT-T14-R006</Reference>
+                        <Value type="EXAMPLE">Any supplier name</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Company ID</Name>
+                        <Description>A credit note may contain the identifier assigned to the party by the national company registrar.
+                            The supplying organisations legal organisation number.</Description>
+                        <Reference type="RULE">NOGOV-T14-R014</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Identification of the issuing agency of the company ID.</Description>
+                            <Reference type="RULE">OP-T14-R008</Reference>
+                            <Reference type="RULE">NONAT-T14-R014</Reference>
+                            <Value type="EXAMPLE">NO:ORGNR</Value>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeName</Term>
+                            <Value type="EXAMPLE">Foretaksregisteret</Value>
+                        </Attribute>
+                        <Value type="EXAMPLE">987654321</Value>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Description>The legal address of the supplier.</Description>
+                        
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Description>The name of the city where the seller is legally registered.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country</Name>
+                                <Description>The country in which the seller is legally registered.</Description>
+                                <Reference type="RULE">CL-T14-R004</Reference>
+
+                                <Attribute>
+                                    <Term>listID</Term>
+                                    <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                    <Reference type="RULE">EUGEN-T14-R027</Reference>
+                                    <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                                </Attribute>
+                                <Value type="EXAMPLE">NO</Value>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+                
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>The supplier's reference specified as "Our ref."</Description>
+                        <Reference type="RULE">NOGOV-T14-R001</Reference>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description>The supplier contact person.</Description>
+                        <Value type="EXAMPLE">John Doe</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Telephone</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.
+                            A credit note may contain a telephone number for a relevant contact at the seller.</Description>
+                        <Value type="EXAMPLE">+4712345678</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Telefax</Name>
+                        <Description>A fax number for the contact persons.
+                            A credit note may contain a tele-fax number for a relevant contact at the seller.</Description>
+                        <Value type="EXAMPLE">+4792612346</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Electronic mail</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.
+                            A credit note may contain a telephone number for a relevant contact at the seller.</Description>
+                        <Value type="EXAMPLE">supplier.contact@supplyingcompany.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingCustomerParty</Term>
+            <Name>Accounting customer party</Name>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+                <Description>An association to party.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Electronic address ID</Name>
+                    <Description>A credit note may contain the buyers electronic address. The address can be of any format and the format should be identified in the message.
+                        Electronic addresses for Norwegian actors using the PEPPOL transport infrastructure shall be specified as Norwegian Organization Number.</Description>
+                    <Reference type="RULE">NOGOV-T14-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of the issuing agency of the EndpointID.</Description>
+                        <Reference type="RULE">OP-T14-R002</Reference>
+                        <Reference type="RULE">EUGEN-T14-R023</Reference>
+                        <Reference type="RULE">NOGOV-T14-R010</Reference>
+                        <Value type="EXAMPLE">NO:ORGNR</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">998876543</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+                    <Description>An association to Party Identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Customer identifier</Name>
+                        <Description>A credit note may contain a registered identifier for the seller. Information referenced by the
+                            identifier is not considered part of the message (i.e. the buyer is not required to look up the identifier in the relevant registry and process additional information).</Description>
+                        <Reference type="RULE">BII2-T14-R006</Reference>
+                        <Reference type="RULE">NOGOV-T14-R006</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Identification of the issuing agency of the party identification.</Description>
+                            <Reference type="RULE">OP-T14-R003</Reference>
+                            <Reference type="RULE">EUGEN-T14-R024</Reference>
+                            <Value type="EXAMPLE">ZZZ</Value>
+                        </Attribute>
+
+                        <Value type="EXAMPLE">654321</Value>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Name of customer.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description>A credit note must contain the name of the buyer.</Description>
+                        <Reference type="RULE">EUGEN-T14-R036</Reference>
+                        <Reference type="RULE">BII2-T14-R008</Reference>
+                        <Value type="EXAMPLE">Ole Olsen</Value>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Description>The address of the customer.</Description>
+                    <Reference type="RULE">EUGEN-T14-R038</Reference>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number. A credit note must contain the seller’s street name and number or P.O.box.</Description>
+                        <Value type="EXAMPLE">Baker street 13</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building. A credit note may contain an additional address line for seller address.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code. A credit note must contain the seller’s city.</Description>
+                        <Reference type="RULE">NONAT-T14-R004</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.
+                            A credit note may contain the seller’s post code.</Description>
+                        <Reference type="RULE">NONAT-T14-R004</Reference>
+                        <Value type="EXAMPLE">5000</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                            of country sub divisions are commonly used. A credit note may contain that information.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.
+                                The seller’s address country must be contained in a credit note in the form of a two letter code (ISO 3166-1 alpha-2).</Description>
+                            <Reference type="RULE">CL-T14-R004</Reference>
+                            <Reference type="RULE">NONAT-T14-R004</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T14-R027</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyTaxScheme</Term>
+                    <Name>Party tax scheme</Name>
+                    <Description>Tax scheme of the customer.</Description>
+
+                    <Element>
+                        <Term>CompanyID</Term>
+                        <Name>VAT registration number</Name>
+                        <Description>A credit note may contain the buyers VAT identifier In order to facilitate reverse charge and intra community supply billing.
+                            The customers VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA</Description>
+                        <Reference type="RULE">NOGOV-T14-R013</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>The attribute must be «NO:VAT"</Description>
+                            <Reference type="RULE">OP-T14-R008</Reference>
+                            <Value type="EXAMPLE">NO:VAT</Value>
+                        </Attribute>
+                        <Value type="EXAMPLE">987654321MVA</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>Code for TaxScheme. VAT is the only legal value</Description>
+                            <Reference type="RULE">NONAT-T14-R010</Reference>
+                            <Reference type="RULE">NONAT-T14-R013</Reference>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Party legal entity</Name>
+                    <Description>Association to Party Legal Entity. Must not be filled if the customer is a consumer (B2C), else mandatory.</Description>
+
+                    <Element>
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Legal name</Name>
+                        <Description>The legal name of the customer</Description>
+                        <Reference type="RULE">NONAT-T14-R008</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Company ID</Name>
+                        <Description>A credit note may contain the identifier assigned to the Party by the national company registrar.
+                            The organisation number. Only numbers are valid. Must not be used if B2C credit note (consumers).</Description>
+                        <Reference type="RULE">NOGOV-T14-R014</Reference>
+                        <Reference type="RULE">NOGOV-T14-R004</Reference>
+                        <Reference type="RULE">EUGEN-T14-R040</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Identification of the issuing agency of the company ID.</Description>
+                            <Reference type="RULE">OP-T14-R008</Reference>
+                            <Reference type="RULE">NONAT-T14-R014</Reference>
+                            <Value type="EXAMPLE">NO:ORGNR</Value>
+                        </Attribute>
+
+                        <Value type="EXAMPLE">123456789</Value>
+                    </Element>
+
+                </Element>
+
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>The customers contact person.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>Name or identifier specifying the customers reference (Eg employee number)</Description>
+                        <Reference type="RULE">NOGOV-T14-R007</Reference>
+                        <Value type="EXAMPLE">3150xyz</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Name</Name>
+                        <Description>The name of the contact person.
+                            A credit note may contain a person name for a relevant contact at the buyer.</Description>
+                        <Value type="EXAMPLE">Phil Smith</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Telephone</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.
+                            A credit note may contain a telephone number for a relevant contact at the buyer.</Description>
+                        <Value type="EXAMPLE">+4732121200</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Telefax</Name>
+                        <Description>A fax number for the contact persons.
+                            A credit note may contain a tele-fax number for a relevant contact at the buyer.</Description>
+                        <Value type="EXAMPLE">+4794792144</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Electronic mail</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.
+                            A credit note may contain a telephone number for a relevant contact at the buyer.</Description>
+                        <Value type="EXAMPLE">customer.contact@buyingcompany.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cac:PayeeParty</Term>
+            <Name>Payee Party</Name>
+            <Description>An association to the Payee.</Description>
         </Element>
 
     </Document>
