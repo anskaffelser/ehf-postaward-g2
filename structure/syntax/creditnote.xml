@@ -11,8 +11,223 @@
     <Document>
         <Term>ubl:CreditNote</Term>
 
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Indicated the version of UBL the message is based on</Description>
+            <Reference type="RULE">NONAT-T14-R015</Reference>
+            <Reference type="RULE">NONAT-T14-R016</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
 
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>	Identifies the specification of content and rules that apply to the transaction.
+                Identifying the customization/implementation guide/contextualization of the syntax message and its extension that applies to the credit note transaction,
+                enables the receiver to apply the correct validation to the received document as well as to route the document to an appropriate service for processing.</Description>
+            <Reference type="RULE">BII2-T14-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</Value>
+        </Element>
 
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>	Identifies the BII profile or business process context in which the transaction appears.
+                Identifying the profile or business process context in which the transaction appears enables the buyer to direct the message
+                to an appropriate service as well as controlling its relation to other documents exchanged as part of the same process.</Description>
+            <Reference type="RULE">BII2-T14-R002</Reference>
+            <Reference type="RULE">EHFPROFILE-T14-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii05:ver2.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Credit note identifier</Name>
+            <Description>	An credit note instance must contain an identifier. An credit note identifier enables positive referencing
+                the document instance for various purposes including referencing between documents that are part of the same process.
+            </Description>
+            <Reference type="RULE">BII2-T14-R003</Reference>
+            <Value type="EXAMPLE">654321</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Credit note issue date</Name>
+            <Description>The issue date of an credit note is required by EU directives as well as country laws. A credit note must therefore contain the date on which it was issued.
+                Format YYYY-MM-DD.</Description>
+            <Reference type="RULE">BII2-T14-R004</Reference>
+            <Reference type="RULE"> NONAT-T14-R005</Reference>
+            <Reference type="RULE">NOGOV-T14-R011</Reference>
+            <Value type="EXAMPLE">2013-06-15</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:TaxPointDate</Term>
+            <Name>Tax point date</Name>
+            <Description>The date applicable VAT.</Description>
+            <Reference type="RULE">NOGOV-T14-R011</Reference>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:Note</Term>
+            <Name>Notee</Name>
+            <Description>The textual note provides the seller a means for providing unstructured information that is
+                relevant to the credit note.  This can be notes or other similar information that is not contained explicitly in another
+                qualified element. Information given in as textual notes is mainly intended for manual processing. When “clauses” or “declarations” are
+                used they should be stated in full in the note element.</Description>
+        </Element>
+
+        <Element>
+            <Term>cbc:DocumentCurrencyCode</Term>
+            <Name>Currency code</Name>
+            <Description>The currency in which the monetary amounts are stated must be stated in the credit note.
+                According to EU Directive a currency code from ISO 4217 must be supplied for all monetary amounts.</Description>
+            <Reference type="RULE">CL-T14-R002</Reference>
+            <Reference type="RULE">BII2-T14-R005</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>Identification of the codelist.</Description>
+                <Reference type="RULE">EUGEN-T14-R026</Reference>
+                <Value type="EXAMPLE">ISO4217</Value>
+            </Attribute>
+            <Value type="EXAMPLE">NOK</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:TaxCurrencyCode</Term>
+            <Name>VAT currency code</Name>
+            <Description>Currency code for VAT in local currency, must be filled if the creditnote currency is not NOK.</Description>
+            <Reference type="RULE">OP-T14-R009</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>Identification of the codelist.</Description>
+                <Reference type="RULE">EUGEN-T14-R026</Reference>
+            </Attribute>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cbc:AccountingCost</Term>
+            <Name>Accounting string</Name>
+            <Description>The credit note may contain a reference to the buyer's accounting code applied to the credit note as a whole, expressed
+                as text rather than a code in order to facilitate automation in booking into accounts following an order to credit note transformation.</Description>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:InvoicePeriod</Term>
+            <Name>Invoice period</Name>
+            <Description>The period which the credit note covers.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:StartDate</Term>
+                <Name>Start date</Name>
+                <Description>The date on which the period starts. The start dates counts as part of the period.
+                    For credit notes that charge for services or items delivered over a time period is necessary to be able
+                    to state the start date of the period for which the credit note relates such as for metered services and subscriptions.</Description>
+                <Reference type="RULE">BII2-T14-R023</Reference>
+                <Reference type="RULE">NOGOV-T14-R011</Reference>
+                <Value type="EXAMPLE">2013-06-01</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:EndDate</Term>
+                <Name>End date</Name>
+                <Description>The date on which the period ends. The end date counts as part of the period.
+                    It must be possible to state the end date of the period for which the credit note relates such as for metered services and subscriptions.</Description>
+                <Reference type="RULE">BII2-T14-R024</Reference>
+                <Reference type="RULE">BII2-T14-R031</Reference>
+                <Reference type="RULE">NOGOV-T14-R011</Reference>
+                <Value type="EXAMPLE">2013-06-30</Value>
+            </Element>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cac:OrderReference</Term>
+            <Name>Order reference</Name>
+            <Description>An assosiation to an order reference</Description>
+            
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Order reference</Name>
+                <Description>Reference to an order (issued by the buyer) that the credit note relates to.</Description>
+                <Value type="EXAMPLE">Order1234</Value>
+            </Element>
+        </Element>
+        
+        <Element cardinality="0..n">
+            <Term>cac:BillingReference</Term>
+            <Name>Billing reference</Name>
+            <Description>A reference to the invoice/credit note which is the basis for this creditnote.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:InvoiceDocumentReference</Term>
+                <Name>Invoice document reference</Name>
+                <Description>Invoice identifier</Description>
+                
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Document identifier</Name>
+                    <Description>The identifier of the reference document.</Description>
+                    <Reference type="RULE">NONAT-T14-R021</Reference>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:IssueDate</Term>
+                    <Name>Issue date</Name>
+                    <Description>The date when the reference billing document was issued.</Description>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:CreditNoteDocumentReference</Term>
+                <Name>Credit note document reference</Name>
+                <Description>Reference to previous credit note.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Document identifier</Name>
+                    <Description>The identifier of the reference document.</Description>
+                    <Reference type="RULE">NONAT-T14-R021</Reference>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:IssueDate</Term>
+                    <Name>Issue date</Name>
+                    <Description>The date when the reference billing document was issued.</Description>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:ContractDocumentReference</Term>
+            <Name>Contract document reference</Name>
+            <Description>Reference to contract or framework agreement.</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Identifier</Name>
+                <Description>Positive identification of the reference such as a unique identifier.
+                    To positively identify relevant contractual issues the credit note may contain an identifier of  a contract that applies to the credit note.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentTypeCode</Term>
+                <Name>Contract type</Name>
+                <Description>A credit note may contain the type of contract that is referred to (such as framework agreement) in a coded way to enable automated
+                    processing based on the contract type.</Description>
+                <Reference type="RULE">OP-T14-R001</Reference>
+
+                <Attribute>
+                    <Term>listID</Term>
+                    <Description>Must be 'UNCL1001'</Description>
+                    <Reference type="RULE">EUGEN-T14-R033</Reference>
+                    <Value type="EXAMPLE">UNCL1001</Value>
+                </Attribute>
+                <Value type="EXAMPLE">5</Value>
+            </Element>
+        </Element>
 
     </Document>
 
