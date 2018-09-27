@@ -23,7 +23,7 @@
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
             <Reference type="RULE">BII2-T58-R002</Reference>
-            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns058:ver2.0:#urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</Value>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns058:ver2.0:extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0</Value>
         </Element>
 
         <Element cardinality="0..1">
