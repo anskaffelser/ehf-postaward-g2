@@ -107,7 +107,7 @@
                 <Reference type="RULE">EUGEN-T14-R026</Reference>
             </Attribute>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cbc:AccountingCost</Term>
             <Name>Accounting string</Name>
@@ -142,12 +142,12 @@
                 <Value type="EXAMPLE">2013-06-30</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:OrderReference</Term>
             <Name>Order reference</Name>
             <Description>An assosiation to an order reference</Description>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Order reference</Name>
@@ -155,7 +155,7 @@
                 <Value type="EXAMPLE">Order1234</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..n">
             <Term>cac:BillingReference</Term>
             <Name>Billing reference</Name>
@@ -165,14 +165,14 @@
                 <Term>cac:InvoiceDocumentReference</Term>
                 <Name>Invoice document reference</Name>
                 <Description>Invoice identifier</Description>
-                
+
                 <Element>
                     <Term>cbc:ID</Term>
                     <Name>Document identifier</Name>
                     <Description>The identifier of the reference document.</Description>
                     <Reference type="RULE">NONAT-T14-R021</Reference>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:IssueDate</Term>
                     <Name>Issue date</Name>
@@ -227,7 +227,7 @@
                 </Attribute>
                 <Value type="EXAMPLE">5</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:DocumentType</Term>
                 <Name>Document type</Name>
@@ -264,7 +264,7 @@
                     <Description>	The attached document embeded as binary object.
                         A credit note may contain an attached electronic document as an encoded object in the credit note in order
                         to provide supporting documents such as timesheets, usages reports etc. The seller can only expect the receiver to process attachments according to rule.</Description>
-                    
+
                     <Attribute>
                         <Term>mimeCode</Term>
                         <Description>Type of attachment.</Description>
@@ -274,7 +274,7 @@
                         <Value type="EXAMPLE">application/pdf</Value>
                     </Attribute>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:ExternalReference</Term>
                     <Name>External reference</Name>
@@ -419,7 +419,7 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyTaxScheme</Term>
                     <Name>Party tax scheme</Name>
@@ -435,11 +435,11 @@
                         <Reference type="RULE">NOGOV-T14-R003</Reference>
                         <Value type="EXAMPLE">987654321MVA</Value>
                     </Element>
-                    
+
                     <Element>
                         <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
-                        
+
                         <Element>
                             <Term>cbc:ID</Term>
                             <Name>Identifier</Name>
@@ -456,7 +456,7 @@
                     <Description>Association to Party Legal Entity</Description>
                     <Reference type="RULE">EUGEN-T14-R039</Reference>
                     <Reference type="RULE">NONAT-T14-R001</Reference>
-                    
+
                     <Element>
                         <Term>cbc:RegistrationName</Term>
                         <Name>Registration name</Name>
@@ -485,11 +485,11 @@
                         </Attribute>
                         <Value type="EXAMPLE">987654321</Value>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:RegistrationAddress</Term>
                         <Description>The legal address of the supplier.</Description>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cbc:CityName</Term>
                             <Description>The name of the city where the seller is legally registered.</Description>
@@ -516,7 +516,7 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
 
                 <Element cardinality="0..1">
                     <Term>cac:Contact</Term>
@@ -813,12 +813,1410 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:PayeeParty</Term>
             <Name>Payee Party</Name>
             <Description>An association to the Payee.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyIdentification</Term>
+                <Name>Party identification</Name>
+                <Description>Identification of the Payee.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Payee identifier</Name>
+                    <Description>Used in absence of or in addition to the payee party name. Use and identifier known to the document recipient.</Description>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of the issuing agency of the party identification.</Description>
+                        <Reference type="RULE">OP-T14-R003</Reference>
+                        <Reference type="RULE">EUGEN-T14-R024</Reference>
+                        <Value type="EXAMPLE">ZZZ</Value>
+                    </Attribute>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyName</Term>
+                <Name>Party name</Name>
+                <Description>The name of the payee.</Description>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Name</Name>
+                    <Description>The name of the payee party.</Description>
+                    <Reference type="RULE">NONAT-T14-R009</Reference>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyLegalEntity</Term>
+                <Name>Party legal entity</Name>
+                <Description>Association to Party Legal Entity.</Description>
+
+                <Element>
+                    <Term>cbc:CompanyID</Term>
+                    <Name>Company ID</Name>
+                    <Description>An credit note may contain the identifier assigned to the payee by the national company registrar.
+                        The organisation number.</Description>
+                    <Reference type="RULE">NOGOV-T14-R014</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of the issuing agency of the company ID.</Description>
+                        <Reference type="RULE">OP-T14-R008</Reference>
+                        <Reference type="RULE">NONAT-T14-R014</Reference>
+                        <Value type="EXAMPLE">NO:ORGNR</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">987654321</Value>
+                </Element>
+            </Element>
         </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:TaxRepresentativeParty</Term>
+            <Name>Tax representative party</Name>
+            <Description>Information regarding the tax representative of the supplier.</Description>
+
+            <Element>
+                <Term>cac:PartyName</Term>
+                <Name>Party name</Name>
+                <Description>The name of the tax representative.</Description>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Name</Name>
+                    <Description>The name of the tax representative party.</Description>
+                </Element>
+            </Element>
+
+            <Element>
+                <Term>cac:PartyTaxScheme</Term>
+                <Name>Party tax scheme</Name>
+                <Description>Tax scheme for the representative.</Description>
+
+                <Element>
+                    <Term>cbc:CompanyID</Term>
+                    <Name>VAT registration ID</Name>
+                    <Description>The tax representative party's VAT registration ID.
+                        Organization number plus the letters MVA.</Description>
+                    <Reference type="RULE">NOGOV-T14-R013</Reference>
+                    <Reference type="RULE">NOGOV-T14-R017</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>The attribute must be "NO:VAT".</Description>
+                        <Reference type="RULE">OP-T14-R008</Reference>
+                        <Value type="EXAMPLE">NO:VAT</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">981234567MVA</Value>
+                </Element>
+
+                <Element>
+                    <Term>cac:TaxScheme</Term>
+                    <Name>Tax scheme</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>Code for TaxScheme. VAT is the only legal value.</Description>
+                        <Reference type="RULE">NONAT-T14-R010</Reference>
+                        <Reference type="RULE">NONAT-T14-R013</Reference>
+                        <Value type="EXAMPLE">VAT</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:Delivery</Term>
+            <Name>Delivery</Name>
+            <Description>Delivery details</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ActualDeliveryDate</Term>
+                <Name>Delivery date</Name>
+                <Description>The actual delivery date for the invoice goods/services</Description>
+                <Value type="EXAMPLE">2013-06-15</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:DeliveryLocation</Term>
+                <Name>Delivery location</Name>
+                <Description>Specification of where the goods or services were delivered.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ID</Term>
+                    <Name>Delivery identifier</Name>
+                    <Description>A unique identifier (eg a GLN number) of where the goods is delivered.</Description>
+                    <Reference type="RULE">NONAT-T14-R007</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of the issuing agency of the location identifier</Description>
+                        <Reference type="RULE">EUGEN-T14-R034</Reference>
+                        <Value type="EXAMPLE">GSRN</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">707057500022939815</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Address</Term>
+                    <Name>Address</Name>
+                    <Description>Delivery address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">CL-T14-R004</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute  must be 'ISO3166-1:Alpha2'</Description>
+                                <Reference type="RULE">EUGEN-T14-R027</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:PaymentMeans</Term>
+            <Name>Payment means</Name>
+            <Description>Details regarding how payments will be made</Description>
+
+            <Element>
+                <Term>cbc:PaymentMeansCode</Term>
+                <Name>Payment means code</Name>
+                <Description>An invoice may contain an indication about how the payment should be handled. Code according to UN/CEFACT codelist 4461.</Description>
+                <Reference type="RULE">OP-T14-R041</Reference>
+                <Reference type="RULE">CL-T14-R006</Reference>
+
+                <Attribute>
+                    <Term>listID</Term>
+                </Attribute>
+                <Value type="EXAMPLE">CEFACT codelist 4461 is used - ListID = UN/ECE 4461. 31=debit transfer.</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PaymentDueDate</Term>
+                <Name>Due date</Name>
+                <Description>Latest date on which funds should have reached the account receivable.</Description>
+                <Value type="EXAMPLE">2013-07-20</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PaymentChannelCode</Term>
+                <Name>Payment channel code</Name>
+                <Description>Code for paymentchannel, IBAN, BBAN.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PaymentID</Term>
+                <Name>Payment ID</Name>
+                <Description>In Norway: KID number (customer identification number).</Description>
+                <Value type="EXAMPLE">1234561</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PayeeFinancialAccount</Term>
+                <Name>Payee financial account</Name>
+                <Description>Information regarding the payee's financial account.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Financial account ID</Name>
+                    <Description>The identifier for the account. Depending on circumstances the identifier can be in local format or standardized format such as IBAN.</Description>
+                    <Reference type="RULE">NOGOV-T14-R016</Reference>
+                    <Reference type="RULE">NOGOV-T14-R015</Reference>
+                    <Reference type="RULE">OP-T14-R039</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of type of account.</Description>
+                        <Reference type="RULE">EUGEN-T14-R031</Reference>
+                        <Reference type="RULE">NONAT-T14-R022</Reference>
+                        <Value type="EXAMPLE">BBAN</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">00050011111</Value>
+                </Element>
+
+                <Element>
+                    <Term>cac:FinancialInstitutionBranch</Term>
+                    <Name>Financial institution branch</Name>
+                    <Description>The branch or department of the financial institution.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>ID</Name>
+                        <Description>The identifier for a branch or division of an organization may, in some countries, be used to positively identify
+                            the location of he account or supplement the financial institution identifier.</Description>
+                        <Value type="EXAMPLE">BIC (Swift code)</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:FinancialInstitution</Term>
+                        <Name>Financial institution</Name>
+                        <Description>The identifier of the financial institution (BIC).</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ID</Term>
+                            <Name>Institution ID</Name>
+                            <Description>An identifier for the financial institution where the account is located, such as the BIC identifier (SWIFT code).</Description>
+                            <Reference type="RULE">EUGEN-T14-R004</Reference>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Description>Must be 'BIC' if account identifier is IBAN.</Description>
+                                <Value type="EXAMPLE">BIC/Value</Value>
+                            </Attribute>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Name</Term>
+                            <Name>Name</Name>
+                            <Description>Name of the finance institution.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Address</Term>
+                            <Name>Address</Name>
+                            <Description>The address of the financial institution</Description>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:StreetName</Term>
+                                <Name>Address line 1</Name>
+                                <Description>The main address line in a postal address usually the street name and number.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:AdditionalStreetName</Term>
+                                <Name>Address line 2</Name>
+                                <Description>An additional address line in a postal address that can be used to give further details
+                                    supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:CityName</Term>
+                                <Name>City</Name>
+                                <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:PostalZone</Term>
+                                <Name>Post Code</Name>
+                                <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:CountrySubentity</Term>
+                                <Name>Country subdivision</Name>
+                                <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cac:Country</Term>
+                                <Name>Country</Name>
+
+                                <Element cardinality="0..1">
+                                    <Term>cbc:IdentificationCode</Term>
+                                    <Name>Country code</Name>
+                                    <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                                    <Reference type="RULE">CL-T14-R004</Reference>
+
+                                    <Attribute>
+                                        <Term>listID</Term>
+                                    </Attribute>
+                                </Element>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:PaymentTerms</Term>
+            <Name>Payment terms</Name>
+            <Description>Description of payment terms.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Note</Term>
+                <Name>Note</Name>
+                <Description>Payment terms text.</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:TaxExchangeRate</Term>
+            <Name>Tax exchange rate</Name>
+            <Description>Exchange rate for calculation of tax in home currency, mandatory if DocumentCurrencyCode is not = NOK.</Description>
+            <Reference type="RULE">EUGEN-T14-R044</Reference>
+
+            <Element>
+                <Term>cbc:SourceCurrencyCode</Term>
+                <Name>Source currency code</Name>
+                <Description>The currency code for the from currency.</Description>
+                <Reference type="RULE">OP-T14-R010</Reference>
+
+                <Attribute>
+                    <Term>listID</Term>
+                    <Description>Identification of the codelist.</Description>
+                    <Reference type="RULE">EUGEN-T14-R026</Reference>
+                    <Value type="EXAMPLE">iso4217</Value>
+                </Attribute>
+                <Value type="EXAMPLE">EUR</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:TargetCurrencyCode</Term>
+                <Name>Target currency</Name>
+                <Description>The currency code for the to currency.</Description>
+                <Reference type="RULE">OP-T14-R011</Reference>
+
+                <Attribute>
+                    <Term>listID</Term>
+                    <Description>Identification of the codelist.</Description>
+                    <Reference type="RULE">EUGEN-T14-R026</Reference>
+                    <Value type="EXAMPLE">iso4217</Value>
+                </Attribute>
+                <Value type="EXAMPLE">NOK</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:CalculationRate</Term>
+                <Name>Exchange rate</Name>
+                <Description>The exchange rate.</Description>
+                <Reference type="RULE">EUGEN-T14-R045</Reference>
+                <Value type="EXAMPLE">7.65</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:MathematicOperatorCode</Term>
+                <Name>Mathematic operator code</Name>
+                <Description>Mathematic operator code to use to calculate tax amount. Fixed: Multiply.</Description>
+                <Reference type="RULE">EUGEN-T14-R045</Reference>
+                <Value type="EXAMPLE">Multiply</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Date</Term>
+                <Name>Date</Name>
+                <Description>The date for the calculation rate.</Description>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AllowanceCharge</Term>
+            <Name>Allowance Charge</Name>
+            <Description>Description of allowances and charges on document level.</Description>
+
+            <Element>
+                <Term>cbc:ChargeIndicator</Term>
+                <Name>Allowance/Charge indicator</Name>
+                <Description>True = Charge, False =  Allowance.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:AllowanceChargeReasonCode</Term>
+                <Name>Reason code</Name>
+                <Description>A coded specification of what the allowance or charge is.
+                    A credit note may contain a coded description of what is being added or deducted. E.g. „volume discount" or "packing charges", for each allowance or charge.
+                    Use codelist AllowanceChargeReasonCode, UN/ECE 4465, Version D08B.</Description>
+                <Reference type="RULE">CL-T14-R010</Reference>
+
+                <Attribute>
+                    <Term>listID</Term>
+                    <Description>Must be 'UNCL4465'</Description>
+                    <Reference type="RULE">EUGEN-T14-R029</Reference>
+                    <Value type="EXAMPLE">UNCL4465</Value>
+                </Attribute>
+                <Value type="EXAMPLE">3</Value>
+            </Element>
+
+
+            <Element cardinality="0..1">
+                <Term>cbc:AllowanceChargeReason</Term>
+                <Name>Reason</Name>
+                <Description>A textual reason for the allowance or the charge. Can also be its name.
+                    One textual description of what is being added or deducted. E.g. „volume discount" or "packing charges" must be stated for each allowance and charge on document level in a credit note.</Description>
+                <Reference type="RULE">NONAT-T14-R008</Reference>
+                <Value type="EXAMPLE">Freight charge</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:Amount</Term>
+                <Name>Amount</Name>
+                <Description>	The net amount of the allowance or the charge.
+                    For each allowance or charge a credit note must contain the amount. Allowances are subtracted from the total credit note
+                    amount and charges are added to the amount. The amount is “net” without VAT.</Description>
+                <Reference type="RULE">EUGEN-T14-R022</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+            </Element>
+
+            <Element>
+                <Term>cac:TaxCategory</Term>
+                <Name>Tax category</Name>
+                <Description>Specification of tax categories.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>VAT category</Name>
+                    <Description>A code that identifies to what VAT subcategory the allowance or charge belongs to.
+                        A credit note may contain information about one VAT category for each allowances and Charges on document level.</Description>
+                    <Reference type="RULE">BII2-T14-R043</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Must be 'UNCL5305'.</Description>
+                        <Reference type="RULE">EUGEN-T14-R032</Reference>
+                        <Value type="EXAMPLE">UNCL5305</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">S</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Percent</Term>
+                    <Name>Percent</Name>
+                    <Description>The VAT percentage rate that applies to the allowance/charge.</Description>
+                    <Reference type="RULE">EUGEN-T14-R008</Reference>
+                    <Reference type="RULE">EUGEN-T14-R012</Reference>
+                    <Reference type="RULE">BII2-T14-R030</Reference>
+                    <Value type="EXAMPLE">25</Value>
+                </Element>
+
+                <Element>
+                    <Term>cac:TaxScheme</Term>
+                    <Name>Tax scheme</Name>
+                    <Description>An association to tax scheme (VAT).</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>Code for TaxScheme. VAT is the only legal value.</Description>
+                        <Value type="EXAMPLE">VAT</Value>
+                    </Element>
+                </Element>
+            </Element>
+
+        </Element>
+
+        <Element>
+            <Term>cac:TaxTotal</Term>
+            <Name>Tax total</Name>
+            <Description>Specification of tax total and tax per tax category.</Description>
+
+            <Element>
+                <Term>cbc:TaxAmount</Term>
+                <Name>Total VAT amount</Name>
+                <Description>The total VAT amount that is "added to the document total w/o VAT". This is the sum of all VAT subcategory amounts.
+                    A credit note may contain the total VAT amount. This amount is the sum of each sub total for each VAT rate.</Description>
+                <Reference type="RULE">BII2-T14-R015</Reference>
+                <Reference type="RULE">EUGEN-T14-R043</Reference>
+                <Reference type="RULE">NONAT-T14-R018</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+                <Value type="EXAMPLE">3450.00</Value>
+            </Element>
+
+            <Element cardinality="1..n">
+                <Term>cac:TaxSubtotal</Term>
+                <Name>Tax subtotal</Name>
+                <Description>Specification of tax subtotals.</Description>
+                <Value type="EXAMPLE">NOGOV-T14-R018</Value>
+
+                <Element>
+                    <Term>cbc:TaxableAmount</Term>
+                    <Name>Taxable amount</Name>
+                    <Description>The amount that is the base for the VAT rate applied in the subcategory.
+                        For each VAT category a credit note must contain the amount to which VAT percent (rate) is applied to calculate the VAT sub total amount for that category.</Description>
+                    <Reference type="RULE">BII2-T14-R058</Reference>
+                    <Reference type="RULE">BII2-T14-R027</Reference>
+                    <Reference type="RULE">NOGOV-T14-R012</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217.</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+
+                    <Value type="EXAMPLE">2400.25</Value>
+                </Element>
+
+                <Element>
+                    <Term>cbc:TaxAmount</Term>
+                    <Name>Tax amount</Name>
+                    <Description>The calculated amount of the tax derived by multiplying the taxable amount with the tax percentage.
+                        For each VAT category a credit note must contain the amount of VAT for that category.</Description>
+                    <Reference type="RULE">BII2-T14-R028</Reference>
+                    <Reference type="RULE">EUGEN-T14-R042</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217.</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">850.00</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:TransactionCurrencyTaxAmount</Term>
+                    <Name>VAT amount in local currency</Name>
+                    <Description>A credit note may, in cases when credit note are issued in currencies other than the national currency for VAT reporting,
+                        contain the VAT amount in the local currency.</Description>
+                    <Reference type="RULE">EUGEN-T14-R046</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217.</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+                </Element>
+
+                <Element>
+                    <Term>cac:TaxCategory</Term>
+                    <Name>Tax category</Name>
+                    <Description>Identification of tax category.</Description>
+                    <Reference type="RULE">BII2-T14-R026</Reference>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>A code that uniquelly identifies each subtotal within the transaction.
+                            Each VAT category a credit note must be identified with a code.</Description>
+                        <Reference type="RULE">BII2-T14-R029</Reference>
+                        <Reference type="RULE">NONAT-T14-R017</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be 'UNCL5305'.</Description>
+                            <Reference type="RULE">EUGEN-T14-R032</Reference>
+                            <Value type="EXAMPLE">UNCL5305</Value>
+                        </Attribute>
+                        <Value type="EXAMPLE">S</Value>
+                    </Element>
+
+
+                    <Element>
+                        <Term>cbc:Percent</Term>
+                        <Name>Percent</Name>
+                        <Description>	The tax rate that is to be applied to the taxable amount in order to derive the tax amount.
+                            For each VAT category a credit note must contain the  VAT percentage for each sub total taxable amount so
+                            that it can be used to calculate the VAT amount. Where VAT category code is stated then VAT category percentage must also be stated.</Description>
+                        <Reference type="RULE">BII2-T14-R030</Reference>
+                        <Reference type="RULE">EUGEN-T14-R008</Reference>
+                        <Value type="EXAMPLE">25</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:TaxExemptionReason</Term>
+                        <Description>A textual description of the reason why the items belongin to the subtotal are exempted for VAT.
+                            A credit note may contain, as text, the reasons for why a value amount in a category is exempted from VAT. credit note
+                            only support one category with an exemption reason pr. credit note.
+                            Mandatory if VAT category = E.</Description>
+                        <Reference type="RULE">BII2-T14-R045</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+                        <Description>An association to tax scheme (VAT).</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>Code for TaxScheme. VAT is the only legal value.</Description>
+                            <Reference type="RULE">NONAT-T14-R010</Reference>
+                            <Reference type="RULE">NONAT-T14-R013</Reference>
+                            <Value type="EXAMPLE">VAT</Value>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+
+        <Element>
+            <Term>cac:LegalMonetaryTotal</Term>
+            <Name>Legal monetary total</Name>
+            <Description>Specifications of monetary totals.</Description>
+
+            <Element>
+                <Term>cbc:LineExtensionAmount</Term>
+                <Name>Line extension amount</Name>
+                <Description>Sum of line amounts in the document.
+                    A credit note must contain the sum of all line amounts. The amount must be exclusive of VAT but inclusive
+                    of allowances or charges applied to the lines as well as taxes, other than VAT.</Description>
+                <Reference type="RULE">BII2-T14-R010</Reference>
+                <Reference type="RULE">BII2-T14-R051</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+                <Value type="EXAMPLE">400.00</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:TaxExclusiveAmount</Term>
+                <Name>Tax exclusive amount</Name>
+                <Description>The "Sum of line amounts" plus "sum of allowances on document level" plus "sum of charges on document level".
+                    A credit note must contain the total amount of the credit note, including document level allowances and charges but exclusive of VAT.
+                </Description>
+                <Reference type="RULE">BII2-T14-R011</Reference>
+                <Reference type="RULE">BII2-T14-R052</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+                <Value type="EXAMPLE">400.00</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:TaxInclusiveAmount</Term>
+                <Name>Tax inclusive amount</Name>
+                <Description>The total value including VAT
+                    A credit note must contain the total amount of the credit note inclusive VAT. I.e. the total value of the purchase irrespective of payment status.
+                </Description>
+                <Reference type="RULE">BII2-T14-R012</Reference>
+                <Reference type="RULE">BII2-T14-R053</Reference>
+                <Reference type="RULE">NONAT-T10-R020</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+                <Value type="EXAMPLE">5162.00</Value>
+            </Element>
+
+
+            <Element cardinality="0..1">
+                <Term>cbc:AllowanceTotalAmount</Term>
+                <Name>Allowance total amount</Name>
+                <Description>Sum of all allowances on header level in the document. Allowances on line level are included in the line amount and summed up into the "sum of line amounts"
+                    A credit note may contain the total amount of all allowances given on document level. Line allowances are included in the net line amount.
+                </Description>
+                <Reference type="RULE">BII2-T14-R054</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                    <Value type="EXAMPLE">NOK</Value>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ChargeTotalAmount</Term>
+                <Name>Charge total amount</Name>
+                <Description>Sum of all charge on header level in the document. Charges on line level are included in the line amount and summed up into the "sum of line amounts"
+                    A credit note may contain the total amount of all charges given on document level. Line charges are included in the net line amount.
+                </Description>
+                <Reference type="RULE">BII2-T14-R055</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PrepaidAmount</Term>
+                <Name>Prepaid amount</Name>
+                <Description>	Any amounts that have been paid a-priory.
+                    A credit note may contain the sum of all prepaid amounts that must be deducted from the payment of this credit note.
+                    For fully paid credit note (cash or card) this amount equals the credit note total.
+                </Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PayableRoundingAmount</Term>
+                <Name>Payable rounding amount</Name>
+                <Description>Any rounding of the "Document total including VAT"
+                    A credit note may contain the rounding amount (positive or negative) added to the credit note to produce a rounded credit note total.
+                </Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                </Attribute>
+            </Element>
+
+            <Element>
+                <Term>cbc:PayableAmount</Term>
+                <Name>Payable amount</Name>
+                <Description>The amount that is expected to be paid based on the document. This amount is the "Document total including VAT" less the "paid amounts" that have been paid apriori.
+                    A credit note must contain the total amount to be paid that is due. If the credit note is fully paid i.e. cash or card, the due amount for the credit note is zero.
+                </Description>
+                <Reference type="RULE">BII2-T14-R013</Reference>
+                <Reference type="RULE">NONAT-T14-R019</Reference>
+                <Reference type="RULE">BII2-T14-R056</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                </Attribute>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:CreditNoteLine</Term>
+            <Name>Credit note line</Name>
+            <Description>An association to one or more creditnote lines.</Description>
+            <Reference type="RULE">BII2-T14-R014</Reference>
+            
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Line identifier</Name>
+                <Description>Each line in a credit note must contain an identifier that is unique within the document to make it possible
+                    to reference the line. For example, from other documents like credit notes and in disputes.</Description>
+                <Reference type="RULE">BII2-T14-R017</Reference>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Note</Term>
+                <Name>Note</Name>
+                <Description>Each line in a credit notee may contain a free-form text. This element may contain notes or any other similar information
+                    that is not contained explicitly in another structure. Clauses or declarations that refer to a particular line should be entered in full as notes.</Description>
+            </Element>
+
+            <Element>
+                <Term>cbc:CreditedQuantity</Term>
+                <Name>Credited quantity</Name>
+                <Description>Each line in a credit note must contain the credited quantity. The quantity may be negative in cases when the credit
+                    note is used to reverse an invoice line that was negative.</Description>
+                <Reference type="RULE">BII2-T14-R018</Reference>
+
+                <Attribute>
+                    <Term>unitCode</Term>
+                    <Name>Unit</Name>
+                    <Description>Each line in a credit note must contain the unit of measure that applies to the credited quantity.
+                        Unit of Measure.  Code based on UN/ECE rec 20 , - versjon 6e 2009.</Description>
+                    <Reference type="RULE">OP-T14-R006</Reference>
+                    <Reference type="RULE">EUGEN-T14-R030</Reference>
+                    <Reference type="RULE">BII2-T14-R019</Reference>
+                    <Value type="EXAMPLE">NAR</Value>
+                </Attribute>
+                
+                <Attribute>
+                    <Term>unitCodeListID</Term>
+                    <Description>Must be 'UNECERec20'.</Description>
+                    <Reference type="RULE">EUGEN-T14-R030</Reference>
+                    <Value type="EXAMPLE">UNECERec20</Value>
+                </Attribute>
+                <Value type="EXAMPLE">4</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:LineExtensionAmount</Term>
+                <Name>Line amount</Name>
+                <Description>Each line in a credit note must contain the total amount of the line. The amount is “net” without VAT, i.e.
+                    inclusive of line level allowances and charges as well as relevant taxes, except VAT which must be excluded from the amount.</Description>
+                <Reference type="RULE">BII2-T14-R020</Reference>
+                <Reference type="RULE">NONAT-T14-R024</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>MUST be coded using ISO code list 4217.</Description>
+                    <Reference type="RULE">CL-T14-R003</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">250.67</Value>
+            </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cbc:AccountingCost</Term>
+                <Name>Accounting cost</Name>
+                <Description>The credit note may contain a reference to the buyer's accounting code applicable to the specific line, expressed
+                    as text rather than a code in order to facilitate automation in booking into accounts following an order to credit note transformation.</Description>
+            </Element>
+            
+            <Element>
+                <Term>cac:InvoicePeriod</Term>
+                <Name>Invoice period</Name>
+                <Description>The period the creditnote line cover.</Description>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:StartDate</Term>
+                    <Name>Start date</Name>
+                    <Description>The date on which the period starts. The start dates counts as part of the period.</Description>
+                    <Reference type="RULE">NOGOV-T14-R011</Reference>
+                    <Value type="EXAMPLE">2013-01-06</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndDate</Term>
+                    <Name>End date</Name>
+                    <Description>The date on which the period ends. The end date counts as part of the period.</Description>
+                    <Reference type="RULE">NOGOV-T14-R011</Reference>
+                    <Value type="EXAMPLE">2013-06-30</Value>
+                </Element>
+            </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cac:OrderLineReference</Term>
+                <Name>Order line reference</Name>
+                <Description>Refers to a single order line.</Description>
+
+                <Element>
+                    <Term>cbc:LineID</Term>
+                    <Name>Order line reference</Name>
+                    <Description>	Each line in a credit note may contain a reference to the relevant order line in the order that is identified on the document level in the credit note.
+                        If the creditnote contains several orders, the order reference is given at the line level only.  The order reference at line level must refer to both the order and the actual orderline.
+                        The syntax for specifying this should be agreed between the parties.  Recommendation: Ordernumber##Order line number</Description>
+                    <Value type="EXAMPLE">12</Value>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:BillingReference</Term>
+                <Name>Billing reference</Name>
+                <Description>Reference to the invoice/creditnote.</Description>
+                
+                <Element cardinality="0..1">
+                    <Term>cac:InvoiceDocumentReference</Term>
+                    <Name>Invoice document reference</Name>
+                    <Description>Reference to the invoice which is the basis for this invoice line.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Invoice document reference</Name>
+                        <Description>The identifier of the referenced invoice document.</Description>
+                    </Element>
+                </Element>
+
+
+                <Element cardinality="0..1">
+                    <Term>cac:CreditNoteDocumentReference</Term>
+                    <Name>Credit note document reference</Name>
+                    <Description>Reference to the credit note which this credit note is based upon.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Credit note document reference</Name>
+                        <Description>The identifier of the referenced credit note document.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:BillingReferenceLine</Term>
+                    <Name>Billing reference line</Name>
+                    <Description>Reference to the invoice line.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Invoice line reference</Name>
+                        <Description>Each line in credit note may contain a reference to the relevant invoice line in the original invoice that is being credited.</Description>
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Delivery</Term>
+                <Name>Delivery</Name>
+                <Description>Delivery details.</Description>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:ActualDeliveryDate</Term>
+                    <Name>Delivery date</Name>
+                    <Description>The actual delivery date for the invoice goods/services.</Description>
+                    <Value type="EXAMPLE">2013-06-15</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:DeliveryLocation</Term>
+                    <Name>Delivery location</Name>
+                    <Description>Information regarding the delivery location.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Delivery identifier</Name>
+                        <Description>A unique identifier (eg a GLN number) of where the goods is delivered.</Description>
+                        <Reference type="RULE">NONAT-T14-R007</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Identification of the issuing agency of the location identifier.</Description>
+                            <Reference type="RULE">EUGEN-T14-R034</Reference>
+                            <Value type="EXAMPLE">GSRN</Value>
+                        </Attribute>
+                        <Value type="EXAMPLE">707057500022939815</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Address</Term>
+                        <Name>Address</Name>
+                        <Description>Delivery address</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:StreetName</Term>
+                            <Name>Address line 1</Name>
+                            <Description>The main address line in a postal address usually the street name and number. A credit note must contain the seller’s street name and number or P.O.box.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:AdditionalStreetName</Term>
+                            <Name>Address line 2</Name>
+                            <Description>An additional address line in a postal address that can be used to give further details
+                                supplementing the main line. Common use are secondary house number in a complex or in a building. A credit note may contain an additional address line for seller address.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Name>City</Name>
+                            <Description>The common name of the city where the postal address is. The name is written in full rather than as a code. A credit note must contain the seller’s city.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:PostalZone</Term>
+                            <Name>Post Code</Name>
+                            <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.
+                                A credit note may contain the seller’s post code.</Description>
+
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CountrySubentity</Term>
+                            <Name>Country subdivision</Name>
+                            <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                                of country sub divisions are commonly used. A credit note may contain that information.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+
+                            <Element>
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country code</Name>
+                                <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.
+                                    The seller’s address country must be contained in a credit note in the form of a two letter code (ISO 3166-1 alpha-2).</Description>
+                                <Reference type="RULE">CL-T14-R004</Reference>
+
+
+                                <Attribute>
+                                    <Term>listID</Term>
+                                    <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                    <Reference type="RULE">EUGEN-T14-R027</Reference>
+                                    <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                                </Attribute>
+                                <Value type="EXAMPLE">NO</Value>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+
+            <Element cardinality="0..1">
+                <Term>cac:TaxTotal</Term>
+                <Name>Tax amount</Name>
+
+                <Element>
+                    <Term>cbc:TaxAmount</Term>
+                    <Name>Amount</Name>
+                    <Description>The VAT amount for the credit note line. Calculated as a multiple of line amount and line VAT rate. The VAT amount
+                        on line should only be used informatively (i.e. not used as part validating the credit note calculation of amounts) when required by national legislation.</Description>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217.</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+                </Element>
+            </Element>
+            
+            <Element cardinality="0..n">
+                <Term>cac:AllowanceCharge</Term>
+                <Name>Allowance charge</Name>
+                <Description>Allowances and charges related to line level.</Description>
+
+                <Element>
+                    <Term>cbc:ChargeIndicator</Term>
+                    <Name>Allowance/Charge indicator.</Name>
+                    <Description>True = Charge, False =  Allowance</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:AllowanceChargeReason</Term>
+                    <Name>Reason</Name>
+                    <Description>A textual reason for the allowance or the charge. Can also be its name.</Description>
+                    <Reference type="RULE">NONAT-T14-R008</Reference>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Amount</Term>
+                    <Name>Amount</Name>
+                    <Description>The net amount of the allowance or the charge excluding VAT..</Description>
+                    <Reference type="RULE">EUGEN-T14-R022</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">CL-T14-R003</Value>
+                    </Attribute>
+                </Element>
+            </Element>
+
+            <Element>
+                <Term>cac:Item</Term>
+                <Name>Item</Name>
+                <Description>Information regarding the goods or services.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Description</Term>
+                    <Name>Item description</Name>
+                    <Description>Description of the goods/services.</Description>
+                </Element>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Name</Name>
+                    <Description>A short name for an item.
+                        Each line in a credit note must contain the name of the credited item.</Description>
+                    <Reference type="RULE">BII2-T14-R021</Reference>
+                    <Reference type="RULE">NONAT-T14-R012</Reference>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:SellerItemIdentification</Term>
+                    <Name>Seller item identification</Name>
+                    <Description>The seller item number.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Sellers identifier</Name>
+                        <Description>The sellers identifier for the item.
+                            Each line in a credit note may contain the seller’s identifier for an item.</Description>
+                        <Reference type="RULE">NOGOV-T14-R002</Reference>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:StandardItemIdentification</Term>
+                    <Name>Standard item identification</Name>
+                    <Description>Identifies the product/service according to a standard system.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>A item identifier based on a registered schema.
+                            Each line in a credit note may contain a registered item identifier.</Description>
+                        <Reference type="RULE">BII2-T14-R021</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be provided if the element is used.</Description>
+                            <Reference type="RULE">BII2-T14-R032</Reference>
+                            <Value type="EXAMPLE">GTIN</Value>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:OriginCountry</Term>
+                    <Name>Origin country</Name>
+                    <Description>Country code for the origin country of the goods.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:IdentificationCode</Term>
+                        <Name>Country code</Name>
+                        <Description>Each line in a credit note may contain the items country of origin. When relevant this allows
+                            the buyer to identify whether further customs procedures are required.</Description>
+                        <Reference type="RULE">CL-T14-R004</Reference>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:CommodityClassification</Term>
+                    <Name>Commodity classification</Name>
+                    <Description>Specification of commodity classification</Description>
+
+                    <Element>
+                        <Term>cbc:ItemClassificationCode</Term>
+                        <Name>Classification code</Name>
+                        <Description>The items CPV code.</Description>
+                        <Reference type="RULE">NOGOV-T14-R019</Reference>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                            <Description>Must be present if the element is used</Description>
+                            <Reference type="RULE">BII2-T14-R033</Reference>
+                            <Value type="EXAMPLE">UNSPSC</Value>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:ClassifiedTaxCategory</Term>
+                    <Name>Classified tax category</Name>
+                    <Description>Specifies the tax category for the goods/services.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Identifier</Name>
+                        <Description>Each line in a credit note may contain the VAT category/rate used for this credit note line. The category code
+                            acts as a key for summing up line amounts pr. VAT category as well for relating the VAT category percentage given on document
+                            level, to the line.  If the credit note is a VAT credit note each line must contain a category code.</Description>
+                        <Reference type="RULE">BII2-T14-R046</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Value type="EXAMPLE">UNCL5305</Value>
+                        </Attribute>
+                        <Value type="EXAMPLE">E</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Percent</Term>
+                        <Name>Percentage</Name>
+                        <Description>The VAT percentage rate that applies to the credit note line as whole.</Description>
+                        <Reference type="RULE">EUGEN-T14-R008</Reference>
+                        <Reference type="RULE">BII2-T14-R030</Reference>
+                        <Value type="EXAMPLE">25</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+                        <Description>Tax scheme specification.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>Code for TaxScheme. VAT is the only legal value.</Description>
+                            <Reference type="RULE">NONAT-T14-R010</Reference>
+                            <Reference type="RULE">NONAT-T14-R013</Reference>
+                            <Value type="EXAMPLE">VAT</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:AdditionalItemProperty</Term>
+                    <Name>Additional item property</Name>
+                    <Description>Specify additional item properties</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Property name</Name>
+                        <Description>The name of the property. The name must be sufficiently descriptive to define the value. The definition
+                            may be supplemented with the property unit of measure when relevant. E.g. Size, Color, Year.</Description>
+                        <Value type="EXAMPLE">Weight, color</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:Value</Term>
+                        <Name>Property value</Name>
+                        <Description>The value of the item property. E.g. XXL, Blue, 2007.</Description>
+                        <Value type="EXAMPLE">12.5, blue</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:ManufacturerParty</Term>
+                    <Name>Manufacturer</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyName</Term>
+                        <Name>Party name</Name>
+                        <Description>Name of manufacturer</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Name</Name>
+                            <Description>Name of manufacturer.</Description>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyLegalEntity</Term>
+                        <Name>Party legal entity</Name>
+                        <Description>The manufacturer's legal entity.</Description>
+
+                        <Element>
+                            <Term>cbc:CompanyID</Term>
+                            <Name>Company ID</Name>
+                            <Description>The legal company ID of the manufacturer.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Description>Identification of the issuing agency of the company ID.</Description>
+                                <Reference type="RULE">OP-T14-R008</Reference>
+                                <Reference type="RULE">NONAT-T14-R014</Reference>
+                                <Value type="EXAMPLE">NO:ORGNR</Value>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element>
+                <Term>cac:Price</Term>
+                <Name>Price</Name>
+                <Description>Price information.</Description>
+
+                <Element>
+                    <Term>cbc:PriceAmount</Term>
+                    <Name>Price</Name>
+                    <Description>Each line in a credit note may contain the net price of the item including all allowances or charges
+                        that directly relates to price (e.g. discount), and taxes but excluding VAT.
+                        The net price of an item including discounts or surcharges that apply to the price.</Description>
+                    <Reference type="RULE">BII2-T14-R034</Reference>
+                    <Reference type="RULE">NONAT-T14-R011</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>MUST be coded using ISO code list 4217.</Description>
+                        <Reference type="RULE">CL-T14-R003</Reference>
+                        <Value type="EXAMPLE">NOK</Value>
+                    </Attribute>
+                    <Value type="EXAMPLE">123.45</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:BaseQuantity</Term>
+                    <Name>Base quantity</Name>
+                    <Description>The number of credit note quantity units for which the price is stated. E.g. credited quantity is
+                        1000 LTR, price is €15 pr. 10 LTR. Price base quantity must be given in the same unit of measure as the credited quantity.</Description>
+                    <Value type="EXAMPLE">10</Value>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:AllowanceCharge</Term>
+                    <Name>Allowance Charge</Name>
+                    <Description>Allowance and charge related to price</Description>
+
+                    <Element>
+                        <Term>cbc:ChargeIndicator</Term>
+                        <Name>Allowance/Charge indicator</Name>
+                        <Description>True = Charge, False =  Allowance.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AllowanceChargeReason</Term>
+                        <Name>Reason</Name>
+                        <Description>Description of the allowance/charge.</Description>
+                        <Reference type="RULE">NONAT-T14-R008</Reference>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cbc:MultiplierFactorNumeric</Term>
+                        <Name>Multiplier</Name>
+                        <Description>Allowance or charge percentage.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:Amount</Term>
+                        <Name>Amount</Name>
+                        <Description>The total discount subtracted from the gross price to reach the net price.
+                            Each line in a credit note may contain the amount of the price discount. The price discount amount is informative.</Description>
+                        <Reference type="RULE">EUGEN-T14-R022</Reference>
+                        
+                        <Attribute>
+                            <Term>currencyID</Term>
+                            <Description>MUST be coded using ISO code list 4217.</Description>
+                            <Reference type="RULE">CL-T14-R003</Reference>
+                            <Value type="EXAMPLE">NOK</Value>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BaseAmount</Term>
+                        <Name>List price</Name>
+                        <Description>The gross price of the item before subtracting discounts. E.g. list price.
+                            Each line in a credit note may contain the gross price, e.g. List price for the item.</Description>
+
+                        <Attribute>
+                            <Term>currencyID</Term>
+                        </Attribute>
+                    </Element>
+
+                </Element>
+            </Element>
+        </Element>
+
 
     </Document>
 
