@@ -1396,7 +1396,6 @@
                         <Reference type="RULE">CL-T14-R003</Reference>
                         <Value type="EXAMPLE">NOK</Value>
                     </Attribute>
-
                     <Value type="EXAMPLE">2400.25</Value>
                 </Element>
 
@@ -2216,7 +2215,6 @@
                 </Element>
             </Element>
         </Element>
-
 
     </Document>
 
