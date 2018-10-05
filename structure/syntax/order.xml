@@ -665,6 +665,303 @@
             </Element>
         </Element>
 
+        <Element cardinality="0..1">
+            <Term>cac:OriginatorCustomerParty</Term>
+            <Name>Originator customer party</Name>
+            <Description>Information about Originator</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Originator</Name>
+                <Description>Originator information</Description>
+                <Reference type="RULE">NOGOV-T01-R019</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Originator identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Originating party identifier</Name>
+                        <Description>The originator party identifier</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">12345</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about party name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Originating party name</Name>
+                        <Description>The originator party name.</Description>
+                        <Value type="EXAMPLE">Helseavdeling</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact person name</Name>
+                        <Description>The name of the contact person.</Description>
+                        <Value type="EXAMPLE">Per Persen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                        <Value type="EXAMPLE">67915500</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax number</Name>
+                        <Description>A fax number for the contact persons.</Description>
+                        <Value type="EXAMPLE">67915501</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                        <Value type="EXAMPLE">post@helseforetak.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingCustomerParty</Term>
+            <Name>Customer</Name>
+            <Description>Customer party.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+                <Description>Party information.</Description>
+                <Reference type="RULE">NOGOV-T01-R020</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>EndPointID</Name>
+                    <Description>An order may contain the buyers electronic address. The address can be of any format and the format should be identified in the message.</Description>
+                    <Reference type="RULE">NOGOV-T01-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR.</Description>
+                        <Reference type="RULE">EUGEN-T01-R011</Reference>
+                        <Reference type="RULE">OP-T10-R004</Reference>
+                        <Reference type="RULE">NOGOV-T01-R008</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">998876543</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Information about PartyID.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Invoice party identification</Name>
+                        <Description>An identification for the invoice party.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">548787</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about Party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Invoice party name</Name>
+                        <Description>The name of the party who should be invoiced for the ordered items.</Description>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Description>Address information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                            of country sub divisions are commonly used.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T01-R006</Reference>
+                            <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyTaxScheme</Term>
+                    <Name>Tax scheme</Name>
+                    <Description>Information regarding tax.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Company ID</Name>
+                        <Description>Identifies a company as registered with the company registration scheme.</Description>
+                        <Reference type="RULE">NOGOV-T01-R011</Reference>
+                        <Reference type="RULE">NOGOV-T01-R016</Reference>
+                        <Value type="EXAMPLE">123456789MVA</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>=VAT</Description>
+                            <Reference type="RULE">NOGOV-T01-R017</Reference>
+                            <Value type="EXAMPLE">VAT</Value>
+                        </Element>
+                    </Element>
+
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Legal entity</Name>
+                    <Description>Information regarding legal entity.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Legal registration name</Name>
+                        <Description>The official name of the party as registered with the relevant fiscal authority.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Legal registration identifier</Name>
+                        <Description>Identifies a company as registered with the company registration scheme.</Description>
+                        <Reference type="RULE">NOGOV-T01-R010</Reference>
+                        <Value type="EXAMPLE">123456789</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Name>Registration address</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Name>City</Name>
+                            <Description>Associates with the registered address of the party within a Corporate Registration Scheme. The name of a city, town, or village.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country code</Name>
+                                <Description>Invoice legal registration address country ID.</Description>
+                                <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                                <Attribute>
+                                    <Term>listID</Term>
+                                    <Description>ISO3166-1:Alpha2</Description>
+                                    <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                </Attribute>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Contact ID</Name>
+                        <Description>Invoice contact identification.</Description>
+                        <Reference type="RULE">NOGOV-T01-R001</Reference>
+                    </Element>
+
+                </Element>
+            </Element>
+        </Element>
+        
+        <Element>
+            <Term>cac:Delivery</Term>
+            <
+        </Element>
+
 
     </Document>
 
