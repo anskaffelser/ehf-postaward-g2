@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-    <Term>DespatchAdvice</Term>
-    <Name>Post-Award Despatch advice</Name>
+    <Term>Invoice</Term>
+    <Name>Post-Award Invoice</Name>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>

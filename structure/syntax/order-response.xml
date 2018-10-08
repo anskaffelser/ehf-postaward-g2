@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>OrderResponse</Term>
+    <Name>Post-Award Order Response</Name>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+
+        <Term>ubl:OrderResponse</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Reference type="RULE">NOGOV-T01-R012</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
+            <Reference type="RULE">BII2-T01-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns001:ver2.0: extended:urn:www.peppol.eu:bis:peppol28a:ver1.0: extended:urn:www.difi.no:ehf:ordre:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
+            <Reference type="RULE">BII2-T01-R002</Reference>
+            <Reference type="RULE">EHFPROFILE-T01-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Order identifier</Name>
+            <Description>A transaction instance must have an identifier. The identifier enables referencing the transaction  for various purposes such as from other transactions that are part of the same process.</Description>
+            <Reference type="RULE">BII2-T01-R006</Reference>
+            <Value type="EXAMPLE">01</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Order issue Date</Name>
+            <Description>The date on which the transaction instance was issued.
+                Format YYYY-MM-DD</Description>
+            <Reference type="RULE">BII2-T01-R004</Reference>
+            <Reference type="RULE">NOGOV-T01-R007</Reference>
+            <Value type="EXAMPLE">2013-11-25</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Order issue time</Name>
+            <Description>The time assigned by the buyer on which the order was issued.</Description>
+            <Value type="EXAMPLE">12:00:00</Value>
+        </Element>
+
+    </Document>
+
+</Syntax>
