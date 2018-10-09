@@ -16,7 +16,7 @@
             <Term>cbc:UBLVersionID</Term>
             <Name>UBL VersionID</Name>
             <Description>Identifies the UBL version on which the transaction instance is based.</Description>
-            <Reference type="RULE">NOGOV-T01-R012</Reference>
+            <Reference type="RULE">NOGOV-T76-R007</Reference>
             <Value type="FIXED">2.1</Value>
         </Element>
 
@@ -24,43 +24,665 @@
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
             <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
-            <Reference type="RULE">BII2-T01-R001</Reference>
-            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns001:ver2.0: extended:urn:www.peppol.eu:bis:peppol28a:ver1.0: extended:urn:www.difi.no:ehf:ordre:ver1.0</Value>
+            <Reference type="RULE">BII2-T76-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns076:ver2.0:extended:urn:www.peppol.eu:bis:peppol28a:ver1.0:extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0</Value>
         </Element>
 
         <Element>
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
             <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
-            <Reference type="RULE">BII2-T01-R002</Reference>
-            <Reference type="RULE">EHFPROFILE-T01-R001</Reference>
-            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0</Value>
+            <Reference type="RULE">BII2-T76-R002</Reference>
+            <Reference type="RULE">EHFPROFILE-T76-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0/Value>
         </Element>
 
         <Element>
             <Term>cbc:ID</Term>
-            <Name>Order identifier</Name>
+            <Name>Order response identifier</Name>
             <Description>A transaction instance must have an identifier. The identifier enables referencing the transaction  for various purposes such as from other transactions that are part of the same process.</Description>
-            <Reference type="RULE">BII2-T01-R006</Reference>
-            <Value type="EXAMPLE">01</Value>
+            <Reference type="RULE">BII2-T76-R006</Reference>
+            <Value type="EXAMPLE">12</Value>
         </Element>
 
         <Element>
             <Term>cbc:IssueDate</Term>
-            <Name>Order issue Date</Name>
+            <Name>Order response issue date</Name>
             <Description>The date on which the transaction instance was issued.
                 Format YYYY-MM-DD</Description>
-            <Reference type="RULE">BII2-T01-R004</Reference>
-            <Reference type="RULE">NOGOV-T01-R007</Reference>
-            <Value type="EXAMPLE">2013-11-25</Value>
+            <Reference type="RULE">BII2-T76-R004</Reference>
+            <Reference type="RULE">NOGOV-T76-R001</Reference>
+            <Value type="EXAMPLE">2012-10-01</Value>
         </Element>
 
         <Element cardinality="0..1">
             <Term>cbc:IssueTime</Term>
-            <Name>Order issue time</Name>
+            <Name>Order response issue time</Name>
             <Description>The time assigned by the buyer on which the order was issued.</Description>
             <Value type="EXAMPLE">12:00:00</Value>
         </Element>
+
+        <Element>
+            <Term>cbc:OrderResponseCode</Term>
+            <Name>Response code</Name>
+            <Description>A code that indicates whether the referenced order as whole is Accepted or Rejected or, alternatively, Accepted with change.
+                If response code is Accept or Reject there may not be any response lines.
+                Valid codes are: 29 (Accepted), 27 (Rejected) and 30 (Accepted with change).</Description>
+            <Reference type="RULE">BII2-T76-R033</Reference>
+            <Reference type="RULE">OP-T76-R001</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>Codelist for OrderResponseCode. UNCL1225.</Description>
+                <Reference type="RULE">EUGEN-T76-R003</Reference>
+            </Attribute>
+            <Value type="EXAMPLE">30</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:Note</Term>
+            <Name>Response clarification</Name>
+            <Description>Clarification of the suppliers decision.</Description>
+            <Value type="EXAMPLE">Endring på 2 linjer.</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:DocumentCurrencyCode</Term>
+            <Name>Document currency</Name>
+            <Description>The default currency for the offer.</Description>
+            <Reference type="RULE">OP-T76-R003</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>Codelist for currency code. ISO4217</Description>
+            </Attribute>
+            <Value type="EXAMPLE">NOK</Value>
+        </Element>
+
+        <Element>
+            <Term>cac:OrderReference</Term>
+            <Name>Order reference</Name>
+            <Description>Order reference information.</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Order document reference</Name>
+                <Description>Used to reference the order that is being responded to.</Description>
+                <Reference type="RULE">BII2-T76-R032</Reference>
+                <Value type="EXAMPLE">24</Value>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:SellerSupplierParty</Term>
+            <Name>Seller</Name>
+            <Description>Information about Seller.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Seller party endpoint identifier</Name>
+                    <Description>Identifies the end point of the routing service, e.g., EAN Location Number, GLN.</Description>
+                    <Reference type="RULE">NOGOV-T76-R003</Reference>
+                    <Reference type="RULE">NOGOV-T76-R006</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Name>Code for issuer</Name>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR.</Description>
+                        <Reference type="RULE">EUGEN-T76-R001</Reference>
+                        <Reference type="RULE">NOGOV-T76-R002</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">938752655</Value>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+                    <Description>Information about partyID.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Seller party identification</Name>
+                        <Description>Identifies a party.</Description>
+                        <Reference type="RULE">BII2-T76-R022</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Name>Code for issuer</Name>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">EUGEN-T76-R002</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">7080000374200</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Seller party name</Name>
+                        <Description>The name of the party.</Description>
+                        <Reference type="RULE">BII2-T76-R022</Reference>
+                        <Value type="EXAMPLE">Medical</Value>
+                    </Element>
+                </Element>
+
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information for seller.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact person name</Name>
+                        <Description>The name of the contact person.</Description>
+                        <Value type="EXAMPLE">Nils Nilsen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone name</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                        <Value type="EXAMPLE">22150510</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax name</Name>
+                        <Description>	A fax number for the contact persons.</Description>
+                        <Value type="EXAMPLE">22150511</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                        <Value type="EXAMPLE">nils.nilsen@medical.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:BuyerCustomerParty</Term>
+            <Name>Buyer</Name>
+            <Description>Information about Buyer.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Buyer party endpoint identifier</Name>
+                    <Description>Identifies the end point of the routing service.</Description>
+                    <Reference type="RULE">NOGOV-T76-R003</Reference>
+                    <Reference type="RULE">NOGOV-T76-R005</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Name>Code for issuer</Name>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR.</Description>
+                        <Reference type="RULE">EUGEN-T76-R001</Reference>
+                        <Reference type="RULE">NOGOV-T76-R002</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">931186755</Value>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+                    <Description>Information about partyID.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Buyer party identification</Name>
+                        <Description>An identification for the buyer party..</Description>
+                        <Reference type="RULE">BII2-T76-R021</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Name>Code for issuer</Name>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">EUGEN-T76-R002</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">7080000985134</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Buyer party name</Name>
+                        <Description>The name of the party who ordered the items and receives the response.</Description>
+                        <Reference type="RULE">BII2-T76-R021</Reference>
+                        <Value type="EXAMPLE">Helseforetak A</Value>
+                    </Element>
+                </Element>
+
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information for seller.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Contact ID</Name>
+                        <Description>Contact identifier for buyer contact person.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+
+        <Element cardinality="0..1">
+            <Term>cac:Delivery</Term>
+            <Name>Deliver</Name>
+            <Description>Delivery information.</Description>
+            
+            <Element>
+                <Term>cac:PromisedDeliveryPeriod</Term>
+                <Name>Promised delivery period</Name>
+                <Description>Information about Promised Delivery period.</Description>
+                <Reference type="RULE">NOGOV-T76-R004</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:StartDate</Term>
+                    <Name>Period start date</Name>
+                    <Description>The date on which the period starts. The start dates counts as part of the period.
+                        format YYYY-MM-DD.</Description>
+                    <Reference type="RULE">NOGOV-T76-R001</Reference>
+                    <Value type="EXAMPLE">2013-04-01</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndDate</Term>
+                    <Name>Period end date</Name>
+                    <Description>The date on which the period ends. The end date counts as part of the period.
+                        format YYYY-MM-DD.</Description>
+                    <Reference type="RULE">NOGOV-T76-R001</Reference>
+                    <Value type="EXAMPLE">2013-04-05</Value>
+                </Element>
+            </Element>
+        </Element>
+
+
+        <Element cardinality="0..n">
+            <Term>cac:OrderLine</Term>
+            <Name>Order line</Name>
+            <Description>Order lines are only sent if Action code on header level is Accepted with change.</Description>
+
+            <Element>
+                <Term>cac:LineItem</Term>
+                <Name>Line item</Name>
+                <Description>Line item information.</Description>
+                
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Document line identifier</Name>
+                    <Description>Identifies the response line.</Description>
+                    <Reference type="RULE">BII2-T76-R003</Reference>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Note</Term>
+                    <Name>Response clarification</Name>
+                    <Description>Clarification of the suppliers decision for the line.</Description>
+                    <Value type="EXAMPLE">Utsolgt 2 artikler.</Value>
+                </Element>
+
+                <Element>
+                    <Term>cbc:LineStatusCode</Term>
+                    <Name>Response code</Name>
+                    <Description>A code that indicates whether the referenced order line as whole is Accepted or Rejected or, alternatively, Accepted with change.
+                        Valid codes are: 29 (Accepted), 27(Rejected),  30(Accepted with change).</Description>
+                    <Reference type="RULE">OP-T76-R002</Reference>
+                    
+                    <Attribute>
+                        <Term>listID</Term>
+                        <Name>Codelist for LineStatusCode</Name>
+                        <Description>UNCL1225</Description>
+                        <Reference type="RULE">EUGEN-T76-R004</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">29</Value>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:Quantity</Term>
+                    <Name>Quantity</Name>
+                    <Description>The quantity of items that will be delivered.</Description>
+                    
+                    <Attribute>
+                        <Term>unitCode</Term>
+                        <Name>unit code</Name>
+                        <Description>Must be a valid value in codelist UN/ECE Rec 20.</Description>
+                        <Reference type="RULE">OP-T76-R006</Reference>
+                    </Attribute>
+
+                    <Attribute>
+                        <Term>unitCodeListID</Term>
+                        <Name>Unitcode, codelist</Name>
+                        <Description>UNECERec20</Description>
+                    </Attribute>
+                    <Value type="EXAMPLE">20</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Delivery</Term>
+                    <Name>Delivery</Name>
+                    <Description>Delivery information.</Description>
+
+                    <Element>
+                        <Term>cac:PromisedDeliveryPeriod</Term>
+                        <Name>Promised delivery period</Name>
+                        <Description>Information about Promised Delivery period.</Description>
+                        <Reference type="RULE">NOGOV-T76-R004</Reference>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:StartDate</Term>
+                            <Name>Period start date</Name>
+                            <Description>The date on which the period starts. The start dates counts as part of the period.
+                                format YYYY-MM-DD.</Description>
+                            <Reference type="RULE">NOGOV-T76-R001</Reference>
+                            <Value type="EXAMPLE">2012-10-20</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:EndDate</Term>
+                            <Name>Period end date</Name>
+                            <Description>The date on which the period ends. The end date counts as part of the period.
+                                format YYYY-MM-DD.</Description>
+                            <Reference type="RULE">NOGOV-T76-R001</Reference>
+                            <Value type="EXAMPLE">2012-11-01</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Price</Term>
+                    <Name>Price</Name>
+                    <Description>Price information.</Description>
+
+                    <Element>
+                        <Term>cbc:PriceAmount</Term>
+                        <Name>Item price</Name>
+                        <Description>The net price of an item including discounts or surcharges that apply to the price.
+                            Although price is an optional element in an offer it recommended as best practice to either state the price
+                            or provide reference to an appropriate source from which the price can be identified such as a contract, catalogue or a quote.
+                            The price amount. The net price of the item including all allowances, charges and taxes but excluding VAT.</Description>
+                        
+                        <Attribute>
+                            <Term>currencyID</Term>
+                            <Name>Currency code</Name>
+                            <Description>Must be according to ISO4217.</Description>
+                        </Attribute>
+                        <Value type="EXAMPLE">10</Value>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cbc:BaseQuantity</Term>
+                        <Name>Item price base quantity</Name>
+                        <Description>The actual quantity to which the price applies.</Description>
+
+                        <Attribute>
+                            <Term>unitCode</Term>
+                            <Name>Unit code</Name>
+                            <Description>Must be a valid unit code according to UN/ECE Rec 20.</Description>
+                        </Attribute>
+                        <Attribute>
+                            <Term>unitCodeListID</Term>
+                            <Name>Unit code, codelist</Name>
+                            <Description>UNECERec20</Description>
+                        </Attribute>
+                        <Value type="EXAMPLE">1</Value>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:Item</Term>
+                    <Name>Item</Name>
+                    <Description>Item information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Item name</Name>
+                        <Description>A short name optionally given to an item, such as a name from a Catalogue, as distinct from a description. A short name for the item.</Description>
+                        <Value type="EXAMPLE">Wet tissues for children.</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:SellerItemIdentification</Term>
+                        <Name>Seller item identification</Name>
+                        <Description>Information about Sellers ItemID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item sellers identifier</Name>
+                            <Description>Associates the item with its identification according to the seller's system. The sellers ID for the item</Description>
+                            <Value type="EXAMPLE">SItemNo011</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:StandardItemIdentification</Term>
+                        <Name>Standard item identification</Name>
+                        <Description>Information about Standard ItemID</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item standard identifier</Name>
+                            <Description>Associates the item with its identification according to a standard system. Standarized ID for the item.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Name>Code for issuer</Name>
+                                <Description>Example: GTIN</Description>
+                                <Value type="EXAMPLE">GTIN</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">7330869106661</Value>
+                        </Element>
+                    </Element>
+                </Element>
+                
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:SellerSubstitutedLineItem</Term>
+                <Name>Substituted line item</Name>
+                <Description>Information about Substituted Line item.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Substituted Line Item ID</Name>
+                    <Description>Identifier for Seller Substituted Line Item.</Description>
+                    <Value type="EXAMPLE">1</Value>
+                </Element>
+
+                <Element>
+                    <Term>cac:Item</Term>
+                    <Name>Item</Name>
+                    <Description>Item information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Item name</Name>
+                        <Description>A short name optionally given to an item, such as a name from a Catalogue, as distinct from a description. A short name for the item..</Description>
+                        <Value type="EXAMPLE">Wet tissues for adults.</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:SellerItemIdentification</Term>
+                        <Name>Seller item identification</Name>
+                        <Description>Information about Sellers ItemID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item sellers identifier</Name>
+                            <Description>Associates the item with its identification according to the seller's system. The sellers ID for the item.</Description>
+                            <Value type="EXAMPLE">SItemNo012</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:StandardItemIdentification</Term>
+                        <Name>Standard item identification</Name>
+                        <Description>Information about Standard ItemID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item standard identifier</Name>
+                            <Description>Associates the item with its identification according to a standard system. Standarized ID for the item.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Name>schemeID</Name>
+                                <Description>Example:GTIN</Description>
+                                <Value type="EXAMPLE">GTIN</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">7330869106123</Value>
+                        </Element>
+                    </Element>
+
+
+                    <Element cardinality="0..n">
+                        <Term>cac:CommodityClassification</Term>
+                        <Name>Product classification</Name>
+                        <Description>Information about Product Classification.</Description>
+
+                        <Element>
+                            <Term>cbc:ItemClassificationCode</Term>
+                            <Name>Item commodity classification</Name>
+                            <Description>A classification code for classifying the item by its type or nature.</Description>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Name>Classification, codelist</Name>
+                                <Description>Example: UNSPC.</Description>
+                                <Value type="EXAMPLE">UNSPSC</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">675634</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:ClassifiedTaxCategory</Term>
+                        <Name>Vat category</Name>
+                        <Description>Information about Vat category.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item VAT category code</Name>
+                            <Description>The VAT code that indicates what VAT details apply to the item.</Description>
+                            <Reference type="RULE">OP-T76-R008</Reference>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Name>Codelist</Name>
+                                <Description>UNCL5305</Description>
+                                <Value type="EXAMPLE">UNCL5305</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">S</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Percent</Term>
+                            <Name>Item VAT rate</Name>
+                            <Description>The VAT percentage rate that applies item, unless exemption reasons apply.</Description>
+                            <Value type="EXAMPLE">25</Value>
+                        </Element>
+
+                        <Element>
+                            <Term>cac:TaxScheme</Term>
+                            <Name>Tax scheme</Name>
+                            <Description>Information about Tax scheme (VAT)</Description>
+
+                            <Element>
+                                <Term>cbc:ID</Term>
+                                <Name>Tax Scheme</Name>
+                                <Description> =VAT</Description>
+                                <Reference type="RULE">NOGOV-T76-R008</Reference>
+                            </Element>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:AdditionalItemProperty</Term>
+                        <Name>Additional item property</Name>
+                        <Description>Information about Additional Item properties for substitution item.</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Property name</Name>
+                            <Description>The name of the property. The name must be sufficiently descriptive to define the value. The definition
+                                may be supplemented with the property unit of measure when relevant. E.g. Size, Color, Year.</Description>
+                            <Value type="EXAMPLE">Weight, color</Value>
+                        </Element>
+
+                        <Element>
+                            <Term>cbc:Value</Term>
+                            <Name>Property value</Name>
+                            <Description>The value of the item property. E.g. XXL, Blue, 2007.</Description>
+                            <Value type="EXAMPLE">12.5, blue</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ValueQuantity</Term>
+                            <Name>Quantity</Name>
+                            <Description>Quantity for the property.</Description>
+                            <Reference type="RULE">NOGOV-T76-R009</Reference>
+
+                            <Attribute>
+                                <Term>unitCode</Term>
+                                <Name>Unit code</Name>
+                                <Description>Valid code according to code list UN/ECE Rec20.</Description>
+                            </Attribute>
+                            
+                            <Attribute>
+                                <Term>unitCodeListID</Term>
+                                <Name>Codelist ID</Name>
+                                <Description>UNECERec20</Description>
+                            </Attribute>
+                        </Element>
+                        
+                        <Element cardinality="0..1">
+                            <Term>cbc:ValueQualifier</Term>
+                            <Name>Qualification of qty</Name>
+                            <Description>Description pf quantity.</Description>
+                        </Element>
+                    </Element>
+                </Element>
+
+            </Element>
+
+            <Element>
+                <Term>cac:OrderLineReference</Term>
+                <Name>Order line reference</Name>
+                <Description>Information about Order Line reference.</Description>
+
+                <Element>
+                    <Term>cbc:LineID</Term>
+                    <Name>Order line reference</Name>
+                    <Description>Used to reference the initial order line that correspondes to the response.
+                        Each order line may only be referenced once. All order lines should be stated.</Description>
+                    <Reference type="RULE">BII2-T76-R034</Reference>
+                    <Value type="EXAMPLE">1</Value>
+                </Element>
+            </Element>
+        </Element>
+
 
     </Document>
 
