@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="urn:fdc:difi.no:2017:vefa:structure:Project-1">
+
+    <Name>EHF Post-Award (G2)</Name>
+
+    <!-- Syntax -->
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/catalogue-response.xml</Path>
+        <Title>EHF Catalogue Response 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/catalogue.xml</Path>
+        <Title>EHF Catalogue 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/credit-note.xml</Path>
+        <Title>EHF Credit Note 2.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/despatch-advice.xml</Path>
+        <Title>EHF Despatch Advice 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/invoice.xml</Path>
+        <Title>EHF Invoice 2.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/order.xml</Path>
+        <Title>EHF Order 1.0</Title>
+    </Resource>
+    <Resource>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/order-response.xml</Path>
+        <Title>EHF Order Response 1.0</Title>
+    </Resource>
+
+</Project>

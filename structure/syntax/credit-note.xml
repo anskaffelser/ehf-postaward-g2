@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-    <Term>CreditNote</Term>
+    <Term>Credit Note</Term>
     <Name>Post-Award Credit Note</Name>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</Namespace>
@@ -1640,7 +1640,7 @@
             <Name>Credit note line</Name>
             <Description>An association to one or more creditnote lines.</Description>
             <Reference type="RULE">BII2-T14-R014</Reference>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Line identifier</Name>
@@ -1673,7 +1673,7 @@
                     <Reference type="RULE">BII2-T14-R019</Reference>
                     <Value type="EXAMPLE">NAR</Value>
                 </Attribute>
-                
+
                 <Attribute>
                     <Term>unitCodeListID</Term>
                     <Description>Must be 'UNECERec20'.</Description>
@@ -1698,19 +1698,19 @@
                 </Attribute>
                 <Value type="EXAMPLE">250.67</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:AccountingCost</Term>
                 <Name>Accounting cost</Name>
                 <Description>The credit note may contain a reference to the buyer's accounting code applicable to the specific line, expressed
                     as text rather than a code in order to facilitate automation in booking into accounts following an order to credit note transformation.</Description>
             </Element>
-            
+
             <Element>
                 <Term>cac:InvoicePeriod</Term>
                 <Name>Invoice period</Name>
                 <Description>The period the creditnote line cover.</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:StartDate</Term>
                     <Name>Start date</Name>
@@ -1727,7 +1727,7 @@
                     <Value type="EXAMPLE">2013-06-30</Value>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:OrderLineReference</Term>
                 <Name>Order line reference</Name>
@@ -1747,7 +1747,7 @@
                 <Term>cac:BillingReference</Term>
                 <Name>Billing reference</Name>
                 <Description>Reference to the invoice/creditnote.</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:InvoiceDocumentReference</Term>
                     <Name>Invoice document reference</Name>
@@ -1790,7 +1790,7 @@
                 <Term>cac:Delivery</Term>
                 <Name>Delivery</Name>
                 <Description>Delivery details.</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:ActualDeliveryDate</Term>
                     <Name>Delivery date</Name>
@@ -1901,7 +1901,7 @@
                     </Attribute>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:AllowanceCharge</Term>
                 <Name>Allowance charge</Name>
@@ -2180,7 +2180,7 @@
                         <Description>Description of the allowance/charge.</Description>
                         <Reference type="RULE">NONAT-T14-R008</Reference>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:MultiplierFactorNumeric</Term>
                         <Name>Multiplier</Name>
@@ -2193,7 +2193,7 @@
                         <Description>The total discount subtracted from the gross price to reach the net price.
                             Each line in a credit note may contain the amount of the price discount. The price discount amount is informative.</Description>
                         <Reference type="RULE">EUGEN-T14-R022</Reference>
-                        
+
                         <Attribute>
                             <Term>currencyID</Term>
                             <Description>MUST be coded using ISO code list 4217.</Description>

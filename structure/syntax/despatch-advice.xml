@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-    <Term>DespatchAdvice</Term>
+    <Term>Despatch Advice</Term>
     <Name>Post-Award Despatch advice</Name>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2</Namespace>
@@ -67,7 +67,7 @@
             <Name>Despatch note</Name>
             <Description>A textual note for the despatch as whole.</Description>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:OrderReference</Term>
             <Name>Order Reference</Name>
@@ -87,13 +87,13 @@
             <Name>Despatching party</Name>
             <Description>Party who creates the despatch advice on behalf of the seller and is responsible for the physical shipment.</Description>
             <Reference type="RULE">BII2-T16-R006</Reference>
-            
+
             <Element>
                 <Term>cac:Party</Term>
                 <Name>Sender</Name>
                 <Description>Information regarding the sender.</Description>
                 <Reference type="RULE">NOGOV-T16-R003</Reference>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:EndpointID</Term>
                     <Name>Electronic address identifier</Name>
@@ -107,7 +107,7 @@
                     </Attribute>
                     <Value type="EXAMPLE">123456789</Value>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Identification</Name>
@@ -125,12 +125,12 @@
                         </Attribute>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyName</Term>
                     <Name>Name</Name>
                     <Description>Sender name</Description>
-                    
+
                     <Element>
                         <Term>cbc:Name</Term>
                         <Name>Despatching party name</Name>
@@ -157,13 +157,13 @@
                         <Name>Contact telephone number</Name>
                         <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:Telefax</Term>
                         <Name>A fax number for the contact persons.</Name>
                         <Description>A fax number for the contact persons</Description>
                     </Element>
-                    
+
                     <Element>
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Contact email address</Name>
@@ -172,7 +172,7 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element>
             <Term>cac:DeliveryCustomerParty</Term>
             <Name>Receiver</Name>
@@ -192,29 +192,29 @@
                     <Reference type="RULE">OP-T16-R005</Reference>
                     <Reference type="RULE">NOGOV-T16-R009</Reference>
                     <Reference type="RULE">NOGOV-T16-R010</Reference>
-                    
+
                     <Attribute>
                         <Term>schemeID</Term>
                     </Attribute>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyIdentification</Term>
                     <Name>Identification</Name>
                     <Description>Receiver identification</Description>
-                    
+
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Consignee party identifier</Name>
                         <Description>The receiving party identifier.</Description>
                         <Reference type="RULE">BII2-T16-R009</Reference>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                         </Attribute>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyName</Term>
                     <Name>Name</Name>
@@ -227,7 +227,7 @@
                         <Reference type="RULE">BII2-T16-R009</Reference>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PostalAddress</Term>
                     <Name>Address</Name>
@@ -248,7 +248,7 @@
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:StreetName</Term>
                         <Name>Address line 1</Name>
@@ -261,7 +261,7 @@
                         <Description>An additional address line in a postal address that can be used to give further details supplementing the main line.
                             Common use are secondary house number in a complex or in a building.</Description>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
                         <Name>City</Name>
@@ -284,14 +284,14 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
                         <Description>Country code</Description>
-                        
+
                         <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
                             <Reference type="RULE">OP-T16-R001</Reference>
                             <Reference type="RULE">NOGOV-T16-R002</Reference>
-                            
+
                             <Attribute>
                                 <Term>listID</Term>
                             </Attribute>
@@ -299,7 +299,7 @@
                     </Element>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:DeliveryContact</Term>
                 <Name>Contact</Name>
@@ -330,7 +330,7 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:BuyerCustomerParty</Term>
             <Name>Buyer</Name>
@@ -360,12 +360,12 @@
                         <Value type="EXAMPLE">987654321</Value>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:PartyName</Term>
                     <Name>Name</Name>
                     <Description>Buyer name</Description>
-                    
+
                     <Element>
                         <Term>cbc:Name</Term>
                         <Name>Buying party name</Name>
@@ -494,7 +494,7 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:Shipment</Term>
             <Name>Shipment</Name>
@@ -523,7 +523,7 @@
                 <Name>Shipment description</Name>
                 <Description>Free-form text applying to a shipment. This element may contain notes or any other similar information that is not contained explicitly in another structure.</Description>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:GrossWeightMeasure</Term>
                 <Name>Shipment gross weight</Name>
@@ -585,7 +585,7 @@
                     <Term>cac:CarrierParty</Term>
                     <Name>Carrier</Name>
                     <Description>Carrier description</Description>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:PartyName</Term>
                         <Name>Name</Name>
@@ -617,7 +617,7 @@
                             <Name>Driver information</Name>
                             <Description>Identification about the driver of the vehicle that delivers the despatched shipment.</Description>
                         </Element>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cbc:DocumentType</Term>
                             <Name>Driver information document type</Name>
@@ -627,7 +627,7 @@
                     </Element>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:Delivery</Term>
                 <Name>Delivery</Name>
@@ -659,7 +659,7 @@
                         <Description>The start time of the period.</Description>
                         <Value type="EXAMPLE">08:00</Value>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:EndDate</Term>
                         <Name>Period end date</Name>
@@ -714,7 +714,7 @@
                         <Name>Address line 1</Name>
                         <Description>The main address line in a postal address usually the street name and number.</Description>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:AdditionalStreetName</Term>
                         <Name>Address line 2</Name>
@@ -733,7 +733,7 @@
                         <Name>Post code</Name>
                         <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:CountrySubentity</Term>
                         <Name>Country subdivision</Name>
@@ -743,7 +743,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:Country</Term>
                         <Name>Country code</Name>
-                        
+
                         <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
@@ -761,7 +761,7 @@
             </Element>
 
         </Element>
-        
+
         <Element cardinality="1..n">
             <Term>cac:DespatchLine</Term>
             <Name>Despatch line</Name>
@@ -836,7 +836,7 @@
                     <Value type="EXAMPLE">2</Value>
                 </Element>
             </Element>
-            
+
             <Element>
                 <Term>cac:Item</Term>
                 <Name>Item</Name>
@@ -849,7 +849,7 @@
                     <Reference type="RULE">BII2-T16-R016</Reference>
                     <Value type="EXAMPLE">Fotopapir A4 Glossy</Value>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:SellersItemIdentification</Term>
                     <Name>Part number</Name>
@@ -869,18 +869,18 @@
                         <Description>An extended identifier for the item that identifies the item with specific properties, e.g., Item 123 = Chair / Item 123 Ext 45 = brown chair.</Description>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:StandardItemIdentification</Term>
                     <Name>Standard partnumber</Name>
                     <Description>Identification according to a standard system. i.e. GTIN.</Description>
-                    
+
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Item standard identifier</Name>
                         <Description>An item identifier based on a registered schema.</Description>
                         <Reference type="RULE">BII2-T16-R016</Reference>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                             <Reference type="RULE">BII2-T16-R018</Reference>
@@ -892,7 +892,7 @@
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:ExtendedID</Term>
                         <Name>Item standard extended identifier</Name>

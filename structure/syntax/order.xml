@@ -157,7 +157,7 @@
                 <Description>A reference to Originator Document. To be able to give a reference to the internal requesition on the buyer site on which the order is based.</Description>
                 <Value type="EXAMPLE">Dok_789</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:DocumentType</Term>
                 <Name>Originator document description</Name>
@@ -222,7 +222,7 @@
             <Term>cac:Contract</Term>
             <Name>Contract</Name>
             <Description>Information about contact.</Description>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Reference identifier</Name>
@@ -230,7 +230,7 @@
                 <Reference type="RULE">NOGOV-T01-R014</Reference>
                 <Value type="EXAMPLE">2012_10</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:ContractType</Term>
                 <Name>Reference type</Name>
@@ -1077,7 +1077,7 @@
                             <Term>cbc:ID</Term>
                             <Name>Delivery party ID</Name>
                             <Description>An identifier for the party that should deliver the ordered items.</Description>
-                            
+
                             <Attribute>
                                 <Term>schemeID</Term>
                                 <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
@@ -1136,17 +1136,17 @@
 
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:DeliveryTerms</Term>
             <Name>Delivery terms</Name>
             <Description>Information about delivery terms.</Description>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:ID</Term>
                 <Name>Delivery terms</Name>
                 <Description>The ability for the buyer to specify what shipping terms should apply the delivery of the order.</Description>
-                
+
                 <Attribute>
                     <Term>schemeID</Term>
                 </Attribute>
@@ -1245,7 +1245,7 @@
             <Term>cac:AnticipatedMonetaryTotal</Term>
             <Name>Anticipated monetary total</Name>
             <Description>Information about expected totals.</Description>
-            
+
             <Element>
                 <Term>cbc:LineExtensionAmount</Term>
                 <Name>Sum of line amounts</Name>
@@ -1354,7 +1354,7 @@
                 <Value type="EXAMPLE">120</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="1..n">
             <Term>cac:OrderLine</Term>
             <Name>Order line</Name>
@@ -1371,7 +1371,7 @@
             <Element>
                 <Term>cac:LineItem</Term>
                 <Name>Line item</Name>
-                
+
                 <Element>
                     <Term>cbc:ID</Term>
                     <Name>Document line identifier</Name>
@@ -1426,17 +1426,17 @@
                     </Attribute>
                     <Value type="EXAMPLE">20</Value>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:PartialDeliveryIndicator</Term>
                     <Name>Partial Delivery Allowed Indicator</Name>
                     <Description>Indicates if the line items must be delivered in a single shipment. Default that partial delivery is allowed.</Description>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:Delivery</Term>
                     <Name>Delivery information</Name>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:RequestedDeliveryPeriod</Term>
                         <Name>Requested delivery period</Name>
@@ -1466,7 +1466,7 @@
                     <Term>cac:OriginatorParty</Term>
                     <Name>Originator party</Name>
                     <Description>Information about Originator.</Description>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:PartyIdentification</Term>
                         <Name>Party identification</Name>
@@ -1476,7 +1476,7 @@
                             <Term>cbc:ID</Term>
                             <Name>Order line originator party ID</Name>
                             <Description>The party who originated Order.</Description>
-                            
+
                             <Attribute>
                                 <Term>schemeID</Term>
                                 <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
@@ -1497,12 +1497,12 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:Price</Term>
                     <Name>Price</Name>
                     <Description>Price information.</Description>
-                    
+
                     <Element>
                         <Term>cbc:PriceAmount</Term>
                         <Name>Item price</Name>
@@ -1511,7 +1511,7 @@
                             provide reference to an appropriate source from which the price can be identified such as a contract, catalogue or a quote.
                             The price amount. The net price of the item including all allowances, charges and taxes but excluding VAT.</Description>
                         <Reference type="RULE">BII2-T01-R011</Reference>
-                        
+
                         <Attribute>
                             <Term>currencyID</Term>
                             <Description>Must be according to ISO 4217</Description>
@@ -1738,7 +1738,7 @@
                             <Term>unitCode</Term>
                             <Description>Valid code according to code list UN/ECE Rec 20.</Description>
                         </Attribute>
-                        
+
                         <Attribute>
                             <Term>unitCodeListID</Term>
                             <Description>UNECERec20</Description>

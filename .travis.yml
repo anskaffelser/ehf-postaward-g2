@@ -4,9 +4,9 @@ services:
   - docker
 
 env:
+  - PERFORM=build
   - PERFORM=guides
   - PERFORM=rules
-  - PERFORM=rules-core
 
 script:
   - sh tools/travis/$PERFORM.sh

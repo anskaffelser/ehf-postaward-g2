@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
 
-    <Term>CatalogueResponse</Term>
+    <Term>Catalogue Response</Term>
     <Name>Post-Award Catalogue response</Name>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</Namespace>
@@ -52,13 +52,13 @@
             <Reference type="RULE">BII2-T58-R003</Reference>
             <Value type="EXAMPLE">2013-05-10</Value>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cbc:IssueTime</Term>
             <Name>Response issue data</Name>
             <Description>The time at which the transaction instance was issued.</Description>
         </Element>
-        
+
         <Element cardinality="0..n">
             <Term>cbc:Note</Term>
             <Name>Response textual notes</Name>
@@ -178,17 +178,17 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:DocumentResponse</Term>
             <Name>Document response</Name>
             <Description>Information about the reason code</Description>
-            
+
             <Element>
                 <Term>cac:Response</Term>
                 <Name>Response</Name>
                 <Description>Response information</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:ResponseCode</Term>
                     <Name>Coded decision</Name>
@@ -215,7 +215,7 @@
                     <Description>Identifies the document being referred to</Description>
                     <Value type="EXAMPLE">Catalogue-01</Value>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:VersionID</Term>
                     <Name>Document version</Name>
