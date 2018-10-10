@@ -34,7 +34,7 @@
             <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
             <Reference type="RULE">BII2-T76-R002</Reference>
             <Reference type="RULE">EHFPROFILE-T76-R001</Reference>
-            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0/Value>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0</Value>
         </Element>
 
         <Element>
@@ -197,7 +197,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:Telefax</Term>
                         <Name>Contact fax name</Name>
-                        <Description>	A fax number for the contact persons.</Description>
+                        <Description>A fax number for the contact persons.</Description>
                         <Value type="EXAMPLE">22150511</Value>
                     </Element>
 
@@ -612,7 +612,7 @@
                             <Element>
                                 <Term>cbc:ID</Term>
                                 <Name>Tax Scheme</Name>
-                                <Description> =VAT</Description>
+                                <Description>=VAT</Description>
                                 <Reference type="RULE">NOGOV-T76-R008</Reference>
                             </Element>
                         </Element>

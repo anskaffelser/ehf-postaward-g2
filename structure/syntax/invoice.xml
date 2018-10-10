@@ -24,7 +24,7 @@
         <Element>
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
-            <Description>	Identifies the specification of content and rules that apply to the transaction.
+            <Description>Identifies the specification of content and rules that apply to the transaction.
                 Identifying the customization/implementation guide/contextualization of the syntax message and its extension that applies to the invoice transaction,
                 enables the receiver to apply the correct validation to the received document as well as to route the document to an appropriate service for processing.</Description>
             <Reference type="RULE">BII2-T10-R001</Reference>
@@ -34,7 +34,7 @@
         <Element>
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
-            <Description>	Identifies the BII profile or business process context in which the transaction appears.
+            <Description>Identifies the BII profile or business process context in which the transaction appears.
                 Identifying the profile or business process context in which the transaction appears enables the buyer to direct the message to an
                 appropriate service as well as controlling its relation to other documents exchanged as part of the same process.</Description>
             <Reference type="RULE">BII2-T10-R002</Reference>
@@ -54,7 +54,7 @@
         <Element>
             <Term>cbc:IssueDate</Term>
             <Name>Issue Date</Name>
-            <Description>	The issue date of an invoice is required by EU directives as well as country laws. An invoice must therefore contain the date on which it was issued.
+            <Description>The issue date of an invoice is required by EU directives as well as country laws. An invoice must therefore contain the date on which it was issued.
                 Format YYYY-MM-DD.</Description>
             <Reference type="RULE">BII2-T10-R004</Reference>
             <Reference type="RULE">NONAT-T10-R009</Reference>
@@ -593,7 +593,7 @@
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Customer identification</Name>
-                        <Description>	An invoice may contain a registered identifier for the buyer. Information referenced by the identifier is not
+                        <Description>An invoice may contain a registered identifier for the buyer. Information referenced by the identifier is not
                             considered part of the message (i.e. The buyer is not required to look up the identifier in the relevant registry and process additional information).</Description>
                         <Reference type="RULE">BII2-T10-R008</Reference>
                         <Reference type="RULE">NOGOV-T10-R006</Reference>
@@ -699,14 +699,14 @@
                     <Element cardinality="0..1">
                         <Term>cbc:CompanyID</Term>
                         <Name>VAT registration number</Name>
-                        <Description>	An invoice may contain the buyers VAT identifier In order to facilitate reverse charge and intra community supply invoicing.
+                        <Description>An invoice may contain the buyers VAT identifier In order to facilitate reverse charge and intra community supply invoicing.
                             The customers VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA. Mandatory in special cases with sale
                             of emission permits and gold. For further information, please see bokføringsforskriften § 5-1-2, and § 5-1-1.</Description>
                         <Reference type="RULE">NOGOV-T10-R030</Reference>
 
                         <Attribute>
                             <Term>schemeID</Term>
-                            <Description>	The attribute must be «NO:VAT"</Description>
+                            <Description>The attribute must be «NO:VAT"</Description>
                             <Reference type="RULE">OP-T10-R008</Reference>
                             <Value type="EXAMPLE">NO:VAT</Value>
                         </Attribute>
@@ -1038,7 +1038,7 @@
 
                     <Attribute>
                         <Term>schemeID</Term>
-                        <Description>	Identification of the issuing agency of the location identifier.</Description>
+                        <Description>Identification of the issuing agency of the location identifier.</Description>
                         <Reference type="RULE">EUGEN-T10-R034</Reference>
                         <Value type="EXAMPLE">GSRN</Value>
                     </Attribute>
@@ -1311,7 +1311,7 @@
                 <Term>cac:TaxSubtotal</Term>
                 <Name>Tax subtotal</Name>
                 <Description>Specification of tax subtotals.</Description>
-                <Value type="EXAMPLE">NOGOV-T10-R021</Value>
+                <Reference type="RULE">NOGOV-T10-R021</Reference>
 
                 <Element>
                     <Term>cbc:TaxableAmount</Term>

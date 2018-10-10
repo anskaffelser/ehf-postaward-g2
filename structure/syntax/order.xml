@@ -1227,7 +1227,7 @@
             <Element>
                 <Term>cbc:TaxAmount</Term>
                 <Name>VAT total amount</Name>
-                <Description>	The total VAT amount that is "added to the document total w/o VAT". This is the sum of all VAT subcategory amounts.
+                <Description>The total VAT amount that is "added to the document total w/o VAT". This is the sum of all VAT subcategory amounts.
                     An association to the total tax amount of the Order (as calculated by the Buyer). The expected Tax Total in the corresponding invoice.
                     The total tax amount for particular tax scheme e.g. VAT;  the sum of each of the tax subtotals for each tax category within the tax scheme.
                     Sum of line tax amounts. An association to the total tax amount of the Order (as calculated by the Buyer). The expected Tax Total in the corresponding invoice</Description>
@@ -1363,7 +1363,7 @@
             <Element cardinality="0..1">
                 <Term>cbc:Note</Term>
                 <Name>Order line note</Name>
-                <Description>	Free-form text applying to the Order Line. This element may contain notes or any other similar information that is not contained explicitly
+                <Description>Free-form text applying to the Order Line. This element may contain notes or any other similar information that is not contained explicitly
                     in another structure. Is to capture any free form description related to the order line as a whole.</Description>
                 <Value type="EXAMPLE">Freetext note on line level.</Value>
             </Element>

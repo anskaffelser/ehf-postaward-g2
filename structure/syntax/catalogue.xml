@@ -25,7 +25,7 @@
             <Reference type="RULE">BII2-T19-R001</Reference>
             <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns19:ver2.0:#urn:www.difi.no:ehf:katalog:ver0.99</Value>
         </Element>
-        
+
         <Element>
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
@@ -44,7 +44,7 @@
             <Reference type="RULE">BII2-T19-R004</Reference>
             <Value type="EXAMPLE">Cat-02</Value>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cbc:ActionCode</Term>
             <Name>Catalogue action code</Name>
@@ -100,7 +100,7 @@
             <Term>cac:ValidityPeriod</Term>
             <Name>Validity period</Name>
             <Reference type="RULE">NOGOV-T19-R008</Reference>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:StartDate</Term>
                 <Name>Period start date</Name>
@@ -118,18 +118,18 @@
                 <Value type="EXAMPLE">2013-08-01</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:ReferencedContract</Term>
             <Name>Contract</Name>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Reference identifier</Name>
                 <Description>Positive identification of the reference such as a unique identifier.</Description>
                 <Value type="EXAMPLE">Contract-01</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:IssueDate</Term>
                 <Name>Contract IssueDate</Name>
@@ -144,7 +144,7 @@
                 <Value type="EXAMPLE">Framework agreement</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:SourceCatalogueReference</Term>
             <Name>Source catalogue reference</Name>
@@ -157,11 +157,11 @@
                 <Value type="EXAMPLE">Cat-01</Value>
             </Element>
         </Element>
-        
+
         <Element>
             <Term>cac:ProviderParty</Term>
             <Name>Provider party</Name>
-            <Reference type="RULE">	BII-T19-R007</Reference>
+            <Reference type="RULE">BII-T19-R007</Reference>
 
             <Element cardinality="0..1">
                 <Term>cbc:EndpointID</Term>
@@ -206,7 +206,7 @@
                     <Term>cbc:Name</Term>
                     <Name>Party name</Name>
                     <Description>Ise in the absence of or in addition to Party identifier.</Description>
-                    <Reference type="RULE">	BII2-T19-R010</Reference>
+                    <Reference type="RULE">BII2-T19-R010</Reference>
                     <Value type="EXAMPLE">Katalogutsteder AS</Value>
                 </Element>
             </Element>
@@ -257,7 +257,7 @@
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
-                        <Reference type="RULE">	OP-T19-R001</Reference>
+                        <Reference type="RULE">OP-T19-R001</Reference>
                         <Value type="EXAMPLE">NO</Value>
                     </Element>
                 </Element>
@@ -307,7 +307,7 @@
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country in which the provider is legally registered.</Description>
-                            <Reference type="RULE">	OP-T19-R001</Reference>
+                            <Reference type="RULE">OP-T19-R001</Reference>
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
@@ -416,7 +416,7 @@
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
-                        <Reference type="RULE">	OP-T19-R001</Reference>
+                        <Reference type="RULE">OP-T19-R001</Reference>
                         <Value type="EXAMPLE">GB</Value>
                     </Element>
                 </Element>
@@ -475,7 +475,7 @@
 
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:SellerSupplierParty</Term>
             <Name>Supplier</Name>
@@ -578,7 +578,7 @@
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
-                            <Reference type="RULE">	OP-T19-R001</Reference>
+                            <Reference type="RULE">OP-T19-R001</Reference>
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
@@ -605,7 +605,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:Telefax</Term>
                         <Name>Contact fax name</Name>
-                        <Description>	A fax number for the contact persons.</Description>
+                        <Description>A fax number for the contact persons.</Description>
                         <Value type="EXAMPLE">90123457</Value>
                     </Element>
 
@@ -753,7 +753,7 @@
 
                 <Attribute>
                     <Term>listID</Term>
-                    <Reference>EUGEN-T19-R045</Reference>
+                    <Reference type="RULE">EUGEN-T19-R045</Reference>
                 </Attribute>
                 <Value type="EXAMPLE">Update</Value>
             </Element>
@@ -786,12 +786,12 @@
                 <Term>cbc:ContentUnitQuantity</Term>
                 <Name>Item net quantity</Name>
                 <Description>The net quantity of the item that is contained in each consumable unit, excluding any packaging materials.</Description>
-                
+
                 <Attribute>
                     <Term>unitCode</Term>
                     <Reference type="RULE">OP-T19-R002</Reference>
                 </Attribute>
-                
+
                 <Attribute>
                     <Term>unitCodeListID</Term>
                     <Reference type="RULE">EUGEN-T19-R048</Reference>
@@ -861,7 +861,7 @@
             <Element cardinality="0..1">
                 <Term>cbc:PackLevelCode</Term>
                 <Name>Packing level</Name>
-                <Description>	The packing level of the catalogue line.</Description>
+                <Description>The packing level of the catalogue line.</Description>
                 <Reference type="RULE">OP-T19-R008</Reference>
                 <Reference type="RULE">EUGEN-T19-R050</Reference>
 
@@ -889,11 +889,11 @@
                     <Value type="EXAMPLE">2013-08-01</Value>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:ItemComparison</Term>
                 <Name>Item comparison</Name>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:PriceAmount</Term>
                     <Name>Standardized unit price</Name>
@@ -901,7 +901,7 @@
 
                     <Attribute>
                         <Term>currencyID</Term>
-                        <Reference type="RULE">	OP-T19-R011</Reference>
+                        <Reference type="RULE">OP-T19-R011</Reference>
                     </Attribute>
                 </Element>
 
@@ -925,7 +925,7 @@
                     </Attribute>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:ComponentRelatedItem</Term>
                 <Name>Component related item</Name>
@@ -958,7 +958,7 @@
                     <Value type="EXAMPLE">CS</Value>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:AccessoryRelatedItem</Term>
                 <Name>Accessory related item</Name>
@@ -986,7 +986,7 @@
                     </Attribute>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:RequiredRelatedItem</Term>
                 <Name>Required related item</Name>
@@ -1136,7 +1136,7 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:Price</Term>
                     <Name>Price</Name>
@@ -1153,7 +1153,7 @@
                         </Attribute>
                         <Value type="EXAMPLE">200,00</Value>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:BaseQuantity</Term>
                         <Name>Base quantity</Name>
@@ -1170,7 +1170,7 @@
                         </Attribute>
                         <Value type="EXAMPLE">10</Value>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:PriceType</Term>
                         <Name>Price type</Name>
@@ -1181,7 +1181,7 @@
                     <Element cardinality="0..1">
                         <Term>cbc:OrderableUnitFactorRate</Term>
                         <Name>Orderable unit factor rate</Name>
-                        <Description>	The factor used to convert the Base Quantity to an Orderable Unit.  Must be specified if the
+                        <Description>The factor used to convert the Base Quantity to an Orderable Unit.  Must be specified if the
                             Orderable Unit differs from the Base Quantity.  If not present, assumed value is 1.</Description>
                     </Element>
 
@@ -1207,22 +1207,22 @@
                 </Element>
 
             </Element>
-            
+
             <Element>
                 <Term>cac:Item</Term>
                 <Name>Item</Name>
-                
+
                 <Element cardinality="0..n">
                     <Term>cbc:Description</Term>
                     <Name>Item description</Name>
                     <Description>A detailed description of the item. Use one description pr. language</Description>
-                    
+
                     <Attribute>
                         <Term>languageID</Term>
                         <Reference type="RULE">OP-T19-R012</Reference>
                     </Attribute>
-                    <Value type="EXAMPLE">Adhesive Loctite 480 20 g. Black rubber enforced adhesive for gluing of metal 
-                        to metal or metal to rubber. Especially suitable for applications where the joining is put under cleavage 
+                    <Value type="EXAMPLE">Adhesive Loctite 480 20 g. Black rubber enforced adhesive for gluing of metal
+                        to metal or metal to rubber. Especially suitable for applications where the joining is put under cleavage
                         or chock stress. Go to http://www.yoursite.com/pagename.html target=_blank for tips on general usage of this product.</Value>
                 </Element>
 
@@ -1250,12 +1250,12 @@
                     <Description>Specifies the number of consumable units that are in each orderable unit. See guideline on Items and packing units in a catalogue.</Description>
                     <Value type="EXAMPLE">12 stk</Value>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:Name</Term>
                     <Name>Item name</Name>
                     <Description>A short name for an item. Item name should be a unique name that clearly identifies the product.</Description>
-                    <Reference type="RULE">	BII2-T19-R019</Reference>
+                    <Reference type="RULE">BII2-T19-R019</Reference>
 
                     <Attribute>
                         <Term>languageID</Term>
@@ -1263,7 +1263,7 @@
                     </Attribute>
                     <Value type="EXAMPLE">Adhesive Loctite 480 20 g</Value>
                 </Element>
-                
+
                 <Element cardinality="0..n">
                     <Term>cbc:Keyword</Term>
                     <Name>Item key words</Name>
@@ -1338,7 +1338,7 @@
                         <Term>cbc:DocumentTypeCode</Term>
                         <Name>External item specifications type</Name>
                         <Description>Code for document type</Description>
-                        
+
                         <Attribute>
                             <Term>listID</Term>
                         </Attribute>
@@ -1416,14 +1416,14 @@
                             <Term>listID</Term>
                             <Reference type="RULE">BII2-T19-R022</Reference>
                         </Attribute>
-                        
+
                         <Attribute>
                             <Term>name</Term>
                         </Attribute>
                         <Value type="EXAMPLE">43212105</Value>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..n">
                     <Term>cac:TransactionConditions</Term>
                     <Name>Transaction conditions</Name>
@@ -1472,7 +1472,7 @@
                         <Value type="EXAMPLE">1234</Value>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..n">
                     <Term>cac:ClassifiedTaxCategory</Term>
                     <Name>Classified tax category</Name>
@@ -1482,25 +1482,25 @@
                         <Name>Item VAT category code</Name>
                         <Description>The VAT code that indicates what VAT details apply to the item.</Description>
                         <Reference type="RULE">CL-T19-R004</Reference>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                             <Reference type="RULE">EUGEN-T19-R049</Reference>
                         </Attribute>
                         <Value type="EXAMPLE">S</Value>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:Percent</Term>
                         <Name>Item VAT percentage</Name>
                         <Description>The VAT percentage rate that applies to the item unless specific trade reasons apply such as exemptions.</Description>
                         <Value type="EXAMPLE">25</Value>
                     </Element>
-                    
+
                     <Element>
                         <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cbc:ID</Term>
                             <Name>Tax scheme ID</Name>
@@ -1520,7 +1520,7 @@
                         <Name>Property name</Name>
                         <Description>The name of the property. The name must be sufficiently descriptive to define the value. The definition
                             may be supplemented with the property unit of measure when relevant. E.g. Size, Color, Year.</Description>
-                        
+
                         <Attribute>
                             <Term>languageID</Term>
                             <Reference type="RULE">OP-T19-R012</Reference>
@@ -1565,7 +1565,7 @@
                         <Value type="EXAMPLE">Allergen</Value>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:ManufacturerParty</Term>
                     <Name>Manufacturer</Name>
@@ -1582,11 +1582,11 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:ItemInstance</Term>
                     <Name>Item instance</Name>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:BestBeforeDate</Term>
                         <Name>Item best before date</Name>
@@ -1610,12 +1610,12 @@
                 <Element cardinality="0..n">
                     <Term>cac:Certificate</Term>
                     <Name>Certificate</Name>
-                    
+
                     <Element>
                         <Term>cbc:ID</Term>
                         <Name>Label name</Name>
                         <Description>The name of the product label.</Description>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                         </Attribute>
@@ -1664,11 +1664,11 @@
                             </Element>
                         </Element>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:DocumentReference</Term>
                         <Name>Document reference</Name>
-                        
+
                         <Element>
                             <Term>cbc:ID</Term>
                             <Name>Label reference</Name>
@@ -1676,17 +1676,17 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element cardinality="0..n">
                     <Term>cac:Dimension</Term>
                     <Name>Dimension</Name>
-                    
+
                     <Element>
                         <Term>cbc:AttributeID</Term>
                         <Name>Dimension ID</Name>
                         <Description>Possible values: Weight, Height, Length, Width, Minimum Storage Temperature, Maximum Storage Temperature.</Description>
                         <Reference type="RULE">OP-T19-R009</Reference>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                             <Reference type="RULE">EUGEN-T19-R053</Reference>
@@ -1705,11 +1705,11 @@
                             <Term>unitCode</Term>
                         </Attribute>
                     </Element>
-                    
+
                     <Element cardinality="0..n">
                         <Term>cbc:Description</Term>
                         <Name>Description</Name>
-                        
+
                         <Attribute>
                             <Term>languageID</Term>
                         </Attribute>

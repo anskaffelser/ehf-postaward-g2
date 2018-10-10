@@ -1022,7 +1022,7 @@
                         <Term>cbc:ID</Term>
                         <Name>Handling unit identifier</Name>
                         <Description>Identifies the transport handling unit.</Description>
-                        <Reference type="RULE">	OP-T16-R004</Reference>
+                        <Reference type="RULE">OP-T16-R004</Reference>
 
                         <Attribute>
                             <Term>schemeID</Term>

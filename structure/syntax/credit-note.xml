@@ -23,7 +23,7 @@
         <Element>
             <Term>cbc:CustomizationID</Term>
             <Name>Customization identifier</Name>
-            <Description>	Identifies the specification of content and rules that apply to the transaction.
+            <Description>Identifies the specification of content and rules that apply to the transaction.
                 Identifying the customization/implementation guide/contextualization of the syntax message and its extension that applies to the credit note transaction,
                 enables the receiver to apply the correct validation to the received document as well as to route the document to an appropriate service for processing.</Description>
             <Reference type="RULE">BII2-T14-R001</Reference>
@@ -33,7 +33,7 @@
         <Element>
             <Term>cbc:ProfileID</Term>
             <Name>Profile identifier</Name>
-            <Description>	Identifies the BII profile or business process context in which the transaction appears.
+            <Description>Identifies the BII profile or business process context in which the transaction appears.
                 Identifying the profile or business process context in which the transaction appears enables the buyer to direct the message
                 to an appropriate service as well as controlling its relation to other documents exchanged as part of the same process.</Description>
             <Reference type="RULE">BII2-T14-R002</Reference>
@@ -44,7 +44,7 @@
         <Element>
             <Term>cbc:ID</Term>
             <Name>Credit note identifier</Name>
-            <Description>	An credit note instance must contain an identifier. An credit note identifier enables positive referencing
+            <Description>An credit note instance must contain an identifier. An credit note identifier enables positive referencing
                 the document instance for various purposes including referencing between documents that are part of the same process.
             </Description>
             <Reference type="RULE">BII2-T14-R003</Reference>
@@ -261,7 +261,7 @@
                 <Element cardinality="0..1">
                     <Term>cbc:EmbeddedDocumentBinaryObject</Term>
                     <Name>Embedded binary object</Name>
-                    <Description>	The attached document embeded as binary object.
+                    <Description>The attached document embeded as binary object.
                         A credit note may contain an attached electronic document as an encoded object in the credit note in order
                         to provide supporting documents such as timesheets, usages reports etc. The seller can only expect the receiver to process attachments according to rule.</Description>
 
@@ -428,7 +428,7 @@
                     <Element>
                         <Term>CompanyID</Term>
                         <Name>VAT registration number</Name>
-                        <Description>	When the credit note is a VAT credit note it must state the sellers VAT registration number and tax scheme.
+                        <Description>When the credit note is a VAT credit note it must state the sellers VAT registration number and tax scheme.
                             The supplier's VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA. Mandatory if the supplier is taxable.</Description>
                         <Reference type="RULE">EUGEN-T14-R041</Reference>
                         <Reference type="RULE">NOGOV-T14-R013</Reference>
@@ -1292,7 +1292,7 @@
             <Element>
                 <Term>cbc:Amount</Term>
                 <Name>Amount</Name>
-                <Description>	The net amount of the allowance or the charge.
+                <Description>The net amount of the allowance or the charge.
                     For each allowance or charge a credit note must contain the amount. Allowances are subtracted from the total credit note
                     amount and charges are added to the amount. The amount is “net” without VAT.</Description>
                 <Reference type="RULE">EUGEN-T14-R022</Reference>
@@ -1379,7 +1379,7 @@
                 <Term>cac:TaxSubtotal</Term>
                 <Name>Tax subtotal</Name>
                 <Description>Specification of tax subtotals.</Description>
-                <Value type="EXAMPLE">NOGOV-T14-R018</Value>
+                <Reference type="RULE">NOGOV-T14-R018</Reference>
 
                 <Element>
                     <Term>cbc:TaxableAmount</Term>
@@ -1458,7 +1458,7 @@
                     <Element>
                         <Term>cbc:Percent</Term>
                         <Name>Percent</Name>
-                        <Description>	The tax rate that is to be applied to the taxable amount in order to derive the tax amount.
+                        <Description>The tax rate that is to be applied to the taxable amount in order to derive the tax amount.
                             For each VAT category a credit note must contain the  VAT percentage for each sub total taxable amount so
                             that it can be used to calculate the VAT amount. Where VAT category code is stated then VAT category percentage must also be stated.</Description>
                         <Reference type="RULE">BII2-T14-R030</Reference>
@@ -1590,7 +1590,7 @@
             <Element cardinality="0..1">
                 <Term>cbc:PrepaidAmount</Term>
                 <Name>Prepaid amount</Name>
-                <Description>	Any amounts that have been paid a-priory.
+                <Description>Any amounts that have been paid a-priory.
                     A credit note may contain the sum of all prepaid amounts that must be deducted from the payment of this credit note.
                     For fully paid credit note (cash or card) this amount equals the credit note total.
                 </Description>
@@ -1736,7 +1736,7 @@
                 <Element>
                     <Term>cbc:LineID</Term>
                     <Name>Order line reference</Name>
-                    <Description>	Each line in a credit note may contain a reference to the relevant order line in the order that is identified on the document level in the credit note.
+                    <Description>Each line in a credit note may contain a reference to the relevant order line in the order that is identified on the document level in the credit note.
                         If the creditnote contains several orders, the order reference is given at the line level only.  The order reference at line level must refer to both the order and the actual orderline.
                         The syntax for specifying this should be agreed between the parties.  Recommendation: Ordernumber##Order line number</Description>
                     <Value type="EXAMPLE">12</Value>
