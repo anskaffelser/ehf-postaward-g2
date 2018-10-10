@@ -3,6 +3,68 @@
 
     <Name>EHF Post-Award (G2)</Name>
 
+    <!-- Rules -->
+    <Resource>
+        <Identifier>t19-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-catalogue-1.0/sch/NOGOV-UBL-T19.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t58-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-catalogue-response-1.0/sch/NOGOV-UBL-T58.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>ehf-common</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-common-1.0/sch/EHF-UBL-COMMON.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t14-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-creditnote-2.0/sch/NOGOV-UBL-T14.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t14-nonat</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-creditnote-2.0/sch/NONAT-UBL-T14.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t16-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-despatch-advice-1.0/sch/NOGOV-UBL-T16.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t10-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-invoice-2.0/sch/NOGOV-UBL-T10.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t10-nonat</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-invoice-2.0/sch/NONAT-UBL-T10.sch</Path>
+    </Resource>
+    <Resource>
+        <Identifier>t01-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-order-1.0/sch/NOGOV-UBL-T01.sch</Path>
+    </Resource>
+    <!-- <Resource>
+        <Identifier>t110-ehf</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-order-agreement-1.0/sch/EHF-UBL-T110.sch</Path>
+    </Resource> -->
+    <Resource>
+        <Identifier>t76-nogov</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-order-response-1.0/sch/NOGOV-UBL-T76.sch</Path>
+    </Resource>
+    <!-- <Resource>
+        <Identifier>t77-ehf</Identifier>
+        <Type>native:Schematron</Type>
+        <Path>rules/ehf-punch-out-1.0/sch/EHF-UBL-T77.sch</Path>
+    </Resource> -->
+
     <!-- Syntax -->
     <Resource>
         <Type>Syntax-1</Type>
