@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>Order</Term>
+    <Name>Post-Award Order</Name>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Order-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+
+        <Term>ubl:Order</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Reference type="RULE">NOGOV-T01-R012</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
+            <Reference type="RULE">BII2-T01-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns001:ver2.0: extended:urn:www.peppol.eu:bis:peppol28a:ver1.0: extended:urn:www.difi.no:ehf:ordre:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
+            <Reference type="RULE">BII2-T01-R002</Reference>
+            <Reference type="RULE">EHFPROFILE-T01-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii28:ver2.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Order identifier</Name>
+            <Description>A transaction instance must have an identifier. The identifier enables referencing the transaction  for various purposes such as from other transactions that are part of the same process.</Description>
+            <Reference type="RULE">BII2-T01-R006</Reference>
+            <Value type="EXAMPLE">01</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Order issue Date</Name>
+            <Description>The date on which the transaction instance was issued.
+                Format YYYY-MM-DD</Description>
+            <Reference type="RULE">BII2-T01-R004</Reference>
+            <Reference type="RULE">NOGOV-T01-R007</Reference>
+            <Value type="EXAMPLE">2013-11-25</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Order issue time</Name>
+            <Description>The time assigned by the buyer on which the order was issued.</Description>
+            <Value type="EXAMPLE">12:00:00</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:OrderTypeCode</Term>
+            <Name>Consignment order indication</Name>
+            <Description>"Indicates wether the order is a purchase order or consignement order. Default is purchase order.</Description>
+            <Reference type="RULE">OP-T01-R001</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>UNCL1001</Description>
+                <Reference type="RULE">EUGEN-T01-R013</Reference>
+            </Attribute>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:Note</Term>
+            <Name>Document level textual note</Name>
+            <Description>Free form text applying to the Order. This element may contain notes or any other similar information that is not contained explicitly in another structure.</Description>
+            <Value type="EXAMPLE">Ekstra ordre</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:DocumentCurrencyCode</Term>
+            <Name>Currency</Name>
+            <Description>The default currency for the order.</Description>
+            <Reference type="RULE">BII2-T01-R009</Reference>
+            <Reference type="RULE">OP-T01-R002</Reference>
+
+            <Attribute>
+                <Term>listID</Term>
+                <Description>ISO4217</Description>
+                <Reference type="RULE">EUGEN-T01-R014</Reference>
+            </Attribute>
+            <Value type="EXAMPLE">NOK</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:AccountingCost</Term>
+            <Name>Buyers accounting string</Name>
+            <Description>Used by the buyer to specify a reference that should be repeated in e.g. invoice to enable the buyer to automatically
+                book e.g. to the right project, or account.</Description>
+            <Value type="EXAMPLE">112233</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:ValidityPeriod</Term>
+            <Name>Information about validity period</Name>
+
+            <Element cardinality="0..1">
+                <Term>cbc:EndDate</Term>
+                <Name>Order validity end date</Name>
+                <Description>The end date for when the order is valid. The end date for the time period within which the seller must respond.
+                    Format YYYY-MM-DD.</Description>
+                <Reference type="RULE">NOGOV-T01-R007</Reference>
+                <Reference type="RULE">BII2-T01-R005</Reference>
+                <Value type="EXAMPLE">2012-10-21</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:QuotationDocumentReference</Term>
+            <Name>Quotation document reference</Name>
+            <Description>Information about Quotation Document reference</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Quotation document reference</Name>
+                <Description>A requirement to give a unique reference to the quotation that is the base for the order.</Description>
+                <Value type="EXAMPLE">Tilbud_123</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OrderDocumentReference</Term>
+            <Name>Order document reference</Name>
+            <Description>Information about order document reference</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Order document reference</Name>
+                <Description>Used to reference the initial order that was rejected and a new order is issued.</Description>
+                <Value type="EXAMPLE">Ord_456</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OriginatorDocumentReference</Term>
+            <Name>Originator document reference</Name>
+            <Description>Information about originator document reference</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Originator document reference</Name>
+                <Description>A reference to Originator Document. To be able to give a reference to the internal requesition on the buyer site on which the order is based.</Description>
+                <Value type="EXAMPLE">Dok_789</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentType</Term>
+                <Name>Originator document description</Name>
+                <Description>Originator document description.</Description>
+                <Value type="EXAMPLE">Forespørsel fra mai 2012.</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AdditionalDocumentReference</Term>
+            <Name>Additional document reference</Name>
+            <Description>Information about additional document reference</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Document identifier</Name>
+                <Description>An identifier for the referenced document.</Description>
+                <Value type="EXAMPLE">Vedlegg_1</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentType</Term>
+                <Name>Document description</Name>
+                <Description>A short description of the document type.</Description>
+                <Value type="EXAMPLE">Tegning</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Attachment</Term>
+                <Name>Attachment</Name>
+                <Description>Information about attachment.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EmbeddedDocumentBinaryObject</Term>
+                    <Name>Attached binary object</Name>
+                    <Description>The attached document embeded as binary object.</Description>
+
+                    <Attribute>
+                        <Term>mimeCode</Term>
+                        <Reference type="RULE">OP-T01-R003</Reference>
+                        <Reference type="RULE">NOGOV-T01-R021</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:ExternalReference</Term>
+                    <Name>External reference</Name>
+                    <Description>Information about external reference/URI.</Description>
+
+                    <Element>
+                        <Term>cbc:URI</Term>
+                        <Name>External document URI</Name>
+                        <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
+                        <Reference type="RULE">NOGOV-T01-R013</Reference>
+                        <Value type="EXAMPLE">www.documents.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:Contract</Term>
+            <Name>Contract</Name>
+            <Description>Information about contact.</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Reference identifier</Name>
+                <Description>Positive identification of the reference such as a unique identifier.</Description>
+                <Reference type="RULE">NOGOV-T01-R014</Reference>
+                <Value type="EXAMPLE">2012_10</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ContractType</Term>
+                <Name>Reference type</Name>
+                <Description>The short description of what is reference such as contract type, document type , meter etc.
+                    The type of Contract, expressed as text.</Description>
+                <Value type="EXAMPLE">Rammeavtale</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:BuyerCustomerParty</Term>
+            <Name>Buyer</Name>
+            <Description>Information about buyer.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Buyer</Name>
+                <Description>Party information.</Description>
+                <Reference type="RULE">NOGOV-T01-R002</Reference>
+
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Buyer party endpoint identifier</Name>
+                    <Description>Identifies the end point of the routing service.</Description>
+                    <Reference type="RULE">NOGOV-T01-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR</Description>
+                        <Reference type="RULE">NOGOV-T01-R008</Reference>
+                        <Reference type="RULE">OP-T01-R004</Reference>
+                        <Reference type="RULE">EUGEN-T01-R011</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">931186755</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>pARTY Identification</Name>
+                    <Description>Information about PartyID</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Buyer party identifier</Name>
+                        <Description>An identification for the buyer party.</Description>
+                        <Reference type="RULE">BII2-T01-R021</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">7080000985134</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Buyer party name</Name>
+                    <Description>The name of the party who orders the listed items.	Information about Party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Buyer party name</Name>
+                        <Description>The name of the party who orders the listed items.</Description>
+                        <Reference type="RULE">BII2-T01-R021</Reference>
+                        <Value type="EXAMPLE">Helseforetak</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Description>Information about postal address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number. An invoice must contain the seller’s street name and number or P.O.box.</Description>
+                        <Value type="EXAMPLE">Sinsenveien 40</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                        <Value type="EXAMPLE">1. bygg</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                        <Value type="EXAMPLE">Oslo</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                        <Value type="EXAMPLE">0501</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                            of country sub divisions are commonly used. </Description>
+                        <Value type="EXAMPLE">Østlandet</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>Information about country.</Description>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T01-R006</Reference>
+                            <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyTaxScheme</Term>
+                    <Name>Tax scheme</Name>
+                    <Description>Information about VAT.</Description>
+
+                    <Element>
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Buyer VAT identifier</Name>
+                        <Description>The buyers registered  Value Added Tax identifier. To be stated in case reverse charge is to apply to the purchase.</Description>
+                        <Reference type="RULE">NOGOV-T01-R011</Reference>
+                        <Reference type="RULE">NOGOV-T01-R016</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example NO:VAT.</Description>
+                        </Attribute>
+                        <Value type="EXAMPLE">987654321MVA</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+                        <Description>Information about Tax scheme.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>=VAT</Description>
+                            <Reference type="RULE">NOGOV-T01-R017</Reference>
+                        </Element>
+                    </Element>
+
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Legal entity</Name>
+                    <Description>Information about Legal entity</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Buyers legal registration name</Name>
+                        <Description>The official name of the party as registered with the relevant fiscal authority.</Description>
+                        <Value type="EXAMPLE">Helseforetak AS</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Buyers legal registration identifier</Name>
+                        <Description>Identifies a company as registered with the company registration scheme.</Description>
+                        <Reference type="RULE">NOGOV-T01-R010</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR</Description>
+                        </Attribute>
+                        <Value type="EXAMPLE">NO931186755MVA</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Name>Registration address</Name>
+                        <Description>Information about Registration address.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Name>Buyers legal registration address city name</Name>
+                            <Description>Associates with the registered address of the party within a Corporate Registration Scheme. The name of a city, town, or village.</Description>
+                            <Value type="EXAMPLE">Oslo</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+                            <Description>Information about country.</Description>
+
+                            <Element>
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Buyers legal registration address country code</Name>
+                                <Description>Buyers legal registration address country ID.</Description>
+                                <Reference type="RULE">OP-T01-R006</Reference>
+                                <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                                <Attribute>
+                                    <Term>listID</Term>
+                                    <Description>ISO3166-1:Alpha2</Description>
+                                    <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                </Attribute>
+                                <Value type="EXAMPLE">NO</Value>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Contact</Term>
+                <Name>Contact</Name>
+                <Description>Contact information.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ID</Term>
+                    <Name>Contact ID</Name>
+                    <Description>Customer reference (“Your ref”) to be returned in the Invoice, e.g.Employee-no.</Description>
+                    <Value type="EXAMPLE">3150bdn</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Name</Term>
+                    <Name>Contact person name</Name>
+                    <Description>The name of the contact person.</Description>
+                    <Value type="EXAMPLE">Ole Olsen</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telephone</Term>
+                    <Name>Contact telephone number</Name>
+                    <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                    <Value type="EXAMPLE">23055000</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telefax</Term>
+                    <Name>Contact fax number</Name>
+                    <Description>A fax number for the contact persons.</Description>
+                    <Value type="EXAMPLE">23055001</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ElectronicMail</Term>
+                    <Name>Contact email address</Name>
+                    <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                    <Value type="EXAMPLE">post@helseforetak.no</Value>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:SellerSupplierParty</Term>
+            <Name>Seller</Name>
+            <Description>Information about seller.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+                <Description>Party information.</Description>
+                <Reference type="RULE">NOGOV-T01-R018</Reference>
+
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Seller party endpoint identifier</Name>
+                    <Description>Identifies the end point of the routing service.</Description>
+                    <Reference type="RULE">NOGOV-T01-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR</Description>
+                        <Reference type="RULE">NOGOV-T01-R008</Reference>
+                        <Reference type="RULE">OP-T01-R004</Reference>
+                        <Reference type="RULE">EUGEN-T01-R011</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">938752655</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party Identification</Name>
+                    <Description>Information about PartyID.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Seller party identifier</Name>
+                        <Description>An identification for the seller party.</Description>
+                        <Reference type="RULE">BII2-T01-R022</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">7080000374200</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Seller party name</Name>
+                    <Description>The name of the party. Information about Party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Seller party name</Name>
+                        <Description>The name of the party who orders the listed items.</Description>
+                        <Reference type="RULE">BII2-T01-R022</Reference>
+                        <Value type="EXAMPLE">Medical</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Description>Information about postal address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                        <Value type="EXAMPLE">Rådhusgaten 10</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                        <Value type="EXAMPLE">Oslo</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                        <Value type="EXAMPLE">0585</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>Information about country.</Description>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T01-R006</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T01-R015</Reference>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Contact</Term>
+                <Name>Contact</Name>
+                <Description>Contact information.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Name</Term>
+                    <Name>Contact person name</Name>
+                    <Description>The name of the contact person.</Description>
+                    <Value type="EXAMPLE">Per Persen</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telephone</Term>
+                    <Name>Contact telephone number</Name>
+                    <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                    <Value type="EXAMPLE">67915500</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telefax</Term>
+                    <Name>Contact fax number</Name>
+                    <Description>A fax number for the contact persons.</Description>
+                    <Value type="EXAMPLE">67915501</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ElectronicMail</Term>
+                    <Name>Contact email address</Name>
+                    <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                    <Value type="EXAMPLE">post@helseforetak.no</Value>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OriginatorCustomerParty</Term>
+            <Name>Originator customer party</Name>
+            <Description>Information about Originator</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Originator</Name>
+                <Description>Originator information</Description>
+                <Reference type="RULE">NOGOV-T01-R019</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Originator identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Originating party identifier</Name>
+                        <Description>The originator party identifier</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">12345</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about party name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Originating party name</Name>
+                        <Description>The originator party name.</Description>
+                        <Value type="EXAMPLE">Helseavdeling</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact person name</Name>
+                        <Description>The name of the contact person.</Description>
+                        <Value type="EXAMPLE">Per Persen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                        <Value type="EXAMPLE">67915500</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax number</Name>
+                        <Description>A fax number for the contact persons.</Description>
+                        <Value type="EXAMPLE">67915501</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                        <Value type="EXAMPLE">post@helseforetak.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:AccountingCustomerParty</Term>
+            <Name>Customer</Name>
+            <Description>Customer party.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+                <Description>Party information.</Description>
+                <Reference type="RULE">NOGOV-T01-R020</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>EndPointID</Name>
+                    <Description>An order may contain the buyers electronic address. The address can be of any format and the format should be identified in the message.</Description>
+                    <Reference type="RULE">NOGOV-T01-R009</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR.</Description>
+                        <Reference type="RULE">EUGEN-T01-R011</Reference>
+                        <Reference type="RULE">OP-T10-R004</Reference>
+                        <Reference type="RULE">NOGOV-T01-R008</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">998876543</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Information about PartyID.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Invoice party identification</Name>
+                        <Description>An identification for the invoice party.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            <Reference type="RULE">EUGEN-T01-R012</Reference>
+                            <Reference type="RULE">OP-T01-R005</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">548787</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+                    <Description>Information about Party name.</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Invoice party name</Name>
+                        <Description>The name of the party who should be invoiced for the ordered items.</Description>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+                    <Description>Address information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text. In some countries regions or other type
+                            of country sub divisions are commonly used.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T01-R006</Reference>
+                            <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+                                <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyTaxScheme</Term>
+                    <Name>Tax scheme</Name>
+                    <Description>Information regarding tax.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Company ID</Name>
+                        <Description>Identifies a company as registered with the company registration scheme.</Description>
+                        <Reference type="RULE">NOGOV-T01-R011</Reference>
+                        <Reference type="RULE">NOGOV-T01-R016</Reference>
+                        <Value type="EXAMPLE">123456789MVA</Value>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Identifier</Name>
+                            <Description>=VAT</Description>
+                            <Reference type="RULE">NOGOV-T01-R017</Reference>
+                            <Value type="EXAMPLE">VAT</Value>
+                        </Element>
+                    </Element>
+
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyLegalEntity</Term>
+                    <Name>Legal entity</Name>
+                    <Description>Information regarding legal entity.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:RegistrationName</Term>
+                        <Name>Legal registration name</Name>
+                        <Description>The official name of the party as registered with the relevant fiscal authority.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CompanyID</Term>
+                        <Name>Legal registration identifier</Name>
+                        <Description>Identifies a company as registered with the company registration scheme.</Description>
+                        <Reference type="RULE">NOGOV-T01-R010</Reference>
+                        <Value type="EXAMPLE">123456789</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RegistrationAddress</Term>
+                        <Name>Registration address</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:CityName</Term>
+                            <Name>City</Name>
+                            <Description>Associates with the registered address of the party within a Corporate Registration Scheme. The name of a city, town, or village.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Country</Term>
+                            <Name>Country</Name>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:IdentificationCode</Term>
+                                <Name>Country code</Name>
+                                <Description>Invoice legal registration address country ID.</Description>
+                                <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                                <Attribute>
+                                    <Term>listID</Term>
+                                    <Description>ISO3166-1:Alpha2</Description>
+                                    <Reference type="RULE">EUGEN-T01-R015</Reference>
+                                </Attribute>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Contact ID</Name>
+                        <Description>Invoice contact identification.</Description>
+                        <Reference type="RULE">NOGOV-T01-R001</Reference>
+                    </Element>
+
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:Delivery</Term>
+            <Name>Delivery</Name>
+            <Description>Delivery information</Description>
+
+            <Element cardinality="0..1">
+                <Term>cac:DeliveryLocation</Term>
+                <Name>Delivery location</Name>
+                <Description>Information about delivery location.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Address</Term>
+                    <Name>Address</Name>
+                    <Description>Address information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Delivery location ID</Name>
+                        <Description>An identifier for the location to where the ordered items should be delivered.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                        <Value type="EXAMPLE">1369</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                        <Value type="EXAMPLE">Solheimsveien 10</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                        <Value type="EXAMPLE">Lørenskog</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                        <Value type="EXAMPLE">1473</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>Country information</Description>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T01-R006</Reference>
+                            <Reference type="RULE">NOGOV-T01-R015</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Description>Attribute  must be 'ISO3166-1:Alpha2'</Description>
+                                <Reference type="RULE">EUGEN-T01-R015</Reference>
+                            </Attribute>
+                            <Value type="EXAMPLE">NO</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:RequestedDeliveryPeriod</Term>
+                    <Name>Requested delivery period</Name>
+                    <Description>Information about Requested Delivery period.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StartDate</Term>
+                        <Name>Period start date</Name>
+                        <Description>The date on which the period starts. The start dates counts as part of the period.
+                            Format YYYY-MM-DD.</Description>
+                        <Reference type="RULE">NOGOV-T01-R007</Reference>
+                        <Value type="EXAMPLE">2012-10-01</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:EndDate</Term>
+                        <Name>Period end date</Name>
+                        <Description>The date on which the period ends. The end date counts as part of the period.
+                            Format YYYY-MM-DD.</Description>
+                        <Reference type="RULE">NOGOV-T01-R007</Reference>
+                        <Value type="EXAMPLE">2012-01-01</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:DeliveryParty</Term>
+                    <Name>Delivery party</Name>
+                    <Description>Information about Delivery party</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyIdentification</Term>
+                        <Name>Party identification</Name>
+                        <Description>Information about PartyID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Delivery party ID</Name>
+                            <Description>An identifier for the party that should deliver the ordered items.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            </Attribute>
+                            <Value type="EXAMPLE">7080003299288</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyName</Term>
+                        <Name>Party name</Name>
+                        <Description>Information about party name.</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Delivery party name</Name>
+                            <Description>The name of the party that should handle the delivery.</Description>
+                            <Value type="EXAMPLE">Helseavdeling</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Contact</Term>
+                        <Name>Contact</Name>
+                        <Description>Contact information</Description>
+
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Name</Term>
+                            <Name>Contact person name</Name>
+                            <Description>The name of the contact person.</Description>
+                            <Value type="EXAMPLE">Ole Olsen</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Telephone</Term>
+                            <Name>Contact telephone number</Name>
+                            <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                            <Value type="EXAMPLE">987098709</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Telefax</Term>
+                            <Name>Contact Telefax number</Name>
+                            <Description>A fax number for the contact persons.</Description>
+                        </Element>
+
+                        <Element>
+                            <Term>cbc:ElectronicMail</Term>
+                            <Name>Contact email address</Name>
+                            <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                            <Value type="EXAMPLE">ole@helseforetak.no</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:DeliveryTerms</Term>
+            <Name>Delivery terms</Name>
+            <Description>Information about delivery terms.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ID</Term>
+                <Name>Delivery terms</Name>
+                <Description>The ability for the buyer to specify what shipping terms should apply the delivery of the order.</Description>
+
+                <Attribute>
+                    <Term>schemeID</Term>
+                </Attribute>
+                <Value type="EXAMPLE">Fritt levert til kunde.</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:SpecialTerms</Term>
+                <Name>Delivery special terms</Name>
+                <Description>A description of special conditions relating to the Delivery Terms.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:DeliveryLocation</Term>
+                <Name>Delivery location</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ID</Term>
+                    <Name>Delivery terms location</Name>
+                    <Description>An association to Location, e.g., a port. The unique identifier for the location.</Description>
+                    <Value type="EXAMPLE">7080003299299</Value>
+                </Element>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:PaymentTerms</Term>
+            <Name>Payment terms</Name>
+            <Description>Description of payment terms.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Note</Term>
+                <Name>Payment terms</Name>
+                <Description>Description of the payment terms for the invoice which will be based on this order.</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AllowanceCharge</Term>
+            <Name>Allowance charge</Name>
+            <Description>Information about Allowances and charges.</Description>
+
+            <Element>
+                <Term>cbc:ChargeIndicator</Term>
+                <Name>Charge indicator</Name>
+                <Description>True or false</Description>
+                <Value type="EXAMPLE">true</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:AllowanceChargeReason</Term>
+                <Name>Allowance and charges reason</Name>
+                <Description>A textual reason for the allowance or the charge. Can also be its name.</Description>
+                <Reference type="RULE">BII2-T01-R007</Reference>
+                <Value type="EXAMPLE">Total order value discount.</Value>
+            </Element>
+
+            <Element>
+                <Term>cbc:Amount</Term>
+                <Name>Allowance and charge amount</Name>
+                <Description>The net amount of the allowance or the charge excluding VAT.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">20</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:TaxTotal</Term>
+            <Name>Tax total</Name>
+            <Description>Information about VAT total.</Description>
+
+            <Element>
+                <Term>cbc:TaxAmount</Term>
+                <Name>VAT total amount</Name>
+                <Description>The total VAT amount that is "added to the document total w/o VAT". This is the sum of all VAT subcategory amounts.
+                    An association to the total tax amount of the Order (as calculated by the Buyer). The expected Tax Total in the corresponding invoice.
+                    The total tax amount for particular tax scheme e.g. VAT;  the sum of each of the tax subtotals for each tax category within the tax scheme.
+                    Sum of line tax amounts. An association to the total tax amount of the Order (as calculated by the Buyer). The expected Tax Total in the corresponding invoice</Description>
+                <Reference type="RULE">BII2-T01-R018</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">20</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:AnticipatedMonetaryTotal</Term>
+            <Name>Anticipated monetary total</Name>
+            <Description>Information about expected totals.</Description>
+
+            <Element>
+                <Term>cbc:LineExtensionAmount</Term>
+                <Name>Sum of line amounts</Name>
+                <Description>Sum of line amounts in the document.
+                    The total of Line Extension Amounts net of tax and settlement discounts, but inclusive of any applicable rounding amount.</Description>
+                <Reference type="RULE">BII2-T01-R013</Reference>
+                <Reference type="RULE">BII2-T01-R014</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">120</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:TaxExclusionAmount</Term>
+                <Name>Document total without VAT</Name>
+                <Description>The "Sum of line amounts" plus "sum of allowances on document level" plus "sum of charges on document level".</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">100</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:TaxInclusiveAmount</Term>
+                <Name>Document total including VAT</Name>
+                <Description>The total value including VAT.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">100</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:AllowanceTotalAmount</Term>
+                <Name>Sum of allowances on document level</Name>
+                <Description>Sum of all allowances on header level in the document. Allowances on line level are included in the line amount and summed up into the "sum of line amounts".</Description>
+                <Reference type="RULE">BII2-T01-R015</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">20</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ChargeTotalAmount</Term>
+                <Name>Sum of charges on document level</Name>
+                <Description>Sum of all charge on header level in the document. Charges on line level are included in the line amount and summed up into the "sum of line amounts".</Description>
+                <Reference type="RULE">BII2-T01-R016</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PrepaidAmount</Term>
+                <Name>Paid amounts</Name>
+                <Description>Any amounts that have been paid a-priory.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PayableRoundingAmount</Term>
+                <Name>Rounding of document level</Name>
+                <Description>Any rounding of the "Document total including VAT".</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PayableAmount</Term>
+                <Name>Amount for payment</Name>
+                <Description>The amount that is expected to be paid based on the document. This amount is the "Document total including VAT" less the "paid amounts" that have been paid a-priori.
+                    The total amount to be paid. Estimated total amount of order including VAT.</Description>
+                <Reference type="RULE">BII2-T01-R012</Reference>
+                <Reference type="RULE">BII2-T01-R017</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Description>Must be according to ISO 4217.</Description>
+                    <Reference type="RULE">OP-T01-R007</Reference>
+                </Attribute>
+                <Value type="EXAMPLE">120</Value>
+            </Element>
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:OrderLine</Term>
+            <Name>Order line</Name>
+            <Description>Order line information.</Description>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Note</Term>
+                <Name>Order line note</Name>
+                <Description>Free-form text applying to the Order Line. This element may contain notes or any other similar information that is not contained explicitly
+                    in another structure. Is to capture any free form description related to the order line as a whole.</Description>
+                <Value type="EXAMPLE">Freetext note on line level.</Value>
+            </Element>
+
+            <Element>
+                <Term>cac:LineItem</Term>
+                <Name>Line item</Name>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Document line identifier</Name>
+                    <Description>Identifies the Line Item assigned by the buyer.</Description>
+                    <Reference type="RULE">BII2-T01-R003</Reference>
+                </Element>
+
+                <Element>
+                    <Term>cbc:Quantity</Term>
+                    <Name>Ordered quantity</Name>
+                    <Description>The quantity of Items for the Line Item. The quantity for the order line.</Description>
+                    <Reference type="RULE">BII2-T01-R010</Reference>
+                    <Reference type="RULE">BII2-T01-R029</Reference>
+                    <Reference type="RULE">NOGOV-T01-R005</Reference>
+
+                    <Attribute>
+                        <Term>unitCode</Term>
+                        <Description>Must be a valid code in codelist UN/ECE Rec 20.</Description>
+                        <Reference type="RULE">BII2-T01-R030</Reference>
+                        <Reference type="RULE">OP-T01-R009</Reference>
+                    </Attribute>
+
+                    <Attribute>
+                        <Term>unitCodeListID</Term>
+                        <Description>UNECERec20</Description>
+                        <Reference type="RULE">EUGEN-T01-R016</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:LineExtensionAmount</Term>
+                    <Name>Order line amount</Name>
+                    <Description>The total amount for the Line Item, including Allowance Charges but net of taxes. The expected line amount
+                        excluding VAT but inclusive of other charges, allowances and taxes.</Description>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>Must be according to ISO4217.</Description>
+                    </Attribute>
+                    <Value type="EXAMPLE">100</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:TotalTaxAmount</Term>
+                    <Name>Order line tax amount</Name>
+                    <Description>The total tax amount for the Line Item. The total amounts of taxes on the line.</Description>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Description>Must be according to ISO4217.</Description>
+                        <Reference type="RULE">OP-T01-R007</Reference>
+                    </Attribute>
+                    <Value type="EXAMPLE">20</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:PartialDeliveryIndicator</Term>
+                    <Name>Partial Delivery Allowed Indicator</Name>
+                    <Description>Indicates if the line items must be delivered in a single shipment. Default that partial delivery is allowed.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Delivery</Term>
+                    <Name>Delivery information</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:RequestedDeliveryPeriod</Term>
+                        <Name>Requested delivery period</Name>
+                        <Description>Information about Requested Delivery period.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:StartDate</Term>
+                            <Name>Period start date</Name>
+                            <Description>The date on which the period starts. The start dates counts as part of the period.
+                                Format YYYY-MM-DD.</Description>
+                            <Reference type="RULE">NOGOV-T01-R007</Reference>
+                            <Value type="EXAMPLE">2013-10-01</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:EndDate</Term>
+                            <Name>Period end date</Name>
+                            <Description>The date on which the period ends. The end date counts as part of the period.
+                                Format YYYY-MM-DD.</Description>
+                            <Reference type="RULE">NOGOV-T01-R007</Reference>
+                            <Value type="EXAMPLE">2013-01-01</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:OriginatorParty</Term>
+                    <Name>Originator party</Name>
+                    <Description>Information about Originator.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyIdentification</Term>
+                        <Name>Party identification</Name>
+                        <Description>Information about PartyID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Order line originator party ID</Name>
+                            <Description>The party who originated Order.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Description>Must be according to "PEPPOL policy for identifiers", example GLN.</Description>
+                            </Attribute>
+                            <Value type="EXAMPLE">123456789</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyName</Term>
+                        <Name>Party name</Name>
+                        <Description>Information about party name.</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Order line originator party name</Name>
+                            <Description>The party who originated Order.</Description>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Price</Term>
+                    <Name>Price</Name>
+                    <Description>Price information.</Description>
+
+                    <Element>
+                        <Term>cbc:PriceAmount</Term>
+                        <Name>Item price</Name>
+                        <Description>The net price of an item including discounts or surcharges that apply to the price.
+                            Although price is an optional element in an order it recommended as best practice to either state the price or
+                            provide reference to an appropriate source from which the price can be identified such as a contract, catalogue or a quote.
+                            The price amount. The net price of the item including all allowances, charges and taxes but excluding VAT.</Description>
+                        <Reference type="RULE">BII2-T01-R011</Reference>
+
+                        <Attribute>
+                            <Term>currencyID</Term>
+                            <Description>Must be according to ISO 4217</Description>
+                            <Reference type="RULE">OP-T01-R007</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">100</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BaseQuantity</Term>
+                        <Name>Item price base quantity</Name>
+                        <Description>The actual quantity to which the price applies.</Description>
+
+                        <Attribute>
+                            <Term>unitCode</Term>
+                            <Description>Must be a valid code in codelist UN/ECE Rec 20.</Description>
+                        </Attribute>
+                        <Attribute>
+                            <Term>unitCodeListID</Term>
+                            <Description>UNECERec20</Description>
+                        </Attribute>
+                        <Value type="EXAMPLE">1</Value>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:AllowanceCharge</Term>
+                        <Name>Allowance Charge</Name>
+                        <Description>Information regarding allowances and charges connected to price.</Description>
+
+                        <Element>
+                            <Term>cbc:ChargeIndicator</Term>
+                            <Name>Allowance/Charge indicator</Name>
+                            <Description>True = Charge, False =  Allowance.</Description>
+                        </Element>
+
+                        <Element>
+                            <Term>cbc:Amount</Term>
+                            <Name>Amount</Name>
+                            <Description>The total discount subtracted from the gross price to reach the net price.</Description>
+
+                            <Attribute>
+                                <Term>currencyID</Term>
+                                <Description>MUST be coded using ISO code list 4217.</Description>
+                                <Value type="EXAMPLE">NOK</Value>
+                            </Attribute>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:BaseAmount</Term>
+                            <Name>Item list price</Name>
+                            <Description>The gross price of the item before subtracting discounts. E.g. list price.</Description>
+
+                            <Attribute>
+                                <Term>currencyID</Term>
+                                <Description>Must be according to ISO 4217.</Description>
+                            </Attribute>
+                            <Value type="EXAMPLE">105</Value>
+                        </Element>
+
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:Item</Term>
+                    <Name>Item</Name>
+                    <Description>Item information.</Description>
+
+                    <Element cardinality="0..n">
+                        <Term>cbc:Description</Term>
+                        <Name>Item description as text</Name>
+                        <Description>Free-form field that can be used to give a text description of the item. A detailed description of the item. Use one description per language.
+                            Test text for capturing notes.</Description>
+                        <Value type="EXAMPLE">Wet tissues for children.</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Item Name</Name>
+                        <Description>A short name for an item.
+                            A short name optionally given to an item, such as a name from a Catalogue, as distinct from a description.</Description>
+                        <Reference type="RULE">BII2-T01-R031</Reference>
+                        <Value type="EXAMPLE">Wet tissues</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:SellerItemIdentification</Term>
+                        <Name>Sellers item identification</Name>
+                        <Description>Information about Sellers ItemID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item sellers identifier</Name>
+                            <Description>The sellers identifier for the item.
+                                Associates the item with its identification according to the seller's system. The sellers ID for the item.</Description>
+                            <Reference type="RULE">BII2-T01-R031</Reference>
+                            <Value type="EXAMPLE">11111</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:StandardItemIdentification</Term>
+                        <Name>Standard item identification</Name>
+                        <Description>Information about Standard ItemID.</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item standard identifier</Name>
+                            <Description>An item identifier based on a registered schema.
+                                Associates the item with its identification according to a standard system. Standarized ID for the item.</Description>
+                            <Reference type="RULE">BII2-T01-R031</Reference>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Value type="EXAMPLE">GTIN</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">7330869106661</Value>
+                        </Element>
+                    </Element>
+
+
+                    <Element cardinality="0..n">
+                        <Term>cac:ItemSpecificationDocumentReference</Term>
+                        <Name>Item specification document reference</Name>
+                        <Description>Reference to a document containing item specifications</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Document reference</Name>
+                            <Description>Reference to an external document (ID) when it is necessary to specify the details of the item.</Description>
+                        </Element>
+                    </Element>
+
+
+                    <Element cardinality="0..n">
+                        <Term>cac:CommodityClassification</Term>
+                        <Name>Commodity classification</Name>
+                        <Description>A classification code for classifying the item by its type or nature.</Description>
+                        <Reference type="RULE">NOGOV-T01-R003</Reference>
+
+                        <Element>
+                            <Term>cbc:ItemClassificationCode</Term>
+                            <Name>Item commodity classification</Name>
+                            <Description>A classification code for classifying the item by its type or nature.</Description>
+                            <Reference type="RULE">NOGOV-T01-R003</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Value type="EXAMPLE">UNSPSC</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">12345678</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:ClassifiedTaxCategory</Term>
+                        <Name>Tax category</Name>
+                        <Description>Information about VAT.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ID</Term>
+                            <Name>Item VAT category code</Name>
+                            <Description>The VAT code that indicates what VAT details apply to the item.</Description>
+                            <Reference type="RULE">OP-T01-R008</Reference>
+                            <Reference type="RULE">NOGOV-T01-R004</Reference>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Reference type="RULE">EUGEN-T01-R017</Reference>
+                                <Value type="EXAMPLE">UNCL5305</Value>
+                            </Attribute>
+                            <Value type="EXAMPLE">S</Value>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Percent</Term>
+                            <Name>Item VAT rate</Name>
+                            <Description>The VAT percentage rate that applies to the ordered item.</Description>
+                            <Value type="EXAMPLE">25</Value>
+                        </Element>
+
+                        <Element>
+                            <Term>cac:TaxScheme</Term>
+                            <Name>Tax scheme</Name>
+                            <Description>Information about Tax scheme (VAT).</Description>
+
+                            <Element>
+                                <Term>cbc:ID</Term>
+                                <Name>Identifier</Name>
+                                <Description>=VAT</Description>
+                                <Reference type="RULE">NOGOV-T01-R017</Reference>
+                            </Element>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:AdditionalItemProperty</Term>
+                        <Name>Additional properties</Name>
+                        <Description>Information about Additional Item properties</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Property name</Name>
+                            <Description>The name of the property. The name must be sufficiently descriptive to define the value. The definition
+                                may be supplemented with the property unit of measure when relevant. E.g. Size, Color, Year.</Description>
+                            <Reference type="RULE">BII2-T01-R019</Reference>
+                            <Value type="EXAMPLE">Weight, color</Value>
+                        </Element>
+
+                        <Element>
+                            <Term>cbc:Value</Term>
+                            <Name>Property value</Name>
+                            <Description>The value of the item property. E.g. XXL, Blue, 2007.</Description>
+                            <Reference type="RULE">BII2-T01-R020</Reference>
+                            <Value type="EXAMPLE">100 g</Value>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:ValueQuantity</Term>
+                        <Name>Quantity</Name>
+                        <Description>Quantity for the property.</Description>
+
+                        <Attribute>
+                            <Term>unitCode</Term>
+                            <Description>Valid code according to code list UN/ECE Rec 20.</Description>
+                        </Attribute>
+
+                        <Attribute>
+                            <Term>unitCodeListID</Term>
+                            <Description>UNECERec20</Description>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ValueQualifier</Term>
+                        <Name>Qualification of qty</Name>
+                        <Description>Description of quantity.</Description>
+                    </Element>
+                </Element>
+
+            </Element>
+
+        </Element>
+
+
+
+    </Document>
+
+</Syntax>

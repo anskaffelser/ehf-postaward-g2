@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>Despatch Advice</Term>
+    <Name>Post-Award Despatch advice</Name>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+        <Term>ubl:DespatchAdvice</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Reference type="RULE">NOGOV-T16-R001</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>Identifies the specification of content and rules that apply to the transaction.</Description>
+            <Reference type="RULE">BII2-T16-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns016:ver1.0:extended:urn:www.peppol.eu:bis:peppol30a:ver1.0:extended:urn:www.difi.no:ehf:pakkseddel:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the BII profile or business process context in which the transaction appears.</Description>
+            <Reference type="RULE">BII2-T16-R002</Reference>
+            <Reference type="RULE">EHFPROFILE-T16-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:profile:bii01:ver2.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Document identifier</Name>
+            <Description>An transaction instance must contain an identifier. The identifier enables positive referencing the
+                document instance for various purposes including referencing between transactions that are part of the same process.
+            </Description>
+            <Reference type="RULE">BII2-T16-R003</Reference>
+            <Value type="EXAMPLE">DA01234</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Despatch advice issue date</Name>
+            <Description>The date when the despatch advice is issued.</Description>
+            <Reference type="RULE">BII2-T16-R004</Reference>
+            <Reference type="RULE">NOGOV-T16-R008</Reference>
+            <Value type="EXAMPLE">2013-03-07</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Despatch advice issue time</Name>
+            <Description>The time when the despatch advice is issued.</Description>
+            <Value type="EXAMPLE">14:05</Value>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:Note</Term>
+            <Name>Despatch note</Name>
+            <Description>A textual note for the despatch as whole.</Description>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OrderReference</Term>
+            <Name>Order Reference</Name>
+            <Description>Reference to the order on which the despatch advice is based.</Description>
+            <Reference type="RULE">BII2-T16-R005</Reference>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Order reference</Name>
+                <Description>Used to provide a reference to the buyers order on which the despatch is based.</Description>
+                <Reference type="RULE">BII2-T16-R005</Reference>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:DespatchSupplierParty</Term>
+            <Name>Despatching party</Name>
+            <Description>Party who creates the despatch advice on behalf of the seller and is responsible for the physical shipment.</Description>
+            <Reference type="RULE">BII2-T16-R006</Reference>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Sender</Name>
+                <Description>Information regarding the sender.</Description>
+                <Reference type="RULE">NOGOV-T16-R003</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Electronic address identifier</Name>
+                    <Description>A despatch advice may contain the despatching party electronic address identifier. The address can be of any format and the format should be identified in the message.</Description>
+                    <Reference type="RULE">OP-T16-R005</Reference>
+                    <Reference type="RULE">NOGOV-T16-R009</Reference>
+                    <Reference type="RULE">NOGOV-T16-R010</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                    </Attribute>
+                    <Value type="EXAMPLE">123456789</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Sender identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Despatching party identifier</Name>
+                        <Description>The identifier of the despatching party.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">OP-T16-R006</Reference>
+                            <Reference type="RULE">EUGEN-T16-R002</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Name</Name>
+                    <Description>Sender name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Despatching party name</Name>
+                        <Description>The name of the despatching party.</Description>
+                        <Reference type="RULE">BII2-T16-R007</Reference>
+
+                        <Value type="EXAMPLE">Selgeren AS</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information regarding sender.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact person name</Name>
+                        <Description>The name of the contact person.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>A fax number for the contact persons.</Name>
+                        <Description>A fax number for the contact persons</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:DeliveryCustomerParty</Term>
+            <Name>Receiver</Name>
+            <Description>Receiver of the despatch advice on behalf of the buyer.  Responsible for the physical reception and approval of the goods.</Description>
+            <Reference type="RULE">BII2-T16-R008</Reference>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Receiver</Name>
+                <Description>Information regarding the receiver.</Description>
+                <Reference type="RULE">NOGOV-T16-R004</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Consignee party identifier</Name>
+                    <Description>A despatch advice may contain the despatching party electronic address identifier. The address can be of any format and the format should be identified in the message.</Description>
+                    <Reference type="RULE">OP-T16-R005</Reference>
+                    <Reference type="RULE">NOGOV-T16-R009</Reference>
+                    <Reference type="RULE">NOGOV-T16-R010</Reference>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Receiver identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Consignee party identifier</Name>
+                        <Description>The receiving party identifier.</Description>
+                        <Reference type="RULE">BII2-T16-R009</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Name</Name>
+                    <Description>Receiver name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Consignee party name</Name>
+                        <Description>The name pf the receiving party.</Description>
+                        <Reference type="RULE">BII2-T16-R009</Reference>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Address</Name>
+                    <Description>The address to where the goods is shipped.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Consignee party address identifier</Name>
+                        <Description>An identifier for a specific address within a scheme of registered addresses. Identifying the addess to where the items have been despatched</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyName</Term>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details supplementing the main line.
+                            Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subentity</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+                        <Description>Country code</Description>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T16-R001</Reference>
+                            <Reference type="RULE">NOGOV-T16-R002</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:DeliveryContact</Term>
+                <Name>Contact</Name>
+                <Description>Contact information regarding the receiver.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Name</Term>
+                    <Name>Contacting details</Name>
+                    <Description>The name of the contact person.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telephone</Term>
+                    <Name>Contact telephone number</Name>
+                    <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Telefax</Term>
+                    <Name>Contact fax number</Name>
+                    <Description>A fax number for the contact persons</Description>
+                </Element>
+
+                <Element>
+                    <Term>cbc:ElectronicMail</Term>
+                    <Name>Contact email address</Name>
+                    <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:BuyerCustomerParty</Term>
+            <Name>Buyer</Name>
+            <Description>Information regarding the buyer who is commercially responsible for the goods in the despatch advice.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Buyer</Name>
+                <Description>Information regarding the buyer.</Description>
+                <Reference type="RULE">NOGOV-T16-R005</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Buyer identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Buyer party identifier</Name>
+                        <Description>The buying party identifier</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">OP-T16-R006</Reference>
+                            <Reference type="RULE">EUGEN-T16-R002</Reference>
+                        </Attribute>
+                        <Value type="EXAMPLE">987654321</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Name</Name>
+                    <Description>Buyer name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Buying party name</Name>
+                        <Description>The name of the buying party.</Description>
+                        <Value type="EXAMPLE">Kjøperen ASA</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:SellerSupplierParty</Term>
+            <Name>Seller</Name>
+            <Description>Information regarding the seller.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Sender</Name>
+                <Description>Seller information</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Seller identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Selling party identifier</Name>
+                        <Description>An identifier for the seller party.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">OP-T16-R006</Reference>
+                            <Reference type="RULE">EUGEN-T16-R002</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Name</Name>
+                    <Description>Seller name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Seller party name</Name>
+                        <Description>The seller party name.</Description>
+
+                        <Value type="EXAMPLE">Selgeren AS</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information regarding sender.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact person name</Name>
+                        <Description>The name of the contact person.</Description>
+                        <Value type="EXAMPLE">Hans Hansen</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact person. If the person has a direct number, this is that number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax number</Name>
+                        <Description>A fax number for the contact persons</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.</Description>
+                        <Value type="EXAMPLE">hans.hansen@selgeren.no</Value>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OriginatorCustomerParty</Term>
+            <Name>Originator</Name>
+            <Description>Information regarding the originator of the purchase order in the buyers organisation.</Description>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Originator</Name>
+                <Description>Originator information</Description>
+                <Reference type="RULE">NOGOV-T16-R006</Reference>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Identification</Name>
+                    <Description>Originator identification</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Originating party identifier</Name>
+                        <Description>The originator party identifier</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">OP-T16-R006</Reference>
+                            <Reference type="RULE">EUGEN-T16-R002</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Name</Name>
+                    <Description>Originator name</Description>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Originating party name</Name>
+                        <Description>The originator party name.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:Shipment</Term>
+            <Name>Shipment</Name>
+            <Description>Shipment information</Description>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Shipment identifier</Name>
+                <Description>Identifies a shipment.</Description>
+                <Reference type="RULE">BII2-T16-R011</Reference>
+
+                <Attribute>
+                    <Term>schemeID</Term>
+                </Attribute>
+                <Attribute>
+                    <Term>schemeAgencyID</Term>
+                </Attribute>
+                <Attribute>
+                    <Term>schemeAgencyName</Term>
+                </Attribute>
+                <Value type="EXAMPLE">SHIP32164</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Information</Term>
+                <Name>Shipment description</Name>
+                <Description>Free-form text applying to a shipment. This element may contain notes or any other similar information that is not contained explicitly in another structure.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:GrossWeightMeasure</Term>
+                <Name>Shipment gross weight</Name>
+                <Description>The total weight of the shipment including packaging, as dispatched from the despatching party.</Description>
+
+                <Attribute>
+                    <Term>unitCode</Term>
+                </Attribute>
+                <Value type="EXAMPLE">100</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:GrossVolumeMeasure</Term>
+                <Name>Shipment gross volume</Name>
+                <Description>The total volume of the shipment including packaging, as dispatched from the despatching party.</Description>
+
+                <Attribute>
+                    <Term>unitCode</Term>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:TotalTransportHandlingUnitQuantity</Term>
+                <Name>Total number of transport handling units</Name>
+                <Description>The total number of transport handling units in this despatch.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Consignment</Term>
+                <Name>Consignment</Name>
+                <Description>Information regarding the physical shipment.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Consignment identifier</Name>
+                    <Description>An association to Consignment covering the shipment. Unique number assigned to goods, both for import and export.</Description>
+
+                    <Attribute>
+                        <Term>schemeID</Term>
+                    </Attribute>
+                    <Attribute>
+                        <Term>schemeAgencyID</Term>
+                    </Attribute>
+                    <Attribute>
+                        <Term>schemeAgencyName</Term>
+                    </Attribute>
+                    <Value type="EXAMPLE">CSM9999</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Information</Term>
+                    <Name>Vehicle information</Name>
+                    <Description>Description and/or identification of the vehicle that tranpsorts the despatched shipment.</Description>
+
+                    <Value type="EXAMPLE">AB12345</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:CarrierParty</Term>
+                    <Name>Carrier</Name>
+                    <Description>Carrier description</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:PartyName</Term>
+                        <Name>Name</Name>
+                        <Description>Carrier name</Description>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Carrier name</Name>
+                            <Description>The name of the carrier that handles the delivery of the despatched shipment.</Description>
+
+                            <Value type="EXAMPLE">AS Transportøren</Value>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Person</Term>
+                    <Name>Person</Name>
+                    <Description>Person who performs the physical shipment.</Description>
+
+                    <Element>
+                        <Term>cac:IdentityDocumentReference</Term>
+                        <Name>Identification</Name>
+                        <Description>Identification of the person responsible for the transportation.</Description>
+                        <Reference type="RULE">NOGOV-T16-R007</Reference>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Driver information</Name>
+                            <Description>Identification about the driver of the vehicle that delivers the despatched shipment.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:DocumentType</Term>
+                            <Name>Driver information document type</Name>
+                            <Description>The type of document used for identifying the driver, expressed in text.</Description>
+                        </Element>
+
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Delivery</Term>
+                <Name>Delivery</Name>
+                <Description>Details regarding the shipment.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:TrackingID</Term>
+                    <Name>Delivery tracking identifier</Name>
+                    <Description>Used to provide a tracking id for delivery e.g. UPS or postal.</Description>
+                    <Value type="EXAMPLE">TR321654987</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:EstimatedDeliveryPeriod</Term>
+                    <Name>Delivery period</Name>
+                    <Description>Expected delivery period.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StartDate</Term>
+                        <Name>Period start date</Name>
+                        <Description>The start date of the period.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                        <Value type="EXAMPLE">2015-03-08</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StartTime</Term>
+                        <Name>Period start time</Name>
+                        <Description>The start time of the period.</Description>
+                        <Value type="EXAMPLE">08:00</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:EndDate</Term>
+                        <Name>Period end date</Name>
+                        <Description>The end date of the period.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                        <Value type="EXAMPLE">2015-03-08</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:EndTime</Term>
+                        <Name>Period end time</Name>
+                        <Description>The end time of the period.</Description>
+                        <Value type="EXAMPLE">10:00</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Despatch</Term>
+                    <Name>Despatch</Name>
+                    <Description>Despatch details.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ActualDespatchDate</Term>
+                        <Name>Shipment dispatch date</Name>
+                        <Description>The actual or expected date when the shipment was despatched from the despatching party.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                        <Value type="EXAMPLE">2015-03-08</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ActualDespatchTime</Term>
+                        <Name>Shipment dispatch time</Name>
+                        <Description>The actual or expected time when the shipment was despatched from the despatching party.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                        <Value type="EXAMPLE">2015-03-08</Value>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:DespatchAddress</Term>
+                    <Name>Pickup address</Name>
+                    <Description>Address where the goods is going to be picked up.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Address identifier</Name>
+                        <Description>Identifier of a specific address in a register of addresses such as GLN.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details supplementing the main line.
+                            Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Country</Term>
+                        <Name>Country code</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
+                            <Reference type="RULE">OP-T16-R001</Reference>
+                            <Reference type="RULE">NOGOV-T16-R002</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                                <Reference type="RULE">EUGEN-T16-R003</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:DespatchLine</Term>
+            <Name>Despatch line</Name>
+            <Description>The goods contained in the despatch advice.</Description>
+            <Reference type="RULE">BII2-T16-R012</Reference>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Despatch line identifier</Name>
+                <Description>An identifier for the individual line in the despatch advice.</Description>
+                <Reference type="RULE">BII2-T16-R013</Reference>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:Note</Term>
+                <Name>Despatch line note</Name>
+                <Description>General note regarding the despach advice line. Free-form text applying to the Despatch Line.
+                    This element may contain notes or any other similar information that is not contained explicitly in another structure..</Description>
+            </Element>
+
+            <Element>
+                <Term>cbc:DeliveredQuantity</Term>
+                <Name>Delivered quantity</Name>
+                <Description>The quantity that is despatched in the line.</Description>
+                <Reference type="RULE">BII2-T16-R017</Reference>
+                <Reference type="RULE">BII2-T16-R019</Reference>
+
+                <Attribute>
+                    <Term>unitCode</Term>
+                    <Reference type="RULE">BII2-T16-R020</Reference>
+                    <Reference type="RULE">OP-T16-R002</Reference>
+                </Attribute>
+                <Attribute>
+                    <Term>unitCodeListID</Term>
+                    <Reference type="RULE">EUGEN-T16-R004</Reference>
+                </Attribute>
+
+                <Value type="EXAMPLE">10</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:OutstandingQuantity</Term>
+                <Name>Outstanding quantity</Name>
+                <Description>The quantity outstanding (which will follow in a later shipment).</Description>
+
+                <Attribute>
+                    <Term>unitCode</Term>
+                    <Reference type="RULE">OP-T16-R002</Reference>
+                </Attribute>
+                <Attribute>
+                    <Term>unitCodeListID</Term>
+                    <Reference type="RULE">EUGEN-T16-R004</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:OutstandingReason</Term>
+                <Name>Outstanding quantity reason</Name>
+                <Description>The reason for the outstanding quantity.</Description>
+                <Reference type="RULE">BII2-T16-R021</Reference>
+            </Element>
+
+            <Element>
+                <Term>cac:OrderLineReference</Term>
+                <Name>Order line</Name>
+                <Description>Reference to the order line the despatch line contains.</Description>
+
+                <Element>
+                    <Term>cbc:LineID</Term>
+                    <Name>Order line reference</Name>
+                    <Description>To uniquely identify the line of the order that is being despatched.</Description>
+                    <Value type="EXAMPLE">2</Value>
+                </Element>
+            </Element>
+
+            <Element>
+                <Term>cac:Item</Term>
+                <Name>Item</Name>
+                <Description>Item information regarding the goos in the despatch advice line.</Description>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Name</Term>
+                    <Name>Item name</Name>
+                    <Description>A short name for an item.</Description>
+                    <Reference type="RULE">BII2-T16-R016</Reference>
+                    <Value type="EXAMPLE">Fotopapir A4 Glossy</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:SellersItemIdentification</Term>
+                    <Name>Part number</Name>
+                    <Description>Sellers partnumber.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item sellers identifier</Name>
+                        <Description>The sellers identifier for the item.</Description>
+                        <Reference type="RULE">BII2-T16-R016</Reference>
+                        <Value type="EXAMPLE">C98765</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ExtendedID</Term>
+                        <Name>Item sellers extended identifier</Name>
+                        <Description>An extended identifier for the item that identifies the item with specific properties, e.g., Item 123 = Chair / Item 123 Ext 45 = brown chair.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:StandardItemIdentification</Term>
+                    <Name>Standard partnumber</Name>
+                    <Description>Identification according to a standard system. i.e. GTIN.</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item standard identifier</Name>
+                        <Description>An item identifier based on a registered schema.</Description>
+                        <Reference type="RULE">BII2-T16-R016</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">BII2-T16-R018</Reference>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyName</Term>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ExtendedID</Term>
+                        <Name>Item standard extended identifier</Name>
+                        <Description>with specific properties, e.g., Item 123 = Chair / Item 123 Ext 45 = brown chair.</Description>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:HazardousItem</Term>
+                    <Name>Hazardous item</Name>
+                    <Description>Information to be used if the despatch line contains hazardous goods.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:UNDGCode</Term>
+                        <Name>Hazardous item UNDG code</Name>
+                        <Description>The identifier assigned to transportable hazardous goods by the United Nations, expressed as a code.</Description>
+                        <Reference type="RULE">OP-T16-R003</Reference>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                            <Reference type="RULE">EUGEN-T16-R005</Reference>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:HazardClassID</Term>
+                        <Name>Haszardous hazard class Identifier</Name>
+                        <Description>Identifies a hazard class applicable to dangerous goods as defined by the relevant regulation authority, such as the IMDG Class Number of the SOLAS Convention of
+                            IMO and the ADR/RID Class Number for the road/rail environment.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyName</Term>
+                        </Attribute>
+                    </Element>
+
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:ItemInstance</Term>
+                    <Name>Item details</Name>
+                    <Description>Detailed information regarding the goods on the despatch advice line.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ManufactureDate</Term>
+                        <Name>Item manufactured date</Name>
+                        <Description>The manufacturing date of all items listed in this despatch line.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BestBeforeDate</Term>
+                        <Name>Item best before date</Name>
+                        <Description>The best before date of all items listed in this despatch line.</Description>
+                        <Reference type="RULE">NOGOV-T16-R008</Reference>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:SerialID</Term>
+                        <Name>Item serial numbers</Name>
+                        <Description>Serial numbers for items listed in the despatch line.</Description>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyName</Term>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:LotIdentification</Term>
+                        <Name>LOT</Name>
+                        <Description>LOT number identification.</Description>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:LotNumberID</Term>
+                            <Name>Item batch number</Name>
+                            <Description>The batch number that applies to all items in the despatch line.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                            </Attribute>
+                            <Attribute>
+                                <Term>schemeAgencyID</Term>
+                            </Attribute>
+                            <Attribute>
+                                <Term>schemeAgencyName</Term>
+                            </Attribute>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ExpiryDate</Term>
+                            <Name>Item expiry date</Name>
+                            <Description>The expiry date of all items listed in this despatch line. The expiry date indicates that the items should not be used after this date.</Description>
+                            <Reference type="RULE">NOGOV-T16-R008</Reference>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Shipment</Term>
+                <Name>Packing</Name>
+                <Description>Information regarding how the goods in the despach advice line is packed.</Description>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Identifier</Name>
+                    <Description>Shipment identifier is only identified on header level.  On line level use “NA”.</Description>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:TransportHandlingUnit</Term>
+                    <Name>Transport handling unit</Name>
+                    <Description>Information regarding the physical packing (pallet, container, box, etc) of the goods on the despatch advice line.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Handling unit identifier</Name>
+                        <Description>Identifies the transport handling unit.</Description>
+                        <Reference type="RULE">OP-T16-R004</Reference>
+
+                        <Attribute>
+                            <Term>schemeID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyID</Term>
+                        </Attribute>
+                        <Attribute>
+                            <Term>schemeAgencyName</Term>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:TransportHandlingUnitTypeCode</Term>
+                        <Name>Handling unit type</Name>
+                        <Description>The type of packaging that represent the handling unit, such as box, pallet, container etc.</Description>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                            <Reference type="RULE">EUGEN-T16-R006</Reference>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:HazardousRiskIndicator</Term>
+                        <Name>Handling unit hazardous indicator</Name>
+                        <Description>Indicates whether the shipment contains hazardous materials.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ShippingMarks</Term>
+                        <Name>Handing unit shipping marks</Name>
+                        <Description>Free-form description of the marks and numbers on a transport unit or package.</Description>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:MeasurementDimension</Term>
+                        <Name>Weight/Volume</Name>
+                        <Description>Information regarding weight/volume of the transport handling unit.</Description>
+
+                        <Element>
+                            <Term>cbc:AttributeID</Term>
+                            <Name>Attribute identifier</Name>
+                            <Description>Identifier for content in the MEasue element below according to codelist UNCL6313.  Use AAB and AAW for gross wieght and gross volume respectively.</Description>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                            </Attribute>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Measure</Term>
+                            <Name>Handling unit gross weight/volume</Name>
+                            <Description>Handling gross weight/volume, including packaging as despatched by despatching party.</Description>
+                            <Reference type="RULE">OP-T16-R007</Reference>
+
+                            <Attribute>
+                                <Term>unitCode</Term>
+                                <Reference type="RULE">OP-T16-R002</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+
+
+        </Element>
+
+    </Document>
+
+</Syntax>

@@ -1,0 +1,17 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+|
+| Updated rules for PEPPOL BIS.
+| Validator
+
+| link:https://github.com/difi/vefa-ehf-postaward/issues/267[#267]
+| Adding a missing word in "Profiler og meldinger" section (Norwegian edition only).
+| Guide
+
+|===

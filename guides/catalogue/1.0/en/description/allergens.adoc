@@ -8,7 +8,7 @@ Correct indication of allergens is a matter about life and health, it is therefo
 | Value | Description
 | YES | The item contains the specific type of allergen.
 | MAY | The item may contain the specific type of allergen.
-| UNKNOWN | Vet ikke om varen inneholder den spesifiserte typen allergener.
+| UNKNOWN | Do not know if the item contains the specific type of allergen.
 | FREE | The item does not contain the specific type of allergen.
 |===
 

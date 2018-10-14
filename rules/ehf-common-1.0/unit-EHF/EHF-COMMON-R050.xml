@@ -46,7 +46,7 @@
 	</test>
 	<test>
 		<assert>
-			<warning>EHF-COMMON-R050</warning>
+			<error>EHF-COMMON-R050</error>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

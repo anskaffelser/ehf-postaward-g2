@@ -94,7 +94,7 @@
     <rule context="cbc:Note[2]">
       <assert id="EHF-COMMON-R050"
               test="false()"
-              flag="warning">Only one note element is allowed.</assert>
+              flag="fatal">Only one note element is allowed.</assert>
     </rule>
     <rule context="cbc:EmbeddedDocumentBinaryObject[@mimeCode]">
       <assert id="EHF-COMMON-R100"
