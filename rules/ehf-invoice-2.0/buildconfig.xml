@@ -17,12 +17,14 @@
         <inherit>ehf-t10-stylesheet-2.0</inherit>
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch"
-          path="xsl/BIIRULES-UBL-T10.xsl" />
+          path="xsl/BIIRULES-UBL-T10.xsl"
+          infoUrl="/ehf/g2/rules/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch"
-          path="xsl/OPENPEPPOL-UBL-T10.xsl" />
-        <file source="sch/NONAT-UBL-T10.sch" path="xsl/NONAT-UBL-T10.xsl" infoUrl="/ehf/rule/invoice-2.0/{}/" />
-        <file source="sch/NOGOV-UBL-T10.sch" path="xsl/NOGOV-UBL-T10.xsl" infoUrl="/ehf/rule/invoice-2.0/{}/" />
+          path="xsl/OPENPEPPOL-UBL-T10.xsl"
+          infoUrl="/ehf/g2/rules/{}/" />
+        <file source="sch/NONAT-UBL-T10.sch" path="xsl/NONAT-UBL-T10.xsl" infoUrl="/ehf/g2/rules/{}/" />
+        <file source="sch/NOGOV-UBL-T10.sch" path="xsl/NOGOV-UBL-T10.xsl" infoUrl="/ehf/g2/rules/{}/" />
         <rule identifier="BII2-T10-R025" action="suppress" />
         <rule identifier="BII2-T10-R035" action="suppress" />
         <rule identifier="BII2-T10-R037" action="suppress" />

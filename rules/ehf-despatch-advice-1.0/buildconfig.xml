@@ -10,13 +10,15 @@
         <title>EHF Despatch Advise 1.0 (Base)</title>
         <inherit>ubl-despatchadvice-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
-        <file source="sch/NOGOV-UBL-T16.sch" path="xsl/NOGOV-UBL-T16.xsl" />
+        <file source="sch/NOGOV-UBL-T16.sch" path="xsl/NOGOV-UBL-T16.xsl" infoUrl="/ehf/g2/rules/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/BII RULES/BIIRULES-UBL-T16.sch"
-          path="xsl/BIIRULES-UBL-T16.xsl" />
+          path="xsl/BIIRULES-UBL-T16.xsl"
+          infoUrl="/ehf/g2/rules/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T16.sch"
-          path="xsl/OPENPEPPOL-UBL-T16.xsl" />
+          path="xsl/OPENPEPPOL-UBL-T16.xsl"
+          infoUrl="/ehf/g2/rules/{}/" />
     </configuration>
 
     <configuration>

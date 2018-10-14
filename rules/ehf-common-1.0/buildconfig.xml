@@ -6,7 +6,7 @@
     <configuration>
         <identifier>ehf-common-ubl-1.0</identifier>
         <title>EHF Common 1.0 (Base)</title>
-        <file source="sch/EHF-UBL-COMMON.sch" path="xsl/EHF-UBL-COMMON.xsl" infoUrl="/ehf/guide/common/1.0/en/#{}" />
+        <file source="sch/EHF-UBL-COMMON.sch" path="xsl/EHF-UBL-COMMON.xsl" infoUrl="/ehf/g2/rules/{}/" />
     </configuration>
 
 </buildConfigurations>
