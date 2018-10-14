@@ -1,1 +1,1 @@
-docker run --rm -it -v $(pwd):/documents -e "pdf=false" difi/asciidoctor
+docker run --rm -it -v $(pwd):/documents difi/asciidoctor
