@@ -77,6 +77,78 @@
         <Tag>reminder</Tag>
     </Resource>
 
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2018-09-12/</Path>
+        <Title>Release 2018-09-12</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-09-12'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2018-02-20/</Path>
+        <Title>Release 2018-02-20</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-02-20'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2017-11-15/</Path>
+        <Title>Release 2017-11-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2017-11-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2017-09-14/</Path>
+        <Title>Release 2017-09-14</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2017-09-14'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2017-05-15/</Path>
+        <Title>Release 2017-05-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2017-05-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2017-02-15/</Path>
+        <Title>Release 2017-02-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2017-02-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2016-12-13/</Path>
+        <Title>Release 2016-12-13</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2016-12-13'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2016-11-15/</Path>
+        <Title>Release 2016-11-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2016-11-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2016-09-15/</Path>
+        <Title>Release 2016-09-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2016-09-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2016-05-23/</Path>
+        <Title>Release 2016-05-23</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2016-05-23'.</Description>
+        <Tag>release</Tag>
+    </Resource>
+
+
     <!-- Rules -->
     <Resource>
         <Identifier>t19-nogov</Identifier>
@@ -382,6 +454,11 @@
     <Tag>
         <Identifier>reminder</Identifier>
         <Title>EHF Reminder 1.1.0</Title>
+    </Tag>
+    <Tag>
+        <Identifier>release</Identifier>
+        <Title>Release notes</Title>
+        <Description>All release notes part of EHF Post-Award G2.</Description>
     </Tag>
 
 </Project>

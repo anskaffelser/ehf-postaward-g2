@@ -3,13 +3,21 @@
 PROJECT=$(dirname $(readlink -f "$0"))
 
 docker_pull() {
-  echo "Pulling Docker image '$1'."
-  docker pull $1
+    if [ ! "$DP_SKIP" = 'true' ]; then
+        fold_start "docker-pull" "Pulling Docker images"
 
-  res="$?"
-  if [ ! "$res" = '0' ]; then
-    exit $res
-  fi
+        for image in $@; do
+            echo "Pulling Docker image '$image'."
+            docker pull $image
+
+            res="$?"
+            if [ ! "$res" = '0' ]; then
+                exit $res
+            fi
+        done
+
+        fold_end "docker-pull"
+    fi
 }
 
 docker_run() {
@@ -32,29 +40,26 @@ docker_run() {
 }
 
 fold_start() {
-  if [ "$TRAVIS" = 'true' ]; then
-    echo -e "travis_fold:start:$1\033[33;1m$2\033[0m"
-  else
-    echo $2
-  fi
+    if [ "$TRAVIS" = 'true' ]; then
+        echo -n "travis_fold:start:$1"
+    fi
+
+    echo "\033[33;1m$2\033[0m"
 }
 
 fold_end() {
-  if [ "$TRAVIS" = 'true' ]; then
-    echo -e "\ntravis_fold:end:$1"
-  else
-    echo
-  fi
+    if [ "$TRAVIS" = 'true' ]; then
+        echo "\ntravis_fold:end:$1\r"
+    else
+        echo
+    fi
 }
 
-if [ ! "$DP_SKIP" = 'true' ]; then
-  fold_start "docker_pull" "Pulling Docker images"
-  docker_pull alpine:3.6
-  docker_pull difi/vefa-structure:0.7
-  docker_pull difi/vefa-validator
-  docker_pull difi/asciidoctor
-  fold_end "docker_pull"
-fi
+docker_pull \
+    alpine:3.6 \
+    difi/vefa-structure:0.7 \
+    difi/vefa-validator \
+    difi/asciidoctor
 
 if [ -e $PROJECT/target ]; then
     docker_run "clean" "Removing old target folder" \
@@ -78,7 +83,7 @@ docker_run "asciidoctor" "Creating documentation" \
     -v $PROJECT/target:/target \
     difi/asciidoctor
 
-if [ ! "$CI" = 'true' ]; then
+if [ ! "$TRAVIS" = 'true' ]; then
     docker_run "ownership" "Fixing ownership" \
         -v $PROJECT:/src \
         alpine:3.6 \

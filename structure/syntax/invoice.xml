@@ -6,6 +6,8 @@
 
     <Property key="sch:prefix">EHF-T10</Property>
     <Property key="sch:identifier">t10-basic</Property>
+    <Property key="sch:flag">warning</Property>
+    <Property key="sch:LimitToModelRule:flag">off</Property>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>

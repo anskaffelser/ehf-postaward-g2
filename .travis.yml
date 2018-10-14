@@ -5,10 +5,5 @@ language: bash
 services:
   - docker
 
-env:
-  - PERFORM=build
-  - PERFORM=guides
-  - PERFORM=rules
-
 script:
-  - sh tools/travis/$PERFORM.sh
+  - sh build.sh
