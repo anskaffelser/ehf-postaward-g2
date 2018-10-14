@@ -34,7 +34,8 @@ docker_run() {
   fold_end $ident
 
   if [ ! "$res" = '0' ]; then
-      echo Exited with $res.
+      echo "* Exited with $res."
+      echo
   #    exit $res
   fi
 }

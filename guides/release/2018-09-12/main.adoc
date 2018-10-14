@@ -44,7 +44,7 @@ Denne er tilgjengelig kun på engelsk. Vennlist se link:#order-agreement[oversik
 include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.9.adoc[]
 
 
-== EHF Common 1.0.2 [[no-common]]
+== EHF Common 1.0.3 [[no-common]]
 
 Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på engelsk].
 
@@ -82,7 +82,7 @@ include::../../order-agreement/1.0/en/changelog/{release}-1.0.1.adoc[]
 include::../../despatch-advice/1.0/en/changelog/{release}-1.0.9.adoc[]
 
 
-== EHF Common 1.0.2 [[common]]
+== EHF Common 1.0.3 [[common]]
 
 include::../../common/1.0/en/changelog/{release}-1.0.3.adoc[]
 

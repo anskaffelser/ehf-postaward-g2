@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="urn:fdc:difi.no:2017:vefa:structure:Project-1">
 
-    <Name>EHF Post-Award (G2)</Name>
+    <Name>EHF Post-Award G2</Name>
 
     <!-- Documentation -->
     <Resource>
@@ -49,7 +49,7 @@
     <Resource>
         <Type>Doc-1</Type>
         <Path>order-agreement/1.0/en/</Path>
-        <Title>Implementation guideline (English)</Title>
+        <Title>Implementation guideline</Title>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
@@ -67,7 +67,7 @@
     <Resource>
         <Type>Doc-1</Type>
         <Path>punch-out/1.0/en/</Path>
-        <Title>Implementation guideline (English)</Title>
+        <Title>Implementation guideline</Title>
         <Tag>punch-out</Tag>
     </Resource>
     <Resource>
@@ -77,6 +77,13 @@
         <Tag>reminder</Tag>
     </Resource>
 
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2018-11-15/</Path>
+        <Title>Release 2018-11-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-11-15'.</Description>
+        <Tag>release</Tag>
+    </Resource>
     <Resource>
         <Type>Doc-1</Type>
         <Path>release/2018-09-12/</Path>
@@ -317,12 +324,14 @@
         <Description>Rules for transaction 01 defined by CEN BII.</Description>
         <Tag>ordering</Tag>
     </Resource>
-    <!-- <Resource>
+    <Resource>
         <Identifier>t01-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T01.sch</Path>
+        <Title>Rules for PEPPOL BIS Order</Title>
+        <Description>Rules for PEPPOL BIS Order defined by OpenPEPPOL.</Description>
         <Tag>ordering</Tag>
-    </Resource> -->
+    </Resource>
     <Resource>
         <Identifier>t110-bii</Identifier>
         <Type>native:Schematron</Type>

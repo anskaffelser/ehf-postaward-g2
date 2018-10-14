@@ -1,0 +1,90 @@
+include::../settings.adoc[]
+
+= EHF Release {release}
+{name-difi-no}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:release: 2018-11-15
+
+:leveloffset: +1
+
+= Norsk [[norsk]]
+
+
+// == EHF Faktura og kreditnota 2.0.14 [[faktura-og-kreditnota]]
+
+// include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.14.adoc[]
+
+
+// == EHF Katalog 1.0.12 [[katalog]]
+
+// include::../../catalogue/1.0/no/endringslogg/{release}-1.0.12.adoc[]
+
+
+// == EHF Ordreprosess 1.0.10 [[ordreprosess]]
+
+// include::../../ordering/1.0/no/endringslogg/{release}-1.0.10.adoc[]
+
+
+// == EHF Ordreforslag 1.0.1 [[ordreforslag]]
+
+// Denne er tilgjengelig kun på engelsk. Vennlist se link:#order-agreement[oversikten på engelsk].
+
+
+// == EHF Punch Out 1.0.0 [[no-punch-out]]
+
+// Denne er tilgjengelig kun på engelsk. Vennlist se link:#punch-out[oversikten på engelsk].
+
+
+// == EHF Pakkseddel 1.0.9 [[pakkseddel]]
+
+// include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.9.adoc[]
+
+
+// == EHF Common 1.0.3 [[no-common]]
+
+// Denne er tilgjengelig kun på engelsk. Vennlist se link:#common[oversikten på engelsk].
+
+
+= English [[english]]
+
+
+// == EHF Invoice and Creditnote 2.0.14 [[invoice-and-creditnote]]
+
+// include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.14.adoc[]
+
+
+// == EHF Catalogue 1.0.12 [[catalogue]]
+
+// include::../../catalogue/1.0/en/changelog/{release}-1.0.12.adoc[]
+
+
+// == EHF Ordering 1.0.10 [[ordering]]
+
+// include::../../ordering/1.0/en/changelog/{release}-1.0.10.adoc[]
+
+
+// == EHF Order Agreement 1.0.1 [[order-agreement]]
+
+// include::../../order-agreement/1.0/en/changelog/{release}-1.0.1.adoc[]
+
+
+// == EHF Punch Out 1.0.0 [[punch-out]]
+
+// include::../../punch-out/1.0/en/changelog/{release}-1.0.0.adoc[]
+
+
+// == EHF Despatch Advice 1.0.9 [[despatch-advice]]
+
+// include::../../despatch-advice/1.0/en/changelog/{release}-1.0.9.adoc[]
+
+
+// == EHF Common 1.0.3 [[common]]
+
+// include::../../common/1.0/en/changelog/{release}-1.0.3.adoc[]
+
+
+include::{shared-dir}/no/message/piwik.adoc[]
