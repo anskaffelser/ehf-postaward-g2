@@ -4,6 +4,9 @@
     <Term>Invoice</Term>
     <Name>Post-Award Invoice</Name>
 
+    <Property key="sch:prefix">EHF-T10</Property>
+    <Property key="sch:identifier">t10-basic</Property>
+
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
     <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
@@ -138,7 +141,7 @@
             <Name>Period</Name>
             <Description>For invoices that charge for services or items delivered over a time period, such as subscriptions or
                 metered services, an invoice may contain information about the date period to which the invoice applies.</Description>
-            
+
             <Element>
                 <Term>cbc:StartDate</Term>
                 <Name>Period start date</Name>
@@ -161,12 +164,12 @@
                 <Value type="EXAMPLE">2013-06-30</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:OrderReference</Term>
             <Name>Order</Name>
             <Description>An association to order reference.</Description>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Order reference identifier</Name>
@@ -176,12 +179,12 @@
                 <Value type="EXAMPLE">Ordreno. 654</Value>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:ContractDocumentReference</Term>
             <Name>Contract</Name>
             <Description>Reference to contract or framework agreement.</Description>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Contract identifier</Name>
@@ -190,7 +193,7 @@
                 <Reference type="RULE">NOGOV-T10-R005</Reference>
                 <Value type="EXAMPLE">Framework F32165</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:DocumentTypeCode</Term>
                 <Name>Contract type,code</Name>
@@ -257,7 +260,7 @@
                     <Term>cac:ExternalReference</Term>
                     <Name>External reference</Name>
                     <Description>An attached document.</Description>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:URI</Term>
                         <Name>External reference</Name>
@@ -278,14 +281,14 @@
                 <Term>cac:Party</Term>
                 <Name>Supplier</Name>
                 <Description>Association to party.</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:EndpointID</Term>
                     <Name>EndPointID</Name>
                     <Description>An invoice  may contain the sellers electronic address. The address can be of any format and the format should be identified in the message.
                         Electronic addresses for Norwegian actors using the PEPPOL transport infrastructure shall be specified as Norwegian Organization Number.</Description>
                     <Reference type="RULE">NOGOV-T10-R026</Reference>
-                    
+
                     <Attribute>
                         <Term>schemeID</Term>
                         <Description>Identification of the issuing agency of the EndpointID.</Description>
@@ -307,7 +310,7 @@
                         <Description>An invoice may contain a registered identifier for the seller. Information referenced by the identifier is not considered
                             part of the message (i.e. the buyer is not required to look up the identifier in the relevant registry and process additional information).</Description>
                         <Reference type="RULE">BII2-T10-R006</Reference>
-                        
+
                         <Attribute>
                             <Term>schemeID</Term>
                             <Description>Identification of the issuing agency of the party identification.</Description>
@@ -317,7 +320,7 @@
                         <Value type="EXAMPLE">654321</Value>
                     </Element>
                 </Element>
-                
+
                 <Element>
                     <Term>cac:PartyName</Term>
                     <Name>Supplier name</Name>
@@ -423,11 +426,11 @@
                         </Attribute>
                         <Value type="EXAMPLE">987654321MVA</Value>
                     </Element>
-                    
+
                     <Element>
                         <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
-                        
+
                         <Element>
                             <Term>cbc:ID</Term>
                             <Name>Identifier</Name>
@@ -437,9 +440,9 @@
                             <Value type="EXAMPLE">VAT</Value>
                         </Element>
                     </Element>
-                    
+
                 </Element>
-                
+
                 <Element>
                     <Term>cac:PartyLegalEntity</Term>
                     <Name>Legal entity</Name>
@@ -1015,7 +1018,7 @@
             <Term>cac:Delivery</Term>
             <Name>Delivery</Name>
             <Description>Delivery details</Description>
-            
+
             <Element>
                 <Term>cbc:ActualDeliveryDate</Term>
                 <Name>Delivery date</Name>
@@ -1024,12 +1027,12 @@
                 <Reference type="RULE">NONAT-T10-R028</Reference>
                 <Value type="EXAMPLE">2013-06-15</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:DeliveryLocation</Term>
                 <Name>Delivery location</Name>
                 <Description>Specification of where the goods or services were delivered.</Description>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:ID</Term>
                     <Name>Location identifier</Name>
@@ -1124,12 +1127,12 @@
                 <Reference type="RULE">NOGOV-T10-R020</Reference>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..n">
             <Term>cac:AllowanceCharge</Term>
             <Name>Allowance charge</Name>
             <Description>Description of allowances and charges on document level.</Description>
-            
+
             <Element>
                 <Term>cbc:ChargeIndicator</Term>
                 <Name>Allowance/Charge indicator</Name>
@@ -1149,7 +1152,7 @@
                     <Reference type="RULE">EUGEN-T10-R029</Reference>
                     <Value type="EXAMPLE">UNCL4465</Value>
                 </Attribute>
-                
+
                 <Value type="EXAMPLE">3</Value>
             </Element>
 
@@ -1162,7 +1165,7 @@
                 <Reference type="RULE">NONAT-T10-R011</Reference>
                 <Value type="EXAMPLE">Freight charge</Value>
             </Element>
-            
+
             <Element>
                 <Term>cbc:Amount</Term>
                 <Name>Amount</Name>
@@ -1178,7 +1181,7 @@
                     <Value type="EXAMPLE">NOK</Value>
                 </Attribute>
             </Element>
-            
+
             <Element>
                 <Term>cac:TaxCategory</Term>
                 <Name>Tax category</Name>
@@ -1230,13 +1233,13 @@
             <Term>cac:TaxExchangeRate</Term>
             <Name>Tax exchange rate</Name>
             <Description>Exchange rate for calculation of tax in home currency, mandatory if DocumentCurrencyCode is not = NOK.</Description>
-            
+
             <Element>
                 <Term>cbc:SourceCurrencyCode</Term>
                 <Name>From currency</Name>
                 <Description>The currency code for the from currency, must be from ISO code list 4217.</Description>
                 <Reference type="RULE">OP-T10-R010</Reference>
-                
+
                 <Attribute>
                     <Term>listID</Term>
                     <Name>Identification of the codelist.</Name>
@@ -1260,7 +1263,7 @@
                 </Attribute>
                 <Value type="EXAMPLE">NOK</Value>
             </Element>
-            
+
             <Element>
                 <Term>cbc:CalculationRate</Term>
                 <Name>Exchange rate</Name>
@@ -1562,12 +1565,12 @@
             </Element>
 
         </Element>
-        
+
         <Element cardinality="1..n">
             <Term>cac:InvoiceLine</Term>
             <Name>Invoice line</Name>
             <Description>An association to one or more invoice lines.</Description>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Line identifier</Name>
@@ -1632,7 +1635,7 @@
                 <Reference type="RULE">NOGOV-T10-R003</Reference>
                 <Value type="EXAMPLE">NS4102;Konto=4010;Avd=25;Prod=5421;Prosj=4098;MVAkode=1</Value>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:InvoicePeriod</Term>
                 <Name>Period</Name>
@@ -1657,7 +1660,7 @@
                     <Value type="EXAMPLE">2013-06-30</Value>
                 </Element>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:OrderLineReference</Term>
                 <Name>Order line reference</Name>
@@ -2113,7 +2116,7 @@
 
                 </Element>
             </Element>
-            
+
         </Element>
 
 

@@ -4,6 +4,9 @@
     <Term>Order</Term>
     <Name>Post-Award Order</Name>
 
+    <Property key="sch:prefix">EHF-T01</Property>
+    <Property key="sch:identifier">t01-basic</Property>
+
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Order-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
     <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>

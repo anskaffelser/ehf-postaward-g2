@@ -4,6 +4,9 @@
     <Term>Credit Note</Term>
     <Name>Post-Award Credit Note</Name>
 
+    <Property key="sch:prefix">EHF-T14</Property>
+    <Property key="sch:identifier">t14-basic</Property>
+
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
     <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>

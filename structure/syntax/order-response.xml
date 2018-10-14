@@ -4,6 +4,9 @@
     <Term>Order Response</Term>
     <Name>Post-Award Order Response</Name>
 
+    <Property key="sch:prefix">EHF-T76</Property>
+    <Property key="sch:identifier">t76-basic</Property>
+
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
     <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>

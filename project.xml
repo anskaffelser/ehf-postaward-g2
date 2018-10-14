@@ -161,66 +161,88 @@
         <Identifier>t19-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/BII RULES/BIIRULES-UBL-T19.sch</Path>
+        <Title>Rules for CEN BII Catalogue</Title>
+        <Description>Rules for transaction 19 defined by CEN BII.</Description>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t19-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T19.sch</Path>
+        <Title>Rules for PEPPOL BIS Catalogue</Title>
+        <Description>Rules for PEPPOL BIS Catalogue defined by OpenPEPPOL.</Description>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t58-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/BII RULES/BIIRULES-UBL-T58.sch</Path>
+        <Title>Rules for CEN BII Catalogue Response</Title>
+        <Description>Rules for transaction 58 defined by CEN BII.</Description>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t58-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T58.sch</Path>
+        <Title>Rules for PEPPOL BIS Catalogue Response</Title>
+        <Description>Rules for PEPPOL BIS Catalogue Response defined by OpenPEPPOL.</Description>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t14-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/BII RULES/BIIRULES-UBL-T14.sch</Path>
+        <Title>Rules for CEN BII Credit Note</Title>
+        <Description>Rules for transaction 14 defined by CEN BII.</Description>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t14-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T14.sch</Path>
+        <Title>Rules for PEPPOL BIS Credit Note</Title>
+        <Description>Rules for PEPPOL BIS Credit Note defined by OpenPEPPOL.</Description>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t16-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/BII RULES/BIIRULES-UBL-T16.sch</Path>
+        <Title>Rules for CEN BII Despatch Advice</Title>
+        <Description>Rules for transaction 16 defined by CEN BII.</Description>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
         <Identifier>t16-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T16.sch</Path>
+        <Title>Rules for PEPPOL BIS Despatch Advice</Title>
+        <Description>Rules for PEPPOL BIS Despatch Advice defined by OpenPEPPOL.</Description>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
         <Identifier>t10-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch</Path>
+        <Title>Rules for CEN BII Invoice</Title>
+        <Description>Rules for transaction 10 defined by CEN BII.</Description>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t10-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch</Path>
+        <Title>Rules for PEPPOL BIS Invoice</Title>
+        <Description>Rules for PEPPOL BIS Invoice defined by OpenPEPPOL.</Description>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t01-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/BII RULES/BIIRULES-UBL-T01.sch</Path>
+        <Title>Rules for CEN BII Order</Title>
+        <Description>Rules for transaction 01 defined by CEN BII.</Description>
         <Tag>ordering</Tag>
     </Resource>
     <!-- <Resource>
@@ -233,36 +255,48 @@
         <Identifier>t110-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm110-1.0-order-agreement/Schematron/BII RULES/BIIRULES-UBL-T110.sch</Path>
+        <Title>Rules for CEN BII Order Agreement</Title>
+        <Description>Rules for transaction 110 defined by CEN BII.</Description>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
         <Identifier>t110-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm110-1.0-order-agreement/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T110.sch</Path>
+        <Title>Rules for PEPPOL BIS Order Agreement</Title>
+        <Description>Rules for PEPPOL BIS Order Agreement defined by OpenPEPPOL.</Description>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
         <Identifier>t76-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/BII RULES/BIIRULES-UBL-T76.sch</Path>
+        <Title>Rules for CEN BII Order Response</Title>
+        <Description>Rules for transaction 76 defined by CEN BII.</Description>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
         <Identifier>t76-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T76.sch</Path>
+        <Title>Rules for PEPPOL BIS Order Response</Title>
+        <Description>Rules for PEPPOL BIS Order Response defined by OpenPEPPOL.</Description>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
         <Identifier>t77-bii</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/BII RULES/BIIRULES-UBL-T77.sch</Path>
+        <Title>Rules for CEN BII Punch Out</Title>
+        <Description>Rules for transaction 77 defined by CEN BII.</Description>
         <Tag>punch-out</Tag>
     </Resource>
     <Resource>
         <Identifier>t77-openpeppol</Identifier>
         <Type>native:Schematron</Type>
         <Path>sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T77.sch</Path>
+        <Title>Rules for PEPPOL BIS Punch Out</Title>
+        <Description>Rules for PEPPOL BIS Punch Out defined by OpenPEPPOL.</Description>
         <Tag>punch-out</Tag>
     </Resource>
 
