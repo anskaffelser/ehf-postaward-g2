@@ -432,6 +432,22 @@
         <Tag>ordering</Tag>
     </Resource>
 
+    <!-- Files -->
+    <Resource>
+        <Type>native:File</Type>
+        <Path>target/generated/ehf-postaward-g2-examples.zip</Path>
+        <Title>Example files</Title>
+        <Description>Zip file containing examples of all document types part of EHF Post-Award G2.</Description>
+        <Property key="download">ehf-postaward-g2-examples.zip</Property>
+        <Tag>catalogue</Tag>
+        <Tag>despatch-advice</Tag>
+        <Tag>invoice-and-creditnote</Tag>
+        <Tag>order-agreement</Tag>
+        <Tag>ordering</Tag>
+        <Tag>punch-out</Tag>
+        <Tag>reminder</Tag>
+    </Resource>
+
     <Tag>
         <Identifier>catalogue</Identifier>
         <Title>EHF Catalogue 1.0.11</Title>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
 
+    <testfolder>example</testfolder>
     <testfolder>issues</testfolder>
     <testfolder>test</testfolder>
     <testfolder>unit-BII2</testfolder>

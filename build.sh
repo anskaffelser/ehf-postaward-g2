@@ -60,7 +60,8 @@ docker_pull \
     alpine:3.6 \
     difi/vefa-structure:0.7 \
     difi/vefa-validator \
-    difi/asciidoctor
+    difi/asciidoctor \
+    kramos/alpine-zip
 
 if [ -e $PROJECT/target ]; then
     docker_run "clean" "Removing old target folder" \
@@ -68,6 +69,13 @@ if [ -e $PROJECT/target ]; then
         alpine:3.6 \
         rm -rf /src/target
 fi
+
+docker_run "example-files" "Packaging example files" \
+    -v $PROJECT:/src \
+    -w / \
+    --entrypoint sh \
+    kramos/alpine-zip \
+    /src/tools/script/docker-package-examples.sh
 
 docker_run "vefa-structure" "Running vefa-structure" \
     -v $PROJECT:/src \
