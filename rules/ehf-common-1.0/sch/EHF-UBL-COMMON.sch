@@ -32,8 +32,11 @@
   <pattern>
     <rule context="cbc:*">
       <assert id="EHF-COMMON-R001"
-              test=". != ''"
+              test="text() != ''"
               flag="fatal">Document MUST not contain empty elements.</assert>
+      <assert id="EHF-COMMON-R005"
+              test="every $attr in @* satisfies normalize-space($attr) != ''"
+              flag="warning">Attributes MUST contain value.</assert>
     </rule>
     <rule context="cac:*">
       <assert id="EHF-COMMON-R002"
