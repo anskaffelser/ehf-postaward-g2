@@ -243,13 +243,13 @@
                         <Name>Consignee party address identifier</Name>
                         <Description>An identifier for a specific address within a scheme of registered addresses. Identifying the addess to where the items have been despatched</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
@@ -297,7 +297,7 @@
                             <Reference type="RULE">OP-T16-R001</Reference>
                             <Reference type="RULE">NOGOV-T16-R002</Reference>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>listID</Term>
                             </Attribute>
                         </Element>
@@ -511,13 +511,13 @@
                 <Description>Identifies a shipment.</Description>
                 <Reference type="RULE">BII2-T16-R011</Reference>
 
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>schemeID</Term>
                 </Attribute>
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>schemeAgencyID</Term>
                 </Attribute>
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>schemeAgencyName</Term>
                 </Attribute>
                 <Value type="EXAMPLE">SHIP32164</Value>
@@ -566,13 +566,13 @@
                     <Name>Consignment identifier</Name>
                     <Description>An association to Consignment covering the shipment. Unique number assigned to goods, both for import and export.</Description>
 
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>schemeID</Term>
                     </Attribute>
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>schemeAgencyID</Term>
                     </Attribute>
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>schemeAgencyName</Term>
                     </Attribute>
                     <Value type="EXAMPLE">CSM9999</Value>
@@ -756,7 +756,7 @@
                             <Reference type="RULE">OP-T16-R001</Reference>
                             <Reference type="RULE">NOGOV-T16-R002</Reference>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>listID</Term>
                                 <Reference type="RULE">EUGEN-T16-R003</Reference>
                             </Attribute>
@@ -799,7 +799,7 @@
                     <Reference type="RULE">BII2-T16-R020</Reference>
                     <Reference type="RULE">OP-T16-R002</Reference>
                 </Attribute>
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>unitCodeListID</Term>
                     <Reference type="RULE">EUGEN-T16-R004</Reference>
                 </Attribute>
@@ -816,7 +816,7 @@
                     <Term>unitCode</Term>
                     <Reference type="RULE">OP-T16-R002</Reference>
                 </Attribute>
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>unitCodeListID</Term>
                     <Reference type="RULE">EUGEN-T16-R004</Reference>
                 </Attribute>
@@ -886,14 +886,14 @@
                         <Description>An item identifier based on a registered schema.</Description>
                         <Reference type="RULE">BII2-T16-R016</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Reference type="RULE">BII2-T16-R018</Reference>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
@@ -928,13 +928,13 @@
                         <Description>Identifies a hazard class applicable to dangerous goods as defined by the relevant regulation authority, such as the IMDG Class Number of the SOLAS Convention of
                             IMO and the ADR/RID Class Number for the road/rail environment.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
@@ -965,13 +965,13 @@
                         <Name>Item serial numbers</Name>
                         <Description>Serial numbers for items listed in the despatch line.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
@@ -986,13 +986,13 @@
                             <Name>Item batch number</Name>
                             <Description>The batch number that applies to all items in the despatch line.</Description>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeID</Term>
                             </Attribute>
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeAgencyID</Term>
                             </Attribute>
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeAgencyName</Term>
                             </Attribute>
                         </Element>
@@ -1029,13 +1029,13 @@
                         <Description>Identifies the transport handling unit.</Description>
                         <Reference type="RULE">OP-T16-R004</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyID</Term>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeAgencyName</Term>
                         </Attribute>
                     </Element>
@@ -1045,7 +1045,7 @@
                         <Name>Handling unit type</Name>
                         <Description>The type of packaging that represent the handling unit, such as box, pallet, container etc.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                             <Reference type="RULE">EUGEN-T16-R006</Reference>
                         </Attribute>
@@ -1073,7 +1073,7 @@
                             <Name>Attribute identifier</Name>
                             <Description>Identifier for content in the MEasue element below according to codelist UNCL6313.  Use AAB and AAW for gross wieght and gross volume respectively.</Description>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeID</Term>
                             </Attribute>
                         </Element>
