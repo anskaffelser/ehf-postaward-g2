@@ -39,9 +39,9 @@ include::../../catalogue/1.0/no/endringslogg/{release}-1.0.13.adoc[]
 // Denne er tilgjengelig kun på engelsk. Vennlist se link:#punch-out[oversikten på engelsk].
 
 
-// == EHF Pakkseddel 1.0.9 [[pakkseddel]]
+== EHF Pakkseddel 1.0.10 [[pakkseddel]]
 
-// include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.9.adoc[]
+include::../../despatch-advice/1.0/no/endringslogg/{release}-1.0.10.adoc[]
 
 
 // == EHF Common 1.0.3 [[no-common]]
@@ -77,9 +77,9 @@ include::../../catalogue/1.0/en/changelog/{release}-1.0.13.adoc[]
 // include::../../punch-out/1.0/en/changelog/{release}-1.0.0.adoc[]
 
 
-// == EHF Despatch Advice 1.0.9 [[despatch-advice]]
+== EHF Despatch Advice 1.0.10 [[despatch-advice]]
 
-// include::../../despatch-advice/1.0/en/changelog/{release}-1.0.9.adoc[]
+include::../../despatch-advice/1.0/en/changelog/{release}-1.0.10.adoc[]
 
 
 // == EHF Common 1.0.3 [[common]]

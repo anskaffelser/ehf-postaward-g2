@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2" prefix="ubl"/>
 
+   <include href="../../../target/generated/t16-basic.sch"/>
+
    <pattern>
       <rule context="cac:Country">
          <assert id="NOGOV-T16-R002"

@@ -25,6 +25,16 @@
 		EUGEN-T10-R047
 		NOGOV-T10-R001
 		NONAT-T10-R003
+		EHF-T10-B03901
+		EHF-T10-B05201
+		EHF-T10-B05701
+		EHF-T10-B05702
+		EHF-T10-B07801
+		EHF-T10-B09601
+		EHF-T10-B09602
+		EHF-T10-B10501
+		EHF-T10-B13601
+
 
 -->
 <Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">

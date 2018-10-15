@@ -738,7 +738,7 @@
                     </Element>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PartyLegalEntity</Term>
                     <Name>Party legal entity</Name>
                     <Description>Association to Party Legal Entity. Must not be filled if the customer is a consumer (B2C), else mandatory.</Description>

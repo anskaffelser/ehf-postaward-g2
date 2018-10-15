@@ -1,0 +1,13 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| -
+| Legge til "grunnleggende" valideringsregler som er automatisk generert basert på syntaks. Reglene er identifisert med 'EHF-T16-BXXXXX' hvor 'XXXXX' er et løpenummer.
+| Validator
+
+|===
