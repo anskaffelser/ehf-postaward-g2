@@ -76,7 +76,7 @@
             <Name>Catalogue name</Name>
             <Description>A name of the catalogue for general reference. E.g. "Christmas catalogue"</Description>
 
-            <Attribute>
+            <Attribute usage="Optional">
                 <Term>languageID</Term>
             </Attribute>
             <Value type="EXAMPLE">Spring Catalogue</Value>
@@ -159,6 +159,11 @@
                 <Name>Source catalogue identifier</Name>
                 <Description>Identifies the existing, already received catalogue that this message should be acted upon,
                     so that no discrepancies occur between the suppliers and customers information.</Description>
+
+                <Attribute usage="Optional">
+                    <Term>schemeID</Term>
+                </Attribute>
+
                 <Value type="EXAMPLE">Cat-01</Value>
             </Element>
         </Element>
@@ -263,6 +268,11 @@
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
                         <Reference type="RULE">OP-T19-R001</Reference>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                        </Attribute>
+
                         <Value type="EXAMPLE">NO</Value>
                     </Element>
                 </Element>
@@ -290,6 +300,7 @@
                         <Term>schemeID</Term>
                         <Reference type="RULE">OP-T19-R006</Reference>
                     </Attribute>
+
                     <Value type="EXAMPLE">987654321</Value>
                 </Element>
 
@@ -313,6 +324,11 @@
                             <Name>Country code</Name>
                             <Description>The country in which the provider is legally registered.</Description>
                             <Reference type="RULE">OP-T19-R001</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                            </Attribute>
+
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
@@ -358,6 +374,7 @@
                         <Term>schemeID</Term>
                         <Reference type="RULE">OP-T19-R006</Reference>
                     </Attribute>
+
                     <Value type="EXAMPLE">7080000374200</Value>
                 </Element>
             </Element>
@@ -422,6 +439,11 @@
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
                         <Reference type="RULE">OP-T19-R001</Reference>
+
+                        <Attribute>
+                            <Term>listID</Term>
+                        </Attribute>
+
                         <Value type="EXAMPLE">GB</Value>
                     </Element>
                 </Element>
@@ -472,6 +494,11 @@
                             <Name>Country code</Name>
                             <Description>The country in which the provider is legally registered.</Description>
                             <Reference type="RULE">OP-T19-R001</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                            </Attribute>
+
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
@@ -514,7 +541,6 @@
                         <Description>Use in the absence of or in addition to Party Name. Use an identifier known to the document recipient.</Description>
                         <Reference type="RULE">EUGEN-T19-R044</Reference>
                         <Reference type="RULE">BII2-T19-R012</Reference>
-
 
                         <Attribute>
                             <Term>schemeID</Term>
@@ -584,6 +610,11 @@
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
                             <Reference type="RULE">OP-T19-R001</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                            </Attribute>
+
                             <Value type="EXAMPLE">NO</Value>
                         </Element>
                     </Element>
@@ -726,7 +757,7 @@
                 <Name>General payment conditions</Name>
                 <Description>Description of general payment conditions.</Description>
 
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>languageID</Term>
                     <Reference type="RULE">OP-T19-R012</Reference>
                 </Attribute>
@@ -857,7 +888,7 @@
                 <Reference type="RULE">BII2-T19-R029</Reference>
                 <Reference type="RULE">BII2-T19-R030</Reference>
 
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>languageID</Term>
                     <Reference type="RULE">OP-T19-R012</Reference>
                 </Attribute>
@@ -1138,6 +1169,10 @@
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
                             <Reference type="RULE">OP-T19-R001</Reference>
+
+                            <Attribute>
+                                <Term>listID</Term>
+                            </Attribute>
                         </Element>
                     </Element>
                 </Element>
@@ -1222,10 +1257,11 @@
                     <Name>Item description</Name>
                     <Description>A detailed description of the item. Use one description pr. language</Description>
 
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>languageID</Term>
                         <Reference type="RULE">OP-T19-R012</Reference>
                     </Attribute>
+
                     <Value type="EXAMPLE">Adhesive Loctite 480 20 g. Black rubber enforced adhesive for gluing of metal
                         to metal or metal to rubber. Especially suitable for applications where the joining is put under cleavage
                         or chock stress. Go to http://www.yoursite.com/pagename.html target=_blank for tips on general usage of this product.</Value>
@@ -1262,7 +1298,7 @@
                     <Description>A short name for an item. Item name should be a unique name that clearly identifies the product.</Description>
                     <Reference type="RULE">BII2-T19-R019</Reference>
 
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>languageID</Term>
                         <Reference type="RULE">OP-T19-R012</Reference>
                     </Attribute>
@@ -1276,10 +1312,11 @@
                         should not be too generic, and words allready existing in item name or item description should not be repeated in the key words. If more than one
                         key word is used in the same element, we recommend to use "%" as separator, but this should be agreed with the recipient of the catalogue.</Description>
 
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>languageID</Term>
                         <Reference type="RULE">OP-T19-R012</Reference>
                     </Attribute>
+
                     <Value type="EXAMPLE">glue%instant</Value>
                 </Element>
 
@@ -1325,6 +1362,11 @@
                         <Description>A item identifier based on a registered schema. A product must be identified with either the sellers
                             item identifier or the standard item identifier, or both.</Description>
                         <Reference type="RULE">BII2-T19-R020</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+
                         <Value type="EXAMPLE">7330869106661</Value>
                     </Element>
                 </Element>
@@ -1333,7 +1375,7 @@
                     <Term>cac:ItemSpecificationDocumentReference</Term>
                     <Name>Document reference</Name>
 
-                    <Element>
+                    <Element >
                         <Term>cbc:ID</Term>
                         <Name>Attachment ID</Name>
                         <Description>A positive identification of the relevant document, such as an unique identifier..</Description>
@@ -1344,7 +1386,7 @@
                         <Name>External item specifications type</Name>
                         <Description>Code for document type</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                         </Attribute>
                     </Element>
@@ -1354,7 +1396,7 @@
                         <Name>Attachment description</Name>
                         <Description>A short description of the document type</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>languageID</Term>
                         </Attribute>
                     </Element>
@@ -1422,7 +1464,7 @@
                             <Reference type="RULE">BII2-T19-R022</Reference>
                         </Attribute>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>name</Term>
                         </Attribute>
                         <Value type="EXAMPLE">43212105</Value>
@@ -1444,7 +1486,7 @@
                         <Name>Contracted item indicator</Name>
                         <Description>Indicates that an the item is offered in accordance to an existing contract.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                         </Attribute>
                         <Value type="EXAMPLE">True</Value>
@@ -1526,7 +1568,7 @@
                         <Description>The name of the property. The name must be sufficiently descriptive to define the value. The definition
                             may be supplemented with the property unit of measure when relevant. E.g. Size, Color, Year.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>languageID</Term>
                             <Reference type="RULE">OP-T19-R012</Reference>
                         </Attribute>
@@ -1539,7 +1581,7 @@
                         <Description>The value of the item property. E.g. XXL, Blue, 2007.</Description>
                         <Reference type="RULE">BII2-T19-R027</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>languageID</Term>
                             <Reference type="RULE">OP-T19-R012</Reference>
                         </Attribute>
@@ -1621,7 +1663,7 @@
                         <Name>Label name</Name>
                         <Description>The name of the product label.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                         </Attribute>
                         <Value type="EXAMPLE">NEO</Value>
@@ -1646,7 +1688,7 @@
                         <Name>Label value</Name>
                         <Description>The label value that applies to the item.</Description>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>languageID</Term>
                             <Reference type="RULE">OP-T19-R012</Reference>
                         </Attribute>
@@ -1715,7 +1757,7 @@
                         <Term>cbc:Description</Term>
                         <Name>Description</Name>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>languageID</Term>
                         </Attribute>
                     </Element>

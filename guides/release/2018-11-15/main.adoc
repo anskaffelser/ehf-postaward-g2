@@ -14,14 +14,14 @@ include::../settings.adoc[]
 = Norsk [[norsk]]
 
 
-// == EHF Faktura og kreditnota 2.0.14 [[faktura-og-kreditnota]]
+== EHF Faktura og kreditnota 2.0.15 [[faktura-og-kreditnota]]
 
-// include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.14.adoc[]
+include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.15.adoc[]
 
 
-// == EHF Katalog 1.0.12 [[katalog]]
+== EHF Katalog 1.0.13 [[katalog]]
 
-// include::../../catalogue/1.0/no/endringslogg/{release}-1.0.12.adoc[]
+include::../../catalogue/1.0/no/endringslogg/{release}-1.0.13.adoc[]
 
 
 // == EHF Ordreprosess 1.0.10 [[ordreprosess]]
@@ -52,14 +52,14 @@ include::../settings.adoc[]
 = English [[english]]
 
 
-// == EHF Invoice and Creditnote 2.0.14 [[invoice-and-creditnote]]
+== EHF Invoice and Creditnote 2.0.15 [[invoice-and-creditnote]]
 
-// include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.14.adoc[]
+include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.15.adoc[]
 
 
-// == EHF Catalogue 1.0.12 [[catalogue]]
+== EHF Catalogue 1.0.13 [[catalogue]]
 
-// include::../../catalogue/1.0/en/changelog/{release}-1.0.12.adoc[]
+include::../../catalogue/1.0/en/changelog/{release}-1.0.13.adoc[]
 
 
 // == EHF Ordering 1.0.10 [[ordering]]

@@ -76,7 +76,7 @@
 
         <Element cardinality="0..1">
             <Term>cbc:Note</Term>
-            <Name>Notee</Name>
+            <Name>Note</Name>
             <Description>The textual note provides the seller a means for providing unstructured information that is
                 relevant to the credit note.  This can be notes or other similar information that is not contained explicitly in another
                 qualified element. Information given in as textual notes is mainly intended for manual processing. When “clauses” or “declarations” are
@@ -97,6 +97,7 @@
                 <Reference type="RULE">EUGEN-T14-R026</Reference>
                 <Value type="EXAMPLE">ISO4217</Value>
             </Attribute>
+
             <Value type="EXAMPLE">NOK</Value>
         </Element>
 
@@ -285,7 +286,7 @@
                     <Name>External reference</Name>
                     <Description>An attached document</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:URI</Term>
                         <Name>External reference</Name>
                         <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
@@ -331,7 +332,6 @@
                         <Description>A credit note may contain a registered identifier for the seller. Information referenced by the
                             identifier is not considered part of the message (i.e. the buyer is not required to look up the identifier in the relevant registry and process additional information).</Description>
                         <Reference type="RULE">BII2-T14-R006</Reference>
-
 
                         <Attribute>
                             <Term>schemeID</Term>
@@ -484,10 +484,11 @@
                             <Reference type="RULE">NONAT-T14-R014</Reference>
                             <Value type="EXAMPLE">NO:ORGNR</Value>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeName</Term>
                             <Value type="EXAMPLE">Foretaksregisteret</Value>
                         </Attribute>
+
                         <Value type="EXAMPLE">987654321</Value>
                     </Element>
 
@@ -510,7 +511,7 @@
                                 <Description>The country in which the seller is legally registered.</Description>
                                 <Reference type="RULE">CL-T14-R004</Reference>
 
-                                <Attribute>
+                                <Attribute usage="Optional">
                                     <Term>listID</Term>
                                     <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
                                     <Reference type="RULE">EUGEN-T14-R027</Reference>
@@ -521,7 +522,6 @@
                         </Element>
                     </Element>
                 </Element>
-
 
                 <Element cardinality="0..1">
                     <Term>cac:Contact</Term>
@@ -719,6 +719,7 @@
                             <Reference type="RULE">OP-T14-R008</Reference>
                             <Value type="EXAMPLE">NO:VAT</Value>
                         </Attribute>
+
                         <Value type="EXAMPLE">987654321MVA</Value>
                     </Element>
 
@@ -770,13 +771,12 @@
 
                 </Element>
 
-
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cac:Contact</Term>
                     <Name>Contact</Name>
                     <Description>The customers contact person.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>Identifier</Name>
                         <Description>Name or identifier specifying the customers reference (Eg employee number)</Description>
@@ -917,6 +917,7 @@
                         <Reference type="RULE">OP-T14-R008</Reference>
                         <Value type="EXAMPLE">NO:VAT</Value>
                     </Attribute>
+
                     <Value type="EXAMPLE">981234567MVA</Value>
                 </Element>
 
@@ -1009,7 +1010,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -1089,7 +1090,7 @@
                     <Value type="EXAMPLE">00050011111</Value>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:FinancialInstitutionBranch</Term>
                     <Name>Financial institution branch</Name>
                     <Description>The branch or department of the financial institution.</Description>
@@ -1113,7 +1114,7 @@
                             <Description>An identifier for the financial institution where the account is located, such as the BIC identifier (SWIFT code).</Description>
                             <Reference type="RULE">EUGEN-T14-R004</Reference>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeID</Term>
                                 <Description>Must be 'BIC' if account identifier is IBAN.</Description>
                                 <Value type="EXAMPLE">BIC/Value</Value>
@@ -1166,7 +1167,7 @@
                                 <Term>cac:Country</Term>
                                 <Name>Country</Name>
 
-                                <Element cardinality="0..1">
+                                <Element>
                                     <Term>cbc:IdentificationCode</Term>
                                     <Name>Country code</Name>
                                     <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -1189,7 +1190,7 @@
             <Name>Payment terms</Name>
             <Description>Description of payment terms.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
                 <Description>Payment terms text.</Description>
@@ -1275,7 +1276,7 @@
                     Use codelist AllowanceChargeReasonCode, UN/ECE 4465, Version D08B.</Description>
                 <Reference type="RULE">CL-T14-R010</Reference>
 
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>listID</Term>
                     <Description>Must be 'UNCL4465'</Description>
                     <Reference type="RULE">EUGEN-T14-R029</Reference>
@@ -1322,7 +1323,7 @@
                         A credit note may contain information about one VAT category for each allowances and Charges on document level.</Description>
                     <Reference type="RULE">BII2-T14-R043</Reference>
 
-                    <Attribute>
+                    <Attribute usage="Optional">
                         <Term>schemeID</Term>
                         <Description>Must be 'UNCL5305'.</Description>
                         <Reference type="RULE">EUGEN-T14-R032</Reference>
@@ -1679,7 +1680,7 @@
                     <Value type="EXAMPLE">NAR</Value>
                 </Attribute>
 
-                <Attribute>
+                <Attribute usage="Optional">
                     <Term>unitCodeListID</Term>
                     <Description>Must be 'UNECERec20'.</Description>
                     <Reference type="RULE">EUGEN-T14-R030</Reference>
@@ -1814,7 +1815,7 @@
                         <Description>A unique identifier (eg a GLN number) of where the goods is delivered.</Description>
                         <Reference type="RULE">NONAT-T14-R007</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Description>Identification of the issuing agency of the location identifier.</Description>
                             <Reference type="RULE">EUGEN-T14-R034</Reference>
@@ -1852,7 +1853,6 @@
                             <Name>Post Code</Name>
                             <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.
                                 A credit note may contain the seller’s post code.</Description>
-
                         </Element>
 
                         <Element cardinality="0..1">
@@ -1873,13 +1873,13 @@
                                     The seller’s address country must be contained in a credit note in the form of a two letter code (ISO 3166-1 alpha-2).</Description>
                                 <Reference type="RULE">CL-T14-R004</Reference>
 
-
                                 <Attribute>
                                     <Term>listID</Term>
                                     <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
                                     <Reference type="RULE">EUGEN-T14-R027</Reference>
                                     <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
                                 </Attribute>
+
                                 <Value type="EXAMPLE">NO</Value>
                             </Element>
                         </Element>
@@ -1986,7 +1986,7 @@
                             Each line in a credit note may contain a registered item identifier.</Description>
                         <Reference type="RULE">BII2-T14-R021</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Description>Must be provided if the element is used.</Description>
                             <Reference type="RULE">BII2-T14-R032</Reference>
@@ -2024,7 +2024,7 @@
                         <Description>The items CPV code.</Description>
                         <Reference type="RULE">NOGOV-T14-R019</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                             <Description>Must be present if the element is used</Description>
                             <Reference type="RULE">BII2-T14-R033</Reference>
@@ -2046,7 +2046,7 @@
                             level, to the line.  If the credit note is a VAT credit note each line must contain a category code.</Description>
                         <Reference type="RULE">BII2-T14-R046</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Value type="EXAMPLE">UNCL5305</Value>
                         </Attribute>
@@ -2125,7 +2125,7 @@
                             <Name>Company ID</Name>
                             <Description>The legal company ID of the manufacturer.</Description>
 
-                            <Attribute>
+                            <Attribute usage="Optional">
                                 <Term>schemeID</Term>
                                 <Description>Identification of the issuing agency of the company ID.</Description>
                                 <Reference type="RULE">OP-T14-R008</Reference>

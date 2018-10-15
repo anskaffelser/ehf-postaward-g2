@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" prefix="ubl"/>
 
+   <include href="../../../target/generated/t58-basic.sch"/>
+
    <pattern>
       <rule context="/ubl:ApplicationResponse">
          <assert id="NOGOV-T58-R003"

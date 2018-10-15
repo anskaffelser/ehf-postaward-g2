@@ -23,8 +23,7 @@
           source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch"
           path="xsl/OPENPEPPOL-UBL-T10.xsl"
           infoUrl="/ehf/g2/rules/{}/" />
-        <file source="sch/NONAT-UBL-T10.sch" path="xsl/NONAT-UBL-T10.xsl" infoUrl="/ehf/g2/rules/{}/" />
-        <file source="sch/NOGOV-UBL-T10.sch" path="xsl/NOGOV-UBL-T10.xsl" infoUrl="/ehf/g2/rules/{}/" />
+        <file source="sch/EHF-UBL-T10.sch" path="xsl/EHF-UBL-T10.xsl" infoUrl="/ehf/g2/rules/{}/" />
         <rule identifier="BII2-T10-R025" action="suppress" />
         <rule identifier="BII2-T10-R035" action="suppress" />
         <rule identifier="BII2-T10-R037" action="suppress" />

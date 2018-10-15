@@ -1,0 +1,20 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| -
+| Kombinere 'NOGOV-UBL-T10.sch' og 'NONAT-UBL-T10.sch' som 'EHF-UBL-T10.sch'.
+| Validator
+
+| -
+| Kombinere 'NOGOV-UBL-T14.sch' og 'NONAT-UBL-T14.sch' som 'EHF-UBL-T14.sch'.
+| Validator
+
+| -
+| Legge til "grunnleggende" valideringsregler som er automatisk generert basert på syntaks. Reglene er identifisert med 'EHF-T10-BXXXXX' for faktura og 'EHF-T14-BXXXXX' for kreditnota hvor 'XXXXX' er et løpenummer.
+| Validator
+
+|===

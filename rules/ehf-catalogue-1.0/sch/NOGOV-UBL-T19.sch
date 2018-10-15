@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" prefix="ubl"/>
 
+   <include href="../../../target/generated/t19-basic.sch"/>
+
    <pattern>
       <rule context="/ubl:Catalogue">
          <assert id="NOGOV-T19-R001"

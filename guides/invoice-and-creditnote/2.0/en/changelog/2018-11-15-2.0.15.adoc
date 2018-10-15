@@ -1,0 +1,20 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Combining 'NOGOV-UBL-T10.sch' and 'NONAT-UBL-T10.sch' into 'EHF-UBL-T10.sch'.
+| Validator
+
+| -
+| Combining 'NOGOV-UBL-T14.sch' and 'NONAT-UBL-T14.sch' into 'EHF-UBL-T14.sch'.
+| Validator
+
+| -
+| Adding "basic" validation rules automatically created from syntax. Rules are identified as 'EHF-T10-BXXXXX' for Invoice and 'EHF-T14-BXXXXX' for Credit Note where 'XXXXX' is a running number.
+| Validator
+
+|===

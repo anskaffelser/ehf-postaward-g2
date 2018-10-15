@@ -172,13 +172,13 @@
     <Resource>
         <Identifier>t14-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-creditnote-2.0/sch/NOGOV-UBL-T14.sch</Path>
+        <Path>rules/ehf-creditnote-2.0/sch/parts/NOGOV.sch</Path>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t14-nonat</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-creditnote-2.0/sch/NONAT-UBL-T14.sch</Path>
+        <Path>rules/ehf-creditnote-2.0/sch/parts/NONAT.sch</Path>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -190,13 +190,13 @@
     <Resource>
         <Identifier>t10-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-invoice-2.0/sch/NOGOV-UBL-T10.sch</Path>
+        <Path>rules/ehf-invoice-2.0/sch/parts/NOGOV.sch</Path>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t10-nonat</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-invoice-2.0/sch/NONAT-UBL-T10.sch</Path>
+        <Path>rules/ehf-invoice-2.0/sch/parts/NONAT.sch</Path>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -462,7 +462,7 @@
     </Tag>
     <Tag>
         <Identifier>invoice-and-creditnote</Identifier>
-        <Title>EHF Invoice and Creditnote 2.0.14</Title>
+        <Title>EHF Invoice and Creditnote 2.0.15</Title>
     </Tag>
     <Tag>
         <Identifier>order-agreement</Identifier>
