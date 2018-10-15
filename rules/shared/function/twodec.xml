@@ -1,0 +1,4 @@
+<function xmlns="http://www.w3.org/1999/XSL/Transform" name="u:twodec">
+    <param name="val"/>
+    <value-of select="round($val * 100) div 100"/>
+</function>
