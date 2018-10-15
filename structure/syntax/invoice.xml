@@ -474,7 +474,7 @@
                             <Reference type="RULE">NONAT-T10-R018</Reference>
                             <Value type="EXAMPLE">NO:ORGNR</Value>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeName</Term>
                             <Value type="EXAMPLE">Foretaksregisteret</Value>
                         </Attribute>
@@ -551,7 +551,7 @@
                         <Value type="EXAMPLE">+47 92612346</Value>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Contact email address</Name>
                         <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.
@@ -763,7 +763,7 @@
                             <Reference type="RULE">NONAT-T10-R018</Reference>
                             <Value type="EXAMPLE">NO:ORGNR</Value>
                         </Attribute>
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeName</Term>
                             <Value type="EXAMPLE">Foretaksregisteret</Value>
                         </Attribute>
@@ -833,7 +833,7 @@
                         <Value type="EXAMPLE">+47 92612346</Value>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:ElectronicMail</Term>
                         <Name>Contact email address</Name>
                         <Description>The e-mail address for the contact person. If the person has a direct e-mail this is that email.
@@ -1900,7 +1900,7 @@
                         <Reference type="RULE">CL-T10-R004</Reference>
                         <Reference type="RULE">NOGOV-T10-R022</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                             <Description>Attribute  must be 'ISO3166-1:Alpha2'.</Description>
                             <Reference type="RULE">EUGEN-T10-R027</Reference>

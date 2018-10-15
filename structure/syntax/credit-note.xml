@@ -431,7 +431,7 @@
                     <Description>Tax scheme for the supplier.</Description>
 
                     <Element>
-                        <Term>CompanyID</Term>
+                        <Term>cbc:CompanyID</Term>
                         <Name>VAT registration number</Name>
                         <Description>When the credit note is a VAT credit note it must state the sellers VAT registration number and tax scheme.
                             The supplier's VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA. Mandatory if the supplier is taxable.</Description>
@@ -1712,7 +1712,7 @@
                     as text rather than a code in order to facilitate automation in booking into accounts following an order to credit note transformation.</Description>
             </Element>
 
-            <Element>
+            <Element cardinality="0..1">
                 <Term>cac:InvoicePeriod</Term>
                 <Name>Invoice period</Name>
                 <Description>The period the creditnote line cover.</Description>
@@ -2007,7 +2007,7 @@
                             the buyer to identify whether further customs procedures are required.</Description>
                         <Reference type="RULE">CL-T14-R004</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>listID</Term>
                         </Attribute>
                     </Element>
