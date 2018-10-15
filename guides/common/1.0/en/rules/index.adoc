@@ -12,6 +12,8 @@ include::EHF-COMMON-R003.adoc[]
 
 include::EHF-COMMON-R004.adoc[]
 
+include::EHF-COMMON-R005.adoc[]
+
 :leveloffset: -2
 
 == R01X - Validation of Norwegian organization numbers [[EHF-COMMON-R01X]]
@@ -51,6 +53,14 @@ include::EHF-COMMON-R030.adoc[]
 :leveloffset: +2
 
 include::EHF-COMMON-R040.adoc[]
+
+:leveloffset: -2
+
+== R05X - Validation of text elements [[EHF-COMMON-R05X]]
+
+:leveloffset: +2
+
+include::EHF-COMMON-R050.adoc[]
 
 :leveloffset: -2
 

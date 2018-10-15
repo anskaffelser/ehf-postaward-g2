@@ -10,7 +10,7 @@ Please use [VEFA portal](https://vefa.difi.no/) for easy access to EHF resources
 ## Standards part of this release
 
 * [EHF Catalogue 1.0.13](https://vefa.difi.no/ehf/standard/ehf-catalogue-1.0.13/)
-* [EHF Common 1.0.3](https://vefa.difi.no/ehf/standard/ehf-common-1.0.3/)
+* [EHF Common 1.0.4](https://vefa.difi.no/ehf/standard/ehf-common-1.0.4/)
 * [EHF Despatch Advice 1.0.10](https://vefa.difi.no/ehf/standard/ehf-despatch-advice-1.0.10/)
 * [EHF Invoice and Creditnote 2.0.15](https://vefa.difi.no/ehf/standard/ehf-invoice-and-creditnote-2.0.15/)
 * [EHF Order Agreement 1.0.1](https://vefa.difi.no/ehf/standard/ehf-order-agreement-1.0.1/)

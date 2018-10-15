@@ -1,0 +1,12 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Adding rule *EHF-COMMON-R005*.
+| Validator
+
+|===
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+EHF-COMMON-R005

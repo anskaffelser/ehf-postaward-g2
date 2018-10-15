@@ -386,7 +386,7 @@
                         <Reference type="RULE">NOGOV-T01-R011</Reference>
                         <Reference type="RULE">NOGOV-T01-R016</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Description>Must be according to "PEPPOL policy for identifiers", example NO:VAT.</Description>
                         </Attribute>
@@ -426,7 +426,7 @@
                         <Description>Identifies a company as registered with the company registration scheme.</Description>
                         <Reference type="RULE">NOGOV-T01-R010</Reference>
 
-                        <Attribute>
+                        <Attribute usage="Optional">
                             <Term>schemeID</Term>
                             <Description>Must be according to "PEPPOL policy for identifiers", example NO:ORGNR</Description>
                         </Attribute>
@@ -751,7 +751,7 @@
             </Element>
         </Element>
 
-        <Element>
+        <Element cardinality="0..1">
             <Term>cac:AccountingCustomerParty</Term>
             <Name>Customer</Name>
             <Description>Customer party.</Description>

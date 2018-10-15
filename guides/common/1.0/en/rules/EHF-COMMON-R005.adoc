@@ -5,19 +5,19 @@
 |===
 
 h| Context
-| ```cbc:Note[2]``` (Pattern 2)
+| ```cbc:*``` (Pattern 1)
 
 h| Rule
-| ```false()```
+| ```every $attr in @* satisfies normalize-space($attr) != ''```
 
 h| Message
-| Only one note element is allowed.
+| Attributes MUST contain value.
 
 h| Type
-| Error
+| Warning
 
 h| Since
-| 1.0.2
+| 1.0.4
 
 |===
 
