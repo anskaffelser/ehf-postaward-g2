@@ -1,0 +1,13 @@
+:ruleurl-ord: /ehf/rule/order-1.0/
+:ruleurl-res: /ehf/rule/order-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Adding "basic" validation rules automatically created from syntax. Rules are identified as 'EHF-T01-BXXXXX' for Order and 'EHF-T76-BXXXXX' for Order Response where 'XXXXX' is a running number.
+| Validator
+
+|===

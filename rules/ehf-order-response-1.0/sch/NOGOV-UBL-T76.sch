@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" prefix="ubl"/>
 
+   <include href="../../../target/generated/t76-basic.sch"/>
+
    <pattern>
       <rule context="cac:BuyerCustomerParty">
          <assert id="NOGOV-T76-R005"

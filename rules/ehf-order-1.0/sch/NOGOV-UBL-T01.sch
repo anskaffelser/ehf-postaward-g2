@@ -8,6 +8,8 @@
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Order-2" prefix="ubl"/>
 
+   <include href="../../../target/generated/t01-basic.sch"/>
+
    <pattern>
       <rule context="/ubl:Order">
          <assert id="NOGOV-T01-R002"

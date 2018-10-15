@@ -24,9 +24,9 @@ include::../../invoice-and-creditnote/2.0/no/endringslogg/{release}-2.0.15.adoc[
 include::../../catalogue/1.0/no/endringslogg/{release}-1.0.13.adoc[]
 
 
-// == EHF Ordreprosess 1.0.10 [[ordreprosess]]
+== EHF Ordreprosess 1.0.11 [[ordreprosess]]
 
-// include::../../ordering/1.0/no/endringslogg/{release}-1.0.10.adoc[]
+include::../../ordering/1.0/no/endringslogg/{release}-1.0.11.adoc[]
 
 
 // == EHF Ordreforslag 1.0.1 [[ordreforslag]]
@@ -62,9 +62,9 @@ include::../../invoice-and-creditnote/2.0/en/changelog/{release}-2.0.15.adoc[]
 include::../../catalogue/1.0/en/changelog/{release}-1.0.13.adoc[]
 
 
-// == EHF Ordering 1.0.10 [[ordering]]
+== EHF Ordering 1.0.11 [[ordering]]
 
-// include::../../ordering/1.0/en/changelog/{release}-1.0.10.adoc[]
+include::../../ordering/1.0/en/changelog/{release}-1.0.11.adoc[]
 
 
 // == EHF Order Agreement 1.0.1 [[order-agreement]]
