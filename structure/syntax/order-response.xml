@@ -8,6 +8,7 @@
     <Property key="sch:identifier">t76-basic</Property>
     <Property key="sch:flag">warning</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
+    <Property key="sch:SchemaLocationRule:flag">off</Property>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>

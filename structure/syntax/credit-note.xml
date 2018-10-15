@@ -8,6 +8,7 @@
     <Property key="sch:identifier">t14-basic</Property>
     <Property key="sch:flag">warning</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
+    <Property key="sch:SchemaLocationRule:flag">off</Property>
 
     <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</Namespace>
     <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
@@ -707,7 +708,7 @@
                     <Description>Tax scheme of the customer.</Description>
 
                     <Element>
-                        <Term>CompanyID</Term>
+                        <Term>cbc:CompanyID</Term>
                         <Name>VAT registration number</Name>
                         <Description>A credit note may contain the buyers VAT identifier In order to facilitate reverse charge and intra community supply billing.
                             The customers VAT-number (Norwegian MVA number) made out of the organisational number and the letters MVA</Description>
