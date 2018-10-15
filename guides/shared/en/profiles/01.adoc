@@ -10,11 +10,11 @@ urn:www.cenbii.eu:profile:bii01:ver2.0
 | Role
 
 | Catalogue
-| urn:www.cenbii.eu:transaction:biitrns001:ver2.0 :extended:urn:www.peppol.eu:bis:peppol28a:ver1.0 :extended:urn:www.difi.no:ehf:ordre:ver1.0
+| urn:www.cenbii.eu:transaction:biitrns019:ver2.0 :extended:urn:www.peppol.eu:bis:peppol1a:ver2.0 :extended:urn:www.difi.no:ehf:katalog:ver1.0
 | Contracting Authority
 
 | Catalogue Response
-| urn:www.cenbii.eu:transaction:biitrns076:ver2.0 :extended:urn:www.peppol.eu:bis:peppol28a:ver1.0 :extended:urn:www.difi.no:ehf:ordrebekreftelse:ver1.0
+| urn:www.cenbii.eu:transaction:biitrns058:ver2.0 :extended:urn:www.peppol.eu:bis:peppol1a:ver2.0 :extended:urn:www.difi.no:ehf:katalogbekreftelse:ver1.0
 | Economic Operator
 
 |===
