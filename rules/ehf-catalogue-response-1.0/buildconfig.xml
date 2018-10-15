@@ -10,7 +10,7 @@
         <title>EHF Catalogue Response 1.0 (Base)</title>
         <inherit>ubl-applicationresponse-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
-        <file source="sch/NOGOV-UBL-T58.sch" path="xsl/NOGOV-UBL-T58.xsl" infoUrl="/ehf/g2/rules/{}/" />
+        <file source="sch/EHF-UBL-T58.sch" path="xsl/EHF-UBL-T58.xsl" infoUrl="/ehf/g2/rules/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/BII RULES/BIIRULES-UBL-T58.sch"
           path="xsl/BIIRULES-UBL-T58.xsl"

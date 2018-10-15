@@ -83,6 +83,11 @@
         <Title>Release 2018-11-15</Title>
         <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-11-15'.</Description>
         <Tag>release</Tag>
+        <Tag>catalogue</Tag>
+        <Tag>common</Tag>
+        <Tag>despatch-advice</Tag>
+        <Tag>invoice-and-creditnote</Tag>
+        <Tag>ordering</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
@@ -160,53 +165,57 @@
     <Resource>
         <Identifier>t19-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-catalogue-1.0/sch/NOGOV-UBL-T19.sch</Path>
+        <Path>rules/ehf-catalogue-1.0/sch/parts/NOGOV-UBL-T19.sch</Path>
+        <Title>Norwegian rules for EHF Catalogue</Title>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t58-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-catalogue-response-1.0/sch/NOGOV-UBL-T58.sch</Path>
+        <Path>rules/ehf-catalogue-response-1.0/sch/parts/NOGOV-UBL-T58.sch</Path>
+        <Title>Norwegian rules for EHF Catalogue Response</Title>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
         <Identifier>t14-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-creditnote-2.0/sch/parts/NOGOV.sch</Path>
+        <Path>rules/ehf-creditnote-2.0/sch/parts/NOGOV-UBL-T14.sch</Path>
         <Title>Rules for EHF Credit Note 2.0 (NOGOV)</Title>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t14-nonat</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-creditnote-2.0/sch/parts/NONAT.sch</Path>
+        <Path>rules/ehf-creditnote-2.0/sch/parts/NONAT-UBL-T14.sch</Path>
         <Title>Rules for EHF Credit Note 2.0 (NONAT)</Title>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t16-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-despatch-advice-1.0/sch/NOGOV-UBL-T16.sch</Path>
+        <Path>rules/ehf-despatch-advice-1.0/sch/parts/NOGOV-UBL-T16.sch</Path>
+        <Title>Norwegian rules for EHF Despatch Advice</Title>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
         <Identifier>t10-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-invoice-2.0/sch/parts/NOGOV.sch</Path>
+        <Path>rules/ehf-invoice-2.0/sch/parts/NOGOV-UBL-T10.sch</Path>
         <Title>Rules for EHF Invoice 2.0 (NOGOV)</Title>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t10-nonat</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-invoice-2.0/sch/parts/NONAT.sch</Path>
+        <Path>rules/ehf-invoice-2.0/sch/parts/NONAT-UBL-T10.sch</Path>
         <Title>Rules for EHF Invoice 2.0 (NONAT)</Title>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
         <Identifier>t01-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-order-1.0/sch/NOGOV-UBL-T01.sch</Path>
+        <Path>rules/ehf-order-1.0/sch/parts/NOGOV-UBL-T01.sch</Path>
+        <Title>Norwegian rules for EHF Order</Title>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -218,7 +227,8 @@
     <Resource>
         <Identifier>t76-nogov</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-order-response-1.0/sch/NOGOV-UBL-T76.sch</Path>
+        <Path>rules/ehf-order-response-1.0/sch/parts/NOGOV-UBL-T76.sch</Path>
+        <Title>Norwegian rules for EHF Order Response</Title>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -443,6 +453,21 @@
         <Title>Example files</Title>
         <Description>Zip file containing examples of all document types part of EHF Post-Award G2.</Description>
         <Property key="download">ehf-postaward-g2-examples.zip</Property>
+        <Tag>catalogue</Tag>
+        <Tag>despatch-advice</Tag>
+        <Tag>invoice-and-creditnote</Tag>
+        <Tag>order-agreement</Tag>
+        <Tag>ordering</Tag>
+        <Tag>punch-out</Tag>
+        <Tag>reminder</Tag>
+    </Resource>
+    <Resource>
+        <Type>native:File</Type>
+        <Path>project.xml</Path>
+        <Title>Schematron files</Title>
+        <Description>Zip file containing Schematron files part of EHF Post-Award G2. Please note Schematron files for PEPPOL BIS and CEN BII comes in addition when validating.</Description>
+        <Property key="download">ehf-postaward-g2-schematron.zip</Property>
+        <Property key="filename">ehf-postaward-g2-schematron.zip</Property>
         <Tag>catalogue</Tag>
         <Tag>despatch-advice</Tag>
         <Tag>invoice-and-creditnote</Tag>

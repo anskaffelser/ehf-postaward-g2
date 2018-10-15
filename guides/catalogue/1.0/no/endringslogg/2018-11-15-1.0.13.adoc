@@ -15,3 +15,6 @@
 | Validator
 
 |===
+
+WARNING: Valideringsregler som er ventet å trigge feil i neste release:
+Alle grunnleggende valideringsregler (EHF-TXX-BXXXXX).

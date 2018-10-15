@@ -30,7 +30,7 @@
     <let name="isZ02" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z02'"/>
 
     <include href="../../../target/generated/t10-basic.sch"/>
-    <include href="parts/NOGOV.sch"/>
-    <include href="parts/NONAT.sch"/>
+    <include href="parts/NOGOV-UBL-T10.sch"/>
+    <include href="parts/NONAT-UBL-T10.sch"/>
 
 </schema>

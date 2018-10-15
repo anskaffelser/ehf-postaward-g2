@@ -27,7 +27,7 @@
    </function>
 
    <include href="../../../target/generated/t14-basic.sch"/>
-   <include href="parts/NOGOV.sch"/>
-   <include href="parts/NONAT.sch"/>
+   <include href="parts/NOGOV-UBL-T14.sch"/>
+   <include href="parts/NONAT-UBL-T14.sch"/>
 
 </schema>

@@ -61,7 +61,8 @@ docker_pull \
     difi/vefa-structure:0.7 \
     difi/vefa-validator \
     difi/asciidoctor \
-    kramos/alpine-zip
+    kramos/alpine-zip \
+    klakegg/schematron
 
 if [ -e $PROJECT/target ]; then
     docker_run "clean" "Removing old target folder" \
@@ -81,6 +82,12 @@ docker_run "vefa-structure" "Running vefa-structure" \
     -v $PROJECT:/src \
     -v $PROJECT/target:/target \
     difi/vefa-structure:0.7
+
+docker_run "schematron-files" "Packaging Schematron files" \
+    -v $PROJECT:/src \
+    --entrypoint sh \
+    klakegg/schematron \
+    /src/tools/script/docker-package-schematron.sh
 
 docker_run "vefa-validator" "Running vefa-validator" \
     -v $PROJECT:/src \

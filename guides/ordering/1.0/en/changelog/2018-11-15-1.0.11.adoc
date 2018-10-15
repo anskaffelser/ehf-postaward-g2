@@ -11,3 +11,6 @@
 | Validator
 
 |===
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+All basic validation rules (EHF-TXX-BXXXXXX).
