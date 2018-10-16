@@ -15,7 +15,9 @@ include::dynamisk-validering.adoc[]
 = Valideringsregler
 
 :leveloffset: +1
+
 include::../../../../{cwd}/validering/valideringsregler.adoc[]
+
 :leveloffset: -1
 
 include::valideringstjenesten.adoc[]

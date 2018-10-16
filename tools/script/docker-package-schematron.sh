@@ -7,7 +7,7 @@ fi
 mkdir /src/target/schematron
 
 for sch in $(ls /src/rules/*/sch/*.sch); do
-  sh /schematron/bin/run.sh prepare $sch /src/target/schematron/$(basename $sch)
+  schematron prepare $sch /src/target/schematron/$(basename $sch)
 done
 
 cd /src/target/schematron
