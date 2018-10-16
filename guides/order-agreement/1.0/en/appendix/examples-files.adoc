@@ -1,4 +1,0 @@
-[appendix]
-= Example files [[appendix-example-files]]
-
-Example files are provided to help implementers. This implementation guide contains these files:

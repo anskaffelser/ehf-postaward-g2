@@ -6,6 +6,10 @@
 | Sak | Beskrivelse | Type
 
 | -
+| Flyttet eksempelfilene inn i en eksempelfil-pakke. Vedlegget er oppdatert med ny lenke.
+| Guide
+
+| -
 | Kombinere 'NOGOV-UBL-T10.sch' og 'NONAT-UBL-T10.sch' som 'EHF-UBL-T10.sch'.
 | Validator
 

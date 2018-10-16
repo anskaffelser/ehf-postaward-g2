@@ -6,9 +6,9 @@ include::../settings.adoc[]
 :docutype: EHF
 :xml-doc-fil: files/ehf-po-docfile.xml
 
-:date-review: 16. October 2017
-:date-release: 15. November 2017
-:date-mandatory: 15. November 2017
+:date-review: 16. October 2018
+:date-release: 15. November 2018
+:date-mandatory: 15. November 2018
 
 // External
 

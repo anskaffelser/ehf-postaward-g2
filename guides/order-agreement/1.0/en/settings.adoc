@@ -4,12 +4,11 @@ include::../settings.adoc[]
 
 :doctitle: EHF Order Agreement
 
-:date-review: 16. October 2017
-:date-release: 15. November 2017
-:date-mandatory: 15. November 2017
+:date-review: 16. October 2018
+:date-release: 15. November 2018
+:date-mandatory: 15. November 2018
 
 :docutype: EHF
-:xml-doc-dir: files/example
 :xml-doc-fil: files/ehf-oa-docfile.xml
 
 

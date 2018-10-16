@@ -14,10 +14,7 @@ include::../{shared-dir}/content/appendix/message-table.adoc[]
 
 
 // Example files
-include::examples.adoc[]
-
-* link:files/examples/ehf-po-full.xml[Punch Out]
-
+include::../{shared-dir}/content/appendix/example-files.adoc[]
 
 
 :leveloffset: -1

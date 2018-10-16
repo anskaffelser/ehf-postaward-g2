@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Faktura og Kreditnota
 
-:date-review: 13. august 2018
-:date-release: 12. september 2018
-:date-mandatory: 12. september 2018
+:date-review: 16. oktober 2018
+:date-release: 15. november 2018
+:date-mandatory: 15. november 2018

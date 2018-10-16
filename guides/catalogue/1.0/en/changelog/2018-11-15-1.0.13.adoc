@@ -11,6 +11,10 @@
 | Guide
 
 | -
+| Moving example files into a example file archive. Appendix is updated with the new link.
+| Guide
+
+| -
 | Adding "basic" validation rules automatically created from syntax. Rules are identified as 'EHF-T19-BXXXXX' for Catalogue and 'EHF-T58-BXXXXX' for Catalogue Response where 'XXXXX' is a running number.
 | Validator
 

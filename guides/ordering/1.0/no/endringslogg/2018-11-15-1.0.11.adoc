@@ -7,6 +7,10 @@
 | Sak | Beskrivelse | Type
 
 | -
+| Flyttet eksempelfilene inn i en eksempelfil-pakke. Vedlegget er oppdatert med ny lenke.
+| Guide
+
+| -
 | Legge til "grunnleggende" valideringsregler som er automatisk generert basert på syntaks. Reglene er identifisert med 'EHF-T01-BXXXXX' for ordre og 'EHF-T76-BXXXXX' for ordrerespons hvor 'XXXXX' er et løpenummer.
 | Validator
 

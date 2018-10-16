@@ -32,9 +32,6 @@ include::../{shared-dir}/content/vedlegg/schematron.adoc[]
 // Eksempelfiler
 include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
 
-* link:files/example/BII05%20T10%20gyldig%20faktura.xml[Faktura]
-* link:files/example/BII05%20T14%20gyldig%20kreditnota.xml[Kreditnota]
-
 
 [appendix]
 = Veiledning [[vedlegg-veiledning]]

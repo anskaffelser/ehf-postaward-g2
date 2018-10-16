@@ -1,7 +1,7 @@
 include::../../settings.adoc[]
 
 :minor: 1.0
-:revision: 1.0.1
+:revision: 1.0.2
 :release: {release}
 :status: {status}
 

@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Catalogue
 
-:date-review: 13. August 2018
-:date-release: 12. September 2018
-:date-mandatory: 12. September 2018
+:date-review: 16. October 2018
+:date-release: 15. November 2018
+:date-mandatory: 15. November 2018

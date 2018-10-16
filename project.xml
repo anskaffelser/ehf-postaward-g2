@@ -87,7 +87,9 @@
         <Tag>common</Tag>
         <Tag>despatch-advice</Tag>
         <Tag>invoice-and-creditnote</Tag>
+        <Tag>order-agreement</Tag>
         <Tag>ordering</Tag>
+        <Tag>punch-out</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
@@ -495,7 +497,7 @@
     </Tag>
     <Tag>
         <Identifier>order-agreement</Identifier>
-        <Title>EHF Order Agreement 1.0.1</Title>
+        <Title>EHF Order Agreement 1.0.2</Title>
     </Tag>
     <Tag>
         <Identifier>ordering</Identifier>
@@ -503,7 +505,7 @@
     </Tag>
     <Tag>
         <Identifier>punch-out</Identifier>
-        <Title>EHF Punch Out 1.0.0</Title>
+        <Title>EHF Punch Out 1.0.1</Title>
     </Tag>
     <Tag>
         <Identifier>reminder</Identifier>

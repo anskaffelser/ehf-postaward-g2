@@ -1,0 +1,9 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Moving example files into a example file archive. Appendix is updated with the new link.
+| Guide
+
+|===

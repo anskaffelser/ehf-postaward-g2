@@ -7,6 +7,10 @@
 | Issue | Description | Type
 
 | -
+| Moving example files into a example file archive. Appendix is updated with the new link.
+| Guide
+
+| -
 | Adding "basic" validation rules automatically created from syntax. Rules are identified as 'EHF-T01-BXXXXX' for Order and 'EHF-T76-BXXXXX' for Order Response where 'XXXXX' is a running number.
 | Validator
 

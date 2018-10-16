@@ -28,11 +28,5 @@ include::../{shared-dir}/content/vedlegg/schematron.adoc[]
 // Eksempelfiler
 include::../{shared-dir}/content/vedlegg/eksempelfiler.adoc[]
 
-* link:files/example/Eksempel1.xml[Example 1]
-* link:files/example/Eksempel2.xml[Example 2]
-* link:files/example/Eksempel3.xml[Example 3]
-* link:files/example/Eksempel4.xml[Example 4]
-* link:files/example/Eksempel5.xml[Example 5]
-
 
 :leveloffset: -1

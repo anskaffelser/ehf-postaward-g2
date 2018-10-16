@@ -14,12 +14,7 @@ include::../{shared-dir}/content/appendix/message-table.adoc[]
 
 
 // Example files
-include::examples-files.adoc[]
-
-* link:files/example/ehf-oa-full.xml[Order agreement]
-
-//* link:files/example/ehf-oa-case1.xml[Use case 1]
-
+include::../{shared-dir}/content/appendix/example-files.adoc[]
 
 
 :leveloffset: -1
