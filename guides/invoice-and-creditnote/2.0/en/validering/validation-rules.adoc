@@ -1,21 +1,18 @@
 = Norwegian Rules for Invoice
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
+* link:../../../rules/t10-basic/[Basic syntax rules]
+* link:../../../rules/t10-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t10-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t10-nonat/[Norwegian (NONAT) validation rules]
+* link:../../../rules/t10-nogov/[Norwegian (NOGOV) validation rules]
 
-include::{rules-dir}/NOGOV-UBL-T10.sch.adoc[]
-include::{rules-dir}/NONAT-UBL-T10.sch.adoc[]
-|====
 
 = Norwegian Rules for Credit Note
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
-
-include::{rules-dir}/NOGOV-UBL-T14.sch.adoc[]
-include::{rules-dir}/NONAT-UBL-T14.sch.adoc[]
-|====
+* link:../../../rules/t14-basic/[Basic syntax rules]
+* link:../../../rules/t14-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t14-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t14-nonat/[Norwegian (NONAT) validation rules]
+* link:../../../rules/t14-nogov/[Norwegian (NOGOV) validation rules]

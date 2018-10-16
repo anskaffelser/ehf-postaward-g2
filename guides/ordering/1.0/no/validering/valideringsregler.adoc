@@ -1,21 +1,16 @@
 = Norske valideringsregler for ordre
 
-[cols="1,4", options="header"]
-|====
-|Regel
-|Melding/Kontekst/Test
+* link:../../../rules/t01-basic/[Grunnleggende syntaks-regler]
+* link:../../../rules/t01-bii/[Valideringsregler arvet fra CEN BII]
+* link:../../../rules/t01-openpeppol/[Valideringsregler arvet fra OpenPEPPOL]
+* link:../../../rules/ehf-common/[Valideringsregler arvet fra EHF Common]
+* link:../../../rules/t01-nogov/[Norske valideringsregler]
 
-include::{rules-dir}/NOGOV-UBL-T01.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
 
 = Norske valideringsregler for ordrebekreftelse
 
-[cols="1,4", options="header"]
-|====
-|Regel
-|Melding/Kontekst/Test
-
-include::{rules-dir}/NOGOV-UBL-T76.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
+* link:../../../rules/t76-basic/[Grunnleggende syntaks-regler]
+* link:../../../rules/t76-bii/[Valideringsregler arvet fra CEN BII]
+* link:../../../rules/t76-openpeppol/[Valideringsregler arvet fra OpenPEPPOL]
+* link:../../../rules/ehf-common/[Valideringsregler arvet fra EHF Common]
+* link:../../../rules/t76-nogov/[Norske valideringsregler]

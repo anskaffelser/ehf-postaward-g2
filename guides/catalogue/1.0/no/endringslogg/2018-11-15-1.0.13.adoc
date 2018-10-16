@@ -15,6 +15,10 @@
 | Guide
 
 | -
+| Bytte ut utlisting av valideringsregler med lenker til alle relevante valideringsregler.
+| Guide
+
+| -
 | Legge til "grunnleggende" valideringsregler som er automatisk generert basert på syntaks. Reglene er identifisert med 'EHF-T19-BXXXXX' for katalog og 'EHF-T58-BXXXXX' for katalogrespons hvor 'XXXXX' er et løpenummer.
 | Validator
 

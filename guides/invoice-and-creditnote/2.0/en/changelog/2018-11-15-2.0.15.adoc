@@ -10,6 +10,10 @@
 | Guide
 
 | -
+| Replacing listing of validation rules with links to all relevant validation rules.
+| Guide
+
+| -
 | Combining 'NOGOV-UBL-T10.sch' and 'NONAT-UBL-T10.sch' into 'EHF-UBL-T10.sch'.
 | Validator
 

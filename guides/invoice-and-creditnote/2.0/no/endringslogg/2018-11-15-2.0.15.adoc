@@ -10,6 +10,10 @@
 | Guide
 
 | -
+| Bytte ut utlisting av valideringsregler med lenker til alle relevante valideringsregler.
+| Guide
+
+| -
 | Kombinere 'NOGOV-UBL-T10.sch' og 'NONAT-UBL-T10.sch' som 'EHF-UBL-T10.sch'.
 | Validator
 

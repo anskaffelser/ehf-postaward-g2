@@ -1,10 +1,7 @@
 = Norske valideringsregler for pakkseddel
 
-[cols="1,4", options="header"]
-|====
-|Regel
-|Melding/Kontekst/Test
-
-include::{rules-dir}/NOGOV-UBL-T16.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
+* link:../../../rules/t16-basic/[Grunnleggende syntaks-regler]
+* link:../../../rules/t16-bii/[Valideringsregler arvet fra CEN BII]
+* link:../../../rules/t16-openpeppol/[Valideringsregler arvet fra OpenPEPPOL]
+* link:../../../rules/ehf-common/[Valideringsregler arvet fra EHF Common]
+* link:../../../rules/t16-nogov/[Norske valideringsregler]

@@ -11,6 +11,10 @@
 | Guide
 
 | -
+| Bytte ut utlisting av valideringsregler med lenker til alle relevante valideringsregler.
+| Guide
+
+| -
 | Legge til "grunnleggende" valideringsregler som er automatisk generert basert på syntaks. Reglene er identifisert med 'EHF-T01-BXXXXX' for ordre og 'EHF-T76-BXXXXX' for ordrerespons hvor 'XXXXX' er et løpenummer.
 | Validator
 

@@ -1,21 +1,16 @@
 = Norwegian Rules for Order
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
+* link:../../../rules/t01-basic/[Basic syntax rules]
+* link:../../../rules/t01-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t01-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t01-nogov/[Norwegian validation rules]
 
-include::{rules-dir}/NOGOV-UBL-T01.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
 
 = Norwegian Rules for Order Response
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
-
-include::{rules-dir}/NOGOV-UBL-T76.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
+* link:../../../rules/t76-basic/[Basic syntax rules]
+* link:../../../rules/t76-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t76-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t76-nogov/[Norwegian validation rules]

@@ -1,8 +1,7 @@
 = Norwegian Rules for Punch Out
 
-[cols="1,4", options="header"]
-|===
-|Rule
-|Message/Context/Test
-include::{rules-dir}/EHF-UBL-T77.sch.adoc[]
-|===
+// * link:../../../rules/t77-basic/[Basic syntax rules]
+* link:../../../rules/t77-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t77-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t77-nogov/[Norwegian validation rules]

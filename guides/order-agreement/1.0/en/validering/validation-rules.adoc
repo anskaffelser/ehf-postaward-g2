@@ -1,8 +1,7 @@
 = Norwegian Rules for Order Agreement
 
-[cols="1,4", options="header"]
-|===
-|Rule
-|Message/Context/Test
-include::{rules-dir}/EHF-UBL-T110.sch.adoc[]
-|===
+// * link:../../../rules/t110-basic/[Basic syntax rules]
+* link:../../../rules/t110-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t110-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t110-nogov/[Norwegian validation rules]

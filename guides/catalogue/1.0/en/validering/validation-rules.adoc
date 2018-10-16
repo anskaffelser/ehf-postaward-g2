@@ -1,21 +1,16 @@
 = Norwegian Rules for Catalogue
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
+* link:../../../rules/t19-basic/[Basic syntax rules]
+* link:../../../rules/t19-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t19-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t19-nogov/[Norwegian validation rules]
 
-include::{rules-dir}/NOGOV-UBL-T19.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
 
 = Norwegian Rules for Catalogue Response
 
-[cols="1,4", options="header"]
-|====
-|Rule
-|Message/Context/Test
-
-include::{rules-dir}/NOGOV-UBL-T58.sch.adoc[]
-include::{rules-dir}/EHF-UBL-COMMON.sch.adoc[]
-|====
+* link:../../../rules/t58-basic/[Basic syntax rules]
+* link:../../../rules/t58-bii/[Validation rules inherited from CEN BII]
+* link:../../../rules/t58-openpeppol/[Validation rules inherited from OpenPEPPOL]
+* link:../../../rules/ehf-common/[Validation rules inherited from EHF Common]
+* link:../../../rules/t58-nogov/[Norwegian validation rules]

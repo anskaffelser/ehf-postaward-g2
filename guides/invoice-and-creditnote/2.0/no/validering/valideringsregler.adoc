@@ -1,21 +1,18 @@
 = Norske valideringsregler for faktura
 
-[cols="1,4", options="header"]
-|====
-|Regel
-|Melding/Kontekst/Test
+* link:../../../rules/t10-basic/[Grunnleggende syntaks-regler]
+* link:../../../rules/t10-bii/[Valideringsregler arvet fra CEN BII]
+* link:../../../rules/t10-openpeppol/[Valideringsregler arvet fra OpenPEPPOL]
+* link:../../../rules/ehf-common/[Valideringsregler arvet fra EHF Common]
+* link:../../../rules/t10-nonat/[Norske (NONAT) valideringsregler]
+* link:../../../rules/t10-nogov/[Norske (NOGOV) valideringsregler]
 
-include::{rules-dir}/NOGOV-UBL-T10.sch.adoc[]
-include::{rules-dir}/NONAT-UBL-T10.sch.adoc[]
-|====
 
 = Norske valideringsregler for kreditnota
 
-[cols="1,4", options="header"]
-|====
-|Regel
-|Melding/Kontekst/Test
-
-include::{rules-dir}/NOGOV-UBL-T14.sch.adoc[]
-include::{rules-dir}/NONAT-UBL-T14.sch.adoc[]
-|====
+* link:../../../rules/t14-basic/[Grunnleggende syntaks-regler]
+* link:../../../rules/t14-bii/[Valideringsregler arvet fra CEN BII]
+* link:../../../rules/t14-openpeppol/[Valideringsregler arvet fra OpenPEPPOL]
+* link:../../../rules/ehf-common/[Valideringsregler arvet fra EHF Common]
+* link:../../../rules/t14-nonat/[Norske (NONAT) valideringsregler]
+* link:../../../rules/t14-nogov/[Norske (NOGOV) valideringsregler]
