@@ -61,7 +61,8 @@ docker_pull \
     difi/vefa-structure:0.7 \
     difi/vefa-validator \
     difi/asciidoctor \
-    klakegg/schematron
+    klakegg/schematron \
+    alpine/git
 
 if [ -e $PROJECT/target ]; then
     docker_run "clean" "Removing old target folder" \
@@ -69,6 +70,14 @@ if [ -e $PROJECT/target ]; then
         alpine:3.6 \
         rm -rf /src/target
 fi
+
+docker_run "environment" "Creating environment file" \
+    -v $PROJECT:/src \
+    -v $PROJECT/target:/target \
+    --entrypoint sh \
+    -w /src \
+    alpine/git \
+    tools/script/docker-environment.sh
 
 docker_run "example-files" "Packaging example files" \
     -v $PROJECT:/src \
