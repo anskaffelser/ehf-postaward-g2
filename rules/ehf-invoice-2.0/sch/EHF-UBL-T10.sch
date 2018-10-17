@@ -3,7 +3,7 @@
         xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
-    <title>Rules for EHF Invoice 2.0</title>
+    <title>Norwegian rules for EHF Invoice</title>
 
     <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
     <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
@@ -13,7 +13,7 @@
     <xi:include href="../../shared/function/twodec.xml"/>
     <xi:include href="../../shared/function/slack.xml"/>
     <xi:include href="../../shared/function/cat2str.xml"/>
-    
+
     <let name="isZ01" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z01'"/>
     <let name="isZ02" value="/ubl:Invoice/cbc:InvoiceTypeCode = 'Z02'"/>
 

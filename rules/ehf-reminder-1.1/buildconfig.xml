@@ -9,7 +9,7 @@
 		<identifier>ehf-t17-base-1.1</identifier>
 		<title>EHF Reminder 1.1 (Base)</title>
 		<inherit>ubl-reminder-2.0</inherit>
-		<file path="xsl/EHF-UBL-T17.xsl" infoUrl="/ehf/g2/rules/{}/" />
+		<file path="xsl/EHF-UBL-T17.xsl" infoUrl="/ehf/g2/rules/t17-ehf/{}/" />
 	</configuration>
 	<configuration>
 		<identifier>ehf-t17-xy-1.1</identifier>

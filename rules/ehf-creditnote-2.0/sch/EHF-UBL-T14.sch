@@ -3,7 +3,7 @@
         xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:u="utils"
         schemaVersion="iso" queryBinding="xslt2">
 
-   <title>Rules for EHF Credit Note 2.0</title>
+   <title>Norwegian rules for EHF Credit Note</title>
 
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" prefix="cbc"/>
    <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>

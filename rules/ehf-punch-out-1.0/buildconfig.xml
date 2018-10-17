@@ -9,15 +9,15 @@
     <title>EHF Punch Out 1.0 (Base)</title>
     <inherit>ubl-catalogue-2.1</inherit>
     <inherit>ehf-common-ubl-1.0</inherit>
-    <file source="sch/EHF-UBL-T77.sch" path="xsl/EHF-UBL-T77.xsl" infoUrl="/ehf/g2/rules/{}/" />
+    <file source="sch/EHF-UBL-T77.sch" path="xsl/EHF-UBL-T77.xsl" infoUrl="/ehf/g2/rules/t77-ehf/{}/" />
     <file
       source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/BII RULES/BIIRULES-UBL-T77.sch"
       path="xsl/BIIRULES-UBL-T77.xsl"
-      infoUrl="/ehf/g2/rules/{}/" />
+      infoUrl="/ehf/g2/rules/t77-bii/{}/" />
     <file
       source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T77.sch"
       path="xsl/OPENPEPPOL-UBL-T77.xsl"
-      infoUrl="/ehf/g2/rules/{}/" />
+      infoUrl="/ehf/g2/rules/t77-openpeppol/{}/" />
   </configuration>
 
   <configuration>
