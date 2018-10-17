@@ -467,7 +467,7 @@
         <Type>native:File</Type>
         <Path>project.xml</Path>
         <Title>Schematron files</Title>
-        <Description>Zip file containing Schematron files part of EHF Post-Award G2. Please note Schematron files for PEPPOL BIS and CEN BII comes in addition when validating.</Description>
+        <Description>Zip file containing Schematron files part of EHF Post-Award G2.</Description>
         <Property key="download">ehf-postaward-g2-schematron.zip</Property>
         <Property key="filename">ehf-postaward-g2-schematron.zip</Property>
         <Tag>catalogue</Tag>

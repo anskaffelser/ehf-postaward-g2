@@ -61,7 +61,6 @@ docker_pull \
     difi/vefa-structure:0.7 \
     difi/vefa-validator \
     difi/asciidoctor \
-    kramos/alpine-zip \
     klakegg/schematron
 
 if [ -e $PROJECT/target ]; then
@@ -73,10 +72,9 @@ fi
 
 docker_run "example-files" "Packaging example files" \
     -v $PROJECT:/src \
-    -w / \
-    --entrypoint sh \
-    kramos/alpine-zip \
-    /src/tools/script/docker-package-examples.sh
+    -v $PROJECT/target:/target \
+    klakegg/schematron \
+    sh tools/script/docker-package-examples.sh
 
 docker_run "vefa-structure" "Running vefa-structure" \
     -v $PROJECT:/src \
@@ -85,14 +83,14 @@ docker_run "vefa-structure" "Running vefa-structure" \
 
 docker_run "schematron-files" "Packaging Schematron files" \
     -v $PROJECT:/src \
-    --entrypoint sh \
+    -v $PROJECT/target:/target \
     klakegg/schematron \
-    /src/tools/script/docker-package-schematron.sh
+    sh tools/script/docker-package-schematron.sh
 
 docker_run "vefa-validator" "Running vefa-validator" \
     -v $PROJECT:/src \
     difi/vefa-validator \
-    build -x -t -n no.difi.ehf.postaward -a rules,guides -target target/validator /src
+    build -x -t -n no.difi.ehf.postaward -a rules -target target/validator /src
 
 docker_run "asciidoctor" "Creating documentation" \
     -v $PROJECT:/documents \
