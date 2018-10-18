@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>Order Agreement</Term>
+    <Name>Post-Award Order Agreement</Name>
+
+    <Property key="sch:prefix">EHF-T01</Property>
+    <Property key="sch:identifier">t01-basic</Property>
+    <Property key="sch:flag">warning</Property>
+    <Property key="sch:LimitToModelRule:flag">off</Property>
+    <Property key="sch:SchemaLocationRule:flag">off</Property>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+
+        <Term>ubl:OrderResponse</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Reference type="RULE">EUGEN-T110-R025</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Customization identifier</Name>
+            <Description>An identification of the specification containing the total set of rules regarding semantic
+                content, cardinalities and business rules to which the data contained in the instance
+                document conforms</Description>
+            <Reference type="RULE">EUGEN-T110-R007</Reference>
+            <Reference type="RULE">BII3-T110-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns110:ver1.0:extended:urn:www.peppol.eu:bis:peppol42a:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Profile identifier</Name>
+            <Description>Identifies the business process context in which the transaction appears. It enables the buyer to process the document in an appropriate way.</Description>
+            <Reference type="RULE">EUGEN-T110-R008</Reference>
+            <Reference type="RULE">BII3-T110-R002</Reference>
+            <Value type="EXAMPLE"> urn:www.cenbii.eu:profile:bii42:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Order agreement identifier</Name>
+            <Description>A unique identifier for an order agreement.</Description>
+            <Reference type="RULE">BII3-T110-R005</Reference>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Order agreement issue date</Name>
+            <Description>The date on which an order agreement was issued.</Description>
+            <Reference type="RULE">BII3-T110-R003</Reference>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Order agreement issue date</Name>
+            <Description>The time of the day when the order agreement was issued.</Description>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:Note</Term>
+            <Name>Order agreement note</Name>
+            <Description>Free-form text applying to the order agreement.</Description>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cbc:DocumentCurrencyCode</Term>
+            <Name>Order agreement currency</Name>
+            <Description>The default currency for the order agreement.</Description>
+            <Reference type="RULE">EUGEN-T110-R003</Reference>
+            <Reference type="RULE">EUGEN-T110-R011</Reference>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:CustomerReference</Term>
+            <Name>Buyer reference identifier</Name>
+            <Description>An identifier assigned by the Buyer used for internal routing purposes.</Description>
+        </Element>
+
+        <Element>
+            <Term>cac:OrderReference</Term>
+            <Name>Order reference</Name>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Previous order agreement identifier</Name>
+                <Description>Element is mandatory in UBL. If no previousl order use word "NA".</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AdditionalDocumentReference</Term>
+            <Name>Additional document reference</Name>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Document identifier</Name>
+                <Description>Identifier of a document.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:DocumentType</Term>
+                <Name>Document description</Name>
+                <Description>Textual description of the document.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:Attachment</Term>
+                <Name>Attachment</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:EmbeddedDocumentBinaryObject</Term>
+                    <Name>Attached document</Name>
+                    <Description>A Binary Object MIME code attribute MUST be coded using MIME Code Type version
+                        2008 code list. An attached document embedded as binary object.</Description>
+
+                    <Attribute>
+                        <Term>mimeCode</Term>
+                        <Reference type="RULE">CL-T110-R007</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:ExternalReference</Term>
+                    <Name>External reference</Name>
+
+                    <Element>
+                        <Term>cbc:URI</Term>
+                        <Name>External document URI</Name>
+                        <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:Contact</Term>
+            <Name>Contact</Name>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ID</Term>
+                <Name>Contact identifier</Name>
+                <Description>The identification of a contract.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ContractType</Term>
+                <Name>Contract type</Name>
+                <Description>The type of a contract that is being referred to (such as framework agreement) expressed as a code.</Description>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:SellerSupplierParty</Term>
+            <Name>Seller supplier party</Name>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element>
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Seller electronic address</Name>
+                    <Description>Identifies the seller's electronic address to which a business document may be delivered.</Description>
+                    <Reference type="RULE">EUGEN-T110-R001</Reference>
+                    <Reference type="RULE">EUGEN-T110-R009</Reference>
+
+                    <Attribute usage="Optional">
+                        <Term>schemeID</Term>
+                        <Reference type="RULE">CL-T110-R003</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Seller party identification</Name>
+                        <Description>An identifier for the seller that is issued by the party that sends the document in which the identifier is used.</Description>
+                        <Reference type="RULE">BII3-T110-R007</Reference>
+                        <Reference type="RULE">BII3-T110-R018</Reference>
+                        <Reference type="RULE">BII3-T110-R019b</Reference>
+                        <Reference type="RULE">EUGEN-T110-R002</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T110-R004</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Seller party name</Name>
+                        <Description>The full (formal) name by which the seller is registered in the national registry of legal entities or persons.</Description>
+                        <Reference type="RULE">BII3-T110-R007</Reference>
+                        <Reference type="RULE">BII3-T110-R019a</Reference>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is located.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>The subdivision of a country such as region, county, state, province etc. </Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>A code that identifies the country</Description>
+                            <Reference type="RULE">EUGEN-T110-R004</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>listID</Term>
+                                <Reference type="RULE">CL-T110-R009</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Contact</Term>
+                    <Name>Contact</Name>
+                    <Description>Contact information.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>Contact ID</Name>
+                        <Description>Customer reference (“Your ref”) to be returned in the Invoice, e.g.Employee-no.</Description>
+                        <Value type="EXAMPLE">3150bdn</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact point</Name>
+                        <Description>The name of the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax number</Name>
+                        <Description>A fax number for the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact point.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element>
+            <Term>cac:BuyerCustomerParty</Term>
+            <Name>Buyer customer party</Name>
+
+            <Element>
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element>
+                    <Term>cbc:EndpointID</Term>
+                    <Name>Buyer electronic address</Name>
+                    <Description>Identifies the buyers electronic address to which the business document should be delivered.</Description>
+                    <Reference type="RULE">EUGEN-T110-R001</Reference>
+                    <Reference type="RULE">EUGEN-T110-R010</Reference>
+
+                    <Attribute usage="Optional">
+                        <Term>schemeID</Term>
+                        <Reference type="RULE">CL-T110-R003</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Buyer customer account identifier</Name>
+                        <Description>An identifier for the buyer that is issued by the party that sends the document in which the identifier is used.</Description>
+                        <Reference type="RULE">BII3-T110-R006</Reference>
+                        <Reference type="RULE">BII3-T110-R019d</Reference>
+                        <Reference type="RULE">BII3-T110-R020</Reference>
+                        <Reference type="RULE">EUGEN-T110-R002</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T110-R004</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Buyer name</Name>
+                        <Description>The full name of the buyer.</Description>
+                        <Reference type="RULE">BII3-T110-R006</Reference>
+                        <Reference type="RULE">BII3-T110-R019c</Reference>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PostalAddress</Term>
+                    <Name>Postal address</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is located.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>The subdivision of a country such as region, county, state, province etc. </Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>A code that identifies the country</Description>
+                            <Reference type="RULE">EUGEN-T110-R004</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>listID</Term>
+                                <Reference type="RULE">CL-T110-R009</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:DeliveryContact</Term>
+                    <Name>Contact</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Contact point</Name>
+                        <Description>The name of the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telephone</Term>
+                        <Name>Contact telephone number</Name>
+                        <Description>A phone number for the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Telefax</Term>
+                        <Name>Contact fax number</Name>
+                        <Description>A fax number for the contact point.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ElectronicMail</Term>
+                        <Name>Contact email address</Name>
+                        <Description>The e-mail address for the contact point.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:OriginatorCustomerParty</Term>
+            <Name>Originator customer party</Name>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Originator identifier</Name>
+                        <Description>An identifier for the party that originally requested the ordered items.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T110-R004</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Originator name</Name>
+                        <Description>The name of the party that originally requested the ordered items.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+
+        <Element cardinality="0..1">
+            <Term>cac:AccountingCustomerParty</Term>
+            <Name>Accounting customer party</Name>
+
+            <Element cardinality="0..1">
+                <Term>cac:Party</Term>
+                <Name>Party</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyIdentification</Term>
+                    <Name>Party identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Accounting customer identifier</Name>
+                        <Description>A unique identifier of the accounting customer.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T110-R004</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:PartyName</Term>
+                    <Name>Party name</Name>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Accounting customer name</Name>
+                        <Description>Accounting customer name.</Description>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+       <Element cardinality="0..1">
+           <Term>cac:Delivery</Term>
+           <Name>Delivery</Name>
+
+           <Element cardinality="0..1">
+               <Term>cac:PromisedDeliveryPeriod</Term>
+               <Name>Promised delivery period</Name>
+
+               <Element>
+                   <Term>cbc:StartDate</Term>
+                   <Name>Period start date</Name>
+                   <Description>The date when the period starts.</Description>
+               </Element>
+
+               <Element cardinality="0..1">
+                   <Term>cbc:StartTime</Term>
+                   <Name>Period start time</Name>
+                   <Description>The start time of the period.</Description>
+               </Element>
+
+               <Element cardinality="0..1">
+                   <Term>cbc:EndDate</Term>
+                   <Name>Period end date</Name>
+                   <Description>The date which the period ends.</Description>
+               </Element>
+
+               <Element cardinality="0..1">
+                   <Term>cbc:EndTime</Term>
+                   <Name>Period end time</Name>
+                   <Description>The end time of the period.</Description>
+               </Element>
+           </Element>
+           
+           <Element cardinality="0..1">
+               <Term>cac:DeliveryParty</Term>
+               <Name>Delivery party</Name>
+               
+               <Element cardinality="0..1">
+                   <Term>cac:PartyIdentification</Term>
+                   <Name>Party identification</Name>
+                   
+                   <Element>
+                       <Term>cbc:ID</Term>
+                       <Name>Delivery party identifier</Name>
+                       <Description>An identifier for the party that carries out the delivery.</Description>
+
+                       <Attribute usage="Optional">
+                           <Term>schemeID</Term>
+                           <Reference type="RULE">CL-T110-R004</Reference>
+                       </Attribute>
+                   </Element>
+               </Element>
+
+               <Element cardinality="0..1">
+                   <Term>cac:PartyName</Term>
+                   <Name>Party name</Name>
+
+                   <Element>
+                       <Term>cbc:Name</Term>
+                       <Name>Delivery party name</Name>
+                       <Description>The name of the party to which the goods and services are deliverd.</Description>
+                   </Element>
+               </Element>
+           </Element>
+       </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:DeliveryTerms</Term>
+            <Name>Delivery terms</Name>
+
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Buyer delivery terms</Name>
+                <Description>The terms that the buyer applies to the delivery the ordered items.</Description>
+            </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cbc:SpecialTerms</Term>
+                <Name>Delivery special terms</Name>
+                <Description>A description of special conditions relating to the delivery terms.</Description>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:DeliveryLocation</Term>
+                <Name>Delivery location</Name>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:ID</Term>
+                    <Name>Delivery terms location</Name>
+                    <Description>The location to which the delivery terms refer.</Description>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Address</Term>
+                    <Name>Address</Name>
+                    <Description>Delivery address.</Description>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:StreetName</Term>
+                        <Name>Address line 1</Name>
+                        <Description>The main address line in a postal address usually the street name and number.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:AdditionalStreetName</Term>
+                        <Name>Address line 2</Name>
+                        <Description>An additional address line in a postal address that can be used to give further details
+                            supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CityName</Term>
+                        <Name>City</Name>
+                        <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:PostalZone</Term>
+                        <Name>Post Code</Name>
+                        <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:CountrySubentity</Term>
+                        <Name>Country subdivision</Name>
+                        <Description>For specifying a region, county, state, province etc. within a country by using text.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Country</Term>
+                        <Name>Country</Name>
+
+                        <Element>
+                            <Term>cbc:IdentificationCode</Term>
+                            <Name>Country code</Name>
+                            <Description>A code that identifies the country.</Description>
+                            <Reference type="RULE">EUGEN-T110-R004</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>listID</Term>
+                                <Description>Attribute  must be 'ISO3166-1:Alpha2'</Description>
+                                <Reference type="RULE">CL-T110-R009</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..n">
+            <Term>cac:AllowanceCharge</Term>
+            <Name>Allowance Charge</Name>
+
+            <Element>
+                <Term>cbc:ChargeIndicator</Term>
+                <Name>Allowance amount</Name>
+                <Description>The net amount of an allowance. ChargeIndicator = true means that AllowanceCharge amount is a Charge,
+                    ChargeIndicator = false means that AllowanceCharge Amount is an Allowance.</Description>
+                <Reference type="RULE">EUGEN-T110-R021]</Reference>
+            </Element>
+
+            <Element cardinality="0..n">
+                <Term>cbc:AllowanceChargeReason</Term>
+                <Name>Allowance/Charge reason</Name>
+                <Description>The reason for the allowance, expressed as text.</Description>
+                <Reference type="RULE">EUGEN-T110-R015</Reference>
+            </Element>
+            
+            <Element>
+                <Term>cbc:Amount</Term>
+                <Name>Allowance/Charge amount</Name>
+                <Description>The net amount of an allowance. Value is allowance when ChargeIndicator = false. Value is charge when ChargeIndicator = true.</Description>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:TaxTotal</Term>
+            <Name>Tax Total</Name>
+
+            <Element>
+                <Term>cbc:TaxAmount</Term>
+                <Name>VAT total amount</Name>
+                <Description>The total VAT amount. The sum of all VAT category tax amounts.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+            
+            <Element cardinality="0..n">
+                <Term>cac:TaxSubtotal</Term>
+                <Name>Tax subtotal</Name>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:TaxableAmount</Term>
+                    <Name>VAT category taxable amount</Name>
+                    <Description>Sum of all taxable amounts subject to a specific VAT category code and VAT category rate (if the VAT category rate is applicable).</Description>
+                    <Reference type="RULE">EUGEN-T110-R021</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Reference type="RULE">CL-T110-R001</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element>
+                    <Term>cbc:TaxAmount</Term>
+                    <Name>VAT category tax amount</Name>
+                    <Description>The total VAT amount for a given VAT category.</Description>
+                    <Reference type="RULE">EUGEN-T110-R021</Reference>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Reference type="RULE">CL-T110-R001</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element>
+                    <Term>cac:TaxCategory</Term>
+                    <Name>Tax category</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ID</Term>
+                        <Name>VAT category code</Name>
+                        <Description>Coded identification of a VAT category.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T110-R005</Reference>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Percent</Term>
+                        <Name>VAT category rate</Name>
+                        <Description>The VAT rate, represented as percentage that applies for the relevant VAT category.</Description>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cbc:TaxExemptionReason</Term>
+                        <Name>VAT exemption reason text</Name>
+                        <Description>A textual statement of the reason for why the base amount is exempted from VAT.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>VAT category code</Name>
+                            <Description>Coded identification of a VAT category.</Description>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+        
+        <Element cardinality="0..1">
+            <Term>cac:LegalMonetaryTotal</Term>
+            <Name>Legal monetary total</Name>
+            
+            <Element>
+                <Term>cbc:LineExtensionAmount</Term>
+                <Name>Sum of line amounts</Name>
+                <Description>Sum of all line amounts in the document.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R017</Reference>
+                <Reference type="RULE">EUGEN-T110-R019</Reference>
+                <Reference type="RULE">EUGEN-T110-R018</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element>
+                <Term>cbc:TaxExclusiveAmount</Term>
+                <Name>Total amount without VAT</Name>
+                <Description>The total amount of the document without VAT including all line net amounts minus sum of allowance amount on document level plus sum of charges on document level.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R022</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element>
+                <Term>cbc:TaxInclusiveAmount</Term>
+                <Name>Total amount with VAT</Name>
+                <Description>The total amount of the document with VAT.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R018</Reference>
+                <Reference type="RULE">EUGEN-T110-R023</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:AllowanceTotalAmount</Term>
+                <Name>Sum of allowances on document level</Name>
+                <Description>Sum of all allowances on document level.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R021</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ChargeTotalAmount</Term>
+                <Name>Sum of charges on document level</Name>
+                <Description>Sum of all charges on document level.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R020</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PrepaidAmount</Term>
+                <Name>Paid amounts</Name>
+                <Description>The sum of amounts which have been paid a-priori.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PayableRoundingAmount</Term>
+                <Name>Rounding of document level</Name>
+                <Description>Any rounding of the "Document total including VAT".</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PayableAmount</Term>
+                <Name>Amount due for payment</Name>
+                <Description>The outstanding amount that is requested to be paid.</Description>
+                <Reference type="RULE">EUGEN-T110-R011</Reference>
+                <Reference type="RULE">EUGEN-T110-R016</Reference>
+                <Reference type="RULE">EUGEN-T110-R024</Reference>
+
+                <Attribute>
+                    <Term>currencyID</Term>
+                    <Reference type="RULE">CL-T110-R001</Reference>
+                </Attribute>
+            </Element>
+
+        </Element>
+
+        <Element cardinality="1..n">
+            <Term>cac:OrderLine</Term>
+            <Name>Order line</Name>
+
+            <Element>
+                <Term>cac:LineItem</Term>
+                <Name>Line item</Name>
+
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Order agreement line identifier</Name>
+                    <Description>An identifier for an individual line that is unique within an order agreement.</Description>
+                    <Reference type="RULE">BII3-T110-R008</Reference>
+                    <Reference type="RULE">BII3-T110-R009</Reference>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:Note</Term>
+                    <Name>Order agreement line note</Name>
+                    <Description>Free-form text applying to the order agreement line.</Description>
+                </Element>
+
+                <Element>
+                    <Term>cbc:Quantity</Term>
+                    <Name>Ordered quantity</Name>
+                    <Description>The number of item units that are ordered.</Description>
+                    <Reference type="RULE">BII3-T110-R021</Reference>
+                    <Reference type="RULE">EUGEN-T110-R005</Reference>
+
+                    <Attribute usage="Optional">
+                        <Term>unitCode</Term>
+                        <Reference type="RULE">CL-T110-R006</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:LineExtensionAmount</Term>
+                    <Name>Order agreement line amount</Name>
+                    <Description>Order agreement line amount.The total amount for the order agreement line, including all taxes except VAT.</Description>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Reference type="RULE">CL-T110-R001</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cbc:TotalTaxAmount</Term>
+                    <Name>Order agreement line amount</Name>
+                    <Description>Order agreement line amount.The total amount for the order agreement line, including all taxes except VAT.</Description>
+
+                    <Attribute>
+                        <Term>currencyID</Term>
+                        <Reference type="RULE">CL-T110-R001</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:Delivery</Term>
+                    <Name>Delivery</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Quantity</Term>
+                        <Name>Accepted quantity</Name>
+                        <Description>The number of item units that are delivered.</Description>
+                        
+                        <Attribute usage="Optional">
+                            <Term>unitCode</Term>
+                        </Attribute>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cac:PromisedDeliveryPeriod</Term>
+                        <Name>Promised delivery period</Name>
+
+                        <Element>
+                            <Term>cbc:StartDate</Term>
+                            <Name>Period start date</Name>
+                            <Description>The date when the period starts.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:StartTime</Term>
+                            <Name>Period start time</Name>
+                            <Description>The start time of the period.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:EndDate</Term>
+                            <Name>Period end date</Name>
+                            <Description>The date when the period ends.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:EndTime</Term>
+                            <Name>Period end time</Name>
+                            <Description>The end time of the period.</Description>
+                        </Element>
+                    </Element>
+                </Element>
+                
+                <Element>
+                    <Term>cac:Price</Term>
+                    <Name>Price</Name>
+                    
+                    <Element>
+                        <Term>cbc:PriceAmount</Term>
+                        <Name>Item net price</Name>
+                        <Description>The price of an item, exclusive of VAT, after subtracting item price discount.</Description>
+                        <Reference type="RULE">BII3-T110-R011</Reference>
+                        <Reference type="RULE">EUGEN-T110-R021</Reference>
+
+                        <Attribute>
+                            <Term>currencyID</Term>
+                            <Reference type="RULE">CL-T110-R001</Reference>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BaseQuantity</Term>
+                        <Name>Item price base quantity</Name>
+                        <Description>The number of item units to which the price applies.</Description>
+                        <Reference type="RULE">BII3-T110-R011</Reference>
+                        <Reference type="RULE">EUGEN-T110-R021</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>unitCode</Term>
+                            <Reference type="RULE">CL-T110-R006</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element>
+                    <Term>cac:Item</Term>
+                    <Name>Item</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Description</Term>
+                        <Name>Item description as text</Name>
+                        <Description>A free text detailed description of an item.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:Name</Term>
+                        <Name>Item name</Name>
+                        <Description>A name for an item.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:SellersItemIdentification</Term>
+                        <Name>Sellers item identification</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item sellers identifier</Name>
+                            <Description>An identifier, assigned by the seller, for the item.</Description>
+                            <Reference type="RULE">BII3-T110-R012</Reference>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:StandardItemIdentification</Term>
+                        <Name>Standard item identification</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item standard identifier</Name>
+                            <Description>An item identifier based on a registered scheme.</Description>
+                            <Reference type="RULE">BII3-T110-R012</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>schemeID</Term>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cac:ItemSpecificationDocumentReference</Term>
+                        <Name>Item specification document reference</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Document identifier</Name>
+                            <Description>Identifier of a document.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:DocumentType</Term>
+                            <Name>Document description</Name>
+                            <Description>Textual description of the document.</Description>
+                        </Element>
+                        
+                        <Element cardinality="0..1">
+                            <Term>cac:Attachment</Term>
+                            <Name>Attachment</Name>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:EmbeddedDocumentBinaryObject</Term>
+                                <Name>Attached document</Name>
+                                <Description>A Binary Object MIME code attribute MUST be coded using MIME Code Type version
+                                    2008 code list. An attached document embedded as binary object.</Description>
+                                <Reference type="RULE">EUGEN-T110-R012</Reference>
+
+                                <Attribute>
+                                    <Term>mimeCode</Term>
+                                    <Reference type="RULE">CL-T110-R007</Reference>
+                                </Attribute>
+                            </Element>
+
+                            <Element cardinality="0..1">
+                                <Term>cac:ExternalReference</Term>
+                                <Name>External reference</Name>
+
+                                <Element cardinality="0..1">
+                                    <Term>cbc:URI</Term>
+                                    <Name>External document URI</Name>
+                                    <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
+                                </Element>
+                            </Element>
+                        </Element>
+
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:CommodityClassification</Term>
+                        <Name>Commodity classification</Name>
+
+                        <Element>
+                            <Term>cbc:ItemClassificationCode</Term>
+                            <Name>Item classification code</Name>
+                            <Description>A code for classifying the item by its type or nature according to the CPV commodity classification scheme. ListID = CPV.</Description>
+                            <Reference type="RULE">EUGEN-T110-R013</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>listID</Term>
+                            </Attribute>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:TransactionConditions</Term>
+                        <Name>Transaction conditions</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ID</Term>
+                            <Name>Contracted item indicator</Name>
+                            <Description>Indicates if the item is offered in accordance to an existing contract.</Description>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:ClassifiedTaxCategory</Term>
+                        <Name>Classified tax category</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item VAT category code</Name>
+                            <Description>The VAT category code for the item.</Description>
+                            <Reference type="RULE">BII3-T110-R015</Reference>
+                            <Reference type="RULE">EUGEN-T110-R106</Reference>
+
+                            <Attribute>
+                                <Term>schemeID</Term>
+                                <Reference type="RULE">CL-T110-R005</Reference>
+                            </Attribute>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:Percent</Term>
+                            <Name>Line VAT rate</Name>
+                            <Description>The VAT percentage rate that applies to the line amount.</Description>
+                        </Element>
+
+                        <Element>
+                            <Term>cac:TaxScheme</Term>
+                            <Name>Tax scheme</Name>
+
+                            <Element>
+                                <Term>cbc:ID</Term>
+                                <Name>Item VAT category code</Name>
+                                <Description>The VAT category code for the item.</Description>
+                                <Reference type="RULE">BII3-T110-R015</Reference>
+                                <Reference type="RULE">EUGEN-T110-R106</Reference>
+                            </Element>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:AdditionalItemProperty</Term>
+                        <Name>Additional item property</Name>
+                        
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Item property name</Name>
+                            <Description>The name of the property</Description>
+                        </Element>
+                        
+                        <Element cardinality="0..1">
+                            <Term>cbc:NameCode</Term>
+                            <Name>Item property classification code</Name>
+                            <Description>Code for the item property according to a property code system.</Description>
+                        </Element>
+
+                        <Element>
+                            <Term>cbc:Value</Term>
+                            <Name>Item property value</Name>
+                            <Description>The value of the item property.</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ValueQuantity</Term>
+                            <Name>Item property unit of measure</Name>
+                            <Description>The unit of measure in which the property value is stated, if relevant.</Description>
+                            <Reference type="RULE">EUGEN-T110-R014</Reference>
+
+                            <Attribute usage="Optional">
+                                <Term>unitCode</Term>
+                                <Reference type="RULE">CL-T110-R006</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+
+                    <Element cardinality="0..n">
+                        <Term>cac:Certificate</Term>
+                        <Name>Certificate</Name>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Item label name</Name>
+                            <Description>The name of the product label.</Description>
+                            <Reference type="RULE">EUGEN-T110-R026</Reference>
+                        </Element>
+                        
+                        <Element>
+                            <Term>cbc:CertificateTypeCode</Term>
+                            <Name>Certificate type code</Name>
+                        </Element>
+                        
+                        <Element>
+                            <Term>cbc:CertificateType</Term>
+                            <Name>Item label type</Name>
+                            <Description>The label type such environmental, quality, social etc.</Description>
+                        </Element>
+
+                        <Element cardinality="0..n">
+                            <Term>cbc:Remarks</Term>
+                            <Name>Item label value</Name>
+                            <Description>The label value that applies to the item.</Description>
+                            <Reference type="RULE">EUGEN-T110-R027</Reference>
+                        </Element>
+                        
+                        <Element>
+                            <Term>cac:IssuerParty</Term>
+                            <Name>Issuer party</Name>
+                        </Element>
+                        
+                        <Element cardinality="0..n">
+                            <Term>cac:DocumentReference</Term>
+                            <Name>Document reference</Name>
+                            
+                            <Element>
+                                <Term>cbc:ID</Term>
+                                <Name>Item label reference</Name>
+                                <Description>A reference to where the label specification can be found, e.g. a URI.</Description>
+                            </Element>
+                        </Element>
+                    </Element>
+
+                </Element>
+
+            </Element>
+        </Element>
+
+    </Document>
+
+</Syntax>

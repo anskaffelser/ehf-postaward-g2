@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Syntax xmlns="urn:fdc:difi.no:2017:vefa:structure:Syntax-1">
+
+    <Term>Punch Out</Term>
+    <Name>Post-Award Punch Out</Name>
+
+    <Property key="sch:prefix">EHF-T76</Property>
+    <Property key="sch:identifier">t76-basic</Property>
+    <Property key="sch:flag">warning</Property>
+    <Property key="sch:LimitToModelRule:flag">off</Property>
+    <Property key="sch:SchemaLocationRule:flag">off</Property>
+
+    <Namespace prefix="ubl">urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2</Namespace>
+    <Namespace prefix="cac">urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</Namespace>
+    <Namespace prefix="cbc">urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</Namespace>
+
+    <Document>
+
+        <Term>ubl:Catalogue</Term>
+
+        <Element>
+            <Term>cbc:UBLVersionID</Term>
+            <Name>UBL VersionID</Name>
+            <Description>Identifies the UBL version on which the transaction instance is based.</Description>
+            <Reference type="RULE">EUGEN-T77-R015</Reference>
+            <Value type="FIXED">2.1</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:CustomizationID</Term>
+            <Name>Specification identifier</Name>
+            <Description>An identification of the specification containing the total set of rules regarding semantic
+                content, cardinalities and business rules to which the data contained in the instance document conforms.</Description>
+            <Reference type="RULE">BII3-T77-R001</Reference>
+            <Reference type="RULE">EUGEN-T77-R001</Reference>
+            <Value type="EXAMPLE">urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ProfileID</Term>
+            <Name>Business process type identifier</Name>
+            <Description>Identifies the business process context in which the transaction appears. It enables the buyer to process the document in an appropriate way.</Description>
+            <Reference type="RULE">BII3-T77-R002</Reference>
+            <Reference type="RULE">EUGEN-T77-R002</Reference>
+            <Value type="EXAMPLE"> urn:www.cenbii.eu:profile:bii18:ver1.0</Value>
+        </Element>
+
+        <Element>
+            <Term>cbc:ID</Term>
+            <Name>Shopping cart identifier</Name>
+            <Description>An identifier for the shopping cart.</Description>
+            <Reference type="RULE">BII3-T77-R005</Reference>
+        </Element>
+
+        <Element>
+            <Term>cbc:ActionCode</Term>
+            <Name>Complete cart indicator</Name>
+            <Description>Indicate if only a complete shopping cart can be ordered. That is, that the information and prices in the shopping cart is only valid if the complete cart is ordered.</Description>
+            <Reference type="RULE">EUGEN-T77-R004</Reference>
+        </Element>
+
+        <Element>
+            <Term>cbc:IssueDate</Term>
+            <Name>Shopping cart issue date</Name>
+            <Description>The date when the shopping cart was issued.</Description>
+            <Reference type="RULE">BII3-T77-R003</Reference>
+            <Reference type="RULE">EUGEN-T77-R005</Reference>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cbc:IssueTime</Term>
+            <Name>Shopping cart issue time</Name>
+            <Description>The time of day when shopping cart was issued.</Description>
+            <Reference type="RULE">BII3-T77-R004</Reference>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:ValidityPeriod</Term>
+            <Name>Validity period</Name>
+
+            <Element>
+                <Term>cbc:EndDate</Term>
+                <Name>Period end date</Name>
+                <Description>The date on which the period ends.</Description>
+                <Reference type="RULE">EUGEN-T77-R003</Reference>
+                <Reference type="RULE">BII3-T77-R017</Reference>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:EndTime</Term>
+                <Name>Period end time</Name>
+                <Description>The end time of the period</Description>
+            </Element>
+        </Element>
+
+        <Element cardinality="0..1">
+            <Term>cac:ReferencedContract</Term>
+            <Name>Referenced contract</Name>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ID</Term>
+                <Name>Contract identifier</Name>
+                <Description>The identification of a contract.</Description>
+            </Element>
+        </Element>
+        
+        <Element>
+            <Term>cac:ProviderParty</Term>
+            <Name>Provider party</Name>
+            
+            <Element>
+                <Term>cbc:EndpointID</Term>
+                <Name>Seller electronic address</Name>
+                <Description>Identifies the seller's electronic address to which a business document may be delivered.</Description>
+                <Reference type="RULE">EUGEN-T77-R006</Reference>
+
+                <Attribute usage="Optional">
+                    <Term>schemeID</Term>
+                    <Reference type="RULE">CL-T77-R007</Reference>
+                </Attribute>
+            </Element>
+        </Element>
+
+
+
+    </Document>
+
+</Syntax>
