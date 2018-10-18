@@ -119,6 +119,436 @@
                     <Reference type="RULE">CL-T77-R007</Reference>
                 </Attribute>
             </Element>
+
+            <Element cardinality="0..1">
+                <Term>cac:PartyIdentification</Term>
+                <Name>Party identification</Name>
+                
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Seller standard identifier</Name>
+                    <Description>An identification of the seller.</Description>
+                    <Reference type="RULE">BII3-T77-R019</Reference>
+
+                    <Attribute usage="Optional">
+                        <Term>schemeID</Term>
+                        <Reference type="RULE">CL-T77-R008</Reference>
+                    </Attribute>
+                </Element>
+            </Element>
+            
+            <Element>
+                <Term>cac:PartyName</Term>
+                <Name>Party name</Name>
+                
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Seller name</Name>
+                    <Description>The full (formal) name by which the seller is registered in the national registry of legal entities or persons.</Description>
+                    <Reference type="RULE">BII3-T77-R007</Reference>
+                    <Reference type="RULE">BII3-T77-R018</Reference>
+                </Element>
+            </Element>
+        </Element>
+        
+        
+        <Element cardinality="0..1">
+            <Term>cac:Contact</Term>
+            <Name>Contact</Name>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ID</Term>
+                <Name>Buyer reference identifier</Name>
+                <Description>An identifier assigned by the Buyer used for internal routing purposes.</Description>
+            </Element>
+        </Element>
+        
+        <Element cardinality="1..n">
+            <Term>cac:CatalogueLine</Term>
+            <Name>Catalogue line</Name>
+            
+            <Element>
+                <Term>cbc:ID</Term>
+                <Name>Shopping cart line identifier</Name>
+                <Description>An identifier for an individual line that is unique within a shopping cart.</Description>
+                <Reference type="RULE">BII3-T77-R008</Reference>
+                <Reference type="RULE">BII3-T77-R009</Reference>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:ContractSubdivision</Term>
+                <Name>Contracted item indicator</Name>
+                <Description>Indicates if the item is offered in accordance to an existing contract.</Description>
+            </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cac:LineValidityPeriod</Term>
+                <Name>Line validity period</Name>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:StartDate</Term>
+                    <Name>Item availability date</Name>
+                    <Description>The date when the item will be available for ordering.</Description>
+                </Element>
+            </Element>
+            
+            <Element>
+                <Term>cac:RequiredItemLocationQuantity</Term>
+                <Name>Required item location quantity</Name>
+                
+                <Element>
+                    <Term>cbc:LeadTimeMeasure</Term>
+                    <Name>Shopping cart line delivery lead days</Name>
+                    <Description>Number of days from order to delivery.</Description>
+
+                    <Attribute>
+                        <Term>unitCode</Term>
+                        <Reference type="RULE">EUGEN-T77-R011</Reference>
+                    </Attribute>
+                </Element>
+
+                <Element>
+                    <Term>cac:Price</Term>
+                    <Name>Price</Name>
+
+                    <Element>
+                        <Term>cbc:PriceAmount</Term>
+                        <Name>Item price</Name>
+                        <Description>The price of an item, exclusive of VAT, after subtracting item price discount.</Description>
+                        <Reference type="RULE">BII3-T77-R011</Reference>
+                        <Reference type="RULE">BII3-T77-R016</Reference>
+                        <Reference type="RULE">EUGEN-T77-R009</Reference>
+                        
+                        <Attribute>
+                            <Term>currencyID</Term>
+                            <Reference type="RULE">CL-T77-R004</Reference>
+                        </Attribute>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:BaseQuantity</Term>
+                        <Name>Item price base quantity</Name>
+                        <Description>The number of item units to which the price applies.</Description>
+                        <Reference type="RULE">EUGEN-T77-R008</Reference>
+
+                        <Attribute>
+                            <Term>unitCode</Term>
+                            <Reference type="RULE">CL-T77-R003</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+                
+                <Element>
+                    <Term>cac:DeliveryUnit</Term>
+                    <Name>Delivery unit</Name>
+                    
+                    <Element>
+                        <Term>cbc:BatchQuantity</Term>
+                        <Name>Shopping cart line quantity</Name>
+                        <Description>The number of item units requested by the buyer.</Description>
+                        <Reference type="RULE">BII3-T77-R010</Reference>
+                        <Reference type="RULE">BII3-T77-R021</Reference>
+
+                        <Attribute>
+                            <Term>unitCode</Term>
+                            <Reference type="RULE">CL-T77-R002</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+                
+            </Element>
+            
+            <Element>
+                <Term>cac:Item</Term>
+                <Name>Item</Name>
+                
+                <Element cardinality="0..1">
+                    <Term>cbc:Description</Term>
+                    <Name>Item description as text</Name>
+                    <Description>A free text detailed description of an item.</Description>
+                    <Reference type="RULE">BII3-T77-R023]</Reference>
+                </Element>
+
+                <Element>
+                    <Term>cbc:Name</Term>
+                    <Name>Item name</Name>
+                    <Description>A name for an item.</Description>
+                    <Reference type="RULE">BII3-T77-R013</Reference>
+                </Element>
+                
+                <Element cardinality="0..1">
+                    <Term>cac:SellersItemIdentification</Term>
+                    <Name>Sellers item identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item sellers identifier</Name>
+                        <Description>An identifier, assigned by the seller, for the item.</Description>
+                        <Reference type="RULE">BII3-T77-R012</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:ManufacturersItemIdentification</Term>
+                    <Name>Manufacturers item identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Manufacturers item identifier</Name>
+                        <Description>The manufacturer's identifier for the item.</Description>
+                        <Reference type="RULE">BII3-T77-R024</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:StandardItemIdentification</Term>
+                    <Name>Standard item identification</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item standard identifier</Name>
+                        <Description>An item identifier based on a registered scheme.</Description>
+                        <Reference type="RULE">BII3-T77-R012</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:ItemSpecificationDocumentReference</Term>
+                    <Name>Item specification document reference</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Attachment identifier or attached image identifier</Name>
+                        <Description>An identifier that can be used to reference the attached document, such as an unique identifier. An identifier that can be used to reference the attached document, such as an unique
+                            identifier.</Description>
+                        <Reference type="RULE">BII3-T77-R025</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                        </Attribute>
+                    </Element>
+
+
+                    <Element>
+                        <Term>cbc:DocumentTypeCode</Term>
+                        <Name>Attachment description code or attached image description code</Name>
+                        <Description>A functional description of the attachment expressed as code. A functional description of the attachment expressed as code.</Description>
+                        <Reference type="RULE">EUGEN-T77-R012</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>listID</Term>
+                        </Attribute>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:DocumentDescription</Term>
+                        <Name>Attachment description or attached image description</Name>
+                        <Description>A short description of the attached document.</Description>
+                        <Reference type="RULE">BII3-T77-R026</Reference>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:Attachment</Term>
+                        <Name>Attachment</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:EmbeddedDocumentBinaryObject</Term>
+                            <Name>Attached document or attached image document</Name>
+                            <Description>A Binary Object MIME code attribute MUST be coded using MIME Code Type version 2008 code list.</Description>
+
+                            <Attribute>
+                                <Term>mimeCode</Term>
+                                <Reference type="RULE">CL-T77-R006</Reference>
+                            </Attribute>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:OriginCountry</Term>
+                    <Name>Origin country</Name>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:IdentificationCode</Term>
+                        <Name>Item country of origin</Name>
+                        <Description>The code identifying the country from which the item originates.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>listID</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="1..n">
+                    <Term>cac:CommodityClassification</Term>
+                    <Name>Commodity classification</Name>
+
+                    <Element>
+                        <Term>cbc:ItemClassificationCode</Term>
+                        <Name>Item commodity classification</Name>
+                        <Description>A code for classifying the item by its type or nature.</Description>
+                        <Reference type="RULE">BII3-T77-R030</Reference>
+                        <Reference type="RULE">BII3-T77-R031</Reference>
+                        <Reference type="RULE">EUGEN-T77-R016</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>listID</Term>
+                            <Reference type="RULE">CL-T77-R010</Reference>
+                        </Attribute>
+                    </Element>
+                </Element>
+                
+                <Element>
+                    <Term>cac:ClassifiedTaxCategory</Term>
+                    <Name>Classified tax category</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item VAT category code</Name>
+                        <Description>The VAT category code for the item</Description>
+                        <Reference type="RULE">BII3-T77-R015</Reference>
+                        <Reference type="RULE">BII3-T77-R028</Reference>
+
+                        <Attribute usage="Optional">
+                            <Term>schemeID</Term>
+                            <Reference type="RULE">CL-T77-R005</Reference>
+                        </Attribute>
+                    </Element>
+                    
+                    <Element>
+                        <Term>cbc:Percent</Term>
+                        <Name>Item VAT rate</Name>
+                        <Description>The VAT rate, represented as percentage that applies to the item.</Description>
+                        <Reference type="RULE">BII3-T77-R015</Reference>
+                        <Reference type="RULE">BII3-T77-R029</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:TaxScheme</Term>
+                        <Name>Tax scheme</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cbc:ID</Term>
+                            <Name>Item VAT category code</Name>
+                            <Description>The VAT category code for the item.</Description>
+                            <Reference type="RULE">BII3-T77-R015</Reference>
+                            <Reference type="RULE">BII3-T77-R028</Reference>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:AdditionalItemProperty</Term>
+                    <Name>Additional item property</Name>
+
+                    <Element>
+                        <Term>cbc:Name</Term>
+                        <Name>Configured product identifier or Item is service indicator or Item property name</Name>
+                        <Description>An identifier for a configured product that the relevant item is a part of. Indicates if the item is a service. The name of the property.</Description>
+                        <Reference type="RULE">BII3-T77-R022</Reference>
+                        <Reference type="RULE">EUGEN-T77-R010</Reference>
+                    </Element>
+                    
+                    <Element cardinality="0..1">
+                        <Term>cbc:NameCode</Term>
+                        <Name>Item property classification code</Name>
+                        <Description>Code for the item property according to a property code system.</Description>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:Value</Term>
+                        <Name>Item property value</Name>
+                        <Description>The value of the item property.</Description>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cbc:ValueQuantity</Term>
+                        <Name>Item property unit of measure</Name>
+                        <Description>The unit of measure in which the property value is stated, if relevant.</Description>
+
+                        <Attribute usage="Optional">
+                            <Term>unitCode</Term>
+                        </Attribute>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:ManufacturerParty</Term>
+                    <Name>Manufacturer party</Name>
+
+                    <Element>
+                        <Term>cac:PartyName</Term>
+                        <Name>Party name</Name>
+
+                        <Element>
+                            <Term>cbc:Name</Term>
+                            <Name>Manufacturers name</Name>
+                            <Description>The name of the manufacturer of the item.</Description>
+                            <Reference type="RULE">BII3-T77-R027</Reference>
+                        </Element>
+                    </Element>
+                </Element>
+
+                <Element cardinality="0..n">
+                    <Term>cac:Certificate</Term>
+                    <Name>Certificate</Name>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>Item label name</Name>
+                        <Description>The name of the product label.</Description>
+                        <Reference type="RULE">BII3-T77-R014</Reference>
+                        <Reference type="RULE">EUGEN-T77-R013</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CertificateTypeCode</Term>
+                        <Name>Item label type</Name>
+                        <Description>The label type such environmental, quality, social etc.</Description>
+                        <Reference type="RULE">BII3-T77-R014</Reference>
+                        <Reference type="RULE">EUGEN-T77-R014</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cbc:CertificateType</Term>
+                        <Name>Item label type</Name>
+                        <Description>The label type such environmental, quality, social etc.</Description>
+                        <Reference type="RULE">BII3-T77-R014</Reference>
+                    </Element>
+
+                    <Element>
+                        <Term>cac:IssuerParty</Term>
+                        <Name>Issuer party</Name>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:PartyName</Term>
+                            <Name>Party name</Name>
+
+                            <Element>
+                                <Term>cbc:Name</Term>
+                                <Name>Item label name</Name>
+                                <Description>The name of the product label.</Description>
+                                <Reference type="RULE">BII3-T77-R014</Reference>
+                            </Element>
+                        </Element>
+                    </Element>
+
+                </Element>
+
+            </Element>
+            
         </Element>
 
 
