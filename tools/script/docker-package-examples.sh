@@ -1,6 +1,8 @@
 #!/bin/sh
 
-name=ehf-postaward-g2-examples
+. /target/env
+
+name=$IDENTIFIER-examples
 
 mkdir -p /$name /target/generated
 cp -r /src/rules/*/example/* /$name/

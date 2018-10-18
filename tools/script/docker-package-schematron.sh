@@ -1,6 +1,8 @@
 #!/bin/sh
 
-name=ehf-postaward-g2-schematron
+. /target/env
+
+name=$IDENTIFIER-schematron
 
 if [ -e /target/schematron ]; then
   rm -r /target/schematron

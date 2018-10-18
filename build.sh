@@ -74,6 +74,7 @@ fi
 docker_run "environment" "Creating environment file" \
     -v $PROJECT:/src \
     -v $PROJECT/target:/target \
+    -e IDENTIFIER=ehf-postaward-g2 \
     --entrypoint sh \
     -w /src \
     alpine/git \

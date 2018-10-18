@@ -6,4 +6,4 @@ services:
   - docker
 
 script:
-  - sh build.sh
+  - make
