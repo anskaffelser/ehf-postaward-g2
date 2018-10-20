@@ -1,4 +1,4 @@
 [appendix]
 = Eksempelfiler [[vedlegg-eksempelfiler]]
 
-Eksempelfiler er gjort tilgjengelig for å hjelpe utviklere. Eksempelfiler for denne implementasjonsguiden er inkludert i link:../../../files/ehf-postaward-g2-examples.zip[eksempelfil-pakken].
+Eksempelfiler er gjort tilgjengelig for å hjelpe utviklere. Eksempelfiler for denne implementasjonsguiden er inkludert i link:../../../files/examples.zip[eksempelfil-pakken].

@@ -7,4 +7,4 @@ RELEASE = 2018-11-15
 DOCS_FOLDER = guides
 RULES_IDENT = no.difi.ehf.postaward
 
-include .mlib
+include tools/ehf.makefile
