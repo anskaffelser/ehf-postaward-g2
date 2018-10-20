@@ -3,7 +3,7 @@
 # Version: 2018-10-20
 
 # Configuration
-IDENTIFIER := $(if $(IDENTIFIER),$(IDENTIFIER),"project")
+IDENTIFIER := $(if $(IDENTIFIER),$(IDENTIFIER),"unknown")
 TITLE := $(if $(TITLE),$(TITLE),"Unknown")
 RELEASE := $(if $(RELEASE),$(RELEASE),"Unofficial")
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),"docs")
@@ -15,22 +15,28 @@ PROJECT = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 .DEFAULT_GOAL = default
 
 # Function: fold_start [tag] [title]
+ifeq "${TRAVIS}" "true"
 define fold_start
-	@if [ "${TRAVIS}" = 'true' ]; then \
-		echo -n "travis_fold:start:$(1)"; \
-	fi
-
+	@echo -n "travis_fold:start:$(1)";
 	@echo "\033[33;1m$(2)\033[0m"
 endef
+else
+define fold_start
+	@echo "\033[33;1m$(2)\033[0m"
+endef
+endif
+
 
 # Function: fold_end [tag]
+ifeq "${TRAVIS}" "true"
 define fold_end
-	@if [ "${TRAVIS}" = 'true' ]; then \
-		echo "\ntravis_fold:end:$(1)\r"; \
-	else \
-		echo; \
-	fi
+	@echo "\ntravis_fold:end:$(1)\r";
 endef
+else
+define fold_end
+	@echo
+endef
+endif
 
 # Function: docker_pull [image]
 define docker_pull
@@ -63,7 +69,7 @@ RULE_STRUCTURE=$(shell (test -e $(PROJECT)/project.xml && echo true) || echo fal
 RULE_DOCS=$(shell (test -e $(PROJECT)/${DOCS_FOLDER} && echo true) || echo false)
 
 BUILD=structure example schematron rules docs
-.PHONY: pull clean env default build serve $(BUILD)
+.PHONY: pull clean env default build serve ownership $(BUILD)
 
 # Rule: default
 ifeq "${TRAVIS}" "true"
