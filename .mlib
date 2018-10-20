@@ -1,9 +1,11 @@
 #!make
 
-# Version: 2018-10-18
+# Version: 2018-10-20
 
 # Configuration
-IDENTIFIER := $(if $(IDENTIFIER),$(IDENTIFIER),'project')
+IDENTIFIER := $(if $(IDENTIFIER),$(IDENTIFIER),"project")
+TITLE := $(if $(TITLE),$(TITLE),"Unknown")
+RELEASE := $(if $(RELEASE),$(RELEASE),"Unofficial")
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),"docs")
 RULES_FOLDER := $(if $(RULES_FOLDER),$(RULES_FOLDER),"rules")
 RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),"rules")
@@ -60,7 +62,8 @@ RULE_CLEAN=$(shell (test -e $(PROJECT)/target && echo true) || echo false)
 RULE_STRUCTURE=$(shell (test -e $(PROJECT)/project.xml && echo true) || echo false)
 RULE_DOCS=$(shell (test -e $(PROJECT)/${DOCS_FOLDER} && echo true) || echo false)
 
-.PHONY: clean env example structure schematron rules docs default build
+BUILD=structure example schematron rules docs
+.PHONY: pull clean env default build serve $(BUILD)
 
 # Rule: default
 ifeq "${TRAVIS}" "true"
@@ -70,7 +73,7 @@ default: clean build ownership
 endif
 
 # Rule: build
-build: env example structure schematron rules docs
+build: env $(BUILD)
 
 # Rule: pull
 pull:
@@ -88,11 +91,13 @@ env:
 	$(call docker_run,environment,Creating environment file,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			-e IDENTIFIER=$(IDENTIFIER) \
+			-e IDENTIFIER="$(IDENTIFIER)" \
+			-e TITLE="$(TITLE)" \
+			-e RELEASE="$(RELEASE)" \
 			--entrypoint sh \
 			-w /src \
 			alpine/git \
-			tools/script/docker-environment.sh)
+			tools/script/environment.sh)
 
 # Rule: example
 example:
@@ -103,7 +108,7 @@ else
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron \
-			sh tools/script/docker-package-examples.sh)
+			sh tools/script/examples.sh)
 endif
 
 # Rule: structure
@@ -126,7 +131,7 @@ else
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
 			klakegg/schematron \
-			sh tools/script/docker-package-schematron.sh)
+			sh tools/script/schematron.sh)
 endif
 
 # Rule: rules
@@ -168,3 +173,12 @@ ownership:
 			-v $(PROJECT):/src \
 			alpine:3.6 \
 			chown -R $(shell id -g ${USER}).$(shell id -g ${USER}) /src/target)
+
+# Rule: serve
+serve:
+	$(call docker_run,serve,Serve serve,\
+			-v $(PROJECT):/src \
+			-w /src/target \
+			-p 8000:8000 \
+			python:3-alpine \
+			python3 -m http.server 8000 -b 0.0.0.0)

@@ -448,10 +448,12 @@
     <!-- Files -->
     <Resource>
         <Type>native:File</Type>
-        <Path>target/generated/ehf-postaward-g2-examples.zip</Path>
+        <!-- <Path>target/generated/ehf-postaward-g2-examples.zip</Path> -->
         <Title>Example files</Title>
         <Description>Zip file containing examples of all document types part of EHF Post-Award G2.</Description>
         <Property key="download">ehf-postaward-g2-examples.zip</Property>
+        <Property key="filename">examples.zip</Property>
+        <Property key="virtual">true</Property>
         <Tag>catalogue</Tag>
         <Tag>despatch-advice</Tag>
         <Tag>invoice-and-creditnote</Tag>
@@ -462,11 +464,11 @@
     </Resource>
     <Resource>
         <Type>native:File</Type>
-        <Path>project.xml</Path>
         <Title>Schematron files</Title>
         <Description>Zip file containing Schematron files part of EHF Post-Award G2.</Description>
         <Property key="download">ehf-postaward-g2-schematron.zip</Property>
-        <Property key="filename">ehf-postaward-g2-schematron.zip</Property>
+        <Property key="filename">schematron.zip</Property>
+        <Property key="virtual">true</Property>
         <Tag>catalogue</Tag>
         <Tag>despatch-advice</Tag>
         <Tag>invoice-and-creditnote</Tag>
