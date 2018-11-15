@@ -1,5 +1,5 @@
 //
-:status: review
+:status: final
 :release: 2018-11-15
 
 // Translation
