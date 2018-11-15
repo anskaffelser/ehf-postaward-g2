@@ -170,6 +170,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/BII RULES/BIIRULES-UBL-T19.sch</Path>
         <Title>Rules for CEN BII Catalogue</Title>
         <Description>Rules for transaction 19 defined by CEN BII.</Description>
+        <Property key="pathprefix">t19</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -178,6 +179,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/BII RULES/BIIRULES-UBL-T58.sch</Path>
         <Title>Rules for CEN BII Catalogue Response</Title>
         <Description>Rules for transaction 58 defined by CEN BII.</Description>
+        <Property key="pathprefix">t58</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -186,6 +188,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/BII RULES/BIIRULES-UBL-T14.sch</Path>
         <Title>Rules for CEN BII Credit Note</Title>
         <Description>Rules for transaction 14 defined by CEN BII.</Description>
+        <Property key="pathprefix">t14</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -194,6 +197,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/BII RULES/BIIRULES-UBL-T16.sch</Path>
         <Title>Rules for CEN BII Despatch Advice</Title>
         <Description>Rules for transaction 16 defined by CEN BII.</Description>
+        <Property key="pathprefix">t16</Property>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
@@ -202,6 +206,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch</Path>
         <Title>Rules for CEN BII Invoice</Title>
         <Description>Rules for transaction 10 defined by CEN BII.</Description>
+        <Property key="pathprefix">t10</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -210,6 +215,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/BII RULES/BIIRULES-UBL-T01.sch</Path>
         <Title>Rules for CEN BII Order</Title>
         <Description>Rules for transaction 01 defined by CEN BII.</Description>
+        <Property key="pathprefix">t01</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -218,6 +224,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm110-1.0-order-agreement/Schematron/BII RULES/BIIRULES-UBL-T110.sch</Path>
         <Title>Rules for CEN BII Order Agreement</Title>
         <Description>Rules for transaction 110 defined by CEN BII.</Description>
+        <Property key="pathprefix">t110</Property>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
@@ -226,6 +233,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/BII RULES/BIIRULES-UBL-T76.sch</Path>
         <Title>Rules for CEN BII Order Response</Title>
         <Description>Rules for transaction 76 defined by CEN BII.</Description>
+        <Property key="pathprefix">t76</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -234,6 +242,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/BII RULES/BIIRULES-UBL-T77.sch</Path>
         <Title>Rules for CEN BII Punch Out</Title>
         <Description>Rules for transaction 77 defined by CEN BII.</Description>
+        <Property key="pathprefix">t77</Property>
         <Tag>punch-out</Tag>
     </Resource>
 
@@ -243,6 +252,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T19.sch</Path>
         <Title>Rules for PEPPOL BIS Catalogue</Title>
         <Description>Rules for PEPPOL BIS Catalogue defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t19</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -251,6 +261,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm058-2.0-catalogue-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T58.sch</Path>
         <Title>Rules for PEPPOL BIS Catalogue Response</Title>
         <Description>Rules for PEPPOL BIS Catalogue Response defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t58</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -259,6 +270,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T14.sch</Path>
         <Title>Rules for PEPPOL BIS Credit Note</Title>
         <Description>Rules for PEPPOL BIS Credit Note defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t14</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -267,6 +279,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T16.sch</Path>
         <Title>Rules for PEPPOL BIS Despatch Advice</Title>
         <Description>Rules for PEPPOL BIS Despatch Advice defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t16</Property>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
@@ -275,6 +288,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch</Path>
         <Title>Rules for PEPPOL BIS Invoice</Title>
         <Description>Rules for PEPPOL BIS Invoice defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t10</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -283,6 +297,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T01.sch</Path>
         <Title>Rules for PEPPOL BIS Order</Title>
         <Description>Rules for PEPPOL BIS Order defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t01</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -291,6 +306,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm110-1.0-order-agreement/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T110.sch</Path>
         <Title>Rules for PEPPOL BIS Order Agreement</Title>
         <Description>Rules for PEPPOL BIS Order Agreement defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t110</Property>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
@@ -299,6 +315,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T76.sch</Path>
         <Title>Rules for PEPPOL BIS Order Response</Title>
         <Description>Rules for PEPPOL BIS Order Response defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t76</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
@@ -307,6 +324,7 @@
         <Path>sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T77.sch</Path>
         <Title>Rules for PEPPOL BIS Punch Out</Title>
         <Description>Rules for PEPPOL BIS Punch Out defined by OpenPEPPOL.</Description>
+        <Property key="pathprefix">t77</Property>
         <Tag>punch-out</Tag>
     </Resource>
 
@@ -314,6 +332,7 @@
         <Identifier>common-ehf</Identifier>
         <Type>native:Schematron</Type>
         <Path>rules/ehf-common-1.0/sch/EHF-UBL-COMMON.sch</Path>
+        <Property key="pathprefix">common</Property>
         <Tag>catalogue</Tag>
         <Tag>common</Tag>
         <Tag>despatch-advice</Tag>
@@ -328,6 +347,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-catalogue-1.0/sch/parts/NOGOV-UBL-T19.sch</Path>
         <Title>Norwegian rules for EHF Catalogue</Title>
+        <Property key="pathprefix">t19</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -335,6 +355,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-catalogue-response-1.0/sch/parts/NOGOV-UBL-T58.sch</Path>
         <Title>Norwegian rules for EHF Catalogue Response</Title>
+        <Property key="pathprefix">t58</Property>
         <Tag>catalogue</Tag>
     </Resource>
     <Resource>
@@ -342,6 +363,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-creditnote-2.0/sch/EHF-UBL-T14.sch</Path>
         <Title>Norwegian rules for EHF Credit Note</Title>
+        <Property key="pathprefix">t15</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -349,6 +371,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-despatch-advice-1.0/sch/parts/NOGOV-UBL-T16.sch</Path>
         <Title>Norwegian rules for EHF Despatch Advice</Title>
+        <Property key="pathprefix">t16</Property>
         <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
@@ -356,6 +379,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-invoice-2.0/sch/EHF-UBL-T10.sch</Path>
         <Title>Norwegian rules for EHF Invoice</Title>
+        <Property key="pathprefix">t10</Property>
         <Tag>invoice-and-creditnote</Tag>
     </Resource>
     <Resource>
@@ -363,13 +387,15 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-order-1.0/sch/parts/NOGOV-UBL-T01.sch</Path>
         <Title>Norwegian rules for EHF Order</Title>
+        <Property key="pathprefix">t01</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
         <Identifier>t110-ehf</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-order-agreement-1.0/sch/EHF-UBL-T110.sch</Path>
+        <Path>rules/ehf-order-agreement-1.0/sch/parts/EHF-UBL-T110.sch</Path>
         <Title>Norwegian rules for EHF Order Agreement</Title>
+        <Property key="pathprefix">t110</Property>
         <Tag>order-agreement</Tag>
     </Resource>
     <Resource>
@@ -377,13 +403,15 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-order-response-1.0/sch/parts/NOGOV-UBL-T76.sch</Path>
         <Title>Norwegian rules for EHF Order Response</Title>
+        <Property key="pathprefix">t76</Property>
         <Tag>ordering</Tag>
     </Resource>
     <Resource>
         <Identifier>t77-ehf</Identifier>
         <Type>native:Schematron</Type>
-        <Path>rules/ehf-punch-out-1.0/sch/EHF-UBL-T77.sch</Path>
+        <Path>rules/ehf-punch-out-1.0/sch/parts/EHF-UBL-T77.sch</Path>
         <Title>Norwegian rules for EHF Punch Out</Title>
+        <Property key="pathprefix">t77</Property>
         <Tag>punch-out</Tag>
     </Resource>
     <Resource>
@@ -391,6 +419,7 @@
         <Type>native:Schematron</Type>
         <Path>rules/ehf-reminder-1.1/sch/EHF-UBL-T17.sch</Path>
         <Title>Norwegian rules for EHF Reminder</Title>
+        <Property key="pathprefix">t17</Property>
         <Tag>reminder</Tag>
     </Resource>
 
@@ -443,6 +472,20 @@
         <Path>structure/syntax/order-response.xml</Path>
         <Title>EHF Order Response 1.0</Title>
         <Tag>ordering</Tag>
+    </Resource>
+    <Resource>
+        <Identifier>order-agreement</Identifier>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/order-agreement.xml</Path>
+        <Title>EHF Order Agreement 1.0</Title>
+        <Tag>order-agreement</Tag>
+    </Resource>
+    <Resource>
+        <Identifier>punch-out</Identifier>
+        <Type>Syntax-1</Type>
+        <Path>structure/syntax/punch-out.xml</Path>
+        <Title>EHF Punch Out 1.0</Title>
+        <Tag>punch-out</Tag>
     </Resource>
 
     <!-- Files -->

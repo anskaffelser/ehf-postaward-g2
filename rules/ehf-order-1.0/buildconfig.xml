@@ -10,15 +10,15 @@
         <title>EHF Order 1.0 (Base)</title>
         <inherit>ubl-order-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
-        <file source="sch/EHF-UBL-T01.sch" path="xsl/EHF-UBL-T01.xsl" infoUrl="/ehf/g2/rules/t01-ehf/{}/" />
+        <file source="sch/EHF-UBL-T01.sch" path="xsl/EHF-UBL-T01.xsl" infoUrl="/ehf/g2/rules/t01/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/BII RULES/BIIRULES-UBL-T01.sch"
           path="xsl/BIIRULES-UBL-T01.xsl"
-          infoUrl="/ehf/g2/rules/t01-bii/{}/" />
+          infoUrl="/ehf/g2/rules/t01/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T01.sch"
           path="xsl/OPENPEPPOL-UBL-T01.xsl"
-          infoUrl="/ehf/g2/rules/t01-openpeppol/{}/" />
+          infoUrl="/ehf/g2/rules/t01/{}/" />
         <rule identifier="OP-T01-R008" action="suppress" />
     </configuration>
 

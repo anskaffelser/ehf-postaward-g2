@@ -10,15 +10,15 @@
         <title>EHF Order Response 1.0 (Base)</title>
         <inherit>ubl-orderresponse-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
-        <file source="sch/EHF-UBL-T76.sch" path="xsl/EHF-UBL-T76.xsl" infoUrl="/ehf/g2/rules/t76-ehf/{}/" />
+        <file source="sch/EHF-UBL-T76.sch" path="xsl/EHF-UBL-T76.xsl" infoUrl="/ehf/g2/rules/t76/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/BII RULES/BIIRULES-UBL-T76.sch"
           path="xsl/BIIRULES-UBL-T76.xsl"
-          infoUrl="/ehf/g2/rules/t76-bii/{}/" />
+          infoUrl="/ehf/g2/rules/t76/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm076-2.0-order-response/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T76.sch"
           path="xsl/OPENPEPPOL-UBL-T76.xsl"
-          infoUrl="/ehf/g2/rules/t76-openpeppol/{}/" />
+          infoUrl="/ehf/g2/rules/t76/{}/" />
         <rule identifier="OP-T76-R008" action="suppress" />
     </configuration>
 

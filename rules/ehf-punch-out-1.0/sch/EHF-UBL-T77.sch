@@ -9,36 +9,7 @@
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" prefix="cac"/>
   <ns uri="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" prefix="ubl"/>
 
-  <!--
-    00X - Document level
-    03X - Delivery
-    05X - Totals
-
-    1XX - Line level
-
-    2XX - Item level
-    21X - Item Properties
-    22X - Tax category
-  -->
-
-  <pattern>
-    <rule context="ubl:Catalogue">
-      <assert id="EHF-T77-R001"
-              test="cbc:ProfileID"
-              flag="fatal">Punch out MUST have a profile identification.</assert>
-    </rule>
-
-    <rule context="cac:Item">
-      <assert id="EHF-T77-R220"
-              test="cac:ClassifiedTaxCategory"
-              flag="fatal">Tax category on line level MUST exists.</assert>
-    </rule>
-
-    <rule context="cac:AdditionalItemProperty">
-      <assert id="EHF-T77-R210"
-              test="cbc:Value"
-              flag="fatal">Additional item property MUST have a value.</assert>
-    </rule>
-  </pattern>
+  <include href="../../../target/generated/t77-basic.sch"/>
+  <include href="parts/EHF-UBL-T77.sch"/>
 
 </schema>

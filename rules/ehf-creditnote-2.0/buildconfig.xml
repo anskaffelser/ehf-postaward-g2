@@ -16,12 +16,12 @@
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/BII RULES/BIIRULES-UBL-T14.sch"
           path="xsl/BIIRULES-UBL-T14.xsl"
-          infoUrl="/ehf/g2/rules/t14-bii/{}/" />
+          infoUrl="/ehf/g2/rules/t14/{}/" />
         <file
           source="../../sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T14.sch"
           path="xsl/OPENPEPPOL-UBL-T14.xsl"
-          infoUrl="/ehf/g2/rules/t14-openpeppol/{}/" />
-        <file source="sch/EHF-UBL-T14.sch" path="xsl/EHF-UBL-T14.xsl" infoUrl="/ehf/g2/rules/t14-ehf/{}/" />
+          infoUrl="/ehf/g2/rules/t14/{}/" />
+        <file source="sch/EHF-UBL-T14.sch" path="xsl/EHF-UBL-T14.xsl" infoUrl="/ehf/g2/rules/t14/{}/" />
         <rule identifier="BII2-T14-R025" action="suppress" />
         <rule identifier="BII2-T14-R035" action="suppress" />
         <rule identifier="BII2-T14-R037" action="suppress" />

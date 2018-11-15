@@ -10,4 +10,11 @@
 | Replacing listing of validation rules with links to all relevant validation rules.
 | Guide
 
+| -
+| Adding "basic" validation rules automatically created from syntax. Rules are identified as 'EHF-T77-BXXXXX'  where 'XXXXX' is a running number.
+| Validator
+
 |===
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+All basic validation rules (EHF-TXX-BXXXXXX).

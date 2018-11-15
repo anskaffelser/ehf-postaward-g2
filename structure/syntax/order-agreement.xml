@@ -4,9 +4,10 @@
     <Term>Order Agreement</Term>
     <Name>Post-Award Order Agreement</Name>
 
-    <Property key="sch:prefix">EHF-T01</Property>
-    <Property key="sch:identifier">t01-basic</Property>
+    <Property key="sch:prefix">EHF-T110</Property>
+    <Property key="sch:identifier">t110-basic</Property>
     <Property key="sch:flag">warning</Property>
+    <Property key="sch:pathprefix">t110</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
     <Property key="sch:SchemaLocationRule:flag">off</Property>
 
@@ -71,7 +72,7 @@
             <Name>Order agreement note</Name>
             <Description>Free-form text applying to the order agreement.</Description>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cbc:DocumentCurrencyCode</Term>
             <Name>Order agreement currency</Name>
@@ -550,15 +551,15 @@
                    <Description>The end time of the period.</Description>
                </Element>
            </Element>
-           
+
            <Element cardinality="0..1">
                <Term>cac:DeliveryParty</Term>
                <Name>Delivery party</Name>
-               
+
                <Element cardinality="0..1">
                    <Term>cac:PartyIdentification</Term>
                    <Name>Party identification</Name>
-                   
+
                    <Element>
                        <Term>cbc:ID</Term>
                        <Name>Delivery party identifier</Name>
@@ -593,7 +594,7 @@
                 <Name>Buyer delivery terms</Name>
                 <Description>The terms that the buyer applies to the delivery the ordered items.</Description>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:SpecialTerms</Term>
                 <Name>Delivery special terms</Name>
@@ -685,7 +686,7 @@
                 <Description>The reason for the allowance, expressed as text.</Description>
                 <Reference type="RULE">EUGEN-T110-R015</Reference>
             </Element>
-            
+
             <Element>
                 <Term>cbc:Amount</Term>
                 <Name>Allowance/Charge amount</Name>
@@ -713,11 +714,11 @@
                     <Reference type="RULE">CL-T110-R001</Reference>
                 </Attribute>
             </Element>
-            
+
             <Element cardinality="0..n">
                 <Term>cac:TaxSubtotal</Term>
                 <Name>Tax subtotal</Name>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:TaxableAmount</Term>
                     <Name>VAT category taxable amount</Name>
@@ -762,7 +763,7 @@
                         <Name>VAT category rate</Name>
                         <Description>The VAT rate, represented as percentage that applies for the relevant VAT category.</Description>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:TaxExemptionReason</Term>
                         <Name>VAT exemption reason text</Name>
@@ -782,11 +783,11 @@
                 </Element>
             </Element>
         </Element>
-        
+
         <Element cardinality="0..1">
             <Term>cac:LegalMonetaryTotal</Term>
             <Name>Legal monetary total</Name>
-            
+
             <Element>
                 <Term>cbc:LineExtensionAmount</Term>
                 <Name>Sum of line amounts</Name>
@@ -960,12 +961,12 @@
                         <Term>cbc:Quantity</Term>
                         <Name>Accepted quantity</Name>
                         <Description>The number of item units that are delivered.</Description>
-                        
+
                         <Attribute usage="Optional">
                             <Term>unitCode</Term>
                         </Attribute>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:PromisedDeliveryPeriod</Term>
                         <Name>Promised delivery period</Name>
@@ -995,11 +996,11 @@
                         </Element>
                     </Element>
                 </Element>
-                
+
                 <Element>
                     <Term>cac:Price</Term>
                     <Name>Price</Name>
-                    
+
                     <Element>
                         <Term>cbc:PriceAmount</Term>
                         <Name>Item net price</Name>
@@ -1070,7 +1071,7 @@
                             </Attribute>
                         </Element>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cac:ItemSpecificationDocumentReference</Term>
                         <Name>Item specification document reference</Name>
@@ -1086,7 +1087,7 @@
                             <Name>Document description</Name>
                             <Description>Textual description of the document.</Description>
                         </Element>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cac:Attachment</Term>
                             <Name>Attachment</Name>
@@ -1185,13 +1186,13 @@
                     <Element cardinality="0..n">
                         <Term>cac:AdditionalItemProperty</Term>
                         <Name>Additional item property</Name>
-                        
+
                         <Element>
                             <Term>cbc:Name</Term>
                             <Name>Item property name</Name>
                             <Description>The name of the property</Description>
                         </Element>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cbc:NameCode</Term>
                             <Name>Item property classification code</Name>
@@ -1227,12 +1228,12 @@
                             <Description>The name of the product label.</Description>
                             <Reference type="RULE">EUGEN-T110-R026</Reference>
                         </Element>
-                        
+
                         <Element>
                             <Term>cbc:CertificateTypeCode</Term>
                             <Name>Certificate type code</Name>
                         </Element>
-                        
+
                         <Element>
                             <Term>cbc:CertificateType</Term>
                             <Name>Item label type</Name>
@@ -1245,16 +1246,16 @@
                             <Description>The label value that applies to the item.</Description>
                             <Reference type="RULE">EUGEN-T110-R027</Reference>
                         </Element>
-                        
+
                         <Element>
                             <Term>cac:IssuerParty</Term>
                             <Name>Issuer party</Name>
                         </Element>
-                        
+
                         <Element cardinality="0..n">
                             <Term>cac:DocumentReference</Term>
                             <Name>Document reference</Name>
-                            
+
                             <Element>
                                 <Term>cbc:ID</Term>
                                 <Name>Item label reference</Name>

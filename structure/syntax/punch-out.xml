@@ -4,9 +4,10 @@
     <Term>Punch Out</Term>
     <Name>Post-Award Punch Out</Name>
 
-    <Property key="sch:prefix">EHF-T76</Property>
-    <Property key="sch:identifier">t76-basic</Property>
+    <Property key="sch:prefix">EHF-T77</Property>
+    <Property key="sch:identifier">t77-basic</Property>
     <Property key="sch:flag">warning</Property>
+    <Property key="sch:pathprefix">t77</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
     <Property key="sch:SchemaLocationRule:flag">off</Property>
 
@@ -103,11 +104,11 @@
                 <Description>The identification of a contract.</Description>
             </Element>
         </Element>
-        
+
         <Element>
             <Term>cac:ProviderParty</Term>
             <Name>Provider party</Name>
-            
+
             <Element>
                 <Term>cbc:EndpointID</Term>
                 <Name>Seller electronic address</Name>
@@ -123,7 +124,7 @@
             <Element cardinality="0..1">
                 <Term>cac:PartyIdentification</Term>
                 <Name>Party identification</Name>
-                
+
                 <Element>
                     <Term>cbc:ID</Term>
                     <Name>Seller standard identifier</Name>
@@ -136,11 +137,11 @@
                     </Attribute>
                 </Element>
             </Element>
-            
+
             <Element>
                 <Term>cac:PartyName</Term>
                 <Name>Party name</Name>
-                
+
                 <Element>
                     <Term>cbc:Name</Term>
                     <Name>Seller name</Name>
@@ -150,8 +151,8 @@
                 </Element>
             </Element>
         </Element>
-        
-        
+
+
         <Element cardinality="0..1">
             <Term>cac:Contact</Term>
             <Name>Contact</Name>
@@ -162,11 +163,11 @@
                 <Description>An identifier assigned by the Buyer used for internal routing purposes.</Description>
             </Element>
         </Element>
-        
+
         <Element cardinality="1..n">
             <Term>cac:CatalogueLine</Term>
             <Name>Catalogue line</Name>
-            
+
             <Element>
                 <Term>cbc:ID</Term>
                 <Name>Shopping cart line identifier</Name>
@@ -180,22 +181,22 @@
                 <Name>Contracted item indicator</Name>
                 <Description>Indicates if the item is offered in accordance to an existing contract.</Description>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cac:LineValidityPeriod</Term>
                 <Name>Line validity period</Name>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:StartDate</Term>
                     <Name>Item availability date</Name>
                     <Description>The date when the item will be available for ordering.</Description>
                 </Element>
             </Element>
-            
+
             <Element>
                 <Term>cac:RequiredItemLocationQuantity</Term>
                 <Name>Required item location quantity</Name>
-                
+
                 <Element>
                     <Term>cbc:LeadTimeMeasure</Term>
                     <Name>Shopping cart line delivery lead days</Name>
@@ -218,7 +219,7 @@
                         <Reference type="RULE">BII3-T77-R011</Reference>
                         <Reference type="RULE">BII3-T77-R016</Reference>
                         <Reference type="RULE">EUGEN-T77-R009</Reference>
-                        
+
                         <Attribute>
                             <Term>currencyID</Term>
                             <Reference type="RULE">CL-T77-R004</Reference>
@@ -237,11 +238,11 @@
                         </Attribute>
                     </Element>
                 </Element>
-                
+
                 <Element>
                     <Term>cac:DeliveryUnit</Term>
                     <Name>Delivery unit</Name>
-                    
+
                     <Element>
                         <Term>cbc:BatchQuantity</Term>
                         <Name>Shopping cart line quantity</Name>
@@ -255,18 +256,18 @@
                         </Attribute>
                     </Element>
                 </Element>
-                
+
             </Element>
-            
+
             <Element>
                 <Term>cac:Item</Term>
                 <Name>Item</Name>
-                
+
                 <Element cardinality="0..1">
                     <Term>cbc:Description</Term>
                     <Name>Item description as text</Name>
                     <Description>A free text detailed description of an item.</Description>
-                    <Reference type="RULE">BII3-T77-R023]</Reference>
+                    <Reference type="RULE">BII3-T77-R023</Reference>
                 </Element>
 
                 <Element>
@@ -275,7 +276,7 @@
                     <Description>A name for an item.</Description>
                     <Reference type="RULE">BII3-T77-R013</Reference>
                 </Element>
-                
+
                 <Element cardinality="0..1">
                     <Term>cac:SellersItemIdentification</Term>
                     <Name>Sellers item identification</Name>
@@ -409,7 +410,7 @@
                         </Attribute>
                     </Element>
                 </Element>
-                
+
                 <Element>
                     <Term>cac:ClassifiedTaxCategory</Term>
                     <Name>Classified tax category</Name>
@@ -426,7 +427,7 @@
                             <Reference type="RULE">CL-T77-R005</Reference>
                         </Attribute>
                     </Element>
-                    
+
                     <Element>
                         <Term>cbc:Percent</Term>
                         <Name>Item VAT rate</Name>
@@ -460,7 +461,7 @@
                         <Reference type="RULE">BII3-T77-R022</Reference>
                         <Reference type="RULE">EUGEN-T77-R010</Reference>
                     </Element>
-                    
+
                     <Element cardinality="0..1">
                         <Term>cbc:NameCode</Term>
                         <Name>Item property classification code</Name>
@@ -548,7 +549,7 @@
                 </Element>
 
             </Element>
-            
+
         </Element>
 
 

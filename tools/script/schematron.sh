@@ -5,6 +5,7 @@ ls /src/sources/peppol-bis/rules/*/Schematron/*/*.sch \
  | grep -v "CORE" \
  | grep -v "trdm071" \
  | grep -v "trdm111" \
+ | sort \
  > /tmp/peppol-bis
 
 while read sch; do
