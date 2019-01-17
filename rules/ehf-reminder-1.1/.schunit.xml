@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="urn:fdc:schunit.com:2018:v1">
+
+    <Group>ehf-reminder-1.1</Group>
+
+    <Schematron id="EHF-UBL-T17">
+        <Path>sch/EHF-UBL-T17.sch</Path>
+
+        <Test>example</Test>
+        <Test>test</Test>
+        <Test>unit-NONAT</Test>
+    </Schematron>
+</Config>

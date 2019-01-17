@@ -21,7 +21,7 @@
 	<test>
 		<assert>
 			<description>Verify no error is triggered when GS1 code list is not defined.</description>
-			<success number="2">NOGOV-T19-R020</success>
+			<!-- <success number="2">NOGOV-T19-R020</success> -->
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

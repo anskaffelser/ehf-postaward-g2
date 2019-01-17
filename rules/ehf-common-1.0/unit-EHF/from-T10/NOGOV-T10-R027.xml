@@ -7,7 +7,7 @@
 	<test>
 		<assert>
 			<description>Verify EndpointID is Norwegian.</description>
-			<success>EHF-COMMON-R014</success>
+			<!-- <success>EHF-COMMON-R014</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

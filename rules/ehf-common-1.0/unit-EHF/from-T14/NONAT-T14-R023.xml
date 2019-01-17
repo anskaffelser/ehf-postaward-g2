@@ -7,8 +7,7 @@
 	<test>
 		<assert>
 			<description>Verify elements with content throws no errors.</description>
-			<success>EHF-COMMON-R001</success>
-			<success>EHF-COMMON-R002</success>
+			<success number="4">EHF-COMMON-R001</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -25,7 +24,6 @@
 		<assert>
 			<description>Verify elements without content throws errors.</description>
 			<error number="4">EHF-COMMON-R001</error>
-			<success>EHF-COMMON-R002</success>
 		</assert>
 		<CreditNote xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

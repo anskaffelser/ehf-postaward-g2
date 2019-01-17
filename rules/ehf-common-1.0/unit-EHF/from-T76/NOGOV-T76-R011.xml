@@ -8,7 +8,7 @@
 		<assert>
 			<description>Verify only allowed tax categories are used.</description>
 			<!-- <success>NOGOV-T76-R011</success> -->
-			<success>EHF-COMMON-R020</success>
+			<success number="7">EHF-COMMON-R020</success>
 		</assert>
 		<OrderResponse xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

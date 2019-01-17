@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="urn:fdc:schunit.com:2018:v1">
+
+    <Group>ehf-common-1.0</Group>
+
+    <Schematron id="EHF-UBL-COMMON">
+        <Path>sch/EHF-UBL-COMMON.sch</Path>
+
+        <Test>unit-EHF</Test>
+        <Test>unit-EHF/from-T01</Test>
+        <Test>unit-EHF/from-T10</Test>
+        <Test>unit-EHF/from-T14</Test>
+        <Test>unit-EHF/from-T16</Test>
+        <Test>unit-EHF/from-T19</Test>
+        <Test>unit-EHF/from-T58</Test>
+        <Test>unit-EHF/from-T76</Test>
+    </Schematron>
+</Config>

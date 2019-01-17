@@ -23,7 +23,7 @@
 	<test>
 		<assert>
 			<description>Verify company identifier is provided when tax representative is defined.</description>
-			<success>NOGOV-T10-R018</success>
+			<!-- <success>NOGOV-T10-R018</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

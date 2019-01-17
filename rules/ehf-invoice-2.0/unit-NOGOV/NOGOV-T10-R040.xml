@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Verify allowance and change on document level has no more than 2 decimals.</description>
-			<success>NOGOV-T10-R040</success>
+			<success number="4">NOGOV-T10-R040</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

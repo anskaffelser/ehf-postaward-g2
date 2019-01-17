@@ -25,7 +25,7 @@
 	<test>
 		<assert>
 			<description>Verify code is not expected when classification is not provided.</description>
-			<success>NOGOV-T10-R023</success>
+			<!-- <success>NOGOV-T10-R023</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

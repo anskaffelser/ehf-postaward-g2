@@ -7,8 +7,8 @@
 	<test>
 		<assert>
 			<description>No errors when no empty elements are present.</description>
-			<success>EHF-COMMON-R001</success>
-			<success>EHF-COMMON-R002</success>
+			<success number="5">EHF-COMMON-R001</success>
+			<success number="5">EHF-COMMON-R002</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -37,6 +37,7 @@
 			<description>Trigger error when empty elements are present.</description>
 			<error number="2">EHF-COMMON-R001</error>
 			<error number="2">EHF-COMMON-R002</error>
+			<success number="3">EHF-COMMON-R002</success>
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

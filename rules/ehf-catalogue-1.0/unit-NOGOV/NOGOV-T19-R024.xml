@@ -6,7 +6,7 @@
 	<test>
 		<assert>
 			<description>Trigger no warning on non-existing qualifier.</description>
-			<success>NOGOV-T19-R024</success>
+			<!-- <success>NOGOV-T19-R024</success> -->
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

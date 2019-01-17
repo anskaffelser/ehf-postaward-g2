@@ -9,7 +9,7 @@
 		<assert>
 			<description>Verify elements with content throws no errors.</description>
 			<!-- <success>NOGOV-T19-R018</success> -->
-			<success>EHF-COMMON-R002</success>
+			<success number="4">EHF-COMMON-R001</success>
 		</assert>
 		<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

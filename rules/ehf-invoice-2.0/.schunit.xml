@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="urn:fdc:schunit.com:2018:v1">
+
+    <Group>ehf-invoice-2.0</Group>
+
+    <Schematron id="EHF-UBL-T10">
+        <Path>sch/EHF-UBL-T10.sch</Path>
+
+        <Test>unit-NOGOV</Test>
+        <Test>unit-NONAT</Test>
+    </Schematron>
+
+    <Schematron id="BIIRULES-UBL-T10">
+        <Path>../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch</Path>
+
+        <Test>unit-BII2</Test>
+    </Schematron>
+
+    <Schematron id="OPENPEPPOL-UBL-T10">
+        <Path>../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch</Path>
+
+        <Test>unit-EUGEN</Test>
+    </Schematron>
+
+    <Schematron>
+        <Ref>BIIRULES-UBL-T10</Ref>
+        <Ref>OPENPEPPOL-UBL-T10</Ref>
+        <Ref>EHF-UBL-T10</Ref>
+
+        <Test>example</Test>
+        <Test>issues</Test>
+        <Test>test</Test>
+    </Schematron>
+</Config>

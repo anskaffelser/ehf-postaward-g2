@@ -6,7 +6,7 @@
 	</assert>
 	<test>
 		<assert>
-			<success>EHF-COMMON-R050</success>
+			<!-- <success>EHF-COMMON-R050</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -18,7 +18,7 @@
 	</test>
 	<test>
 		<assert>
-			<success>EHF-COMMON-R050</success>
+			<!-- <success>EHF-COMMON-R050</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -34,7 +34,7 @@
 	</test>
 	<test>
 		<assert>
-			<success>EHF-COMMON-R050</success>
+			<!-- <success>EHF-COMMON-R050</success> -->
 		</assert>
 		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 			xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
