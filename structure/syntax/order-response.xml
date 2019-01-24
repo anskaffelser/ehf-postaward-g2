@@ -125,7 +125,7 @@
             <Name>Seller</Name>
             <Description>Information about Seller.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cac:Party</Term>
                 <Name>Party</Name>
 
@@ -223,7 +223,7 @@
             <Name>Buyer</Name>
             <Description>Information about Buyer.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cac:Party</Term>
                 <Name>Party</Name>
 
@@ -285,7 +285,7 @@
                     <Name>Contact</Name>
                     <Description>Contact information for seller.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>Contact ID</Name>
                         <Description>Contact identifier for buyer contact person.</Description>

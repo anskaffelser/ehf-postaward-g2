@@ -265,7 +265,7 @@
                     <Name>External reference</Name>
                     <Description>An attached document.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:URI</Term>
                         <Name>External reference</Name>
                         <Description>The Uniform Resource Identifier (URI) that identifies where the external document is located.</Description>
@@ -789,7 +789,7 @@
                             <Name>Country</Name>
                             <Description>Country code</Description>
 
-                            <Element cardinality="0..1">
+                            <Element>
                                 <Term>cbc:IdentificationCode</Term>
                                 <Name>Country</Name>
                                 <Description>Country code of the legal address.</Description>
@@ -970,7 +970,7 @@
                     <Term>cac:Country</Term>
                     <Name>Country</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Country code</Name>
                         <Description>Country code based on ISO3166-1.</Description>
@@ -1023,7 +1023,7 @@
             <Name>Delivery</Name>
             <Description>Delivery details</Description>
 
-            <Element>
+            <Element cardinality="0..1">
                 <Term>cbc:ActualDeliveryDate</Term>
                 <Name>Delivery date</Name>
                 <Description>An invoice may contain the actual delivery date on which goods or consignments are delivered from the seller. Also applicable for service completion date.</Description>
@@ -1098,7 +1098,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2
@@ -1119,12 +1119,195 @@
             </Element>
         </Element>
 
+        <Element cardinality="1..n">
+            <Term>cac:PaymentMeans </Term>
+            <Name>Payment means</Name>
+            <Description>Details regarding how the invoice will be payed</Description>
+
+            <Element>
+                <Term>cbc:PaymentMeansCode</Term>
+                <Name>Payment means code</Name>
+                <Description>An invoice may contain an indication about how the payment
+                    should be handled. Code according to UN/CEFACT codelist 4461</Description>
+                
+                <Attribute>
+                    <Term>listID</Term>
+                </Attribute>
+
+                <Value type="EXAMPLE">31</Value>
+            </Element>
+            
+            <Element>
+                <Term>cbc:PaymentDueDate</Term>
+                <Name>Due date</Name>
+                <Description>An invoice may contain the date on which payment is due.
+                    Latest date on which funds should have reached the account
+                    receivable</Description>
+                <Value type="EXAMPLE">2014-05-30</Value>
+            </Element>
+
+            <Element cardinality="0..1">
+                <Term>cbc:PaymentChannelCode</Term>
+                <Name>Payment channel code</Name>
+                <Description>Code for paymentchannel, IBAN, BBAN</Description>
+            </Element>
+            
+            <Element cardinality="0..1">
+                <Term>cbc:PaymentID</Term>
+                <Name>Payment ID</Name>
+                <Description>It must be possible to specify an identifier for the payment,
+                    issued by the seller as an invoice may contain an identifier for
+                    the payment, issued by the seller as reference. Also known as
+                    end-to-end payment reference.
+                    In Norway this element is used for KID number.</Description>
+                <Value type="EXAMPLE">1234561</Value>
+            </Element>
+            
+            <Element>
+                <Term>cac:PayeeFinancialAccount</Term>
+                <Name>Financial account</Name>
+                <Description>Information regarding the payee's financial account</Description>
+                
+                <Element>
+                    <Term>cbc:ID</Term>
+                    <Name>Financial account ID</Name>
+                    <Description>The identifier for the account. Depending on circumstances
+                        the identifier can be in local format or standardized format
+                        such as IBAN. The identifier schema should be identified.
+                        To enable the buyer to issue a payment initiation to his bank
+                        the invoice may contain the identifier for the financial
+                        account either as IBAN or in proprietary format.
+                        The banc account number</Description>
+                    
+                    <Attribute>
+                        <Term>schemeID</Term>
+                        <Description>Identification of type of account</Description>
+                    </Attribute>
+                    
+                    <Value type="EXAMPLE">00050011111</Value>
+                </Element>
+
+                <Element cardinality="0..1">
+                    <Term>cac:FinancialInstitutionBranch</Term>
+                    <Name>Financial Institution Branch</Name>
+                    <Description>The branch or department of the financial institution</Description>
+
+                    <Element>
+                        <Term>cbc:ID</Term>
+                        <Name>ID</Name>
+                        <Description>The identifier for a branch or division of an organization
+                            may, in some countries, be used to positively identify the
+                            location of he account or supplement the financial institution
+                            identifier.
+                            The identifier for a branch or division of an organization
+                            may, in some countries, be used to positively identify the
+                            location of the account or supplement the financial institution
+                            identifier.</Description>
+                        <Value type="EXAMPLE">BIC</Value>
+                    </Element>
+
+                    <Element cardinality="0..1">
+                        <Term>cac:FinancialInstitution</Term>
+                        <Name>Financial institution</Name>
+                        <Description>The identifier of the financial institution (BIC)</Description>
+
+                        <Element>
+                            <Term>cbc:ID</Term>
+                            <Name>Institution ID</Name>
+                            <Description>An identifier for the financial institution where the account is
+                                located, such as the BIC identifier (SWIFT code).
+                                An invoice may contain the ISO 9362 BIC (Bank
+                                Identification Code) of a financial institution.</Description>
+
+                            <Attribute usage="Optional">
+                                <Term>schemeID</Term>
+                                <Description>Must be 'BIC' if account identifier is IBAN</Description>
+                            </Attribute>
+
+                            <Value type="EXAMPLE">DNBANOKKXXX</Value>
+                        </Element>
+                        
+                        <Element cardinality="0..1">
+                            <Term>cbc:Name</Term>
+                            <Name>Financial Institution Name</Name>
+                            <Description>Name of the finance institution
+                                Bank name</Description>
+                        </Element>
+
+                        <Element cardinality="0..1">
+                            <Term>cac:Address</Term>
+                            <Name>Adress Financial insitution address</Name>
+                            <Description>The address of the financial institution</Description>
+
+                            <Element cardinality="0..1">
+                                <Term>cbc:StreetName</Term>
+                                <Name>Address line 1</Name>
+                                <Description>The main address line in a postal address usually the street
+                                    name and number.</Description>
+                            </Element>
+                            
+                            <Element cardinality="0..1">
+                                <Term>cbc:AdditionalStreetName</Term>
+                                <Name>Address line 2</Name>
+                                <Description>An additional address line in a postal address that can be
+                                    used to give further details supplementing the main line.
+                                    Common use are secondary house number in a complex or in
+                                    a building.</Description>
+                            </Element>
+                            
+                            <Element cardinality="0..1">
+                                <Term>cbc:CityName</Term>
+                                <Name>City</Name>
+                                <Description>The common name of the city where the postal address is.
+                                    The name is written in full rather than as a code.</Description>
+                            </Element>
+                            
+                            <Element cardinality="0..1">
+                                <Term>cbc:PostalZone</Term>
+                                <Name>Post code</Name>
+                                <Description>The identifier for an addressable group of properties
+                                    according to the relevant national postal service, such as a
+                                    ZIP code or Post Code.</Description>
+                            </Element>
+                            
+                            <Element cardinality="0..1">
+                                <Term>cbc:CountrySubentity</Term>
+                                <Name>Country subdivision</Name>
+                                <Description>For specifying a region, county, state, province etc. within a
+                                    country by using text.</Description>
+                            </Element>
+                            
+                            <Element cardinality="0..1">
+                                <Term>cac:Country</Term>
+                                <Name>Country code</Name>
+                                <Description>The country where the address is. The country should always
+                                    be given by using ISO code 3166 alpha 2</Description>
+                                
+                                <Element>
+                                    <Term>cbc:IdentificationCode</Term>
+                                    <Name>Country code</Name>
+                                    <Description>Country code according to ISO3166-1</Description>
+
+                                    <Attribute usage="Optional">
+                                        <Term>listID</Term>
+                                        <Description>Attribute must be 'ISO3166-1:Alpha2'.</Description>
+
+                                        <Value type="FIXED">ISO3166-1:Alpha2</Value>
+                                    </Attribute>
+                                </Element>
+                            </Element>
+                        </Element>
+                    </Element>
+                </Element>
+            </Element>
+        </Element>
+
         <Element cardinality="0..n">
             <Term>cac:PaymentTerms</Term>
             <Name>Payment terms</Name>
             <Description>Description of payment terms.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:Note</Term>
                 <Name>Note</Name>
                 <Description>An invoice may contain textual description of the payment terms that apply to the invoice due amount. E.g. penalty charges or intended collection procedures.</Description>
@@ -1854,7 +2037,7 @@
                 </Element>
 
                 <Element cardinality="0..1">
-                    <Term>cac:SellerItemIdentification</Term>
+                    <Term>cac:SellersItemIdentification</Term>
                     <Name>Sellers identification</Name>
                     <Description>The sellers item number.</Description>
 
@@ -1906,7 +2089,7 @@
                             <Term>listID</Term>
                             <Description>Attribute  must be 'ISO3166-1:Alpha2'.</Description>
                             <Reference type="RULE">EUGEN-T10-R027</Reference>
-                            <Value type="EXAMPLE">ISO3166-1:Alpha2</Value>
+                            <Value type="FIXED">ISO3166-1:Alpha2</Value>
                         </Attribute>
                     </Element>
                 </Element>
@@ -2003,7 +2186,7 @@
                     <Name>Manufacturer</Name>
                     <Description>Manufacturer party.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cac:PartyName</Term>
                         <Name>Party name</Name>
                         <Description>Name of manufacturer</Description>

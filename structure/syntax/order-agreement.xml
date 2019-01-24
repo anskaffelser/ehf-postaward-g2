@@ -589,7 +589,7 @@
             <Term>cac:DeliveryTerms</Term>
             <Name>Delivery terms</Name>
 
-            <Element>
+            <Element cardinality="0..1">
                 <Term>cbc:ID</Term>
                 <Name>Buyer delivery terms</Name>
                 <Description>The terms that the buyer applies to the delivery the ordered items.</Description>
@@ -880,7 +880,7 @@
                 </Attribute>
             </Element>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:PayableAmount</Term>
                 <Name>Amount due for payment</Name>
                 <Description>The outstanding amount that is requested to be paid.</Description>
@@ -1139,7 +1139,7 @@
                         <Term>cac:TransactionConditions</Term>
                         <Name>Transaction conditions</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:ID</Term>
                             <Name>Contracted item indicator</Name>
                             <Description>Indicates if the item is offered in accordance to an existing contract.</Description>
@@ -1250,6 +1250,18 @@
                         <Element>
                             <Term>cac:IssuerParty</Term>
                             <Name>Issuer party</Name>
+
+                            <Element>
+                                <Term>cac:PartyName</Term>
+                                <Name>Party name</Name>
+
+                                <Element>
+                                    <Term>cbc:Name</Term>
+                                    <Name>Issuer name</Name>
+                                    <Description>Name of Label issuer.</Description>
+                                    <Value type="EXAMPLE">Svanemerket</Value>
+                                </Element>
+                            </Element>
                         </Element>
 
                         <Element cardinality="0..n">

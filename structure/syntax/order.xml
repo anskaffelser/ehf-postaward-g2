@@ -247,7 +247,7 @@
             </Element>
         </Element>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cac:BuyerCustomerParty</Term>
             <Name>Buyer</Name>
             <Description>Information about buyer.</Description>
@@ -512,7 +512,7 @@
             </Element>
         </Element>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cac:SellerSupplierParty</Term>
             <Name>Seller</Name>
             <Description>Information about seller.</Description>
@@ -811,7 +811,7 @@
                     </Element>
                 </Element>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cac:PostalAddress</Term>
                     <Name>Postal address</Name>
                     <Description>Address information.</Description>
@@ -829,13 +829,13 @@
                             supplementing the main line. Common use are secondary house number in a complex or in a building.</Description>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:CityName</Term>
                         <Name>City</Name>
                         <Description>The common name of the city where the postal address is. The name is written in full rather than as a code.</Description>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:PostalZone</Term>
                         <Name>Post Code</Name>
                         <Description>The identifier for an addressable group of properties according to the relevant national postal service, such as a ZIP code or Post Code.</Description>
@@ -875,7 +875,7 @@
                     <Name>Tax scheme</Name>
                     <Description>Information regarding tax.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:CompanyID</Term>
                         <Name>Company ID</Name>
                         <Description>Identifies a company as registered with the company registration scheme.</Description>
@@ -932,7 +932,7 @@
                             <Term>cac:Country</Term>
                             <Name>Country</Name>
 
-                            <Element cardinality="0..1">
+                            <Element>
                                 <Term>cbc:IdentificationCode</Term>
                                 <Name>Country code</Name>
                                 <Description>Invoice legal registration address country ID.</Description>
@@ -953,7 +953,7 @@
                     <Name>Contact</Name>
                     <Description>Contact information.</Description>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ID</Term>
                         <Name>Contact ID</Name>
                         <Description>Invoice contact identification.</Description>
@@ -1170,7 +1170,7 @@
                 <Term>cac:DeliveryLocation</Term>
                 <Name>Delivery location</Name>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:ID</Term>
                     <Name>Delivery terms location</Name>
                     <Description>An association to Location, e.g., a port. The unique identifier for the location.</Description>
@@ -1185,7 +1185,7 @@
             <Name>Payment terms</Name>
             <Description>Description of payment terms.</Description>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:Note</Term>
                 <Name>Payment terms</Name>
                 <Description>Description of the payment terms for the invoice which will be based on this order.</Description>
@@ -1543,7 +1543,7 @@
                         <Value type="EXAMPLE">1</Value>
                     </Element>
 
-                    <Element cardinality="0..n">
+                    <Element cardinality="0..1">
                         <Term>cac:AllowanceCharge</Term>
                         <Name>Allowance Charge</Name>
                         <Description>Information regarding allowances and charges connected to price.</Description>
@@ -1677,7 +1677,7 @@
                         <Name>Tax category</Name>
                         <Description>Information about VAT.</Description>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:ID</Term>
                             <Name>Item VAT category code</Name>
                             <Description>The VAT code that indicates what VAT details apply to the item.</Description>

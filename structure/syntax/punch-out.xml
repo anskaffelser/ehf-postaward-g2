@@ -53,7 +53,7 @@
             <Reference type="RULE">BII3-T77-R005</Reference>
         </Element>
 
-        <Element>
+        <Element cardinality="0..1">
             <Term>cbc:ActionCode</Term>
             <Name>Complete cart indicator</Name>
             <Description>Indicate if only a complete shopping cart can be ordered. That is, that the information and prices in the shopping cart is only valid if the complete cart is ordered.</Description>
@@ -68,7 +68,7 @@
             <Reference type="RULE">EUGEN-T77-R005</Reference>
         </Element>
 
-        <Element cardinality="0..1">
+        <Element>
             <Term>cbc:IssueTime</Term>
             <Name>Shopping cart issue time</Name>
             <Description>The time of day when shopping cart was issued.</Description>
@@ -98,7 +98,7 @@
             <Term>cac:ReferencedContract</Term>
             <Name>Referenced contract</Name>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:ID</Term>
                 <Name>Contract identifier</Name>
                 <Description>The identification of a contract.</Description>
@@ -152,12 +152,11 @@
             </Element>
         </Element>
 
-
         <Element cardinality="0..1">
             <Term>cac:Contact</Term>
             <Name>Contact</Name>
 
-            <Element cardinality="0..1">
+            <Element>
                 <Term>cbc:ID</Term>
                 <Name>Buyer reference identifier</Name>
                 <Description>An identifier assigned by the Buyer used for internal routing purposes.</Description>
@@ -186,7 +185,7 @@
                 <Term>cac:LineValidityPeriod</Term>
                 <Name>Line validity period</Name>
 
-                <Element cardinality="0..1">
+                <Element>
                     <Term>cbc:StartDate</Term>
                     <Name>Item availability date</Name>
                     <Description>The date when the item will be available for ordering.</Description>
@@ -197,7 +196,7 @@
                 <Term>cac:RequiredItemLocationQuantity</Term>
                 <Name>Required item location quantity</Name>
 
-                <Element>
+                <Element cardinality="0..1">
                     <Term>cbc:LeadTimeMeasure</Term>
                     <Name>Shopping cart line delivery lead days</Name>
                     <Description>Number of days from order to delivery.</Description>
@@ -341,8 +340,7 @@
                         </Attribute>
                     </Element>
 
-
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:DocumentTypeCode</Term>
                         <Name>Attachment description code or attached image description code</Name>
                         <Description>A functional description of the attachment expressed as code. A functional description of the attachment expressed as code.</Description>
@@ -353,7 +351,7 @@
                         </Attribute>
                     </Element>
 
-                    <Element>
+                    <Element cardinality="0..1">
                         <Term>cbc:DocumentDescription</Term>
                         <Name>Attachment description or attached image description</Name>
                         <Description>A short description of the attached document.</Description>
@@ -364,7 +362,7 @@
                         <Term>cac:Attachment</Term>
                         <Name>Attachment</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:EmbeddedDocumentBinaryObject</Term>
                             <Name>Attached document or attached image document</Name>
                             <Description>A Binary Object MIME code attribute MUST be coded using MIME Code Type version 2008 code list.</Description>
@@ -381,7 +379,7 @@
                     <Term>cac:OriginCountry</Term>
                     <Name>Origin country</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Item country of origin</Name>
                         <Description>The code identifying the country from which the item originates.</Description>
@@ -533,7 +531,7 @@
                         <Term>cac:IssuerParty</Term>
                         <Name>Issuer party</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cac:PartyName</Term>
                             <Name>Party name</Name>
 
@@ -551,8 +549,6 @@
             </Element>
 
         </Element>
-
-
 
     </Document>
 

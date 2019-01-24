@@ -265,7 +265,7 @@
                     <Term>cac:Country</Term>
                     <Name>Country</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -321,7 +321,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country in which the provider is legally registered.</Description>
@@ -436,7 +436,7 @@
                     <Term>cac:Country</Term>
                     <Name>Country</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Country code</Name>
                         <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -491,7 +491,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country in which the provider is legally registered.</Description>
@@ -607,7 +607,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -1166,7 +1166,7 @@
                         <Term>cac:Country</Term>
                         <Name>Country</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:IdentificationCode</Term>
                             <Name>Country code</Name>
                             <Description>The country where the address is. The country should always be given by using ISO code 3166 alpha 2.</Description>
@@ -1436,7 +1436,7 @@
                     <Term>cac:OriginCountry</Term>
                     <Name>Country of origin</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:IdentificationCode</Term>
                         <Name>Item origin country</Name>
                         <Description>Used to provide the country from which the item has it's origin. Commonly used in cross border
@@ -1447,6 +1447,7 @@
                             <Term>listID</Term>
                             <Reference type="RULE">EUGEN-T19-R047</Reference>
                         </Attribute>
+
                         <Value type="EXAMPLE">NO</Value>
                     </Element>
                 </Element>
@@ -1455,7 +1456,7 @@
                     <Term>cac:CommodityClassification</Term>
                     <Name>Commodity classification</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cbc:ItemClassificationCode</Term>
                         <Name>Item classification code</Name>
                         <Description>A classification code used to classify the type or nature of the Item. More than one
@@ -1550,7 +1551,7 @@
                         <Term>cac:TaxScheme</Term>
                         <Name>Tax scheme</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:ID</Term>
                             <Name>Tax scheme ID</Name>
                             <Description>Tax Scheme ID =VAT</Description>
@@ -1619,11 +1620,11 @@
                     <Term>cac:ManufacturerParty</Term>
                     <Name>Manufacturer</Name>
 
-                    <Element cardinality="0..1">
+                    <Element>
                         <Term>cac:PartyName</Term>
                         <Name>Party name</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:Name</Term>
                             <Name>Manufacturer party name</Name>
                             <Description>The name of the manufacturer of the item.</Description>
@@ -1647,7 +1648,7 @@
                         <Term>cac:LotIdentification</Term>
                         <Name>Lot identification</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cbc:LotNumberID</Term>
                             <Name>Item batch identifier</Name>
                             <Description>Identifies the production batch that the item(s) listed in the catalogue line were part of.</Description>
@@ -1701,7 +1702,7 @@
                         <Term>cac:IssuerParty</Term>
                         <Name>Issuer</Name>
 
-                        <Element cardinality="0..1">
+                        <Element>
                             <Term>cac:PartyName</Term>
                             <Name>Party name</Name>
 
