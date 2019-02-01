@@ -1,6 +1,6 @@
 # EHF Standards
 
-Release date: **2018-11-15**
+Release date: **2019-02-27**
 
 This repository defines standards part of Electronic Commerce Format (EHF) within Post-Award domain.
 
