@@ -43,16 +43,22 @@
     <cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
     <cac:AccountingSupplierParty>
         <cac:Party>
+            <cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="NO:ORGNR">123456785</cbc:ID>
+            </cac:PartyIdentification>
             <cac:PartyName>
-                <cbc:Name></cbc:Name>
+                <cbc:Name>TEST x</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:StreetName></cbc:StreetName>
-                <cbc:CityName></cbc:CityName>
-                <cbc:PostalZone></cbc:PostalZone>
+                <cbc:CityName>Oslo</cbc:CityName>
+                <cbc:PostalZone>0192</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
-                <cbc:CompanyID schemeID="NO:VAT"></cbc:CompanyID>
+                <cbc:CompanyID schemeID="NO:VAT">65463216</cbc:CompanyID>
                 <cac:TaxScheme>
                     <cbc:ID>VAT</cbc:ID>
                 </cac:TaxScheme>
@@ -61,13 +67,19 @@
     </cac:AccountingSupplierParty>
     <cac:AccountingCustomerParty>
         <cac:Party>
+            <cbc:EndpointID schemeID="NO:ORGNR">123456785</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="GLN">7080001113360</cbc:ID>
+            </cac:PartyIdentification>
             <cac:PartyName>
                 <cbc:Name>TEST AS</cbc:Name>
             </cac:PartyName>
             <cac:PostalAddress>
-                <cbc:StreetName></cbc:StreetName>
-                <cbc:CityName></cbc:CityName>
-                <cbc:PostalZone></cbc:PostalZone>
+                <cbc:CityName>Oslo</cbc:CityName>
+                <cbc:PostalZone>0245</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
             </cac:PostalAddress>
             <cac:PartyLegalEntity>
                 <cbc:RegistrationName>TEST AS</cbc:RegistrationName>
@@ -78,12 +90,16 @@
     <cac:PaymentMeans>
         <cbc:PaymentMeansCode listAgencyID="NES" listID="UNCL4461">31</cbc:PaymentMeansCode>
         <cbc:PaymentDueDate>2014-11-30</cbc:PaymentDueDate>
-        <cbc:PaymentID></cbc:PaymentID>
+        <cbc:PaymentID>1234</cbc:PaymentID>
         <cac:PayeeFinancialAccount>
-            <cbc:ID schemeID="BBAN"></cbc:ID>
+            <cbc:ID schemeID="BBAN">99991122222</cbc:ID>
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
-    <cac:PaymentTerms/>
+
+    <cac:PaymentTerms>
+        <cbc:Note>Description of payment xxx</cbc:Note>
+    </cac:PaymentTerms>
+
     <cac:TaxTotal>
         <cbc:TaxAmount currencyID="NOK">250</cbc:TaxAmount>
         <cac:TaxSubtotal>

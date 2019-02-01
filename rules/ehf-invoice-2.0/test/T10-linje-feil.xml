@@ -40,10 +40,10 @@
 		<cac:Party>
 			<cbc:EndpointID schemeID="NO:ORGNR">977187761</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">7080003093035</cbc:ID>
+				<cbc:ID schemeID="NO:ORGNR">977187761</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
-				<cbc:Name>Bedriften A/S</cbc:Name>
+				<cbc:Name>Bedriften AS</cbc:Name>
 			</cac:PartyName>
 			<cac:PostalAddress>
 				<cbc:ID schemeID="GLN" schemeAgencyID="9">7080003093035</cbc:ID>
@@ -77,9 +77,9 @@
 	</cac:AccountingSupplierParty>
 	<cac:AccountingCustomerParty>
 		<cac:Party>
-			<cbc:EndpointID schemeID="NO:ORGNR">810305282</cbc:EndpointID>
+			<cbc:EndpointID schemeID="NO:ORGNR">991891919</cbc:EndpointID>
 			<cac:PartyIdentification>
-				<cbc:ID schemeID="GLN">7080003093035</cbc:ID>
+				<cbc:ID schemeID="GLN">7080001262235</cbc:ID>
 			</cac:PartyIdentification>
 			<cac:PartyName>
 				<cbc:Name>TestKunde</cbc:Name>
@@ -100,7 +100,7 @@
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
 				<cbc:RegistrationName>TestKunde</cbc:RegistrationName>
-				<cbc:CompanyID schemeID="NO:ORGNR">810305282</cbc:CompanyID>
+				<cbc:CompanyID schemeID="NO:ORGNR">991891919</cbc:CompanyID>
 				<cac:RegistrationAddress>
 					<cbc:CityName>SARPSBORG</cbc:CityName>
 					<cac:Country>
@@ -149,7 +149,7 @@
 			<cbc:TaxAmount currencyID="NOK">25.00</cbc:TaxAmount>
 			<cac:TaxCategory>
 				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-				<cbc:Percent>25.00</cbc:Percent>
+				<cbc:Percent>25</cbc:Percent>
 				<cac:TaxScheme>
 					<cbc:ID>VAT</cbc:ID>
 				</cac:TaxScheme>
