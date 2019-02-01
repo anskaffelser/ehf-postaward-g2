@@ -166,7 +166,7 @@
 		<cbc:ChargeTotalAmount currencyID="NOK">199.95</cbc:ChargeTotalAmount>
 		<cbc:PrepaidAmount currencyID="NOK">100</cbc:PrepaidAmount>
 		<cbc:PayableRoundingAmount currencyID="NOK">0.05</cbc:PayableRoundingAmount>
-		<cbc:PayableAmount currencyID="NOK">1350.00</cbc:PayableAmount>
+		<cbc:PayableAmount currencyID="NOK">1250.00</cbc:PayableAmount>
 	</cac:LegalMonetaryTotal>
 	<cac:OrderLine>
 		<cac:LineItem>
@@ -211,6 +211,7 @@
 					<cbc:ItemClassificationCode listID="UNSPSC">3156</cbc:ItemClassificationCode>
 				</cac:CommodityClassification>
 				<cac:TransactionConditions>
+					<cbc:ID>123457</cbc:ID>
 					<cbc:ActionCode>CT</cbc:ActionCode>
 				</cac:TransactionConditions>
 				<cac:ClassifiedTaxCategory>

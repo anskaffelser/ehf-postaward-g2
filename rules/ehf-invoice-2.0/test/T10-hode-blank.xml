@@ -132,10 +132,13 @@
 	</cac:Delivery>
 	<cac:PaymentMeans>
 		<cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>2012-07-24</cbc:PaymentDueDate>
 		<cbc:PaymentChannelCode>SW</cbc:PaymentChannelCode>
 		<cbc:PaymentID>000200000032000100011</cbc:PaymentID>
 		<cac:PayeeFinancialAccount>
+			<cbc:ID schemeID="LOCAL">99991122222</cbc:ID>
 			<cac:FinancialInstitutionBranch>
+				<cbc:ID>BIC</cbc:ID>
 				<cac:FinancialInstitution>
 					<cbc:ID schemeID="BIC">DNB</cbc:ID>
 				</cac:FinancialInstitution>

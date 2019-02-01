@@ -201,6 +201,7 @@
 					<cbc:ItemClassificationCode listID="UNSPSC">3156</cbc:ItemClassificationCode>
 				</cac:CommodityClassification>
 				<cac:TransactionConditions>
+					<cbc:ID>14552</cbc:ID>
 					<cbc:ActionCode>CT</cbc:ActionCode>
 				</cac:TransactionConditions>
 				<cac:ClassifiedTaxCategory>

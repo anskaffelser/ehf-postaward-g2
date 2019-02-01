@@ -7,11 +7,11 @@
 	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii01:ver2.0</cbc:ProfileID>
 	<cbc:ID>1234</cbc:ID>
 	<cbc:ActionCode listID="ACTIONCODE:PEPPOL">Add</cbc:ActionCode>
-	<cbc:IssueDate>2013-09-23</cbc:IssueDate>
+	<cbc:IssueDate>2018-10-20</cbc:IssueDate>
 	<cbc:VersionID>v1.0</cbc:VersionID>
 	<cac:ValidityPeriod>
-		<cbc:StartDate>2018-01-01</cbc:StartDate>
-		<cbc:EndDate>2019-01-01</cbc:EndDate>
+		<cbc:StartDate>2018-10-20</cbc:StartDate>
+		<cbc:EndDate>2018-10-30</cbc:EndDate>
 	</cac:ValidityPeriod>
 	<cac:ReferencedContract>
 		<cbc:ID>123123</cbc:ID>
@@ -152,8 +152,8 @@
 			>1</cbc:MaximumOrderQuantity>
 		<cbc:PackLevelCode listID="GS17009:PEPPOL">CU</cbc:PackLevelCode>
 		<cac:LineValidityPeriod>
-			<cbc:StartDate>2018-10-01</cbc:StartDate>
-			<cbc:EndDate>2018-12-01</cbc:EndDate>
+			<cbc:StartDate>2018-10-20</cbc:StartDate>
+			<cbc:EndDate>2018-10-30</cbc:EndDate>
 		</cac:LineValidityPeriod>
 		<cac:RequiredItemLocationQuantity>
 			<cbc:LeadTimeMeasure unitCode="DAY">13</cbc:LeadTimeMeasure>

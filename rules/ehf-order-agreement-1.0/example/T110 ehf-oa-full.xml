@@ -217,6 +217,7 @@
 					<cbc:ItemClassificationCode listID="UNSPSC">3156</cbc:ItemClassificationCode>
 				</cac:CommodityClassification>
 				<cac:TransactionConditions>
+					<cbc:ID>123</cbc:ID>
 					<cbc:ActionCode>Action code</cbc:ActionCode>
 				</cac:TransactionConditions>
 				<cac:ClassifiedTaxCategory>
