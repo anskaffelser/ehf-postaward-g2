@@ -523,7 +523,7 @@
 
     <Tag>
         <Identifier>catalogue</Identifier>
-        <Title>EHF Catalogue 1.0.13</Title>
+        <Title>EHF Catalogue 1.0.14</Title>
     </Tag>
     <Tag>
         <Identifier>common</Identifier>
@@ -531,23 +531,23 @@
     </Tag>
     <Tag>
         <Identifier>despatch-advice</Identifier>
-        <Title>EHF Despatch Advice 1.0.10</Title>
+        <Title>EHF Despatch Advice 1.0.11</Title>
     </Tag>
     <Tag>
         <Identifier>invoice-and-creditnote</Identifier>
-        <Title>EHF Invoice and Creditnote 2.0.15</Title>
+        <Title>EHF Invoice and Creditnote 2.0.16</Title>
     </Tag>
     <Tag>
         <Identifier>order-agreement</Identifier>
-        <Title>EHF Order Agreement 1.0.2</Title>
+        <Title>EHF Order Agreement 1.0.3</Title>
     </Tag>
     <Tag>
         <Identifier>ordering</Identifier>
-        <Title>EHF Ordering 1.0.11</Title>
+        <Title>EHF Ordering 1.0.12</Title>
     </Tag>
     <Tag>
         <Identifier>punch-out</Identifier>
-        <Title>EHF Punch Out 1.0.1</Title>
+        <Title>EHF Punch Out 1.0.2</Title>
     </Tag>
     <Tag>
         <Identifier>reminder</Identifier>

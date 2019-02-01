@@ -1,0 +1,16 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| -
+| Feilretting i syntaks har medført oppdaterte grunnleggende valideringsregler.
+| Syntaks
+
+|===
+
+WARNING: Valideringsregler som er ventet å trigge feil i neste release:
+Alle grunnleggende valideringsregler (EHF-TXX-BXXXXX).

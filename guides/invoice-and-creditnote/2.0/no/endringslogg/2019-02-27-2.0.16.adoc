@@ -1,0 +1,15 @@
+:ruleurl-inv: /ehf/rule/invoice-2.0/
+:ruleurl-cre: /ehf/rule/creditnote-2.0/
+
+[cols="1,9,2", options="header"]
+|===
+| Sak | Beskrivelse | Type
+
+| -
+| Feilretting i syntaks har medført oppdaterte grunnleggende valideringsregler.
+| Syntaks
+
+|===
+
+WARNING: Valideringsregler som er ventet å trigge feil i neste release:
+Alle grunnleggende valideringsregler (EHF-TXX-BXXXXX).

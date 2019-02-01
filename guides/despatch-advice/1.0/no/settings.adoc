@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Pakkseddel
 
-:date-review: 16. oktober 2018
-:date-release: 15. november 2018
-:date-mandatory: 15. november 2018
+:date-review: 01. februar 2019
+:date-release: 27. februar 2019
+:date-mandatory: 27. februar 2019

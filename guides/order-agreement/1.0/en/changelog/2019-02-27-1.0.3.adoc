@@ -1,0 +1,12 @@
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| Fixing syntax, resulting in updated basic validation rules.
+| Syntax
+
+|===
+
+WARNING: Validation rules expected to be updated to trigger error in next release:
+All basic validation rules (EHF-TXX-BXXXXXX).
