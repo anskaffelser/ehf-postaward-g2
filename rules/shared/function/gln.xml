@@ -2,6 +2,6 @@
   <param name="val"/>
   <variable name="length" select="string-length($val) - 1"/>
   <variable name="digits" select="reverse(for $i in string-to-codepoints(substring($val, 0, $length +1)) return $i -48)"/>
-  <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (($i mod 6) + 2))"/>
+  <variable name="weightedSum" select="sum(for $i in (0 to $length - 1) return $digits[$i + 1] * (1 + ((($i + 1) mod 2) * 2)))"/>
   <value-of select="10 - ($weightedSum mod 10) = number(substring($val, $length + 1, 1))"/>
 </function>
