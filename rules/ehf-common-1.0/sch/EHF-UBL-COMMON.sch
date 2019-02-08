@@ -74,9 +74,8 @@
     </rule>
     <rule context="cbc:ID[@schemeID = 'GLN']">
        <assert id="EHF-COMMON-R040"
-               test="matches(., '^[0-9]+$') and u:gln(.)"
+               test="matches(text(), '^[0-9]+$') and u:gln(text())"
                flag="warning">Invalid GLN number provided.</assert>
-
     </rule>
     <rule context="cbc:Note[2]">
       <assert id="EHF-COMMON-R050"

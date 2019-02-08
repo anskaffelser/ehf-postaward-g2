@@ -37,4 +37,17 @@
 
 		</Invoice>
 	</test>
+	<test>
+		<assert>
+			<description>Verify GLN number containing 13 digits.</description>
+			<success>EHF-COMMON-R040</success>
+		</assert>
+		<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+				 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+				 xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+
+			<cbc:ID schemeID="GLN">7080001113360</cbc:ID>
+
+		</Invoice>
+	</test>
 </testSet>
