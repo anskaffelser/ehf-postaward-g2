@@ -79,9 +79,9 @@
 
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2018-11-15/</Path>
-        <Title>Release 2018-11-15</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-11-15'.</Description>
+        <Path>release/2019-02-27/</Path>
+        <Title>Release 2019-02-27</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2019-02-27'.</Description>
         <Tag>release</Tag>
         <Tag>catalogue</Tag>
         <Tag>common</Tag>
@@ -90,6 +90,13 @@
         <Tag>order-agreement</Tag>
         <Tag>ordering</Tag>
         <Tag>punch-out</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2018-11-15/</Path>
+        <Title>Release 2018-11-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2018-11-15'.</Description>
+        <Tag>release</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
