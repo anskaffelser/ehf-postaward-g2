@@ -457,7 +457,7 @@
         <Type>Syntax-1</Type>
         <Path>structure/syntax/despatch-advice.xml</Path>
         <Title>EHF Despatch Advice 1.0</Title>
-        <Tag>respatch-advice</Tag>
+        <Tag>despatch-advice</Tag>
     </Resource>
     <Resource>
         <Identifier>invoice</Identifier>
