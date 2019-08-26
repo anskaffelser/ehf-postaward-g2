@@ -139,10 +139,10 @@
    </rule>
    <rule context="cac:TaxSubtotal">
       <assert id="NOGOV-T10-R039"
-              test="string-length(substring-after(cbc:TaxableAmount, '.')) &lt;= 2"
+              test="not(cbc:TaxableAmount) or string-length(substring-after(cbc:TaxableAmount, '.')) &lt;= 2"
               flag="fatal">[NOGOV-T10-R039]-Tax subtotal amounts cannot have more than 2 decimals</assert>
       <assert id="NOGOV-T10-R039"
-              test="string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
+              test="not(cbc:TaxAmount) or string-length(substring-after(cbc:TaxAmount, '.')) &lt;= 2"
               flag="fatal">[NOGOV-T10-R039]-Tax subtotal amounts cannot have more than 2 decimals</assert>
    </rule>
    <rule context="ubl:Invoice/cac:AllowanceCharge">
