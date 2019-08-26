@@ -11,11 +11,11 @@
     <inherit>ehf-common-ubl-1.0</inherit>
     <file source="sch/EHF-UBL-T77.sch" path="xsl/EHF-UBL-T77.xsl" infoUrl="/ehf/g2/rules/t77/{}/" />
     <file
-      source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/BII RULES/BIIRULES-UBL-T77.sch"
+      source="../../target/schematron/BIIRULES-UBL-T77.sch"
       path="xsl/BIIRULES-UBL-T77.xsl"
       infoUrl="/ehf/g2/rules/t77/{}/" />
     <file
-      source="../../sources/peppol-bis/rules/peppolbis-trdm077-1.0-punch-out/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T77.sch"
+      source="../../target/schematron/OPENPEPPOL-UBL-T77.sch"
       path="xsl/OPENPEPPOL-UBL-T77.xsl"
       infoUrl="/ehf/g2/rules/t77/{}/" />
   </configuration>

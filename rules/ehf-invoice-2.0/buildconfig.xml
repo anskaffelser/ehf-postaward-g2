@@ -15,27 +15,9 @@
         <inherit>ubl-invoice-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
         <inherit>ehf-t10-stylesheet-2.0</inherit>
-        <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/BII RULES/BIIRULES-UBL-T10.sch"
-          path="xsl/BIIRULES-UBL-T10.xsl"
-          infoUrl="/ehf/g2/rules/t10/{}/" />
-        <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm010-2.0-invoice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T10.sch"
-          path="xsl/OPENPEPPOL-UBL-T10.xsl"
-          infoUrl="/ehf/g2/rules/t10/{}/" />
+        <file source="../../target/schematron/BIIRULES-UBL-T10.sch" path="xsl/BIIRULES-UBL-T10.xsl"  infoUrl="/ehf/g2/rules/t10/{}/" />
+        <file source="../../target/schematron/OPENPEPPOL-UBL-T10.sch" path="xsl/OPENPEPPOL-UBL-T10.xsl" infoUrl="/ehf/g2/rules/t10/{}/" />
         <file source="sch/EHF-UBL-T10.sch" path="xsl/EHF-UBL-T10.xsl" infoUrl="/ehf/g2/rules/t10/{}/" />
-        <rule identifier="BII2-T10-R025" action="suppress" />
-        <rule identifier="BII2-T10-R035" action="suppress" />
-        <rule identifier="BII2-T10-R037" action="suppress" />
-        <rule identifier="BII2-T10-R044" action="suppress" />
-        <rule identifier="BII2-T10-R047" action="suppress" />
-        <rule identifier="BII2-T10-R048" action="suppress" />
-        <rule identifier="BII2-T10-R049" action="suppress" />
-        <rule identifier="BII2-T10-R050" action="suppress" />
-        <rule identifier="EUGEN-T10-R041" action="suppress" />
-        <rule identifier="CL-T10-R001" action="suppress" />
-        <rule identifier="CL-T10-R007" action="suppress" />
-        <rule identifier="OP-T10-R004" action="suppress" />
     </configuration>
 
     <configuration>

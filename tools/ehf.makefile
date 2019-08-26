@@ -174,7 +174,7 @@ ifeq "$(RULE_SCHEMATRON)" "true"
 	$(call docker_run,schematron,Packaging Schematron files,\
 			-v $(PROJECT):/src \
 			-v $(PROJECT)/target:/target \
-			klakegg/schematron \
+			difi/ehfbuild \
 			sh tools/ehf.sh trigger_schematron)
 else
 	$(call skip,schematron)

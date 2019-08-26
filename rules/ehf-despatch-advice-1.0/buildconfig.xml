@@ -12,11 +12,11 @@
         <inherit>ehf-common-ubl-1.0</inherit>
         <file source="sch/EHF-UBL-T16.sch" path="xsl/EHF-UBL-T16.xsl" infoUrl="/ehf/g2/rules/t16/{}/" />
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/BII RULES/BIIRULES-UBL-T16.sch"
+          source="../../target/schematron/BIIRULES-UBL-T16.sch"
           path="xsl/BIIRULES-UBL-T16.xsl"
           infoUrl="/ehf/g2/rules/t16/{}/" />
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm016-2.0-despatch-advice/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T16.sch"
+          source="../../target/schematron/OPENPEPPOL-UBL-T16.sch"
           path="xsl/OPENPEPPOL-UBL-T16.xsl"
           infoUrl="/ehf/g2/rules/t16/{}/" />
     </configuration>

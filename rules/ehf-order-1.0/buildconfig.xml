@@ -12,14 +12,13 @@
         <inherit>ehf-common-ubl-1.0</inherit>
         <file source="sch/EHF-UBL-T01.sch" path="xsl/EHF-UBL-T01.xsl" infoUrl="/ehf/g2/rules/t01/{}/" />
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/BII RULES/BIIRULES-UBL-T01.sch"
+          source="../../target/schematron/BIIRULES-UBL-T01.sch"
           path="xsl/BIIRULES-UBL-T01.xsl"
           infoUrl="/ehf/g2/rules/t01/{}/" />
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm001-2.0-order/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T01.sch"
+          source="../../target/schematron/OPENPEPPOL-UBL-T01.sch"
           path="xsl/OPENPEPPOL-UBL-T01.xsl"
           infoUrl="/ehf/g2/rules/t01/{}/" />
-        <rule identifier="OP-T01-R008" action="suppress" />
     </configuration>
 
     <configuration>

@@ -8,31 +8,40 @@
     <testfolder>unit-NONAT</testfolder>
 
     <configuration>
+      <identifier>ehf-t14-base-bii-2.0</identifier>
+      <file
+        source="../../target/schematron/BIIRULES-UBL-T14.sch"
+        path="xsl/BIIRULES-UBL-T14.xsl"
+        infoUrl="/ehf/g2/rules/t14/{}/" />
+    </configuration>
+
+    <configuration>
+      <identifier>ehf-t14-base-peppol-2.0</identifier>
+      <file
+        source="../../target/schematron/OPENPEPPOL-UBL-T14.sch"
+        path="xsl/OPENPEPPOL-UBL-T14.xsl"
+        infoUrl="/ehf/g2/rules/t14/{}/" />
+    </configuration>
+
+    <configuration>
+      <identifier>ehf-t14-base-peppol-xx-2.0</identifier>
+      <file
+        source="../../target/schematron/OPENPEPPOL-UBL-T14-XX.sch"
+        path="xsl/OPENPEPPOL-UBL-T14-XX.xsl"
+        infoUrl="/ehf/g2/rules/t14/{}/" />
+    </configuration>
+
+    <configuration>
+      <identifier>ehf-t14-base-ehf-2.0</identifier>
+      <file source="sch/EHF-UBL-T14.sch" path="xsl/EHF-UBL-T14.xsl" infoUrl="/ehf/g2/rules/t14/{}/" />
+    </configuration>
+
+    <configuration>
         <identifier>ehf-t14-base-2.0</identifier>
         <title>EHF Creditnote 2.0 (Base)</title>
         <inherit>ubl-creditnote-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
         <inherit>ehf-t14-stylesheet-2.0</inherit>
-        <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/BII RULES/BIIRULES-UBL-T14.sch"
-          path="xsl/BIIRULES-UBL-T14.xsl"
-          infoUrl="/ehf/g2/rules/t14/{}/" />
-        <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm014-2.0-creditnote/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T14.sch"
-          path="xsl/OPENPEPPOL-UBL-T14.xsl"
-          infoUrl="/ehf/g2/rules/t14/{}/" />
-        <file source="sch/EHF-UBL-T14.sch" path="xsl/EHF-UBL-T14.xsl" infoUrl="/ehf/g2/rules/t14/{}/" />
-        <rule identifier="BII2-T14-R025" action="suppress" />
-        <rule identifier="BII2-T14-R035" action="suppress" />
-        <rule identifier="BII2-T14-R037" action="suppress" />
-        <rule identifier="BII2-T14-R044" action="suppress" />
-        <rule identifier="BII2-T14-R047" action="suppress" />
-        <rule identifier="BII2-T14-R048" action="suppress" />
-        <rule identifier="BII2-T14-R049" action="suppress" />
-        <rule identifier="BII2-T14-R050" action="suppress" />
-        <rule identifier="EUGEN-T14-R041" action="suppress" />
-        <rule identifier="CL-T14-R007" action="suppress" />
-        <rule identifier="OP-T14-R004" action="suppress" />
     </configuration>
 
     <configuration>
@@ -41,7 +50,9 @@
         <profileId>urn:www.cenbii.eu:profile:biixx:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixx:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ehf-t14-base-2.0</inherit>
-        <rule identifier="EUGEN-T14-R047" action="suppress" />
+        <inherit>ehf-t14-base-bii-2.0</inherit>
+        <inherit>ehf-t14-base-peppol-xx-2.0</inherit>
+        <inherit>ehf-t14-base-ehf-2.0</inherit>
     </configuration>
     <configuration>
         <identifier>ehf-t14-05-2.0</identifier>
@@ -49,6 +60,9 @@
         <profileId>urn:www.cenbii.eu:profile:bii05:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ehf-t14-base-2.0</inherit>
+        <inherit>ehf-t14-base-bii-2.0</inherit>
+        <inherit>ehf-t14-base-peppol-2.0</inherit>
+        <inherit>ehf-t14-base-ehf-2.0</inherit>
     </configuration>
     <configuration>
         <identifier>ehf-t14-xy-2.0</identifier>
@@ -56,6 +70,9 @@
         <profileId>urn:www.cenbii.eu:profile:biixy:ver2.0</profileId>
         <customizationId>urn:www.cenbii.eu:transaction:biitrns014:ver2.0:extended:urn:www.cenbii.eu:profile:biixy:ver2.0:extended:urn:www.difi.no:ehf:kreditnota:ver2.0</customizationId>
         <inherit>ehf-t14-base-2.0</inherit>
+        <inherit>ehf-t14-base-bii-2.0</inherit>
+        <inherit>ehf-t14-base-peppol-2.0</inherit>
+        <inherit>ehf-t14-base-ehf-2.0</inherit>
     </configuration>
 
 </buildConfigurations>

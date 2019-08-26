@@ -11,16 +11,14 @@
         <inherit>ubl-catalogue-2.1</inherit>
         <inherit>ehf-common-ubl-1.0</inherit>
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/BII RULES/BIIRULES-UBL-T19.sch"
+          source="../../target/schematron/BIIRULES-UBL-T19.sch"
           path="xsl/BIIRULES-UBL-T19.xsl"
           infoUrl="/ehf/g2/rules/t19/{}/" />
         <file
-          source="../../sources/peppol-bis/rules/peppolbis-trdm019-2.0-catalogue/Schematron/OPENPEPPOL/OPENPEPPOL-UBL-T19.sch"
+          source="../../target/schematron/OPENPEPPOL-UBL-T19.sch"
           path="xsl/OPENPEPPOL-UBL-T19.xsl"
           infoUrl="/ehf/g2/rules/t19/{}/" />
         <file source="sch/EHF-UBL-T19.sch" path="xsl/EHF-UBL-T19.xsl" infoUrl="/ehf/g2/rules/t19/{}/" />
-        <rule identifier="CL-T19-R004" action="suppress" />
-        <rule identifier="BII2-T19-R021" action="suppress" />
     </configuration>
 
     <configuration>

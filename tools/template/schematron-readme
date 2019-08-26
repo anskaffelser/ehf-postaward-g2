@@ -5,3 +5,5 @@
 # Generated: ${TIMESTAMP}
 # Git hash: ${GIT}
 #
+
+Some of the Schematron files from CEN BII and OpenPEPPOL are changed and must be used only as part of EHF validation.
