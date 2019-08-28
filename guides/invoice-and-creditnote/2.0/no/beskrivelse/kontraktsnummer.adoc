@@ -12,4 +12,4 @@ Kontraktsnummer kan benyttes i tillegg til ordre-/bestilingsnummer for å spore 
 </cac:ContractDocumentReference>
 ----
 
-Ved behov for andre typer av referanser enn ordre-/bestillingsnumer (se punkt 6.7) og kontraktsnummer, skal andre dokumentreferanser benyttes, se punkt 6.11.
+Ved behov for andre typer av referanser enn ordre-/bestillingsnumer (se punkt 5.8) og kontraktsnummer, skal andre dokumentreferanser benyttes, se punkt 5.12.
