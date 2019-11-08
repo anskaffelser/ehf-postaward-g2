@@ -6,7 +6,7 @@
 
     <Property key="sch:prefix">EHF-T14</Property>
     <Property key="sch:identifier">t14-basic</Property>
-    <Property key="sch:flag">warning</Property>
+    <!-- <Property key="sch:flag">warning</Property> -->
     <Property key="sch:pathprefix">t14</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
     <Property key="sch:SchemaLocationRule:flag">off</Property>

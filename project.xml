@@ -79,9 +79,9 @@
 
     <Resource>
         <Type>Doc-1</Type>
-        <Path>release/2019-02-27/</Path>
-        <Title>Release 2019-02-27</Title>
-        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2019-02-27'.</Description>
+        <Path>release/2019-12-10/</Path>
+        <Title>Release 2019-12-10</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2019-12-10'.</Description>
         <Tag>release</Tag>
         <Tag>catalogue</Tag>
         <Tag>common</Tag>
@@ -90,6 +90,13 @@
         <Tag>order-agreement</Tag>
         <Tag>ordering</Tag>
         <Tag>punch-out</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
+        <Path>release/2019-02-27/</Path>
+        <Title>Release 2019-02-27</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2019-02-27'.</Description>
+        <Tag>release</Tag>
     </Resource>
     <Resource>
         <Type>Doc-1</Type>
@@ -530,7 +537,7 @@
 
     <Tag>
         <Identifier>catalogue</Identifier>
-        <Title>EHF Catalogue 1.0.14</Title>
+        <Title>EHF Catalogue 1.0.15</Title>
     </Tag>
     <Tag>
         <Identifier>common</Identifier>
@@ -538,23 +545,23 @@
     </Tag>
     <Tag>
         <Identifier>despatch-advice</Identifier>
-        <Title>EHF Despatch Advice 1.0.11</Title>
+        <Title>EHF Despatch Advice 1.0.12</Title>
     </Tag>
     <Tag>
         <Identifier>invoice-and-creditnote</Identifier>
-        <Title>EHF Invoice and Creditnote 2.0.16</Title>
+        <Title>EHF Invoice and Creditnote 2.0.17</Title>
     </Tag>
     <Tag>
         <Identifier>order-agreement</Identifier>
-        <Title>EHF Order Agreement 1.0.3</Title>
+        <Title>EHF Order Agreement 1.0.4</Title>
     </Tag>
     <Tag>
         <Identifier>ordering</Identifier>
-        <Title>EHF Ordering 1.0.12</Title>
+        <Title>EHF Ordering 1.0.13</Title>
     </Tag>
     <Tag>
         <Identifier>punch-out</Identifier>
-        <Title>EHF Punch Out 1.0.2</Title>
+        <Title>EHF Punch Out 1.0.3</Title>
     </Tag>
     <Tag>
         <Identifier>reminder</Identifier>

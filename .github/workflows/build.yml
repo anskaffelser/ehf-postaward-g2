@@ -13,5 +13,8 @@ jobs:
       with:
         submodules: true
 
+    - name: Pull images
+      run: make pull
+
     - name: Build
       run: make

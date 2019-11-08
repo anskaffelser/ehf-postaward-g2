@@ -1,0 +1,13 @@
+:ruleurl-cat: /ehf/rule/catalogue-1.0/
+:ruleurl-res: /ehf/rule/catalogue-response-1.0/
+:ruleurl-common: /ehf/guide/common/1.0/en/#
+
+[cols="1,9,2", options="header"]
+|===
+| Issue | Description | Type
+
+| -
+| All basic validation rules (EHF-TXX-BXXXXXX) triggers error.
+| Validator
+
+|===

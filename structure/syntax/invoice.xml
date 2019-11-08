@@ -6,7 +6,7 @@
 
     <Property key="sch:prefix">EHF-T10</Property>
     <Property key="sch:identifier">t10-basic</Property>
-    <Property key="sch:flag">warning</Property>
+    <!-- <Property key="sch:flag">warning</Property> -->
     <Property key="sch:pathprefix">t10</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
     <Property key="sch:SchemaLocationRule:flag">off</Property>
@@ -1129,14 +1129,14 @@
                 <Name>Payment means code</Name>
                 <Description>An invoice may contain an indication about how the payment
                     should be handled. Code according to UN/CEFACT codelist 4461</Description>
-                
+
                 <Attribute>
                     <Term>listID</Term>
                 </Attribute>
 
                 <Value type="EXAMPLE">31</Value>
             </Element>
-            
+
             <Element>
                 <Term>cbc:PaymentDueDate</Term>
                 <Name>Due date</Name>
@@ -1151,7 +1151,7 @@
                 <Name>Payment channel code</Name>
                 <Description>Code for paymentchannel, IBAN, BBAN</Description>
             </Element>
-            
+
             <Element cardinality="0..1">
                 <Term>cbc:PaymentID</Term>
                 <Name>Payment ID</Name>
@@ -1162,12 +1162,12 @@
                     In Norway this element is used for KID number.</Description>
                 <Value type="EXAMPLE">1234561</Value>
             </Element>
-            
+
             <Element>
                 <Term>cac:PayeeFinancialAccount</Term>
                 <Name>Financial account</Name>
                 <Description>Information regarding the payee's financial account</Description>
-                
+
                 <Element>
                     <Term>cbc:ID</Term>
                     <Name>Financial account ID</Name>
@@ -1178,12 +1178,12 @@
                         the invoice may contain the identifier for the financial
                         account either as IBAN or in proprietary format.
                         The banc account number</Description>
-                    
+
                     <Attribute>
                         <Term>schemeID</Term>
                         <Description>Identification of type of account</Description>
                     </Attribute>
-                    
+
                     <Value type="EXAMPLE">00050011111</Value>
                 </Element>
 
@@ -1226,7 +1226,7 @@
 
                             <Value type="EXAMPLE">DNBANOKKXXX</Value>
                         </Element>
-                        
+
                         <Element cardinality="0..1">
                             <Term>cbc:Name</Term>
                             <Name>Financial Institution Name</Name>
@@ -1245,7 +1245,7 @@
                                 <Description>The main address line in a postal address usually the street
                                     name and number.</Description>
                             </Element>
-                            
+
                             <Element cardinality="0..1">
                                 <Term>cbc:AdditionalStreetName</Term>
                                 <Name>Address line 2</Name>
@@ -1254,14 +1254,14 @@
                                     Common use are secondary house number in a complex or in
                                     a building.</Description>
                             </Element>
-                            
+
                             <Element cardinality="0..1">
                                 <Term>cbc:CityName</Term>
                                 <Name>City</Name>
                                 <Description>The common name of the city where the postal address is.
                                     The name is written in full rather than as a code.</Description>
                             </Element>
-                            
+
                             <Element cardinality="0..1">
                                 <Term>cbc:PostalZone</Term>
                                 <Name>Post code</Name>
@@ -1269,20 +1269,20 @@
                                     according to the relevant national postal service, such as a
                                     ZIP code or Post Code.</Description>
                             </Element>
-                            
+
                             <Element cardinality="0..1">
                                 <Term>cbc:CountrySubentity</Term>
                                 <Name>Country subdivision</Name>
                                 <Description>For specifying a region, county, state, province etc. within a
                                     country by using text.</Description>
                             </Element>
-                            
+
                             <Element cardinality="0..1">
                                 <Term>cac:Country</Term>
                                 <Name>Country code</Name>
                                 <Description>The country where the address is. The country should always
                                     be given by using ISO code 3166 alpha 2</Description>
-                                
+
                                 <Element>
                                     <Term>cbc:IdentificationCode</Term>
                                     <Name>Country code</Name>

@@ -1,6 +1,6 @@
 //
 :status: review
-:release: 2019-02-27
+:release: 2019-12-10
 
 // Translation
 ifdef::lang[]
@@ -11,8 +11,8 @@ endif::[]
 :rules-dir: /tmp/rules
 
 // Difi
-:link-github: https://github.com/difi/vefa-ehf-postaward
-:link-issues: https://github.com/difi/vefa-ehf-postaward/issues
+:link-github: https://github.com/anskaffelser/ehf-postaward-g2
+:link-issues: https://github.com/anskaffelser/ehf-postaward-g2/issues
 :link-portal: https://vefa.difi.no/
 
 :name-difi-en: Agency of Public Management and eGovernment

@@ -4,6 +4,6 @@ include::../settings.adoc[]
 
 :doctitle: EHF Invoice and Creditnote
 
-:date-review: 16. October 2018
-:date-release: 15. November 2018
-:date-mandatory: 15. November 2018
+:date-review: 08. November 2019
+:date-release: 10. December 2019
+:date-mandatory: 10. December 2019
