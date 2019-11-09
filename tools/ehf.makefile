@@ -7,6 +7,7 @@ RELEASE := $(if $(RELEASE),$(RELEASE),Unofficial)
 DOCS_FOLDER := $(if $(DOCS_FOLDER),$(DOCS_FOLDER),docs)
 RULES_FOLDER := $(if $(RULES_FOLDER),$(RULES_FOLDER),rules)
 RULES_IDENT := $(if $(RULES_IDENT),$(RULES_IDENT),rules)
+VERSION := $(if $(GITHUB_REF),$(shell echo "$(GITHUB_REF)" | sed "s:.*/::g"),snapshot)
 BUILD = structure example schematron xsd rules docs static
 .DEFAULT_GOAL = default
 define docker_pull
@@ -109,7 +110,7 @@ ifeq "$(RULE_RULES)" "true"
 	$(call docker_run,rules,Running vefa-validator,\
 			-v $(PROJECT):/src \
 			difi/vefa-validator \
-			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -target target/validator /src)
+			build -x -t -n $(RULES_IDENT) -a $(RULES_FOLDER) -b $(VERSION) -target target/validator /src)
 else
 	$(call skip,rules)
 endif

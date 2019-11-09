@@ -18,3 +18,46 @@ jobs:
 
     - name: Build
       run: make
+
+    - name: Package site files
+      run: cd target/site && zip -rq ../../site.zip *
+
+    - name: Upload validation artifact
+      uses: klakegg/github-upload@v0.9.1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "target/validator/no.difi.ehf.postaward-${TAG}.asice"
+        label: "Validation artifacts for VEFA Validator 2.x"
+        type: "application/vnd.difi.validator.v2+zip"
+
+    - name: Upload examples files
+      uses: klakegg/github-upload@v0.9.1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "target/examples.zip"
+        name: "ehf-postaward-g2-examples-${TAG}.zip"
+        label: "Example files"
+
+    - name: Upload Schematron files
+      uses: klakegg/github-upload@v0.9.1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "target/schematron.zip"
+        name: "ehf-postaward-g2-schematron-${TAG}.zip"
+        label: "Schematron files"
+
+    - name: Upload site files
+      uses: klakegg/github-upload@v0.9.1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "site.zip"
+        name: "ehf-postaward-g2-site-${TAG}.zip"
+        label: "Site files"
