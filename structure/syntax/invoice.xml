@@ -6,7 +6,7 @@
 
     <Property key="sch:prefix">EHF-T10</Property>
     <Property key="sch:identifier">t10-basic</Property>
-    <!-- <Property key="sch:flag">warning</Property> -->
+    <Property key="sch:flag">warning</Property>
     <Property key="sch:pathprefix">t10</Property>
     <Property key="sch:LimitToModelRule:flag">off</Property>
     <Property key="sch:SchemaLocationRule:flag">off</Property>

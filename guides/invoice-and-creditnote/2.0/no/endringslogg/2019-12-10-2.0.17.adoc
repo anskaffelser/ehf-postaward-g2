@@ -6,7 +6,7 @@
 | Sak | Beskrivelse | Type
 
 | -
-| Alle grunnleggende valideringsregler (EHF-TXX-BXXXXX) trigger feil.
-| Validator
+| Oppdaterte lenker til Github.
+| Guide
 
 |===

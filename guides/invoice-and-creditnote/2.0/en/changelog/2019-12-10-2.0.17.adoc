@@ -6,7 +6,7 @@
 | Issue | Description | Type
 
 | -
-| All basic validation rules (EHF-TXX-BXXXXXX) triggers error.
-| Validator
+| Updated links to Github.
+| Guide
 
 |===
