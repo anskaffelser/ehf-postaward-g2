@@ -1,0 +1,74 @@
+
+h2, h1, td, th, tr
+{
+	font-family: Calibri Light;
+	font-size: 11pt;
+}
+
+h2 {
+	color: #084B8A;
+	font-weight: bold;
+	margin: 0em;
+	font-size: 12pt;
+}
+
+h3 {
+	font-family: Calibri Light;
+	color: #084B8A;
+	margin: 0em;
+	font-weight: bold;
+	font-size: 16pt;
+
+}
+
+hr {
+	border-width: 2px;
+}
+
+.small {
+	font-size: smaller;
+}
+
+table {
+	border: 0pt;
+	margin: 0em;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr.totals th {
+	width: 12.5%;
+}
+tr.totals td {
+	vertical-align: bottom;
+}
+
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: 2px;
+}
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.bottom {
+	vertical-align: bottom;
+}
+
+td.UBLLine
+{
+	color: #000000;
+	margin: 0em;
+	font-size: 8pt;
+}
+
+hr
+{
+color:#006666;
+
+}

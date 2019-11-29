@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uomText>
+    <uom key="NAR">
+        <tekst  xml:lang="no">Antall artikler</tekst>
+       <tekst xml:lang="en">Number of articles</tekst>
+    </uom>
+    
+    <uom key="CT" >
+        <tekst xml:lang="no">Kartong</tekst>
+        <tekst xml:lang="en">Carton</tekst>
+    </uom>
+    <uom key="EA">
+        <tekst  xml:lang="no">Stykk</tekst>
+        <tekst xml:lang="en">Each</tekst>
+    </uom>
+    <uom key="10">
+        <tekst  xml:lang="no">Gruppe</tekst>
+        <tekst xml:lang="en">Group</tekst>
+    </uom>
+    <uom key="CEN">
+        <tekst  xml:lang="no">Hundre</tekst>
+        <tekst xml:lang="en">Hundred</tekst>
+    </uom>
+    <uom key="BX">
+        <tekst  xml:lang="no">Eske</tekst>
+        <tekst xml:lang="en">Box</tekst>
+    </uom>
+    <uom key="BO">
+        <tekst  xml:lang="no">Flaske</tekst>
+        <tekst xml:lang="en">Bottle</tekst>
+    </uom>
+    <uom key="23">
+        <tekst  xml:lang="no">Gram per kubikkcentimeter</tekst>
+        <tekst xml:lang="en">gram per cubic centimetre</tekst>
+    </uom>
+    <uom key="28">
+        <tekst  xml:lang="no">Kilogram per Kvadratmeter</tekst>
+        <tekst xml:lang="en">Kilogram per square meter</tekst>
+    </uom>
+    <uom key="81">
+        <tekst  xml:lang="no">Henry</tekst>
+        <tekst xml:lang="en">Henry</tekst>
+    </uom>
+    <uom key="2J">
+        <tekst  xml:lang="no">Kubikkcentimeter pr sekund</tekst>
+        <tekst xml:lang="en">Cubic centimeter per second</tekst>
+    </uom>
+    <uom key="BG">
+        <tekst  xml:lang="no">Pose</tekst>
+        <tekst xml:lang="en">Bag</tekst>
+    </uom>
+    
+    <uom key="CS" >
+        <tekst xml:lang="no">Kasse</tekst>
+        <tekst xml:lang="en">Case</tekst>
+    </uom>
+    <uom key="DAY">
+        <tekst  xml:lang="no">Dag</tekst>
+        <tekst xml:lang="en">Day</tekst>
+    </uom>
+    <uom key="ANN">
+        <tekst  xml:lang="no">År</tekst>
+        <tekst xml:lang="en">Year</tekst>
+    </uom>
+    <uom key="DZN">
+        <tekst  xml:lang="no">Dusin</tekst>
+        <tekst xml:lang="en">Dozen</tekst>
+    </uom>
+    <uom key="BX">
+        <tekst  xml:lang="no">Eske</tekst>
+        <tekst xml:lang="en">Box</tekst>
+    </uom>
+    <uom key="GRM">
+        <tekst  xml:lang="no">Gram</tekst>
+        <tekst xml:lang="en">Gram</tekst>
+    </uom>
+    <uom key="KGM">
+        <tekst  xml:lang="no">Kilogram</tekst>
+        <tekst xml:lang="en">Kilogram</tekst>
+    </uom>
+    <uom key="LTR">
+        <tekst  xml:lang="no">Liter</tekst>
+        <tekst xml:lang="en">Litre</tekst>
+    </uom>
+    <uom key="MIL">
+        <tekst  xml:lang="no">Tusen</tekst>
+        <tekst xml:lang="en">Thousand</tekst>
+    </uom>
+    <uom key="MON">
+        <tekst  xml:lang="no">Måned</tekst>
+        <tekst xml:lang="en">Month</tekst>
+    </uom>
+    <uom key="NMP">
+        <tekst  xml:lang="no">Antall pakker</tekst>
+        <tekst xml:lang="en">Number of packs</tekst>
+    </uom>
+    <uom key="NPR">
+        <tekst  xml:lang="no">Antall par</tekst>
+        <tekst xml:lang="en">Number of pairs</tekst>
+    </uom>
+    <uom key="NRL">
+        <tekst  xml:lang="no">Antall ruller</tekst>
+        <tekst xml:lang="en">Number of rolls</tekst>
+    </uom>
+    <uom key="PA">
+        <tekst  xml:lang="no">Pakke</tekst>
+        <tekst xml:lang="en">Packet</tekst>
+    </uom>
+    <uom key="PK">
+        <tekst  xml:lang="no">Pakke</tekst>
+        <tekst xml:lang="en">Pack</tekst>
+    </uom>
+    <uom key="PR">
+        <tekst  xml:lang="no">Par</tekst>
+        <tekst xml:lang="en">Pair</tekst>
+    </uom>
+    <uom key="SA">
+        <tekst  xml:lang="no">Sekk</tekst>
+        <tekst xml:lang="en">Sack</tekst>
+    </uom>
+    <uom key="WTT">
+        <tekst  xml:lang="no">Watt</tekst>
+        <tekst xml:lang="en">Watt</tekst>
+    </uom>
+    <uom key="KWH">
+        <tekst  xml:lang="no">Kilowattime</tekst>
+        <tekst xml:lang="en">Kilowatt hour</tekst>
+    </uom>
+    <uom key="KWT">
+        <tekst  xml:lang="no">Kilowatt</tekst>
+        <tekst xml:lang="en">Kilowatt</tekst>
+    </uom>
+  
+</uomText>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+  <configuration>
+    <identifier>ehf-t10-stylesheet-2.0</identifier>
+    <title>EHF Invoice 2.0 Stylesheet</title>
+		<stylesheet identifier="ehf-t10-2" source="Stylesheet_Full.xsl" path="stylesheet_ehf_t10/Stylesheet_Full.xsl">
+  		<setting name="pLang" defaultValue="no" />
+  		<setting name="pStylesheetDir" defaultValue="" />
+		</stylesheet>
+  </configuration>
+  <configuration>
+    <identifier>ehf-t14-stylesheet-2.0</identifier>
+    <title>EHF Credit note 2.0 Stylesheet</title>
+		<inherit>ehf-t10-stylesheet-2.0</inherit>
+  </configuration>
+
+  <include source="CommonTemplates.xsl" path="stylesheet_ehf_t10/CommonTemplates.xsl" />
+  <include source="Headlines.xml" path="stylesheet_ehf_t10/Headlines.xml" />
+  <include source="PEPPOL.css" path="stylesheet_ehf_t10/PEPPOL.css" />
+
+</buildConfigurations>
