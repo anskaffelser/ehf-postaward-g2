@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeList xmlns="urn:fdc:difi.no:2017:vefa:structure:CodeList-1">
+
+    <Title>Response Code</Title>
+    <Identifier>UNCL4343</Identifier>
+    <Version>1.0</Version>
+    <Agency>UN/CEFACT</Agency>
+    <Subset>OpenPEPPOL</Subset>
+
+    <Code>
+        <Id>AP</Id>
+        <Name>Accepted</Name>
+    </Code>
+
+    <Code>
+        <Id>RE</Id>
+        <Name>Not Accepted</Name>
+    </Code>
+
+</CodeList>

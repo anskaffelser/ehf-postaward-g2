@@ -1120,7 +1120,7 @@
         </Element>
 
         <Element cardinality="1..n">
-            <Term>cac:PaymentMeans</Term>
+            <Term>cac:PaymentMeans </Term>
             <Name>Payment means</Name>
             <Description>Details regarding how the invoice will be payed</Description>
 

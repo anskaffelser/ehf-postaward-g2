@@ -82,6 +82,7 @@
                 <Term>listID</Term>
                 <Description>Codelist for OrderResponseCode. UNCL1225.</Description>
                 <Reference type="RULE">EUGEN-T76-R003</Reference>
+                <Reference type="CODE_LIST">UNCL1225</Reference>
             </Attribute>
             <Value type="EXAMPLE">30</Value>
         </Element>
@@ -363,6 +364,7 @@
                         <Name>Codelist for LineStatusCode</Name>
                         <Description>UNCL1225</Description>
                         <Reference type="RULE">EUGEN-T76-R004</Reference>
+                        <Reference type="CODE_LIST">UNCL1225</Reference>
                     </Attribute>
                     <Value type="EXAMPLE">29</Value>
                 </Element>

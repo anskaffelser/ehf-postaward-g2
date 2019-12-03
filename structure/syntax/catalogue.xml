@@ -905,6 +905,7 @@
 
                 <Attribute>
                     <Term>listID</Term>
+                    <Reference type="CODE_LIST">GS17009</Reference>
                 </Attribute>
             </Element>
 
@@ -1491,6 +1492,7 @@
 
                         <Attribute usage="Optional">
                             <Term>listID</Term>
+                            <Reference type="CODE_LIST">Actioncodedocumentlevel</Reference>
                         </Attribute>
                         <Value type="EXAMPLE">True</Value>
                     </Element>

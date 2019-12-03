@@ -206,6 +206,8 @@
                     <Attribute usage="Optional">
                         <Term>listID</Term>
                         <Reference type="RULE">EUGEN-T58-R003</Reference>
+                        <Reference type="CODE_LIST">UNCL4343</Reference>
+
                     </Attribute>
                     <Value type="EXAMPLE">AP</Value>
                 </Element>

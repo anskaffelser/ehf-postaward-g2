@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeList xmlns="urn:fdc:difi.no:2017:vefa:structure:CodeList-1">
+
+    <Title>Action code (Document level)</Title>
+    <Identifier>Actioncodedocumentlevel</Identifier>
+    <Version>1.0</Version>
+    <Agency>OpenPEPPOL</Agency>
+
+    <Code>
+        <Id>Add</Id>
+        <Name>Addition</Name>
+        <Description>Used when a catalogue is sent for the first time.</Description>
+    </Code>
+
+    <Code>
+        <Id>Replace</Id>
+        <Name>Replace</Name>
+        <Description>Replaces the entire catalogue.</Description>
+    </Code>
+
+    <Code>
+        <Id>Update</Id>
+        <Name>Update</Name>
+        <Description>Updates a current catalogue.</Description>
+    </Code>
+
+    <Code>
+        <Id>Delete</Id>
+        <Name>Delete</Name>
+        <Description>Deletes the catalogue.</Description>
+    </Code>
+
+
+</CodeList>

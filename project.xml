@@ -535,6 +535,28 @@
         <Tag>reminder</Tag>
     </Resource>
 
+    <!-- codelist -->
+    <Resource>
+      <Type>CodeList-1</Type>
+      <Path>structure/codelist/actioncode-documentlevel.xml</Path>
+      <Tag>catalogue</Tag>
+  </Resource>
+  <Resource>
+      <Type>CodeList-1</Type>
+      <Path>structure/codelist/package-level.xml</Path>
+      <Tag>catalogue</Tag>
+  </Resource>
+  <Resource>
+      <Type>CodeList-1</Type>
+      <Path>structure/codelist/UNCL1225.xml</Path>
+      <Tag>ordering</Tag>
+  </Resource>
+  <Resource>
+      <Type>CodeList-1</Type>
+      <Path>structure/codelist/UNCL4343.xml</Path>
+      <Tag>catalogue</Tag>
+  </Resource>
+
     <Tag>
         <Identifier>catalogue</Identifier>
         <Title>EHF Catalogue 1.0.15</Title>
