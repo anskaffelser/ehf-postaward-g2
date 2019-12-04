@@ -1678,14 +1678,15 @@
                         <Term>cbc:CertificateTypeCode</Term>
                         <Name>Certificate type code</Name>
                         <Description>The code type for the label.</Description>
-                        <Value type="EXAMPLE">EcoLabel</Value>
+                        <Reference type="CODE_LIST">labels</Reference>
+                        <Value type="EXAMPLE">EEL</Value>
                     </Element>
 
                     <Element>
                         <Term>cbc:CertificateType</Term>
                         <Name>Certificate type</Name>
                         <Description>The label type such environmental, quality, social etc.</Description>
-                        <Value type="EXAMPLE">EcoLabel</Value>
+                        <Value type="EXAMPLE">EEL</Value>
                     </Element>
 
                     <Element cardinality="0..1">

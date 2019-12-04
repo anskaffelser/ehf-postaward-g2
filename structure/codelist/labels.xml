@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeList xmlns="urn:fdc:difi.no:2017:vefa:structure:CodeList-1">
+
+    <Title>Environmental and Social Labels</Title>
+    <Identifier>labels</Identifier>
+    <Version>1.0</Version>
+    <Agency>Difi</Agency>
+
+<!-- Eco label -->
+    <Code>
+        <Id>BAL</Id>
+        <Name>Der Blaue Engel</Name>
+    </Code>
+
+    <Code>
+        <Id>GEA</Id>
+        <Name>Bra Miljöval</Name>
+    </Code>
+
+    <Code>
+        <Id>BBH-AC</Id>
+        <Name>Byggvarubedömningen-Accepted</Name>
+    </Code>
+
+    <Code>
+        <Id>BBH-RE</Id>
+        <Name>Byggvarubedömningen-Recommended</Name>
+    </Code>
+
+    <Code>
+        <Id>NEO</Id>
+        <Name>Nordic Ecolabelling</Name>
+    </Code>
+
+    <Code>
+        <Id>EBO</Id>
+        <Name>Eco Product</Name>
+    </Code>
+
+    <Code>
+        <Id>ESU</Id>
+        <Name>Energy star</Name>
+    </Code>
+
+    <Code>
+        <Id>EEL</Id>
+        <Name>EU Ecolabel</Name>
+    </Code>
+
+    <Code>
+        <Id>EEA</Id>
+        <Name>EU Energy label</Name>
+    </Code>
+
+    <Code>
+        <Id>FSC</Id>
+        <Name>Forest Stewardship Council (FSC) Chain of Custody Certification</Name>
+    </Code>
+
+    <Code>
+        <Id>GOT</Id>
+        <Name>Global Organic Textile Standard</Name>
+    </Code>
+
+    <Code>
+        <Id>LBA</Id>
+        <Name>Leaping Bunny</Name>
+    </Code>
+
+    <Code>
+        <Id>MEC</Id>
+        <Name>M1 Emission Classification of Building Materials</Name>
+    </Code>
+
+    <Code>
+        <Id>MSC</Id>
+        <Name>Marine Stewardship Council</Name>
+    </Code>
+
+    <Code>
+        <Id>PEF</Id>
+        <Name>Programme for the Endorsement of Forest Certification (PEFC) schemes</Name>
+    </Code>
+
+    <Code>
+        <Id>RAC</Id>
+        <Name>Rainforest Alliance Certified</Name>
+    </Code>
+
+    <Code>
+        <Id>RCL</Id>
+        <Name>Recycled Content</Name>
+    </Code>
+
+    <Code>
+        <Id>SML-A</Id>
+        <Name>Sundahus Miljödata – A Rekommenderad</Name>
+    </Code>
+
+    <Code>
+        <Id>SML-B</Id>
+        <Name>Sundahus Miljödata – B Rekommenderad</Name>
+    </Code>
+
+    <Code>
+        <Id>TCL</Id>
+        <Name>TCO Certified</Name>
+    </Code>
+
+<!-- Social Label -->
+
+    <Code>
+        <Id>BCI</Id>
+        <Name>Better Cotton Initiative (BCI)</Name>
+    </Code>
+
+    <Code>
+        <Id>FFF</Id>
+        <Name>Fair Flowers Fair Plants</Name>
+    </Code>
+
+    <Code>
+        <Id>FTO</Id>
+        <Name>Fair Trade Organization Mark</Name>
+    </Code>
+
+    <Code>
+        <Id>FBL</Id>
+        <Name>Fairtrade</Name>
+    </Code>
+
+    <Code>
+        <Id>FAC</Id>
+        <Name>Food Alliance Certified</Name>
+    </Code>
+
+    <Code>
+        <Id>MBL</Id>
+        <Name>MADE-BY</Name>
+    </Code>
+
+    <Code>
+        <Id>MHL</Id>
+        <Name>Max Havelaar</Name>
+    </Code>
+
+    <Code>
+        <Id>RSB</Id>
+        <Name>Roundtable on Sustainable Biofuels</Name>
+    </Code>
+
+    <Code>
+        <Id>RCS</Id>
+        <Name>RSPO Certified Sustainable Palm Oil</Name>
+    </Code>
+
+    <Code>
+        <Id>SAN</Id>
+        <Name>Sustainable Agricultural Network</Name>
+    </Code>
+
+    <Code>
+        <Id>TCL</Id>
+        <Name>TCO Certified</Name>
+    </Code>
+
+    <Code>
+        <Id>UCL</Id>
+        <Name>UTZ Certified</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi1s</Id>
+        <Name>Electronic Industry Citizenship Coalition (EICC)</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi2s</Id>
+        <Name>Ethical Trade Initiative</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi3s</Id>
+        <Name>Fair Wear Foundataion</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi4s</Id>
+        <Name>Fair Labor Association (FLA)</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi5s</Id>
+        <Name>ICTI Care Foundation</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi6s</Id>
+        <Name>SA8000 Standard</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi7s</Id>
+        <Name>SEDEX</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi8s</Id>
+        <Name>WRAP</Name>
+    </Code>
+
+<!-- Organic label -->
+
+    <Code>
+        <Id>ABA</Id>
+        <Name>AMA Biozeichen</Name>
+    </Code>
+
+    <Code>
+        <Id>DOM</Id>
+        <Name>Danish Ø-mark</Name>
+    </Code>
+
+    <Code>
+        <Id>DBL</Id>
+        <Name>Demeter</Name>
+    </Code>
+
+    <Code>
+        <Id>EOP</Id>
+        <Name>EU Organic products label</Name>
+    </Code>
+
+    <Code>
+        <Id>KBL</Id>
+        <Name>Krav</Name>
+    </Code>
+
+    <Code>
+        <Id>SAO</Id>
+        <Name>Soil Association Organic Standard</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi1o</Id>
+        <Name>Debio</Name>
+    </Code>
+
+<!-- Hazardous -->
+    <Code>
+        <Id>BBS-Y</Id>
+        <Name>BASS - Bygg- og Anleggsbransjens Stoffkartotek System - gul markering.</Name>
+    </Code>
+
+    <Code>
+        <Id>BBS-R</Id>
+        <Name>BASS - Bygg- og Anleggsbransjens Stoffkartotek System - rød markering.</Name>
+    </Code>
+
+    <Code>
+        <Id>BBL</Id>
+        <Name>BASTA</Name>
+    </Code>
+
+<!-- Other -->
+    <Code>
+        <Id>Difi1a</Id>
+        <Name>Nyt Norge - Information label Norwegian food</Name>
+    </Code>
+
+    <Code>
+        <Id>Difi999</Id>
+        <Name>Label used to suppliers own labels.</Name>
+    </Code>
+
+</CodeList>

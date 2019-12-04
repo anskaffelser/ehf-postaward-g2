@@ -556,6 +556,11 @@
       <Path>structure/codelist/UNCL4343.xml</Path>
       <Tag>catalogue</Tag>
   </Resource>
+  <Resource>
+      <Type>CodeList-1</Type>
+      <Path>structure/codelist/labels.xml</Path>
+      <Tag>catalogue</Tag>
+  </Resource>
 
     <Tag>
         <Identifier>catalogue</Identifier>
