@@ -202,12 +202,13 @@
                     <Description>A code for the description of the response to the transaction document.
                         AP= Accepted, RE = Rejected, UN/Cefact 4343 Response type code</Description>
                     <Reference type="RULE">BII2-T58-R009</Reference>
+                    <Reference type="CODE_LIST">UNCL4343</Reference>
+
 
                     <Attribute usage="Optional">
                         <Term>listID</Term>
                         <Reference type="RULE">EUGEN-T58-R003</Reference>
-                        <Reference type="CODE_LIST">UNCL4343</Reference>
-
+                        <Value type="EXAMPLE">UNCL4343</Value>
                     </Attribute>
                     <Value type="EXAMPLE">AP</Value>
                 </Element>

@@ -536,7 +536,7 @@
     </Resource>
 
     <!-- codelist -->
-    <Resource>
+  <Resource>
       <Type>CodeList-1</Type>
       <Path>structure/codelist/actioncode-documentlevel.xml</Path>
       <Tag>catalogue</Tag>

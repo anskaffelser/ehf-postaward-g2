@@ -66,11 +66,13 @@
             </Description>
             <Reference type="RULE">OP-T19-R007</Reference>
             <Reference type="RULE">NOGOV-T19-R001</Reference>
-
+            <Reference type="CODE_LIST">Actioncodedocumentlevel</Reference>
             <Attribute>
                 <Term>listID</Term>
                 <Reference type="RULE">EUGEN-T19-R046</Reference>
+                <Value type="EXAMPLE">ACTIONCODE:PEPPOL</Value>
             </Attribute>
+            <Value type="EXAMPLE">Add</Value>
         </Element>
 
         <Element cardinality="0..1">
@@ -792,6 +794,7 @@
                 <Attribute>
                     <Term>listID</Term>
                     <Reference type="RULE">EUGEN-T19-R045</Reference>
+                    <Value type="EXAMPLE">ACTIONCODE:BII2</Value>
                 </Attribute>
                 <Value type="EXAMPLE">Update</Value>
             </Element>
@@ -902,10 +905,11 @@
                 <Description>The packing level of the catalogue line.</Description>
                 <Reference type="RULE">OP-T19-R008</Reference>
                 <Reference type="RULE">EUGEN-T19-R050</Reference>
+                <Reference type="CODE_LIST">GS17009</Reference>
 
                 <Attribute>
                     <Term>listID</Term>
-                    <Reference type="CODE_LIST">GS17009</Reference>
+                    <Value type="EXAMPLE">GS17009:PEPPOL</Value>
                 </Attribute>
             </Element>
 
@@ -1492,7 +1496,6 @@
 
                         <Attribute usage="Optional">
                             <Term>listID</Term>
-                            <Reference type="CODE_LIST">Actioncodedocumentlevel</Reference>
                         </Attribute>
                         <Value type="EXAMPLE">True</Value>
                     </Element>

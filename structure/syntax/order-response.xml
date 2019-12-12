@@ -77,12 +77,13 @@
                 Valid codes are: 29 (Accepted), 27 (Rejected) and 30 (Accepted with change).</Description>
             <Reference type="RULE">BII2-T76-R033</Reference>
             <Reference type="RULE">OP-T76-R001</Reference>
+            <Reference type="CODE_LIST">UNCL1225</Reference>
 
             <Attribute>
                 <Term>listID</Term>
                 <Description>Codelist for OrderResponseCode. UNCL1225.</Description>
                 <Reference type="RULE">EUGEN-T76-R003</Reference>
-                <Reference type="CODE_LIST">UNCL1225</Reference>
+                <Value type="EXAMPLE">UNCL1225</Value>
             </Attribute>
             <Value type="EXAMPLE">30</Value>
         </Element>
@@ -358,13 +359,14 @@
                     <Description>A code that indicates whether the referenced order line as whole is Accepted or Rejected or, alternatively, Accepted with change.
                         Valid codes are: 29 (Accepted), 27(Rejected),  30(Accepted with change).</Description>
                     <Reference type="RULE">OP-T76-R002</Reference>
+                    <Reference type="CODE_LIST">UNCL1225</Reference>
 
                     <Attribute>
                         <Term>listID</Term>
                         <Name>Codelist for LineStatusCode</Name>
                         <Description>UNCL1225</Description>
                         <Reference type="RULE">EUGEN-T76-R004</Reference>
-                        <Reference type="CODE_LIST">UNCL1225</Reference>
+                        <Value type="EXAMPLE">UNCL1225</Value>
                     </Attribute>
                     <Value type="EXAMPLE">29</Value>
                 </Element>

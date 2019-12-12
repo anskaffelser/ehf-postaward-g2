@@ -125,8 +125,8 @@
 			</cac:CommodityClassification>
 			<cac:Certificate>
 				<cbc:ID>NEO</cbc:ID>
-				<cbc:CertificateTypeCode>EcoLabel</cbc:CertificateTypeCode>
-				<cbc:CertificateType>EcoLabel</cbc:CertificateType>
+				<cbc:CertificateTypeCode>EEL</cbc:CertificateTypeCode>
+				<cbc:CertificateType>EU EcoLabel</cbc:CertificateType>
 				<cac:IssuerParty>
 					<cac:PartyName>
 						<cbc:Name>Svanemerket</cbc:Name>
