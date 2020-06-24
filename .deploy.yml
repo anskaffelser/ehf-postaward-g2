@@ -1,0 +1,16 @@
+site_draft:
+  id: ehf-postaward-g2-draft
+  type: site
+  path: target/site
+  properties:
+    domain: anskaffelser.dev
+    path: postaward/g2/spec/draft
+
+site_current:
+  mode: release
+  id: ehf-postaward-g2-current
+  type: site
+  path: target/site
+  properties:
+    domain: anskaffelser.dev
+    path: postaward/g2/spec/current

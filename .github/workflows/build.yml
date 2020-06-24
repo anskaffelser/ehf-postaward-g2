@@ -61,3 +61,16 @@ jobs:
         file: "site.zip"
         name: "ehf-postaward-g2-site-${TAG}.zip"
         label: "Site files"
+
+    - name: Deploy [Default]
+      env:
+        DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
+        DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+      run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push
+
+    - name: Deploy [Release]
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        DEPLOY_SERVICE: ${{ secrets.DEPLOY_SERVICE }}
+        DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+      run: docker run --rm -i -e DEPLOY_SERVICE -e DEPLOY_TOKEN -v $(pwd):/src -w /src klakegg/deployer:edge push -m release
