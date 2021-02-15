@@ -38,6 +38,9 @@
                  flag="fatal">An reminder transaction T17 must only be used in Profile xy.</assert>
       </rule>
       <rule context="/ubl:Reminder">
+        <assert id="EOL"
+                test="false()"
+                flag="warning">This format reach end of life at 2021-02-15. Any further use after end of life is at own risk.</assert>
          <assert id="NONAT-T17-R001" test="(cbc:ID)" flag="fatal">A reminder MUST have a reminder number.</assert>
          <assert id="NONAT-T17-R002" test="(cbc:IssueDate)" flag="fatal">A reminder MUST have the date of issue.</assert>
          <assert id="NONAT-T17-R003"

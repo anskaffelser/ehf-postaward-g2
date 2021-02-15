@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron">
   <rule context="/ubl:Catalogue">
+        <assert id="EOL"
+                test="false()"
+                flag="warning">This format reach end of life at 2022-05-01. Any further use after end of life is at own risk.</assert>
      <assert id="NOGOV-T19-R001"
              test="cbc:ActionCode or count(cac:CatalogueLine/cbc:ActionCode) = count(cac:CatalogueLine)"
              flag="fatal">[NOGOV-T19-R001]-A Catalogue must contain ActionCode on either Header or Line level</assert>

@@ -1,0 +1,30 @@
+include::../settings.adoc[]
+
+= EHF Release {release}
+{name-difi-no}
+:icons: font
+:toc: left
+:toclevels: 2
+:source-highlighter: coderay
+:sectanchors:
+:release: 2021-02-15
+
+:leveloffset: +1
+
+= All formats
+
+Related to the following formats:
+
+* EHF Invoice and Credit Note 2.0 (all profiles)
+* EHF Catalogue 1.0
+* EHF Despatch Advice 1.0
+* EHF Order Agreement 1.0
+* EHF Ordering 1.0
+* EHF Reminder 1.1
+* EHF Punch Out 1.0
+
+Changes:
+
+* Added information related to end of life (EOL) as validation warning identified as `EOL`.
+
+Version numbers are not updated as part of this release.

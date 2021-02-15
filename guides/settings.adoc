@@ -1,6 +1,6 @@
 //
-:status: review
-:release: 2019-12-10
+:status: final
+:release: 2021-02-15
 
 // Translation
 ifdef::lang[]
@@ -15,8 +15,8 @@ endif::[]
 :link-issues: https://github.com/anskaffelser/ehf-postaward-g2/issues
 :link-portal: https://vefa.difi.no/
 
-:name-difi-en: Agency of Public Management and eGovernment
-:name-difi-no: Direktoratet for forvaltning og IKT
+:name-difi-en: The Norwegian Agency for Public and Financial Management
+:name-difi-no: Direktoratet for forvaltning og økonomistyring
 
 // External
 :link-cen-bii: http://www.cenbii.eu/

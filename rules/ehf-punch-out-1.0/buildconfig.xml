@@ -25,7 +25,7 @@
     <title>EHF Punch Out 1.0 (Profile 18)</title>
     <profileId>urn:www.cenbii.eu:profile:bii18:ver1.0</profileId>
     <customizationId>urn:www.cenbii.eu:transaction:biitrns077:ver2.0:extended:www.peppol.eu:bis:peppol18a:ver1.0:extended:urn:fdc:difi.no:2017:ehf:spec:1.0</customizationId>
-    <inherit>ehf-t177-base-1.0</inherit>
+    <inherit>ehf-t77-base-1.0</inherit>
   </configuration>
 
 </buildConfigurations>

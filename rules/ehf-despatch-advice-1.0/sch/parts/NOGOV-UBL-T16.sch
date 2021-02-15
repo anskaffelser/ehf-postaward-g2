@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron">
+        <rule context="ubl:*">
+                <assert id="EOL"
+                        test="false()"
+                        flag="warning">This format reach end of life at 2021-02-15. Any further use after end of life is at own risk.</assert>
+        </rule>
   <rule context="cac:Country">
      <assert id="NOGOV-T16-R002"
              test="cbc:IdentificationCode"

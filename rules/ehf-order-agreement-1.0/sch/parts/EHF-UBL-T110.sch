@@ -11,6 +11,9 @@
     21X - Item Properties
   -->
   <rule context="ubl:OrderResponse">
+    <assert id="EOL"
+            test="false()"
+            flag="warning">This format reach end of life at 2021-02-15. Any further use after end of life is at own risk.</assert>
     <assert id="EHF-T110-R001"
             test="cbc:ProfileID"
             flag="fatal">Order agreement MUST have a profile identification.</assert>

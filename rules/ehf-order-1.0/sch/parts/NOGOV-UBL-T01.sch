@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron">
   <rule context="/ubl:Order">
+        <assert id="EOL"
+                test="false()"
+                flag="warning">This format reach end of life at 2021-02-15. Any further use after end of life is at own risk.</assert>
      <assert id="NOGOV-T01-R002"
              test="cac:BuyerCustomerParty/cac:Party"
              flag="fatal">[NOGOV-T01-R002]-An order MUST contain buyer information</assert>

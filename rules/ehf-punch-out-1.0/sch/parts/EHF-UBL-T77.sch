@@ -13,6 +13,9 @@
   -->
 
   <rule context="ubl:Catalogue">
+    <assert id="EOL"
+            test="false()"
+            flag="warning">This format reach end of life at 2022-05-01. Any further use after end of life is at own risk.</assert>
     <assert id="EHF-T77-R001"
             test="cbc:ProfileID"
             flag="fatal">Punch out MUST have a profile identification.</assert>

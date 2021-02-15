@@ -70,6 +70,9 @@
               flag="warning">[NOGOV-T10-R023]-Item classification code MUST be specified when describing commodity classification.</assert>
    </rule>
    <rule context="ubl:Invoice">
+      <assert id="EOL"
+              test="false()"
+              flag="warning">This format reach end of life at 2020-10-01. Any further use after end of life is at own risk.</assert>
       <assert id="NOGOV-T10-R014"
               test="((cac:TaxTotal[cac:TaxSubtotal/cac:TaxCategory/cac:TaxScheme/cbc:ID = 'VAT']/cbc:TaxAmount != 0) and (cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID) or (cac:TaxTotal[cac:TaxSubtotal/cac:TaxCategory/cac:TaxScheme/cbc:ID = 'VAT']/cbc:TaxAmount = 0) or not((cac:TaxTotal[cac:TaxSubtotal/cac:TaxCategory/cac:TaxScheme/cbc:ID = 'VAT'])))"
               flag="fatal">[NOGOV-T10-R014]-If the VAT total amount in an invoice exists it MUST contain the suppliers VAT number.</assert>

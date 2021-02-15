@@ -79,6 +79,19 @@
 
     <Resource>
         <Type>Doc-1</Type>
+        <Path>release/2021-02-15/</Path>
+        <Title>Release 2021-02-15</Title>
+        <Description>Release notes describing changes related to EHF Post-Award G2 in release '2021-02-15'.</Description>
+        <Tag>release</Tag>
+        <Tag>catalogue</Tag>
+        <Tag>despatch-advice</Tag>
+        <Tag>invoice-and-creditnote</Tag>
+        <Tag>order-agreement</Tag>
+        <Tag>ordering</Tag>
+        <Tag>punch-out</Tag>
+    </Resource>
+    <Resource>
+        <Type>Doc-1</Type>
         <Path>release/2019-12-10/</Path>
         <Title>Release 2019-12-10</Title>
         <Description>Release notes describing changes related to EHF Post-Award G2 in release '2019-12-10'.</Description>
